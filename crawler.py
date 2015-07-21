@@ -1,4 +1,5 @@
 from bs4 import *
+from random import *
 import json
 import requests
 import urllib
@@ -20,7 +21,7 @@ def filter_Submissions(submissions,contestID):
  	requestParams = {'contestId':int(contestID), 'from':1, 'count':1}
 	req = requests.get("http://codeforces.com/api/contest.standings", requestParams)
 	problems = req.json()['result']['problems']
-
+	dictionary = {}
  	filtered = []
  	dictionary['A'] = []
  	dictionary['B'] = []
@@ -33,6 +34,8 @@ def filter_Submissions(submissions,contestID):
  			dictionary[submission['problem']['index']].append(submission)
 	
 	for problem in problems:
+		print(str(problem['index']) + '\n')
+		print str(len(dictionary[problem['index']])) + "\n"
 		if(len(dictionary[problem['index']]) >= 100):
 			filtered.extend(sample(dictionary[problem['index']],100))
 			fi2.write("Contest ID: " + str(contestID) + "\n")
@@ -95,14 +98,13 @@ contests = r.json()
 filtered = filter_Contests(contests['result'])
 
 
-#for contest in filtered:
-contest = filtered[0]
-requestParams = {'contestId':contest['id']}
-r2 = requests.get("http://codeforces.com/api/contest.status", requestParams)
-status = r2.json()
-filtered_submissions = filter_Submissions(status['result'],contest['id'])
-# getProblems(contest['id'], fi2)
-create_Contest(filtered_submissions,contest['name'] , fi)
+for contest in filtered:
+	#contest = filtered[0]
+	requestParams = {'contestId':contest['id']}
+	r2 = requests.get("http://codeforces.com/api/contest.status", requestParams)
+	status = r2.json()
+	filtered_submissions = filter_Submissions(status['result'],contest['id'])
+	create_Contest(filtered_submissions,contest['name'])
 
 fi.close()	
 fi2.close()

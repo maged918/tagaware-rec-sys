@@ -10,10 +10,13 @@ subprocess.call(["touch", "Problems-tags.txt"])
 fi = open("Contests.txt" , "w")
 fi2 = open("Problems-tags.txt" , "w")
 
+
 def filter_Contests(contests):
  	filtered = []
+ 	Type = 'CF'
+ 	div = 'Div. 2'
  	for contest in contests:
- 		if("Div. 2" in contest['name'] and contest['type'] == 'CF' and contest['phase'] == 'FINISHED'):
+ 		if(div in contest['name'] and contest['type'] == Type and contest['phase'] == 'FINISHED'):
  			filtered.append(contest)
  	return filtered
 
@@ -23,21 +26,19 @@ def filter_Submissions(submissions,contestID):
 	problems = req.json()['result']['problems']
 	dictionary = {}
  	filtered = []
- 	dictionary['A'] = []
- 	dictionary['B'] = []
- 	dictionary['C'] = []
- 	dictionary['D'] = []
- 	dictionary['E'] = []
- 	
+ 	language = 'Java'
+	dictionary_problems = 'ABCDEF'
+
+ 	for i in range (0,len(dictionary_problems)):
+ 		dictionary[dictionary_problems[i]] = []
+
  	for submission in submissions:
- 		if(submission['verdict'] == 'OK' and "Java" in submission['programmingLanguage']):
+ 		if(submission['problem']['index'] in dictionary and submission['verdict'] == 'OK' and language in submission['programmingLanguage']):
  			dictionary[submission['problem']['index']].append(submission)
 	
 	for problem in problems:
-		print(str(problem['index']) + '\n')
-		print str(len(dictionary[problem['index']])) + "\n"
-		if(len(dictionary[problem['index']]) >= 100):
-			filtered.extend(sample(dictionary[problem['index']],100))
+		if(problem['index'] in dictionary and len(dictionary[problem['index']]) >= 50):
+			filtered.extend(sample(dictionary[problem['index']], 50))
 			fi2.write("Contest ID: " + str(contestID) + "\n")
 			fi2.write("Index: " + str(problem['index']) + "\n")
 			fi2.write("Name: " + str(problem['name']) + "\n")
@@ -46,10 +47,10 @@ def filter_Submissions(submissions,contestID):
 			fi2.write(toString(tags))
 			fi2.write("\n\n\n")
 	fi2.write("\n\n")	
+ 	
  	return filtered
 
 def create_Contest(status, name):
-	
 	for submission in status:
 		fi.write("Contest ID: " + str(submission['contestId']) + "\n")
 		fi.write("Index: " + str(submission['problem']['index']) + "\n")
@@ -60,10 +61,14 @@ def create_Contest(status, name):
 	
 
 def toString(lists):
-	tags = str(lists[0])
+	tags = ""
+	if(len(lists) >= 1):
+		tags = str(lists[0])
+
 	for i in range(1,len(lists)):
 		l = lists[i]
 		tags = tags + ", " + str(l)
+		
 	return tags
 
 def create_code(submission):
@@ -78,19 +83,6 @@ def create_code(submission):
 	fi.write(result)
 	fi.close()
 
-# def getProblems(contestID, fi2):
-# 	requestParams = {'contestId':int(contestID), 'from':1, 'count':1}
-# 	req = requests.get("http://codeforces.com/api/contest.standings", requestParams)
-# 	for problem in req.json()['result']['problems']:
-# 			fi2.write("Contest ID: " + str(contestID) + "\n")
-# 			fi2.write("Index: " + str(problem['index']) + "\n")
-# 			fi2.write("Name: " + str(problem['name']) + "\n")
-# 			fi2.write("Tags: ")
-# 			tags = problem['tags']
-# 			fi2.write(toString(tags))
-# 			fi2.write("\n")
-# 			fi2.write("\n\n")
-# 	fi2.write("\n\n")
 
 requestParams = {'gym':'false'}
 r = requests.get("http://codeforces.com/api/contest.list", requestParams)

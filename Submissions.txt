@@ -1,0 +1,101 @@
+Contest ID: 560
+Index: A
+Handle: vesttail
+Submission ID: 12269043
+Submission Time: 1438202596
+
+Contest ID: 560
+Index: A
+Handle: zater
+Submission ID: 12166605
+Submission Time: 1437574305
+
+Contest ID: 560
+Index: A
+Handle: 466
+Submission ID: 12244492
+Submission Time: 1438026501
+
+Contest ID: 560
+Index: A
+Handle: stolis
+Submission ID: 12253523
+Submission Time: 1438095255
+
+Contest ID: 560
+Index: A
+Handle: heat_wave
+Submission ID: 12164569
+Submission Time: 1437573789
+
+Contest ID: 560
+Index: A
+Handle: daemonoid
+Submission ID: 12166285
+Submission Time: 1437574227
+
+Contest ID: 560
+Index: A
+Handle: B.L
+Submission ID: 12187872
+Submission Time: 1437589143
+
+Contest ID: 560
+Index: A
+Handle: virttuall
+Submission ID: 12166124
+Submission Time: 1437574190
+
+Contest ID: 560
+Index: A
+Handle: webstorms
+Submission ID: 12167789
+Submission Time: 1437574613
+
+Contest ID: 560
+Index: A
+Handle: vturpati
+Submission ID: 12170051
+Submission Time: 1437575231
+
+Contest ID: 560
+Index: A
+Handle: ayoyia
+Submission ID: 12242757
+Submission Time: 1438013838
+
+Contest ID: 560
+Index: A
+Handle: NMP
+Submission ID: 12165909
+Submission Time: 1437574140
+
+Contest ID: 560
+Index: A
+Handle: sdfjaoew
+Submission ID: 12168441
+Submission Time: 1437574766
+
+Contest ID: 560
+Index: A
+Handle: raghusatti
+Submission ID: 12197335
+Submission Time: 1437641795
+
+Contest ID: 560
+Index: A
+Handle: prerakd
+Submission ID: 12165154
+Submission Time: 1437573966
+
+Contest ID: 560
+Index: A
+Handle: JINESH11
+Submission ID: 12301888
+Submission Time: 1438422618
+
+Contest ID: 560
+Index: A
+Handle: galalll
+Submission ID: 12222631
+Submission Time: 1437811576

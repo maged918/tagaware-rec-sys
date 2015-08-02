@@ -8,7 +8,7 @@ Created on Aug 1, 2015
 '''
 Count number of unique users, problems, tags
 Our graphs will be represented as adjacency list of sets
-To compute cosine similarity, dot product = size of intersection, magnitude = sqrt(length of list) 
+To compute cosine similarity, dot product = size of intersection, magnitude = sqrt(length of list)
 '''
 
 '''
@@ -33,16 +33,15 @@ Serialize all dicts, and then load them later to save computation time.
 
 '''
 Parse Submissions.txt, for all submissions -> get user_id, problem_id, build adjacency list
-Build user-problem graph. 
+Build user-problem graph.
 '''
 
 '''
 Parse Submissions.txt, for all submissions -> get problem_id, tag_id -> build adjacency list.
-Build problem-tag graph. 
+Build problem-tag graph.
 '''
 
 '''
 For each user, we loop over all problems. For each problem, we loop over all tags. We increment the count of this tag for this user.
 At the end, we divide by the number of problems for this user.
 '''
-#hiatus3850s

@@ -5,9 +5,9 @@ import requests
 import urllib
 import subprocess
 
-subprocess.call(["touch", "Contests.txt"])
+subprocess.call(["touch", "Submissions.txt"])
 subprocess.call(["touch", "Problems-tags.txt"])
-fi = open("Contests.txt" , "w")
+fi = open("Submissions.txt" , "w")
 fi2 = open("Problems-tags.txt" , "w")
 
 
@@ -56,6 +56,7 @@ def create_Contest(status, name):
 		fi.write("Index: " + str(submission['problem']['index']) + "\n")
 		fi.write("Handle: " + str(submission['author']['members'][0]['handle']) + "\n")
 		fi.write("Submission ID: " + str(submission['id']) + "\n")
+		fi.write("Submission Time: " + str(submission['creationTimeSeconds']))
 		create_code(submission)
 		fi.write("\n\n")
 	

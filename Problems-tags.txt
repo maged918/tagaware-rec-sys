@@ -1,0 +1,26 @@
+Contest ID: 560
+Index: A
+Name: Currency System in Geraldion
+Tags: geometry, implementation, sortings
+
+
+Contest ID: 560
+Index: B
+Name: Gerald is into Art
+Tags: constructive algorithms
+
+
+Contest ID: 560
+Index: C
+Name: Gerald's Hexagon
+Tags: geometry
+
+
+Contest ID: 560
+Index: D
+Name: Equivalent Strings
+Tags: hashing, implementation, strings
+
+
+
+

@@ -3,6 +3,7 @@ Created on Aug 1, 2015
 
 @author: maged
 '''
+from collections import defaultdict
 
 
 '''
@@ -16,10 +17,10 @@ Parse Submissions.txt, generate dict of user_handle --> user_id (0-based)
 Length of dict is the number of users.
 '''
 f = open('Submissions.txt', 'r')
-handles = [line.split(' ')[1].rstrip()
-           for line in f if line.split(' ')[0] == 'Handle:']
-users = dict(zip(handles, range(len(handles))))
-#print(users)
+handles = set([line.split(' ')[1].rstrip()
+           for line in f if line.split(' ')[0] == 'Handle:'])
+users = dict(zip(list(handles), range(len(handles)))) #TO DO: Check the logic of this edit!
+print(users)
 f.close()
 
 '''
@@ -38,7 +39,7 @@ for line in f:
     index += [s[1].rstrip()]
 problems = [str(c) + i for c, i in zip(contest, index)]
 problems = dict(zip(problems, range(len(problems))))
-#print(problems)
+print(problems)
 f.close()
 
 '''
@@ -52,7 +53,7 @@ for line in f:
   if s[0] == 'Tags:':
     tags |= set(line.split(' ', 1)[1:][0].rstrip().split(','))
 tags = dict(zip(map(lambda x: x.lstrip(), list(tags)), range(len(tags))))
-#print(tags)
+print(tags)
 f.close()
 
 ''''
@@ -70,6 +71,7 @@ handle = ''
 users_problems = []
 for u in users:
   users_problems.append([])
+print(len(users_problems))
 for l in f:
   arr = l.split(' ')
   if arr[0] == 'Contest':
@@ -80,10 +82,10 @@ for l in f:
     handle = arr[1].rstrip()
     user_id = users[handle]
     problem_id = problems[contest_id + index]
-    users_problems[user_id].append([problem_id])
     #print(contest_id + index + ' : ' + handle)
     #print(user_id, problem_id)
-#print(users_problems)
+    users_problems[user_id].append(problem_id)
+print(users_problems)
 f.close()
 
 '''
@@ -111,11 +113,62 @@ for l in f:
     problem_id = problems[contest_id + index]
     problems_tags[problem_id] += tags_ids
     #print(tags_ids)
-#print(problems_tags)
+print(problems_tags)
 f.close()
 
 
 '''
 For each user, we loop over all problems. For each problem, we loop over all tags. We increment the count of this tag for this user.
 At the end, we divide by the number of problems for this user.
+
+NOTE: Might need to add all tags in user-tag graph even if with zero weights.
+NOTE: Might need to use PrettyPrint/better printing for defaultdict
+'''
+users_tags = []
+for u in users:
+    users_tags.append(defaultdict(int)) #defaultdict didn't work
+
+for handle in users:
+    u = users[handle]
+    for p in users_problems[u]:
+        for t in problems_tags[p]:
+            users_tags[u][t]+=1
+for handle in users:
+    u = users[handle]
+    #print(len(users_problems[u]))
+    for t in users_tags[u]:
+        users_tags[u][t]/=(len(users_problems[u])*1.0)
+print(users_tags)
+#print(tags["geometry"], tags["implementation"], tags["sortings"])
+
+'''
+Introduction:
+1. Start by introducing the importance of the problem, i.e: competitive programming. Include Stats
+2. Current status of competitive programming systems. Online judges. Problems. Interests diversify.
+3. Current status of recommender systems algorithms. Don't incorporate both diversity and temporality
+in tag-aware systems. How will diversity and temporality affect users.
+4. List of contributions of this paper.
+
+Background:
+DO NOT list papers.
+Goal: We did our homework. Nothing in literature exactly covers what we do. Critical eye.
+
+Disclaimer:
+PLAGIARISM
+Copying word-for-word. Paraphrasing. Read your papers, close them, then write using your own
+language.
+
+List of authors:
+Ethical restrictions. People who had contributions in the contributions.
+'''
+
+'''
+Java to XML: Java ML
+CPP to XML: Src ML
+XML Queries: XPATH
+'''
+
+'''
+Must write justification for each feature. Something numerical or something referencable. Or use
+correlation.
 '''

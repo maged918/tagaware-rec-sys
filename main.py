@@ -4,6 +4,8 @@ Created on Aug 1, 2015
 @author: maged
 '''
 from collections import defaultdict
+import numpy as np
+import scipy as scipy
 
 
 '''
@@ -140,6 +142,26 @@ for handle in users:
         users_tags[u][t]/=(len(users_problems[u])*1.0)
 print(users_tags)
 #print(tags["geometry"], tags["implementation"], tags["sortings"])
+
+
+
+'''
+Calcultaing user similarity using Pearson's Correlation
+NOTE: If needed (if this is taking too much time), possible optimization:
+    p(x,y) = p(y,x)
+'''
+print('>>>')
+correlation = []
+for i1, u1 in zip(range(len(users)),users):
+    correlation.append([])
+    for u2 in users:
+        id1 = users[u1]
+        id2 = users[u2]
+        correlation[i1].append(scipy.stats.pearsonr(users_tags[id1],users_tags[id2]))
+
+        
+        
+
 
 '''
 Introduction:

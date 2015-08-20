@@ -1,107 +1,7602 @@
-Contest ID: 560
+Contest ID: 570
 Index: A
-Handle: vesttail
-Submission ID: 12269043
-Submission Time: 1438202596
+Handle: taher144
+Submission ID: 12519263
+Submission Time: 1439503762
+
+Contest ID: 570
+Index: A
+Handle: iwalkalone2
+Submission ID: 12496441
+Submission Time: 1439484045
+
+Contest ID: 570
+Index: A
+Handle: vallahombrevalla
+Submission ID: 12500808
+Submission Time: 1439484913
+
+Contest ID: 570
+Index: A
+Handle: amit_adhikari
+Submission ID: 12518601
+Submission Time: 1439499206
+
+Contest ID: 570
+Index: A
+Handle: RUM_Fr75
+Submission ID: 12569116
+Submission Time: 1439778607
+
+Contest ID: 570
+Index: A
+Handle: kajooooo
+Submission ID: 12504749
+Submission Time: 1439485974
+
+Contest ID: 570
+Index: A
+Handle: crew0eddy
+Submission ID: 12505388
+Submission Time: 1439486182
+
+Contest ID: 570
+Index: A
+Handle: BitHashTech
+Submission ID: 12507004
+Submission Time: 1439486733
+
+Contest ID: 570
+Index: A
+Handle: Prabowo
+Submission ID: 12520327
+Submission Time: 1439512991
+
+Contest ID: 570
+Index: A
+Handle: R.A.X
+Submission ID: 12495432
+Submission Time: 1439483855
+
+Contest ID: 570
+Index: A
+Handle: scintillan
+Submission ID: 12527422
+Submission Time: 1439544796
+
+Contest ID: 570
+Index: A
+Handle: amitkumar05
+Submission ID: 12505676
+Submission Time: 1439486279
+
+Contest ID: 570
+Index: A
+Handle: therainmak3r
+Submission ID: 12514850
+Submission Time: 1439490439
+
+Contest ID: 570
+Index: A
+Handle: Edwardjay
+Submission ID: 12521976
+Submission Time: 1439522920
+
+Contest ID: 570
+Index: A
+Handle: shivam04
+Submission ID: 12500455
+Submission Time: 1439484833
+
+Contest ID: 570
+Index: A
+Handle: giabao4498
+Submission ID: 12501226
+Submission Time: 1439485013
+
+Contest ID: 570
+Index: A
+Handle: marX
+Submission ID: 12523068
+Submission Time: 1439529021
+
+Contest ID: 570
+Index: A
+Handle: smilesw
+Submission ID: 12500054
+Submission Time: 1439484744
+
+Contest ID: 570
+Index: A
+Handle: pikkupr
+Submission ID: 12522499
+Submission Time: 1439525917
+
+Contest ID: 570
+Index: A
+Handle: dotorya
+Submission ID: 12587142
+Submission Time: 1439893685
+
+Contest ID: 570
+Index: A
+Handle: marcos_almeida
+Submission ID: 12579558
+Submission Time: 1439836939
+
+Contest ID: 570
+Index: A
+Handle: arbalan
+Submission ID: 12576543
+Submission Time: 1439821651
+
+Contest ID: 570
+Index: A
+Handle: vjudge1
+Submission ID: 12544812
+Submission Time: 1439629781
+
+Contest ID: 570
+Index: A
+Handle: sidharthr
+Submission ID: 12499791
+Submission Time: 1439484692
+
+Contest ID: 570
+Index: A
+Handle: yadavsunil00001
+Submission ID: 12516974
+Submission Time: 1439493358
+
+Contest ID: 570
+Index: A
+Handle: procrastinator135
+Submission ID: 12529114
+Submission Time: 1439552302
+
+Contest ID: 570
+Index: A
+Handle: kiuny
+Submission ID: 12495873
+Submission Time: 1439483941
+
+Contest ID: 570
+Index: A
+Handle: m7mdkamal
+Submission ID: 12516475
+Submission Time: 1439492617
+
+Contest ID: 570
+Index: A
+Handle: 0o_o0
+Submission ID: 12496033
+Submission Time: 1439483967
+
+Contest ID: 570
+Index: A
+Handle: triploblastic
+Submission ID: 12508937
+Submission Time: 1439487534
+
+Contest ID: 570
+Index: A
+Handle: shubhamjha33
+Submission ID: 12509074
+Submission Time: 1439487597
+
+Contest ID: 570
+Index: A
+Handle: anshkhanna7
+Submission ID: 12495643
+Submission Time: 1439483896
+
+Contest ID: 570
+Index: A
+Handle: jwp
+Submission ID: 12523221
+Submission Time: 1439529728
+
+Contest ID: 570
+Index: A
+Handle: gg1466
+Submission ID: 12501971
+Submission Time: 1439485198
+
+Contest ID: 570
+Index: A
+Handle: annthin
+Submission ID: 12536191
+Submission Time: 1439585789
+
+Contest ID: 570
+Index: A
+Handle: adkroxx
+Submission ID: 12509279
+Submission Time: 1439487706
+
+Contest ID: 570
+Index: A
+Handle: unknown366
+Submission ID: 12506174
+Submission Time: 1439486450
+
+Contest ID: 570
+Index: A
+Handle: minhduc150496
+Submission ID: 12497127
+Submission Time: 1439484170
+
+Contest ID: 570
+Index: A
+Handle: adiXM
+Submission ID: 12504339
+Submission Time: 1439485851
+
+Contest ID: 570
+Index: A
+Handle: arsijo
+Submission ID: 12524836
+Submission Time: 1439536164
+
+Contest ID: 570
+Index: A
+Handle: theminimalist
+Submission ID: 12610538
+Submission Time: 1440033036
+
+Contest ID: 570
+Index: A
+Handle: Mafi.
+Submission ID: 12515725
+Submission Time: 1439491785
+
+Contest ID: 570
+Index: A
+Handle: abisheka
+Submission ID: 12497918
+Submission Time: 1439484313
+
+Contest ID: 570
+Index: A
+Handle: snuphole
+Submission ID: 12497847
+Submission Time: 1439484303
+
+Contest ID: 570
+Index: A
+Handle: Mex-Mans
+Submission ID: 12494991
+Submission Time: 1439483745
+
+Contest ID: 570
+Index: A
+Handle: Tareq
+Submission ID: 12498683
+Submission Time: 1439484460
+
+Contest ID: 570
+Index: A
+Handle: KamiForever
+Submission ID: 12584246
+Submission Time: 1439876277
+
+Contest ID: 570
+Index: A
+Handle: unnamedandunknown
+Submission ID: 12561339
+Submission Time: 1439731169
+
+Contest ID: 570
+Index: A
+Handle: Higazy
+Submission ID: 12591930
+Submission Time: 1439918618
+
+Contest ID: 570
+Index: A
+Handle: Arkon
+Submission ID: 12564484
+Submission Time: 1439747043
+
+Contest ID: 570
+Index: B
+Handle: rednatsybon
+Submission ID: 12496058
+Submission Time: 1439483970
+
+Contest ID: 570
+Index: B
+Handle: Escepta
+Submission ID: 12522864
+Submission Time: 1439527907
+
+Contest ID: 570
+Index: B
+Handle: joaquingc123
+Submission ID: 12605934
+Submission Time: 1439999645
+
+Contest ID: 570
+Index: B
+Handle: DBug
+Submission ID: 12516215
+Submission Time: 1439492316
+
+Contest ID: 570
+Index: B
+Handle: mrho888
+Submission ID: 12495968
+Submission Time: 1439483956
+
+Contest ID: 570
+Index: B
+Handle: flashingbyte
+Submission ID: 12518028
+Submission Time: 1439496165
+
+Contest ID: 570
+Index: B
+Handle: prashanttyagi
+Submission ID: 12506913
+Submission Time: 1439486706
+
+Contest ID: 570
+Index: B
+Handle: misakakuma
+Submission ID: 12509469
+Submission Time: 1439487800
+
+Contest ID: 570
+Index: B
+Handle: vjudge1
+Submission ID: 12541068
+Submission Time: 1439617221
+
+Contest ID: 570
+Index: B
+Handle: dnar
+Submission ID: 12497892
+Submission Time: 1439484310
+
+Contest ID: 570
+Index: B
+Handle: iamgrim
+Submission ID: 12515490
+Submission Time: 1439491599
+
+Contest ID: 570
+Index: B
+Handle: 2030xxj
+Submission ID: 12502180
+Submission Time: 1439485250
+
+Contest ID: 570
+Index: B
+Handle: sainath_iiti
+Submission ID: 12506669
+Submission Time: 1439486613
+
+Contest ID: 570
+Index: B
+Handle: vivek0739
+Submission ID: 12502010
+Submission Time: 1439485207
+
+Contest ID: 570
+Index: B
+Handle: uttom
+Submission ID: 12524435
+Submission Time: 1439534620
+
+Contest ID: 570
+Index: B
+Handle: hugo_cabral
+Submission ID: 12536670
+Submission Time: 1439590135
+
+Contest ID: 570
+Index: B
+Handle: jacksonisme
+Submission ID: 12520947
+Submission Time: 1439517716
+
+Contest ID: 570
+Index: B
+Handle: abhiranjan
+Submission ID: 12510543
+Submission Time: 1439488290
+
+Contest ID: 570
+Index: B
+Handle: htw0056
+Submission ID: 12560141
+Submission Time: 1439725834
+
+Contest ID: 570
+Index: B
+Handle: testingmyluck
+Submission ID: 12510672
+Submission Time: 1439488355
+
+Contest ID: 570
+Index: B
+Handle: kanon2
+Submission ID: 12534419
+Submission Time: 1439574526
+
+Contest ID: 570
+Index: B
+Handle: Ksushka
+Submission ID: 12500971
+Submission Time: 1439484948
+
+Contest ID: 570
+Index: B
+Handle: 541307090121
+Submission ID: 12503220
+Submission Time: 1439485528
+
+Contest ID: 570
+Index: B
+Handle: oylx
+Submission ID: 12559923
+Submission Time: 1439725065
+
+Contest ID: 570
+Index: B
+Handle: Hungry_Head
+Submission ID: 12519139
+Submission Time: 1439502845
+
+Contest ID: 570
+Index: B
+Handle: deepanshu1995
+Submission ID: 12508569
+Submission Time: 1439487373
+
+Contest ID: 570
+Index: B
+Handle: Anurag_pasi05
+Submission ID: 12518199
+Submission Time: 1439497063
+
+Contest ID: 570
+Index: B
+Handle: iambored
+Submission ID: 12509473
+Submission Time: 1439487801
+
+Contest ID: 570
+Index: B
+Handle: pulkitkapoor15
+Submission ID: 12508259
+Submission Time: 1439487240
+
+Contest ID: 570
+Index: B
+Handle: amicable
+Submission ID: 12587695
+Submission Time: 1439896650
+
+Contest ID: 570
+Index: B
+Handle: ACMer_hades
+Submission ID: 12511581
+Submission Time: 1439488814
+
+Contest ID: 570
+Index: B
+Handle: ansari
+Submission ID: 12562559
+Submission Time: 1439736903
+
+Contest ID: 570
+Index: B
+Handle: bnuvjudge
+Submission ID: 12542855
+Submission Time: 1439623977
+
+Contest ID: 570
+Index: B
+Handle: yarak
+Submission ID: 12507665
+Submission Time: 1439487000
+
+Contest ID: 570
+Index: B
+Handle: shubham.ghiya
+Submission ID: 12536553
+Submission Time: 1439588929
+
+Contest ID: 570
+Index: B
+Handle: nodar15
+Submission ID: 12509071
+Submission Time: 1439487597
+
+Contest ID: 570
+Index: B
+Handle: jomal00
+Submission ID: 12509317
+Submission Time: 1439487725
+
+Contest ID: 570
+Index: B
+Handle: arshoma_shohag
+Submission ID: 12515622
+Submission Time: 1439491688
+
+Contest ID: 570
+Index: B
+Handle: El_Heisenberg
+Submission ID: 12518856
+Submission Time: 1439500803
+
+Contest ID: 570
+Index: B
+Handle: Mahir
+Submission ID: 12510045
+Submission Time: 1439488051
+
+Contest ID: 570
+Index: B
+Handle: pranjalr34
+Submission ID: 12500382
+Submission Time: 1439484818
+
+Contest ID: 570
+Index: B
+Handle: mahim007
+Submission ID: 12508615
+Submission Time: 1439487393
+
+Contest ID: 570
+Index: B
+Handle: f2013065
+Submission ID: 12572489
+Submission Time: 1439801174
+
+Contest ID: 570
+Index: B
+Handle: kalili
+Submission ID: 12521440
+Submission Time: 1439520431
+
+Contest ID: 570
+Index: B
+Handle: Kh.Madi
+Submission ID: 12502652
+Submission Time: 1439485377
+
+Contest ID: 570
+Index: B
+Handle: sneha_varma
+Submission ID: 12502541
+Submission Time: 1439485347
+
+Contest ID: 570
+Index: B
+Handle: vjudge2
+Submission ID: 12524294
+Submission Time: 1439534037
+
+Contest ID: 570
+Index: B
+Handle: sidharthr
+Submission ID: 12508938
+Submission Time: 1439487534
+
+Contest ID: 570
+Index: B
+Handle: AhmedZaza
+Submission ID: 12527387
+Submission Time: 1439544689
+
+Contest ID: 570
+Index: B
+Handle: Loveshit
+Submission ID: 12510454
+Submission Time: 1439488250
+
+Contest ID: 570
+Index: C
+Handle: G_curiosity
+Submission ID: 12543866
+Submission Time: 1439627077
+
+Contest ID: 570
+Index: C
+Handle: jarl93
+Submission ID: 12516250
+Submission Time: 1439492350
+
+Contest ID: 570
+Index: C
+Handle: toohard
+Submission ID: 12506513
+Submission Time: 1439486559
+
+Contest ID: 570
+Index: C
+Handle: vjudge1
+Submission ID: 12525587
+Submission Time: 1439538614
+
+Contest ID: 570
+Index: C
+Handle: vcbnxmz
+Submission ID: 12527962
+Submission Time: 1439546925
+
+Contest ID: 570
+Index: C
+Handle: samread81
+Submission ID: 12513526
+Submission Time: 1439489819
+
+Contest ID: 570
+Index: C
+Handle: quallama
+Submission ID: 12510640
+Submission Time: 1439488337
+
+Contest ID: 570
+Index: C
+Handle: vanche
+Submission ID: 12514935
+Submission Time: 1439490478
+
+Contest ID: 570
+Index: C
+Handle: sean617
+Submission ID: 12509280
+Submission Time: 1439487706
+
+Contest ID: 570
+Index: C
+Handle: tyh24689
+Submission ID: 12504070
+Submission Time: 1439485770
+
+Contest ID: 570
+Index: C
+Handle: snowy_smile
+Submission ID: 12540099
+Submission Time: 1439613208
+
+Contest ID: 570
+Index: C
+Handle: YangJueji
+Submission ID: 12574238
+Submission Time: 1439809893
+
+Contest ID: 570
+Index: C
+Handle: nikitayusupov
+Submission ID: 12518888
+Submission Time: 1439501000
+
+Contest ID: 570
+Index: C
+Handle: akat
+Submission ID: 12501337
+Submission Time: 1439485041
+
+Contest ID: 570
+Index: C
+Handle: SebiSebi
+Submission ID: 12504068
+Submission Time: 1439485770
+
+Contest ID: 570
+Index: C
+Handle: KayacanV
+Submission ID: 12506479
+Submission Time: 1439486545
+
+Contest ID: 570
+Index: C
+Handle: Zelariuz
+Submission ID: 12582981
+Submission Time: 1439865552
+
+Contest ID: 570
+Index: C
+Handle: alex_Harry
+Submission ID: 12504225
+Submission Time: 1439485818
+
+Contest ID: 570
+Index: C
+Handle: ilidar
+Submission ID: 12509811
+Submission Time: 1439487947
+
+Contest ID: 570
+Index: C
+Handle: Christiano_Messi
+Submission ID: 12519366
+Submission Time: 1439504680
+
+Contest ID: 570
+Index: C
+Handle: winme
+Submission ID: 12508950
+Submission Time: 1439487540
+
+Contest ID: 570
+Index: C
+Handle: dhuacm4
+Submission ID: 12522653
+Submission Time: 1439526800
+
+Contest ID: 570
+Index: C
+Handle: mostafa20011999
+Submission ID: 12577393
+Submission Time: 1439826378
+
+Contest ID: 570
+Index: C
+Handle: nguyennamthinhnnt
+Submission ID: 12508984
+Submission Time: 1439487559
+
+Contest ID: 570
+Index: C
+Handle: zetilovn
+Submission ID: 12566888
+Submission Time: 1439757591
+
+Contest ID: 570
+Index: C
+Handle: zetamoo
+Submission ID: 12497866
+Submission Time: 1439484307
+
+Contest ID: 570
+Index: C
+Handle: denis2204
+Submission ID: 12504501
+Submission Time: 1439485894
+
+Contest ID: 570
+Index: C
+Handle: madMoudud
+Submission ID: 12543346
+Submission Time: 1439625540
+
+Contest ID: 570
+Index: C
+Handle: alex-kozinov
+Submission ID: 12529807
+Submission Time: 1439555422
+
+Contest ID: 570
+Index: C
+Handle: tenshi_kanade
+Submission ID: 12603440
+Submission Time: 1439989718
+
+Contest ID: 570
+Index: C
+Handle: Zhangcanjie
+Submission ID: 12528680
+Submission Time: 1439550194
+
+Contest ID: 570
+Index: C
+Handle: deer
+Submission ID: 12615986
+Submission Time: 1440076474
+
+Contest ID: 570
+Index: C
+Handle: vivekkumar1595
+Submission ID: 12516763
+Submission Time: 1439493004
+
+Contest ID: 570
+Index: C
+Handle: james007
+Submission ID: 12495146
+Submission Time: 1439483787
+
+Contest ID: 570
+Index: C
+Handle: vjudge4
+Submission ID: 12543205
+Submission Time: 1439625097
+
+Contest ID: 570
+Index: C
+Handle: laughing296
+Submission ID: 12507734
+Submission Time: 1439487030
+
+Contest ID: 570
+Index: C
+Handle: Dikea
+Submission ID: 12554682
+Submission Time: 1439695170
+
+Contest ID: 570
+Index: C
+Handle: thecodekaiser
+Submission ID: 12516653
+Submission Time: 1439492846
+
+Contest ID: 570
+Index: C
+Handle: 20131730
+Submission ID: 12510627
+Submission Time: 1439488330
+
+Contest ID: 570
+Index: C
+Handle: kevinhikari
+Submission ID: 12569234
+Submission Time: 1439779454
+
+Contest ID: 570
+Index: C
+Handle: doremi
+Submission ID: 12549715
+Submission Time: 1439653178
+
+Contest ID: 570
+Index: C
+Handle: 6eJIa9IzZzTeHb
+Submission ID: 12502931
+Submission Time: 1439485456
+
+Contest ID: 570
+Index: C
+Handle: 128256
+Submission ID: 12584739
+Submission Time: 1439879520
+
+Contest ID: 570
+Index: C
+Handle: NBAH
+Submission ID: 12508281
+Submission Time: 1439487251
+
+Contest ID: 570
+Index: C
+Handle: Psionic
+Submission ID: 12510750
+Submission Time: 1439488387
+
+Contest ID: 570
+Index: C
+Handle: gidelfino
+Submission ID: 12569341
+Submission Time: 1439780318
+
+Contest ID: 570
+Index: C
+Handle: Williamx
+Submission ID: 12507994
+Submission Time: 1439487133
+
+Contest ID: 570
+Index: C
+Handle: a12341
+Submission ID: 12526758
+Submission Time: 1439542411
+
+Contest ID: 570
+Index: C
+Handle: iarvind
+Submission ID: 12525884
+Submission Time: 1439539510
+
+Contest ID: 570
+Index: C
+Handle: SUTHNC
+Submission ID: 12509479
+Submission Time: 1439487803
+
+Contest ID: 570
+Index: D
+Handle: islands_001
+Submission ID: 12511515
+Submission Time: 1439488783
+
+Contest ID: 570
+Index: D
+Handle: 815820555
+Submission ID: 12526221
+Submission Time: 1439540616
+
+Contest ID: 570
+Index: D
+Handle: rmumi
+Submission ID: 12517712
+Submission Time: 1439495195
+
+Contest ID: 570
+Index: D
+Handle: coder_pryanshu
+Submission ID: 12571561
+Submission Time: 1439796681
+
+Contest ID: 570
+Index: D
+Handle: MrRight
+Submission ID: 12523610
+Submission Time: 1439531492
+
+Contest ID: 570
+Index: D
+Handle: altairmn
+Submission ID: 12525822
+Submission Time: 1439539299
+
+Contest ID: 570
+Index: D
+Handle: Ancient_mage
+Submission ID: 12602563
+Submission Time: 1439986002
+
+Contest ID: 570
+Index: D
+Handle: giusevtr
+Submission ID: 12553682
+Submission Time: 1439684387
+
+Contest ID: 570
+Index: D
+Handle: mzhq
+Submission ID: 12541962
+Submission Time: 1439620838
+
+Contest ID: 570
+Index: D
+Handle: kingofnumbers
+Submission ID: 12507204
+Submission Time: 1439486816
+
+Contest ID: 570
+Index: D
+Handle: mailo102
+Submission ID: 12553477
+Submission Time: 1439681565
+
+Contest ID: 570
+Index: D
+Handle: 815820555
+Submission ID: 12526236
+Submission Time: 1439540663
+
+Contest ID: 570
+Index: D
+Handle: g656574180
+Submission ID: 12603426
+Submission Time: 1439989651
+
+Contest ID: 570
+Index: D
+Handle: MirceaFF
+Submission ID: 12516799
+Submission Time: 1439493066
+
+Contest ID: 570
+Index: D
+Handle: Nikitosh
+Submission ID: 12518875
+Submission Time: 1439500916
+
+Contest ID: 570
+Index: D
+Handle: liuyuhong
+Submission ID: 12543829
+Submission Time: 1439626994
+
+Contest ID: 570
+Index: D
+Handle: kabell
+Submission ID: 12549101
+Submission Time: 1439649789
+
+Contest ID: 570
+Index: D
+Handle: -XraY-
+Submission ID: 12550599
+Submission Time: 1439658534
+
+Contest ID: 570
+Index: D
+Handle: exmath89
+Submission ID: 12608185
+Submission Time: 1440010845
+
+Contest ID: 570
+Index: D
+Handle: peterpan
+Submission ID: 12517556
+Submission Time: 1439494662
+
+Contest ID: 570
+Index: D
+Handle: subhamdtu
+Submission ID: 12559523
+Submission Time: 1439723137
+
+Contest ID: 570
+Index: D
+Handle: abgnwl
+Submission ID: 12543868
+Submission Time: 1439627080
+
+Contest ID: 570
+Index: D
+Handle: volverine
+Submission ID: 12581066
+Submission Time: 1439846355
+
+Contest ID: 570
+Index: D
+Handle: _rabbit
+Submission ID: 12522032
+Submission Time: 1439523212
+
+Contest ID: 570
+Index: D
+Handle: radical
+Submission ID: 12532203
+Submission Time: 1439564892
+
+Contest ID: 570
+Index: D
+Handle: riparia
+Submission ID: 12532581
+Submission Time: 1439566345
+
+Contest ID: 570
+Index: D
+Handle: aaaaajack
+Submission ID: 12506489
+Submission Time: 1439486550
+
+Contest ID: 570
+Index: D
+Handle: abgnwl
+Submission ID: 12542794
+Submission Time: 1439623832
+
+Contest ID: 570
+Index: D
+Handle: minhduc150496
+Submission ID: 12522612
+Submission Time: 1439526561
+
+Contest ID: 570
+Index: D
+Handle: oi111
+Submission ID: 12561284
+Submission Time: 1439730918
+
+Contest ID: 570
+Index: D
+Handle: Crucian
+Submission ID: 12572483
+Submission Time: 1439801151
+
+Contest ID: 570
+Index: D
+Handle: Mr_X
+Submission ID: 12603695
+Submission Time: 1439990691
+
+Contest ID: 570
+Index: D
+Handle: mrho888
+Submission ID: 12516234
+Submission Time: 1439492331
+
+Contest ID: 570
+Index: D
+Handle: b0mb3r
+Submission ID: 12563832
+Submission Time: 1439744843
+
+Contest ID: 570
+Index: D
+Handle: practice1729
+Submission ID: 12528612
+Submission Time: 1439549914
+
+Contest ID: 570
+Index: D
+Handle: james007
+Submission ID: 12517127
+Submission Time: 1439493644
+
+Contest ID: 570
+Index: D
+Handle: uuuuuu
+Submission ID: 12599949
+Submission Time: 1439973832
+
+Contest ID: 570
+Index: D
+Handle: Siyavash
+Submission ID: 12535530
+Submission Time: 1439580645
+
+Contest ID: 570
+Index: D
+Handle: Nero
+Submission ID: 12523321
+Submission Time: 1439530132
+
+Contest ID: 570
+Index: D
+Handle: Supto
+Submission ID: 12592925
+Submission Time: 1439923529
+
+Contest ID: 570
+Index: D
+Handle: wustmengzhennan
+Submission ID: 12577063
+Submission Time: 1439824557
+
+Contest ID: 570
+Index: D
+Handle: soon
+Submission ID: 12605636
+Submission Time: 1439998039
+
+Contest ID: 570
+Index: D
+Handle: soon
+Submission ID: 12605611
+Submission Time: 1439997925
+
+Contest ID: 570
+Index: D
+Handle: abgnwl
+Submission ID: 12542628
+Submission Time: 1439623296
+
+Contest ID: 570
+Index: D
+Handle: Dikea
+Submission ID: 12574513
+Submission Time: 1439811359
+
+Contest ID: 570
+Index: D
+Handle: animesh_f
+Submission ID: 12516965
+Submission Time: 1439493346
+
+Contest ID: 570
+Index: D
+Handle: dima.13
+Submission ID: 12517883
+Submission Time: 1439495690
+
+Contest ID: 570
+Index: D
+Handle: logickaiser
+Submission ID: 12538203
+Submission Time: 1439603641
+
+Contest ID: 570
+Index: D
+Handle: snowy_smile
+Submission ID: 12541402
+Submission Time: 1439618639
+
+Contest ID: 570
+Index: D
+Handle: mhadih
+Submission ID: 12526574
+Submission Time: 1439541815
+
+Contest ID: 570
+Index: E
+Handle: jackraft
+Submission ID: 12524519
+Submission Time: 1439534957
+
+Contest ID: 570
+Index: E
+Handle: himanshujaju
+Submission ID: 12559184
+Submission Time: 1439721494
+
+Contest ID: 570
+Index: E
+Handle: hulkblaster
+Submission ID: 12587901
+Submission Time: 1439897888
+
+Contest ID: 570
+Index: E
+Handle: pegasas
+Submission ID: 12590984
+Submission Time: 1439913901
+
+Contest ID: 570
+Index: E
+Handle: williamhu08
+Submission ID: 12519284
+Submission Time: 1439503902
+
+Contest ID: 570
+Index: E
+Handle: RXDoi
+Submission ID: 12538180
+Submission Time: 1439603515
+
+Contest ID: 570
+Index: E
+Handle: JustN
+Submission ID: 12516029
+Submission Time: 1439491982
+
+Contest ID: 570
+Index: E
+Handle: Lint
+Submission ID: 12524577
+Submission Time: 1439535173
+
+Contest ID: 570
+Index: E
+Handle: WHITE2302
+Submission ID: 12515397
+Submission Time: 1439491553
+
+Contest ID: 570
+Index: E
+Handle: lidaiqing
+Submission ID: 12536662
+Submission Time: 1439590014
+
+Contest ID: 570
+Index: E
+Handle: savedcoder
+Submission ID: 12587148
+Submission Time: 1439893704
+
+Contest ID: 570
+Index: E
+Handle: BananaTree
+Submission ID: 12523424
+Submission Time: 1439530630
+
+Contest ID: 570
+Index: E
+Handle: kmjp
+Submission ID: 12516431
+Submission Time: 1439492559
+
+Contest ID: 570
+Index: E
+Handle: firmsnail
+Submission ID: 12529772
+Submission Time: 1439555270
+
+Contest ID: 570
+Index: E
+Handle: carber
+Submission ID: 12613871
+Submission Time: 1440063473
+
+Contest ID: 570
+Index: E
+Handle: chenggong_chen
+Submission ID: 12550947
+Submission Time: 1439660747
+
+Contest ID: 570
+Index: E
+Handle: mgch
+Submission ID: 12507380
+Submission Time: 1439486886
+
+Contest ID: 570
+Index: E
+Handle: Jegorov
+Submission ID: 12518553
+Submission Time: 1439498957
+
+Contest ID: 570
+Index: E
+Handle: vjudge5
+Submission ID: 12525114
+Submission Time: 1439537225
+
+Contest ID: 570
+Index: E
+Handle: bssanches
+Submission ID: 12609528
+Submission Time: 1440020879
+
+Contest ID: 570
+Index: E
+Handle: Lazycoder97
+Submission ID: 12539413
+Submission Time: 1439609587
+
+Contest ID: 570
+Index: E
+Handle: kkkiller
+Submission ID: 12536123
+Submission Time: 1439585287
+
+Contest ID: 570
+Index: E
+Handle: sahedsohel
+Submission ID: 12533770
+Submission Time: 1439571572
+
+Contest ID: 570
+Index: E
+Handle: BIT-silence
+Submission ID: 12511140
+Submission Time: 1439488586
+
+Contest ID: 570
+Index: E
+Handle: acherepanov
+Submission ID: 12512472
+Submission Time: 1439489282
+
+Contest ID: 570
+Index: E
+Handle: logickaiser
+Submission ID: 12543889
+Submission Time: 1439627155
+
+Contest ID: 570
+Index: E
+Handle: frank.bozar
+Submission ID: 12615650
+Submission Time: 1440074728
+
+Contest ID: 570
+Index: E
+Handle: IcyGirl
+Submission ID: 12532618
+Submission Time: 1439566463
+
+Contest ID: 570
+Index: E
+Handle: egor.lifar
+Submission ID: 12536201
+Submission Time: 1439585835
+
+Contest ID: 570
+Index: E
+Handle: Bistrigova_Anastasiya
+Submission ID: 12532992
+Submission Time: 1439568102
+
+Contest ID: 570
+Index: E
+Handle: victor_kzk
+Submission ID: 12554314
+Submission Time: 1439691318
+
+Contest ID: 570
+Index: E
+Handle: CharlieGG
+Submission ID: 12567126
+Submission Time: 1439759028
+
+Contest ID: 570
+Index: E
+Handle: Jiian
+Submission ID: 12545501
+Submission Time: 1439632539
+
+Contest ID: 570
+Index: E
+Handle: an2bug
+Submission ID: 12520051
+Submission Time: 1439510593
+
+Contest ID: 570
+Index: E
+Handle: wahyuardan
+Submission ID: 12562355
+Submission Time: 1439735924
+
+Contest ID: 570
+Index: E
+Handle: Roll
+Submission ID: 12530391
+Submission Time: 1439557964
+
+Contest ID: 570
+Index: E
+Handle: nikhil30
+Submission ID: 12592130
+Submission Time: 1439919634
+
+Contest ID: 570
+Index: E
+Handle: ASDASDASDASD
+Submission ID: 12549270
+Submission Time: 1439650732
+
+Contest ID: 570
+Index: E
+Handle: hellman1908
+Submission ID: 12588474
+Submission Time: 1439901226
+
+Contest ID: 570
+Index: E
+Handle: liyh
+Submission ID: 12516138
+Submission Time: 1439492256
+
+Contest ID: 570
+Index: E
+Handle: islands
+Submission ID: 12588643
+Submission Time: 1439902050
+
+Contest ID: 570
+Index: E
+Handle: Stonefeang
+Submission ID: 12513484
+Submission Time: 1439489798
+
+Contest ID: 570
+Index: E
+Handle: Mektpoy
+Submission ID: 12516326
+Submission Time: 1439492427
+
+Contest ID: 570
+Index: E
+Handle: 996195670
+Submission ID: 12530636
+Submission Time: 1439558900
+
+Contest ID: 570
+Index: E
+Handle: tanphatls987
+Submission ID: 12518883
+Submission Time: 1439500945
+
+Contest ID: 570
+Index: E
+Handle: CodeAce
+Submission ID: 12574417
+Submission Time: 1439810824
+
+Contest ID: 570
+Index: E
+Handle: dotorya
+Submission ID: 12587816
+Submission Time: 1439897396
+
+Contest ID: 570
+Index: E
+Handle: tyh24689
+Submission ID: 12527190
+Submission Time: 1439543871
+
+Contest ID: 570
+Index: E
+Handle: Anton_Chernev
+Submission ID: 12558590
+Submission Time: 1439718413
+
+Contest ID: 570
+Index: E
+Handle: OcarisAM
+Submission ID: 12541214
+Submission Time: 1439617785
+
+Contest ID: 569
+Index: A
+Handle: maos
+Submission ID: 12443890
+Submission Time: 1439225868
+
+Contest ID: 569
+Index: A
+Handle: gabrielrc
+Submission ID: 12459481
+Submission Time: 1439252208
+
+Contest ID: 569
+Index: A
+Handle: scau_logos
+Submission ID: 12444038
+Submission Time: 1439225918
+
+Contest ID: 569
+Index: A
+Handle: bluemmb
+Submission ID: 12461165
+Submission Time: 1439265446
+
+Contest ID: 569
+Index: A
+Handle: Theodor1000
+Submission ID: 12489415
+Submission Time: 1439456931
+
+Contest ID: 569
+Index: A
+Handle: 201411132101
+Submission ID: 12473807
+Submission Time: 1439356577
+
+Contest ID: 569
+Index: A
+Handle: squancher
+Submission ID: 12443321
+Submission Time: 1439225680
+
+Contest ID: 569
+Index: A
+Handle: victor20032003
+Submission ID: 12448491
+Submission Time: 1439227768
+
+Contest ID: 569
+Index: A
+Handle: mik
+Submission ID: 12441607
+Submission Time: 1439224870
+
+Contest ID: 569
+Index: A
+Handle: mansur8868
+Submission ID: 12462468
+Submission Time: 1439276195
+
+Contest ID: 569
+Index: A
+Handle: lab104_wangshuo
+Submission ID: 12448803
+Submission Time: 1439227906
+
+Contest ID: 569
+Index: A
+Handle: Mo7amedElnaggar
+Submission ID: 12469523
+Submission Time: 1439313235
+
+Contest ID: 569
+Index: A
+Handle: pro100leo
+Submission ID: 12457716
+Submission Time: 1439237290
+
+Contest ID: 569
+Index: A
+Handle: for_zepto
+Submission ID: 12456882
+Submission Time: 1439234535
+
+Contest ID: 569
+Index: A
+Handle: master_b4_2016_ends
+Submission ID: 12613334
+Submission Time: 1440060073
+
+Contest ID: 569
+Index: A
+Handle: gargankur74
+Submission ID: 12461128
+Submission Time: 1439265203
+
+Contest ID: 569
+Index: A
+Handle: Sajil
+Submission ID: 12454224
+Submission Time: 1439230891
+
+Contest ID: 569
+Index: A
+Handle: nishantyadav
+Submission ID: 12452471
+Submission Time: 1439229948
+
+Contest ID: 569
+Index: A
+Handle: mo3ath.al3li
+Submission ID: 12579118
+Submission Time: 1439834699
+
+Contest ID: 569
+Index: A
+Handle: Neehan
+Submission ID: 12445288
+Submission Time: 1439226392
+
+Contest ID: 569
+Index: A
+Handle: Mahir_sust
+Submission ID: 12442057
+Submission Time: 1439225130
+
+Contest ID: 569
+Index: A
+Handle: BlueHya
+Submission ID: 12451434
+Submission Time: 1439229368
+
+Contest ID: 569
+Index: A
+Handle: namdev102
+Submission ID: 12445136
+Submission Time: 1439226332
+
+Contest ID: 569
+Index: A
+Handle: Tally_Ho
+Submission ID: 12448224
+Submission Time: 1439227634
+
+Contest ID: 569
+Index: A
+Handle: WaterSpellbinder
+Submission ID: 12459243
+Submission Time: 1439248446
+
+Contest ID: 569
+Index: A
+Handle: E_S_A
+Submission ID: 12465318
+Submission Time: 1439291016
+
+Contest ID: 569
+Index: A
+Handle: Qualwak
+Submission ID: 12593378
+Submission Time: 1439926403
+
+Contest ID: 569
+Index: A
+Handle: naivedya
+Submission ID: 12442280
+Submission Time: 1439225236
+
+Contest ID: 569
+Index: A
+Handle: shamitlal_14
+Submission ID: 12494056
+Submission Time: 1439480013
+
+Contest ID: 569
+Index: A
+Handle: Yaven
+Submission ID: 12450296
+Submission Time: 1439228709
+
+Contest ID: 569
+Index: A
+Handle: death_coder
+Submission ID: 12441887
+Submission Time: 1439225037
+
+Contest ID: 569
+Index: A
+Handle: Erona
+Submission ID: 12547205
+Submission Time: 1439640719
+
+Contest ID: 569
+Index: A
+Handle: sihare123
+Submission ID: 12447218
+Submission Time: 1439227189
+
+Contest ID: 569
+Index: A
+Handle: nein
+Submission ID: 12454239
+Submission Time: 1439230898
+
+Contest ID: 569
+Index: A
+Handle: parth_sandeep
+Submission ID: 12444883
+Submission Time: 1439226231
+
+Contest ID: 569
+Index: A
+Handle: sbakic
+Submission ID: 12457400
+Submission Time: 1439236067
+
+Contest ID: 569
+Index: A
+Handle: MMXV
+Submission ID: 12444428
+Submission Time: 1439226066
+
+Contest ID: 569
+Index: A
+Handle: SEU_09013413
+Submission ID: 12442084
+Submission Time: 1439225146
+
+Contest ID: 569
+Index: A
+Handle: 915507430
+Submission ID: 12450775
+Submission Time: 1439228988
+
+Contest ID: 569
+Index: A
+Handle: ancienthunder
+Submission ID: 12463478
+Submission Time: 1439281717
+
+Contest ID: 569
+Index: A
+Handle: AKGP
+Submission ID: 12457643
+Submission Time: 1439237005
+
+Contest ID: 569
+Index: A
+Handle: vjudge1
+Submission ID: 12583945
+Submission Time: 1439874040
+
+Contest ID: 569
+Index: A
+Handle: catawar2
+Submission ID: 12492708
+Submission Time: 1439473460
+
+Contest ID: 569
+Index: A
+Handle: boxresin
+Submission ID: 12597460
+Submission Time: 1439963468
+
+Contest ID: 569
+Index: A
+Handle: SLAIVI
+Submission ID: 12494484
+Submission Time: 1439482421
+
+Contest ID: 569
+Index: A
+Handle: TheWishmaster
+Submission ID: 12466729
+Submission Time: 1439298780
+
+Contest ID: 569
+Index: A
+Handle: citytourist
+Submission ID: 12473524
+Submission Time: 1439354525
+
+Contest ID: 569
+Index: A
+Handle: Skyfall009
+Submission ID: 12450865
+Submission Time: 1439229043
+
+Contest ID: 569
+Index: A
+Handle: zyh961117
+Submission ID: 12453549
+Submission Time: 1439230522
+
+Contest ID: 569
+Index: A
+Handle: omar22
+Submission ID: 12450599
+Submission Time: 1439228880
+
+Contest ID: 569
+Index: B
+Handle: diptadas
+Submission ID: 12447235
+Submission Time: 1439227198
+
+Contest ID: 569
+Index: B
+Handle: rakeen
+Submission ID: 12449991
+Submission Time: 1439228541
+
+Contest ID: 569
+Index: B
+Handle: Chundi
+Submission ID: 12462838
+Submission Time: 1439278437
+
+Contest ID: 569
+Index: B
+Handle: Kerpoo
+Submission ID: 12446922
+Submission Time: 1439227061
+
+Contest ID: 569
+Index: B
+Handle: Shadow00
+Submission ID: 12455810
+Submission Time: 1439233200
+
+Contest ID: 569
+Index: B
+Handle: chaozai
+Submission ID: 12461203
+Submission Time: 1439265791
+
+Contest ID: 569
+Index: B
+Handle: mikelhpdatke
+Submission ID: 12443564
+Submission Time: 1439225765
+
+Contest ID: 569
+Index: B
+Handle: GKHack
+Submission ID: 12460355
+Submission Time: 1439259585
+
+Contest ID: 569
+Index: B
+Handle: mayrond
+Submission ID: 12445623
+Submission Time: 1439226522
+
+Contest ID: 569
+Index: B
+Handle: myitayew
+Submission ID: 12448709
+Submission Time: 1439227864
+
+Contest ID: 569
+Index: B
+Handle: diptachandrapaul
+Submission ID: 12452101
+Submission Time: 1439229734
+
+Contest ID: 569
+Index: B
+Handle: G_Hani
+Submission ID: 12444991
+Submission Time: 1439226272
+
+Contest ID: 569
+Index: B
+Handle: binom
+Submission ID: 12443049
+Submission Time: 1439225572
+
+Contest ID: 569
+Index: B
+Handle: dog1889
+Submission ID: 12461960
+Submission Time: 1439272776
+
+Contest ID: 569
+Index: B
+Handle: ACMsyuct
+Submission ID: 12488767
+Submission Time: 1439453750
+
+Contest ID: 569
+Index: B
+Handle: vedang.mehta36
+Submission ID: 12467566
+Submission Time: 1439302519
+
+Contest ID: 569
+Index: B
+Handle: madkad
+Submission ID: 12446132
+Submission Time: 1439226731
+
+Contest ID: 569
+Index: B
+Handle: Ishtiaq11
+Submission ID: 12446050
+Submission Time: 1439226695
+
+Contest ID: 569
+Index: B
+Handle: _T-T-T_
+Submission ID: 12446670
+Submission Time: 1439226956
+
+Contest ID: 569
+Index: B
+Handle: nicomazz
+Submission ID: 12442594
+Submission Time: 1439225380
+
+Contest ID: 569
+Index: B
+Handle: tushan
+Submission ID: 12452961
+Submission Time: 1439230215
+
+Contest ID: 569
+Index: B
+Handle: aj95
+Submission ID: 12441861
+Submission Time: 1439225023
+
+Contest ID: 569
+Index: B
+Handle: kasa
+Submission ID: 12448217
+Submission Time: 1439227632
+
+Contest ID: 569
+Index: B
+Handle: shahofblah
+Submission ID: 12446902
+Submission Time: 1439227055
+
+Contest ID: 569
+Index: B
+Handle: docodon
+Submission ID: 12445128
+Submission Time: 1439226327
+
+Contest ID: 569
+Index: B
+Handle: ucritmeow
+Submission ID: 12463085
+Submission Time: 1439279884
+
+Contest ID: 569
+Index: B
+Handle: mannu_the_coder
+Submission ID: 12449535
+Submission Time: 1439228296
+
+Contest ID: 569
+Index: B
+Handle: rajulsingh37
+Submission ID: 12442725
+Submission Time: 1439225434
+
+Contest ID: 569
+Index: B
+Handle: The_true_Clare
+Submission ID: 12448755
+Submission Time: 1439227887
+
+Contest ID: 569
+Index: B
+Handle: ritesh96310
+Submission ID: 12465536
+Submission Time: 1439292509
+
+Contest ID: 569
+Index: B
+Handle: mohitre
+Submission ID: 12454446
+Submission Time: 1439231000
+
+Contest ID: 569
+Index: B
+Handle: mohitreddy01
+Submission ID: 12446343
+Submission Time: 1439226821
+
+Contest ID: 569
+Index: B
+Handle: reinarduswindy
+Submission ID: 12460488
+Submission Time: 1439260475
+
+Contest ID: 569
+Index: B
+Handle: Pure233
+Submission ID: 12468100
+Submission Time: 1439305320
+
+Contest ID: 569
+Index: B
+Handle: d.a_truong
+Submission ID: 12447249
+Submission Time: 1439227204
+
+Contest ID: 569
+Index: B
+Handle: kinematicks
+Submission ID: 12450137
+Submission Time: 1439228621
+
+Contest ID: 569
+Index: B
+Handle: fands
+Submission ID: 12467201
+Submission Time: 1439300977
+
+Contest ID: 569
+Index: B
+Handle: raj29
+Submission ID: 12445157
+Submission Time: 1439226341
+
+Contest ID: 569
+Index: B
+Handle: claus_spb
+Submission ID: 12448943
+Submission Time: 1439227978
+
+Contest ID: 569
+Index: B
+Handle: abhioshar
+Submission ID: 12445565
+Submission Time: 1439226499
+
+Contest ID: 569
+Index: B
+Handle: ancienthunder
+Submission ID: 12457057
+Submission Time: 1439234953
+
+Contest ID: 569
+Index: B
+Handle: template
+Submission ID: 12456225
+Submission Time: 1439233567
+
+Contest ID: 569
+Index: B
+Handle: Ahmed_Dinar
+Submission ID: 12441817
+Submission Time: 1439225000
+
+Contest ID: 569
+Index: B
+Handle: YUCODERS
+Submission ID: 12459012
+Submission Time: 1439245266
+
+Contest ID: 569
+Index: B
+Handle: Kareem_Mohllal
+Submission ID: 12442385
+Submission Time: 1439225279
+
+Contest ID: 569
+Index: B
+Handle: Storminteacup
+Submission ID: 12480088
+Submission Time: 1439385833
+
+Contest ID: 569
+Index: B
+Handle: germanohn
+Submission ID: 12458391
+Submission Time: 1439240000
+
+Contest ID: 569
+Index: B
+Handle: dreamflyer
+Submission ID: 12461015
+Submission Time: 1439264196
+
+Contest ID: 569
+Index: B
+Handle: IvanTeacup
+Submission ID: 12585343
+Submission Time: 1439883089
+
+Contest ID: 569
+Index: B
+Handle: Villagers9012
+Submission ID: 12462090
+Submission Time: 1439273761
+
+Contest ID: 569
+Index: C
+Handle: TaoTao
+Submission ID: 12465653
+Submission Time: 1439293217
+
+Contest ID: 569
+Index: C
+Handle: bodybeaver
+Submission ID: 12454899
+Submission Time: 1439231197
+
+Contest ID: 569
+Index: C
+Handle: kazu
+Submission ID: 12454885
+Submission Time: 1439231192
+
+Contest ID: 569
+Index: C
+Handle: pappagukun1
+Submission ID: 12459409
+Submission Time: 1439251046
+
+Contest ID: 569
+Index: C
+Handle: OcarisAM
+Submission ID: 12458664
+Submission Time: 1439241928
+
+Contest ID: 569
+Index: C
+Handle: achiever202
+Submission ID: 12449034
+Submission Time: 1439228028
+
+Contest ID: 569
+Index: C
+Handle: sagnik
+Submission ID: 12462193
+Submission Time: 1439274365
+
+Contest ID: 569
+Index: C
+Handle: 20131730
+Submission ID: 12445292
+Submission Time: 1439226395
+
+Contest ID: 569
+Index: C
+Handle: ashiquzzaman33
+Submission ID: 12466126
+Submission Time: 1439295765
+
+Contest ID: 569
+Index: C
+Handle: iit.saurav
+Submission ID: 12451169
+Submission Time: 1439229225
+
+Contest ID: 569
+Index: C
+Handle: sam721
+Submission ID: 12455768
+Submission Time: 1439233163
+
+Contest ID: 569
+Index: C
+Handle: the_bear
+Submission ID: 12451277
+Submission Time: 1439229304
+
+Contest ID: 569
+Index: C
+Handle: giusevtr
+Submission ID: 12450011
+Submission Time: 1439228552
+
+Contest ID: 569
+Index: C
+Handle: Novice_R
+Submission ID: 12464757
+Submission Time: 1439287770
+
+Contest ID: 569
+Index: C
+Handle: mehulagarwal
+Submission ID: 12452787
+Submission Time: 1439230132
+
+Contest ID: 569
+Index: C
+Handle: squancher
+Submission ID: 12455359
+Submission Time: 1439231359
+
+Contest ID: 569
+Index: C
+Handle: The-Legend
+Submission ID: 12463870
+Submission Time: 1439283324
+
+Contest ID: 569
+Index: C
+Handle: yashkumar18
+Submission ID: 12447983
+Submission Time: 1439227529
+
+Contest ID: 569
+Index: C
+Handle: amr_bekhiet
+Submission ID: 12462289
+Submission Time: 1439274998
+
+Contest ID: 569
+Index: C
+Handle: mikhail.safin
+Submission ID: 12452155
+Submission Time: 1439229760
+
+Contest ID: 569
+Index: C
+Handle: 1302kong
+Submission ID: 12466115
+Submission Time: 1439295724
+
+Contest ID: 569
+Index: C
+Handle: HappyNaPin
+Submission ID: 12451886
+Submission Time: 1439229629
+
+Contest ID: 569
+Index: C
+Handle: avv
+Submission ID: 12468276
+Submission Time: 1439306227
+
+Contest ID: 569
+Index: C
+Handle: SquidQuid
+Submission ID: 12452201
+Submission Time: 1439229788
+
+Contest ID: 569
+Index: C
+Handle: ibtkm
+Submission ID: 12579267
+Submission Time: 1439835404
+
+Contest ID: 569
+Index: C
+Handle: VladSevets
+Submission ID: 12454496
+Submission Time: 1439231025
+
+Contest ID: 569
+Index: C
+Handle: xhae
+Submission ID: 12543785
+Submission Time: 1439626860
+
+Contest ID: 569
+Index: C
+Handle: lyx19990726
+Submission ID: 12452635
+Submission Time: 1439230058
+
+Contest ID: 569
+Index: C
+Handle: ap_hawkdown
+Submission ID: 12456273
+Submission Time: 1439233611
+
+Contest ID: 569
+Index: C
+Handle: ALEXKIRNAS
+Submission ID: 12449397
+Submission Time: 1439228234
+
+Contest ID: 569
+Index: C
+Handle: xashru
+Submission ID: 12457561
+Submission Time: 1439236740
+
+Contest ID: 569
+Index: C
+Handle: tsotne95
+Submission ID: 12489908
+Submission Time: 1439459285
+
+Contest ID: 569
+Index: C
+Handle: UsedRose
+Submission ID: 12466590
+Submission Time: 1439298125
+
+Contest ID: 569
+Index: C
+Handle: Sa1378
+Submission ID: 12458596
+Submission Time: 1439241348
+
+Contest ID: 569
+Index: C
+Handle: holden
+Submission ID: 12447877
+Submission Time: 1439227482
+
+Contest ID: 569
+Index: C
+Handle: 6eJIa9IzZzTeHb
+Submission ID: 12457154
+Submission Time: 1439235251
+
+Contest ID: 569
+Index: C
+Handle: Coconut-Force
+Submission ID: 12448286
+Submission Time: 1439227664
+
+Contest ID: 569
+Index: C
+Handle: ankitc
+Submission ID: 12479216
+Submission Time: 1439381857
+
+Contest ID: 569
+Index: C
+Handle: Ishizu
+Submission ID: 12454761
+Submission Time: 1439231140
+
+Contest ID: 569
+Index: C
+Handle: tisnjh
+Submission ID: 12459521
+Submission Time: 1439252714
+
+Contest ID: 569
+Index: C
+Handle: Shinigami_1729
+Submission ID: 12457496
+Submission Time: 1439236425
+
+Contest ID: 569
+Index: C
+Handle: pppgod
+Submission ID: 12462995
+Submission Time: 1439279402
+
+Contest ID: 569
+Index: C
+Handle: shafra
+Submission ID: 12449998
+Submission Time: 1439228545
+
+Contest ID: 569
+Index: C
+Handle: IVanVan
+Submission ID: 12463274
+Submission Time: 1439280759
+
+Contest ID: 569
+Index: C
+Handle: baal-hammon
+Submission ID: 12470214
+Submission Time: 1439317888
+
+Contest ID: 569
+Index: C
+Handle: katan
+Submission ID: 12451876
+Submission Time: 1439229622
+
+Contest ID: 569
+Index: C
+Handle: senrush
+Submission ID: 12468784
+Submission Time: 1439309102
+
+Contest ID: 569
+Index: C
+Handle: powersenus
+Submission ID: 12459527
+Submission Time: 1439252809
+
+Contest ID: 569
+Index: C
+Handle: nameng
+Submission ID: 12451176
+Submission Time: 1439229234
+
+Contest ID: 569
+Index: C
+Handle: dream_love
+Submission ID: 12461421
+Submission Time: 1439268003
+
+Contest ID: 569
+Index: D
+Handle: fresher96
+Submission ID: 12480987
+Submission Time: 1439389508
+
+Contest ID: 569
+Index: D
+Handle: zzuspy
+Submission ID: 12476903
+Submission Time: 1439370958
+
+Contest ID: 569
+Index: D
+Handle: descent
+Submission ID: 12455986
+Submission Time: 1439233341
+
+Contest ID: 569
+Index: D
+Handle: RSola
+Submission ID: 12462694
+Submission Time: 1439277591
+
+Contest ID: 569
+Index: D
+Handle: TaoSama
+Submission ID: 12453403
+Submission Time: 1439230448
+
+Contest ID: 569
+Index: D
+Handle: Profi
+Submission ID: 12458312
+Submission Time: 1439239515
+
+Contest ID: 569
+Index: D
+Handle: ITer
+Submission ID: 12472459
+Submission Time: 1439342681
+
+Contest ID: 569
+Index: D
+Handle: sunny_girl
+Submission ID: 12473803
+Submission Time: 1439356563
+
+Contest ID: 569
+Index: D
+Handle: yarak
+Submission ID: 12470910
+Submission Time: 1439322733
+
+Contest ID: 569
+Index: D
+Handle: Chengrui1996
+Submission ID: 12453118
+Submission Time: 1439230300
+
+Contest ID: 569
+Index: D
+Handle: lidaiqing
+Submission ID: 12484580
+Submission Time: 1439414691
+
+Contest ID: 569
+Index: D
+Handle: vjudge1
+Submission ID: 12475462
+Submission Time: 1439364931
+
+Contest ID: 569
+Index: D
+Handle: ppham27
+Submission ID: 12487317
+Submission Time: 1439443733
+
+Contest ID: 569
+Index: D
+Handle: temari
+Submission ID: 12558352
+Submission Time: 1439717327
+
+Contest ID: 569
+Index: D
+Handle: Hannane_y
+Submission ID: 12457096
+Submission Time: 1439235092
+
+Contest ID: 569
+Index: D
+Handle: 2030xxj
+Submission ID: 12469338
+Submission Time: 1439312228
+
+Contest ID: 569
+Index: D
+Handle: AnonymousBunny
+Submission ID: 12452564
+Submission Time: 1439230007
+
+Contest ID: 569
+Index: D
+Handle: sebinechita
+Submission ID: 12563515
+Submission Time: 1439742785
+
+Contest ID: 569
+Index: D
+Handle: swust_zhudi
+Submission ID: 12454614
+Submission Time: 1439231079
+
+Contest ID: 569
+Index: D
+Handle: J_X
+Submission ID: 12474294
+Submission Time: 1439358986
+
+Contest ID: 569
+Index: D
+Handle: hnagamin
+Submission ID: 12454364
+Submission Time: 1439230956
+
+Contest ID: 569
+Index: D
+Handle: Snorlax
+Submission ID: 12574235
+Submission Time: 1439809882
+
+Contest ID: 569
+Index: D
+Handle: LeiQ
+Submission ID: 12455934
+Submission Time: 1439233295
+
+Contest ID: 569
+Index: D
+Handle: Novice_R
+Submission ID: 12468426
+Submission Time: 1439307036
+
+Contest ID: 569
+Index: D
+Handle: ileasile
+Submission ID: 12468441
+Submission Time: 1439307119
+
+Contest ID: 569
+Index: D
+Handle: mdwudier
+Submission ID: 12472235
+Submission Time: 1439339065
+
+Contest ID: 569
+Index: D
+Handle: gabrielrc
+Submission ID: 12459747
+Submission Time: 1439254993
+
+Contest ID: 569
+Index: D
+Handle: Fekete
+Submission ID: 12467487
+Submission Time: 1439302193
+
+Contest ID: 569
+Index: D
+Handle: Gang_Chen
+Submission ID: 12454992
+Submission Time: 1439231232
+
+Contest ID: 569
+Index: D
+Handle: miaowu213
+Submission ID: 12468639
+Submission Time: 1439308174
+
+Contest ID: 569
+Index: D
+Handle: nathanpro
+Submission ID: 12459959
+Submission Time: 1439256681
+
+Contest ID: 569
+Index: D
+Handle: lwher
+Submission ID: 12453451
+Submission Time: 1439230472
+
+Contest ID: 569
+Index: D
+Handle: lucas97
+Submission ID: 12456145
+Submission Time: 1439233478
+
+Contest ID: 569
+Index: D
+Handle: bwoss123
+Submission ID: 12452524
+Submission Time: 1439229986
+
+Contest ID: 569
+Index: D
+Handle: pleomaxx3002
+Submission ID: 12454832
+Submission Time: 1439231172
+
+Contest ID: 569
+Index: D
+Handle: ppham27
+Submission ID: 12487212
+Submission Time: 1439442713
+
+Contest ID: 569
+Index: D
+Handle: ARES_dream
+Submission ID: 12453319
+Submission Time: 1439230393
+
+Contest ID: 569
+Index: D
+Handle: koganeser
+Submission ID: 12454726
+Submission Time: 1439231124
+
+Contest ID: 569
+Index: D
+Handle: alchemist_08
+Submission ID: 12449134
+Submission Time: 1439228081
+
+Contest ID: 569
+Index: D
+Handle: ZWY
+Submission ID: 12453756
+Submission Time: 1439230637
+
+Contest ID: 569
+Index: D
+Handle: loser21
+Submission ID: 12450616
+Submission Time: 1439228891
+
+Contest ID: 569
+Index: D
+Handle: gabrielinelus
+Submission ID: 12452794
+Submission Time: 1439230134
+
+Contest ID: 569
+Index: D
+Handle: descrip
+Submission ID: 12454690
+Submission Time: 1439231109
+
+Contest ID: 569
+Index: D
+Handle: nathanpro
+Submission ID: 12459949
+Submission Time: 1439256617
+
+Contest ID: 569
+Index: D
+Handle: lolzz
+Submission ID: 12450557
+Submission Time: 1439228854
+
+Contest ID: 569
+Index: D
+Handle: nathanpro
+Submission ID: 12458840
+Submission Time: 1439243537
+
+Contest ID: 569
+Index: D
+Handle: squancher
+Submission ID: 12450355
+Submission Time: 1439228747
+
+Contest ID: 569
+Index: D
+Handle: maos
+Submission ID: 12457005
+Submission Time: 1439234809
+
+Contest ID: 569
+Index: D
+Handle: Shayan_Cheshmjahan
+Submission ID: 12492501
+Submission Time: 1439472547
+
+Contest ID: 569
+Index: D
+Handle: zjbztianya
+Submission ID: 12455910
+Submission Time: 1439233276
+
+Contest ID: 567
+Index: A
+Handle: Pretending_B_Master
+Submission ID: 12353575
+Submission Time: 1438790643
+
+Contest ID: 567
+Index: A
+Handle: sinaka
+Submission ID: 12395501
+Submission Time: 1438908573
+
+Contest ID: 567
+Index: A
+Handle: yask007
+Submission ID: 12362604
+Submission Time: 1438793106
+
+Contest ID: 567
+Index: A
+Handle: codemania
+Submission ID: 12403979
+Submission Time: 1438959192
+
+Contest ID: 567
+Index: A
+Handle: hippie
+Submission ID: 12389462
+Submission Time: 1438868512
+
+Contest ID: 567
+Index: A
+Handle: wowoto9772
+Submission ID: 12382475
+Submission Time: 1438839646
+
+Contest ID: 567
+Index: A
+Handle: siddhant_08
+Submission ID: 12391259
+Submission Time: 1438877004
+
+Contest ID: 567
+Index: A
+Handle: _Pro_
+Submission ID: 12360423
+Submission Time: 1438792349
+
+Contest ID: 567
+Index: A
+Handle: whai
+Submission ID: 12367433
+Submission Time: 1438795239
+
+Contest ID: 567
+Index: A
+Handle: shadowfax
+Submission ID: 12354660
+Submission Time: 1438790896
+
+Contest ID: 567
+Index: A
+Handle: LuaXD
+Submission ID: 12472893
+Submission Time: 1439347498
+
+Contest ID: 567
+Index: A
+Handle: lixingyao
+Submission ID: 12354769
+Submission Time: 1438790916
+
+Contest ID: 567
+Index: A
+Handle: r3l0ad3d
+Submission ID: 12370239
+Submission Time: 1438796734
+
+Contest ID: 567
+Index: A
+Handle: Phareoh
+Submission ID: 12354339
+Submission Time: 1438790840
+
+Contest ID: 567
+Index: A
+Handle: pflueger
+Submission ID: 12392897
+Submission Time: 1438885583
+
+Contest ID: 567
+Index: A
+Handle: shiroemon_genko
+Submission ID: 12358168
+Submission Time: 1438791697
+
+Contest ID: 567
+Index: A
+Handle: parth_sandeep
+Submission ID: 12368194
+Submission Time: 1438795640
+
+Contest ID: 567
+Index: A
+Handle: ejnahc
+Submission ID: 12359081
+Submission Time: 1438791964
+
+Contest ID: 567
+Index: A
+Handle: alissonrgs
+Submission ID: 12405249
+Submission Time: 1438967380
+
+Contest ID: 567
+Index: A
+Handle: forever16
+Submission ID: 12387607
+Submission Time: 1438860625
+
+Contest ID: 567
+Index: A
+Handle: ajecc
+Submission ID: 12354109
+Submission Time: 1438790790
+
+Contest ID: 567
+Index: A
+Handle: chickenc3
+Submission ID: 12358735
+Submission Time: 1438791863
+
+Contest ID: 567
+Index: A
+Handle: sohardtoregister
+Submission ID: 12369563
+Submission Time: 1438796363
+
+Contest ID: 567
+Index: A
+Handle: Morteza.j8
+Submission ID: 12355183
+Submission Time: 1438790990
+
+Contest ID: 567
+Index: A
+Handle: Rajib_119
+Submission ID: 12376420
+Submission Time: 1438802666
+
+Contest ID: 567
+Index: A
+Handle: huantwofat
+Submission ID: 12353558
+Submission Time: 1438790635
+
+Contest ID: 567
+Index: A
+Handle: yyyyh
+Submission ID: 12354355
+Submission Time: 1438790842
+
+Contest ID: 567
+Index: A
+Handle: Rinatqq
+Submission ID: 12364358
+Submission Time: 1438793804
+
+Contest ID: 567
+Index: A
+Handle: HitmanBBa
+Submission ID: 12367364
+Submission Time: 1438795205
+
+Contest ID: 567
+Index: A
+Handle: thearrow
+Submission ID: 12357810
+Submission Time: 1438791608
+
+Contest ID: 567
+Index: A
+Handle: the_art_of_war
+Submission ID: 12382548
+Submission Time: 1438840020
+
+Contest ID: 567
+Index: A
+Handle: linjiaqin
+Submission ID: 12544756
+Submission Time: 1439629609
+
+Contest ID: 567
+Index: A
+Handle: enitihas
+Submission ID: 12354782
+Submission Time: 1438790918
+
+Contest ID: 567
+Index: A
+Handle: namcusamlc
+Submission ID: 12354597
+Submission Time: 1438790886
+
+Contest ID: 567
+Index: A
+Handle: net008
+Submission ID: 12369871
+Submission Time: 1438796538
+
+Contest ID: 567
+Index: A
+Handle: jpmartinezv
+Submission ID: 12354075
+Submission Time: 1438790782
+
+Contest ID: 567
+Index: A
+Handle: jagsxi
+Submission ID: 12354396
+Submission Time: 1438790850
+
+Contest ID: 567
+Index: A
+Handle: night70
+Submission ID: 12384781
+Submission Time: 1438849398
+
+Contest ID: 567
+Index: A
+Handle: Dandan
+Submission ID: 12354611
+Submission Time: 1438790888
+
+Contest ID: 567
+Index: A
+Handle: killerrobot
+Submission ID: 12354868
+Submission Time: 1438790934
+
+Contest ID: 567
+Index: A
+Handle: HanKin
+Submission ID: 12468237
+Submission Time: 1439306000
+
+Contest ID: 567
+Index: A
+Handle: jaigurudev
+Submission ID: 12355559
+Submission Time: 1438791073
+
+Contest ID: 567
+Index: A
+Handle: kareem_ayman
+Submission ID: 12358172
+Submission Time: 1438791698
+
+Contest ID: 567
+Index: A
+Handle: gg1466
+Submission ID: 12357435
+Submission Time: 1438791509
+
+Contest ID: 567
+Index: A
+Handle: zhangzj
+Submission ID: 12380865
+Submission Time: 1438829145
+
+Contest ID: 567
+Index: A
+Handle: m.fawzy
+Submission ID: 12356903
+Submission Time: 1438791396
+
+Contest ID: 567
+Index: A
+Handle: BellWind
+Submission ID: 12357011
+Submission Time: 1438791417
+
+Contest ID: 567
+Index: A
+Handle: Hermit_liu
+Submission ID: 12354135
+Submission Time: 1438790798
+
+Contest ID: 567
+Index: A
+Handle: tokers
+Submission ID: 12388645
+Submission Time: 1438865028
+
+Contest ID: 567
+Index: A
+Handle: xuanvuong1998
+Submission ID: 12356411
+Submission Time: 1438791284
+
+Contest ID: 567
+Index: B
+Handle: Murodjon_Davronov
+Submission ID: 12371140
+Submission Time: 1438797278
+
+Contest ID: 567
+Index: B
+Handle: lnishan
+Submission ID: 12356942
+Submission Time: 1438791402
+
+Contest ID: 567
+Index: B
+Handle: avinashmohak
+Submission ID: 12360820
+Submission Time: 1438792482
+
+Contest ID: 567
+Index: B
+Handle: crew_underdog_p1
+Submission ID: 12361663
+Submission Time: 1438792752
+
+Contest ID: 567
+Index: B
+Handle: pankajkumawat845
+Submission ID: 12374526
+Submission Time: 1438799331
+
+Contest ID: 567
+Index: B
+Handle: anurag95
+Submission ID: 12381928
+Submission Time: 1438836643
+
+Contest ID: 567
+Index: B
+Handle: cuber2460
+Submission ID: 12357539
+Submission Time: 1438791537
+
+Contest ID: 567
+Index: B
+Handle: --Ares--
+Submission ID: 12359982
+Submission Time: 1438792221
+
+Contest ID: 567
+Index: B
+Handle: muhit
+Submission ID: 12361692
+Submission Time: 1438792762
+
+Contest ID: 567
+Index: B
+Handle: samread81
+Submission ID: 12382899
+Submission Time: 1438841861
+
+Contest ID: 567
+Index: B
+Handle: SasukeReturns
+Submission ID: 12362882
+Submission Time: 1438793204
+
+Contest ID: 567
+Index: B
+Handle: Nero
+Submission ID: 12480614
+Submission Time: 1439387883
+
+Contest ID: 567
+Index: B
+Handle: jaydeepmaddipati
+Submission ID: 12371342
+Submission Time: 1438797415
+
+Contest ID: 567
+Index: B
+Handle: Hoangi19
+Submission ID: 12430661
+Submission Time: 1439165663
+
+Contest ID: 567
+Index: B
+Handle: qianche
+Submission ID: 12364940
+Submission Time: 1438794042
+
+Contest ID: 567
+Index: B
+Handle: ghoomtaaaina
+Submission ID: 12470391
+Submission Time: 1439318908
+
+Contest ID: 567
+Index: B
+Handle: yuanyaoz
+Submission ID: 12376624
+Submission Time: 1438803065
+
+Contest ID: 567
+Index: B
+Handle: Nesr2015
+Submission ID: 12520182
+Submission Time: 1439511724
+
+Contest ID: 567
+Index: B
+Handle: yancouto
+Submission ID: 12355775
+Submission Time: 1438791115
+
+Contest ID: 567
+Index: B
+Handle: t1m3
+Submission ID: 12361383
+Submission Time: 1438792662
+
+Contest ID: 567
+Index: B
+Handle: jurbancic
+Submission ID: 12365565
+Submission Time: 1438794319
+
+Contest ID: 567
+Index: B
+Handle: ilshatus
+Submission ID: 12359918
+Submission Time: 1438792205
+
+Contest ID: 567
+Index: B
+Handle: nhatnguyendrgs
+Submission ID: 12380361
+Submission Time: 1438826224
+
+Contest ID: 567
+Index: B
+Handle: vladvis
+Submission ID: 12375546
+Submission Time: 1438801428
+
+Contest ID: 567
+Index: B
+Handle: vjudge5
+Submission ID: 12398862
+Submission Time: 1438933999
+
+Contest ID: 567
+Index: B
+Handle: vjudge3
+Submission ID: 12539405
+Submission Time: 1439609546
+
+Contest ID: 567
+Index: B
+Handle: DoBab
+Submission ID: 12379411
+Submission Time: 1438820173
+
+Contest ID: 567
+Index: B
+Handle: congvdse02483
+Submission ID: 12356002
+Submission Time: 1438791166
+
+Contest ID: 567
+Index: B
+Handle: PHenrique
+Submission ID: 12405685
+Submission Time: 1438970544
+
+Contest ID: 567
+Index: B
+Handle: Isco
+Submission ID: 12358214
+Submission Time: 1438791710
+
+Contest ID: 567
+Index: B
+Handle: Zangar
+Submission ID: 12364805
+Submission Time: 1438793983
+
+Contest ID: 567
+Index: B
+Handle: MASUDUR_RAHMAN
+Submission ID: 12433901
+Submission Time: 1439191796
+
+Contest ID: 567
+Index: B
+Handle: Abdo_Hammam
+Submission ID: 12363284
+Submission Time: 1438793357
+
+Contest ID: 567
+Index: B
+Handle: smjlord068
+Submission ID: 12425736
+Submission Time: 1439122892
+
+Contest ID: 567
+Index: B
+Handle: sarveshmahajan
+Submission ID: 12365988
+Submission Time: 1438794523
+
+Contest ID: 567
+Index: B
+Handle: MOZGOLOM
+Submission ID: 12360725
+Submission Time: 1438792450
+
+Contest ID: 567
+Index: B
+Handle: diptachandrapaul
+Submission ID: 12429553
+Submission Time: 1439149330
+
+Contest ID: 567
+Index: B
+Handle: gongy
+Submission ID: 12572594
+Submission Time: 1439801549
+
+Contest ID: 567
+Index: B
+Handle: IvanTeacup
+Submission ID: 12589578
+Submission Time: 1439906478
+
+Contest ID: 567
+Index: B
+Handle: InCodeWeAccept
+Submission ID: 12358307
+Submission Time: 1438791739
+
+Contest ID: 567
+Index: B
+Handle: mkmax472
+Submission ID: 12387779
+Submission Time: 1438861418
+
+Contest ID: 567
+Index: B
+Handle: devil_iiit
+Submission ID: 12370566
+Submission Time: 1438796927
+
+Contest ID: 567
+Index: B
+Handle: yisa
+Submission ID: 12366710
+Submission Time: 1438794880
+
+Contest ID: 567
+Index: B
+Handle: YouAreMyBeautifulSkies
+Submission ID: 12359675
+Submission Time: 1438792130
+
+Contest ID: 567
+Index: B
+Handle: Mohamad_sa
+Submission ID: 12390613
+Submission Time: 1438873665
+
+Contest ID: 567
+Index: B
+Handle: Mohamed_Nasser
+Submission ID: 12363246
+Submission Time: 1438793342
+
+Contest ID: 567
+Index: B
+Handle: ibrahimsharaf
+Submission ID: 12371648
+Submission Time: 1438797605
+
+Contest ID: 567
+Index: B
+Handle: johntyro
+Submission ID: 12358054
+Submission Time: 1438791671
+
+Contest ID: 567
+Index: B
+Handle: DimaHv
+Submission ID: 12557414
+Submission Time: 1439713031
+
+Contest ID: 567
+Index: B
+Handle: el_leopardo
+Submission ID: 12370087
+Submission Time: 1438796660
+
+Contest ID: 567
+Index: C
+Handle: catawar2
+Submission ID: 12362776
+Submission Time: 1438793170
+
+Contest ID: 567
+Index: C
+Handle: Lee_vincent
+Submission ID: 12607168
+Submission Time: 1440005438
+
+Contest ID: 567
+Index: C
+Handle: nikhil30
+Submission ID: 12363788
+Submission Time: 1438793563
+
+Contest ID: 567
+Index: C
+Handle: vjudge4
+Submission ID: 12585339
+Submission Time: 1439883068
+
+Contest ID: 567
+Index: C
+Handle: temari
+Submission ID: 12570198
+Submission Time: 1439788413
+
+Contest ID: 567
+Index: C
+Handle: melsclar
+Submission ID: 12378113
+Submission Time: 1438808299
+
+Contest ID: 567
+Index: C
+Handle: MarinKnezevic
+Submission ID: 12373672
+Submission Time: 1438798845
+
+Contest ID: 567
+Index: C
+Handle: sarasgupta
+Submission ID: 12360028
+Submission Time: 1438792235
+
+Contest ID: 567
+Index: C
+Handle: Abdcan
+Submission ID: 12376720
+Submission Time: 1438803248
+
+Contest ID: 567
+Index: C
+Handle: CrazzyBeer
+Submission ID: 12375907
+Submission Time: 1438801872
+
+Contest ID: 567
+Index: C
+Handle: liupei101
+Submission ID: 12358089
+Submission Time: 1438791679
+
+Contest ID: 567
+Index: C
+Handle: nirob_mh
+Submission ID: 12367830
+Submission Time: 1438795450
+
+Contest ID: 567
+Index: C
+Handle: Alex-ander007
+Submission ID: 12589196
+Submission Time: 1439904582
+
+Contest ID: 567
+Index: C
+Handle: jrupani
+Submission ID: 12376151
+Submission Time: 1438802221
+
+Contest ID: 567
+Index: C
+Handle: oumashu
+Submission ID: 12389515
+Submission Time: 1438868699
+
+Contest ID: 567
+Index: C
+Handle: logickaiser
+Submission ID: 12384505
+Submission Time: 1438848398
+
+Contest ID: 567
+Index: C
+Handle: tonmoy71
+Submission ID: 12411298
+Submission Time: 1439020364
+
+Contest ID: 567
+Index: C
+Handle: ahm.kam_92
+Submission ID: 12388584
+Submission Time: 1438864766
+
+Contest ID: 567
+Index: C
+Handle: vjudge4
+Submission ID: 12607303
+Submission Time: 1440006137
+
+Contest ID: 567
+Index: C
+Handle: FTYYY
+Submission ID: 12365996
+Submission Time: 1438794528
+
+Contest ID: 567
+Index: C
+Handle: hello_codeforces
+Submission ID: 12369063
+Submission Time: 1438796101
+
+Contest ID: 567
+Index: C
+Handle: yick
+Submission ID: 12373871
+Submission Time: 1438798962
+
+Contest ID: 567
+Index: C
+Handle: soooosis
+Submission ID: 12606321
+Submission Time: 1440001921
+
+Contest ID: 567
+Index: C
+Handle: donkarnage
+Submission ID: 12433730
+Submission Time: 1439190925
+
+Contest ID: 567
+Index: C
+Handle: luluxiu
+Submission ID: 12402366
+Submission Time: 1438951040
+
+Contest ID: 567
+Index: C
+Handle: irakli_p
+Submission ID: 12392927
+Submission Time: 1438885841
+
+Contest ID: 567
+Index: C
+Handle: kevinhikari
+Submission ID: 12464066
+Submission Time: 1439284199
+
+Contest ID: 567
+Index: C
+Handle: vjudge2
+Submission ID: 12385626
+Submission Time: 1438852373
+
+Contest ID: 567
+Index: C
+Handle: vjudge1
+Submission ID: 12399824
+Submission Time: 1438938296
+
+Contest ID: 567
+Index: C
+Handle: rohansuri
+Submission ID: 12377622
+Submission Time: 1438806021
+
+Contest ID: 567
+Index: C
+Handle: vjudge2
+Submission ID: 12548576
+Submission Time: 1439647217
+
+Contest ID: 567
+Index: C
+Handle: _O_
+Submission ID: 12395876
+Submission Time: 1438913540
+
+Contest ID: 567
+Index: C
+Handle: eddy1021
+Submission ID: 12389447
+Submission Time: 1438868461
+
+Contest ID: 567
+Index: C
+Handle: aliveeBX
+Submission ID: 12360526
+Submission Time: 1438792381
+
+Contest ID: 567
+Index: C
+Handle: rajeshgupta3579
+Submission ID: 12383658
+Submission Time: 1438845194
+
+Contest ID: 567
+Index: C
+Handle: thiago
+Submission ID: 12419022
+Submission Time: 1439069468
+
+Contest ID: 567
+Index: C
+Handle: Abdelrahman_Waheed
+Submission ID: 12437991
+Submission Time: 1439207998
+
+Contest ID: 567
+Index: C
+Handle: zhangzj
+Submission ID: 12381370
+Submission Time: 1438832464
+
+Contest ID: 567
+Index: C
+Handle: purpleckcian
+Submission ID: 12374609
+Submission Time: 1438799355
+
+Contest ID: 567
+Index: C
+Handle: abhinav.aggarwal
+Submission ID: 12390737
+Submission Time: 1438874266
+
+Contest ID: 567
+Index: C
+Handle: hyccfy
+Submission ID: 12370032
+Submission Time: 1438796628
+
+Contest ID: 567
+Index: C
+Handle: metameta
+Submission ID: 12359344
+Submission Time: 1438792030
+
+Contest ID: 567
+Index: C
+Handle: vip_yadav
+Submission ID: 12531850
+Submission Time: 1439563514
+
+Contest ID: 567
+Index: C
+Handle: sarcastic_bhokal
+Submission ID: 12381530
+Submission Time: 1438833522
+
+Contest ID: 567
+Index: C
+Handle: dezhonger
+Submission ID: 12375100
+Submission Time: 1438800936
+
+Contest ID: 567
+Index: C
+Handle: Lee_vincent
+Submission ID: 12606414
+Submission Time: 1440002422
+
+Contest ID: 567
+Index: C
+Handle: L_H
+Submission ID: 12586425
+Submission Time: 1439888837
+
+Contest ID: 567
+Index: C
+Handle: tanphatls987
+Submission ID: 12362080
+Submission Time: 1438792909
+
+Contest ID: 567
+Index: C
+Handle: after3
+Submission ID: 12375360
+Submission Time: 1438801237
+
+Contest ID: 567
+Index: C
+Handle: xuelanghu
+Submission ID: 12395956
+Submission Time: 1438914317
+
+Contest ID: 567
+Index: D
+Handle: CchOOlak
+Submission ID: 12367143
+Submission Time: 1438795105
+
+Contest ID: 567
+Index: D
+Handle: Moe
+Submission ID: 12360284
+Submission Time: 1438792305
+
+Contest ID: 567
+Index: D
+Handle: lagrangelciencia
+Submission ID: 12368318
+Submission Time: 1438795700
+
+Contest ID: 567
+Index: D
+Handle: Trans
+Submission ID: 12428307
+Submission Time: 1439139641
+
+Contest ID: 567
+Index: D
+Handle: davorpr1
+Submission ID: 12440956
+Submission Time: 1439222053
+
+Contest ID: 567
+Index: D
+Handle: 940104357
+Submission ID: 12364447
+Submission Time: 1438793839
+
+Contest ID: 567
+Index: D
+Handle: KARM
+Submission ID: 12368945
+Submission Time: 1438796035
+
+Contest ID: 567
+Index: D
+Handle: eycia
+Submission ID: 12370890
+Submission Time: 1438797128
+
+Contest ID: 567
+Index: D
+Handle: wust_mengzhennan
+Submission ID: 12377001
+Submission Time: 1438803963
+
+Contest ID: 567
+Index: D
+Handle: wust_mengzhennan
+Submission ID: 12380693
+Submission Time: 1438828215
+
+Contest ID: 567
+Index: D
+Handle: rbenic
+Submission ID: 12369622
+Submission Time: 1438796398
+
+Contest ID: 567
+Index: D
+Handle: shark_s
+Submission ID: 12592226
+Submission Time: 1439920087
+
+Contest ID: 567
+Index: D
+Handle: _von_
+Submission ID: 12588199
+Submission Time: 1439899689
+
+Contest ID: 567
+Index: D
+Handle: bnuvjudge
+Submission ID: 12423508
+Submission Time: 1439110120
+
+Contest ID: 567
+Index: D
+Handle: penguina
+Submission ID: 12388168
+Submission Time: 1438863035
+
+Contest ID: 567
+Index: D
+Handle: satvika_gupta
+Submission ID: 12405912
+Submission Time: 1438972440
+
+Contest ID: 567
+Index: D
+Handle: Paskuda
+Submission ID: 12373788
+Submission Time: 1438798917
+
+Contest ID: 567
+Index: D
+Handle: khoaisohd
+Submission ID: 12389727
+Submission Time: 1438869668
+
+Contest ID: 567
+Index: D
+Handle: techwiz911
+Submission ID: 12377639
+Submission Time: 1438806081
+
+Contest ID: 567
+Index: D
+Handle: a.goqadze
+Submission ID: 12373131
+Submission Time: 1438798535
+
+Contest ID: 567
+Index: D
+Handle: osamahatem
+Submission ID: 12388875
+Submission Time: 1438865942
+
+Contest ID: 567
+Index: D
+Handle: pro_vaya_pro
+Submission ID: 12381528
+Submission Time: 1438833513
+
+Contest ID: 567
+Index: D
+Handle: yungchienliuz
+Submission ID: 12369808
+Submission Time: 1438796510
+
+Contest ID: 567
+Index: D
+Handle: Coconut-Force
+Submission ID: 12379142
+Submission Time: 1438817329
+
+Contest ID: 567
+Index: D
+Handle: kaavee
+Submission ID: 12387171
+Submission Time: 1438858878
+
+Contest ID: 567
+Index: D
+Handle: SlavaSSU
+Submission ID: 12376679
+Submission Time: 1438803166
+
+Contest ID: 567
+Index: D
+Handle: KostyaVilcheuski
+Submission ID: 12362369
+Submission Time: 1438793020
+
+Contest ID: 567
+Index: D
+Handle: snsokolov
+Submission ID: 12379097
+Submission Time: 1438816774
+
+Contest ID: 567
+Index: D
+Handle: Live_Forever
+Submission ID: 12395532
+Submission Time: 1438909093
+
+Contest ID: 567
+Index: D
+Handle: shikharthakur
+Submission ID: 12377953
+Submission Time: 1438807444
+
+Contest ID: 567
+Index: D
+Handle: NBAH
+Submission ID: 12434543
+Submission Time: 1439195134
+
+Contest ID: 567
+Index: D
+Handle: Ancient_mage
+Submission ID: 12362253
+Submission Time: 1438792971
+
+Contest ID: 567
+Index: D
+Handle: johnchen902
+Submission ID: 12438832
+Submission Time: 1439211526
+
+Contest ID: 567
+Index: D
+Handle: d.a_truong
+Submission ID: 12391332
+Submission Time: 1438877293
+
+Contest ID: 567
+Index: D
+Handle: Karan2k
+Submission ID: 12375111
+Submission Time: 1438800945
+
+Contest ID: 567
+Index: D
+Handle: wust_kesihai
+Submission ID: 12388488
+Submission Time: 1438864371
+
+Contest ID: 567
+Index: D
+Handle: _iris_
+Submission ID: 12402049
+Submission Time: 1438949473
+
+Contest ID: 567
+Index: D
+Handle: nikhil30
+Submission ID: 12376737
+Submission Time: 1438803276
+
+Contest ID: 567
+Index: D
+Handle: kirito16
+Submission ID: 12370177
+Submission Time: 1438796709
+
+Contest ID: 567
+Index: D
+Handle: xzj1998
+Submission ID: 12403144
+Submission Time: 1438955037
+
+Contest ID: 567
+Index: D
+Handle: Nurlykhan
+Submission ID: 12375635
+Submission Time: 1438801525
+
+Contest ID: 567
+Index: D
+Handle: bhargav104
+Submission ID: 12374889
+Submission Time: 1438800726
+
+Contest ID: 567
+Index: D
+Handle: 1403mashaonan
+Submission ID: 12383665
+Submission Time: 1438845233
+
+Contest ID: 567
+Index: D
+Handle: haraduka
+Submission ID: 12379491
+Submission Time: 1438820830
+
+Contest ID: 567
+Index: D
+Handle: Vercingetorix
+Submission ID: 12358738
+Submission Time: 1438791864
+
+Contest ID: 567
+Index: D
+Handle: senwil
+Submission ID: 12432182
+Submission Time: 1439182401
+
+Contest ID: 567
+Index: D
+Handle: Novik_D
+Submission ID: 12575613
+Submission Time: 1439816939
+
+Contest ID: 567
+Index: D
+Handle: Um_nik
+Submission ID: 12361499
+Submission Time: 1438792702
+
+Contest ID: 567
+Index: D
+Handle: Martin97
+Submission ID: 12366966
+Submission Time: 1438795039
+
+Contest ID: 567
+Index: D
+Handle: dotorya
+Submission ID: 12602000
+Submission Time: 1439983153
+
+Contest ID: 567
+Index: E
+Handle: ghostmath
+Submission ID: 12397974
+Submission Time: 1438930386
+
+Contest ID: 567
+Index: E
+Handle: veritas7
+Submission ID: 12390893
+Submission Time: 1438875042
+
+Contest ID: 567
+Index: E
+Handle: vjudge3
+Submission ID: 12491326
+Submission Time: 1439467262
+
+Contest ID: 567
+Index: E
+Handle: yu-gi-oh4848
+Submission ID: 12377572
+Submission Time: 1438805813
+
+Contest ID: 567
+Index: E
+Handle: tomasf
+Submission ID: 12379794
+Submission Time: 1438822857
+
+Contest ID: 567
+Index: E
+Handle: PERNEKHAN
+Submission ID: 12385993
+Submission Time: 1438853818
+
+Contest ID: 567
+Index: E
+Handle: CyberZHG
+Submission ID: 12383517
+Submission Time: 1438844533
+
+Contest ID: 567
+Index: E
+Handle: vjudge3
+Submission ID: 12490354
+Submission Time: 1439461696
+
+Contest ID: 567
+Index: E
+Handle: Toshiksvg
+Submission ID: 12381730
+Submission Time: 1438835273
+
+Contest ID: 567
+Index: E
+Handle: snowy_smile
+Submission ID: 12402785
+Submission Time: 1438953323
+
+Contest ID: 567
+Index: E
+Handle: liu_jc
+Submission ID: 12490535
+Submission Time: 1439462799
+
+Contest ID: 567
+Index: E
+Handle: nightfury1204
+Submission ID: 12384731
+Submission Time: 1438849193
+
+Contest ID: 567
+Index: E
+Handle: khatribiru
+Submission ID: 12478698
+Submission Time: 1439379519
+
+Contest ID: 567
+Index: E
+Handle: goovie
+Submission ID: 12536831
+Submission Time: 1439592043
+
+Contest ID: 567
+Index: E
+Handle: mrho888
+Submission ID: 12378927
+Submission Time: 1438814906
+
+Contest ID: 567
+Index: E
+Handle: jibancanyang
+Submission ID: 12490348
+Submission Time: 1439461674
+
+Contest ID: 567
+Index: E
+Handle: liu_jc
+Submission ID: 12488839
+Submission Time: 1439454156
+
+Contest ID: 567
+Index: E
+Handle: fram
+Submission ID: 12384868
+Submission Time: 1438849696
+
+Contest ID: 567
+Index: E
+Handle: gaolee
+Submission ID: 12408384
+Submission Time: 1439001012
+
+Contest ID: 567
+Index: E
+Handle: ppham27
+Submission ID: 12617862
+Submission Time: 1440085410
+
+Contest ID: 567
+Index: E
+Handle: CountingSort
+Submission ID: 12395915
+Submission Time: 1438913932
+
+Contest ID: 567
+Index: E
+Handle: gvaibhav21
+Submission ID: 12368311
+Submission Time: 1438795696
+
+Contest ID: 567
+Index: E
+Handle: hanguyenqu
+Submission ID: 12440530
+Submission Time: 1439220187
+
+Contest ID: 567
+Index: E
+Handle: gpoesia
+Submission ID: 12378637
+Submission Time: 1438812230
+
+Contest ID: 567
+Index: E
+Handle: angelg2095
+Submission ID: 12540626
+Submission Time: 1439615485
+
+Contest ID: 567
+Index: E
+Handle: ACalvin
+Submission ID: 12412011
+Submission Time: 1439023659
+
+Contest ID: 567
+Index: E
+Handle: hao0091998
+Submission ID: 12379607
+Submission Time: 1438821631
+
+Contest ID: 567
+Index: E
+Handle: okaduki1
+Submission ID: 12440436
+Submission Time: 1439219746
+
+Contest ID: 567
+Index: E
+Handle: Antoniuk
+Submission ID: 12377802
+Submission Time: 1438806755
+
+Contest ID: 567
+Index: E
+Handle: korun
+Submission ID: 12390041
+Submission Time: 1438871201
+
+Contest ID: 567
+Index: E
+Handle: guille
+Submission ID: 12376042
+Submission Time: 1438802084
+
+Contest ID: 567
+Index: E
+Handle: kvedran
+Submission ID: 12389574
+Submission Time: 1438868948
+
+Contest ID: 567
+Index: E
+Handle: liu_jc
+Submission ID: 12489086
+Submission Time: 1439455428
+
+Contest ID: 567
+Index: E
+Handle: sugim48
+Submission ID: 12371887
+Submission Time: 1438797765
+
+Contest ID: 567
+Index: E
+Handle: shobe
+Submission ID: 12465973
+Submission Time: 1439294979
+
+Contest ID: 567
+Index: E
+Handle: NotHere
+Submission ID: 12493229
+Submission Time: 1439476035
+
+Contest ID: 567
+Index: E
+Handle: vjudge2
+Submission ID: 12383505
+Submission Time: 1438844478
+
+Contest ID: 567
+Index: E
+Handle: abelramos
+Submission ID: 12522963
+Submission Time: 1439528404
+
+Contest ID: 567
+Index: E
+Handle: lva07
+Submission ID: 12394840
+Submission Time: 1438899215
+
+Contest ID: 567
+Index: E
+Handle: catawar2
+Submission ID: 12576237
+Submission Time: 1439820178
+
+Contest ID: 567
+Index: E
+Handle: PAP
+Submission ID: 12372582
+Submission Time: 1438798191
+
+Contest ID: 567
+Index: E
+Handle: frvdec
+Submission ID: 12407711
+Submission Time: 1438994661
+
+Contest ID: 567
+Index: E
+Handle: BananaTree
+Submission ID: 12409447
+Submission Time: 1439010242
+
+Contest ID: 567
+Index: E
+Handle: Leyla
+Submission ID: 12434089
+Submission Time: 1439192772
+
+Contest ID: 567
+Index: E
+Handle: shivamgarg210
+Submission ID: 12422596
+Submission Time: 1439105389
+
+Contest ID: 567
+Index: E
+Handle: kitkatac
+Submission ID: 12556043
+Submission Time: 1439706829
+
+Contest ID: 567
+Index: E
+Handle: KSCN
+Submission ID: 12574544
+Submission Time: 1439811526
+
+Contest ID: 567
+Index: E
+Handle: FatalEagle
+Submission ID: 12362292
+Submission Time: 1438792988
+
+Contest ID: 567
+Index: E
+Handle: nfssdq
+Submission ID: 12375709
+Submission Time: 1438801602
+
+Contest ID: 567
+Index: E
+Handle: muaz-32
+Submission ID: 12484040
+Submission Time: 1439410348
+
+Contest ID: 567
+Index: F
+Handle: ftiasch
+Submission ID: 12363504
+Submission Time: 1438793452
+
+Contest ID: 567
+Index: F
+Handle: louise
+Submission ID: 12576586
+Submission Time: 1439821892
+
+Contest ID: 567
+Index: F
+Handle: 131121
+Submission ID: 12478628
+Submission Time: 1439379151
+
+Contest ID: 567
+Index: F
+Handle: wumaodang
+Submission ID: 12582940
+Submission Time: 1439865137
+
+Contest ID: 567
+Index: F
+Handle: Errichto
+Submission ID: 12373561
+Submission Time: 1438798778
+
+Contest ID: 567
+Index: F
+Handle: kmjp
+Submission ID: 12367778
+Submission Time: 1438795422
+
+Contest ID: 567
+Index: F
+Handle: pllk
+Submission ID: 12371546
+Submission Time: 1438797539
+
+Contest ID: 567
+Index: F
+Handle: shanbei_drug_trafficker
+Submission ID: 12435265
+Submission Time: 1439198851
+
+Contest ID: 567
+Index: F
+Handle: BinLaden
+Submission ID: 12601119
+Submission Time: 1439978310
+
+Contest ID: 567
+Index: F
+Handle: zcg.cs60
+Submission ID: 12394905
+Submission Time: 1438899874
+
+Contest ID: 567
+Index: F
+Handle: _von_
+Submission ID: 12592646
+Submission Time: 1439922079
+
+Contest ID: 567
+Index: F
+Handle: master_b4_2016_ends
+Submission ID: 12484957
+Submission Time: 1439418335
+
+Contest ID: 567
+Index: F
+Handle: harshil
+Submission ID: 12404077
+Submission Time: 1438959780
+
+Contest ID: 567
+Index: F
+Handle: Fata1ist
+Submission ID: 12372774
+Submission Time: 1438798312
+
+Contest ID: 567
+Index: F
+Handle: Solaris
+Submission ID: 12370751
+Submission Time: 1438797034
+
+Contest ID: 567
+Index: F
+Handle: TooSchoolForCool
+Submission ID: 12401190
+Submission Time: 1438945236
+
+Contest ID: 567
+Index: F
+Handle: babooj
+Submission ID: 12370851
+Submission Time: 1438797103
+
+Contest ID: 567
+Index: F
+Handle: angelg2095
+Submission ID: 12408226
+Submission Time: 1438999729
+
+Contest ID: 567
+Index: F
+Handle: ilya1998
+Submission ID: 12380923
+Submission Time: 1438829531
+
+Contest ID: 567
+Index: F
+Handle: YvesCjl
+Submission ID: 12401993
+Submission Time: 1438949245
+
+Contest ID: 567
+Index: F
+Handle: hkglly
+Submission ID: 12397193
+Submission Time: 1438926186
+
+Contest ID: 567
+Index: F
+Handle: yummy
+Submission ID: 12384402
+Submission Time: 1438848052
+
+Contest ID: 567
+Index: F
+Handle: uronce
+Submission ID: 12427556
+Submission Time: 1439133899
+
+Contest ID: 567
+Index: F
+Handle: BigBag
+Submission ID: 12402324
+Submission Time: 1438950813
+
+Contest ID: 567
+Index: F
+Handle: nightfury1204
+Submission ID: 12400840
+Submission Time: 1438943306
+
+Contest ID: 567
+Index: F
+Handle: Pretending_B_Master
+Submission ID: 12374943
+Submission Time: 1438800768
+
+Contest ID: 567
+Index: F
+Handle: CyberZHG
+Submission ID: 12408578
+Submission Time: 1439002778
+
+Contest ID: 567
+Index: F
+Handle: kondranin
+Submission ID: 12386391
+Submission Time: 1438855465
+
+Contest ID: 567
+Index: F
+Handle: OcarisAM
+Submission ID: 12594854
+Submission Time: 1439939462
+
+Contest ID: 567
+Index: F
+Handle: SoulSilver
+Submission ID: 12607364
+Submission Time: 1440006458
+
+Contest ID: 567
+Index: F
+Handle: yzyz
+Submission ID: 12380037
+Submission Time: 1438824395
+
+Contest ID: 567
+Index: F
+Handle: curs0r
+Submission ID: 12373254
+Submission Time: 1438798612
+
+Contest ID: 567
+Index: F
+Handle: I_love_Hoang_Yen
+Submission ID: 12370309
+Submission Time: 1438796781
+
+Contest ID: 567
+Index: F
+Handle: Vlad_kv
+Submission ID: 12527821
+Submission Time: 1439546272
+
+Contest ID: 567
+Index: F
+Handle: tanzil_rahaman
+Submission ID: 12422826
+Submission Time: 1439106845
+
+Contest ID: 567
+Index: F
+Handle: TimonKnigge
+Submission ID: 12378071
+Submission Time: 1438808107
+
+Contest ID: 567
+Index: F
+Handle: Enchom
+Submission ID: 12392938
+Submission Time: 1438885936
+
+Contest ID: 567
+Index: F
+Handle: yarak
+Submission ID: 12434401
+Submission Time: 1439194476
+
+Contest ID: 567
+Index: F
+Handle: nfssdq
+Submission ID: 12373255
+Submission Time: 1438798612
+
+Contest ID: 567
+Index: F
+Handle: vjudge5
+Submission ID: 12545146
+Submission Time: 1439631078
+
+Contest ID: 567
+Index: F
+Handle: PlayWithWind
+Submission ID: 12548978
+Submission Time: 1439649196
+
+Contest ID: 567
+Index: F
+Handle: Eibe
+Submission ID: 12415888
+Submission Time: 1439045398
+
+Contest ID: 567
+Index: F
+Handle: Piwattz
+Submission ID: 12391485
+Submission Time: 1438878033
+
+Contest ID: 567
+Index: F
+Handle: kkkiller
+Submission ID: 12556442
+Submission Time: 1439708543
+
+Contest ID: 567
+Index: F
+Handle: lemur
+Submission ID: 12406101
+Submission Time: 1438974021
+
+Contest ID: 567
+Index: F
+Handle: fuch
+Submission ID: 12390082
+Submission Time: 1438871441
+
+Contest ID: 567
+Index: F
+Handle: david89
+Submission ID: 12489570
+Submission Time: 1439457669
+
+Contest ID: 567
+Index: F
+Handle: skyvn97
+Submission ID: 12366100
+Submission Time: 1438794574
+
+Contest ID: 567
+Index: F
+Handle: MrKaStep
+Submission ID: 12389352
+Submission Time: 1438868024
+
+Contest ID: 567
+Index: F
+Handle: Stonefeang
+Submission ID: 12370478
+Submission Time: 1438796883
 
 Contest ID: 560
 Index: A
-Handle: zater
-Submission ID: 12166605
-Submission Time: 1437574305
+Handle: lzt2002
+Submission ID: 12193228
+Submission Time: 1437620597
 
 Contest ID: 560
 Index: A
-Handle: 466
-Submission ID: 12244492
-Submission Time: 1438026501
+Handle: mg13
+Submission ID: 12166116
+Submission Time: 1437574189
 
 Contest ID: 560
 Index: A
-Handle: stolis
-Submission ID: 12253523
-Submission Time: 1438095255
+Handle: Ahmed_Mostafa
+Submission ID: 12168581
+Submission Time: 1437574803
 
 Contest ID: 560
 Index: A
-Handle: heat_wave
-Submission ID: 12164569
-Submission Time: 1437573789
+Handle: duangduangduang
+Submission ID: 12165609
+Submission Time: 1437574065
 
 Contest ID: 560
 Index: A
-Handle: daemonoid
-Submission ID: 12166285
-Submission Time: 1437574227
+Handle: Dandav
+Submission ID: 12166633
+Submission Time: 1437574310
 
 Contest ID: 560
 Index: A
-Handle: B.L
-Submission ID: 12187872
-Submission Time: 1437589143
+Handle: ShadowGorn
+Submission ID: 12413454
+Submission Time: 1439031614
 
 Contest ID: 560
 Index: A
-Handle: virttuall
-Submission ID: 12166124
-Submission Time: 1437574190
+Handle: kareem_ayman
+Submission ID: 12186990
+Submission Time: 1437586846
 
 Contest ID: 560
 Index: A
-Handle: webstorms
-Submission ID: 12167789
-Submission Time: 1437574613
+Handle: fennie
+Submission ID: 12230414
+Submission Time: 1437920925
 
 Contest ID: 560
 Index: A
-Handle: vturpati
-Submission ID: 12170051
-Submission Time: 1437575231
+Handle: jagdishbairer
+Submission ID: 12167692
+Submission Time: 1437574576
 
 Contest ID: 560
 Index: A
-Handle: ayoyia
-Submission ID: 12242757
-Submission Time: 1438013838
+Handle: stould
+Submission ID: 12479696
+Submission Time: 1439384171
 
 Contest ID: 560
 Index: A
-Handle: NMP
-Submission ID: 12165909
-Submission Time: 1437574140
+Handle: fraundist
+Submission ID: 12177139
+Submission Time: 1437578030
 
 Contest ID: 560
 Index: A
-Handle: sdfjaoew
-Submission ID: 12168441
-Submission Time: 1437574766
+Handle: nedko14
+Submission ID: 12272554
+Submission Time: 1438240387
 
 Contest ID: 560
 Index: A
-Handle: raghusatti
-Submission ID: 12197335
-Submission Time: 1437641795
+Handle: vjudge5
+Submission ID: 12421511
+Submission Time: 1439099795
 
 Contest ID: 560
 Index: A
-Handle: prerakd
-Submission ID: 12165154
-Submission Time: 1437573966
+Handle: 20131730
+Submission ID: 12165100
+Submission Time: 1437573947
 
 Contest ID: 560
 Index: A
-Handle: JINESH11
-Submission ID: 12301888
-Submission Time: 1438422618
+Handle: Kassadin
+Submission ID: 12166698
+Submission Time: 1437574325
 
 Contest ID: 560
 Index: A
-Handle: galalll
-Submission ID: 12222631
-Submission Time: 1437811576
+Handle: codead
+Submission ID: 12165125
+Submission Time: 1437573958
+
+Contest ID: 560
+Index: A
+Handle: igpimv
+Submission ID: 12165564
+Submission Time: 1437574055
+
+Contest ID: 560
+Index: A
+Handle: romankaranchuk
+Submission ID: 12166405
+Submission Time: 1437574254
+
+Contest ID: 560
+Index: A
+Handle: ferrjef
+Submission ID: 12191828
+Submission Time: 1437614078
+
+Contest ID: 560
+Index: A
+Handle: munira_seherin
+Submission ID: 12197876
+Submission Time: 1437643828
+
+Contest ID: 560
+Index: A
+Handle: caraianioana
+Submission ID: 12170880
+Submission Time: 1437575479
+
+Contest ID: 560
+Index: A
+Handle: sorry_wintermelon
+Submission ID: 12169742
+Submission Time: 1437575142
+
+Contest ID: 560
+Index: A
+Handle: CloudLunar
+Submission ID: 12165754
+Submission Time: 1437574097
+
+Contest ID: 560
+Index: A
+Handle: Swanny
+Submission ID: 12165171
+Submission Time: 1437573969
+
+Contest ID: 560
+Index: A
+Handle: I_love_Hoang_Yen
+Submission ID: 12185365
+Submission Time: 1437584049
+
+Contest ID: 560
+Index: A
+Handle: cai442
+Submission ID: 12174203
+Submission Time: 1437576666
+
+Contest ID: 560
+Index: A
+Handle: Sherif_Waly
+Submission ID: 12177802
+Submission Time: 1437578414
+
+Contest ID: 560
+Index: A
+Handle: wertzu
+Submission ID: 12201081
+Submission Time: 1437658467
+
+Contest ID: 560
+Index: A
+Handle: cicerone55
+Submission ID: 12164612
+Submission Time: 1437573819
+
+Contest ID: 560
+Index: A
+Handle: Ethelbearn
+Submission ID: 12166618
+Submission Time: 1437574307
+
+Contest ID: 560
+Index: A
+Handle: tapan0007
+Submission ID: 12164983
+Submission Time: 1437573925
+
+Contest ID: 560
+Index: A
+Handle: nnMan
+Submission ID: 12166171
+Submission Time: 1437574200
+
+Contest ID: 560
+Index: A
+Handle: NKCS1212582
+Submission ID: 12427016
+Submission Time: 1439130835
+
+Contest ID: 560
+Index: A
+Handle: Ghassan.Khazaal
+Submission ID: 12240526
+Submission Time: 1437999488
+
+Contest ID: 560
+Index: A
+Handle: KAKTOOS
+Submission ID: 12186897
+Submission Time: 1437586617
+
+Contest ID: 560
+Index: A
+Handle: lagarwal
+Submission ID: 12164576
+Submission Time: 1437573791
+
+Contest ID: 560
+Index: A
+Handle: quocnhan1843
+Submission ID: 12192722
+Submission Time: 1437618100
+
+Contest ID: 560
+Index: A
+Handle: buddu
+Submission ID: 12210234
+Submission Time: 1437721649
+
+Contest ID: 560
+Index: A
+Handle: lavin
+Submission ID: 12257685
+Submission Time: 1438129969
+
+Contest ID: 560
+Index: A
+Handle: Green_root
+Submission ID: 12201294
+Submission Time: 1437659309
+
+Contest ID: 560
+Index: A
+Handle: LevinLMKwong
+Submission ID: 12164870
+Submission Time: 1437573900
+
+Contest ID: 560
+Index: A
+Handle: korovkinand
+Submission ID: 12174825
+Submission Time: 1437576931
+
+Contest ID: 560
+Index: A
+Handle: thakkark1313
+Submission ID: 12205146
+Submission Time: 1437679251
+
+Contest ID: 560
+Index: A
+Handle: aneesh2312
+Submission ID: 12169284
+Submission Time: 1437574986
+
+Contest ID: 560
+Index: A
+Handle: damn7
+Submission ID: 12169210
+Submission Time: 1437574967
+
+Contest ID: 560
+Index: A
+Handle: Altruist
+Submission ID: 12165134
+Submission Time: 1437573963
+
+Contest ID: 560
+Index: A
+Handle: miczar
+Submission ID: 12230574
+Submission Time: 1437924072
+
+Contest ID: 560
+Index: A
+Handle: jammerroy
+Submission ID: 12216830
+Submission Time: 1437755604
+
+Contest ID: 560
+Index: A
+Handle: carrymyteam
+Submission ID: 12167985
+Submission Time: 1437574655
+
+Contest ID: 560
+Index: A
+Handle: luugiathuy
+Submission ID: 12166164
+Submission Time: 1437574199
+
+Contest ID: 560
+Index: B
+Handle: lololol
+Submission ID: 12171192
+Submission Time: 1437575560
+
+Contest ID: 560
+Index: B
+Handle: crystall29
+Submission ID: 12174276
+Submission Time: 1437576705
+
+Contest ID: 560
+Index: B
+Handle: kkglove
+Submission ID: 12201975
+Submission Time: 1437662418
+
+Contest ID: 560
+Index: B
+Handle: MNDrebin
+Submission ID: 12187651
+Submission Time: 1437588405
+
+Contest ID: 560
+Index: B
+Handle: akanshig1
+Submission ID: 12334659
+Submission Time: 1438672825
+
+Contest ID: 560
+Index: B
+Handle: chbug
+Submission ID: 12191815
+Submission Time: 1437613990
+
+Contest ID: 560
+Index: B
+Handle: batikromisourov
+Submission ID: 12171054
+Submission Time: 1437575528
+
+Contest ID: 560
+Index: B
+Handle: Errichto
+Submission ID: 12218924
+Submission Time: 1437770557
+
+Contest ID: 560
+Index: B
+Handle: Running_Time
+Submission ID: 12191351
+Submission Time: 1437611555
+
+Contest ID: 560
+Index: B
+Handle: PlayWithWind
+Submission ID: 12558804
+Submission Time: 1439719506
+
+Contest ID: 560
+Index: B
+Handle: xffox
+Submission ID: 12392011
+Submission Time: 1438880571
+
+Contest ID: 560
+Index: B
+Handle: kp600168
+Submission ID: 12169181
+Submission Time: 1437574959
+
+Contest ID: 560
+Index: B
+Handle: 554LCYK5
+Submission ID: 12174068
+Submission Time: 1437576618
+
+Contest ID: 560
+Index: B
+Handle: facug91
+Submission ID: 12199134
+Submission Time: 1437650520
+
+Contest ID: 560
+Index: B
+Handle: loadinggg
+Submission ID: 12184119
+Submission Time: 1437582602
+
+Contest ID: 560
+Index: B
+Handle: gyshgx868
+Submission ID: 12170169
+Submission Time: 1437575255
+
+Contest ID: 560
+Index: B
+Handle: kadalbonek
+Submission ID: 12196422
+Submission Time: 1437638608
+
+Contest ID: 560
+Index: B
+Handle: kmjp
+Submission ID: 12183651
+Submission Time: 1437582214
+
+Contest ID: 560
+Index: B
+Handle: Andy111
+Submission ID: 12197792
+Submission Time: 1437643511
+
+Contest ID: 560
+Index: B
+Handle: ejnahc
+Submission ID: 12276058
+Submission Time: 1438264707
+
+Contest ID: 560
+Index: B
+Handle: Janathon_L
+Submission ID: 12174912
+Submission Time: 1437576967
+
+Contest ID: 560
+Index: B
+Handle: Rusianka
+Submission ID: 12178728
+Submission Time: 1437578841
+
+Contest ID: 560
+Index: B
+Handle: AhmedAbuamra
+Submission ID: 12203711
+Submission Time: 1437671185
+
+Contest ID: 560
+Index: B
+Handle: Hello_ahu
+Submission ID: 12168324
+Submission Time: 1437574734
+
+Contest ID: 560
+Index: B
+Handle: smilesw
+Submission ID: 12171802
+Submission Time: 1437575772
+
+Contest ID: 560
+Index: B
+Handle: montaser_qasem
+Submission ID: 12198071
+Submission Time: 1437644753
+
+Contest ID: 560
+Index: B
+Handle: nodar15
+Submission ID: 12190822
+Submission Time: 1437606614
+
+Contest ID: 560
+Index: B
+Handle: rushilpaul
+Submission ID: 12171543
+Submission Time: 1437575706
+
+Contest ID: 560
+Index: B
+Handle: scintillan
+Submission ID: 12249926
+Submission Time: 1438074373
+
+Contest ID: 560
+Index: B
+Handle: hieudaica
+Submission ID: 12199334
+Submission Time: 1437651452
+
+Contest ID: 560
+Index: B
+Handle: n3k
+Submission ID: 12201227
+Submission Time: 1437659074
+
+Contest ID: 560
+Index: B
+Handle: S.Khansari
+Submission ID: 12293947
+Submission Time: 1438358725
+
+Contest ID: 560
+Index: B
+Handle: 14190102
+Submission ID: 12198824
+Submission Time: 1437649200
+
+Contest ID: 560
+Index: B
+Handle: fgnjuf
+Submission ID: 12167504
+Submission Time: 1437574537
+
+Contest ID: 560
+Index: B
+Handle: hccz95
+Submission ID: 12166595
+Submission Time: 1437574302
+
+Contest ID: 560
+Index: B
+Handle: sodhi95
+Submission ID: 12186493
+Submission Time: 1437585815
+
+Contest ID: 560
+Index: B
+Handle: fabioiuri
+Submission ID: 12484507
+Submission Time: 1439414095
+
+Contest ID: 560
+Index: B
+Handle: O.R
+Submission ID: 12185789
+Submission Time: 1437584635
+
+Contest ID: 560
+Index: B
+Handle: xyzer
+Submission ID: 12171333
+Submission Time: 1437575599
+
+Contest ID: 560
+Index: B
+Handle: Mohamed_Ayman
+Submission ID: 12168499
+Submission Time: 1437574782
+
+Contest ID: 560
+Index: B
+Handle: YoussefEl-Kayyali
+Submission ID: 12193245
+Submission Time: 1437620739
+
+Contest ID: 560
+Index: B
+Handle: riyad_atik
+Submission ID: 12317009
+Submission Time: 1438533855
+
+Contest ID: 560
+Index: B
+Handle: godofwar
+Submission ID: 12295436
+Submission Time: 1438368334
+
+Contest ID: 560
+Index: B
+Handle: CF.Test
+Submission ID: 12187996
+Submission Time: 1437589531
+
+Contest ID: 560
+Index: B
+Handle: mohamedsamir19
+Submission ID: 12226660
+Submission Time: 1437851377
+
+Contest ID: 560
+Index: B
+Handle: chongjg
+Submission ID: 12167374
+Submission Time: 1437574500
+
+Contest ID: 560
+Index: B
+Handle: A.BATJARGAL
+Submission ID: 12170567
+Submission Time: 1437575367
+
+Contest ID: 560
+Index: B
+Handle: sssss250
+Submission ID: 12587277
+Submission Time: 1439894404
+
+Contest ID: 560
+Index: B
+Handle: Ahmed_Hussein_Karam
+Submission ID: 12169156
+Submission Time: 1437574953
+
+Contest ID: 560
+Index: B
+Handle: comunodi
+Submission ID: 12170412
+Submission Time: 1437575333
+
+Contest ID: 560
+Index: C
+Handle: dee1995
+Submission ID: 12179173
+Submission Time: 1437579041
+
+Contest ID: 560
+Index: C
+Handle: haiqilai
+Submission ID: 12172376
+Submission Time: 1437575991
+
+Contest ID: 560
+Index: C
+Handle: superiority351
+Submission ID: 12175115
+Submission Time: 1437577062
+
+Contest ID: 560
+Index: C
+Handle: horizon_
+Submission ID: 12176401
+Submission Time: 1437577681
+
+Contest ID: 560
+Index: C
+Handle: alchemist96
+Submission ID: 12198618
+Submission Time: 1437648123
+
+Contest ID: 560
+Index: C
+Handle: ltomic
+Submission ID: 12176788
+Submission Time: 1437577861
+
+Contest ID: 560
+Index: C
+Handle: SamuraiJack
+Submission ID: 12312928
+Submission Time: 1438506934
+
+Contest ID: 560
+Index: C
+Handle: Frankrike
+Submission ID: 12212441
+Submission Time: 1437730906
+
+Contest ID: 560
+Index: C
+Handle: hccz95
+Submission ID: 12173652
+Submission Time: 1437576457
+
+Contest ID: 560
+Index: C
+Handle: xxn
+Submission ID: 12174642
+Submission Time: 1437576851
+
+Contest ID: 560
+Index: C
+Handle: PanTer
+Submission ID: 12189903
+Submission Time: 1437598665
+
+Contest ID: 560
+Index: C
+Handle: Altruist
+Submission ID: 12180657
+Submission Time: 1437579754
+
+Contest ID: 560
+Index: C
+Handle: ArthurKevin
+Submission ID: 12243216
+Submission Time: 1438017156
+
+Contest ID: 560
+Index: C
+Handle: alittlezz
+Submission ID: 12226969
+Submission Time: 1437855479
+
+Contest ID: 560
+Index: C
+Handle: vedang.mehta36
+Submission ID: 12282397
+Submission Time: 1438285351
+
+Contest ID: 560
+Index: C
+Handle: vanillatwilight
+Submission ID: 12218042
+Submission Time: 1437763545
+
+Contest ID: 560
+Index: C
+Handle: liyizhen2
+Submission ID: 12171636
+Submission Time: 1437575728
+
+Contest ID: 560
+Index: C
+Handle: 996195670
+Submission ID: 12209513
+Submission Time: 1437718651
+
+Contest ID: 560
+Index: C
+Handle: femsub
+Submission ID: 12184450
+Submission Time: 1437582924
+
+Contest ID: 560
+Index: C
+Handle: carlsgr
+Submission ID: 12203837
+Submission Time: 1437671853
+
+Contest ID: 560
+Index: C
+Handle: whyPIstdiohero
+Submission ID: 12192949
+Submission Time: 1437619020
+
+Contest ID: 560
+Index: C
+Handle: sarveshmahajan
+Submission ID: 12175029
+Submission Time: 1437577024
+
+Contest ID: 560
+Index: C
+Handle: 2014329620034
+Submission ID: 12175324
+Submission Time: 1437577197
+
+Contest ID: 560
+Index: C
+Handle: hjjhjj
+Submission ID: 12175967
+Submission Time: 1437577523
+
+Contest ID: 560
+Index: C
+Handle: vjudge1
+Submission ID: 12344839
+Submission Time: 1438741369
+
+Contest ID: 560
+Index: C
+Handle: abhi_csecodeforces
+Submission ID: 12186927
+Submission Time: 1437586705
+
+Contest ID: 560
+Index: C
+Handle: cccang8
+Submission ID: 12182610
+Submission Time: 1437580641
+
+Contest ID: 560
+Index: C
+Handle: code_saavan
+Submission ID: 12216284
+Submission Time: 1437752374
+
+Contest ID: 560
+Index: C
+Handle: geraskin_yaroslav
+Submission ID: 12170753
+Submission Time: 1437575446
+
+Contest ID: 560
+Index: C
+Handle: sangtani
+Submission ID: 12181783
+Submission Time: 1437580273
+
+Contest ID: 560
+Index: C
+Handle: Asatan
+Submission ID: 12172756
+Submission Time: 1437576118
+
+Contest ID: 560
+Index: C
+Handle: wkwkes
+Submission ID: 12171388
+Submission Time: 1437575620
+
+Contest ID: 560
+Index: C
+Handle: TOK
+Submission ID: 12181065
+Submission Time: 1437579956
+
+Contest ID: 560
+Index: C
+Handle: ayan
+Submission ID: 12173387
+Submission Time: 1437576351
+
+Contest ID: 560
+Index: C
+Handle: Sa1378
+Submission ID: 12179721
+Submission Time: 1437579289
+
+Contest ID: 560
+Index: C
+Handle: nevergiveup
+Submission ID: 12602697
+Submission Time: 1439986646
+
+Contest ID: 560
+Index: C
+Handle: temp_Batoo
+Submission ID: 12177676
+Submission Time: 1437578343
+
+Contest ID: 560
+Index: C
+Handle: lonewolf_LZ
+Submission ID: 12175068
+Submission Time: 1437577038
+
+Contest ID: 560
+Index: C
+Handle: fhy_tan
+Submission ID: 12171313
+Submission Time: 1437575595
+
+Contest ID: 560
+Index: C
+Handle: Ac__LBJ
+Submission ID: 12177179
+Submission Time: 1437578056
+
+Contest ID: 560
+Index: C
+Handle: LittleQ
+Submission ID: 12171890
+Submission Time: 1437575800
+
+Contest ID: 560
+Index: C
+Handle: kazu
+Submission ID: 12178266
+Submission Time: 1437578606
+
+Contest ID: 560
+Index: C
+Handle: nurdaulet
+Submission ID: 12239400
+Submission Time: 1437992702
+
+Contest ID: 560
+Index: C
+Handle: Hactory
+Submission ID: 12174893
+Submission Time: 1437576959
+
+Contest ID: 560
+Index: C
+Handle: ilqar
+Submission ID: 12175069
+Submission Time: 1437577038
+
+Contest ID: 560
+Index: C
+Handle: 404202932
+Submission ID: 12179397
+Submission Time: 1437579139
+
+Contest ID: 560
+Index: C
+Handle: kp600168
+Submission ID: 12182305
+Submission Time: 1437580526
+
+Contest ID: 560
+Index: C
+Handle: sgondala2
+Submission ID: 12180830
+Submission Time: 1437579830
+
+Contest ID: 560
+Index: C
+Handle: yuki681
+Submission ID: 12180318
+Submission Time: 1437579576
+
+Contest ID: 560
+Index: C
+Handle: zhangyushao
+Submission ID: 12172825
+Submission Time: 1437576150
 
 Contest ID: 560
 Index: D
-Handle: vesttail
-Submission ID: 12269043
-Submission Time: 1438202596
+Handle: Sa1378
+Submission ID: 12186008
+Submission Time: 1437584940
+
+Contest ID: 560
+Index: D
+Handle: hudaicoder
+Submission ID: 12191078
+Submission Time: 1437609184
+
+Contest ID: 560
+Index: D
+Handle: milderhc
+Submission ID: 12270811
+Submission Time: 1438224285
+
+Contest ID: 560
+Index: D
+Handle: Diego.Gabriel
+Submission ID: 12206781
+Submission Time: 1437697160
+
+Contest ID: 560
+Index: D
+Handle: 787930982
+Submission ID: 12181133
+Submission Time: 1437579992
+
+Contest ID: 560
+Index: D
+Handle: Chobi15
+Submission ID: 12178153
+Submission Time: 1437578554
+
+Contest ID: 560
+Index: D
+Handle: samread81
+Submission ID: 12189925
+Submission Time: 1437598846
+
+Contest ID: 560
+Index: D
+Handle: danielfleischman
+Submission ID: 12216521
+Submission Time: 1437753840
+
+Contest ID: 560
+Index: D
+Handle: gshopov
+Submission ID: 12210366
+Submission Time: 1437722234
+
+Contest ID: 560
+Index: D
+Handle: vjudge1
+Submission ID: 12345413
+Submission Time: 1438746502
+
+Contest ID: 560
+Index: D
+Handle: hdu_justwe
+Submission ID: 12182556
+Submission Time: 1437580616
+
+Contest ID: 560
+Index: D
+Handle: warrior98
+Submission ID: 12190533
+Submission Time: 1437603716
+
+Contest ID: 560
+Index: D
+Handle: gshopov
+Submission ID: 12205661
+Submission Time: 1437682840
+
+Contest ID: 560
+Index: D
+Handle: SquidQuid
+Submission ID: 12195665
+Submission Time: 1437636314
+
+Contest ID: 560
+Index: D
+Handle: CMaster
+Submission ID: 12186648
+Submission Time: 1437586129
+
+Contest ID: 560
+Index: D
+Handle: ShadowGorn
+Submission ID: 12414801
+Submission Time: 1439039149
+
+Contest ID: 560
+Index: D
+Handle: DoBab
+Submission ID: 12425671
+Submission Time: 1439122513
+
+Contest ID: 560
+Index: D
+Handle: 2013031102007
+Submission ID: 12187219
+Submission Time: 1437587310
+
+Contest ID: 560
+Index: D
+Handle: pyrexshorts
+Submission ID: 12188156
+Submission Time: 1437589975
+
+Contest ID: 560
+Index: D
+Handle: FMI_Raileanu_Cristian
+Submission ID: 12181094
+Submission Time: 1437579969
+
+Contest ID: 560
+Index: D
+Handle: MeoXumi
+Submission ID: 12181971
+Submission Time: 1437580370
+
+Contest ID: 560
+Index: D
+Handle: Nicoshev
+Submission ID: 12486264
+Submission Time: 1439433885
+
+Contest ID: 560
+Index: D
+Handle: Jgodream
+Submission ID: 12225291
+Submission Time: 1437835400
+
+Contest ID: 560
+Index: D
+Handle: Neekeetab
+Submission ID: 12188584
+Submission Time: 1437591494
+
+Contest ID: 560
+Index: D
+Handle: cjtoribio
+Submission ID: 12188192
+Submission Time: 1437590096
+
+Contest ID: 560
+Index: D
+Handle: -O_O-
+Submission ID: 12201987
+Submission Time: 1437662494
+
+Contest ID: 560
+Index: D
+Handle: grumpy_gordon
+Submission ID: 12179731
+Submission Time: 1437579296
+
+Contest ID: 560
+Index: D
+Handle: jj_r
+Submission ID: 12180108
+Submission Time: 1437579487
+
+Contest ID: 560
+Index: D
+Handle: hnust_zhouchaoyuan
+Submission ID: 12185174
+Submission Time: 1437583801
+
+Contest ID: 560
+Index: D
+Handle: mavd091
+Submission ID: 12187145
+Submission Time: 1437587155
+
+Contest ID: 560
+Index: D
+Handle: ledinhbao
+Submission ID: 12225767
+Submission Time: 1437840660
+
+Contest ID: 560
+Index: D
+Handle: Croyal
+Submission ID: 12207933
+Submission Time: 1437707945
+
+Contest ID: 560
+Index: D
+Handle: sqr_hussain
+Submission ID: 12308579
+Submission Time: 1438474263
+
+Contest ID: 560
+Index: D
+Handle: Good_Luck
+Submission ID: 12260037
+Submission Time: 1438150344
+
+Contest ID: 560
+Index: D
+Handle: wulihua0
+Submission ID: 12325394
+Submission Time: 1438603305
+
+Contest ID: 560
+Index: D
+Handle: hassanyoussef
+Submission ID: 12207463
+Submission Time: 1437704485
+
+Contest ID: 560
+Index: D
+Handle: zhadizadeh
+Submission ID: 12177801
+Submission Time: 1437578414
+
+Contest ID: 560
+Index: D
+Handle: deepak2015
+Submission ID: 12189719
+Submission Time: 1437597407
+
+Contest ID: 560
+Index: D
+Handle: zlc55321
+Submission ID: 12291361
+Submission Time: 1438345497
+
+Contest ID: 560
+Index: D
+Handle: gchandel6
+Submission ID: 12313964
+Submission Time: 1438513621
+
+Contest ID: 560
+Index: D
+Handle: jyx
+Submission ID: 12196379
+Submission Time: 1437638414
+
+Contest ID: 560
+Index: D
+Handle: winrar.rar
+Submission ID: 12178399
+Submission Time: 1437578671
+
+Contest ID: 560
+Index: D
+Handle: plehem
+Submission ID: 12251791
+Submission Time: 1438086172
+
+Contest ID: 560
+Index: D
+Handle: drixmux
+Submission ID: 12188479
+Submission Time: 1437591111
+
+Contest ID: 560
+Index: D
+Handle: ONE_PIECE_HMH
+Submission ID: 12200519
+Submission Time: 1437656091
+
+Contest ID: 560
+Index: D
+Handle: aakashj
+Submission ID: 12225373
+Submission Time: 1437836263
+
+Contest ID: 560
+Index: D
+Handle: sweat
+Submission ID: 12192023
+Submission Time: 1437615065
+
+Contest ID: 560
+Index: D
+Handle: ASoboll
+Submission ID: 12263463
+Submission Time: 1438167950
+
+Contest ID: 560
+Index: D
+Handle: zgtsy
+Submission ID: 12399549
+Submission Time: 1438936986
+
+Contest ID: 560
+Index: D
+Handle: Taras4834
+Submission ID: 12181868
+Submission Time: 1437580322
+
+Contest ID: 560
+Index: E
+Handle: KSCN
+Submission ID: 12522728
+Submission Time: 1439527186
+
+Contest ID: 560
+Index: E
+Handle: jpdyuki
+Submission ID: 12346384
+Submission Time: 1438754900
+
+Contest ID: 560
+Index: E
+Handle: windniw
+Submission ID: 12476789
+Submission Time: 1439370585
+
+Contest ID: 560
+Index: E
+Handle: kkkiller
+Submission ID: 12587703
+Submission Time: 1439896721
+
+Contest ID: 560
+Index: E
+Handle: jyx
+Submission ID: 12197676
+Submission Time: 1437643005
+
+Contest ID: 560
+Index: E
+Handle: headspin
+Submission ID: 12183471
+Submission Time: 1437582055
+
+Contest ID: 560
+Index: E
+Handle: double_lyx
+Submission ID: 12195963
+Submission Time: 1437637108
+
+Contest ID: 560
+Index: E
+Handle: himanshujaju
+Submission ID: 12184364
+Submission Time: 1437582866
+
+Contest ID: 560
+Index: E
+Handle: serhatgiydiren
+Submission ID: 12211201
+Submission Time: 1437725645
+
+Contest ID: 560
+Index: E
+Handle: zgtsy
+Submission ID: 12414810
+Submission Time: 1439039208
+
+Contest ID: 560
+Index: E
+Handle: jael860
+Submission ID: 12219957
+Submission Time: 1437785345
+
+Contest ID: 560
+Index: E
+Handle: rishabhiitr
+Submission ID: 12272725
+Submission Time: 1438241625
+
+Contest ID: 560
+Index: E
+Handle: gskhirtladze
+Submission ID: 12184610
+Submission Time: 1437583151
+
+Contest ID: 560
+Index: E
+Handle: 2030xxj
+Submission ID: 12598886
+Submission Time: 1439969927
+
+Contest ID: 560
+Index: E
+Handle: Llop
+Submission ID: 12424397
+Submission Time: 1439114985
+
+Contest ID: 560
+Index: E
+Handle: Ronny_Chan
+Submission ID: 12343364
+Submission Time: 1438722849
+
+Contest ID: 560
+Index: E
+Handle: wkwkes
+Submission ID: 12199362
+Submission Time: 1437651587
+
+Contest ID: 560
+Index: E
+Handle: alisayedali
+Submission ID: 12188405
+Submission Time: 1437590817
+
+Contest ID: 560
+Index: E
+Handle: ChrisR.F
+Submission ID: 12210996
+Submission Time: 1437724767
+
+Contest ID: 560
+Index: E
+Handle: luras_oil2
+Submission ID: 12403782
+Submission Time: 1438958233
+
+Contest ID: 560
+Index: E
+Handle: renegade_warrior
+Submission ID: 12205345
+Submission Time: 1437680613
+
+Contest ID: 560
+Index: E
+Handle: GuessEver
+Submission ID: 12186554
+Submission Time: 1437585940
+
+Contest ID: 560
+Index: E
+Handle: vjudge3
+Submission ID: 12414804
+Submission Time: 1439039176
+
+Contest ID: 560
+Index: E
+Handle: laplab
+Submission ID: 12493528
+Submission Time: 1439477476
+
+Contest ID: 560
+Index: E
+Handle: harsh23
+Submission ID: 12224031
+Submission Time: 1437823369
+
+Contest ID: 560
+Index: E
+Handle: Kuzey-Tekin
+Submission ID: 12225567
+Submission Time: 1437838252
+
+Contest ID: 560
+Index: E
+Handle: x4150
+Submission ID: 12201348
+Submission Time: 1437659604
+
+Contest ID: 560
+Index: E
+Handle: ONU_V_V_Ivanov
+Submission ID: 12352957
+Submission Time: 1438787693
+
+Contest ID: 560
+Index: E
+Handle: romanfml31
+Submission ID: 12236425
+Submission Time: 1437979367
+
+Contest ID: 560
+Index: E
+Handle: zetamoo
+Submission ID: 12199880
+Submission Time: 1437653597
+
+Contest ID: 560
+Index: E
+Handle: amthinkin
+Submission ID: 12210391
+Submission Time: 1437722345
+
+Contest ID: 560
+Index: E
+Handle: hawk198
+Submission ID: 12201779
+Submission Time: 1437661507
+
+Contest ID: 560
+Index: E
+Handle: Taras4834
+Submission ID: 12198745
+Submission Time: 1437648865
+
+Contest ID: 560
+Index: E
+Handle: techwiz911
+Submission ID: 12189843
+Submission Time: 1437598287
+
+Contest ID: 560
+Index: E
+Handle: hnust_fengyu
+Submission ID: 12215187
+Submission Time: 1437746783
+
+Contest ID: 560
+Index: E
+Handle: YouAreMyBeautifulSkies
+Submission ID: 12317811
+Submission Time: 1438540644
+
+Contest ID: 560
+Index: E
+Handle: z123z123d
+Submission ID: 12191024
+Submission Time: 1437608582
+
+Contest ID: 560
+Index: E
+Handle: marat.snowbear
+Submission ID: 12184274
+Submission Time: 1437582719
+
+Contest ID: 560
+Index: E
+Handle: loadinggg
+Submission ID: 12185441
+Submission Time: 1437584140
+
+Contest ID: 560
+Index: E
+Handle: bei_insomnia
+Submission ID: 12200601
+Submission Time: 1437656419
+
+Contest ID: 560
+Index: E
+Handle: hdu_justwe
+Submission ID: 12209556
+Submission Time: 1437718828
+
+Contest ID: 560
+Index: E
+Handle: bnuvjudge
+Submission ID: 12428461
+Submission Time: 1439140674
+
+Contest ID: 560
+Index: E
+Handle: qiaozhanrong
+Submission ID: 12576617
+Submission Time: 1439822052
+
+Contest ID: 560
+Index: E
+Handle: vjudge1
+Submission ID: 12344847
+Submission Time: 1438741396
+
+Contest ID: 560
+Index: E
+Handle: naeioi
+Submission ID: 12617938
+Submission Time: 1440085918
+
+Contest ID: 560
+Index: E
+Handle: alir
+Submission ID: 12296871
+Submission Time: 1438381591
+
+Contest ID: 560
+Index: E
+Handle: ChrisR.F
+Submission ID: 12210948
+Submission Time: 1437724588
+
+Contest ID: 560
+Index: E
+Handle: garuda_alpha
+Submission ID: 12274574
+Submission Time: 1438255492
+
+Contest ID: 560
+Index: E
+Handle: romagolchin
+Submission ID: 12275927
+Submission Time: 1438264012
+
+Contest ID: 560
+Index: E
+Handle: superobertking
+Submission ID: 12201210
+Submission Time: 1437658972
+
+Contest ID: 558
+Index: A
+Handle: satirmo
+Submission ID: 12044952
+Submission Time: 1436887463
+
+Contest ID: 558
+Index: A
+Handle: Vadik092
+Submission ID: 12062653
+Submission Time: 1436918711
+
+Contest ID: 558
+Index: A
+Handle: asdf00001
+Submission ID: 12044573
+Submission Time: 1436887352
+
+Contest ID: 558
+Index: A
+Handle: Svyat
+Submission ID: 12044437
+Submission Time: 1436887306
+
+Contest ID: 558
+Index: A
+Handle: Sundar
+Submission ID: 12044675
+Submission Time: 1436887381
+
+Contest ID: 558
+Index: A
+Handle: KyntsevichVova
+Submission ID: 12044883
+Submission Time: 1436887441
+
+Contest ID: 558
+Index: A
+Handle: fpfilko
+Submission ID: 12046245
+Submission Time: 1436887864
+
+Contest ID: 558
+Index: A
+Handle: vjudge5
+Submission ID: 12160882
+Submission Time: 1437553078
+
+Contest ID: 558
+Index: A
+Handle: daneshvar.a
+Submission ID: 12102694
+Submission Time: 1437203059
+
+Contest ID: 558
+Index: A
+Handle: vjudge3
+Submission ID: 12144082
+Submission Time: 1437466713
+
+Contest ID: 558
+Index: A
+Handle: andreiblaj17
+Submission ID: 12050911
+Submission Time: 1436889624
+
+Contest ID: 558
+Index: A
+Handle: qqz003
+Submission ID: 12084140
+Submission Time: 1437052433
+
+Contest ID: 558
+Index: A
+Handle: hiyot
+Submission ID: 12043946
+Submission Time: 1436887097
+
+Contest ID: 558
+Index: A
+Handle: shashank_r12
+Submission ID: 12104604
+Submission Time: 1437213152
+
+Contest ID: 558
+Index: A
+Handle: VibhorKanojia
+Submission ID: 12117636
+Submission Time: 1437316134
+
+Contest ID: 558
+Index: A
+Handle: babooj
+Submission ID: 12045010
+Submission Time: 1436887477
+
+Contest ID: 558
+Index: A
+Handle: daash_parsa
+Submission ID: 12260823
+Submission Time: 1438154070
+
+Contest ID: 558
+Index: A
+Handle: vjudge4
+Submission ID: 12143074
+Submission Time: 1437462059
+
+Contest ID: 558
+Index: A
+Handle: FabiOquendo
+Submission ID: 12118534
+Submission Time: 1437323383
+
+Contest ID: 558
+Index: A
+Handle: Alez
+Submission ID: 12046456
+Submission Time: 1436887932
+
+Contest ID: 558
+Index: A
+Handle: EGZ95
+Submission ID: 12095921
+Submission Time: 1437140408
+
+Contest ID: 558
+Index: A
+Handle: richardzrc
+Submission ID: 12044114
+Submission Time: 1436887174
+
+Contest ID: 558
+Index: A
+Handle: Empress
+Submission ID: 12049153
+Submission Time: 1436888890
+
+Contest ID: 558
+Index: A
+Handle: ibiy
+Submission ID: 12118316
+Submission Time: 1437321308
+
+Contest ID: 558
+Index: A
+Handle: be_cool
+Submission ID: 12062245
+Submission Time: 1436905425
+
+Contest ID: 558
+Index: A
+Handle: YERMOUTH
+Submission ID: 12052694
+Submission Time: 1436890542
+
+Contest ID: 558
+Index: A
+Handle: goyalsamarth1995
+Submission ID: 12588620
+Submission Time: 1439901953
+
+Contest ID: 558
+Index: A
+Handle: yukariko
+Submission ID: 12044306
+Submission Time: 1436887256
+
+Contest ID: 558
+Index: A
+Handle: melsclar
+Submission ID: 12339937
+Submission Time: 1438699893
+
+Contest ID: 558
+Index: A
+Handle: vjudge2
+Submission ID: 12246633
+Submission Time: 1438050220
+
+Contest ID: 558
+Index: A
+Handle: vjudge5
+Submission ID: 12158639
+Submission Time: 1437544425
+
+Contest ID: 558
+Index: A
+Handle: cliu568
+Submission ID: 12105211
+Submission Time: 1437217789
+
+Contest ID: 558
+Index: A
+Handle: gamamal
+Submission ID: 12045540
+Submission Time: 1436887633
+
+Contest ID: 558
+Index: A
+Handle: goodhope
+Submission ID: 12144467
+Submission Time: 1437468311
+
+Contest ID: 558
+Index: A
+Handle: budong
+Submission ID: 12285923
+Submission Time: 1438314573
+
+Contest ID: 558
+Index: A
+Handle: V1_Forces7Y7
+Submission ID: 12097039
+Submission Time: 1437148325
+
+Contest ID: 558
+Index: A
+Handle: MagAlex
+Submission ID: 12062373
+Submission Time: 1436906293
+
+Contest ID: 558
+Index: A
+Handle: SashaMN
+Submission ID: 12410467
+Submission Time: 1439016116
+
+Contest ID: 558
+Index: A
+Handle: RedNextYears
+Submission ID: 12052200
+Submission Time: 1436890269
+
+Contest ID: 558
+Index: A
+Handle: suninsky
+Submission ID: 12052506
+Submission Time: 1436890430
+
+Contest ID: 558
+Index: A
+Handle: kunal93
+Submission ID: 12044011
+Submission Time: 1436887131
+
+Contest ID: 558
+Index: A
+Handle: LeBronBryantQAAQ
+Submission ID: 12142844
+Submission Time: 1437460936
+
+Contest ID: 558
+Index: A
+Handle: jkrs
+Submission ID: 12069883
+Submission Time: 1436955746
+
+Contest ID: 558
+Index: A
+Handle: vjudge3
+Submission ID: 12158899
+Submission Time: 1437545472
+
+Contest ID: 558
+Index: A
+Handle: AK94
+Submission ID: 12052313
+Submission Time: 1436890334
+
+Contest ID: 558
+Index: A
+Handle: waterfalls
+Submission ID: 12050915
+Submission Time: 1436889626
+
+Contest ID: 558
+Index: A
+Handle: Shrikant
+Submission ID: 12051112
+Submission Time: 1436889723
+
+Contest ID: 558
+Index: A
+Handle: checkashu
+Submission ID: 12141788
+Submission Time: 1437455166
+
+Contest ID: 558
+Index: A
+Handle: sabbir_alam
+Submission ID: 12048033
+Submission Time: 1436888453
+
+Contest ID: 558
+Index: A
+Handle: alifradityar
+Submission ID: 12045583
+Submission Time: 1436887645
+
+Contest ID: 558
+Index: B
+Handle: Vax
+Submission ID: 12198053
+Submission Time: 1437644661
+
+Contest ID: 558
+Index: B
+Handle: yeguanghao
+Submission ID: 12066904
+Submission Time: 1436943105
+
+Contest ID: 558
+Index: B
+Handle: m_alzantot
+Submission ID: 12204101
+Submission Time: 1437673061
+
+Contest ID: 558
+Index: B
+Handle: wellvolks
+Submission ID: 12317748
+Submission Time: 1438540240
+
+Contest ID: 558
+Index: B
+Handle: pkq2006
+Submission ID: 12265330
+Submission Time: 1438178026
+
+Contest ID: 558
+Index: B
+Handle: natla
+Submission ID: 12064389
+Submission Time: 1436930409
+
+Contest ID: 558
+Index: B
+Handle: xauoyero
+Submission ID: 12050251
+Submission Time: 1436889326
+
+Contest ID: 558
+Index: B
+Handle: aias
+Submission ID: 12242193
+Submission Time: 1438009540
+
+Contest ID: 558
+Index: B
+Handle: s.nakazawa
+Submission ID: 12048160
+Submission Time: 1436888496
+
+Contest ID: 558
+Index: B
+Handle: prateep
+Submission ID: 12064947
+Submission Time: 1436934290
+
+Contest ID: 558
+Index: B
+Handle: miczar
+Submission ID: 12067794
+Submission Time: 1436946398
+
+Contest ID: 558
+Index: B
+Handle: ForceRain
+Submission ID: 12050011
+Submission Time: 1436889225
+
+Contest ID: 558
+Index: B
+Handle: alex_world
+Submission ID: 12045438
+Submission Time: 1436887604
+
+Contest ID: 558
+Index: B
+Handle: dh_k_9949
+Submission ID: 12046776
+Submission Time: 1436888032
+
+Contest ID: 558
+Index: B
+Handle: codolove
+Submission ID: 12053453
+Submission Time: 1436890949
+
+Contest ID: 558
+Index: B
+Handle: m1sha
+Submission ID: 12250740
+Submission Time: 1438080198
+
+Contest ID: 558
+Index: B
+Handle: Void2281
+Submission ID: 12323436
+Submission Time: 1438591633
+
+Contest ID: 558
+Index: B
+Handle: quailty
+Submission ID: 12059875
+Submission Time: 1436897204
+
+Contest ID: 558
+Index: B
+Handle: vsukeeshbabu
+Submission ID: 12106134
+Submission Time: 1437224017
+
+Contest ID: 558
+Index: B
+Handle: gsahil
+Submission ID: 12060818
+Submission Time: 1436899464
+
+Contest ID: 558
+Index: B
+Handle: 1412904892
+Submission ID: 12063265
+Submission Time: 1436923700
+
+Contest ID: 558
+Index: B
+Handle: vjudge4
+Submission ID: 12396801
+Submission Time: 1438922559
+
+Contest ID: 558
+Index: B
+Handle: lilian_ciobanu
+Submission ID: 12590757
+Submission Time: 1439912506
+
+Contest ID: 558
+Index: B
+Handle: ss2
+Submission ID: 12056006
+Submission Time: 1436892369
+
+Contest ID: 558
+Index: B
+Handle: lnishan
+Submission ID: 12282219
+Submission Time: 1438284259
+
+Contest ID: 558
+Index: B
+Handle: hexiecs
+Submission ID: 12048201
+Submission Time: 1436888514
+
+Contest ID: 558
+Index: B
+Handle: Ackos
+Submission ID: 12206134
+Submission Time: 1437687757
+
+Contest ID: 558
+Index: B
+Handle: _Ali_
+Submission ID: 12223868
+Submission Time: 1437821546
+
+Contest ID: 558
+Index: B
+Handle: MLins
+Submission ID: 12046905
+Submission Time: 1436888074
+
+Contest ID: 558
+Index: B
+Handle: li1992
+Submission ID: 12096925
+Submission Time: 1437147373
+
+Contest ID: 558
+Index: B
+Handle: yurboss
+Submission ID: 12072184
+Submission Time: 1436967702
+
+Contest ID: 558
+Index: B
+Handle: youngitachi
+Submission ID: 12057214
+Submission Time: 1436893129
+
+Contest ID: 558
+Index: B
+Handle: vjudge4
+Submission ID: 12158461
+Submission Time: 1437543719
+
+Contest ID: 558
+Index: B
+Handle: jxust_tj
+Submission ID: 12052403
+Submission Time: 1436890377
+
+Contest ID: 558
+Index: B
+Handle: karim8h
+Submission ID: 12073201
+Submission Time: 1436973588
+
+Contest ID: 558
+Index: B
+Handle: AkiraTatsumi
+Submission ID: 12073685
+Submission Time: 1436976457
+
+Contest ID: 558
+Index: B
+Handle: tgehr
+Submission ID: 12478899
+Submission Time: 1439380442
+
+Contest ID: 558
+Index: B
+Handle: lennon310
+Submission ID: 12059947
+Submission Time: 1436897337
+
+Contest ID: 558
+Index: B
+Handle: YoussefEl-Kayyali
+Submission ID: 12059976
+Submission Time: 1436897398
+
+Contest ID: 558
+Index: B
+Handle: musa.cse12
+Submission ID: 12255578
+Submission Time: 1438107832
+
+Contest ID: 558
+Index: B
+Handle: eXeP
+Submission ID: 12047124
+Submission Time: 1436888144
+
+Contest ID: 558
+Index: B
+Handle: nabila_ahmed
+Submission ID: 12053849
+Submission Time: 1436891154
+
+Contest ID: 558
+Index: B
+Handle: Shavkat_Aminov
+Submission ID: 12049139
+Submission Time: 1436888886
+
+Contest ID: 558
+Index: B
+Handle: yepele
+Submission ID: 12305400
+Submission Time: 1438442293
+
+Contest ID: 558
+Index: B
+Handle: fA1sEr
+Submission ID: 12144127
+Submission Time: 1437466934
+
+Contest ID: 558
+Index: B
+Handle: YMax
+Submission ID: 12262750
+Submission Time: 1438162695
+
+Contest ID: 558
+Index: B
+Handle: mini24
+Submission ID: 12230528
+Submission Time: 1437923345
+
+Contest ID: 558
+Index: B
+Handle: Nami
+Submission ID: 12117383
+Submission Time: 1437314382
+
+Contest ID: 558
+Index: B
+Handle: xiaoxin9
+Submission ID: 12047293
+Submission Time: 1436888204
+
+Contest ID: 558
+Index: B
+Handle: Namnamseo
+Submission ID: 12070329
+Submission Time: 1436958216
+
+Contest ID: 558
+Index: C
+Handle: lm_ss
+Submission ID: 12595863
+Submission Time: 1439950913
+
+Contest ID: 558
+Index: C
+Handle: siddhant_08
+Submission ID: 12065405
+Submission Time: 1436937460
+
+Contest ID: 558
+Index: C
+Handle: wateret
+Submission ID: 12063700
+Submission Time: 1436926631
+
+Contest ID: 558
+Index: C
+Handle: radoslav11
+Submission ID: 12070382
+Submission Time: 1436958510
+
+Contest ID: 558
+Index: C
+Handle: nemethbalazs2000
+Submission ID: 12057863
+Submission Time: 1436893508
+
+Contest ID: 558
+Index: C
+Handle: Kaban-5
+Submission ID: 12046974
+Submission Time: 1436888098
+
+Contest ID: 558
+Index: C
+Handle: Iulia_Duta
+Submission ID: 12082981
+Submission Time: 1437047167
+
+Contest ID: 558
+Index: C
+Handle: KC3
+Submission ID: 12117915
+Submission Time: 1437318065
+
+Contest ID: 558
+Index: C
+Handle: docodon
+Submission ID: 12065109
+Submission Time: 1436935773
+
+Contest ID: 558
+Index: C
+Handle: Player12
+Submission ID: 12081700
+Submission Time: 1437039917
+
+Contest ID: 558
+Index: C
+Handle: TRiddle
+Submission ID: 12106288
+Submission Time: 1437224927
+
+Contest ID: 558
+Index: C
+Handle: citytourist
+Submission ID: 12214770
+Submission Time: 1437744906
+
+Contest ID: 558
+Index: C
+Handle: Wonka
+Submission ID: 12537388
+Submission Time: 1439598731
+
+Contest ID: 558
+Index: C
+Handle: conor
+Submission ID: 12055427
+Submission Time: 1436892035
+
+Contest ID: 558
+Index: C
+Handle: dhuacm3
+Submission ID: 12612942
+Submission Time: 1440057700
+
+Contest ID: 558
+Index: C
+Handle: pacu
+Submission ID: 12060248
+Submission Time: 1436897901
+
+Contest ID: 558
+Index: C
+Handle: ISHWAR
+Submission ID: 12095764
+Submission Time: 1437139480
+
+Contest ID: 558
+Index: C
+Handle: mateidanut
+Submission ID: 12185483
+Submission Time: 1437584187
+
+Contest ID: 558
+Index: C
+Handle: waterfalls
+Submission ID: 12049077
+Submission Time: 1436888857
+
+Contest ID: 558
+Index: C
+Handle: 452181625
+Submission ID: 12068534
+Submission Time: 1436949332
+
+Contest ID: 558
+Index: C
+Handle: justinz2018
+Submission ID: 12076094
+Submission Time: 1436999109
+
+Contest ID: 558
+Index: C
+Handle: p2r2
+Submission ID: 12108868
+Submission Time: 1437236718
+
+Contest ID: 558
+Index: C
+Handle: shifth
+Submission ID: 12084973
+Submission Time: 1437056332
+
+Contest ID: 558
+Index: C
+Handle: yingdatong123456
+Submission ID: 12309925
+Submission Time: 1438486403
+
+Contest ID: 558
+Index: C
+Handle: langtrunghieu
+Submission ID: 12046212
+Submission Time: 1436887854
+
+Contest ID: 558
+Index: C
+Handle: nada-elnokaly
+Submission ID: 12131782
+Submission Time: 1437403369
+
+Contest ID: 558
+Index: C
+Handle: Singledog
+Submission ID: 12097724
+Submission Time: 1437153888
+
+Contest ID: 558
+Index: C
+Handle: muhit
+Submission ID: 12154256
+Submission Time: 1437512860
+
+Contest ID: 558
+Index: C
+Handle: Nams
+Submission ID: 12094892
+Submission Time: 1437134403
+
+Contest ID: 558
+Index: C
+Handle: diptadas
+Submission ID: 12057056
+Submission Time: 1436893034
+
+Contest ID: 558
+Index: C
+Handle: Jason_zjj
+Submission ID: 12067417
+Submission Time: 1436945014
+
+Contest ID: 558
+Index: C
+Handle: s1_73
+Submission ID: 12114732
+Submission Time: 1437295785
+
+Contest ID: 558
+Index: C
+Handle: wust_kesihai
+Submission ID: 12063561
+Submission Time: 1436925745
+
+Contest ID: 558
+Index: C
+Handle: vmrajas
+Submission ID: 12058619
+Submission Time: 1436895366
+
+Contest ID: 558
+Index: C
+Handle: shivamd
+Submission ID: 12060336
+Submission Time: 1436898091
+
+Contest ID: 558
+Index: C
+Handle: crazytim
+Submission ID: 12065176
+Submission Time: 1436936270
+
+Contest ID: 558
+Index: C
+Handle: abinash
+Submission ID: 12070624
+Submission Time: 1436959868
+
+Contest ID: 558
+Index: C
+Handle: ledinhbao
+Submission ID: 12078726
+Submission Time: 1437026637
+
+Contest ID: 558
+Index: C
+Handle: realloc_anh1l1ator
+Submission ID: 12490973
+Submission Time: 1439465280
+
+Contest ID: 558
+Index: C
+Handle: farmerboy
+Submission ID: 12053846
+Submission Time: 1436891153
+
+Contest ID: 558
+Index: C
+Handle: akshaygarg1995
+Submission ID: 12097115
+Submission Time: 1437148855
+
+Contest ID: 558
+Index: C
+Handle: love2_LH
+Submission ID: 12085735
+Submission Time: 1437060288
+
+Contest ID: 558
+Index: C
+Handle: Cynosure1
+Submission ID: 12148761
+Submission Time: 1437488204
+
+Contest ID: 558
+Index: C
+Handle: maopao
+Submission ID: 12072499
+Submission Time: 1436969711
+
+Contest ID: 558
+Index: C
+Handle: hiyot
+Submission ID: 12059283
+Submission Time: 1436896225
+
+Contest ID: 558
+Index: C
+Handle: WKUZHPKB
+Submission ID: 12080071
+Submission Time: 1437032954
+
+Contest ID: 558
+Index: C
+Handle: siscos
+Submission ID: 12322810
+Submission Time: 1438588592
+
+Contest ID: 558
+Index: C
+Handle: DJiGIT
+Submission ID: 12068358
+Submission Time: 1436948562
+
+Contest ID: 558
+Index: C
+Handle: xd560
+Submission ID: 12066359
+Submission Time: 1436941159
+
+Contest ID: 558
+Index: C
+Handle: ritesh11
+Submission ID: 12061926
+Submission Time: 1436904002
+
+Contest ID: 558
+Index: D
+Handle: kabell
+Submission ID: 12059006
+Submission Time: 1436895826
+
+Contest ID: 558
+Index: D
+Handle: Baoli1100
+Submission ID: 12228211
+Submission Time: 1437880323
+
+Contest ID: 558
+Index: D
+Handle: Pavluha
+Submission ID: 12096163
+Submission Time: 1437142183
+
+Contest ID: 558
+Index: D
+Handle: praveen14078
+Submission ID: 12093432
+Submission Time: 1437124251
+
+Contest ID: 558
+Index: D
+Handle: ZZ_94
+Submission ID: 12065302
+Submission Time: 1436936987
+
+Contest ID: 558
+Index: D
+Handle: 406714219
+Submission ID: 12562324
+Submission Time: 1439735834
+
+Contest ID: 558
+Index: D
+Handle: rares.buhai
+Submission ID: 12061317
+Submission Time: 1436901273
+
+Contest ID: 558
+Index: D
+Handle: Huan_Ying
+Submission ID: 12056527
+Submission Time: 1436892699
+
+Contest ID: 558
+Index: D
+Handle: a00012025
+Submission ID: 12063887
+Submission Time: 1436927671
+
+Contest ID: 558
+Index: D
+Handle: Zhangcanjie
+Submission ID: 12092193
+Submission Time: 1437116538
+
+Contest ID: 558
+Index: D
+Handle: nnMan
+Submission ID: 12080060
+Submission Time: 1437032903
+
+Contest ID: 558
+Index: D
+Handle: yzyz
+Submission ID: 12078700
+Submission Time: 1437026474
+
+Contest ID: 558
+Index: D
+Handle: hiyot
+Submission ID: 12059414
+Submission Time: 1436896405
+
+Contest ID: 558
+Index: D
+Handle: nada-elnokaly
+Submission ID: 12224286
+Submission Time: 1437826074
+
+Contest ID: 558
+Index: D
+Handle: louise
+Submission ID: 12230461
+Submission Time: 1437921793
+
+Contest ID: 558
+Index: D
+Handle: langtrunghieu
+Submission ID: 12053335
+Submission Time: 1436890898
+
+Contest ID: 558
+Index: D
+Handle: jpdyuki
+Submission ID: 12349187
+Submission Time: 1438767183
+
+Contest ID: 558
+Index: D
+Handle: praveen14078
+Submission ID: 12093450
+Submission Time: 1437124366
+
+Contest ID: 558
+Index: D
+Handle: Namnamseo
+Submission ID: 12076382
+Submission Time: 1437003625
+
+Contest ID: 558
+Index: D
+Handle: Blackjaguar97
+Submission ID: 12090572
+Submission Time: 1437103535
+
+Contest ID: 558
+Index: D
+Handle: snowy_smile
+Submission ID: 12071670
+Submission Time: 1436965094
+
+Contest ID: 558
+Index: D
+Handle: L.M.Q
+Submission ID: 12067682
+Submission Time: 1436946017
+
+Contest ID: 558
+Index: D
+Handle: kmjp
+Submission ID: 12059007
+Submission Time: 1436895828
+
+Contest ID: 558
+Index: D
+Handle: vjudge1
+Submission ID: 12349195
+Submission Time: 1438767208
+
+Contest ID: 558
+Index: D
+Handle: Bobrosoft
+Submission ID: 12059160
+Submission Time: 1436896036
+
+Contest ID: 558
+Index: D
+Handle: seba_civ95
+Submission ID: 12138161
+Submission Time: 1437429889
+
+Contest ID: 558
+Index: D
+Handle: Malinovsky239
+Submission ID: 12075258
+Submission Time: 1436989188
+
+Contest ID: 558
+Index: D
+Handle: meganekkogekirabu
+Submission ID: 12086295
+Submission Time: 1437063501
+
+Contest ID: 558
+Index: D
+Handle: XiaoDan
+Submission ID: 12258799
+Submission Time: 1438142006
+
+Contest ID: 558
+Index: D
+Handle: crazytim
+Submission ID: 12071559
+Submission Time: 1436964461
+
+Contest ID: 558
+Index: D
+Handle: vjudge999
+Submission ID: 12079936
+Submission Time: 1437032290
+
+Contest ID: 558
+Index: D
+Handle: zetamoo
+Submission ID: 12125725
+Submission Time: 1437372501
+
+Contest ID: 558
+Index: D
+Handle: Farhod_Farmon
+Submission ID: 12103055
+Submission Time: 1437204868
+
+Contest ID: 558
+Index: D
+Handle: a654889339
+Submission ID: 12069641
+Submission Time: 1436954173
+
+Contest ID: 558
+Index: D
+Handle: void_rank
+Submission ID: 12212765
+Submission Time: 1437732976
+
+Contest ID: 558
+Index: D
+Handle: Cao_11TT
+Submission ID: 12150606
+Submission Time: 1437494014
+
+Contest ID: 558
+Index: D
+Handle: henyumen
+Submission ID: 12228360
+Submission Time: 1437883235
+
+Contest ID: 558
+Index: D
+Handle: TimonKnigge
+Submission ID: 12059842
+Submission Time: 1436897136
+
+Contest ID: 558
+Index: D
+Handle: rafael859
+Submission ID: 12056029
+Submission Time: 1436892386
+
+Contest ID: 558
+Index: D
+Handle: zhouwenkai
+Submission ID: 12126077
+Submission Time: 1437375031
+
+Contest ID: 558
+Index: D
+Handle: 1243France
+Submission ID: 12157057
+Submission Time: 1437532404
+
+Contest ID: 558
+Index: D
+Handle: jackraft
+Submission ID: 12239271
+Submission Time: 1437991986
+
+Contest ID: 558
+Index: D
+Handle: RomeoFantastik
+Submission ID: 12099069
+Submission Time: 1437167229
+
+Contest ID: 558
+Index: D
+Handle: zerokugi
+Submission ID: 12048588
+Submission Time: 1436888656
+
+Contest ID: 558
+Index: D
+Handle: lone_rider
+Submission ID: 12084260
+Submission Time: 1437052959
+
+Contest ID: 558
+Index: D
+Handle: osama
+Submission ID: 12064208
+Submission Time: 1436929308
+
+Contest ID: 558
+Index: D
+Handle: savinov
+Submission ID: 12048540
+Submission Time: 1436888637
+
+Contest ID: 558
+Index: D
+Handle: ilshatus
+Submission ID: 12088805
+Submission Time: 1437083315
+
+Contest ID: 558
+Index: D
+Handle: bartek95
+Submission ID: 12477705
+Submission Time: 1439374653
+
+Contest ID: 558
+Index: D
+Handle: Yudee
+Submission ID: 12106296
+Submission Time: 1437224970
+
+Contest ID: 558
+Index: E
+Handle: T0RRES
+Submission ID: 12069302
+Submission Time: 1436952361
+
+Contest ID: 558
+Index: E
+Handle: chowdhury
+Submission ID: 12154805
+Submission Time: 1437518964
+
+Contest ID: 558
+Index: E
+Handle: tungluu18
+Submission ID: 12080591
+Submission Time: 1437034994
+
+Contest ID: 558
+Index: E
+Handle: h.nejat
+Submission ID: 12105031
+Submission Time: 1437216458
+
+Contest ID: 558
+Index: E
+Handle: _MonkeyDLuffy_
+Submission ID: 12048494
+Submission Time: 1436888619
+
+Contest ID: 558
+Index: E
+Handle: chemthan
+Submission ID: 12071471
+Submission Time: 1436964024
+
+Contest ID: 558
+Index: E
+Handle: Farhod_Farmon
+Submission ID: 12107085
+Submission Time: 1437229991
+
+Contest ID: 558
+Index: E
+Handle: volverine
+Submission ID: 12608379
+Submission Time: 1440012012
+
+Contest ID: 558
+Index: E
+Handle: mgch
+Submission ID: 12054586
+Submission Time: 1436891535
+
+Contest ID: 558
+Index: E
+Handle: deadmanalive059
+Submission ID: 12058775
+Submission Time: 1436895537
+
+Contest ID: 558
+Index: E
+Handle: andrew_thomas
+Submission ID: 12087815
+Submission Time: 1437073644
+
+Contest ID: 558
+Index: E
+Handle: tt.anhquynh
+Submission ID: 12052208
+Submission Time: 1436890275
+
+Contest ID: 558
+Index: E
+Handle: harshil
+Submission ID: 12132214
+Submission Time: 1437405595
+
+Contest ID: 558
+Index: E
+Handle: osmanorhan
+Submission ID: 12131750
+Submission Time: 1437403188
+
+Contest ID: 558
+Index: E
+Handle: juniorandrade
+Submission ID: 12074039
+Submission Time: 1436978756
+
+Contest ID: 558
+Index: E
+Handle: sanlocoz
+Submission ID: 12143474
+Submission Time: 1437464012
+
+Contest ID: 558
+Index: E
+Handle: Gassa
+Submission ID: 12126696
+Submission Time: 1437379315
+
+Contest ID: 558
+Index: E
+Handle: alexpizarroj
+Submission ID: 12061979
+Submission Time: 1436904247
+
+Contest ID: 558
+Index: E
+Handle: LPQ
+Submission ID: 12060653
+Submission Time: 1436898993
+
+Contest ID: 558
+Index: E
+Handle: wrdsaj
+Submission ID: 12123823
+Submission Time: 1437354110
+
+Contest ID: 558
+Index: E
+Handle: loli-con
+Submission ID: 12091521
+Submission Time: 1437111735
+
+Contest ID: 558
+Index: E
+Handle: MrDindows
+Submission ID: 12060081
+Submission Time: 1436897585
+
+Contest ID: 558
+Index: E
+Handle: bayram98
+Submission ID: 12085633
+Submission Time: 1437059627
+
+Contest ID: 558
+Index: E
+Handle: sunzeyu
+Submission ID: 12225387
+Submission Time: 1437836382
+
+Contest ID: 558
+Index: E
+Handle: nike0good
+Submission ID: 12229138
+Submission Time: 1437892829
+
+Contest ID: 558
+Index: E
+Handle: wangtiantian
+Submission ID: 12415640
+Submission Time: 1439043949
+
+Contest ID: 558
+Index: E
+Handle: behzad.nouri
+Submission ID: 12085912
+Submission Time: 1437061312
+
+Contest ID: 558
+Index: E
+Handle: codeplay0314
+Submission ID: 12163457
+Submission Time: 1437567413
+
+Contest ID: 558
+Index: E
+Handle: gdisastery
+Submission ID: 12052660
+Submission Time: 1436890521
+
+Contest ID: 558
+Index: E
+Handle: logickaiser
+Submission ID: 12103120
+Submission Time: 1437205183
+
+Contest ID: 558
+Index: E
+Handle: Gassa
+Submission ID: 12126676
+Submission Time: 1437379178
+
+Contest ID: 558
+Index: E
+Handle: fei6409
+Submission ID: 12125652
+Submission Time: 1437372016
+
+Contest ID: 558
+Index: E
+Handle: vjudge2
+Submission ID: 12456057
+Submission Time: 1439233402
+
+Contest ID: 558
+Index: E
+Handle: nodgd
+Submission ID: 12067065
+Submission Time: 1436943688
+
+Contest ID: 558
+Index: E
+Handle: Bekmyrat
+Submission ID: 12080894
+Submission Time: 1437036237
+
+Contest ID: 558
+Index: E
+Handle: usaxena95
+Submission ID: 12152475
+Submission Time: 1437500449
+
+Contest ID: 558
+Index: E
+Handle: birdxue
+Submission ID: 12094093
+Submission Time: 1437129258
+
+Contest ID: 558
+Index: E
+Handle: williamhu08
+Submission ID: 12062190
+Submission Time: 1436905184
+
+Contest ID: 558
+Index: E
+Handle: Euron
+Submission ID: 12046569
+Submission Time: 1436887967
+
+Contest ID: 558
+Index: E
+Handle: RazvanR104
+Submission ID: 12069862
+Submission Time: 1436955627
+
+Contest ID: 558
+Index: E
+Handle: vjudge1
+Submission ID: 12236620
+Submission Time: 1437980269
+
+Contest ID: 558
+Index: E
+Handle: Alex_Crazi
+Submission ID: 12108903
+Submission Time: 1437236944
+
+Contest ID: 558
+Index: E
+Handle: avatar_tp
+Submission ID: 12221293
+Submission Time: 1437800947
+
+Contest ID: 558
+Index: E
+Handle: Alex_Crazi
+Submission ID: 12108788
+Submission Time: 1437236137
+
+Contest ID: 558
+Index: E
+Handle: baobaopangzi88
+Submission ID: 12128021
+Submission Time: 1437387652
+
+Contest ID: 558
+Index: E
+Handle: Kh.Madi
+Submission ID: 12151231
+Submission Time: 1437497443
+
+Contest ID: 558
+Index: E
+Handle: Omega1
+Submission ID: 12115486
+Submission Time: 1437301588
+
+Contest ID: 558
+Index: E
+Handle: bertho_coder
+Submission ID: 12058027
+Submission Time: 1436893594
+
+Contest ID: 558
+Index: E
+Handle: 6eJIa9IzZzTeHb
+Submission ID: 12057114
+Submission Time: 1436893060
+
+Contest ID: 558
+Index: E
+Handle: Particle
+Submission ID: 12066596
+Submission Time: 1436942032
+
+Contest ID: 557
+Index: A
+Handle: 1205063
+Submission ID: 11854970
+Submission Time: 1435677636
+
+Contest ID: 557
+Index: A
+Handle: ngtrnhan1205
+Submission ID: 11860029
+Submission Time: 1435679572
+
+Contest ID: 557
+Index: A
+Handle: avatar_tp
+Submission ID: 11966630
+Submission Time: 1436324886
+
+Contest ID: 557
+Index: A
+Handle: imann
+Submission ID: 11903516
+Submission Time: 1435877072
+
+Contest ID: 557
+Index: A
+Handle: joaquingc123
+Submission ID: 11940269
+Submission Time: 1436137575
+
+Contest ID: 557
+Index: A
+Handle: rushilpaul
+Submission ID: 11852386
+Submission Time: 1435676824
+
+Contest ID: 557
+Index: A
+Handle: smahdavi4
+Submission ID: 11868636
+Submission Time: 1435687066
+
+Contest ID: 557
+Index: A
+Handle: ONU_V_V_Ivanov
+Submission ID: 11901649
+Submission Time: 1435864287
+
+Contest ID: 557
+Index: A
+Handle: victorsenam
+Submission ID: 11853226
+Submission Time: 1435677104
+
+Contest ID: 557
+Index: A
+Handle: vjudge3
+Submission ID: 12603835
+Submission Time: 1439991379
+
+Contest ID: 557
+Index: A
+Handle: alex256
+Submission ID: 11853396
+Submission Time: 1435677159
+
+Contest ID: 557
+Index: A
+Handle: nevergonefan
+Submission ID: 12234537
+Submission Time: 1437970899
+
+Contest ID: 557
+Index: A
+Handle: edufgf
+Submission ID: 11853321
+Submission Time: 1435677135
+
+Contest ID: 557
+Index: A
+Handle: yashsharma0906
+Submission ID: 11854092
+Submission Time: 1435677372
+
+Contest ID: 557
+Index: A
+Handle: sian
+Submission ID: 11853291
+Submission Time: 1435677128
+
+Contest ID: 557
+Index: A
+Handle: meI
+Submission ID: 11858073
+Submission Time: 1435678716
+
+Contest ID: 557
+Index: A
+Handle: vjudge4
+Submission ID: 12260952
+Submission Time: 1438154611
+

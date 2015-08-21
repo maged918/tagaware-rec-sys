@@ -7,6 +7,7 @@ Created on Aug 1, 2015
 from collections import defaultdict
 from scipy.stats import pearsonr
 import numpy as np
+import scipy as scipy
 
 '''
 Count number of unique users, problems, tags
@@ -20,9 +21,10 @@ Length of dict is the number of users.
 '''
 f = open('Submissions.txt', 'r')
 handles = set([line.split(' ')[1].rstrip()
-               for line in f if line.split(' ')[0] == 'Handle:'])
+              for line in f if line.split(' ')[0] == 'Handle:'])
 users = dict(zip(list(handles), range(len(handles))))
-#print(users)
+#TO DO: Check the logic of this edit!
+print(users)
 f.close()
 
 '''
@@ -43,7 +45,6 @@ for line in f:
     index += [s[1].rstrip()]
 problems = [str(c) + i for c, i in zip(contest, index)]
 problems = dict(zip(problems, range(len(problems))))
-print('-------------------------------')
 print(problems)
 f.close()
 
@@ -59,8 +60,8 @@ for line in f:
   s = line.split(' ')
   if s[0] == 'Tags:':
     tags |= set(line.split(' ', 1)[1:][0].rstrip().split(','))
-tags = dict(zip(map(lambda x: x.lstrip(), list(tags)), range(len(tags))))
-print('-------------------------------')
+tags = set(map(lambda x: x.lstrip(), tags))
+tags = dict(zip(list(tags), range(len(tags))))
 print(tags)
 f.close()
 
@@ -80,6 +81,7 @@ handle = ''
 users_problems = []
 for u in users:
   users_problems.append([])
+#print(len(users_problems))
 for l in f:
   if l == '\n':
     continue
@@ -92,8 +94,9 @@ for l in f:
     handle = arr[1].rstrip()
     user_id = users[handle]
     problem_id = problems[contest_id + index]
+    #print(contest_id + index + ' : ' + handle)
+    #print(user_id, problem_id)
     users_problems[user_id].append(problem_id)
-print('-------------------------------')
 print(users_problems)
 f.close()
 
@@ -121,14 +124,14 @@ for l in f:
     tags_ids = [tags[tag] for tag in current_tags]
     problem_id = problems[contest_id + index]
     problems_tags[problem_id] += tags_ids
-    # print(tags_ids)
-print('-------------------------------')
+    #print(tags_ids)
 print(problems_tags)
 f.close()
 
 '''
 For each user, we loop over all problems. For each problem, we loop over all tags. We increment the count of this tag for this user.
 At the end, we divide by the number of problems for this user.
+
 NOTE: Might need to add all tags in user-tag graph even if with zero weights.
 NOTE: Might need to use PrettyPrint/better printing for defaultdict
 '''
@@ -145,7 +148,6 @@ for handle in users:
   # print(len(users_problems[u]))
   for t in users_tags[u]:
     users_tags[u][t] /= (len(users_problems[u]) * 1.0)
-print('-------------------------------')
 print(users_tags)
 #print(tags["geometry"], tags["implementation"], tags["sortings"])
 
@@ -167,11 +169,10 @@ for i1, u1 in zip(range(len(users)), users):
     for k in users_tags[id2]:
       l2[k] = users_tags[id2][k]
     correlation[i1].append(pearsonr(l1, l2)[0])
-
-# for user in correlation:
-  # for other_user in user:
-    #print(other_user, end = ' ')
-  # print()
+for user in correlation:
+  for other_user in user:
+    print(other_user, end = ' ')
+  print()
 
 '''
 Calculating Temporal Weight between users and tags
@@ -208,7 +209,6 @@ for l in f:
     temporal_value = exp(-log(2) * days / half_life)
     for t in current_problem_tags:
       temporal_values[user_id][t] += temporal_value
-print('-------------------------------')
 print(temporal_values)
 
 '''

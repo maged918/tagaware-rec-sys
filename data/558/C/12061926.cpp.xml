@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12061926.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;list&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;sstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;functional&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;numeric&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;fstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;ctime&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cassert&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;bitset&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><name>long</name> <name>long</name> <name>int</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>int</name></expr></argument> &gt;</argument_list></name></type> <name>pii</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>long</name> <name>long</name></expr></argument>, <argument><expr><name>long</name> <name>long</name></expr></argument>&gt;</argument_list></name></type> <name>pll</name>;</typedef>
+
+<define>#<directive>define</directive> <macro><name>MOD</name></macro> <value>1000000007</value></define>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+
+<decl_stmt><decl><type><name>ll</name></type> <name><name>vis</name><index>[<expr><literal type="number">100005</literal></expr>]</index></name></decl>, <decl><type ref="prev"/><name><name>steps</name><index>[<expr><literal type="number">100005</literal></expr>]</index></name></decl>, <decl><type ref="prev"/><name><name>cnt</name><index>[<expr><literal type="number">100005</literal></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>void</name></type> <name>solve</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>ll</name></type> <name>x</name></decl>;</decl_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>x</name></expr>;</expr_stmt>
+        <decl_stmt><decl><type><name><name>queue</name><argument_list type="generic">&lt;<argument><expr><name>pll</name></expr></argument>&gt;</argument_list></name></type> <name>q</name></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name><name>q</name><operator>.</operator><name>push</name></name><argument_list>(<argument><expr><call><name>pll</name><argument_list>(<argument><expr><name>x</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <while>while<condition>(<expr><operator>!</operator><call><name><name>q</name><operator>.</operator><name>empty</name></name><argument_list>()</argument_list></call></expr>)</condition>
+        <block>{
+            <decl_stmt><decl><type><name>ll</name></type> <name>num</name></decl>, <decl><type ref="prev"/><name>step</name></decl>;</decl_stmt>
+            <expr_stmt><expr><name>num</name> <operator>=</operator> <call><name><name>q</name><operator>.</operator><name>front</name></name><argument_list>()</argument_list></call><operator>.</operator><name>first</name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>step</name> <operator>=</operator> <call><name><name>q</name><operator>.</operator><name>front</name></name><argument_list>()</argument_list></call><operator>.</operator><name>second</name></expr>;</expr_stmt>
+            <expr_stmt><expr><call><name><name>q</name><operator>.</operator><name>pop</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+            <if>if<condition>(<expr><name>num</name> <operator>&gt;</operator> <literal type="number">100002</literal></expr>)</condition><then>
+                <block type="pseudo"><continue>continue;</continue></block></then></if>
+            <if>if<condition>(<expr><name><name>vis</name><index>[<expr><name>num</name></expr>]</index></name> <operator>==</operator> <name>i</name></expr>)</condition><then>
+                <block type="pseudo"><continue>continue;</continue></block></then></if>
+
+            <expr_stmt><expr><name><name>vis</name><index>[<expr><name>num</name></expr>]</index></name> <operator>=</operator> <name>i</name></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>steps</name><index>[<expr><name>num</name></expr>]</index></name> <operator>+=</operator> <name>step</name></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>cnt</name><index>[<expr><name>num</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+
+            <expr_stmt><expr><call><name><name>q</name><operator>.</operator><name>push</name></name><argument_list>(<argument><expr><call><name>pll</name><argument_list>(<argument><expr><operator>(</operator><name>ll</name><operator>)</operator><literal type="number">2</literal> <operator>*</operator> <name>num</name></expr></argument>, <argument><expr><name>step</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><call><name><name>q</name><operator>.</operator><name>push</name></name><argument_list>(<argument><expr><call><name>pll</name><argument_list>(<argument><expr><operator>(</operator><name>ll</name><operator>)</operator><name>num</name><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><name>step</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></while>
+    }</block></for>
+    <decl_stmt><decl><type><name>ll</name></type> <name>res</name> <init>= <expr><literal type="number">100000000000000000</literal></expr></init></decl>;</decl_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;=</operator><literal type="number">100000</literal></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <if>if<condition>(<expr><name><name>cnt</name><index>[<expr><name>i</name></expr>]</index></name> <operator>==</operator> <name>n</name></expr>)</condition><then>
+        <block>{
+            <if>if<condition>(<expr><name><name>steps</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&lt;</operator> <name>res</name></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><name>res</name> <operator>=</operator> <name><name>steps</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></then></if>
+        }</block></then></if>
+    }</block></for>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>res</name><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name><name>std</name><operator>::</operator><name>ios</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>t</name></decl>;</decl_stmt>
+    <comment type="line">//cin&gt;&gt;t;</comment>
+    <expr_stmt><expr><name>t</name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+    <while>while<condition>(<expr><name>t</name><operator>--</operator></expr>)</condition>
+    <block>{
+        <expr_stmt><expr><call><name>solve</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></while>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

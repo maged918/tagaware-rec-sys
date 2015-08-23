@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12368318.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>NX</name><init>=<expr><literal type="number">1000006</literal></expr></init></decl>,<decl><type ref="prev"/><name>oo</name><init>=<expr><literal type="number">0x7fffffff</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>S</name></decl>,<decl><type ref="prev"/><name>Si</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>A</name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>f</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>n</name></decl></parameter>)</parameter_list><block>{
+    <if>if<condition>(<expr><name>n</name><operator>&lt;=</operator><name>A</name></expr>)</condition><then><block type="pseudo"><return>return <expr><name>n</name><operator>/</operator><name>A</name></expr>;</return></block></then></if>
+    <return>return <expr><operator>(</operator><name>n</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>/</operator><operator>(</operator><name>A</name><operator>+</operator><literal type="number">1</literal><operator>)</operator></expr>;</return>
+}</block></function>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>N</name></decl>,<decl><type ref="prev"/><name>K</name></decl>,<decl><type ref="prev"/><name>n</name></decl>,<decl><type ref="prev"/><name>M</name></decl>,<decl><type ref="prev"/><name>x</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %d %d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>N</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>K</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>A</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name>n</name><operator>=</operator><call><name>f</name><argument_list>(<argument><expr><name>N</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    
+    <expr_stmt><expr><call><name><name>S</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt> <expr_stmt><expr><call><name><name>Si</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>S</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>N</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt> <expr_stmt><expr><call><name><name>Si</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><literal type="number">0</literal><operator>-</operator><name>N</name><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>M</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>M</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+        <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>x</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>l</name></decl>,<decl><type ref="prev"/><name>u</name></decl>;</decl_stmt>
+        <if>if<condition>(<expr><call><name><name>S</name><operator>.</operator><name>find</name></name><argument_list>(<argument><expr><name>x</name></expr></argument>)</argument_list></call><operator>!=</operator><call><name><name>S</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>)</condition><then><block type="pseudo"><continue>continue;</continue></block></then></if>
+        <if>if<condition>(<expr><call><name><name>Si</name><operator>.</operator><name>find</name></name><argument_list>(<argument><expr><literal type="number">0</literal><operator>-</operator><name>x</name></expr></argument>)</argument_list></call><operator>!=</operator><call><name><name>Si</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>)</condition><then><block type="pseudo"><continue>continue;</continue></block></then></if>
+        <expr_stmt><expr><name>u</name><operator>=</operator><operator>*</operator><call><name><name>S</name><operator>.</operator><name>upper_bound</name></name><argument_list>(<argument><expr><name>x</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>l</name><operator>=</operator><operator>*</operator><call><name><name>Si</name><operator>.</operator><name>upper_bound</name></name><argument_list>(<argument><expr><literal type="number">0</literal><operator>-</operator><name>x</name></expr></argument>)</argument_list></call></expr>;</expr_stmt><expr_stmt><expr><name>l</name><operator>=</operator><literal type="number">0</literal><operator>-</operator><name>l</name></expr>;</expr_stmt>
+        <comment type="line">//printf("%d %d %d\n",l,x,u);</comment>
+        <comment type="line">//printf("%d %d %d %d\n",n,f(x-l-1),f(u-l-1),f(u-x-1));</comment>
+        <expr_stmt><expr><name>n</name><operator>=</operator><name>n</name><operator>-</operator><call><name>f</name><argument_list>(<argument><expr><name>u</name><operator>-</operator><name>l</name><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call><operator>+</operator><call><name>f</name><argument_list>(<argument><expr><name>u</name><operator>-</operator><name>x</name><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call><operator>+</operator><call><name>f</name><argument_list>(<argument><expr><name>x</name><operator>-</operator><name>l</name><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name>n</name><operator>&lt;</operator><name>K</name></expr>)</condition><then><block>{
+            <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <return>return <expr><literal type="number">0</literal></expr>;</return>
+        }</block></then></if>
+        <expr_stmt><expr><call><name><name>Si</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><literal type="number">0</literal><operator>-</operator><name>x</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>S</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>x</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></for>
+    <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"-1\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

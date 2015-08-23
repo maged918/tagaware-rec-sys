@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12427016.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive><file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstdlib&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<comment type="block">/*define X first
+define Y second
+define pb push_back
+define MP make_pair
+define pii pair&lt;int,int&gt; */</comment>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>OO</name><init>=<expr><literal type="number">0x3f3f3f3f</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>ans</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+	<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>x</name></decl>;</decl_stmt>
+	<while>while<condition>(<expr><name>n</name><operator>--</operator></expr>)</condition><block>{
+		<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>x</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<if>if<condition>(<expr><name>x</name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then><block type="pseudo"><expr_stmt><expr><name>ans</name><operator>=</operator><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if> 
+	}</block></while>
+	<expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>ans</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+}</block></function> </unit>

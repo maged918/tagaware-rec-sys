@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12603695.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<define>#<directive>define</directive> <macro><name>_ijps</name></macro> <value>0</value></define>
+<define>#<directive>define</directive> <macro><name>_CRT_SECURE_NO_DEPRECATE</name></macro></define>
+<pragma>#<directive>pragma</directive> <name>comment</name><name>(</name><name>linker</name><name>,</name> <literal>"/STACK:667772160"</literal><name>)</name></pragma>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;time.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;deque&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;unordered_map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;bitset&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;fstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;assert.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;list&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<define>#<directive>define</directive> <macro><name>name</name></macro> <value>""</value></define>
+<typedef>typedef <type><name>unsigned</name> <name>long</name> <name>long</name></type> <name>ull</name>;</typedef>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<define>#<directive>define</directive> <macro><name>mk</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>forn</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for(ll i = 0; i &lt; (ll)n; i++)</value></define>
+<define>#<directive>define</directive> <macro><name>fornn</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>q</name></type></parameter>, <parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for(ll i = (ll)q; i &lt; (ll)n; i++)</value></define>
+<define>#<directive>define</directive> <macro><name>times</name></macro> <value>clock() * 1.0 / CLOCKS_PER_SEC</value></define>
+<define>#<directive>define</directive> <macro><name>inb</name></macro> <value>push_back</value></define>
+
+<struct>struct <name>__isoff</name><block>{<public type="default">
+    <constructor><name>__isoff</name><parameter_list>()</parameter_list><block>{
+        <if>if <condition>(<expr><name>_ijps</name></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><call><name>freopen</name><argument_list>(<argument><expr><literal type="string">"input.txt"</literal></expr></argument>, <argument><expr><literal type="string">"r"</literal></expr></argument>, <argument><expr><name>stdin</name></expr></argument>)</argument_list></call></expr><operator>,</operator> <expr><call><name>freopen</name><argument_list>(<argument><expr><literal type="string">"output.txt"</literal></expr></argument>, <argument><expr><literal type="string">"w"</literal></expr></argument>, <argument><expr><name>stdout</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if><comment type="line">//, freopen("test.txt", "w", stderr);</comment>
+        <comment type="line">//else freopen(name".in", "r", stdin), freopen(name".out", "w", stdout);</comment>
+        <comment type="line">//ios_base::sync_with_stdio(0);</comment>
+        <expr_stmt><expr><call><name>srand</name><argument_list>(<argument><expr><call><name>time</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <comment type="line">//srand('C' + 'T' + 'A' + 'C' + 'Y' + 'M' + 'B' + 'A');</comment>
+    }</block></constructor>
+    <destructor><name>~<name>__isoff</name></name><parameter_list>()</parameter_list><block>{
+        <comment type="line">//if(_ijps) cout&lt;&lt;times&lt;&lt;'\n';</comment>
+    }</block></destructor>
+</public>}</block> <decl><name>__osafwf</name></decl>;</struct>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ull</name></type> <name>p1</name> <init>= <expr><literal type="number">31</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ull</name></type> <name>p2</name> <init>= <expr><literal type="number">29</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>double</name></type> <name>eps</name> <init>= <expr><literal type="number">1e-8</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>double</name></type> <name>pi</name> <init>= <expr><call><name>acos</name><argument_list>(<argument><expr><operator>-</operator><literal type="number">1.0</literal></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>ll</name></type> <name>inf</name> <init>= <expr><literal type="number">1e17</literal> <operator>+</operator> <literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>infi</name> <init>= <expr><literal type="number">1e9</literal> <operator>+</operator> <literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ll</name></type> <name>dd</name> <init>= <expr><literal type="number">2e6</literal> <operator>+</operator> <literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ll</name></type> <name>mod</name> <init>= <expr><literal type="number">1e9</literal> <operator>+</operator> <literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name><name>P</name><index>[<expr><name>dd</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></expr></argument> &gt;</argument_list></name></type> <name><name>H</name><index>[<expr><name>dd</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>In</name><index>[<expr><name>dd</name></expr>]</index></name></decl>, <decl><type ref="prev"/><name><name>Out</name><index>[<expr><name>dd</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>A</name><index>[<expr><literal type="number">30</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>ti</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>string</name></type> <name>s</name></decl>;</decl_stmt>
+
+<function><type><name>void</name></type> <name>dfs</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>v</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>h</name></decl></parameter>)</parameter_list><block>{
+    <expr_stmt><expr><name><name>In</name><index>[<expr><name>v</name></expr>]</index></name> <operator>=</operator> <operator>++</operator><name>ti</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>H</name><index>[<expr><name>h</name></expr>]</index></name><operator>.</operator><call><name>push_back</name><argument_list>(<argument><expr><call><name>mk</name><argument_list>(<argument><expr><name>ti</name></expr></argument>, <argument><expr><name><name>H</name><index>[<expr><name>h</name></expr>]</index></name><operator>.</operator><call><name>back</name><argument_list>()</argument_list></call><operator>.</operator><name>second</name> <operator>^</operator> <name><name>A</name><index>[<expr><name><name>s</name><index>[<expr><name>v</name></expr>]</index></name> <operator>-</operator> <literal type="char">'a'</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <macro><name>forn</name><argument_list>(<argument>i</argument>, <argument>P[v].size()</argument>)</argument_list></macro>
+        <expr_stmt><expr><call><name>dfs</name><argument_list>(<argument><expr><name><name>P</name><index>[<expr><name>v</name></expr>]</index><index>[<expr><name>i</name></expr>]</index></name></expr></argument>, <argument><expr><name>h</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>Out</name><index>[<expr><name>v</name></expr>]</index></name> <operator>=</operator> <operator>++</operator><name>ti</name></expr>;</expr_stmt>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>m</name></expr>;</expr_stmt>
+    <macro><name>forn</name><argument_list>(<argument>i</argument>, <argument>n</argument>)</argument_list></macro>
+        <expr_stmt><expr><name><name>H</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><call><name>resize</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <macro><name>forn</name><argument_list>(<argument>i</argument>, <argument><literal type="number">30</literal></argument>)</argument_list></macro>
+        <expr_stmt><expr><name><name>A</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal> <operator>&lt;&lt;</operator> <name>i</name></expr>;</expr_stmt>
+    <macro><name>forn</name><argument_list>(<argument>i</argument>, <argument>n - <literal type="number">1</literal></argument>)</argument_list></macro><block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>t</name></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>t</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>P</name><index>[<expr><name>t</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name><operator>.</operator><call><name>push_back</name><argument_list>(<argument><expr><name>i</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>s</name></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>dfs</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <macro><name>forn</name><argument_list>(<argument>i</argument>, <argument>m</argument>)</argument_list></macro><block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>h</name></decl>, <decl><type ref="prev"/><name>v</name></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d%d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>v</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>h</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>v</name><operator>--</operator></expr><operator>,</operator> <expr><name>h</name><operator>--</operator></expr>;</expr_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>l</name> <init>= <expr><call><name>lower_bound</name><argument_list>(<argument><expr><name><name>H</name><index>[<expr><name>h</name></expr>]</index></name><operator>.</operator><call><name>begin</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name><name>H</name><index>[<expr><name>h</name></expr>]</index></name><operator>.</operator><call><name>end</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name>mk</name><argument_list>(<argument><expr><name><name>In</name><index>[<expr><name>v</name></expr>]</index></name></expr></argument>, <argument><expr><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call> <operator>-</operator> <name><name>H</name><index>[<expr><name>h</name></expr>]</index></name><operator>.</operator><call><name>begin</name><argument_list>()</argument_list></call> <operator>-</operator> <literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>r</name> <init>= <expr><call><name>lower_bound</name><argument_list>(<argument><expr><name><name>H</name><index>[<expr><name>h</name></expr>]</index></name><operator>.</operator><call><name>begin</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name><name>H</name><index>[<expr><name>h</name></expr>]</index></name><operator>.</operator><call><name>end</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name>mk</name><argument_list>(<argument><expr><name><name>Out</name><index>[<expr><name>v</name></expr>]</index></name></expr></argument>, <argument><expr><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call> <operator>-</operator> <name><name>H</name><index>[<expr><name>h</name></expr>]</index></name><operator>.</operator><call><name>begin</name><argument_list>()</argument_list></call> <operator>-</operator> <literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>t</name> <init>= <expr><name><name>H</name><index>[<expr><name>h</name></expr>]</index><index>[<expr><name>l</name></expr>]</index></name><operator>.</operator><name>second</name> <operator>^</operator> <name><name>H</name><index>[<expr><name>h</name></expr>]</index><index>[<expr><name>r</name></expr>]</index></name><operator>.</operator><name>second</name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>bool</name></type> <name>ok</name> <init>= <expr><name>t</name> <operator>-</operator> <operator>(</operator><name>t</name> <operator>&amp;</operator> <operator>-</operator><name>t</name><operator>)</operator></expr></init></decl>;</decl_stmt>
+        <if>if<condition>(<expr><operator>!</operator><name>ok</name></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"Yes\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+        <else>else
+            <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"No\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+    }</block>
+}</block></function></unit>

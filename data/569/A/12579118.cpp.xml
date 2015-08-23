@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12579118.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<comment type="block">/* 
+ * File:   main.cpp
+ * Author: mo3ath
+ *
+ * Created on August 17, 2015, 8:44 PM
+ */</comment>
+<include>#<directive>include</directive><file>&lt;bits/stdc++.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<comment type="block">/*
+ * 
+ */</comment>
+<function><type><name>int</name></type> <name>main</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>argc</name></decl></parameter>, <parameter><decl><type><name>char</name><modifier>*</modifier><modifier>*</modifier></type> <name>argv</name></decl></parameter>)</parameter_list> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>s</name></decl> ,<decl><type ref="prev"/><name>t</name></decl> ,<decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>t</name><operator>&gt;&gt;</operator><name>s</name><operator>&gt;&gt;</operator><name>q</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>r</name><init>=<expr><name>q</name><operator>*</operator><name>s</name></expr></init></decl>;</decl_stmt>
+    <while>while<condition>(<expr><name>r</name><operator>&lt;</operator><name>t</name></expr>)</condition>
+    <block>{
+        <expr_stmt><expr><name>r</name><operator>*=</operator><name>q</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>i</name><operator>++</operator></expr>;</expr_stmt>
+    }</block></while>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>i</name></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+
+</unit>

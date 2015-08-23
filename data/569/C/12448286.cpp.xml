@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12448286.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stdio.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;math.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<typedef>typedef <type><name>long</name> <name>long</name> <name>int</name></type> <name>lli</name>;</typedef>
+<define>#<directive>define</directive> <macro><name>INF</name></macro> <value>1000000000</value></define>
+
+<define>#<directive>define</directive> <macro><name>PMAX</name></macro> <value>3000000</value></define>
+<decl_stmt><decl><type><name>bool</name></type> <name><name>not_prime</name><index>[<expr><name>PMAX</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>lli</name></type> <name><name>pr</name><index>[<expr><name>PMAX</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>lli</name></type> <name>n_primes</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>lli</name></type> <name><name>counter</name><index>[<expr><name>PMAX</name></expr>]</index></name></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>lli</name></type> <name><name>palindromes</name><index>[<expr><name>PMAX</name></expr>]</index></name></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>lli</name></type> <name><name>v</name><index>[<expr><literal type="number">20</literal></expr>]</index></name></decl>;</decl_stmt>
+<function><type><name>bool</name></type> <name>pal</name> <parameter_list>(<parameter><decl><type><name>lli</name></type> <name>n</name></decl></parameter>)</parameter_list> <block>{
+    <if>if <condition>(<expr><name>n</name> <operator>==</operator> <literal type="number">12</literal></expr>)</condition><then>
+    <block>{}</block></then></if>
+    <decl_stmt><decl><type><name>lli</name></type> <name>cnt</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <while>while <condition>(<expr><name>n</name> <operator>&gt;</operator> <literal type="number">0</literal></expr>)</condition> <block>{
+        <expr_stmt><expr><name><name>v</name><index>[<expr><name>cnt</name></expr>]</index></name> <operator>=</operator> <name>n</name> <operator>%</operator> <literal type="number">10</literal></expr>;</expr_stmt>
+        <expr_stmt><expr><name>n</name> <operator>/=</operator> <literal type="number">10</literal></expr>;</expr_stmt>
+        <expr_stmt><expr><name>cnt</name><operator>++</operator></expr>;</expr_stmt>
+    }</block></while>
+    <for>for <control>(<init><decl><type><name>lli</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>cnt</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block type="pseudo"><if>if <condition>(<expr><name><name>v</name><index>[<expr><name>i</name></expr>]</index></name> <operator>!=</operator> <name><name>v</name><index>[<expr><name>cnt</name><operator>-</operator><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name></expr>)</condition><then>
+            <block type="pseudo"><return>return <expr><literal type="boolean">false</literal></expr>;</return></block></then></if></block></for>
+    <return>return <expr><literal type="boolean">true</literal></expr>;</return>
+}</block></function>
+
+<decl_stmt><decl><type><name>lli</name></type> <name>p</name></decl>, <decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>lli</name></type> <name>ans</name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>p</name> <operator>&gt;&gt;</operator> <name>q</name></expr>;</expr_stmt>
+    
+    <decl_stmt><decl><type><name>lli</name></type> <name>pal_count</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><name><name>palindromes</name><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>lli</name></type> <name>c</name> <init>= <expr><literal type="number">2</literal></expr></init></decl>, <decl><type ref="prev"/><name>cnt</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>found</name> <init>= <expr><literal type="boolean">false</literal></expr></init></decl>;</decl_stmt>
+    <while>while <condition>( <expr><name>c</name> <operator>&lt;=</operator> <name>PMAX</name></expr> )</condition> <block>{
+        <if>if <condition>(<expr><operator>!</operator><operator>(</operator><name><name>palindromes</name><index>[<expr><name>c</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name> <operator>*</operator> <name>p</name> <operator>&gt;=</operator> <name>n_primes</name> <operator>*</operator> <name>q</name><operator>)</operator></expr>)</condition><then> <block>{
+            <if>if <condition>(<expr><name>c</name><operator>-</operator><literal type="number">2</literal> <operator>&gt;</operator> <name>ans</name> <operator>&amp;&amp;</operator> <operator>!</operator><name>found</name></expr>)</condition><then> <block>{
+                <expr_stmt><expr><name>ans</name> <operator>=</operator> <name>c</name><operator>-</operator><literal type="number">2</literal></expr>;</expr_stmt>
+                <expr_stmt><expr><name>found</name> <operator>=</operator> <literal type="boolean">true</literal></expr>;</expr_stmt>
+            }</block></then></if>
+        }</block></then>
+        <else>else <block type="pseudo"><expr_stmt><expr><name>found</name> <operator>=</operator> <literal type="boolean">false</literal></expr>;</expr_stmt></block></else></if>
+        
+        <if>if <condition>(<expr><call><name>pal</name><argument_list>(<argument><expr><name>c</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>pal_count</name><operator>++</operator></expr>;</expr_stmt>
+        }</block></then></if>
+        <expr_stmt><expr><name><name>palindromes</name><index>[<expr><name>c</name></expr>]</index></name> <operator>=</operator> <name>pal_count</name></expr>;</expr_stmt>
+        
+        <if>if <condition>(<expr><name><name>not_prime</name><index>[<expr><name>c</name></expr>]</index></name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name><name>counter</name><index>[<expr><name>c</name></expr>]</index></name> <operator>=</operator> <name>n_primes</name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>c</name><operator>++</operator></expr>;</expr_stmt> <continue>continue;</continue>
+        }</block></then></if>
+        <expr_stmt><expr><name><name>pr</name><index>[<expr><name>cnt</name></expr>]</index></name> <operator>=</operator> <operator>(</operator><name>c</name><operator>)</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name>cnt</name><operator>++</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name>n_primes</name><operator>++</operator></expr>;</expr_stmt>
+        <for>for <control>(<init><decl><type><name>lli</name></type> <name>i</name> <init>= <expr><literal type="number">2</literal><operator>*</operator><name>c</name></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>PMAX</name></expr>;</condition> <incr><expr><name>i</name><operator>+=</operator><name>c</name></expr></incr>)</control>
+            <block type="pseudo"><expr_stmt><expr><name><name>not_prime</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <literal type="boolean">true</literal></expr>;</expr_stmt></block></for>
+        
+        <expr_stmt><expr><name>c</name><operator>++</operator></expr>;</expr_stmt>
+    }</block></while>
+    <if>if <condition>(<expr><name>ans</name> <operator>!=</operator> <literal type="number">0</literal></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>ans</name> <operator>&lt;&lt;</operator> <literal type="string">"\n"</literal></expr>;</expr_stmt></block></then>
+    <else>else
+        <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"Palindromic tree is better than splay tree\n"</literal></expr>;</expr_stmt></block></else></if>
+    
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

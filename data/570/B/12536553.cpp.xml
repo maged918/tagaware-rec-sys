@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12536553.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive><file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<decl_stmt><decl><type><name>long</name> <name>long</name> <name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>,<decl><type ref="prev"/><name>i</name></decl>,<decl><type ref="prev"/><name>j</name></decl>,<decl><type ref="prev"/><name>k</name></decl>,<decl><type ref="prev"/><name>l</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>m</name></expr>;</expr_stmt>
+	<if>if<condition>(<expr><name>n</name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%lld\n"</literal></expr></argument>,<argument><expr><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+	<else>else
+	<block>{
+<comment type="line">//		if(n%2==0)</comment>
+<comment type="line">//		{</comment>
+			<if>if<condition>(<expr><name>m</name><operator>&lt;=</operator><name>n</name><operator>/</operator><literal type="number">2</literal></expr>)</condition><then>
+				<block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%lld\n"</literal></expr></argument>,<argument><expr><name>m</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+			<else>else
+				<block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%lld\n"</literal></expr></argument>,<argument><expr><name>m</name><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+<comment type="line">//		}</comment>
+<comment type="line">//		else</comment>
+<comment type="line">//		{</comment>
+<comment type="line">//			if(m&lt;=((n/2)+1))</comment>
+<comment type="line">//				printf("%lld\n",m+1);</comment>
+<comment type="line">//			else</comment>
+<comment type="line">//				printf("%lld\n",m-1);</comment>
+<comment type="line">//		}</comment>
+	}</block></else></if>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

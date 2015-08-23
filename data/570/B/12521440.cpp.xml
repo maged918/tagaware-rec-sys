@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12521440.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+
+
+
+
+<comment type="line">//#pragma comment(linker, "/STACK:1024000000,1024000000")</comment>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;ctime&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;bitset&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<define>#<directive>define</directive> <macro><name>SZ</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>((int)(x).size())</value></define>
+<define>#<directive>define</directive> <macro><name>ALL</name><parameter_list>(<parameter><type><name>v</name></type></parameter>)</parameter_list></macro> <value>(v).begin(), (v).end()</value></define>
+<define>#<directive>define</directive> <macro><name>foreach</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>v</name></type></parameter>)</parameter_list></macro> <value>for (__typeof((v).begin()) i = (v).begin(); i != (v).end(); ++ i)</value></define>
+<define>#<directive>define</directive> <macro><name>reveach</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>v</name></type></parameter>)</parameter_list></macro> <value>for (__typeof((v).rbegin()) i = (v).rbegin(); i != (v).rend(); ++ i)</value></define>
+<define>#<directive>define</directive> <macro><name>REP</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for ( int i=1; i&lt;=int(n); i++ )</value></define>
+<define>#<directive>define</directive> <macro><name>rep</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for ( int i=0; i&lt; int(n); i++ )</value></define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<define>#<directive>define</directive> <macro><name>X</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>Y</name></macro> <value>second</value></define>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pii</name>;</typedef>
+
+<function><template>template <parameter_list>&lt;<parameter><type><name>class</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><name>bool</name></type> <name>RD</name><parameter_list>(<parameter><decl><type><name>T</name> <modifier>&amp;</modifier></type><name>ret</name></decl></parameter>)</parameter_list> <block>{
+    <decl_stmt><decl><type><name>char</name></type> <name>c</name></decl>;</decl_stmt> <decl_stmt><decl><type><name>int</name></type> <name>sgn</name></decl>;</decl_stmt>
+    <if>if <condition>(<expr><name>c</name> <operator>=</operator> <call><name>getchar</name><argument_list>()</argument_list></call></expr><operator>,</operator> <expr><name>c</name> <operator>==</operator> <name>EOF</name></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="number">0</literal></expr>;</return></block></then></if>
+    <while>while <condition>(<expr><name>c</name> <operator>!=</operator> <literal type="char">'-'</literal> <operator>&amp;&amp;</operator> <operator>(</operator><name><name>c</name><argument_list type="generic">&lt;<argument><expr><literal type="char">'0'</literal> <operator>||</operator> <name>c</name></expr></argument>&gt;</argument_list></name><literal type="char">'9'</literal><operator>)</operator></expr>)</condition> <block type="pseudo"><expr_stmt><expr><name>c</name> <operator>=</operator> <call><name>getchar</name><argument_list>()</argument_list></call></expr>;</expr_stmt></block></while>
+    <expr_stmt><expr><name>sgn</name> <operator>=</operator> <ternary><condition><expr><operator>(</operator><name>c</name> <operator>==</operator> <literal type="char">'-'</literal><operator>)</operator></expr> ?</condition><then> <expr><operator>-</operator><literal type="number">1</literal></expr> </then><else>: <expr><literal type="number">1</literal></expr></else></ternary></expr>;</expr_stmt>
+    <expr_stmt><expr><name>ret</name> <operator>=</operator> <ternary><condition><expr><operator>(</operator><name>c</name> <operator>==</operator> <literal type="char">'-'</literal><operator>)</operator></expr> ?</condition><then> <expr><literal type="number">0</literal></expr> </then><else>: <expr><operator>(</operator><name>c</name> <operator>-</operator> <literal type="char">'0'</literal><operator>)</operator></expr></else></ternary></expr>;</expr_stmt>
+    <while>while <condition>(<expr><name>c</name> <operator>=</operator> <call><name>getchar</name><argument_list>()</argument_list></call></expr><operator>,</operator> <expr><name>c</name> <operator>&gt;=</operator> <literal type="char">'0'</literal><operator>&amp;&amp;</operator><name>c</name> <operator>&lt;=</operator> <literal type="char">'9'</literal></expr>)</condition> <block type="pseudo"><expr_stmt><expr><name>ret</name> <operator>=</operator> <name>ret</name> <operator>*</operator> <literal type="number">10</literal> <operator>+</operator> <operator>(</operator><name>c</name> <operator>-</operator> <literal type="char">'0'</literal><operator>)</operator></expr>;</expr_stmt></block></while>
+    <expr_stmt><expr><name>ret</name> <operator>*=</operator> <name>sgn</name></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">1</literal></expr>;</return>
+}</block></function>
+<function><template>template <parameter_list>&lt;<parameter><type><name>class</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><name>void</name></type> <name>PT</name><parameter_list>(<parameter><decl><type><name>T</name></type> <name>x</name></decl></parameter>)</parameter_list> <block>{
+    <if>if <condition>(<expr><name>x</name> <operator>&lt;</operator> <literal type="number">0</literal></expr>)</condition><then> <block>{
+        <expr_stmt><expr><call><name>putchar</name><argument_list>(<argument><expr><literal type="char">'-'</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>x</name> <operator>=</operator> <operator>-</operator><name>x</name></expr>;</expr_stmt>
+    }</block></then></if>
+    <if>if <condition>(<expr><name>x</name> <operator>&gt;</operator> <literal type="number">9</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><call><name>PT</name><argument_list>(<argument><expr><name>x</name> <operator>/</operator> <literal type="number">10</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if>
+    <expr_stmt><expr><call><name>putchar</name><argument_list>(<argument><expr><name>x</name> <operator>%</operator> <literal type="number">10</literal> <operator>+</operator> <literal type="char">'0'</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+}</block></function>
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name><operator>&gt;&gt;</operator><name>m</name></expr>;</expr_stmt>
+        <if>if<condition>( <expr><name>n</name> <operator>==</operator> <literal type="number">1</literal> <operator>&amp;&amp;</operator> <name>m</name> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then><block>{
+                <expr_stmt><expr><call><name>puts</name><argument_list>(<argument><expr><literal type="string">"1"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+                <return>return <expr><literal type="number">0</literal></expr>;</return>
+        }</block></then></if>
+        <if>if<condition>(<expr><name>m</name> <operator>&lt;=</operator> <name>n</name><operator>/</operator><literal type="number">2</literal></expr>)</condition><then> <block>{
+                <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>m</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then><else>else<block>{
+                <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>m</name><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></else></if>
+}</block></function>
+</unit>

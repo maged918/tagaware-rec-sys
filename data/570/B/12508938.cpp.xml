@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12508938.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<comment type="line">//</comment>
+<comment type="line">//  main.cpp</comment>
+<comment type="line">//  cf_316_b</comment>
+<comment type="line">//</comment>
+<comment type="line">//  Created by Sidharth Raja on 13/08/15.</comment>
+<comment type="line">//  Copyright (c) 2015 Sidharth Raja. All rights reserved.</comment>
+<comment type="line">//</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>argc</name></decl></parameter>, <parameter><decl><type><specifier>const</specifier> <name>char</name> <modifier>*</modifier></type> <name><name>argv</name><index>[]</index></name></decl></parameter>)</parameter_list> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>m</name></decl>,<decl><type ref="prev"/><name>n</name></decl>,<decl><type ref="prev"/><name>ans</name></decl>,<decl><type ref="prev"/><name>mid</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name><operator>&gt;&gt;</operator><name>m</name></expr>;</expr_stmt>
+    
+    <if>if <condition>(<expr><name>n</name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"1"</literal></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    
+    
+    <if>if <condition>(<expr><name>n</name><operator>%</operator><literal type="number">2</literal><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>mid</name> <operator>=</operator> <name>n</name><operator>/</operator><literal type="number">2</literal></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name>m</name><operator>&lt;=</operator><name>mid</name></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name>ans</name> <operator>=</operator> <name>m</name><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then>
+        <else>else
+            <block type="pseudo"><expr_stmt><expr><name>ans</name> <operator>=</operator> <name>m</name><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt></block></else></if>
+        
+    }</block></then>
+    <else>else
+    <block>{
+        <expr_stmt><expr><name>mid</name> <operator>=</operator> <name>n</name><operator>/</operator><literal type="number">2</literal> <operator>+</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name>m</name><operator>&lt;</operator><name>mid</name></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name>ans</name> <operator>=</operator> <name>m</name><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then>
+        <else>else
+            <block type="pseudo"><expr_stmt><expr><name>ans</name> <operator>=</operator> <name>m</name><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt></block></else></if>
+    }</block></else></if>
+
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>ans</name></expr>;</expr_stmt>
+    
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

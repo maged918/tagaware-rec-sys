@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12207463.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<ifdef>#<directive>ifdef</directive> <name>_MSC_VER</name></ifdef>
+<define>#<directive>define</directive> <macro><name>_CRT_SECURE_NO_WARNINGS</name></macro></define>
+<endif>#<directive>endif</directive></endif>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iomanip&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;math.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stdio.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;climits&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;sstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;ctime&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;list&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;bitset&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;functional&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;numeric&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;utility&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><name>unsigned</name> <name>long</name> <name>long</name></type> <name>ull</name>;</typedef>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+
+<decl_stmt><decl><type><name>int</name></type> <name><name>dx</name><index>[]</index></name> <init>= <expr><block>{ <expr><literal type="number">1</literal></expr>, <expr><literal type="number">0</literal></expr>, <expr><operator>-</operator><literal type="number">1</literal></expr>, <expr><literal type="number">0</literal></expr> }</block></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>dy</name><index>[]</index></name> <init>= <expr><block>{ <expr><literal type="number">0</literal></expr>, <expr><literal type="number">1</literal></expr>, <expr><literal type="number">0</literal></expr>, <expr><operator>-</operator><literal type="number">1</literal></expr> }</block></expr></init></decl>;</decl_stmt>
+
+<comment type="line">// start + (end - start) / 2;</comment>
+<comment type="block">/*
+long long power(long long b, long long Pow){
+if (b == 0) return 0;
+else if (Pow == 1) return b;
+else if (Pow % 2  == 0.0) return power(b*b, Pow / 2);
+else return b*power(b*b, Pow / 2);
+}*/</comment>
+<comment type="block">/*
+int gcd(int a, int b){
+if (b == 0)
+return a;
+return gcd(b, a % b);
+}
+*/</comment>
+<decl_stmt><decl><type><name>string</name></type> <name>s</name></decl>, <decl><type ref="prev"/><name>t</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>bool</name></type> <name>flag</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+<function><type><name>bool</name></type> <name>can</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>a</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>b</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>c</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>d</name></decl></parameter>)</parameter_list><block>{
+    <decl_stmt><decl><type><name>string</name></type> <name>S</name></decl>, <decl><type ref="prev"/><name>T</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>S</name> <operator>=</operator> <call><name><name>s</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><name>a</name></expr></argument>, <argument><expr><name>b</name> <operator>-</operator> <name>a</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name>T</name> <operator>=</operator> <call><name><name>t</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><name>c</name></expr></argument>, <argument><expr><name>d</name> <operator>-</operator> <name>c</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <if>if <condition>(<expr><name>S</name> <operator>==</operator> <name>T</name></expr>)</condition><then>
+        <block type="pseudo"><return>return <expr><literal type="boolean">true</literal></expr>;</return></block></then></if>
+    <if>if <condition>(<expr><call><name><name>S</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call> <operator>&amp;&amp;</operator> <call><name><name>S</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call> <operator>%</operator> <literal type="number">2</literal> <operator>==</operator> <literal type="number">0</literal> <operator>&amp;&amp;</operator> <call><name><name>S</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call> <operator>==</operator> <call><name><name>T</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr>)</condition><then><block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>m1</name> <init>= <expr><name>a</name> <operator>+</operator> <operator>(</operator><name>b</name> <operator>-</operator> <name>a</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>/</operator> <literal type="number">2</literal></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>m2</name> <init>= <expr><name>c</name> <operator>+</operator> <operator>(</operator><name>d</name> <operator>-</operator> <name>c</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>/</operator> <literal type="number">2</literal></expr></init></decl>;</decl_stmt>
+        <return>return <expr><operator>(</operator><call><name>can</name><argument_list>(<argument><expr><name>a</name></expr></argument>, <argument><expr><name>m1</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><name>m2</name></expr></argument>, <argument><expr><name>d</name></expr></argument>)</argument_list></call> <operator>&amp;&amp;</operator> <call><name>can</name><argument_list>(<argument><expr><name>m1</name></expr></argument>, <argument><expr><name>b</name></expr></argument>, <argument><expr><name>c</name></expr></argument>, <argument><expr><name>m2</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call><operator>)</operator> <operator>||</operator> <operator>(</operator><call><name>can</name><argument_list>(<argument><expr><name>a</name></expr></argument>, <argument><expr><name>m1</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><name>c</name></expr></argument>, <argument><expr><name>m2</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call> <operator>&amp;&amp;</operator> <call><name>can</name><argument_list>(<argument><expr><name>m1</name></expr></argument>, <argument><expr><name>b</name></expr></argument>, <argument><expr><name>m2</name></expr></argument>, <argument><expr><name>d</name></expr></argument>)</argument_list></call><operator>)</operator></expr>;</return>
+    }</block></then>
+    <else>else
+        <block type="pseudo"><return>return <expr><literal type="boolean">false</literal></expr>;</return></block></else></if>
+}</block></function>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    <expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>std</name><operator>::</operator><name>ios</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>s</name> <operator>&gt;&gt;</operator> <name>t</name></expr>;</expr_stmt>
+    <if>if <condition>(<expr><call><name>can</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><call><name><name>s</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call> <operator>-</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><call><name><name>t</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call> <operator>-</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>)</condition><then>  <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES\n"</literal></expr>;</expr_stmt>
+    }</block></then>
+    <else>else
+        <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"NO\n"</literal></expr>;</expr_stmt></block></else></if>
+}</block></function></unit>

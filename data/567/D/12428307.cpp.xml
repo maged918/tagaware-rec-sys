@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12428307.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stdio.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;math.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type><name>s</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>k</name></decl>,<decl><type ref="prev"/><name>a</name></decl>,<decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <comment type="line">//freopen("test.inp","r",stdin);</comment>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>k</name> <operator>&gt;&gt;</operator> <name>a</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>m</name></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>s</name><operator>.</operator><name>clear</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>s</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>s</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>n</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>tp</name><init>=<expr><operator>(</operator><name>n</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator></expr></init></decl>,<decl><type ref="prev"/><name>pos</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>fl</name><init>=<expr><literal type="boolean">false</literal></expr></init></decl>;</decl_stmt>
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>m</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name>pos</name><operator>=</operator><name>i</name></expr>;</expr_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>x</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>x</name></expr>;</expr_stmt>
+        <decl_stmt><decl><type><name><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name><operator>::</operator><name>iterator</name></name></type> <name>v</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>v</name><operator>=</operator><call><name><name>s</name><operator>.</operator><name>lower_bound</name></name><argument_list>(<argument><expr><name>x</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>r</name><init>=<expr><operator>*</operator><name>v</name></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><name>v</name><operator>--</operator></expr>;</expr_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>l</name><init>=<expr><operator>*</operator><name>v</name></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><name>tp</name><operator>=</operator><name>tp</name><operator>-</operator><operator>(</operator><name>r</name><operator>-</operator><name>l</name><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>+</operator><operator>(</operator><name>x</name><operator>-</operator><name>l</name><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>+</operator><operator>(</operator><name>r</name><operator>-</operator><name>x</name><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name>tp</name><operator>&lt;</operator><name>k</name></expr>)</condition><then> <block>{<expr_stmt><expr><name>fl</name><operator>=</operator><literal type="boolean">true</literal></expr>;</expr_stmt><break>break;</break>}</block></then></if>
+        <expr_stmt><expr><call><name><name>s</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>x</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></for>
+    <if>if <condition>(<expr><name>fl</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>pos</name></expr>;</expr_stmt></block></then>
+    <else>else <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt></block></else></if>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

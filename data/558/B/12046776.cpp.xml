@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12046776.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive><file>&lt;stdio.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;algorithm&gt;</file></include>
+<decl_stmt><decl><type><name>int</name></type> <name>a</name></decl>,<decl><type ref="prev"/><name>n</name></decl>,<decl><type ref="prev"/><name><name>startp</name><index>[<expr><literal type="number">1000100</literal></expr>]</index></name></decl>,<decl><type ref="prev"/><name><name>endp</name><index>[<expr><literal type="number">1000100</literal></expr>]</index></name></decl>,<decl><type ref="prev"/><name><name>beauty</name><index>[<expr><literal type="number">1000100</literal></expr>]</index></name></decl>,<decl><type ref="prev"/><name>maxbeauty</name></decl>,<decl><type ref="prev"/><name>i</name></decl>,<decl><type ref="prev"/><name>ansstart</name></decl>,<decl><type ref="prev"/><name>ansend</name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;=</operator><literal type="number">1000010</literal></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block type="pseudo"><expr_stmt><expr><name><name>startp</name><index>[<expr><name>i</name></expr>]</index></name><operator>=</operator><literal type="number">987654321</literal></expr>;</expr_stmt></block></for>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>startp</name><index>[<expr><name>a</name></expr>]</index></name><operator>=</operator><call><name><name>std</name><operator>::</operator><name>min</name></name><argument_list>(<argument><expr><name><name>startp</name><index>[<expr><name>a</name></expr>]</index></name></expr></argument>,<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>endp</name><index>[<expr><name>a</name></expr>]</index></name><operator>=</operator><call><name><name>std</name><operator>::</operator><name>max</name></name><argument_list>(<argument><expr><name><name>endp</name><index>[<expr><name>a</name></expr>]</index></name></expr></argument>,<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>beauty</name><index>[<expr><name>a</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+    }</block></for>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;=</operator><literal type="number">1000010</literal></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block type="pseudo"><expr_stmt><expr><name>maxbeauty</name><operator>=</operator><call><name><name>std</name><operator>::</operator><name>max</name></name><argument_list>(<argument><expr><name>maxbeauty</name></expr></argument>,<argument><expr><name><name>beauty</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></for>
+    <expr_stmt><expr><name>ansstart</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+    <expr_stmt><expr><name>ansend</name><operator>=</operator><literal type="number">987654321</literal></expr>;</expr_stmt>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;=</operator><literal type="number">1000010</literal></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <if>if<condition>(<expr><name><name>beauty</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><name>maxbeauty</name></expr>)</condition><then>
+        <block>{
+            <if>if<condition>(<expr><name><name>endp</name><index>[<expr><name>i</name></expr>]</index></name><operator>-</operator><name><name>startp</name><index>[<expr><name>i</name></expr>]</index></name><operator>&lt;</operator><name>ansend</name><operator>-</operator><name>ansstart</name></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><name>ansend</name><operator>=</operator><name><name>endp</name><index>[<expr><name>i</name></expr>]</index></name></expr><operator>,</operator>
+                <expr><name>ansstart</name><operator>=</operator><name><name>startp</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></then></if>
+        }</block></then></if>
+    }</block></for>
+    <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d %d"</literal></expr></argument>,<argument><expr><name>ansstart</name></expr></argument>,<argument><expr><name>ansend</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+}</block></function>
+</unit>

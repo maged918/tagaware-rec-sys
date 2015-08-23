@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12605636.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;unordered_map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;unordered_set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;utility&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+
+
+<class>class <name>TreeRequestSolver</name>
+<block>{<private type="default">
+</private><public>public:
+    <constructor><name>TreeRequestSolver</name><parameter_list>(<parameter><decl><type><specifier>const</specifier> <name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>std</name><operator>::</operator><name>size_t</name></name></expr></argument>&gt;</argument_list></name></name><modifier>&amp;</modifier></type> <name>parents</name></decl></parameter>, <parameter><decl><type><name><name>std</name><operator>::</operator><name>string</name></name></type> <name>data</name></decl></parameter>)</parameter_list> <member_init_list>:
+            <call><name>vertices</name><argument_list>(<argument><expr><name>data</name></expr></argument>)</argument_list></call>,
+            <call><name>time_in</name><argument_list>(<argument><expr><call><name><name>data</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call>,
+            <call><name>time_out</name><argument_list>(<argument><expr><call><name><name>data</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call>,
+            <call><name>tree</name><argument_list>(<argument><expr><call><name><name>data</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call>,
+            <call><name>vertices_at_deep</name><argument_list>(<argument><expr><call><name><name>data</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call>,
+            <call><name>encoded_symbols</name><argument_list>(<argument><expr><literal type="number">26</literal></expr></argument>)</argument_list></call>,
+            <call><name>last_prefix_on_deep</name><argument_list>(<argument><expr><call><name><name>data</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call>,
+            <call><name>count_odd_symbols_on_prefix</name><argument_list>(<argument><expr><call><name><name>data</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call>
+    </member_init_list><block>{
+        <expr_stmt><expr><call><name>initialize_encoded_symbols</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>create_tree</name><argument_list>(<argument><expr><name>parents</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></constructor>
+
+    <function><type><name>bool</name></type> <name>request</name><parameter_list>(<parameter><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>root</name></decl></parameter>, <parameter><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>h</name></decl></parameter>)</parameter_list>
+    <block>{
+        <expr_stmt><expr><operator>--</operator><name>root</name></expr>;</expr_stmt>
+        <expr_stmt><expr><operator>--</operator><name>h</name></expr>;</expr_stmt>
+
+
+        <decl_stmt><decl><type><name>auto</name></type> <name>left</name> <init>= <expr><call><name><name>std</name><operator>::</operator><name>lower_bound</name></name><argument_list>(<argument><expr><call><name><name>std</name><operator>::</operator><name>begin</name></name><argument_list>(<argument><expr><call><name><name>vertices_at_deep</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>h</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><call><name><name>std</name><operator>::</operator><name>end</name></name><argument_list>(<argument><expr><call><name><name>vertices_at_deep</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>h</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></argument>,
+                                     <argument><expr><call><name><name>time_in</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>root</name></expr></argument>)</argument_list></call></expr></argument>,
+                                     <argument><expr><lambda><capture>[<argument><name>this</name></argument>]</capture><parameter_list>(<parameter><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>v</name></decl></parameter>, <parameter><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>time</name></decl></parameter>)</parameter_list>
+                                     <block>{
+                                         <return>return <expr><call><name><name>time_in</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>v</name></expr></argument>)</argument_list></call> <operator>&lt;</operator> <name>time</name></expr>;</return>
+                                     }</block></lambda></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+        <decl_stmt><decl><type><name>auto</name></type> <name>right</name> <init>= <expr><call><name><name>std</name><operator>::</operator><name>upper_bound</name></name><argument_list>(<argument><expr><call><name><name>std</name><operator>::</operator><name>begin</name></name><argument_list>(<argument><expr><call><name><name>vertices_at_deep</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>h</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><call><name><name>std</name><operator>::</operator><name>end</name></name><argument_list>(<argument><expr><call><name><name>vertices_at_deep</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>h</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></argument>,
+                                      <argument><expr><call><name><name>time_out</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>root</name></expr></argument>)</argument_list></call></expr></argument>,
+                                      <argument><expr><lambda><capture>[<argument><name>this</name></argument>]</capture><parameter_list>(<parameter><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>time</name></decl></parameter>, <parameter><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>v</name></decl></parameter>)</parameter_list>
+                                      <block>{
+                                          <return>return <expr><name>time</name> <operator>&lt;</operator> <call><name><name>time_out</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</return>
+                                      }</block></lambda></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+        <if>if<condition>(<expr><call><name><name>std</name><operator>::</operator><name>distance</name></name><argument_list>(<argument><expr><name>left</name></expr></argument>, <argument><expr><name>right</name></expr></argument>)</argument_list></call> <operator>&gt;</operator> <literal type="number">0</literal></expr>)</condition><then>
+        <block>{
+            <decl_stmt><decl><type><name>auto</name></type> <name>left_prefix</name> <init>= <expr><call><name><name>count_odd_symbols_on_prefix</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><operator>*</operator><name>left</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+            <decl_stmt><decl><type><name>auto</name></type> <name>right_prefix</name> <init>= <expr><call><name><name>count_odd_symbols_on_prefix</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><operator>*</operator><call><name><name>std</name><operator>::</operator><name>prev</name></name><argument_list>(<argument><expr><name>right</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+            <decl_stmt><decl><type><name>auto</name></type> <name>count</name> <init>= <expr><name>left_prefix</name> <operator>^</operator><name>right_prefix</name></expr></init></decl>;</decl_stmt>
+            <expr_stmt><expr><name>count</name> <operator>=</operator> <call><name>encode_symbol_and_add_to_counted</name><argument_list>(<argument><expr><call><name><name>vertices</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><operator>*</operator><name>left</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><name>count</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+            <return>return <expr><operator>!</operator><operator>(</operator><name>count</name> <operator>&amp;</operator> <operator>(</operator><name>count</name> <operator>-</operator> <literal type="number">1</literal><operator>)</operator><operator>)</operator></expr>;</return>
+        }</block></then>
+        <else>else
+        <block>{
+            <return>return <expr><literal type="boolean">true</literal></expr>;</return>
+        }</block></else></if>
+    }</block></function>
+
+</public><private>private:
+    <function><type><name>void</name></type> <name>create_tree</name><parameter_list>(<parameter><decl><type><specifier>const</specifier> <name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>std</name><operator>::</operator><name>size_t</name></name></expr></argument>&gt;</argument_list></name></name><modifier>&amp;</modifier></type> <name>parents</name></decl></parameter>)</parameter_list>
+    <block>{
+        <for>for<control>(<init><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <call><name><name>parents</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><operator>++</operator><name>i</name></expr></incr>)</control>
+        <block>{
+            <expr_stmt><expr><call><name><name>tree</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><call><name><name>parents</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call> <operator>-</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call><operator>.</operator><call><name>insert</name><argument_list>(<argument><expr><name>i</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></for>
+
+        <expr_stmt><expr><call><name>run_dfs</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>run_dfs</name><parameter_list>()</parameter_list>
+    <block>{
+        <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>time</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>dfs</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>time</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>dfs</name><parameter_list>(<parameter><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>vertex</name></decl></parameter>, <parameter><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name><modifier>&amp;</modifier></type> <name>time</name></decl></parameter>, <parameter><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>deep</name> <init>= <expr><literal type="number">0</literal></expr></init></decl></parameter>)</parameter_list>
+    <block>{
+        <expr_stmt><expr><call><name><name>time_in</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>vertex</name></expr></argument>)</argument_list></call> <operator>=</operator> <name>time</name><operator>++</operator></expr>;</expr_stmt>
+
+        <expr_stmt><expr><call><name><name>last_prefix_on_deep</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>deep</name></expr></argument>)</argument_list></call> <operator>=</operator> <call><name>encode_symbol_and_add_to_counted</name><argument_list>(<argument><expr><call><name><name>vertices</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>vertex</name></expr></argument>)</argument_list></call></expr></argument>,
+                                                                        <argument><expr><call><name><name>last_prefix_on_deep</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>deep</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>count_odd_symbols_on_prefix</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>vertex</name></expr></argument>)</argument_list></call> <operator>=</operator> <call><name><name>last_prefix_on_deep</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>deep</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>vertices_at_deep</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>deep</name></expr></argument>)</argument_list></call><operator>.</operator><call><name>push_back</name><argument_list>(<argument><expr><name>vertex</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <for>for<control>(<init><decl><type><specifier>const</specifier> <specifier>auto</specifier><modifier>&amp;</modifier></type> <name>child</name><range>: <expr><name><name>tree</name><index>[<expr><name>vertex</name></expr>]</index></name></expr></range></decl></init>)</control>
+        <block>{
+            <expr_stmt><expr><call><name>dfs</name><argument_list>(<argument><expr><name>child</name></expr></argument>, <argument><expr><name>time</name></expr></argument>, <argument><expr><name>deep</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></for>
+
+        <expr_stmt><expr><call><name><name>time_out</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>vertex</name></expr></argument>)</argument_list></call> <operator>=</operator> <name>time</name><operator>++</operator></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>initialize_encoded_symbols</name><parameter_list>()</parameter_list>
+    <block>{
+        <for>for<control>(<init><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <literal type="number">26</literal></expr>;</condition> <incr><expr><operator>++</operator><name>i</name></expr></incr>)</control>
+        <block>{
+            <expr_stmt><expr><call><name><name>encoded_symbols</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call> <operator>=</operator> <call>(<name>unsigned</name> <name>long</name>)<argument_list>(<argument><expr><literal type="number">1</literal> <operator>&lt;&lt;</operator> <name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></for>
+    }</block></function>
+
+    <function><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>encode_symbol</name><parameter_list>(<parameter><decl><type><name>char</name></type> <name>c</name></decl></parameter>)</parameter_list>
+    <block>{
+        <return>return <expr><call><name><name>encoded_symbols</name><operator>.</operator><name>at</name></name><argument_list>(<argument><expr><call>(<name>unsigned</name> <name>long</name>)<argument_list>(<argument><expr><name>c</name> <operator>-</operator> <literal type="char">'a'</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>encode_symbol_and_add_to_counted</name><parameter_list>(<parameter><decl><type><name>char</name></type> <name>c</name></decl></parameter>, <parameter><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>counted</name></decl></parameter>)</parameter_list>
+    <block>{
+        <return>return <expr><name>counted</name> <operator>^</operator> <call><name>encode_symbol</name><argument_list>(<argument><expr><name>c</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+</private><private>private:
+    <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name>string</name></name></type> <name>vertices</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>std</name><operator>::</operator><name>size_t</name></name></expr></argument>&gt;</argument_list></name></name></type> <name>time_in</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>std</name><operator>::</operator><name>size_t</name></name></expr></argument>&gt;</argument_list></name></name></type> <name>time_out</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>std</name><operator>::</operator><name><name>unordered_set</name><argument_list type="generic">&lt;<argument><expr><name><name>std</name><operator>::</operator><name>size_t</name></name></expr></argument>&gt;</argument_list></name></name></expr></argument>&gt;</argument_list></name></name></type> <name>tree</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>std</name><operator>::</operator><name>size_t</name></name></expr></argument>&gt;</argument_list></name></name></expr></argument>&gt;</argument_list></name></name></type> <name>vertices_at_deep</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>std</name><operator>::</operator><name>size_t</name></name></expr></argument>&gt;</argument_list></name></name></type> <name>encoded_symbols</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>std</name><operator>::</operator><name>size_t</name></name></expr></argument>&gt;</argument_list></name></name></type> <name>last_prefix_on_deep</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>std</name><operator>::</operator><name>size_t</name></name></expr></argument>&gt;</argument_list></name></name></type> <name>count_odd_symbols_on_prefix</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name><name>std</name><operator>::</operator><name>cin</name><operator>.</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name><name>std</name><operator>::</operator><name>cin</name></name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>m</name></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>std</name><operator>::</operator><name>size_t</name></name></expr></argument>&gt;</argument_list></name></name></type> <name>parents</name><argument_list>(<argument><expr><name>n</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <for>for<control>(<init><expr><name>auto</name><operator>&amp;</operator> <name>p</name><operator>:</operator> <name>parents</name></expr></init>)</control>
+    <block>{
+        <expr_stmt><expr><name><name>std</name><operator>::</operator><name>cin</name></name> <operator>&gt;&gt;</operator> <name>p</name></expr>;</expr_stmt>
+    }</block></for>
+
+    <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name>string</name></name></type> <name>s</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name><name>std</name><operator>::</operator><name>cin</name></name> <operator>&gt;&gt;</operator> <name>s</name></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name>TreeRequestSolver</name></type> <name>solver</name><argument_list>(<argument><expr><name>parents</name></expr></argument>, <argument><expr><name>s</name></expr></argument>)</argument_list></decl>;</decl_stmt>
+
+    <for>for<control>(<init><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>m</name></expr>;</condition> <incr><expr><operator>++</operator><name>i</name></expr></incr>)</control>
+    <block>{
+        <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name>size_t</name></name></type> <name>v</name></decl>, <decl><type ref="prev"/><name>h</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name><name>std</name><operator>::</operator><name>cin</name></name> <operator>&gt;&gt;</operator> <name>v</name> <operator>&gt;&gt;</operator> <name>h</name></expr>;</expr_stmt>
+
+        <if>if<condition>(<expr><call><name><name>solver</name><operator>.</operator><name>request</name></name><argument_list>(<argument><expr><name>v</name></expr></argument>, <argument><expr><name>h</name></expr></argument>)</argument_list></call></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"Yes\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then>
+        <else>else
+        <block>{
+            <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"No\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></for>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

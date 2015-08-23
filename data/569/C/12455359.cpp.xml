@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12455359.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;utility&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;unordered_map&gt;</file></include>
+
+<ifdef>#<directive>ifdef</directive> <name>_WIN32</name></ifdef>
+<define>#<directive>define</directive> <macro><name>LLD</name></macro> <value>"%I64d"</value></define>
+<else>#<directive>else</directive></else>
+<define>#<directive>define</directive> <macro><name>LLD</name></macro> <value>"%lld"</value></define>
+<endif>#<directive>endif</directive></endif>
+
+<define>#<directive>define</directive> <macro><name>forn</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>s</name></type></parameter>, <parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for (int i = s; i &lt; n; i++)</value></define>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>MAX_N</name> <init>= <expr><literal type="number">10000000</literal></expr></init></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>int</name></type> <name><name>is_rub</name><index>[<expr><name>MAX_N</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>is_prime</name><index>[<expr><name>MAX_N</name></expr>]</index></name></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>int</name></type> <name><name>num_rub</name><index>[<expr><name>MAX_N</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>num_prime</name><index>[<expr><name>MAX_N</name></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    <macro><name>forn</name> <argument_list>(<argument>i</argument>, <argument><literal type="number">2</literal></argument>, <argument>MAX_N</argument>)</argument_list></macro>
+        <expr_stmt><expr><name><name>is_prime</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+    
+    <macro><name>forn</name> <argument_list>(<argument>i</argument>, <argument><literal type="number">2</literal></argument>, <argument><literal type="number">5000</literal></argument>)</argument_list></macro> <block>{
+        <if>if <condition>(<expr><name><name>is_prime</name><index>[<expr><name>i</name></expr>]</index></name></expr>)</condition><then> <block>{
+            <for>for <control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><name>i</name> <operator>*</operator> <name>i</name></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;</operator> <name>MAX_N</name></expr>;</condition> <incr><expr><name>j</name> <operator>+=</operator> <name>i</name></expr></incr>)</control>
+                <block type="pseudo"><expr_stmt><expr><name><name>is_prime</name><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt></block></for>
+        }</block></then></if>
+    }</block>
+    
+    <macro><name>forn</name> <argument_list>(<argument>i</argument>, <argument><literal type="number">1</literal></argument>, <argument><literal type="number">10</literal></argument>)</argument_list></macro> <block>{
+        <expr_stmt><expr><name><name>is_rub</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>is_rub</name><index>[<expr><literal type="number">10</literal> <operator>*</operator> <name>i</name> <operator>+</operator> <name>i</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+        
+        <macro><name>forn</name> <argument_list>(<argument>j</argument>, <argument><literal type="number">0</literal></argument>, <argument><literal type="number">10</literal></argument>)</argument_list></macro> <block>{
+            <expr_stmt><expr><name><name>is_rub</name><index>[<expr><name>i</name> <operator>*</operator> <literal type="number">100</literal> <operator>+</operator> <name>j</name> <operator>*</operator> <literal type="number">10</literal> <operator>+</operator> <name>i</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>is_rub</name><index>[<expr><name>i</name> <operator>*</operator> <literal type="number">1000</literal> <operator>+</operator> <name>j</name> <operator>*</operator> <literal type="number">100</literal> <operator>+</operator> <name>j</name> <operator>*</operator> <literal type="number">10</literal> <operator>+</operator> <name>i</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+            
+            <macro><name>forn</name> <argument_list>(<argument>k</argument>, <argument><literal type="number">0</literal></argument>, <argument><literal type="number">10</literal></argument>)</argument_list></macro> <block>{
+                <expr_stmt><expr><name><name>is_rub</name><index>[<expr><name>i</name> <operator>*</operator> <literal type="number">10000</literal>  <operator>+</operator> <name>j</name> <operator>*</operator> <literal type="number">1000</literal>  <operator>+</operator> <name>k</name> <operator>*</operator> <literal type="number">100</literal>            <operator>+</operator> <name>j</name> <operator>*</operator> <literal type="number">10</literal> <operator>+</operator> <name>i</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+                <expr_stmt><expr><name><name>is_rub</name><index>[<expr><name>i</name> <operator>*</operator> <literal type="number">100000</literal> <operator>+</operator> <name>j</name> <operator>*</operator> <literal type="number">10000</literal> <operator>+</operator> <name>k</name> <operator>*</operator> <literal type="number">1000</literal> <operator>+</operator> <name>k</name> <operator>*</operator> <literal type="number">100</literal> <operator>+</operator> <name>j</name> <operator>*</operator> <literal type="number">10</literal> <operator>+</operator> <name>i</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+                
+                <macro><name>forn</name> <argument_list>(<argument>p</argument>, <argument><literal type="number">0</literal></argument>, <argument><literal type="number">10</literal></argument>)</argument_list></macro>
+                    <expr_stmt><expr><name><name>is_rub</name><index>[<expr><name>i</name> <operator>*</operator> <literal type="number">1000000</literal> <operator>+</operator> <name>j</name> <operator>*</operator> <literal type="number">100000</literal> <operator>+</operator> <name>k</name> <operator>*</operator> <literal type="number">10000</literal> <operator>+</operator> <name>p</name> <operator>*</operator> <literal type="number">1000</literal> <operator>+</operator> <name>k</name> <operator>*</operator> <literal type="number">100</literal> <operator>+</operator> <name>j</name> <operator>*</operator> <literal type="number">10</literal> <operator>+</operator> <name>i</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+
+            }</block>
+        }</block>
+    }</block>
+    
+    <macro><name>forn</name> <argument_list>(<argument>i</argument>, <argument><literal type="number">1</literal></argument>, <argument>MAX_N</argument>)</argument_list></macro> <block>{
+        <expr_stmt><expr><name><name>num_rub</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name><name>num_rub</name><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name> <operator>+</operator> <name><name>is_rub</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>num_prime</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name><name>num_prime</name><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name> <operator>+</operator> <name><name>is_prime</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+    }</block>
+    
+    <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>p</name></decl>, <decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+    
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>p</name> <operator>&gt;&gt;</operator> <name>q</name></expr>;</expr_stmt>
+    
+    <decl_stmt><decl><type><name>int</name></type> <name>res</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+    
+    <macro><name>forn</name> <argument_list>(<argument>i</argument>, <argument><literal type="number">1</literal></argument>, <argument>MAX_N</argument>)</argument_list></macro> <block>{
+        <if>if <condition>(<expr><name>q</name> <operator>*</operator> <name><name>num_prime</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&lt;=</operator> <name>p</name> <operator>*</operator> <name><name>num_rub</name><index>[<expr><name>i</name></expr>]</index></name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>res</name> <operator>=</operator> <name>i</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block>
+    
+    <if>if <condition>(<expr><name>res</name> <operator>==</operator> <name>MAX_N</name> <operator>-</operator> <literal type="number">1</literal></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"Palindromic tree is better than splay tree\n"</literal></expr>;</expr_stmt></block></then>
+    <else>else
+        <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>res</name> <operator>&lt;&lt;</operator> <literal type="char">'\n'</literal></expr>;</expr_stmt></block></else></if>
+    
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

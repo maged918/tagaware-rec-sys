@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12380361.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+    <comment type="line">// nhatnguyendrgs (c) 2015</comment>
+     
+    <include>#<directive>include</directive> <file>"iostream"</file></include>
+    <include>#<directive>include</directive> <file>"stdio.h"</file></include>
+    <include>#<directive>include</directive> <file>"stdlib.h"</file></include>
+    <include>#<directive>include</directive> <file>"string"</file></include>
+    <include>#<directive>include</directive> <file>"string.h"</file></include>
+    <include>#<directive>include</directive> <file>"algorithm"</file></include>
+    <include>#<directive>include</directive> <file>"math.h"</file></include>
+    <include>#<directive>include</directive> <file>"vector"</file></include>
+    <include>#<directive>include</directive> <file>"map"</file></include>
+    <include>#<directive>include</directive> <file>"queue"</file></include>
+    <include>#<directive>include</directive> <file>"stack"</file></include>
+    <include>#<directive>include</directive> <file>"deque"</file></include>
+    <include>#<directive>include</directive> <file>"set"</file></include>
+    <define>#<directive>define</directive> <macro><name>read</name></macro> <value>freopen("C:\\Users\\Windows\\Documents\\Code\\sample.inp","r",stdin)</value></define>
+    <define>#<directive>define</directive> <macro><name>write</name></macro> <value>freopen("C:\\Users\\Windows\\Documents\\Code\\sample.out","w",stdout)</value></define>
+    <using>using <namespace>namespace <name>std</name>;</namespace></using>
+     
+    <typedef>typedef <type><name>long</name> <name>long</name></type> <name>int_64</name>;</typedef>
+    <typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>ii</name>;</typedef>
+    <typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>vi</name>;</typedef>
+    <typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>ii</name></expr></argument>&gt;</argument_list></name></type> <name>vii</name>;</typedef>
+    <decl_stmt><decl><type><specifier>const</specifier> <name>int_64</name></type> <name>MaxN</name> <init>= <expr><literal type="number">1e6</literal> <operator>+</operator> <literal type="number">4</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><specifier>const</specifier> <name>int_64</name></type> <name>inf</name> <init>= <expr><literal type="number">1e9</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><specifier>const</specifier> <name>int_64</name></type> <name>base</name> <init>= <expr><literal type="number">1e9</literal> <operator>+</operator> <literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+     
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>r</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>char</name></type> <name>sign</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name><name>a</name><index>[<expr><name>MaxN</name></expr>]</index></name></decl>, <decl><type ref="prev"/><name>person</name></decl>,<decl><type ref="prev"/><name>result</name></decl>;</decl_stmt>
+     
+    <function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt>
+        <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+            <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>sign</name><operator>&gt;&gt;</operator><name>r</name></expr>;</expr_stmt>
+            <if>if <condition>(<expr><name>sign</name> <operator>==</operator> <literal type="char">'+'</literal><operator>&amp;&amp;</operator><name><name>a</name><index>[<expr><name>r</name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then><block>{
+                    <expr_stmt><expr><name>person</name><operator>++</operator></expr>;</expr_stmt>
+                    <expr_stmt><expr><name><name>a</name><index>[<expr><name>r</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+            }</block></then>
+            <else>else<block>{
+                <if>if <condition>(<expr><name><name>a</name><index>[<expr><name>r</name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then><block>{
+                    <expr_stmt><expr><name>result</name><operator>++</operator></expr>;</expr_stmt>
+                }</block></then>
+                <else>else<block>{
+                    <expr_stmt><expr><name>person</name><operator>--</operator></expr>;</expr_stmt>
+                    <expr_stmt><expr><name><name>a</name><index>[<expr><name>r</name></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+                }</block></else></if>
+            }</block></else></if>
+            <expr_stmt><expr><name>result</name> <operator>=</operator> <call><name>max</name><argument_list>(<argument><expr><name>result</name></expr></argument>, <argument><expr><name>person</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></for>
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>result</name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></function></unit>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12181868.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive><file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;string&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><name>string</name></type> <name>s1</name></decl>, <decl><type ref="prev"/><name>s2</name></decl>;</decl_stmt>
+
+<function><type><name>bool</name></type> <name>eql</name><parameter_list>(<parameter><decl><type><name><name>string</name><operator>::</operator><name>iterator</name></name></type> <name>b1</name></decl></parameter>, <parameter><decl><type><name><name>string</name><operator>::</operator><name>iterator</name></name></type> <name>e1</name></decl></parameter>, <parameter><decl><type><name><name>string</name><operator>::</operator><name>iterator</name></name></type> <name>b2</name></decl></parameter>, <parameter><decl><type><name><name>string</name><operator>::</operator><name>iterator</name></name></type> <name>e2</name></decl></parameter>)</parameter_list> <block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>ss1</name> <init>= <expr><name>e1</name> <operator>-</operator> <name>b1</name></expr></init></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>ss2</name> <init>= <expr><name>e2</name> <operator>-</operator> <name>b2</name></expr></init></decl>;</decl_stmt>
+	<if>if<condition>(<expr><name>ss1</name> <operator>!=</operator> <name>ss2</name></expr>)</condition><then><block>{
+		<return>return <expr><literal type="boolean">false</literal></expr>;</return>
+	}</block></then></if> 
+	<if>if<condition>(<expr><name>ss1</name><operator>%</operator><literal type="number">2</literal> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then> <block>{
+		<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>ss1</name></expr>;</condition> <incr><expr><operator>++</operator><name>i</name></expr></incr>)</control> <block>{
+			<if>if<condition>(<expr><operator>*</operator><operator>(</operator><name>b1</name><operator>+</operator><name>i</name><operator>)</operator> <operator>!=</operator> <operator>*</operator><operator>(</operator><name>b2</name><operator>+</operator><name>i</name><operator>)</operator></expr>)</condition><then>
+				<block type="pseudo"><return>return <expr><literal type="boolean">false</literal></expr>;</return></block></then></if>
+		}</block></for>
+		<return>return <expr><literal type="boolean">true</literal></expr>;</return>
+	}</block></then> <else>else <block>{
+
+		<decl_stmt><decl><type><name>bool</name></type> <name>tmp</name> <init>= <expr><literal type="boolean">true</literal></expr></init></decl>;</decl_stmt>
+		<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>ss1</name></expr>;</condition> <incr><expr><operator>++</operator><name>i</name></expr></incr>)</control> <block>{
+			<if>if<condition>(<expr><operator>*</operator><operator>(</operator><name>b1</name><operator>+</operator><name>i</name><operator>)</operator> <operator>!=</operator> <operator>*</operator><operator>(</operator><name>b2</name><operator>+</operator><name>i</name><operator>)</operator></expr>)</condition><then> <block>{
+				<expr_stmt><expr><name>tmp</name> <operator>=</operator> <literal type="boolean">false</literal></expr>;</expr_stmt>
+				<break>break;</break>
+			}</block></then></if>
+		}</block></for>
+		<if>if<condition>(<expr><name>tmp</name></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="boolean">true</literal></expr>;</return></block></then></if>
+		<decl_stmt><decl><type><name>auto</name></type> <name>m1</name> <init>= <expr><name>b1</name> <operator>+</operator> <name>ss1</name><operator>/</operator><literal type="number">2</literal></expr></init></decl>;</decl_stmt>
+		<decl_stmt><decl><type><name>auto</name></type> <name>m2</name> <init>= <expr><name>b2</name> <operator>+</operator> <name>ss2</name><operator>/</operator><literal type="number">2</literal></expr></init></decl>;</decl_stmt>
+		<comment type="block">/*
+		if(eql(b1, m1, m1, e1)) {
+			return eql(b1, m1, b2, m2) &amp;&amp; eql(b2, m2, m2, e2);
+		} else if(eql(b1, m1, b2, m2)) {
+			return eql(m1, e1, m2, e2);
+		} else {
+			return eql(b1, m1, m2, e2) &amp;&amp; eql(m1, e1, b2, m2);
+		}
+		*/</comment>
+		<return>return <expr><operator>(</operator><call><name>eql</name><argument_list>(<argument><expr><name>b1</name></expr></argument>, <argument><expr><name>m1</name></expr></argument>, <argument><expr><name>b2</name></expr></argument>, <argument><expr><name>m2</name></expr></argument>)</argument_list></call> <operator>&amp;&amp;</operator> <call><name>eql</name><argument_list>(<argument><expr><name>m1</name></expr></argument>, <argument><expr><name>e1</name></expr></argument>, <argument><expr><name>m2</name></expr></argument>, <argument><expr><name>e2</name></expr></argument>)</argument_list></call><operator>)</operator> <operator>||</operator> <operator>(</operator><call><name>eql</name><argument_list>(<argument><expr><name>b1</name></expr></argument>, <argument><expr><name>m1</name></expr></argument>, <argument><expr><name>m2</name></expr></argument>, <argument><expr><name>e2</name></expr></argument>)</argument_list></call> <operator>&amp;&amp;</operator> <call><name>eql</name><argument_list>(<argument><expr><name>m1</name></expr></argument>, <argument><expr><name>e1</name></expr></argument>, <argument><expr><name>b2</name></expr></argument>, <argument><expr><name>m2</name></expr></argument>)</argument_list></call><operator>)</operator></expr>;</return>
+	}</block></else></if>
+	<return>return <expr><literal type="boolean">true</literal></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>s1</name></expr>;</expr_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>s2</name></expr>;</expr_stmt>
+	
+	<if>if<condition>(<expr><call><name>eql</name><argument_list>(<argument><expr><call><name><name>s1</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name><name>s1</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name><name>s2</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name><name>s2</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+		<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES\n"</literal></expr>;</expr_stmt>
+	}</block></then> <else>else <block>{
+		<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"NO\n"</literal></expr>;</expr_stmt>
+	}</block></else></if>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

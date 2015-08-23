@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12559923.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive><file>&lt;stdio.h&gt;</file></include>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>m</name></decl>,<decl><type ref="prev"/><name>n</name></decl>;</decl_stmt>
+	<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>n</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>m</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><ternary><condition><expr><name>m</name> <operator>&lt;=</operator> <name>n</name> <operator>/</operator> <literal type="number">2</literal></expr> ?</condition><then> <expr><name>m</name> <operator>+</operator> <literal type="number">1</literal></expr> </then><else>:  <expr><operator>(</operator><ternary><condition><expr><name>m</name> <operator>-</operator> <literal type="number">1</literal> <operator>&gt;</operator> <literal type="number">0</literal></expr> ?</condition><then> <expr><name>m</name> <operator>-</operator> <literal type="number">1</literal></expr> </then><else>: <expr><name>m</name></expr></else></ternary><operator>)</operator></expr></else></ternary></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+}</block></function></unit>

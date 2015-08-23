@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12460488.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name><name>a</name><index>[<expr><literal type="number">100005</literal></expr>]</index></name> <init>= <expr><block>{<expr><literal type="number">0</literal></expr>}</block></expr></init></decl>, <decl><type ref="prev"/><name><name>ans</name><index>[<expr><literal type="number">100005</literal></expr>]</index></name> <init>= <expr><block>{<expr><literal type="number">0</literal></expr>}</block></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>ans</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+    }</block></for>
+    <decl_stmt><decl><type><name>int</name></type> <name>cnt</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+        <while>while<condition>(<expr><name><name>ans</name><index>[<expr><name>cnt</name></expr>]</index></name></expr>)</condition> <block type="pseudo"><expr_stmt><expr><name>cnt</name><operator>++</operator></expr>;</expr_stmt></block></while>
+        <if>if<condition>(<expr><name><name>ans</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>&gt;</operator> <literal type="number">1</literal> <operator>||</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&gt;</operator> <name>n</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name><name>ans</name><index>[<expr><name>cnt</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>ans</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>--</operator></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name>cnt</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></for>
+
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&lt;&lt;</operator> <literal type="string">" "</literal></expr>;</expr_stmt>
+    }</block></for>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

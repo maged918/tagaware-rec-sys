@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12196422.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><name>int</name></type> <name><name>x</name><index>[<expr><literal type="number">2</literal></expr>]</index></name></decl>, <decl><type ref="prev"/><name><name>y</name><index>[<expr><literal type="number">2</literal></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+  <decl_stmt><decl><type><name>int</name></type> <name>a</name></decl>, <decl><type ref="prev"/><name>b</name></decl>;</decl_stmt>
+  <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>a</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>b</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <literal type="number">2</literal></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %d"</literal></expr></argument>, <argument><expr><name>x</name> <operator>+</operator> <name>i</name></expr></argument>, <argument><expr><name>y</name> <operator>+</operator> <name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  }</block></for>
+  <for>for<control>(<init><decl><type><name>int</name></type> <name>mask</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>mask</name> <operator>&lt;</operator> <operator>(</operator><literal type="number">1</literal> <operator>&lt;&lt;</operator> <literal type="number">2</literal><operator>)</operator></expr>;</condition> <incr><expr><name>mask</name><operator>++</operator></expr></incr>)</control> <block>{
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <literal type="number">2</literal></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+      <if>if<condition>(<expr><name>mask</name> <operator>&amp;</operator> <operator>(</operator><literal type="number">1</literal> <operator>&lt;&lt;</operator> <name>i</name><operator>)</operator></expr>)</condition><then> <block>{
+        <expr_stmt><expr><call><name>swap</name><argument_list>(<argument><expr><name><name>x</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>, <argument><expr><name><name>y</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+      }</block></then></if>
+    }</block></for>
+    <if>if<condition>(<expr><name><name>x</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>+</operator> <name><name>x</name><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>&lt;=</operator> <name>a</name> <operator>&amp;&amp;</operator> <call><name>max</name><argument_list>(<argument><expr><name><name>y</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>, <argument><expr><name><name>y</name><index>[<expr><literal type="number">1</literal></expr>]</index></name></expr></argument>)</argument_list></call> <operator>&lt;=</operator> <name>b</name></expr>)</condition><then> <block>{
+      <expr_stmt><expr><call><name>puts</name><argument_list>(<argument><expr><literal type="string">"YES"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+      <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    <if>if<condition>(<expr><name><name>x</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>+</operator> <name><name>x</name><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>&lt;=</operator> <name>b</name> <operator>&amp;&amp;</operator> <call><name>max</name><argument_list>(<argument><expr><name><name>y</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>, <argument><expr><name><name>y</name><index>[<expr><literal type="number">1</literal></expr>]</index></name></expr></argument>)</argument_list></call> <operator>&lt;=</operator> <name>a</name></expr>)</condition><then> <block>{
+      <expr_stmt><expr><call><name>puts</name><argument_list>(<argument><expr><literal type="string">"YES"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+      <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <literal type="number">2</literal></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+      <if>if<condition>(<expr><name>mask</name> <operator>&amp;</operator> <operator>(</operator><literal type="number">1</literal> <operator>&lt;&lt;</operator> <name>i</name><operator>)</operator></expr>)</condition><then> <block>{
+        <expr_stmt><expr><call><name>swap</name><argument_list>(<argument><expr><name><name>x</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>, <argument><expr><name><name>y</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+      }</block></then></if>
+    }</block></for>
+  }</block></for>
+  <expr_stmt><expr><call><name>puts</name><argument_list>(<argument><expr><literal type="string">"NO"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

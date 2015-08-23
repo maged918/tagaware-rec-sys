@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12062373.cpp"><comment type="line">//Language: MS C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;cstdint&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;list&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;functional&gt;</file></include>
+
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+
+<function><type><name>uint32_t</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<decl_stmt><decl><type><name>uint32_t</name></type> <name>n</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>;</expr_stmt>
+
+	<decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt; <argument><expr><name><name>pair</name><argument_list type="generic">&lt; <argument><expr><name>int32_t</name></expr></argument>, <argument><expr><name>int32_t</name></expr></argument> &gt;</argument_list></name></expr></argument> &gt;</argument_list></name></type> <name>a</name><argument_list>( <argument><expr><name>n</name></expr></argument> )</argument_list></decl>;</decl_stmt>
+	<for>for<control>( <init><decl><type><name>uint32_t</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr> )</control>
+	<block>{
+		<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>first</name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name></expr>;</expr_stmt>
+	}</block></for>
+	<expr_stmt><expr><call><name>sort</name><argument_list>( <argument><expr><call><name><name>a</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name><name>a</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><lambda><capture>[]</capture><parameter_list>( <parameter><decl><type><specifier>const</specifier> <name><name>pair</name><argument_list type="generic">&lt; <argument><expr><name>int32_t</name></expr></argument>, <argument><expr><name>int32_t</name></expr></argument> &gt;</argument_list></name><modifier>&amp;</modifier></type> <name>p1</name></decl></parameter>, <parameter><decl><type><specifier>const</specifier> <name><name>pair</name><argument_list type="generic">&lt; <argument><expr><name>int32_t</name></expr></argument>, <argument><expr><name>int32_t</name></expr></argument> &gt;</argument_list></name><modifier>&amp;</modifier></type> <name>p2</name></decl></parameter> )</parameter_list>-&gt;<type><name>bool</name></type><block>{ <return>return <expr><name><name>p1</name><operator>.</operator><name>first</name></name> <operator>&lt;</operator> <name><name>p2</name><operator>.</operator><name>first</name></name></expr>;</return> }</block></lambda></expr></argument> )</argument_list></call></expr>;</expr_stmt>
+
+	<decl_stmt><decl><type><name><name><name>vector</name><argument_list type="generic">&lt; <argument><expr><name><name>pair</name><argument_list type="generic">&lt; <argument><expr><name>int32_t</name></expr></argument>, <argument><expr><name>int32_t</name></expr></argument> &gt;</argument_list></name></expr></argument> &gt;</argument_list></name><operator>::</operator><name>iterator</name></name></type> <name>f</name> <init>= <expr><call><name>upper_bound</name><argument_list>( <argument><expr><call><name><name>a</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name><name>a</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><lambda><capture>[]</capture><parameter_list>( <parameter><decl><type><name>int32_t</name></type> <name>v</name></decl></parameter>, <parameter><decl><type><specifier>const</specifier> <name><name>pair</name><argument_list type="generic">&lt; <argument><expr><name>int32_t</name></expr></argument>, <argument><expr><name>int32_t</name></expr></argument> &gt;</argument_list></name><modifier>&amp;</modifier></type> <name>p</name></decl></parameter> )</parameter_list>-&gt;<type><name>bool</name></type>
+	<block>{
+		<return>return <expr><name><name>p</name><operator>.</operator><name>first</name></name> <operator>&gt;</operator> <name>v</name></expr>;</return>
+	}</block></lambda></expr></argument> )</argument_list></call></expr></init></decl>;</decl_stmt>
+
+	<decl_stmt><decl><type><name>int</name></type> <name>neg</name> <init>= <expr><call><name>distance</name><argument_list>( <argument><expr><call><name><name>a</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>f</name></expr></argument> )</argument_list></call></expr></init></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>pos</name> <init>= <expr><call><name>distance</name><argument_list>( <argument><expr><name>f</name></expr></argument>, <argument><expr><call><name><name>a</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument> )</argument_list></call></expr></init></decl>;</decl_stmt>
+
+	<decl_stmt><decl><type><name>int</name></type> <name>answer</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+	<if>if<condition>( <expr><name>neg</name> <operator>&lt;=</operator> <name>pos</name></expr> )</condition><then>
+	<block>{
+		<for>for<control>( <init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <call><name>min</name><argument_list>( <argument><expr><literal type="number">2</literal> <operator>*</operator> <name>neg</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><operator>(</operator><name>int</name><operator>)</operator><call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr></argument> )</argument_list></call></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr> )</control>
+		<block>{
+			<expr_stmt><expr><name>answer</name> <operator>+=</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name></expr>;</expr_stmt>
+		}</block></for>
+	}</block></then>
+	<else>else
+	<block>{
+		<for>for<control>( <init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><call><name>max</name><argument_list>( <argument><expr><operator>(</operator><name>int</name><operator>)</operator><call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call> <operator>-</operator> <literal type="number">2</literal> <operator>*</operator> <name>pos</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument> )</argument_list></call></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr> )</control>
+		<block>{
+			<expr_stmt><expr><name>answer</name> <operator>+=</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name></expr>;</expr_stmt>
+		}</block></for>
+	}</block></else></if>
+
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>answer</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+	<return>return <expr><name>EXIT_SUCCESS</name></expr>;</return>
+}</block></function></unit>

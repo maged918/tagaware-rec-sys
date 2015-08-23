@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12210366.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;utility&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><specifier>inline</specifier>
+<type><name>void</name></type> <name>use_io_optimizations</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><literal type="null">nullptr</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+}</block></function>
+
+<function><type><name>string</name></type> <name>minimum</name><parameter_list>(<parameter><decl><type><specifier>const</specifier> <name>string</name><modifier>&amp;</modifier></type> <name>sequence</name></decl></parameter>)</parameter_list>
+<block>{
+    <if>if <condition>(<expr><call><name><name>sequence</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call> <operator>%</operator> <literal type="number">2</literal></expr>)</condition><then>
+    <block>{
+        <return>return <expr><name>sequence</name></expr>;</return>
+    }</block></then></if>
+
+    <decl_stmt><decl><type><name>auto</name></type> <name>half</name> <init>= <expr><call><name><name>sequence</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call> <operator>/</operator> <literal type="number">2</literal></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>string</name></type> <name>first</name>  <argument_list>{<argument><expr><macro><name>minimum</name><argument_list>(<argument>sequence.substr(<literal type="number">0</literal>, half)</argument>)</argument_list></macro></expr></argument>}</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>string</name></type> <name>second</name> <argument_list>{<argument><expr><macro><name>minimum</name><argument_list>(<argument>sequence.substr(half, half)</argument>)</argument_list></macro></expr></argument>}</argument_list></decl>;</decl_stmt>
+
+    <if>if <condition>(<expr><name>first</name> <operator>&gt;</operator> <name>second</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><call><name>swap</name><argument_list>(<argument><expr><name>first</name></expr></argument>, <argument><expr><name>second</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></then></if>
+
+    <return>return <expr><name>first</name> <operator>+</operator> <name>second</name></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name>use_io_optimizations</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name>string</name></type> <name>first</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>string</name></type> <name>second</name></decl>;</decl_stmt>
+
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>first</name> <operator>&gt;&gt;</operator> <name>second</name></expr>;</expr_stmt>
+
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <operator>(</operator><ternary><condition><expr><call><name>minimum</name><argument_list>(<argument><expr><name>first</name></expr></argument>)</argument_list></call> <operator>==</operator> <call><name>minimum</name><argument_list>(<argument><expr><name>second</name></expr></argument>)</argument_list></call></expr> ?</condition><then> <expr><literal type="string">"YES"</literal></expr> </then><else>: <expr><literal type="string">"NO"</literal></expr></else></ternary><operator>)</operator> <operator>&lt;&lt;</operator> <literal type="char">'\n'</literal></expr>;</expr_stmt>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12540626.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<define>#<directive>define</directive> <macro><name>HASHES</name></macro> <value>2</value></define>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>MAXN</name> <init>= <expr><literal type="number">100005</literal></expr></init></decl>;</decl_stmt>
+<struct>struct <name>Edge</name><block>{<public type="default">
+    <decl_stmt><decl><type><name>int</name></type> <name>u</name></decl>, <decl><type ref="prev"/><name>v</name></decl>, <decl><type ref="prev"/><name>c</name></decl>;</decl_stmt>
+</public>}</block><decl><name><name>edges</name><index>[<expr><name>MAXN</name></expr>]</index></name></decl>;</struct>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<decl_stmt><decl><type><name>ll</name></type> <name><name>HA</name><index>[]</index></name> <init>= <expr><block>{<expr><literal type="number">1e9</literal> <operator>+</operator> <literal type="number">7</literal></expr>, <expr><literal type="number">1e9</literal> <operator>+</operator> <literal type="number">9</literal></expr>}</block></expr></init></decl>;</decl_stmt>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pi</name>;</typedef>
+
+<decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>pi</name></expr></argument>&gt;</argument_list></name></type> <name><name>E</name><index>[<expr><name>MAXN</name></expr>]</index></name></decl>, <decl><type ref="prev"/><name><name>E2</name><index>[<expr><name>MAXN</name></expr>]</index></name></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>ll</name></type> <name><name>dist</name><index>[<expr><name>MAXN</name></expr>]</index></name></decl>, <decl><type ref="prev"/><name><name>rev_dist</name><index>[<expr><name>MAXN</name></expr>]</index></name></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>ll</name></type> <name><name>ways</name><index>[<expr><name>MAXN</name></expr>]</index><index>[<expr><literal type="number">2</literal></expr>]</index></name></decl>, <decl><type ref="prev"/><name><name>rev_ways</name><index>[<expr><name>MAXN</name></expr>]</index><index>[<expr><literal type="number">2</literal></expr>]</index></name></decl>;</decl_stmt>
+
+
+<function><type><name>void</name></type> <name>add</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>to</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>from</name></decl></parameter>, <parameter><decl><type><name>bool</name></type> <name>clean</name></decl></parameter>)</parameter_list><block>{
+
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;</operator> <name>HASHES</name></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr></incr>)</control><block>{
+
+        <if>if<condition>(<expr><name>clean</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name><name>ways</name><index>[<expr><name>to</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt></block></then></if>
+
+        <expr_stmt><expr><name><name>ways</name><index>[<expr><name>to</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>+=</operator> <name><name>ways</name><index>[<expr><name>from</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>ways</name><index>[<expr><name>to</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>%=</operator> <name><name>HA</name><index>[<expr><name>j</name></expr>]</index></name></expr>;</expr_stmt>
+    }</block></for>
+}</block></function>
+
+<function><type><name>void</name></type> <name>add_rev</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>to</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>from</name></decl></parameter>, <parameter><decl><type><name>bool</name></type> <name>clean</name></decl></parameter>)</parameter_list><block>{
+
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;</operator> <name>HASHES</name></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr></incr>)</control><block>{
+
+        <if>if<condition>(<expr><name>clean</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name><name>rev_ways</name><index>[<expr><name>to</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt></block></then></if>
+
+        <expr_stmt><expr><name><name>rev_ways</name><index>[<expr><name>to</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>+=</operator> <name><name>rev_ways</name><index>[<expr><name>from</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>rev_ways</name><index>[<expr><name>to</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>%=</operator> <name><name>HA</name><index>[<expr><name>j</name></expr>]</index></name></expr>;</expr_stmt>
+    }</block></for>
+}</block></function>
+
+
+<function><type><name>void</name></type> <name>dij</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>source</name></decl></parameter>)</parameter_list><block>{
+
+    <decl_stmt><decl><type><name><name>priority_queue</name><argument_list type="generic">&lt; <argument><expr><name>pi</name></expr></argument>, <argument><expr><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>pi</name></expr></argument>&gt;</argument_list></name></expr></argument> &gt;</argument_list></name></type> <name>Q</name></decl>;</decl_stmt>
+
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>MAXN</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><name><name>dist</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <operator>(</operator><literal type="number">1LL</literal> <operator>&lt;&lt;</operator> <literal type="number">62</literal><operator>)</operator></expr>;</expr_stmt></block></for>
+    <expr_stmt><expr><name><name>dist</name><index>[<expr><name>source</name></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>ways</name><index>[<expr><name>source</name></expr>]</index><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <name><name>ways</name><index>[<expr><name>source</name></expr>]</index><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+
+    <expr_stmt><expr><call><name><name>Q</name><operator>.</operator><name>push</name></name><argument_list>( <argument><expr><call><name>make_pair</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>source</name></expr></argument>)</argument_list></call></expr></argument> )</argument_list></call></expr>;</expr_stmt>
+    <while>while<condition>(<expr><operator>!</operator><call><name><name>Q</name><operator>.</operator><name>empty</name></name><argument_list>()</argument_list></call></expr>)</condition><block>{
+
+        <decl_stmt><decl><type><name>int</name></type> <name>vertex</name> <init>= <expr><call><name><name>Q</name><operator>.</operator><name>top</name></name><argument_list>()</argument_list></call><operator>.</operator><name>second</name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>ll</name></type> <name>d</name> <init>= <expr><operator>-</operator><call><name><name>Q</name><operator>.</operator><name>top</name></name><argument_list>()</argument_list></call><operator>.</operator><name>first</name></expr></init></decl>;</decl_stmt>
+
+        <expr_stmt><expr><call><name><name>Q</name><operator>.</operator><name>pop</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <if>if<condition>( <expr><name><name>dist</name><index>[<expr><name>vertex</name></expr>]</index></name> <operator>&lt;</operator> <name>d</name></expr>)</condition><then> <block type="pseudo"><continue>continue;</continue></block></then></if>
+
+   <comment type="line">//     cout &lt;&lt; "PROCESSING " &lt;&lt; vertex &lt;&lt; " " &lt;&lt; d &lt;&lt; endl;</comment>
+
+        <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl> ;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name><name>E</name><index>[<expr><name>vertex</name></expr>]</index></name><operator>.</operator><call><name>size</name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+
+            <decl_stmt><decl><type><name>int</name></type> <name>to</name> <init>= <expr><name><name>E</name><index>[<expr><name>vertex</name></expr>]</index><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>first</name></expr></init></decl>;</decl_stmt>
+            <decl_stmt><decl><type><name>int</name></type> <name>cost</name> <init>= <expr><name><name>E</name><index>[<expr><name>vertex</name></expr>]</index><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name></expr></init></decl>;</decl_stmt>
+
+            <if>if<condition>( <expr><name><name>dist</name><index>[<expr><name>vertex</name></expr>]</index></name> <operator>+</operator> <name>cost</name> <operator>&lt;</operator> <name><name>dist</name><index>[<expr><name>to</name></expr>]</index></name></expr> )</condition><then><block>{
+                <expr_stmt><expr><name><name>dist</name><index>[<expr><name>to</name></expr>]</index></name> <operator>=</operator> <name><name>dist</name><index>[<expr><name>vertex</name></expr>]</index></name> <operator>+</operator> <name>cost</name></expr>;</expr_stmt>
+                <expr_stmt><expr><call><name>add</name><argument_list>(<argument><expr><name>to</name></expr></argument>, <argument><expr><name>vertex</name></expr></argument>, <argument><expr><literal type="boolean">true</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+     <comment type="line">//           cout &lt;&lt; "QUEUED " &lt;&lt; to &lt;&lt; " WAYS DAD = " &lt;&lt; ways[vertex][0] &lt;&lt; endl;</comment>
+
+                <expr_stmt><expr><call><name><name>Q</name><operator>.</operator><name>push</name></name><argument_list>( <argument><expr><call><name>make_pair</name><argument_list>( <argument><expr><operator>-</operator><name><name>dist</name><index>[<expr><name>to</name></expr>]</index></name></expr></argument>, <argument><expr><name>to</name></expr></argument>)</argument_list></call></expr></argument> )</argument_list></call></expr>;</expr_stmt>
+            }</block></then><else>else<block>{
+
+                <if>if<condition>(<expr><name><name>dist</name><index>[<expr><name>vertex</name></expr>]</index></name> <operator>+</operator> <name>cost</name> <operator>==</operator> <name><name>dist</name><index>[<expr><name>to</name></expr>]</index></name></expr>)</condition><then>
+                    <block type="pseudo"><expr_stmt><expr><call><name>add</name><argument_list>(<argument><expr><name>to</name></expr></argument>, <argument><expr><name>vertex</name></expr></argument>, <argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if>
+
+            }</block></else></if>
+        }</block></for>
+    }</block></while>
+}</block></function>
+
+<function><type><name>void</name></type> <name>rev_dij</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>source</name></decl></parameter>)</parameter_list><block>{
+
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>MAXN</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><name><name>rev_dist</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <operator>(</operator><literal type="number">1LL</literal> <operator>&lt;&lt;</operator> <literal type="number">62</literal><operator>)</operator></expr>;</expr_stmt></block></for>
+    <decl_stmt><decl><type><name><name>priority_queue</name><argument_list type="generic">&lt; <argument><expr><name>pi</name></expr></argument>, <argument><expr><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>pi</name></expr></argument>&gt;</argument_list></name></expr></argument> &gt;</argument_list></name></type> <name>Q</name></decl>;</decl_stmt>
+
+    <expr_stmt><expr><name><name>rev_dist</name><index>[<expr><name>source</name></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>rev_ways</name><index>[<expr><name>source</name></expr>]</index><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <name><name>rev_ways</name><index>[<expr><name>source</name></expr>]</index><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+
+    <expr_stmt><expr><call><name><name>Q</name><operator>.</operator><name>push</name></name><argument_list>( <argument><expr><call><name>make_pair</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>source</name></expr></argument>)</argument_list></call></expr></argument> )</argument_list></call></expr>;</expr_stmt>
+    <while>while<condition>(<expr><operator>!</operator><call><name><name>Q</name><operator>.</operator><name>empty</name></name><argument_list>()</argument_list></call></expr>)</condition><block>{
+
+        <decl_stmt><decl><type><name>int</name></type> <name>vertex</name> <init>= <expr><call><name><name>Q</name><operator>.</operator><name>top</name></name><argument_list>()</argument_list></call><operator>.</operator><name>second</name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>ll</name></type> <name>d</name> <init>= <expr><operator>-</operator><call><name><name>Q</name><operator>.</operator><name>top</name></name><argument_list>()</argument_list></call><operator>.</operator><name>first</name></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name><name>Q</name><operator>.</operator><name>pop</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <if>if<condition>( <expr><name><name>rev_dist</name><index>[<expr><name>vertex</name></expr>]</index></name> <operator>&lt;</operator> <name>d</name></expr>)</condition><then> <block type="pseudo"><continue>continue;</continue></block></then></if>
+
+        <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl> ;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name><name>E2</name><index>[<expr><name>vertex</name></expr>]</index></name><operator>.</operator><call><name>size</name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+
+            <decl_stmt><decl><type><name>int</name></type> <name>to</name> <init>= <expr><name><name>E2</name><index>[<expr><name>vertex</name></expr>]</index><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>first</name></expr></init></decl>;</decl_stmt>
+            <decl_stmt><decl><type><name>int</name></type> <name>cost</name> <init>= <expr><name><name>E2</name><index>[<expr><name>vertex</name></expr>]</index><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name></expr></init></decl>;</decl_stmt>
+
+            <if>if<condition>( <expr><name><name>rev_dist</name><index>[<expr><name>vertex</name></expr>]</index></name> <operator>+</operator> <name>cost</name> <operator>&lt;</operator> <name><name>rev_dist</name><index>[<expr><name>to</name></expr>]</index></name></expr> )</condition><then><block>{
+                <expr_stmt><expr><name><name>rev_dist</name><index>[<expr><name>to</name></expr>]</index></name> <operator>=</operator> <name><name>rev_dist</name><index>[<expr><name>vertex</name></expr>]</index></name> <operator>+</operator> <name>cost</name></expr>;</expr_stmt>
+
+                <expr_stmt><expr><call><name>add_rev</name><argument_list>(<argument><expr><name>to</name></expr></argument>, <argument><expr><name>vertex</name></expr></argument>, <argument><expr><literal type="boolean">true</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+                <expr_stmt><expr><call><name><name>Q</name><operator>.</operator><name>push</name></name><argument_list>( <argument><expr><call><name>make_pair</name><argument_list>( <argument><expr><operator>-</operator><name><name>rev_dist</name><index>[<expr><name>to</name></expr>]</index></name></expr></argument>, <argument><expr><name>to</name></expr></argument>)</argument_list></call></expr></argument> )</argument_list></call></expr>;</expr_stmt>
+            }</block></then><else>else<block>{
+
+                <if>if<condition>(<expr><name><name>rev_dist</name><index>[<expr><name>vertex</name></expr>]</index></name> <operator>+</operator> <name>cost</name> <operator>==</operator> <name><name>rev_dist</name><index>[<expr><name>to</name></expr>]</index></name></expr>)</condition><then>
+                    <block type="pseudo"><expr_stmt><expr><call><name>add_rev</name><argument_list>(<argument><expr><name>to</name></expr></argument>, <argument><expr><name>vertex</name></expr></argument>, <argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if>
+
+            }</block></else></if>
+        }</block></for>
+    }</block></while>
+
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl> , <decl><type ref="prev"/><name>m</name></decl> , <decl><type ref="prev"/><name>s</name></decl>, <decl><type ref="prev"/><name>t</name></decl>;</decl_stmt> <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>m</name> <operator>&gt;&gt;</operator> <name>s</name> <operator>&gt;&gt;</operator> <name>t</name></expr>;</expr_stmt>
+
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl> ;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>m</name></expr> ;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>edges</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>u</name> <operator>&gt;&gt;</operator> <name><name>edges</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>v</name> <operator>&gt;&gt;</operator> <name><name>edges</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>c</name></expr>;</expr_stmt>
+
+        <decl_stmt><decl><type><name>int</name></type> <name>from</name> <init>= <expr><name><name>edges</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>u</name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>to</name> <init>= <expr><name><name>edges</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>v</name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>cost</name> <init>= <expr><name><name>edges</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>c</name></expr></init></decl>;</decl_stmt>
+
+        <expr_stmt><expr><name><name>E</name><index>[<expr><name>from</name></expr>]</index></name><operator>.</operator><call><name>push_back</name><argument_list>( <argument><expr><call><name>make_pair</name><argument_list>(<argument><expr><name>to</name></expr></argument>, <argument><expr><name>cost</name></expr></argument>)</argument_list></call></expr></argument> )</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>E2</name><index>[<expr><name>to</name></expr>]</index></name><operator>.</operator><call><name>push_back</name><argument_list>( <argument><expr><call><name>make_pair</name><argument_list>(<argument><expr><name>from</name></expr></argument>, <argument><expr><name>cost</name></expr></argument>)</argument_list></call></expr></argument> )</argument_list></call></expr>;</expr_stmt>
+    }</block></for>
+
+    <expr_stmt><expr><call><name>dij</name><argument_list>(<argument><expr><name>s</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>rev_dij</name><argument_list>(<argument><expr><name>t</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>m</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+
+        <decl_stmt><decl><type><name>int</name></type> <name>u</name> <init>= <expr><name><name>edges</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>u</name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>v</name> <init>= <expr><name><name>edges</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>v</name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>c</name> <init>= <expr><name><name>edges</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>c</name></expr></init></decl>;</decl_stmt>
+
+        <decl_stmt><decl><type><name>ll</name></type> <name>tot</name> <init>= <expr><name><name>dist</name><index>[<expr><name>u</name></expr>]</index></name> <operator>+</operator> <name>c</name> <operator>+</operator> <name><name>rev_dist</name><index>[<expr><name>v</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+
+       <comment type="line">// cout &lt;&lt; i &lt;&lt; " " &lt;&lt; tot &lt;&lt; " " &lt;&lt; dist[t] &lt;&lt; endl;</comment>
+
+        <if>if<condition>(<expr><name>tot</name> <operator>==</operator> <name><name>dist</name><index>[<expr><name>t</name></expr>]</index></name></expr>)</condition><then><block>{
+
+            <decl_stmt><decl><type><name>bool</name></type> <name>ok</name> <init>= <expr><literal type="boolean">true</literal></expr></init></decl>;</decl_stmt>
+            <for>for<control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;</operator> <name>HASHES</name></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr></incr>)</control><block>{
+                <decl_stmt><decl><type><name>ll</name></type> <name>product</name> <init>= <expr><name><name>ways</name><index>[<expr><name>u</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>*</operator> <name><name>rev_ways</name><index>[<expr><name>v</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+                <expr_stmt><expr><name>product</name> <operator>%=</operator> <name><name>HA</name><index>[<expr><name>j</name></expr>]</index></name></expr>;</expr_stmt>
+
+   <comment type="line">//             cout &lt;&lt; i &lt;&lt; " " &lt;&lt; product &lt;&lt; " " &lt;&lt; ways[t][j] &lt;&lt; endl;</comment>
+
+
+                <if>if<condition>(<expr><name>product</name> <operator>!=</operator> <name><name>ways</name><index>[<expr><name>t</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>ok</name> <operator>=</operator> <literal type="boolean">false</literal></expr>;</expr_stmt></block></then></if>
+            }</block></for>
+
+            <if>if<condition>(<expr><name>ok</name></expr>)</condition><then><block>{
+                <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+                <continue>continue;</continue>
+            }</block></then></if>
+        }</block></then></if>
+
+        <decl_stmt><decl><type><name>ll</name></type> <name>needed_weight</name> <init>= <expr><name><name>dist</name><index>[<expr><name>t</name></expr>]</index></name> <operator>-</operator> <name><name>dist</name><index>[<expr><name>u</name></expr>]</index></name> <operator>-</operator> <name><name>rev_dist</name><index>[<expr><name>v</name></expr>]</index></name> <operator>-</operator> <literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+
+        <decl_stmt><decl><type><name>ll</name></type> <name>final_weight</name> <init>= <expr><name>c</name> <operator>-</operator> <name>needed_weight</name></expr></init></decl>;</decl_stmt>
+        <if>if<condition>(<expr><name>c</name> <operator>-</operator> <name>final_weight</name> <operator>&gt;</operator> <literal type="number">0</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"CAN "</literal> <operator>&lt;&lt;</operator> <name>final_weight</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt></block></then>
+        <else>else <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"NO"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt></block></else></if>
+
+    }</block></for>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

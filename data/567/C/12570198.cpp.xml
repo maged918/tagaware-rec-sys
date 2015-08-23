@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12570198.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>"string.h"</file></include>
+<define>#<directive>define</directive> <macro><name>sf</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>scanf("%d", &amp;x)</value></define>
+<define>#<directive>define</directive> <macro><name>sf2</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>y</name></type></parameter>)</parameter_list></macro> <value>scanf("%d %d", &amp;x,&amp;y)</value></define>
+<define>#<directive>define</directive> <macro><name>sf3</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>y</name></type></parameter>,<parameter><type><name>z</name></type></parameter>)</parameter_list></macro> <value>scanf("%d %d %d", &amp;x, &amp;y, &amp;z)</value></define>
+<define>#<directive>define</directive> <macro><name>pb</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>push_back(x)</value></define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name>unsigned</name> <name>int</name></type> <name>uint</name>;</typedef>
+<typedef>typedef <type><name>unsigned</name> <name>long</name> <name>long</name></type> <name>ull</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pii</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>, <argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name></type> <name>pll</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>double</name></expr></argument>, <argument><expr><name>double</name></expr></argument>&gt;</argument_list></name></type> <name>pdd</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>vec</name>;</typedef>
+
+<define>#<directive>define</directive> <macro><name>MAX</name></macro> <value>200005</value></define>
+
+<decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name></type> <name>nums</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>map</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>, <argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name></type> <name>rt</name></decl>,<decl><type ref="prev"/><name>lft</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>N</name></decl>, <decl><type ref="prev"/><name>K</name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<expr_stmt><expr><call><name>sf2</name><argument_list>(<argument><expr><name>N</name></expr></argument>, <argument><expr><name>K</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>ll</name></type> <name>tmp</name></decl>;</decl_stmt>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+	<block>{
+		<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>tmp</name></expr>;</expr_stmt>
+		<expr_stmt><expr><call><name><name>nums</name><operator>.</operator><name>push_back</name></name><argument_list>(<argument><expr><name>tmp</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><name><name>rt</name><index>[<expr><name>tmp</name></expr>]</index></name> <operator>+=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+	}</block></for>
+
+	
+	<decl_stmt><decl><type><name>ll</name></type> <name>counter</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+	<block>{
+		<decl_stmt><decl><type><name>ll</name></type> <name>right_cnt</name><init>=<expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>left_cnt</name> <init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+		<expr_stmt><expr><name><name>rt</name><index>[<expr><name><name>nums</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>--</operator></expr>;</expr_stmt>
+		<if>if <condition>(<expr><name><name>nums</name><index>[<expr><name>i</name></expr>]</index></name> <operator>%</operator> <name>K</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then>
+		<block>{
+			<if>if <condition>(<expr><call><name><name>rt</name><operator>.</operator><name>find</name></name><argument_list>(<argument><expr><name><name>nums</name><index>[<expr><name>i</name></expr>]</index></name> <operator>*</operator> <name>K</name></expr></argument>)</argument_list></call> <operator>!=</operator> <call><name><name>rt</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>)</condition><then>
+			<block>{
+				<expr_stmt><expr><name>right_cnt</name> <operator>=</operator> <name><name>rt</name><index>[<expr><name><name>nums</name><index>[<expr><name>i</name></expr>]</index></name> <operator>*</operator> <name>K</name></expr>]</index></name></expr>;</expr_stmt>
+			}</block></then></if>
+			<if>if <condition>(<expr><call><name><name>lft</name><operator>.</operator><name>find</name></name><argument_list>(<argument><expr><name><name>nums</name><index>[<expr><name>i</name></expr>]</index></name> <operator>/</operator> <name>K</name></expr></argument>)</argument_list></call> <operator>!=</operator> <call><name><name>lft</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>)</condition><then>
+			<block>{
+				<expr_stmt><expr><name>left_cnt</name> <operator>=</operator> <name><name>lft</name><index>[<expr><name><name>nums</name><index>[<expr><name>i</name></expr>]</index></name> <operator>/</operator> <name>K</name></expr>]</index></name></expr>;</expr_stmt>
+			}</block></then></if>
+		}</block></then></if>
+		<expr_stmt><expr><name>counter</name> <operator>+=</operator> <name>right_cnt</name><operator>*</operator><name>left_cnt</name></expr>;</expr_stmt>
+		<expr_stmt><expr><name><name>lft</name><index>[<expr><name><name>nums</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+	}</block></for>
+
+	<expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%lld\n"</literal></expr></argument>, <argument><expr><name>counter</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+	<comment type="line">//system("PAUSE");</comment>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+
+
+<comment type="block">/*int p, q;
+int prime[MAX + 1];
+int pal[MAX + 1];
+
+
+void calculate_primes()
+{
+int i, j;
+prime[1] = 1;
+for (i = 2; i &lt;= sqrt(MAX); i++)
+if (prime[i] == 0)
+for (j = i*i; j &lt;= MAX; j += i)
+prime[j] = 1;
+for (i = 1; i &lt;= MAX; i++)
+prime[i] = 1 + prime[i - 1] - prime[i];
+}
+
+int hw(int num)
+{
+int t = num, x = 0;
+while (num)
+{
+x = x * 10 + num % 10;
+num /= 10;
+}
+return t == x;
+}
+
+void calculate_palindromes()
+{
+for (int i = 1; i &lt;= MAX; i++)
+{
+pal[i] = pal[i - 1] + hw(i);
+}
+}
+--------------------------------
+int examples[4007][4007], N, v = 1e9 + 7, i, j;
+sf(N);
+for (i = 2, examples[1][1] = 1; i &lt; N + 2; i++) {
+examples[i][1] = examples[i - 1][i - 1];
+for (j = 2; j &lt;= i; j++)
+examples[i][j] = (examples[i][j - 1] + examples[i - 1][j - 1]) % v;
+}
+printf("%d\n", examples[N + 1][N]);
+------------------------------
+*/</comment></unit>

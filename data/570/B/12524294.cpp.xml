@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12524294.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive><file>&lt;stdio.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;stdlib.h&gt;</file></include>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>a</name></decl>;</decl_stmt>
+    <while>while<condition>(<expr><call><name>~<name>scanf</name></name><argument_list>(<argument><expr><literal type="string">"%d%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>n</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>a</name></expr></argument>)</argument_list></call></expr>)</condition>
+    <block>{
+        <if>if<condition>(<expr><name>n</name><operator>==</operator><literal type="number">1</literal> <operator>&amp;&amp;</operator> <name>a</name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"1\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+        <else>else
+        <block>{
+            <decl_stmt><decl><type><name>int</name></type> <name>l</name><init>=<expr><name>a</name><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt><empty_stmt>;</empty_stmt>
+            <decl_stmt><decl><type><name>int</name></type> <name>r</name><init>=<expr><name>n</name><operator>-</operator><name>a</name></expr></init></decl>;</decl_stmt>
+            <if>if<condition>(<expr><name>l</name><operator>&gt;=</operator><name>r</name></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>a</name><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+            <elseif>else <if>if<condition>(<expr><name>l</name><operator>&lt;</operator><name>r</name></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>a</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if></elseif></if>
+        }</block></else></if>
+    }</block></while>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+
+   	  			    			  	 	     	 			</unit>

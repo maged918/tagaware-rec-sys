@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12189719.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<define>#<directive>define</directive> <macro><name>display</name><parameter_list>(<parameter><type><name>arr</name></type></parameter>,<parameter><type><name>s</name></type></parameter>,<parameter><type><name>e</name></type></parameter>)</parameter_list></macro> <value>for(i=s; i&lt;=e; i++) cout&lt;&lt;arr[i]&lt;&lt;" ";</value></define>
+<define>#<directive>define</directive> <macro><name>mset</name><parameter_list>(<parameter><type><name>arr</name></type></parameter>,<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>memset(arr,x,sizeof(arr))</value></define>
+
+<define>#<directive>define</directive> <macro><name>MOD</name></macro> <value>1000000007</value></define>
+<define>#<directive>define</directive> <macro><name>epsilon</name></macro> <value>0.000000000001</value></define>
+<define>#<directive>define</directive> <macro><name>I_MAX</name></macro> <value>9223372036854775807</value></define>
+<define>#<directive>define</directive> <macro><name>I_MIN</name></macro> <value>-9223372036854775807</value></define>
+
+<define>#<directive>define</directive> <macro><name>rep</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>s</name></type></parameter>,<parameter><type><name>e</name></type></parameter>)</parameter_list></macro> <value>for(i=s;i&lt;=e;i++)</value></define>
+<define>#<directive>define</directive> <macro><name>rrep</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>s</name></type></parameter>,<parameter><type><name>e</name></type></parameter>)</parameter_list></macro> <value>for(i=s;i&gt;=e;i--)</value></define>
+<define>#<directive>define</directive> <macro><name>endl</name></macro> <value>"\n"</value></define>
+
+<define>#<directive>define</directive> <macro><name>ll</name></macro> <value>long long</value></define>
+<define>#<directive>define</directive> <macro><name>mid</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>((a)+((b-a)/2))</value></define>
+<define>#<directive>define</directive> <macro><name>min</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>((a)&lt;(b)?(a):(b))</value></define>
+<define>#<directive>define</directive> <macro><name>max</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>((a)&gt;(b)?(a):(b))</value></define>
+
+<comment type="line">// Useful STL commands:</comment>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>f</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>s</name></macro> <value>second</value></define>
+<define>#<directive>define</directive> <macro><name>si</name></macro> <value>set&lt;int&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>vi</name></macro> <value>vector&lt;int&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>ii</name></macro> <value>pair&lt;int,int&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>sii</name></macro> <value>set&lt;ii&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>vii</name></macro> <value>vector&lt;ii&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>all</name><parameter_list>(<parameter><type><name>c</name></type></parameter>)</parameter_list></macro> <value>c.begin(),c.end()</value></define>
+<define>#<directive>define</directive> <macro><name>tr</name><parameter_list>(<parameter><type><name>c</name></type></parameter>,<parameter><type><name>it</name></type></parameter>)</parameter_list></macro> <value>for(typeof(c.begin()) it=c.begin();it!=c.end();++it)</value></define>
+
+<define>#<directive>define</directive> <macro><name>DEBUG</name></macro></define>
+<comment type="line">// debugging</comment>
+<ifdef>#<directive>ifdef</directive> <name>DEBUG</name></ifdef>
+<define>#<directive>define</directive> <macro><name>trace1</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro>                    <value>cerr &lt;&lt; #x &lt;&lt; ": " &lt;&lt; x &lt;&lt; endl;</value></define>
+<define>#<directive>define</directive> <macro><name>trace2</name><parameter_list>(<parameter><type><name>x</name></type></parameter>, <parameter><type><name>y</name></type></parameter>)</parameter_list></macro>                 <value>cerr &lt;&lt; #x &lt;&lt; ": " &lt;&lt; x &lt;&lt; " | " &lt;&lt; #y &lt;&lt; ": " &lt;&lt; y &lt;&lt; endl;</value></define>
+<define>#<directive>define</directive> <macro><name>trace3</name><parameter_list>(<parameter><type><name>x</name></type></parameter>, <parameter><type><name>y</name></type></parameter>, <parameter><type><name>z</name></type></parameter>)</parameter_list></macro>              <value>cerr &lt;&lt; #x &lt;&lt; ": " &lt;&lt; x &lt;&lt; " | " &lt;&lt; #y &lt;&lt; ": " &lt;&lt; y &lt;&lt; " | " &lt;&lt; #z &lt;&lt; ": " &lt;&lt; z &lt;&lt; endl;</value></define>
+<define>#<directive>define</directive> <macro><name>trace4</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>c</name></type></parameter>, <parameter><type><name>d</name></type></parameter>)</parameter_list></macro>           <value>cerr &lt;&lt; #a &lt;&lt; ": " &lt;&lt; a &lt;&lt; " | " &lt;&lt; #b &lt;&lt; ": " &lt;&lt; b &lt;&lt; " | " &lt;&lt; #c &lt;&lt; ": " &lt;&lt; c &lt;&lt; " | " &lt;&lt; #d &lt;&lt; ": " &lt;&lt; d &lt;&lt; endl;</value></define>
+<define>#<directive>define</directive> <macro><name>trace5</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>c</name></type></parameter>, <parameter><type><name>d</name></type></parameter>, <parameter><type><name>e</name></type></parameter>)</parameter_list></macro>        <value>cerr &lt;&lt; #a &lt;&lt; ": " &lt;&lt; a &lt;&lt; " | " &lt;&lt; #b &lt;&lt; ": " &lt;&lt; b &lt;&lt; " | " &lt;&lt; #c &lt;&lt; ": " &lt;&lt; c &lt;&lt; " | " &lt;&lt; #d &lt;&lt; ": " &lt;&lt; d &lt;&lt; " | " &lt;&lt; #e &lt;&lt; ": " &lt;&lt; e &lt;&lt; endl;</value></define>
+<define>#<directive>define</directive> <macro><name>trace6</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>c</name></type></parameter>, <parameter><type><name>d</name></type></parameter>, <parameter><type><name>e</name></type></parameter>, <parameter><type><name>f</name></type></parameter>)</parameter_list></macro>     <value>cerr &lt;&lt; #a &lt;&lt; ": " &lt;&lt; a &lt;&lt; " | " &lt;&lt; #b &lt;&lt; ": " &lt;&lt; b &lt;&lt; " | " &lt;&lt; #c &lt;&lt; ": " &lt;&lt; c &lt;&lt; " | " &lt;&lt; #d &lt;&lt; ": " &lt;&lt; d &lt;&lt; " | " &lt;&lt; #e &lt;&lt; ": " &lt;&lt; e &lt;&lt; " | " &lt;&lt; #f &lt;&lt; ": " &lt;&lt; f &lt;&lt; endl;</value></define>
+<else>#<directive>else</directive></else>
+<define>#<directive>define</directive> <macro><name>trace1</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro></define>
+<define>#<directive>define</directive> <macro><name>trace2</name><parameter_list>(<parameter><type><name>x</name></type></parameter>, <parameter><type><name>y</name></type></parameter>)</parameter_list></macro></define>
+<define>#<directive>define</directive> <macro><name>trace3</name><parameter_list>(<parameter><type><name>x</name></type></parameter>, <parameter><type><name>y</name></type></parameter>, <parameter><type><name>z</name></type></parameter>)</parameter_list></macro></define>
+<define>#<directive>define</directive> <macro><name>trace4</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>c</name></type></parameter>, <parameter><type><name>d</name></type></parameter>)</parameter_list></macro></define>
+<define>#<directive>define</directive> <macro><name>trace5</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>c</name></type></parameter>, <parameter><type><name>d</name></type></parameter>, <parameter><type><name>e</name></type></parameter>)</parameter_list></macro></define>
+<define>#<directive>define</directive> <macro><name>trace6</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>c</name></type></parameter>, <parameter><type><name>d</name></type></parameter>, <parameter><type><name>e</name></type></parameter>, <parameter><type><name>f</name></type></parameter>)</parameter_list></macro></define>
+<endif>#<directive>endif</directive></endif>
+
+<function><type><name>ll</name></type> <name>gcd</name><parameter_list>(<parameter><decl><type><name>ll</name></type> <name>a</name></decl></parameter>, <parameter><decl><type><name>ll</name></type> <name>b</name></decl></parameter>)</parameter_list>
+<block>{
+    <if>if<condition>( <expr><operator>(</operator><name>a</name> <operator>==</operator> <literal type="number">0</literal><operator>)</operator> <operator>||</operator> <operator>(</operator><name>b</name> <operator>==</operator> <literal type="number">0</literal><operator>)</operator></expr> )</condition><then>
+        <block type="pseudo"><return>return <expr><name>a</name> <operator>+</operator> <name>b</name></expr>;</return></block></then></if>
+    <return>return <expr><call><name>gcd</name><argument_list>(<argument><expr><name>b</name></expr></argument>, <argument><expr><name>a</name> <operator>%</operator> <name>b</name></expr></argument>)</argument_list></call></expr>;</return>
+}</block></function>
+
+<function><type><name>ll</name></type> <name>pow_mod</name><parameter_list>(<parameter><decl><type><name>ll</name></type> <name>a</name></decl></parameter>, <parameter><decl><type><name>ll</name></type> <name>b</name></decl></parameter>)</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>ll</name></type> <name>res</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+    <while>while<condition>(<expr><name>b</name></expr>)</condition>
+    <block>{
+        <if>if<condition>(<expr><name>b</name> <operator>&amp;</operator> <literal type="number">1</literal></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name>res</name> <operator>=</operator> <operator>(</operator><name>res</name> <operator>*</operator> <name>a</name><operator>)</operator></expr>;</expr_stmt></block></then></if>
+        <expr_stmt><expr><name>a</name> <operator>=</operator> <operator>(</operator><name>a</name> <operator>*</operator> <name>a</name><operator>)</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name>b</name> <operator>&gt;&gt;=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+    }</block></while>
+    <return>return
+    <expr><name>res</name></expr>;</return>
+}</block></function>
+
+<decl_stmt><decl><type><name>string</name></type> <name>st1</name></decl>, <decl><type ref="prev"/><name>st2</name></decl>;</decl_stmt>
+
+<function><type><name>bool</name></type> <name>solve</name><parameter_list>(<parameter><decl><type><name>ll</name></type> <name>idx</name></decl></parameter>, <parameter><decl><type><name>ll</name></type> <name>idy</name></decl></parameter>, <parameter><decl><type><name>ll</name></type> <name>len</name></decl></parameter>)</parameter_list>
+<block>{
+   <if>if<condition>( <expr><name>len</name><operator>%</operator><literal type="number">2</literal></expr> )</condition><then>
+   <block>{
+      <if>if<condition>( <expr><call><name><name>st1</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><name>idx</name></expr></argument>, <argument><expr><name>len</name></expr></argument>)</argument_list></call><operator>==</operator><call><name><name>st2</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><name>idy</name></expr></argument>, <argument><expr><name>len</name></expr></argument>)</argument_list></call></expr> )</condition><then>
+      <block>{
+         <return>return <expr><literal type="number">1</literal></expr>;</return>
+      }</block></then>
+      <else>else
+      <block>{
+         <return>return <expr><literal type="number">0</literal></expr>;</return>
+      }</block></else></if>
+   }</block></then>
+   <else>else
+   <block>{
+      <if>if<condition>( <expr><operator>(</operator><call><name>solve</name><argument_list>(<argument><expr><name>idx</name></expr></argument>, <argument><expr><name>idy</name><operator>+</operator><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call><operator>)</operator> <operator>&amp;&amp;</operator> <operator>(</operator><call><name>solve</name><argument_list>(<argument><expr><name>idx</name><operator>+</operator><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><name>idy</name></expr></argument>, <argument><expr><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call><operator>)</operator></expr> )</condition><then>
+      <block>{
+         <return>return <expr><literal type="number">1</literal></expr>;</return>
+      }</block></then></if>
+      <if>if<condition>( <expr><operator>(</operator><call><name>solve</name><argument_list>(<argument><expr><name>idx</name></expr></argument>, <argument><expr><name>idy</name></expr></argument>, <argument><expr><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call><operator>)</operator> <operator>&amp;&amp;</operator> <operator>(</operator><call><name>solve</name><argument_list>(<argument><expr><name>idx</name><operator>+</operator><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><name>idy</name><operator>+</operator><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call><operator>)</operator></expr> )</condition><then>
+      <block>{
+         <return>return <expr><literal type="number">1</literal></expr>;</return>
+      }</block></then></if>
+
+      <return>return <expr><literal type="number">0</literal></expr>;</return>
+   }</block></else></if>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+        <ifndef>#<directive>ifndef</directive>  <name>ONLINE_JUDGE</name></ifndef>
+            <expr_stmt><expr><call><name>freopen</name><argument_list>(<argument><expr><literal type="string">"input.txt"</literal></expr></argument>,<argument><expr><literal type="string">"r"</literal></expr></argument>,<argument><expr><name>stdin</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <endif>#<directive>endif</directive></endif>
+
+        <expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <decl_stmt><decl><type><name>ll</name></type> <name>T</name></decl>, <decl><type ref="prev"/><name>i</name></decl>, <decl><type ref="prev"/><name>j</name></decl>, <decl><type ref="prev"/><name>N</name></decl>;</decl_stmt>
+
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>st1</name> <operator>&gt;&gt;</operator> <name>st2</name></expr>;</expr_stmt>
+        <if>if<condition>( <expr><operator>(</operator><call><name><name>st1</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call><operator>%</operator><literal type="number">2</literal><operator>)</operator>  <operator>!=</operator> <literal type="number">0</literal></expr> )</condition><then>
+        <block>{
+           <if>if<condition>( <expr><name>st1</name><operator>==</operator><name>st2</name></expr> )</condition><then>
+           <block>{
+               <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES"</literal></expr>;</expr_stmt>
+           }</block></then>
+           <else>else
+           <block>{
+               <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"NO"</literal></expr>;</expr_stmt>
+           }</block></else></if>
+        }</block></then>
+        <else>else
+        <block>{
+           <if>if<condition>( <expr><call><name>solve</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><call><name><name>st1</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr> )</condition><then>
+           <block>{
+               <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES"</literal></expr>;</expr_stmt>
+           }</block></then>
+           <else>else
+           <block>{
+               <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"NO"</literal></expr>;</expr_stmt>
+           }</block></else></if>
+        }</block></else></if>
+
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

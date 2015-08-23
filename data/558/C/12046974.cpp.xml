@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12046974.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits\stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>Vint</name>;</typedef>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+<typedef>typedef <type><name>long</name> <name>double</name></type> <name>ld</name>;</typedef>
+
+<function><type><name>int</name></type> <name>ispower</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>val</name></decl></parameter>)</parameter_list>
+<block>{
+    <return>return <expr><call><name>__builtin_popcount</name><argument_list>(<argument><expr><name>val</name></expr></argument>)</argument_list></call> <operator>==</operator> <literal type="number">1</literal></expr>;</return>
+}</block></function>
+
+<function><type><name>void</name></type> <name>solve</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>n</name></decl></parameter>)</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>Vint</name></type> <name>v</name><argument_list>(<argument><expr><name>n</name></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block type="pseudo"><expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">" %d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name><name>v</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></for>
+
+    <decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>bound</name> <init>= <expr><operator>(</operator><name>int</name><operator>)</operator><literal type="number">1e6</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>Vint</name></type> <name>interes</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>inf</name> <init>= <expr><operator>(</operator><name>int</name><operator>)</operator><literal type="number">1e9</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>ans</name> <init>= <expr><name>inf</name></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>x</name> <init>= <expr><name><name>v</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></init></decl>;</decl_stmt>
+    <while>while <condition>(<expr><name>x</name> <operator>&gt;=</operator> <literal type="number">0</literal></expr>)</condition>
+    <block>{
+        <expr_stmt><expr><call><name><name>interes</name><operator>.</operator><name>pb</name></name><argument_list>(<argument><expr><name>x</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name>x</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then>
+            <block type="pseudo"><break>break;</break></block></then></if>
+
+        <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><name>x</name></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>bound</name></expr>;</condition> <incr><expr><name>i</name> <operator>*=</operator> <literal type="number">2</literal></expr></incr>)</control>
+            <block type="pseudo"><expr_stmt><expr><call><name><name>interes</name><operator>.</operator><name>pb</name></name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></for>
+        <expr_stmt><expr><name>x</name> <operator>/=</operator> <literal type="number">2</literal></expr>;</expr_stmt>
+    }</block></while>
+
+    <expr_stmt><expr><call><name>sort</name><argument_list>(<argument><expr><call><name><name>interes</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name><name>interes</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>interes</name><operator>.</operator><name>resize</name></name><argument_list>(<argument><expr><call><name>unique</name><argument_list>(<argument><expr><call><name><name>interes</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name><name>interes</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call> <operator>-</operator> <call><name><name>interes</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>need</name> <range>: <expr><name>interes</name></expr></range></decl></init>)</control>
+    <block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>cur</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+        <if>if <condition>(<expr><name>need</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then>
+        <block>{
+            <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+            <block>{
+                <decl_stmt><decl><type><name>int</name></type> <name>x</name> <init>= <expr><name><name>v</name><index>[<expr><name>i</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+                <while>while <condition>(<expr><name>x</name> <operator>&gt;</operator> <literal type="number">0</literal></expr>)</condition>
+                    <block type="pseudo"><expr_stmt><expr><name>cur</name><operator>++</operator></expr><operator>,</operator> <expr><name>x</name> <operator>/=</operator> <literal type="number">2</literal></expr>;</expr_stmt></block></while>
+            }</block></for>
+            <expr_stmt><expr><name>ans</name> <operator>=</operator> <call><name>min</name><argument_list>(<argument><expr><name>ans</name></expr></argument>, <argument><expr><name>cur</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <continue>continue;</continue>
+        }</block></then></if>
+
+        <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition>  <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block>{
+            <decl_stmt><decl><type><name>int</name></type> <name>x</name> <init>= <expr><name><name>v</name><index>[<expr><name>i</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+            <while>while <condition>(<expr><name>x</name> <operator>!=</operator> <literal type="number">0</literal> <operator>&amp;&amp;</operator> <operator>(</operator><operator>!</operator><call><name>ispower</name><argument_list>(<argument><expr><name>need</name> <operator>/</operator> <name>x</name></expr></argument>)</argument_list></call> <operator>||</operator> <name>need</name> <operator>%</operator> <name>x</name> <operator>!=</operator> <literal type="number">0</literal><operator>)</operator></expr>)</condition>
+                <block type="pseudo"><expr_stmt><expr><name>x</name> <operator>/=</operator> <literal type="number">2</literal></expr><operator>,</operator> <expr><name>cur</name><operator>++</operator></expr>;</expr_stmt></block></while>
+            <if>if <condition>(<expr><name>x</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then>
+            <block>{
+                <expr_stmt><expr><name>cur</name> <operator>=</operator> <name>inf</name></expr>;</expr_stmt>
+                <break>break;</break>
+            }</block></then></if>
+            <if>if <condition>(<expr><name>cur</name> <operator>&gt;</operator> <name>ans</name></expr>)</condition><then>
+                <block type="pseudo"><break>break;</break></block></then></if>
+
+            <expr_stmt><expr><call><name>assert</name><argument_list>(<argument><expr><call><name>ispower</name><argument_list>(<argument><expr><name>need</name> <operator>/</operator> <name>x</name></expr></argument>)</argument_list></call> <operator>&amp;&amp;</operator> <name>need</name> <operator>%</operator> <name>x</name> <operator>==</operator> <literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <while>while <condition>(<expr><name>x</name> <operator>!=</operator> <name>need</name></expr>)</condition>
+                <block type="pseudo"><expr_stmt><expr><name>x</name> <operator>*=</operator> <literal type="number">2</literal></expr><operator>,</operator> <expr><name>cur</name><operator>++</operator></expr>;</expr_stmt></block></while>
+        }</block></for>
+
+        <expr_stmt><expr><name>ans</name> <operator>=</operator> <call><name>min</name><argument_list>(<argument><expr><name>ans</name></expr></argument>, <argument><expr><name>cur</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></for>
+
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>ans</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <ifndef>#<directive>ifndef</directive> <name>ONLINE_JUDGE</name></ifndef>
+    <expr_stmt><expr><call><name>freopen</name><argument_list>(<argument><expr><literal type="string">"input.txt"</literal></expr></argument>, <argument><expr><literal type="string">"rt"</literal></expr></argument>, <argument><expr><name>stdin</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>freopen</name><argument_list>(<argument><expr><literal type="string">"output.txt"</literal></expr></argument>, <argument><expr><literal type="string">"w"</literal></expr></argument>, <argument><expr><name>stdout</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <endif>#<directive>endif</directive></endif>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+    <while>while <condition>(<expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>)</condition>
+        <block type="pseudo"><expr_stmt><expr><call><name>solve</name><argument_list>(<argument><expr><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></while>
+}</block></function>
+</unit>

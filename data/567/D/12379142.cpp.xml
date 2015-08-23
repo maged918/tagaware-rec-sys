@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12379142.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stdio.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;math.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<typedef>typedef <type><name>long</name> <name>long</name> <name>int</name></type> <name>lli</name>;</typedef>
+<define>#<directive>define</directive> <macro><name>INF</name></macro> <value>200000000</value></define>
+
+<decl_stmt><decl><type><name>int</name></type> <name>sz</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>len</name></decl>, <decl><type ref="prev"/><name>nship</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>S</name><index>[<expr><literal type="number">300000</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>miss</name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>ships_in_range</name> <parameter_list>(<parameter><decl><type><name>int</name></type> <name>a</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>b</name></decl></parameter>)</parameter_list> <block>{
+    <expr_stmt><expr><name>b</name><operator>--</operator></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>res</name> <init>= <expr><operator>(</operator><name>b</name><operator>-</operator><name>a</name><operator>)</operator> <operator>/</operator><operator>(</operator><name>sz</name><operator>+</operator><literal type="number">1</literal><operator>)</operator></expr></init></decl>;</decl_stmt>
+    <if>if <condition>(<expr><operator>(</operator><name>b</name><operator>-</operator><name>a</name><operator>)</operator> <operator>%</operator> <operator>(</operator><name>sz</name><operator>+</operator><literal type="number">1</literal><operator>)</operator> <operator>==</operator> <name>sz</name></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><name>res</name> <operator>++</operator></expr>;</expr_stmt></block></then></if>
+    <return>return <expr><name>res</name></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>len</name> <operator>&gt;&gt;</operator> <name>nship</name> <operator>&gt;&gt;</operator> <name>sz</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>ops</name></decl>;</decl_stmt> <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>ops</name></expr>;</expr_stmt>
+    
+    <decl_stmt><decl><type><name><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name> <operator>::</operator> <name>iterator</name></name></type> <name>it</name></decl>, <decl><type ref="prev"/><name>it1</name></decl>, <decl><type ref="prev"/><name>it2</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>space</name> <init>= <expr><call><name>ships_in_range</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>len</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><name><name>S</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <name>space</name></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>miss</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt> <expr_stmt><expr><call><name><name>miss</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>len</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>o</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>o</name> <operator>&lt;</operator> <name>ops</name></expr>;</condition> <incr><expr><name>o</name><operator>++</operator></expr></incr>)</control> <block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>x</name></decl>;</decl_stmt> <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>x</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>it</name> <operator>=</operator> <name>it1</name> <operator>=</operator> <name>it2</name> <operator>=</operator> <call><name><name>miss</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>x</name></expr></argument>)</argument_list></call><operator>.</operator><name>first</name></expr>;</expr_stmt>
+        
+        <expr_stmt><expr><name>it1</name> <operator>--</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><operator>++</operator><name>it2</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>space</name> <operator>-=</operator> <name><name>S</name><index>[<expr><operator>*</operator><name>it1</name></expr>]</index></name></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>S</name><index>[<expr><operator>*</operator><name>it1</name></expr>]</index></name> <operator>=</operator> <call><name>ships_in_range</name><argument_list>(<argument><expr><operator>*</operator><name>it1</name></expr></argument>, <argument><expr><operator>*</operator><name>it</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>S</name><index>[<expr><operator>*</operator><name>it</name></expr>]</index></name> <operator>=</operator> <call><name>ships_in_range</name><argument_list>(<argument><expr><operator>*</operator><name>it</name></expr></argument>, <argument><expr><operator>*</operator><name>it2</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>space</name> <operator>+=</operator> <name><name>S</name><index>[<expr><operator>*</operator><name>it1</name></expr>]</index></name> <operator>+</operator> <name><name>S</name><index>[<expr><operator>*</operator><name>it</name></expr>]</index></name></expr>;</expr_stmt>
+        
+        <if>if <condition>(<expr><name>space</name> <operator>&lt;</operator> <name>nship</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>o</name><operator>+</operator><literal type="number">1</literal> <operator>&lt;&lt;</operator> <literal type="string">"\n"</literal></expr>;</expr_stmt>
+            <return>return <expr><literal type="number">0</literal></expr>;</return>
+        }</block></then></if>
+    }</block></for>
+    
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"-1\n"</literal></expr>;</expr_stmt>
+    
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

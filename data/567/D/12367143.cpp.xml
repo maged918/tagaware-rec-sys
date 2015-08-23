@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12367143.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+<define>#<directive>define</directive> <macro><name>R</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>L</name></macro> <value>second</value></define>
+<define>#<directive>define</directive> <macro><name>MP</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>PB</name></macro> <value>push_back</value></define>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pie</name>;</typedef>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>maxn</name> <init>= <expr><literal type="number">2</literal> <operator>*</operator> <literal type="number">1e5</literal> <operator>+</operator> <literal type="number">10</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>pie</name></expr></argument>&gt;</argument_list></name></type> <name>st</name></decl>;</decl_stmt>
+
+<function><name>main</name><parameter_list>()</parameter_list> <block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>k</name></decl>, <decl><type ref="prev"/><name>a</name></decl>, <decl><type ref="prev"/><name>x</name></decl>, <decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>k</name> <operator>&gt;&gt;</operator> <name>a</name></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name><name>st</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><call><name>MP</name><argument_list>(<argument><expr><name>n</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>m</name></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>sum</name> <init>= <expr><operator>(</operator><name>n</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>/</operator> <operator>(</operator><name>a</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator></expr></init></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>ans</name> <init>= <expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+	<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name> <operator>&lt;</operator> <name>m</name></expr>;</condition><incr><expr><name>i</name> <operator>++</operator></expr></incr>)</control> <block>{
+		<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>x</name></expr>;</expr_stmt>
+		<decl_stmt><decl><type><name>pie</name></type> <name>pos</name> <init>= <expr><operator>*</operator><call><name><name>st</name><operator>.</operator><name>upper_bound</name></name><argument_list>(<argument><expr><call><name>MP</name><argument_list>(<argument><expr><name>x</name></expr></argument>, <argument><expr><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+		<expr_stmt><expr><name>sum</name> <operator>-=</operator> <operator>(</operator><name><name>pos</name><operator>.</operator><name>R</name></name> <operator>-</operator> <name><name>pos</name><operator>.</operator><name>L</name></name><operator>)</operator> <operator>/</operator> <operator>(</operator><name>a</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt>
+		<expr_stmt><expr><call><name><name>st</name><operator>.</operator><name>erase</name></name><argument_list>(<argument><expr><call><name><name>st</name><operator>.</operator><name>find</name></name><argument_list>(<argument><expr><name>pos</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><call><name><name>st</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><call><name>MP</name><argument_list>(<argument><expr><name>x</name></expr></argument>, <argument><expr><name><name>pos</name><operator>.</operator><name>L</name></name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><name>sum</name> <operator>+=</operator> <operator>(</operator><name>x</name> <operator>-</operator> <name><name>pos</name><operator>.</operator><name>L</name></name><operator>)</operator> <operator>/</operator> <operator>(</operator><name>a</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt>
+		<expr_stmt><expr><call><name><name>st</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><call><name>MP</name><argument_list>(<argument><expr><name><name>pos</name><operator>.</operator><name>R</name></name></expr></argument>, <argument><expr><name>x</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><name>sum</name> <operator>+=</operator> <operator>(</operator><name><name>pos</name><operator>.</operator><name>R</name></name> <operator>-</operator> <name>x</name><operator>)</operator> <operator>/</operator> <operator>(</operator><name>a</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt>
+		<if>if<condition>(<expr><name>sum</name> <operator>&lt;</operator> <name>k</name> <operator>and</operator> <name>ans</name> <operator>==</operator> <operator>-</operator><literal type="number">1</literal></expr>)</condition><then>
+			<block type="pseudo"><expr_stmt><expr><name>ans</name> <operator>=</operator> <name>i</name> <operator>+</operator> <literal type="number">1</literal></expr>;</expr_stmt></block></then></if>
+	}</block></for>
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>ans</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

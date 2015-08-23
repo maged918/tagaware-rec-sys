@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12044306.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<struct>struct <name>tree</name> <block>{<public type="default">
+    <decl_stmt><decl><type><name>int</name></type> <name>pos</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>num</name></decl>;</decl_stmt>
+</public>}</block>;</struct>
+
+<function><type><name>bool</name></type> <name>cmp</name><parameter_list>(<parameter><decl><type><name>tree</name> <modifier>&amp;</modifier></type><name>p</name></decl></parameter>, <parameter><decl><type><name>tree</name> <modifier>&amp;</modifier></type><name>q</name></decl></parameter>)</parameter_list>
+<block>{
+    <return>return <expr><name><name>p</name><operator>.</operator><name>pos</name></name> <operator>&lt;</operator> <name><name>q</name><operator>.</operator><name>pos</name></name></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>N</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>N</name></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name>tree</name></type> <name><name>t</name><index>[<expr><literal type="number">101</literal></expr>]</index></name></decl>;</decl_stmt>
+    <expr_stmt><expr><name><name>t</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>.</operator><name>pos</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>t</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>.</operator><name>num</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block type="pseudo"><expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>t</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>pos</name> <operator>&gt;&gt;</operator> <name><name>t</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>num</name></expr>;</expr_stmt></block></for>
+
+    <expr_stmt><expr><operator>++</operator><name>N</name></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>sort</name><argument_list>(<argument><expr><name>t</name></expr></argument>, <argument><expr><name>t</name> <operator>+</operator> <name>N</name></expr></argument>, <argument><expr><name>cmp</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>zero_pos</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <while>while<condition>(<expr><name><name>t</name><index>[<expr><name>zero_pos</name></expr>]</index></name><operator>.</operator><name>pos</name> <operator>!=</operator> <literal type="number">0</literal></expr>)</condition>
+        <block type="pseudo"><expr_stmt><expr><name>zero_pos</name><operator>++</operator></expr>;</expr_stmt></block></while>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>lret</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>pos</name> <init>= <expr><name>zero_pos</name></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>left</name><init>=<expr><name>pos</name></expr></init></decl>, <decl><type ref="prev"/><name>right</name><init>=<expr><name>pos</name></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>turn</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <while>while<condition>(<expr><literal type="number">1</literal></expr>)</condition>
+    <block>{
+        <if>if<condition>(<expr><name>turn</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then>
+        <block>{
+            <comment type="line">//left</comment>
+            <expr_stmt><expr><operator>--</operator><name>left</name></expr>;</expr_stmt>
+            <if>if<condition>(<expr><name>left</name> <operator>&lt;</operator> <literal type="number">0</literal></expr>)</condition><then>
+                <block type="pseudo"><break>break;</break></block></then></if>
+            <expr_stmt><expr><name>lret</name> <operator>+=</operator> <name><name>t</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>num</name></expr>;</expr_stmt>
+        }</block></then>
+        <else>else
+        <block>{
+            <expr_stmt><expr><operator>++</operator><name>right</name></expr>;</expr_stmt>
+            <if>if<condition>(<expr><name>right</name> <operator>&gt;=</operator> <name>N</name></expr>)</condition><then>
+                <block type="pseudo"><break>break;</break></block></then></if>
+            <expr_stmt><expr><name>lret</name> <operator>+=</operator> <name><name>t</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>num</name></expr>;</expr_stmt>
+        }</block></else></if>
+        <expr_stmt><expr><name>turn</name> <operator>=</operator> <operator>!</operator><name>turn</name></expr>;</expr_stmt>
+    }</block></while>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>rret</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+
+    <expr_stmt><expr><name>pos</name> <operator>=</operator> <name>zero_pos</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>left</name> <operator>=</operator> <name>right</name> <operator>=</operator> <name>pos</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>turn</name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+
+    <while>while<condition>(<expr><literal type="number">1</literal></expr>)</condition>
+    <block>{
+        <if>if<condition>(<expr><name>turn</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then>
+        <block>{
+            <comment type="line">//left</comment>
+            <expr_stmt><expr><operator>--</operator><name>left</name></expr>;</expr_stmt>
+            <if>if<condition>(<expr><name>left</name> <operator>&lt;</operator> <literal type="number">0</literal></expr>)</condition><then>
+                <block type="pseudo"><break>break;</break></block></then></if>
+            <expr_stmt><expr><name>rret</name> <operator>+=</operator> <name><name>t</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>num</name></expr>;</expr_stmt>
+        }</block></then>
+        <else>else
+        <block>{
+            <expr_stmt><expr><operator>++</operator><name>right</name></expr>;</expr_stmt>
+            <if>if<condition>(<expr><name>right</name> <operator>&gt;=</operator> <name>N</name></expr>)</condition><then>
+                <block type="pseudo"><break>break;</break></block></then></if>
+            <expr_stmt><expr><name>rret</name> <operator>+=</operator> <name><name>t</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>num</name></expr>;</expr_stmt>
+        }</block></else></if>
+        <expr_stmt><expr><name>turn</name> <operator>=</operator> <operator>!</operator><name>turn</name></expr>;</expr_stmt>
+    }</block></while>
+
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <call><name>max</name><argument_list>(<argument><expr><name>lret</name></expr></argument>,<argument><expr><name>rret</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

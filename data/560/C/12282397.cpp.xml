@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12282397.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+
+<typedef>typedef <type><name>unsigned</name> <name>long</name> <name>long</name> <name>int</name></type> <name>I64</name>;</typedef>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><specifier>inline</specifier> <type><name>I64</name></type> <name>solve</name><parameter_list>(<parameter><decl><type><name>I64</name></type> <name>a1</name></decl></parameter>,<parameter><decl><type><name>I64</name></type> <name>a2</name></decl></parameter>,<parameter><decl><type><name>I64</name></type> <name>a3</name></decl></parameter>,<parameter><decl><type><name>I64</name></type> <name>a4</name></decl></parameter>,<parameter><decl><type><name>I64</name></type> <name>a5</name></decl></parameter>,<parameter><decl><type><name>I64</name></type> <name>a6</name></decl></parameter>)</parameter_list>
+<block>{
+	<decl_stmt><decl><type><name>I64</name></type> <name>x</name> <init>= <expr><name>a1</name><operator>+</operator><name>a2</name><operator>+</operator><name>a3</name></expr></init></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>I64</name></type> <name>y</name> <init>= <expr><call><name>pow</name><argument_list>(<argument><expr><name>x</name></expr></argument>,<argument><expr><literal type="number">2</literal></expr></argument>)</argument_list></call> <operator>-</operator> <call><name>pow</name><argument_list>(<argument><expr><name>a1</name></expr></argument>,<argument><expr><literal type="number">2</literal></expr></argument>)</argument_list></call> <operator>-</operator> <call><name>pow</name><argument_list>(<argument><expr><name>a3</name></expr></argument>,<argument><expr><literal type="number">2</literal></expr></argument>)</argument_list></call> <operator>-</operator> <call><name>pow</name><argument_list>(<argument><expr><name>a5</name></expr></argument>,<argument><expr><literal type="number">2</literal></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+	<return>return <expr><name>y</name></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>I64</name></type> <name>a1</name></decl>,<decl><type ref="prev"/><name>a2</name></decl>,<decl><type ref="prev"/><name>a3</name></decl>,<decl><type ref="prev"/><name>a4</name></decl>,<decl><type ref="prev"/><name>a5</name></decl>,<decl><type ref="prev"/><name>a6</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>a1</name> <operator>&gt;&gt;</operator> <name>a2</name> <operator>&gt;&gt;</operator> <name>a3</name> <operator>&gt;&gt;</operator> <name>a4</name> <operator>&gt;&gt;</operator> <name>a5</name> <operator>&gt;&gt;</operator> <name>a6</name></expr>;</expr_stmt>
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <call><name>solve</name><argument_list>(<argument><expr><name>a1</name></expr></argument>,<argument><expr><name>a2</name></expr></argument>,<argument><expr><name>a3</name></expr></argument>,<argument><expr><name>a4</name></expr></argument>,<argument><expr><name>a5</name></expr></argument>,<argument><expr><name>a6</name></expr></argument>)</argument_list></call> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

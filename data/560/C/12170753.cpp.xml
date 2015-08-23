@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12170753.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<define>#<directive>define</directive> <macro><name>_CRT_SECURE_NO_WARNINGS</name></macro></define>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iomanip&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;fstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;deque&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;list&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;sstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;memory.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;time.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;climits&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;unordered_map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;unordered_set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;tuple&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;numeric&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;functional&gt;</file></include> 
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<comment type="line">//DEFINES BEGIN</comment>
+<define>#<directive>define</directive> <macro><name>OI</name><parameter_list>(<parameter><type><name>name</name></type></parameter>)</parameter_list></macro> <value>freopen(name, "r", stdin)</value></define>
+<define>#<directive>define</directive> <macro><name>OO</name><parameter_list>(<parameter><type><name>name</name></type></parameter>)</parameter_list></macro> <value>freopen(name, "w", stdout)</value></define>
+<define>#<directive>define</directive> <macro><name>OF</name><parameter_list>(<parameter><type><name>if_name</name></type></parameter>, <parameter><type><name>of_name</name></type></parameter>)</parameter_list></macro> <value>OI(if_name), OO(of_name)</value></define>
+<define>#<directive>define</directive> <macro><name>faster</name></macro> <value>ios_base::sync_with_stdio(false)</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>mt</name></macro> <value>make_tuple</value></define>
+<define>#<directive>define</directive> <macro><name>sz</name><parameter_list>(<parameter><type><name>v</name></type></parameter>)</parameter_list></macro> <value>(int)v.size()</value></define>
+<define>#<directive>define</directive> <macro><name>ALL</name><parameter_list>(<parameter><type><name>v</name></type></parameter>)</parameter_list></macro> <value>v.begin(), v.end()</value></define>
+<define>#<directive>define</directive> <macro><name>MAKE_UPPER</name><parameter_list>(<parameter><type><name>str</name></type></parameter>)</parameter_list></macro> <value>transform(ALL(str), str.begin(), toupper)</value></define>
+<define>#<directive>define</directive> <macro><name>MAKE_LOWER</name><parameter_list>(<parameter><type><name>str</name></type></parameter>)</parameter_list></macro> <value>transform(ALL(str), str.begin(), tolower)</value></define>
+<define>#<directive>define</directive> <macro><name>randomize</name></macro> <value>srand((unsigned int)time(0));</value></define>
+<comment type="line">//DEFINES END</comment>
+
+<comment type="line">//POINT BEGIN</comment>
+<struct><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+struct <name>POINT</name>
+<block>{<public type="default">
+	<decl_stmt><decl><type><name>T</name></type> <name>x</name></decl>, <decl><type ref="prev"/><name>y</name></decl>;</decl_stmt>
+	<constructor><name>POINT</name><parameter_list>()</parameter_list> <block>{}</block></constructor>
+	<constructor><name>POINT</name><parameter_list>(<parameter><decl><type><name>T</name></type> <name>_x</name></decl></parameter>, <parameter><decl><type><name>T</name></type> <name>_y</name></decl></parameter>)</parameter_list> <member_init_list>: <call><name>x</name><argument_list>(<argument><expr><name>_x</name></expr></argument>)</argument_list></call>, <call><name>y</name><argument_list>(<argument><expr><name>_y</name></expr></argument>)</argument_list></call> </member_init_list><block>{}</block></constructor>
+	<function type="operator"><specifier>inline</specifier> <type><name>bool</name></type> <name>operator <name>&lt;</name></name> <parameter_list>(<parameter><decl><type><specifier>const</specifier> <name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>p</name></decl></parameter>)</parameter_list>
+	<block>{
+		<return>return <expr><operator>(</operator><name>x</name> <operator>&lt;</operator> <name><name>p</name><operator>.</operator><name>x</name></name><operator>)</operator> <operator>||</operator> <operator>(</operator><name>x</name> <operator>==</operator> <name><name>p</name><operator>.</operator><name>x</name></name> <operator>&amp;&amp;</operator> <name>y</name> <operator>&lt;</operator> <name><name>p</name><operator>.</operator><name>y</name></name><operator>)</operator></expr>;</return>
+	}</block></function>
+</public>}</block>;</struct>
+
+<function type="operator"><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><name>istream</name><modifier>&amp;</modifier></type> <name>operator <name>&gt;&gt;</name></name> <parameter_list>(<parameter><decl><type><name>istream</name><modifier>&amp;</modifier></type> <name>is</name></decl></parameter>, <parameter><decl><type><name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>p</name></decl></parameter>)</parameter_list>
+<block>{
+	<expr_stmt><expr><name>is</name> <operator>&gt;&gt;</operator> <name><name>p</name><operator>.</operator><name>x</name></name> <operator>&gt;&gt;</operator> <name><name>p</name><operator>.</operator><name>y</name></name></expr>;</expr_stmt>
+	<return>return <expr><name>is</name></expr>;</return>
+}</block></function>
+
+<function type="operator"><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><name>ostream</name><modifier>&amp;</modifier></type> <name>operator <name>&lt;&lt;</name></name> <parameter_list>(<parameter><decl><type><name>ostream</name><modifier>&amp;</modifier></type> <name>os</name></decl></parameter>, <parameter><decl><type><name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>p</name></decl></parameter>)</parameter_list>
+<block>{
+	<expr_stmt><expr><name>os</name> <operator>&lt;&lt;</operator> <name><name>p</name><operator>.</operator><name>x</name></name> <operator>&lt;&lt;</operator> <literal type="char">' '</literal> <operator>&lt;&lt;</operator> <name><name>p</name><operator>.</operator><name>y</name></name></expr>;</expr_stmt>
+	<return>return <expr><name>os</name></expr>;</return>
+}</block></function>
+<comment type="line">//POINT END</comment>
+
+<comment type="line">//VECTOR BEGIN</comment>
+<struct><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+struct <name>VECTOR</name>
+<block>{<public type="default">
+	<decl_stmt><decl><type><name>T</name></type> <name>x</name></decl>, <decl><type ref="prev"/><name>y</name></decl>;</decl_stmt>
+	<constructor><name>VECTOR</name><parameter_list>()</parameter_list> <block>{}</block></constructor>
+	<constructor><name>VECTOR</name><parameter_list>(<parameter><decl><type><name>T</name></type> <name>_x</name></decl></parameter>, <parameter><decl><type><name>T</name></type> <name>_y</name></decl></parameter>)</parameter_list> <member_init_list>: <call><name>x</name><argument_list>(<argument><expr><name>_x</name></expr></argument>)</argument_list></call>, <call><name>y</name><argument_list>(<argument><expr><name>_y</name></expr></argument>)</argument_list></call> </member_init_list><block>{}</block></constructor>
+	<function type="operator"><specifier>inline</specifier> <type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name></type>  <name>operator <name>-</name></name> <parameter_list>()</parameter_list> <specifier>const</specifier>
+	<block>{
+		<return>return <expr><call><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name><argument_list>(<argument><expr><operator>-</operator><name>x</name></expr></argument>, <argument><expr><operator>-</operator><name>y</name></expr></argument>)</argument_list></call></expr>;</return>
+	}</block></function>
+	<function type="operator"><specifier>inline</specifier> <name>operator <name>POINT&lt;T&gt;</name></name><parameter_list>()</parameter_list> <specifier>const</specifier>
+	<block>{
+		<return>return <expr><call><name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name>x</name></expr></argument>, <argument><expr><name>y</name></expr></argument>)</argument_list></call></expr>;</return>
+	}</block></function>
+</public>}</block>;</struct>
+
+<function type="operator"><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name></type> <name>operator <name>+</name></name> <parameter_list>(<parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>, <parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>u</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><call><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name><name>v</name><operator>.</operator><name>x</name></name> <operator>+</operator> <name><name>u</name><operator>.</operator><name>x</name></name></expr></argument>, <argument><expr><name><name>v</name><operator>.</operator><name>y</name></name> <operator>+</operator> <name><name>u</name><operator>.</operator><name>y</name></name></expr></argument>)</argument_list></call></expr>;</return>
+}</block></function>
+
+<function type="operator"><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name></type> <name>operator <name>-</name></name> <parameter_list>(<parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>, <parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>u</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><call><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name><name>v</name><operator>.</operator><name>x</name></name> <operator>-</operator> <name><name>u</name><operator>.</operator><name>x</name></name></expr></argument>, <argument><expr><name><name>v</name><operator>.</operator><name>y</name></name> <operator>-</operator> <name><name>u</name><operator>.</operator><name>y</name></name></expr></argument>)</argument_list></call></expr>;</return>
+}</block></function>
+
+<function type="operator"><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name></type> <name>operator <name>*</name></name> <parameter_list>(<parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>, <parameter><decl><type><name>T</name></type> <name>a</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><call><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name><name>v</name><operator>.</operator><name>x</name></name> <operator>*</operator> <name>a</name></expr></argument>, <argument><expr><name><name>v</name><operator>.</operator><name>y</name></name> <operator>*</operator> <name>a</name></expr></argument>)</argument_list></call></expr>;</return>
+}</block></function>
+
+<function type="operator"><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name></type> <name>operator <name>/</name></name> <parameter_list>(<parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>, <parameter><decl><type><name>T</name></type> <name>a</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><call><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name><name>v</name><operator>.</operator><name>x</name></name> <operator>/</operator> <name>a</name></expr></argument>, <argument><expr><name><name>v</name><operator>.</operator><name>y</name></name> <operator>/</operator> <name>a</name></expr></argument>)</argument_list></call></expr>;</return>
+}</block></function>
+
+<function type="operator"><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name></type> <name>operator <name>*</name></name> <parameter_list>(<parameter><decl><type><name>T</name></type> <name>a</name></decl></parameter>, <parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><call><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name><name>v</name><operator>.</operator><name>x</name></name> <operator>*</operator> <name>a</name></expr></argument>, <argument><expr><name><name>v</name><operator>.</operator><name>y</name></name> <operator>*</operator> <name>a</name></expr></argument>)</argument_list></call></expr>;</return>
+}</block></function>
+
+<function type="operator"><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name></type> <name>operator <name>/</name></name> <parameter_list>(<parameter><decl><type><name>T</name></type> <name>a</name></decl></parameter>, <parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><call><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name><name>v</name><operator>.</operator><name>x</name></name> <operator>/</operator> <name>a</name></expr></argument>, <argument><expr><name><name>v</name><operator>.</operator><name>y</name></name> <operator>/</operator> <name>a</name></expr></argument>)</argument_list></call></expr>;</return>
+}</block></function>
+
+<function type="operator"><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><specifier>const</specifier> <name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name></type> <name>operator <name>+</name></name> <parameter_list>(<parameter><decl><type><specifier>const</specifier> <name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>p</name></decl></parameter>, <parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><name>p</name> <operator>+</operator> <operator>(</operator><name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name><operator>)</operator><name>v</name></expr>;</return>
+}</block></function>
+
+<function type="operator"><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><specifier>const</specifier> <name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name></type> <name>operator <name>-</name></name> <parameter_list>(<parameter><decl><type><specifier>const</specifier> <name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>p</name></decl></parameter>, <parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><name>p</name> <operator>-</operator> <operator>(</operator><name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name><operator>)</operator><name>v</name></expr>;</return>
+}</block></function>
+
+<function type="operator"><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><name>istream</name><modifier>&amp;</modifier></type> <name>operator <name>&gt;&gt;</name></name> <parameter_list>(<parameter><decl><type><name>istream</name> <modifier>&amp;</modifier></type><name>is</name></decl></parameter>, <parameter><decl><type><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>)</parameter_list>
+<block>{
+	<expr_stmt><expr><name>is</name> <operator>&gt;&gt;</operator> <name><name>v</name><operator>.</operator><name>x</name></name> <operator>&gt;&gt;</operator> <name><name>v</name><operator>.</operator><name>y</name></name></expr>;</expr_stmt>
+	<return>return <expr><name>is</name></expr>;</return>
+}</block></function>
+
+<function type="operator"><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><name>ostream</name><modifier>&amp;</modifier></type> <name>operator <name>&lt;&lt;</name></name> <parameter_list>(<parameter><decl><type><name>ostream</name> <modifier>&amp;</modifier></type><name>os</name></decl></parameter>, <parameter><decl><type><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>)</parameter_list>
+<block>{
+	<expr_stmt><expr><name>os</name> <operator>&lt;&lt;</operator> <name><name>v</name><operator>.</operator><name>x</name></name> <operator>&lt;&lt;</operator> <literal type="char">' '</literal> <operator>&lt;&lt;</operator> <name><name>v</name><operator>.</operator><name>y</name></name></expr>;</expr_stmt>
+	<return>return <expr><name>os</name></expr>;</return>
+}</block></function>
+<comment type="line">//VECTOR END</comment>
+
+<comment type="line">//TYPEDEFS BEGIN</comment>
+<typedef>typedef <type><name>unsigned</name> <name>int</name></type> <name>uint</name>;</typedef>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name>unsigned</name> <name>long</name> <name>long</name></type> <name>ull</name>;</typedef>
+<typedef>typedef <type><name>long</name> <name>double</name></type> <name>ldb</name>;</typedef>
+<typedef>typedef <type><name>double</name></type> <name>db</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pii</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pli</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name></type> <name>pil</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>, <argument><expr><name>ll</name></expr></argument> &gt;</argument_list></name></type> <name>pll</name>;</typedef>
+<typedef>typedef <type><name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>PINT</name>;</typedef>
+<typedef>typedef <type><name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name></type> <name>PLL</name>;</typedef>
+<typedef>typedef <type><name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>db</name></expr></argument>&gt;</argument_list></name></type> <name>PDB</name>;</typedef>
+<typedef>typedef <type><name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>ldb</name></expr></argument>&gt;</argument_list></name></type> <name>PLDB</name>;</typedef>
+<typedef>typedef <type><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>VINT</name>;</typedef>
+<typedef>typedef <type><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name></type> <name>VLL</name>;</typedef>
+<typedef>typedef <type><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>db</name></expr></argument>&gt;</argument_list></name></type> <name>VDB</name>;</typedef>
+<typedef>typedef <type><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>ldb</name></expr></argument>&gt;</argument_list></name></type> <name>VLDB</name>;</typedef>
+<comment type="line">//TYPEDEFS END</comment>
+
+<comment type="line">//CONSTANTS BEGIN</comment>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ldb</name></type> <name>PI</name> <init>= <expr><call><name>acos</name><argument_list>(<argument><expr><operator>-</operator><literal type="number">1.0</literal></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ldb</name></type> <name>EPS</name> <init>= <expr><literal type="number">1E</literal><operator>-</operator><literal type="number">9</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>MAXN</name> <init>= <expr><literal type="number">100000</literal> <operator>+</operator> <literal type="number">228</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>INF</name> <init>= <expr><name>INT_MAX</name> <operator>-</operator> <literal type="number">228</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ll</name></type> <name>LLINF</name> <init>= <expr><name>LLONG_MAX</name> <operator>-</operator> <literal type="number">228</literal></expr></init></decl>;</decl_stmt>
+<comment type="line">//CONSTANTS END</comment>
+
+<comment type="line">//GFUNCTIONS BEGIN</comment>
+<function><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name></type> <name>GET_VEC</name><parameter_list>(<parameter><decl><type><name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name></type> <name>a</name></decl></parameter>, <parameter><decl><type><name><name>POINT</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name></type> <name>b</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><call><name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name><name>b</name><operator>.</operator><name>x</name></name> <operator>-</operator> <name><name>a</name><operator>.</operator><name>x</name></name></expr></argument>, <argument><expr><name><name>b</name><operator>.</operator><name>y</name></name> <operator>-</operator> <name><name>a</name><operator>.</operator><name>y</name></name></expr></argument>)</argument_list></call></expr>;</return>
+}</block></function>
+
+<function><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><name>T</name></type> <name>SCAL_PR</name><parameter_list>(<parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>, <parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>u</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><name><name>v</name><operator>.</operator><name>x</name></name> <operator>*</operator> <name><name>u</name><operator>.</operator><name>x</name></name> <operator>+</operator> <name><name>v</name><operator>.</operator><name>y</name></name> <operator>*</operator> <name><name>u</name><operator>.</operator><name>y</name></name></expr>;</return>
+}</block></function>
+
+<function><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><name>T</name></type> <name>VEC_PR</name><parameter_list>(<parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>, <parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>u</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><name><name>v</name><operator>.</operator><name>x</name></name> <operator>*</operator> <name><name>u</name><operator>.</operator><name>y</name></name> <operator>-</operator> <name><name>v</name><operator>.</operator><name>y</name></name> <operator>*</operator> <name><name>u</name><operator>.</operator><name>x</name></name></expr>;</return>
+}</block></function>
+
+<function><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><name>ldb</name></type> <name>LEN</name><parameter_list>(<parameter><decl><type><specifier>const</specifier> <name><name>VECTOR</name><argument_list type="generic">&lt;<argument><expr><name>T</name></expr></argument>&gt;</argument_list></name> <modifier>&amp;</modifier></type><name>v</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><call><name>sqrt</name><argument_list>(<argument><expr><call><name>SCAL_PR</name><argument_list>(<argument><expr><name>v</name></expr></argument>, <argument><expr><name>v</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+}</block></function>
+
+<function><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template>
+<specifier>inline</specifier> <type><name>T</name></type> <name>sqr</name><parameter_list>(<parameter><decl><type><specifier>const</specifier> <name>T</name></type> <name>x</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><name>x</name> <operator>*</operator> <name>x</name></expr>;</return>
+}</block></function>
+<comment type="line">//GFUNCTIONS END</comment>
+
+<comment type="line">//INITIALIZATION BEGIN</comment>
+<decl_stmt><decl><type><name>ll</name></type> <name>n</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>ll</name></type> <name><name>a</name><index>[<expr><literal type="number">6</literal></expr>]</index></name></decl>;</decl_stmt>
+<comment type="line">//INITIALIZATION END</comment>
+
+<comment type="line">//FUNCTIONS BEGIN</comment>
+<comment type="line">//FUNCTIONS END</comment>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<comment type="line">//OF("input.txt", "output.txt");</comment>
+	<expr_stmt><expr><name>faster</name></expr>;</expr_stmt>
+	<expr_stmt><expr><name>randomize</name></expr>;</expr_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><literal type="number">2</literal></expr>]</index></name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><literal type="number">3</literal></expr>]</index></name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><literal type="number">4</literal></expr>]</index></name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><literal type="number">5</literal></expr>]</index></name></expr>;</expr_stmt>
+	<expr_stmt><expr><name>n</name> <operator>=</operator> <name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>+</operator> <name><name>a</name><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>+</operator> <name><name>a</name><index>[<expr><literal type="number">2</literal></expr>]</index></name></expr>;</expr_stmt>
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <call><name>sqr</name><argument_list>(<argument><expr><name>n</name></expr></argument>)</argument_list></call> <operator>-</operator> <call><name>sqr</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>)</argument_list></call> <operator>-</operator> <call><name>sqr</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><literal type="number">2</literal></expr>]</index></name></expr></argument>)</argument_list></call> <operator>-</operator> <call><name>sqr</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><literal type="number">4</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<label><name>EXIT</name>:</label> <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12187996.cpp"><comment type="line">//Language: MS C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cctype&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;sstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;numeric&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;utility&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;list&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+    <decl_stmt><decl><type><name>unsigned</name> <name>int</name></type> <name>a1</name></decl>, <decl><type ref="prev"/><name>b1</name></decl>, <decl><type ref="prev"/><name>a2</name></decl>, <decl><type ref="prev"/><name>b2</name></decl>, <decl><type ref="prev"/><name>a3</name></decl>, <decl><type ref="prev"/><name>b3</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>a3</name> <operator>&gt;&gt;</operator> <name>b3</name> <operator>&gt;&gt;</operator> <name>a2</name> <operator>&gt;&gt;</operator> <name>b2</name> <operator>&gt;&gt;</operator> <name>a1</name> <operator>&gt;&gt;</operator> <name>b1</name></expr>;</expr_stmt>
+    <if>if <condition>(<expr><name>a1</name> <operator>+</operator> <name>a2</name> <operator>&lt;=</operator> <name>a3</name> <operator>&amp;&amp;</operator> <call><name>max</name><argument_list>(<argument><expr><name>b1</name></expr></argument>, <argument><expr><name>b2</name></expr></argument>)</argument_list></call> <operator>&lt;=</operator> <name>b3</name> <operator>||</operator> <name>a1</name> <operator>+</operator> <name>a2</name> <operator>&lt;=</operator> <name>b3</name> <operator>&amp;&amp;</operator> <call><name>max</name><argument_list>(<argument><expr><name>b1</name></expr></argument>, <argument><expr><name>b2</name></expr></argument>)</argument_list></call> <operator>&lt;=</operator> <name>a3</name> <operator>||</operator> <name>b1</name> <operator>+</operator> <name>b2</name> <operator>&lt;=</operator> <name>a3</name> <operator>&amp;&amp;</operator> <call><name>max</name><argument_list>(<argument><expr><name>a1</name></expr></argument>, <argument><expr><name>a2</name></expr></argument>)</argument_list></call> <operator>&lt;=</operator> <name>b3</name> <operator>||</operator> <name>b1</name> <operator>+</operator> <name>b2</name> <operator>&lt;=</operator> <name>b3</name> <operator>&amp;&amp;</operator> <call><name>max</name><argument_list>(<argument><expr><name>a1</name></expr></argument>, <argument><expr><name>a2</name></expr></argument>)</argument_list></call> <operator>&lt;=</operator> <name>a3</name>
+        <operator>||</operator> <name>a1</name> <operator>+</operator> <name>b2</name> <operator>&lt;=</operator> <name>a3</name> <operator>&amp;&amp;</operator> <call><name>max</name><argument_list>(<argument><expr><name>b1</name></expr></argument>, <argument><expr><name>a2</name></expr></argument>)</argument_list></call> <operator>&lt;=</operator> <name>b3</name> <operator>||</operator> <name>a1</name> <operator>+</operator> <name>b2</name> <operator>&lt;=</operator> <name>b3</name> <operator>&amp;&amp;</operator> <call><name>max</name><argument_list>(<argument><expr><name>b1</name></expr></argument>, <argument><expr><name>a2</name></expr></argument>)</argument_list></call> <operator>&lt;=</operator> <name>a3</name> <operator>||</operator> <name>b1</name> <operator>+</operator> <name>a2</name> <operator>&lt;=</operator> <name>a3</name> <operator>&amp;&amp;</operator> <call><name>max</name><argument_list>(<argument><expr><name>a1</name></expr></argument>, <argument><expr><name>b2</name></expr></argument>)</argument_list></call> <operator>&lt;=</operator> <name>b3</name> <operator>||</operator> <name>b1</name> <operator>+</operator> <name>a2</name> <operator>&lt;=</operator> <name>b3</name> <operator>&amp;&amp;</operator> <call><name>max</name><argument_list>(<argument><expr><name>a1</name></expr></argument>, <argument><expr><name>b2</name></expr></argument>)</argument_list></call> <operator>&lt;=</operator> <name>a3</name></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt></block></then>
+    <else>else <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"NO"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt></block></else></if>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

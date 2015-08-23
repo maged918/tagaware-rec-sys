@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12373672.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>val</name> <init>= <expr><literal type="number">1000000000</literal></expr></init></decl>;</decl_stmt>
+<typedef>typedef <type><name>long</name> <name>long</name> <name>int</name></type> <name>lli</name>;</typedef>
+
+<decl_stmt><decl><type><name><name>map</name> <argument_list type="generic">&lt; <argument><expr><name>lli</name></expr></argument> , <argument><expr><name>lli</name></expr></argument> &gt;</argument_list></name></type> <name>m1</name></decl>,<decl><type ref="prev"/><name>m2</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>vector</name> <argument_list type="generic">&lt; <argument><expr><name>lli</name></expr></argument> &gt;</argument_list></name></type> <name>poc</name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+	
+	<decl_stmt><decl><type><name>lli</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>k</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>k</name></expr>;</expr_stmt>
+	<for>for <control>( <init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl> ;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr> ;</condition> <incr><expr><name>i</name> <operator>++</operator></expr></incr> )</control> <block>{
+		<decl_stmt><decl><type><name>lli</name></type> <name>a</name></decl>;</decl_stmt>
+		<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%I64d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><call><name><name>poc</name><operator>.</operator><name>push_back</name></name><argument_list>(<argument><expr><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	}</block></for>
+	<for>for <control>( <init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><name>n</name><operator>-</operator><literal type="number">1</literal></expr></init></decl> ;</init> <condition><expr><name>i</name> <operator>&gt;=</operator> <literal type="number">2</literal></expr> ;</condition> <incr><expr><name>i</name> <operator>--</operator></expr></incr> )</control> <block>{
+		<comment type="line">//cout &lt;&lt; m2[poc[i]] &lt;&lt; endl;</comment>
+		<expr_stmt><expr><name><name>m2</name><index>[<expr><name><name>poc</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+	}</block></for>
+	
+	<decl_stmt><decl><type><name>lli</name></type> <name>rez</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+	<expr_stmt><expr><name><name>m1</name><index>[<expr><name><name>poc</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr>]</index></name> <operator>++</operator></expr>;</expr_stmt>
+	<for>for <control>( <init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl> ;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr> ;</condition> <incr><expr><name>i</name> <operator>++</operator></expr></incr> )</control> <block>{
+		<if>if <condition>( <expr><name>i</name> <operator>!=</operator> <literal type="number">1</literal></expr> )</condition><then> <block type="pseudo"><expr_stmt><expr><name><name>m2</name><index>[<expr><name><name>poc</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>--</operator></expr>;</expr_stmt></block></then></if>
+		<comment type="line">//cout &lt;&lt; m1[poc[i]/k] &lt;&lt; " " &lt;&lt; m2[poc[i]*k] &lt;&lt; endl;</comment>
+		<if>if <condition>( <expr><name><name>poc</name><index>[<expr><name>i</name></expr>]</index></name> <operator>%</operator> <name>k</name> <operator>==</operator> <literal type="number">0</literal></expr> )</condition><then> <block>{
+			<expr_stmt><expr><name>rez</name> <operator>+=</operator> <name><name>m1</name><index>[<expr><name><name>poc</name><index>[<expr><name>i</name></expr>]</index></name><operator>/</operator><name>k</name></expr>]</index></name> <operator>*</operator> <name><name>m2</name><index>[<expr><name><name>poc</name><index>[<expr><name>i</name></expr>]</index></name><operator>*</operator><name>k</name></expr>]</index></name></expr>;</expr_stmt>
+		}</block></then></if>
+		<expr_stmt><expr><name><name>m1</name><index>[<expr><name><name>poc</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>++</operator></expr>;</expr_stmt>
+	}</block></for>
+		
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>rez</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+		
+	
+</unit>

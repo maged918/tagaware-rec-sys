@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12509473.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;fstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>m</name></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>a</name> <init>= <expr><name>m</name><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>b</name> <init>= <expr><name>n</name><operator>-</operator><name>m</name></expr></init></decl>;</decl_stmt>
+	<if>if<condition>(<expr><name>n</name><operator>==</operator><literal type="number">1</literal> <operator>&amp;&amp;</operator> <name>m</name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then><block>{
+		<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+		<return>return <expr><literal type="number">0</literal></expr>;</return>
+	}</block></then></if>
+	<if>if<condition>(<expr><name>a</name><operator>&gt;=</operator><name>b</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>a</name></expr>;</expr_stmt></block></then>
+	<else>else <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>m</name><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt></block></else></if>
+}</block></function></unit>

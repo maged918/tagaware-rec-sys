@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12046569.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<define>#<directive>define</directive> <macro><name>dbgs</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>cerr &lt;&lt; (#x) &lt;&lt; " --&gt; " &lt;&lt; (x) &lt;&lt; ' '</value></define>
+<define>#<directive>define</directive> <macro><name>dbg</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>cerr &lt;&lt; (#x) &lt;&lt; " --&gt; " &lt;&lt; (x) &lt;&lt; endl</value></define>
+
+<define>#<directive>define</directive> <macro><name>foreach</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>for(type(x)i=x.begin();i!=x.end();i++)</value></define>
+<define>#<directive>define</directive> <macro><name>FOR</name><parameter_list>(<parameter><type><name>ii</name></type></parameter>,<parameter><type><name>aa</name></type></parameter>,<parameter><type><name>bb</name></type></parameter>)</parameter_list></macro> <value>for(int ii=aa;ii&lt;=bb;ii++)</value></define>
+<define>#<directive>define</directive> <macro><name>ROF</name><parameter_list>(<parameter><type><name>ii</name></type></parameter>,<parameter><type><name>aa</name></type></parameter>,<parameter><type><name>bb</name></type></parameter>)</parameter_list></macro> <value>for(int ii=aa;ii&gt;=bb;ii--)</value></define>
+
+<define>#<directive>define</directive> <macro><name>type</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>__typeof(x.begin())</value></define>
+
+<define>#<directive>define</directive> <macro><name>orta</name></macro> <value>(bas + son &gt;&gt; 1)</value></define>
+<define>#<directive>define</directive> <macro><name>sag</name></macro> <value>(k + k + 1)</value></define>
+<define>#<directive>define</directive> <macro><name>sol</name></macro> <value>(k + k)</value></define>
+
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+
+<define>#<directive>define</directive> <macro><name>nd</name></macro> <value>second</value></define>
+<define>#<directive>define</directive> <macro><name>st</name></macro> <value>first</value></define>
+
+<define>#<directive>define</directive> <macro><name>endl</name></macro> <value>'\n'</value></define>
+
+<typedef>typedef <type><name><name>pair</name> <argument_list type="generic">&lt; <argument><expr><name>int</name></expr></argument> ,<argument><expr><name>int</name></expr></argument> &gt;</argument_list></name></type> <name>pii</name>;</typedef>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>long</name> <name>long</name></type> <name>linf</name> <init>= <expr><literal type="number">1e18</literal><operator>+</operator><literal type="number">5</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>mod</name> <init>= <expr><literal type="number">1e9</literal><operator>+</operator><literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>logN</name> <init>= <expr><literal type="number">17</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>inf</name> <init>= <expr><literal type="number">1e9</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>N</name> <init>= <expr><literal type="number">1e5</literal><operator>+</operator><literal type="number">5</literal></expr></init></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>, <decl><type ref="prev"/><name>j</name></decl>, <decl><type ref="prev"/><name>k</name></decl>, <decl><type ref="prev"/><name>n</name></decl>, <decl><type ref="prev"/><name>m</name></decl>, <decl><type ref="prev"/><name>x</name></decl>, <decl><type ref="prev"/><name>y</name></decl>, <decl><type ref="prev"/><name>t</name></decl>, <decl><type ref="prev"/><name>q</name></decl>, <decl><type ref="prev"/><name>z</name></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>string</name></type> <name>str</name></decl>;</decl_stmt>
+
+<class>class <name>node</name> <block>{<private type="default">
+	</private><public>public:
+	<decl_stmt><decl><type><name>int</name></type> <name><name>cnt</name><index>[<expr><literal type="number">26</literal></expr>]</index></name></decl>, <decl><type ref="prev"/><name>L</name></decl>;</decl_stmt>
+	<constructor><name>node</name><parameter_list>()</parameter_list> <block>{ <expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>cnt</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><sizeof>sizeof <name>cnt</name></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt> <expr_stmt><expr><name>L</name> <operator>=</operator> <operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt> }</block></constructor>	
+</public>}</block> <decl><name><name>ST</name><index>[<expr><name>N</name> <operator>&lt;&lt;</operator> <literal type="number">2</literal></expr>]</index></name></decl>, <decl><type ref="prev"/><name>emp</name></decl>;</class>
+
+<function><type><name>node</name></type> <name>merge</name><parameter_list>(<parameter><decl><type><name>node</name></type> <name>x</name></decl></parameter>, <parameter><decl><type><name>node</name></type> <name>y</name></decl></parameter>)</parameter_list> <block>{
+	<decl_stmt><decl><type><name>node</name></type> <name>temp</name></decl>;</decl_stmt>
+	<macro><name>FOR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">0</literal></argument>,<argument><literal type="number">25</literal></argument>)</argument_list></macro> <expr_stmt><expr><name><name>temp</name><operator>.</operator><name>cnt</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name><name>x</name><operator>.</operator><name>cnt</name><index>[<expr><name>i</name></expr>]</index></name> <operator>+</operator> <name><name>y</name><operator>.</operator><name>cnt</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+	<return>return <expr><name>temp</name></expr>;</return>
+}</block></function>
+
+<function><type><name>void</name></type> <name>upd</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>k</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>x</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>y</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>t</name></decl></parameter>)</parameter_list> <block>{
+	<expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>cnt</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><sizeof>sizeof <name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name></sizeof><operator>.</operator><name>cnt</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name><name>cnt</name><index>[<expr><name>t</name></expr>]</index></name> <operator>=</operator> <name>y</name> <operator>-</operator> <name>x</name> <operator>+</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+	<expr_stmt><expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>L</name> <operator>=</operator> <name>t</name></expr>;</expr_stmt>
+}</block></function>
+
+<function><type><name>void</name></type> <name>push</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>k</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>bas</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>son</name></decl></parameter>)</parameter_list> <block>{
+	<if>if<condition>(<expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>L</name> <operator>==</operator> <operator>-</operator><literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><return>return ;</return></block></then></if>
+	<expr_stmt><expr><call><name>upd</name><argument_list>(<argument><expr><name>sol</name></expr></argument>,<argument><expr><name>bas</name></expr></argument>,<argument><expr><name>orta</name></expr></argument>,<argument><expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>L</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>	
+	<expr_stmt><expr><call><name>upd</name><argument_list>(<argument><expr><name>sag</name></expr></argument>,<argument><expr><name>orta</name><operator>+</operator><literal type="number">1</literal></expr></argument>,<argument><expr><name>son</name></expr></argument>,<argument><expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>L</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>	
+	<expr_stmt><expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>L</name> <operator>=</operator> <operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt>
+}</block></function>
+
+<function><type><name>node</name></type> <name>init</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>k</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>bas</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>son</name></decl></parameter>)</parameter_list> <block>{
+	<expr_stmt><expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>L</name> <operator>=</operator> <operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt>
+	<if>if<condition>(<expr><name>bas</name> <operator>==</operator> <name>son</name></expr>)</condition><then> <block>{ <expr_stmt><expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name><name>cnt</name><index>[<expr><name><name>str</name><index>[<expr><name>bas</name></expr>]</index></name><operator>-</operator><literal type="char">'a'</literal></expr>]</index></name><operator>++</operator></expr>;</expr_stmt> <return>return <expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name></expr>;</return> }</block></then></if>
+	<return>return <expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name> <operator>=</operator> <call><name>merge</name><argument_list>(<argument><expr><call><name>init</name><argument_list>(<argument><expr><name>sol</name></expr></argument>, <argument><expr><name>bas</name></expr></argument>, <argument><expr><name>orta</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><call><name>init</name><argument_list>(<argument><expr><name>sag</name></expr></argument>, <argument><expr><name>orta</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><name>son</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+}</block></function>
+
+<function><type><name>node</name></type> <name>query</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>k</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>bas</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>son</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>x</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>y</name></decl></parameter>)</parameter_list> <block>{
+	<if>if<condition>(<expr><name>bas</name> <operator>&gt;</operator> <name>y</name> <operator>||</operator> <name>son</name> <operator>&lt;</operator> <name>x</name></expr>)</condition><then> <block type="pseudo"><return>return <expr><name>emp</name></expr>;</return></block></then></if>
+	<if>if<condition>(<expr><name>x</name> <operator>&lt;=</operator> <name>bas</name> <operator>&amp;&amp;</operator> <name>son</name> <operator>&lt;=</operator> <name>y</name></expr>)</condition><then> <block type="pseudo"><return>return <expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name></expr>;</return></block></then></if>
+	<expr_stmt><expr><call><name>push</name><argument_list>(<argument><expr><name>k</name></expr></argument>,<argument><expr><name>bas</name></expr></argument>,<argument><expr><name>son</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<return>return <expr><call><name>merge</name><argument_list>(<argument><expr><call><name>query</name><argument_list>(<argument><expr><name>sol</name></expr></argument>, <argument><expr><name>bas</name></expr></argument>, <argument><expr><name>orta</name></expr></argument>, <argument><expr><name>x</name></expr></argument>, <argument><expr><name>y</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><call><name>query</name><argument_list>(<argument><expr><name>sag</name></expr></argument>, <argument><expr><name>orta</name><operator>+</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>son</name></expr></argument>, <argument><expr><name>x</name></expr></argument>, <argument><expr><name>y</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>	
+}</block></function>
+
+<function><type><name>node</name></type> <name>update</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>k</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>bas</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>son</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>x</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>y</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>t</name></decl></parameter>)</parameter_list> <block>{
+	<if>if<condition>(<expr><name>bas</name> <operator>&gt;</operator> <name>y</name> <operator>||</operator> <name>son</name> <operator>&lt;</operator> <name>x</name></expr>)</condition><then> <block type="pseudo"><return>return <expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name></expr>;</return></block></then></if>
+	<if>if<condition>(<expr><name>x</name> <operator>&lt;=</operator> <name>bas</name> <operator>&amp;&amp;</operator> <name>son</name> <operator>&lt;=</operator> <name>y</name></expr>)</condition><then> <block>{
+		<expr_stmt><expr><call><name>upd</name><argument_list>(<argument><expr><name>k</name></expr></argument>,<argument><expr><name>bas</name></expr></argument>,<argument><expr><name>son</name></expr></argument>,<argument><expr><name>t</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<return>return <expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name></expr>;</return>
+	}</block></then></if>
+	<expr_stmt><expr><call><name>push</name><argument_list>(<argument><expr><name>k</name></expr></argument>,<argument><expr><name>bas</name></expr></argument>,<argument><expr><name>son</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<return>return <expr><name><name>ST</name><index>[<expr><name>k</name></expr>]</index></name> <operator>=</operator> <call><name>merge</name><argument_list>(<argument><expr><call><name>update</name><argument_list>(<argument><expr><name>sol</name></expr></argument>, <argument><expr><name>bas</name></expr></argument>, <argument><expr><name>orta</name></expr></argument>, <argument><expr><name>x</name></expr></argument>, <argument><expr><name>y</name></expr></argument>, <argument><expr><name>t</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><call><name>update</name><argument_list>(<argument><expr><name>sag</name></expr></argument>, <argument><expr><name>orta</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><name>son</name></expr></argument>, <argument><expr><name>x</name></expr></argument>, <argument><expr><name>y</name></expr></argument>, <argument><expr><name>t</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>	
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+	
+	<expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>q</name> <operator>&gt;&gt;</operator> <name>str</name></expr>;</expr_stmt> <expr_stmt><expr><name>str</name> <operator>=</operator> <literal type="char">'0'</literal> <operator>+</operator> <name>str</name></expr>;</expr_stmt>
+
+	<expr_stmt><expr><call><name>init</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>,<argument><expr><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+	<macro><name>FOR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">1</literal></argument>,<argument>q</argument>)</argument_list></macro> <block>{
+		
+		<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>x</name> <operator>&gt;&gt;</operator> <name>y</name> <operator>&gt;&gt;</operator> <name>z</name></expr>;</expr_stmt>
+
+		<decl_stmt><decl><type><name>node</name></type> <name>t</name> <init>= <expr><call><name>query</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>,<argument><expr><name>n</name></expr></argument>,<argument><expr><name>x</name></expr></argument>,<argument><expr><name>y</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+	
+		<if>if<condition>(<expr><name>z</name> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then> <block>{
+			<decl_stmt><decl><type><name>int</name></type> <name>last</name> <init>= <expr><name>x</name></expr></init></decl>;</decl_stmt>
+			<macro><name>FOR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">0</literal></argument>,<argument><literal type="number">25</literal></argument>)</argument_list></macro> <block>{  <expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>,<argument><expr><name>n</name></expr></argument>,<argument><expr><name>last</name></expr></argument>,<argument><expr><name>last</name><operator>+</operator><name><name>t</name><operator>.</operator><name>cnt</name><index>[<expr><name>i</name></expr>]</index></name><operator>-</operator><literal type="number">1</literal></expr></argument>,<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt> <expr_stmt><expr><name>last</name> <operator>+=</operator> <name><name>t</name><operator>.</operator><name>cnt</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt> }</block>
+		}</block></then>
+		
+		<else>else <block>{
+			<decl_stmt><decl><type><name>int</name></type> <name>last</name> <init>= <expr><name>x</name></expr></init></decl>;</decl_stmt>
+			<macro><name>ROF</name><argument_list>(<argument>i</argument>,<argument><literal type="number">25</literal></argument>,<argument><literal type="number">0</literal></argument>)</argument_list></macro> <block>{  <expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>,<argument><expr><name>n</name></expr></argument>,<argument><expr><name>last</name></expr></argument>,<argument><expr><name>last</name><operator>+</operator><name><name>t</name><operator>.</operator><name>cnt</name><index>[<expr><name>i</name></expr>]</index></name><operator>-</operator><literal type="number">1</literal></expr></argument>,<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt> <expr_stmt><expr><name>last</name> <operator>+=</operator> <name><name>t</name><operator>.</operator><name>cnt</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt> }</block>
+		}</block></else></if>
+		
+	}</block>
+
+	<macro><name>FOR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">1</literal></argument>,<argument>n</argument>)</argument_list></macro> <block>{
+		
+		<decl_stmt><decl><type><name>node</name></type> <name>temp</name> <init>= <expr><call><name>query</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>,<argument><expr><name>n</name></expr></argument>,<argument><expr><name>i</name></expr></argument>,<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+		<macro><name>FOR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">0</literal></argument>,<argument><literal type="number">25</literal></argument>)</argument_list></macro> <if>if<condition>(<expr><name><name>temp</name><operator>.</operator><name>cnt</name><index>[<expr><name>i</name></expr>]</index></name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <call>(<name>char</name>)<argument_list>(<argument><expr><name>i</name><operator>+</operator><literal type="char">'a'</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if> 
+		
+	}</block> <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

@@ -1,5 +1,7 @@
 # author: tarek
 # desc: takes in data dir path, produces xml files by srcml and cleans unnecessary namespaces
+# assuming that srcml command is working, http://www.srcml.org/downloads.html
+
 cd $1
 for contest in $(ls); do
 	echo "processing $contest"

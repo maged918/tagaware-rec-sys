@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12148761.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>MAXN</name></cpp:macro> <cpp:value>100010</cpp:value></cpp:define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><name>int</name></type> <name><name>E</name><index>[<expr><name>MAXN</name></expr>]</index></name></decl>, <decl><type ref="prev"/><name><name>F</name><index>[<expr><name>MAXN</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>bool</name></type> <name><name>vis</name><index>[<expr><name>MAXN</name></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>void</name></type> <name>solve</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>X</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>C</name></decl></parameter>)</parameter_list>
+<block>{
+	<if>if<condition>(<expr><name>X</name> <operator>&gt;</operator> <name>MAXN</name> <operator>-</operator> <literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><return>return;</return></block></then></if>
+	<if>if<condition>(<expr><name><name>vis</name><index>[<expr><name>X</name></expr>]</index></name></expr>)</condition><then> <block type="pseudo"><return>return;</return></block></then></if>
+	<expr_stmt><expr><name><name>F</name><index>[<expr><name>X</name></expr>]</index></name> <operator>+=</operator> <name>C</name></expr>;</expr_stmt>
+	<expr_stmt><expr><name><name>E</name><index>[<expr><name>X</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+	<expr_stmt><expr><name><name>vis</name><index>[<expr><name>X</name></expr>]</index></name> <operator>=</operator> <literal type="boolean">true</literal></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name>solve</name><argument_list>(<argument><expr><name>X</name> <operator>/</operator> <literal type="number">2</literal></expr></argument>, <argument><expr><name>C</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name>solve</name><argument_list>(<argument><expr><name>X</name> <operator>*</operator> <literal type="number">2</literal></expr></argument>, <argument><expr><name>C</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<return>return;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> 
+<block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>N</name></decl>, <decl><type ref="prev"/><name>tmp</name></decl>, <decl><type ref="prev"/><name>ANS</name> <init>= <expr><name>INT_MAX</name></expr></init></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>N</name></expr>;</expr_stmt>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+	<block>{
+		<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>tmp</name></expr>;</expr_stmt>
+		<expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>vis</name></expr></argument>, <argument><expr><literal type="boolean">false</literal></expr></argument>, <argument><expr><sizeof>sizeof<argument_list>(<argument><expr><name>vis</name></expr></argument>)</argument_list></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><call><name>solve</name><argument_list>(<argument><expr><name>tmp</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	}</block></for>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>MAXN</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+		<block type="pseudo"><if>if<condition>(<expr><name><name>E</name><index>[<expr><name>i</name></expr>]</index></name> <operator>==</operator> <name>N</name></expr>)</condition><then>
+			<block type="pseudo"><if>if<condition>(<expr><name><name>F</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&lt;</operator> <name>ANS</name></expr>)</condition><then>
+				<block type="pseudo"><expr_stmt><expr><name>ANS</name> <operator>=</operator> <name><name>F</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></then></if></block></then></if></block></for>
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>ANS</name> <operator>&lt;&lt;</operator> <literal type="char">'\n'</literal></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

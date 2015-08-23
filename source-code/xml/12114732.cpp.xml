@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12114732.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<comment type="line">// O(n) Solution</comment>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;stdio.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;string.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;stdlib.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;math.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;limits.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstdio&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>llu</name></cpp:macro> <cpp:value>long long unsigned int</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>lli</name></cpp:macro> <cpp:value>long long int</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>li</name></cpp:macro> <cpp:value>long int</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>pii</name></cpp:macro> <cpp:value>pair&lt;int,int&gt;</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>fi</name></cpp:macro> <cpp:value>first</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>se</name></cpp:macro> <cpp:value>second</cpp:value></cpp:define>   
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>pb</name></cpp:macro> <cpp:value>push_back</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>mod</name></cpp:macro> <cpp:value>1000000007</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>vi</name></cpp:macro> <cpp:value>vector&lt;int&gt;</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>mp</name></cpp:macro> <cpp:value>make_pair</cpp:value></cpp:define>
+
+<comment type="block">/*int scan()    {int ip=getchar_unlocked(),ret=0,flag=1;for(;ip&lt;'0'||ip&gt;'9';ip=getchar_unlocked())if(ip=='-'){flag=-1;ip=getchar_unlocked();break;}for(;ip&gt;='0'&amp;&amp;ip&lt;='9';ip=getchar_unlocked())ret=ret*10+ip-'0';return flag*ret;}
+li scanli()    {int ip=getchar_unlocked(),flag=1;li ret=0;for(;ip&lt;'0'||ip&gt;'9';ip=getchar_unlocked())if(ip=='-'){flag=-1;ip=getchar_unlocked();break;}for(;ip&gt;='0'&amp;&amp;ip&lt;='9';ip=getchar_unlocked())ret=ret*10+ip-'0';return flag*ret;}
+lli scanlli()    {int ip=getchar_unlocked(),flag=1;lli ret=0;for(;ip&lt;'0'||ip&gt;'9';ip=getchar_unlocked())if(ip=='-'){flag=-1;ip=getchar_unlocked();break;}for(;ip&gt;='0'&amp;&amp;ip&lt;='9';ip=getchar_unlocked())ret=ret*10+ip-'0';return flag*ret;}
+llu scanllu()    {int ip=getchar_unlocked();llu ret=0;for(;ip&lt;'0'||ip&gt;'9';ip=getchar_unlocked());for(;ip&gt;='0'&amp;&amp;ip&lt;='9';ip=getchar_unlocked())ret=ret*10+ip-'0';return ret;}
+void print(int n)     {if(n&lt;0){n=-n;putchar_unlocked('-');}int i=10;char output_buffer[10];do{output_buffer[--i]=(n%10)+'0';n/=10;}while(n);do{putchar_unlocked(output_buffer[i]);}while(++i&lt;10);}
+void printli(li n)     {if(n&lt;0){n=-n;putchar_unlocked('-');}int i=11;char output_buffer[11];do{output_buffer[--i]=(n%10)+'0';n/=10;}while(n);do{putchar_unlocked(output_buffer[i]);}while(++i&lt;11);}
+void printlli(lli n)     {if(n&lt;0){n=-n;putchar_unlocked('-');}int i=21;char output_buffer[21];do{output_buffer[--i]=(n%10)+'0';n/=10;}while(n);do{putchar_unlocked(output_buffer[i]);}while(++i&lt;21);}
+void printllu(llu n)     {int i=21;char output_buffer[21];do{output_buffer[--i]=(n%10)+'0';n/=10;}while(n);do{putchar_unlocked(output_buffer[i]);}while(++i&lt;21);}
+*/</comment>
+<decl_stmt><decl><type><name>int</name></type> <name>mini</name><init>=<expr><literal type="number">1000000000</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>vi</name></type> <name>a</name><argument_list>(<argument><expr><literal type="number">1000010</literal></expr></argument>)</argument_list></decl>,<decl><type ref="prev"/><name>cntbelow</name><argument_list>(<argument><expr><literal type="number">1000010</literal></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></decl>,<decl><type ref="prev"/><name>costbelow</name><argument_list>(<argument><expr><literal type="number">1000010</literal></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></decl>;</decl_stmt>
+<function><type><name>void</name></type> <name>func</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>node</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>cost_so_far</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>nodes_outside_subtree</name></decl></parameter>)</parameter_list>
+<block>{
+    <expr_stmt><expr><name>mini</name><operator>=</operator><call><name>min</name><argument_list>(<argument><expr><name>mini</name></expr></argument>,<argument><expr><name>cost_so_far</name><operator>+</operator><name><name>costbelow</name><index>[<expr><name>node</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <if>if<condition>(<expr><name>node</name><operator>&gt;</operator><literal type="number">50000</literal></expr>)</condition><then>
+        <block type="pseudo"><return>return;</return></block></then></if>
+    <decl_stmt><decl><type><name>int</name></type> <name>current</name><init>=<expr><name><name>cntbelow</name><index>[<expr><name>node</name></expr>]</index></name><operator>-</operator><name><name>cntbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>node</name></expr>]</index></name><operator>-</operator><name><name>cntbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>node</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>func</name><argument_list>(<argument><expr><literal type="number">2</literal><operator>*</operator><name>node</name></expr></argument>,<argument><expr><name>cost_so_far</name><operator>+</operator><name>nodes_outside_subtree</name><operator>+</operator><name>current</name><operator>+</operator><name><name>costbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>node</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>+</operator><literal type="number">2</literal><operator>*</operator><name><name>cntbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>node</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name></expr></argument>,<argument><expr><name>nodes_outside_subtree</name><operator>+</operator><name>current</name><operator>+</operator><name><name>cntbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>node</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <if>if<condition>(<expr><name>nodes_outside_subtree</name><operator>+</operator><name>current</name><operator>+</operator><name><name>cntbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>node</name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><call><name>func</name><argument_list>(<argument><expr><literal type="number">2</literal><operator>*</operator><name>node</name><operator>+</operator><literal type="number">1</literal></expr></argument>,<argument><expr><name>cost_so_far</name><operator>+</operator><name>nodes_outside_subtree</name><operator>+</operator><name>current</name><operator>+</operator><name><name>costbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>node</name></expr>]</index></name><operator>+</operator><literal type="number">2</literal><operator>*</operator><name><name>cntbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>node</name></expr>]</index></name></expr></argument>,<argument><expr><name>nodes_outside_subtree</name><operator>+</operator><name>current</name><operator>+</operator><name><name>cntbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>node</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if>
+}</block></function>   
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <comment type="line">//freopen("input.txt","r",stdin);</comment>
+    <comment type="line">//freopen("output.txt","w",stdout);</comment>
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>i</name></decl>,<decl><type ref="prev"/><name>j</name></decl>,<decl><type ref="prev"/><name>k</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt> 
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">0</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>cntbelow</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+    }</block></for>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">100000</literal></expr>;</init><condition><expr><name>i</name><operator>&gt;=</operator><literal type="number">1</literal></expr>;</condition><incr><expr><name>i</name><operator>--</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name><name>cntbelow</name><index>[<expr><name>i</name></expr>]</index></name><operator>+=</operator><operator>(</operator><name><name>cntbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>i</name></expr>]</index></name><operator>+</operator><name><name>cntbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>i</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>)</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>costbelow</name><index>[<expr><name>i</name></expr>]</index></name><operator>=</operator><name><name>costbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>i</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>+</operator><name><name>costbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>i</name></expr>]</index></name><operator>+</operator><name><name>cntbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>i</name></expr>]</index></name><operator>+</operator><name><name>cntbelow</name><index>[<expr><literal type="number">2</literal><operator>*</operator><name>i</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt>
+    }</block></for>
+    <expr_stmt><expr><call><name>func</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>mini</name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

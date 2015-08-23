@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12392927.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>pb</name></cpp:macro> <cpp:value>push_back</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>mp</name></cpp:macro> <cpp:value>make_pair</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>fi</name></cpp:macro> <cpp:value>first</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>se</name></cpp:macro> <cpp:value>second</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>SZ</name><parameter_list>(<parameter><type><name>V</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>(int) V.size()</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>LN</name><parameter_list>(<parameter><type><name>V</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>(int) V.length()</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ALL</name><parameter_list>(<parameter><type><name>V</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>V.begin(), V.end()</cpp:value></cpp:define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>N</name> <init>= <expr><literal type="number">2</literal> <operator>*</operator> <literal type="number">1e5</literal> <operator>+</operator> <literal type="number">10</literal></expr></init></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>k</name></decl>, <decl><type ref="prev"/><name><name>a</name><index>[<expr><name>N</name></expr>]</index></name></decl>, <decl><type ref="prev"/><name>res</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>map</name> <argument_list type="generic">&lt;<argument><expr><name>long</name> <name>long</name></expr></argument>, <argument><expr><name>long</name> <name>long</name></expr></argument>&gt;</argument_list></name></type> <name>tot</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>map</name> <argument_list type="generic">&lt;<argument><expr><name>long</name> <name>long</name></expr></argument>, <argument><expr><name>long</name> <name>long</name></expr></argument>&gt;</argument_list></name></type> <name>cnt</name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+
+    <expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+<comment type="line">//    freopen("in", "r", stdin); freopen("out", "w", stdout);</comment>
+
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>k</name></expr>;</expr_stmt>
+
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr><operator>,</operator> <expr><name><name>tot</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt></block></for>
+
+<comment type="line">//    sort(a, a + n);</comment>
+
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+
+        <if>if <condition>(<expr><name>i</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then> <block>{
+
+            <expr_stmt><expr><name><name>cnt</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+            <continue>continue;</continue>
+        }</block></then></if>
+
+        <if>if <condition>(<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>%</operator> <name>k</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then> <block>{
+
+            <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>up</name> <init>= <expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>*</operator> <name>k</name></expr></init></decl>;</decl_stmt>
+
+<comment type="line">//            cout &lt;&lt; up &lt;&lt; "\n";</comment>
+
+            <if>if <condition>(<expr><name>up</name> <operator>&lt;</operator> <literal type="number">2000000000</literal></expr>)</condition><then> <block>{
+
+                <if>if <condition>(<expr><name>k</name> <operator>==</operator> <literal type="number">1</literal> <operator>||</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>res</name> <operator>+=</operator> <name><name>cnt</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>*</operator> <operator>(</operator><call><name>max</name><argument_list>(<argument><expr><name><name>tot</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>-</operator> <name><name>cnt</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>-</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><literal type="number">0LL</literal></expr></argument>)</argument_list></call><operator>)</operator></expr>;</expr_stmt></block></then>
+                <else>else <block>{
+
+                        <expr_stmt><expr><name>res</name> <operator>+=</operator> <name><name>cnt</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>/</operator> <name>k</name></expr>]</index></name> <operator>*</operator> <operator>(</operator><name><name>tot</name><index>[<expr><name>up</name></expr>]</index></name> <operator>-</operator> <name><name>cnt</name><index>[<expr><name>up</name></expr>]</index></name><operator>)</operator></expr>;</expr_stmt>
+<comment type="line">//                        cout &lt;&lt; up &lt;&lt; "\n";</comment>
+<comment type="line">//                        cout &lt;&lt; tot[up] &lt;&lt; " " &lt;&lt; cnt[up] &lt;&lt; "\n";</comment>
+                }</block></else></if>
+            }</block></then></if>
+        }</block></then></if>
+
+        <expr_stmt><expr><name><name>cnt</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+    }</block></for>
+
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>res</name></expr>;</expr_stmt>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

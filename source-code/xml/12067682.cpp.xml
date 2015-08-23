@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12067682.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><name>int</name></type> <name>h</name></decl>, <decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>long</name> <name>long</name></expr></argument>, <argument><expr><name>long</name> <name>long</name></expr></argument>&gt;</argument_list></name></expr></argument> &gt;</argument_list></name></type> <name>a</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>long</name> <name>long</name></expr></argument>, <argument><expr><name>long</name> <name>long</name></expr></argument>&gt;</argument_list></name></expr></argument> &gt;</argument_list></name></type> <name>b</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>lmax</name></decl>, <decl><type ref="prev"/><name>rmin</name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+  <expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>h</name> <operator>&gt;&gt;</operator> <name>q</name></expr>;</expr_stmt>
+  <expr_stmt><expr><name>lmax</name> <operator>=</operator> <operator>(</operator><literal type="number">1ll</literal> <operator>&lt;&lt;</operator> <operator>(</operator><name>h</name> <operator>-</operator> <literal type="number">1</literal><operator>)</operator><operator>)</operator></expr>;</expr_stmt>
+  <expr_stmt><expr><name>rmin</name> <operator>=</operator> <operator>(</operator><literal type="number">1ll</literal> <operator>&lt;&lt;</operator> <name>h</name><operator>)</operator> <operator>-</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+  <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>q</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>lv</name></decl>, <decl><type ref="prev"/><name>ans</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>l</name></decl>, <decl><type ref="prev"/><name>r</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>lv</name> <operator>&gt;&gt;</operator> <name>l</name> <operator>&gt;&gt;</operator> <name>r</name> <operator>&gt;&gt;</operator> <name>ans</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>l</name> <operator>=</operator> <operator>(</operator><name>l</name> <operator>&lt;&lt;</operator> <operator>(</operator><name>h</name> <operator>-</operator> <name>lv</name><operator>)</operator><operator>)</operator></expr>;</expr_stmt>
+    <expr_stmt><expr><name>r</name> <operator>=</operator> <operator>(</operator><operator>(</operator><name>r</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>&lt;&lt;</operator> <operator>(</operator><name>h</name> <operator>-</operator> <name>lv</name><operator>)</operator><operator>)</operator> <operator>-</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+    <if>if <condition>(<expr><name>ans</name></expr>)</condition><then> <block>{
+      <expr_stmt><expr><name>lmax</name> <operator>=</operator> <call><name>max</name><argument_list>(<argument><expr><name>lmax</name></expr></argument>, <argument><expr><name>l</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+      <expr_stmt><expr><name>rmin</name> <operator>=</operator> <call><name>min</name><argument_list>(<argument><expr><name>rmin</name></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></then> <else>else <block>{
+      <expr_stmt><expr><call><name><name>a</name><operator>.</operator><name>push_back</name></name><argument_list>(<argument><expr><call><name>make_pair</name><argument_list>(<argument><expr><name>l</name></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></else></if>
+  }</block></for>
+  <expr_stmt><expr><call><name>sort</name><argument_list>(<argument><expr><call><name><name>a</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name><name>a</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  <if>if<condition>(<expr><name>rmin</name> <operator>&lt;</operator> <name>lmax</name></expr>)</condition><then> <block>{
+    <expr_stmt><expr><call><name>puts</name><argument_list>(<argument><expr><literal type="string">"Game cheated!"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+  }</block></then></if>
+  <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>last</name> <init>= <expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+  <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl> ;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+    <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>l</name> <init>= <expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>first</name></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>r</name> <init>= <expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name></expr></init></decl>;</decl_stmt>
+    <if>if <condition>(<expr><name>l</name> <operator>&gt;</operator> <name>last</name> <operator>+</operator> <literal type="number">1</literal></expr>)</condition><then> <block>{
+      <expr_stmt><expr><call><name><name>b</name><operator>.</operator><name>push_back</name></name><argument_list>(<argument><expr><call><name>make_pair</name><argument_list>(<argument><expr><name>l</name></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></then> <else>else <block>{
+      <expr_stmt><expr><call><name><name>b</name><operator>.</operator><name>back</name></name><argument_list>()</argument_list></call><operator>.</operator><name>second</name> <operator>=</operator> <call><name>max</name><argument_list>(<argument><expr><call><name><name>b</name><operator>.</operator><name>back</name></name><argument_list>()</argument_list></call><operator>.</operator><name>second</name></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></else></if>
+    <expr_stmt><expr><name>last</name> <operator>=</operator> <call><name>max</name><argument_list>(<argument><expr><name>last</name></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  }</block></for>
+  <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <call><name><name>b</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+    <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>l</name> <init>= <expr><name><name>b</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>first</name></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>r</name> <init>= <expr><name><name>b</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name></expr></init></decl>;</decl_stmt>
+    <if>if <condition>(<expr><name>l</name> <operator>&lt;=</operator> <name>lmax</name> <operator>&amp;&amp;</operator> <name>rmin</name> <operator>&lt;=</operator> <name>r</name></expr>)</condition><then> <block>{
+      <expr_stmt><expr><call><name>puts</name><argument_list>(<argument><expr><literal type="string">"Game cheated!"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+      <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    <if>if <condition>(<expr><name>lmax</name> <operator>&lt;</operator> <name>l</name> <operator>&amp;&amp;</operator> <name>r</name> <operator>&lt;</operator> <name>rmin</name></expr>)</condition><then> <block>{
+      <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"Data not sufficient!"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+      <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    <if>if <condition>(<expr><name><name>r</name> <argument_list type="generic">&lt; <argument><expr><name>lmax</name> <operator>||</operator> <name>l</name></expr></argument> &gt;</argument_list></name> <name>rmin</name></expr>)</condition><then> <block>{
+      <continue>continue;</continue>
+    }</block></then></if>
+    <if>if <condition>(<expr><name>r</name> <operator>&lt;</operator> <name>rmin</name></expr>)</condition><then> <block>{
+      <expr_stmt><expr><name>lmax</name> <operator>=</operator> <name>r</name> <operator>+</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+    }</block></then> <else>else <block>{
+      <expr_stmt><expr><name>rmin</name> <operator>=</operator> <name>l</name> <operator>-</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+    }</block></else></if>
+  }</block></for>
+  <if>if <condition>(<expr><name>lmax</name> <operator>==</operator> <name>rmin</name></expr>)</condition><then> <block>{
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>lmax</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+  }</block></then> <else>else <block>{
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"Data not sufficient!"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+  }</block></else></if>
+  <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

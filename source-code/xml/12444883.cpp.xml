@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12444883.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>(<parameter><decl><type><name>void</name></type></decl></parameter>)</parameter_list>
+ <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>t</name></decl>,<decl><type ref="prev"/><name>s</name></decl>,<decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %d %d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>t</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>s</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>q</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>,<decl><type ref="prev"/><name>ans</name><init>=<expr><name>s</name></expr></init></decl>,<decl><type ref="prev"/><name>count</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <while>while<condition>(<expr><name>ans</name><operator>&lt;</operator><name>t</name></expr>)</condition>
+    <block>{
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>ans</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name>s</name><operator>=</operator><name>s</name><operator>+</operator><name>q</name><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name>s</name><operator>&gt;=</operator><name>t</name></expr>)</condition><then>
+        <block type="pseudo"><break>break;</break></block></then></if>
+    }</block></for>
+    <expr_stmt><expr><name>count</name><operator>++</operator></expr>;</expr_stmt>
+    <expr_stmt><expr><name>ans</name><operator>=</operator><name>s</name></expr>;</expr_stmt>
+    }</block></while>
+    <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><name>count</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

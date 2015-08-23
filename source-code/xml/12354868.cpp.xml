@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12354868.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>sz</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>int((a).size())</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>pb</name></cpp:macro> <cpp:value>push_back</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>mp</name></cpp:macro> <cpp:value>make_pair</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>all</name><parameter_list>(<parameter><type><name>c</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>(c).begin(),(c).end()</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>LET</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>a</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>__typeof(a) x(a)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>tr</name><parameter_list>(<parameter><type><name>v</name></type></parameter>,<parameter><type><name>it</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>for( LET(it,v.begin()) ; it != v.end() ; it++)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>present</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>c</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>((c).find(x) != (c).end())</cpp:value></cpp:define>    <comment type="line">//stl container find</comment>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>cpresent</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>c</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>(find(all(c),x) != (c).end())</cpp:value></cpp:define>       <comment type="line">//standard library find</comment>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>sorti</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>sort(a.begin(),a.end())</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>sortd</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>sort(a.rbegin(),a.rend())</cpp:value></cpp:define>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>MEM</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>memset(a,b,sizeof(a))</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>rep0</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>for(int i=0; i&lt;(int)n;i++)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>rep1</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>for(int i=1; i&lt;=(int)n;i++)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>rep</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>st</name></type></parameter>,<parameter><type><name>en</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>for(int i=(int)st; i&lt;=(int)en;i++)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>sd</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>scanf("%d",&amp;n)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>sl</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>scanf("%lld",&amp;n)</cpp:value></cpp:define>
+
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><name>long</name> <name>long</name> <name>int</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>vi</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>vi</name></expr></argument>&gt;</argument_list></name></type> <name>vvi</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pii</name>;</typedef>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name><name>arr</name><index>[<expr><literal type="number">110000</literal></expr>]</index></name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt>
+    <macro><name>rep0</name><argument_list>(<argument>i</argument>,<argument>n</argument>)</argument_list></macro>
+    <block>{
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+    }</block>
+    <expr_stmt><expr><call><name>sort</name><argument_list>(<argument><expr><name>arr</name></expr></argument>,<argument><expr><name>arr</name><operator>+</operator><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name><name>arr</name><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>-</operator><name><name>arr</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>&lt;&lt;</operator><literal type="string">" "</literal><operator>&lt;&lt;</operator><name><name>arr</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>-</operator><name><name>arr</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>n</name><operator>-</operator><literal type="number">1</literal></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><call><name>min</name><argument_list>(<argument><expr><name><name>arr</name><index>[<expr><name>i</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>-</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>,<argument><expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>-</operator><name><name>arr</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name></expr></argument>)</argument_list></call><operator>&lt;&lt;</operator><literal type="string">" "</literal><operator>&lt;&lt;</operator><call><name>max</name><argument_list>(<argument><expr><name><name>arr</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>-</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>,<argument><expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>-</operator><name><name>arr</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>)</argument_list></call><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt>
+    }</block></for>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name><name>arr</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>-</operator><name><name>arr</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">2</literal></expr>]</index></name><operator>&lt;&lt;</operator><literal type="string">" "</literal><operator>&lt;&lt;</operator><name><name>arr</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>-</operator><name><name>arr</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

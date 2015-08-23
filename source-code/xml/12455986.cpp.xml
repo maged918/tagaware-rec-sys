@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12455986.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>maxn</name> <init>= <expr><literal type="number">4000</literal><operator>+</operator><literal type="number">10</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>long</name> <name>long</name></type> <name>MMOD</name> <init>= <expr><literal type="number">1000000000</literal><operator>+</operator><literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>nn</name></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name><name>A</name><index>[<expr><name>maxn</name></expr>]</index><index>[<expr><name>maxn</name></expr>]</index></name></decl>, <decl><type ref="prev"/><name><name>Ap</name><index>[<expr><name>maxn</name></expr>]</index><index>[<expr><name>maxn</name></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>nn</name></expr>;</expr_stmt>
+
+	<expr_stmt><expr><name><name>Ap</name><index>[<expr><literal type="number">0</literal></expr>]</index><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>n</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>n</name><operator>&lt;=</operator><name>nn</name></expr>;</condition> <incr><expr><name>n</name><operator>++</operator></expr></incr>)</control> <block>{
+		<for>for <control>(<init><decl><type><name>int</name></type> <name>k</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>k</name><operator>&lt;=</operator><name>n</name></expr>;</condition> <incr><expr><name>k</name><operator>++</operator></expr></incr>)</control> <block>{
+			<expr_stmt><expr><name><name>Ap</name><index>[<expr><name>n</name></expr>]</index><index>[<expr><name>k</name></expr>]</index></name> <operator>=</operator> <name><name>Ap</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">1</literal></expr>]</index><index>[<expr><name>k</name></expr>]</index></name> <operator>*</operator> <name>k</name> <operator>+</operator> <operator>(</operator><ternary><condition><expr><name>k</name><operator>&gt;</operator><literal type="number">0</literal></expr>?</condition><then><expr><name><name>Ap</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">1</literal></expr>]</index><index>[<expr><name>k</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name></expr></then><else>:<expr><literal type="number">0</literal></expr></else></ternary><operator>)</operator></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>Ap</name><index>[<expr><name>n</name></expr>]</index><index>[<expr><name>k</name></expr>]</index></name> <operator>%=</operator> <name>MMOD</name></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>A</name><index>[<expr><name>n</name></expr>]</index><index>[<expr><name>k</name></expr>]</index></name> <operator>=</operator> <name><name>A</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">1</literal></expr>]</index><index>[<expr><name>k</name></expr>]</index></name> <operator>*</operator> <name>k</name> <operator>+</operator> <name><name>A</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">1</literal></expr>]</index><index>[<expr><name>k</name></expr>]</index></name> <operator>+</operator> <name><name>Ap</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">1</literal></expr>]</index><index>[<expr><name>k</name></expr>]</index></name> <operator>+</operator> <operator>(</operator><ternary><condition><expr><name>k</name><operator>&gt;</operator><literal type="number">0</literal></expr>?</condition><then><expr><name><name>A</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">1</literal></expr>]</index><index>[<expr><name>k</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name></expr></then><else>:<expr><literal type="number">0</literal></expr></else></ternary><operator>)</operator></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>A</name><index>[<expr><name>n</name></expr>]</index><index>[<expr><name>k</name></expr>]</index></name> <operator>%=</operator> <name>MMOD</name></expr>;</expr_stmt>
+		}</block></for>
+	}</block></for>
+
+	<comment type="block">/*
+	cerr &lt;&lt; " AP " &lt;&lt; endl;
+	for (int n=0; n&lt;=nn; n++) {
+		for (int k=0; k&lt;=n; k++) {
+			cerr &lt;&lt; Ap[n][k] &lt;&lt; " ";
+		}
+		cerr &lt;&lt; endl;
+	}
+	cerr &lt;&lt; endl;
+
+	cerr &lt;&lt; " A " &lt;&lt; endl;
+	for (int n=0; n&lt;=nn; n++) {
+		for (int k=0; k&lt;=n; k++) {
+			cerr &lt;&lt; A[n][k] &lt;&lt; " ";
+		}
+		cerr &lt;&lt; endl;
+	}
+	cerr &lt;&lt; endl;
+*/</comment>
+
+	<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>sum</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>k</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>k</name><operator>&lt;=</operator><name>nn</name></expr>;</condition> <incr><expr><name>k</name><operator>++</operator></expr></incr>)</control> <block>{
+		<expr_stmt><expr><name>sum</name> <operator>+=</operator> <name><name>A</name><index>[<expr><name>nn</name></expr>]</index><index>[<expr><name>k</name></expr>]</index></name></expr>;</expr_stmt>
+		<expr_stmt><expr><name>sum</name> <operator>%=</operator> <name>MMOD</name></expr>;</expr_stmt>
+	}</block></for>
+
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>sum</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

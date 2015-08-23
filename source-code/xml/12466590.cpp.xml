@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12466590.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>N</name><init>=<expr><literal type="number">2e6</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>bool</name></type> <name><name>primes</name><index>[<expr><literal type="number">11111111</literal></expr>]</index></name><init>=<expr><block>{<expr><literal type="number">1</literal></expr>,<expr><literal type="number">1</literal></expr>}</block></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>p</name></decl>,<decl><type ref="prev"/><name>q</name></decl>,<decl><type ref="prev"/><name>cp</name></decl>,<decl><type ref="prev"/><name>cq</name></decl>;</decl_stmt>
+<function><specifier>inline</specifier> <type><name>int</name></type> <name>pol</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>x</name></decl></parameter>)</parameter_list>
+<block>{
+  <decl_stmt><decl><type><name>int</name></type> <name>t</name><init>=<expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name>y</name><init>=<expr><name>x</name></expr></init></decl>;</decl_stmt>
+  <for>for<control>(<init>;</init><condition><expr><name>y</name></expr>;</condition><incr><expr><name>y</name><operator>/=</operator><literal type="number">10</literal></expr></incr>)</control>
+    <block type="pseudo"><expr_stmt><expr><name>t</name><operator>=</operator><name>t</name><operator>*</operator><literal type="number">10</literal><operator>+</operator><name>y</name><operator>%</operator><literal type="number">10</literal></expr>;</expr_stmt></block></for>
+  <return>return <expr><name>t</name><operator>==</operator><name>x</name></expr>;</return>
+}</block></function>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+  <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>p</name><operator>&gt;&gt;</operator><name>q</name></expr>;</expr_stmt>
+  <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">2</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>*</operator><literal type="number">1ll</literal><operator>*</operator><name>i</name><operator>&lt;=</operator><name>N</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block type="pseudo"><if>if<condition>(<expr><operator>!</operator><name><name>primes</name><index>[<expr><name>i</name></expr>]</index></name></expr>)</condition><then>
+      <block type="pseudo"><for>for<control>(<init><decl><type><name>int</name></type> <name>j</name><init>=<expr><name>i</name><operator>*</operator><name>i</name></expr></init></decl>;</init><condition><expr><name>j</name><operator>&lt;=</operator><name>N</name></expr>;</condition><incr><expr><name>j</name><operator>+=</operator><name>i</name></expr></incr>)</control>
+        <block type="pseudo"><expr_stmt><expr><name><name>primes</name><index>[<expr><name>j</name></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt></block></for></block></then></if></block></for>
+  <decl_stmt><decl><type><name>int</name></type> <name>pos</name></decl>;</decl_stmt>
+  <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>N</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+  <block>{
+    <expr_stmt><expr><name>cp</name><operator>+=</operator><operator>(</operator><operator>!</operator><name><name>primes</name><index>[<expr><name>i</name></expr>]</index></name><operator>)</operator></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cq</name><operator>+=</operator><call><name>pol</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <if>if<condition>(<expr><name>cp</name><operator>&lt;=</operator><name>cq</name><operator>*</operator><name>p</name><operator>/</operator><name>q</name></expr>)</condition><then>
+     <block type="pseudo"><expr_stmt><expr><name>pos</name><operator>=</operator><name>i</name></expr>;</expr_stmt></block></then></if>
+  }</block></for>
+  <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>pos</name></expr>;</expr_stmt>
+  <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

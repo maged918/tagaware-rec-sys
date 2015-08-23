@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12579558.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+	<decl_stmt><decl><type><name>long</name> <name>int</name></type> <name><name>election</name><index>[<expr><literal type="number">101</literal></expr>]</index><index>[<expr><literal type="number">101</literal></expr>]</index></name></decl>, <decl><type ref="prev"/><name>vote</name></decl>, <decl><type ref="prev"/><name><name>candidate_cities</name><index>[<expr><literal type="number">101</literal></expr>]</index></name> <init>= <expr><block>{<expr><literal type="number">0</literal></expr>}</block></expr></init></decl>, <decl><type ref="prev"/><name>m</name></decl>, <decl><type ref="prev"/><name>n</name></decl>, <decl><type ref="prev"/><name>max</name></decl>, <decl><type ref="prev"/><name>candidate_max</name></decl>;</decl_stmt>
+	
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>m</name></expr>;</expr_stmt>
+	<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator> <name>m</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+		<expr_stmt><expr><name>candidate_max</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+		<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>max</name></expr>;</expr_stmt>
+		<for>for<control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>j</name><operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr></incr>)</control><block>{
+			<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>vote</name></expr>;</expr_stmt>
+			<if>if<condition>(<expr><name>vote</name> <operator>&gt;</operator> <name>max</name></expr>)</condition><then><block>{
+				<expr_stmt><expr><name>candidate_max</name> <operator>=</operator> <name>j</name></expr>;</expr_stmt>
+				<expr_stmt><expr><name>max</name> <operator>=</operator> <name>vote</name></expr>;</expr_stmt>
+			}</block></then></if>
+		}</block></for>
+		<expr_stmt><expr><name><name>candidate_cities</name><index>[<expr><name>candidate_max</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+	}</block></for>
+	
+	
+	<expr_stmt><expr><name>candidate_max</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+	<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+		<if>if<condition>(<expr><name><name>candidate_cities</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&gt;</operator> <name><name>candidate_cities</name><index>[<expr><name>candidate_max</name></expr>]</index></name></expr>)</condition><then><block>{
+			<expr_stmt><expr><name>candidate_max</name> <operator>=</operator> <name>i</name></expr>;</expr_stmt>
+		}</block></then></if>
+	}</block></for>
+	
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>candidate_max</name> <operator>+</operator><literal type="number">1</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+	
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

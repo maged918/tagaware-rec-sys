@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12486264.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;vector&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>char</name></expr></argument>&gt;</argument_list></name></name></type> <name>v</name></decl>;</decl_stmt>
+<comment type="line">//int nums[100000000];</comment>
+<decl_stmt><decl><type><name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>char</name></expr></argument>&gt;</argument_list></name></name></type> <name>v2</name></decl>;</decl_stmt>
+
+<function><type><name>bool</name></type> <name>cmp</name><parameter_list>(<parameter><decl><type><name>string</name> <modifier>&amp;</modifier></type><name>a</name></decl></parameter>, <parameter><decl><type><name>string</name> <modifier>&amp;</modifier></type><name>b</name></decl></parameter>)</parameter_list><block>{
+
+	<if>if<condition>(<expr><call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then>
+		<block type="pseudo"><return>return <expr><name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>==</operator> <name><name>b</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr>;</return></block></then></if>
+
+	<if>if<condition>(<expr><call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call> <operator>&amp;</operator> <literal type="number">1</literal></expr>)</condition><then><block>{
+		<return>return <expr><name>a</name> <operator>==</operator> <name>b</name></expr>;</return>
+
+	}</block></then></if>
+
+
+	<decl_stmt><decl><type><name>string</name></type> <name>a1</name> <init>= <expr><call><name><name>a</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>string</name></type> <name>a2</name> <init>= <expr><call><name><name>a</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><operator>(</operator><call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call><operator>/</operator><literal type="number">2</literal><operator>)</operator></expr></argument>, <argument><expr><call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>string</name></type> <name>b1</name> <init>= <expr><call><name><name>b</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><call><name><name>b</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>string</name></type> <name>b2</name> <init>= <expr><call><name><name>b</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><operator>(</operator><call><name><name>b</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call><operator>/</operator><literal type="number">2</literal><operator>)</operator></expr></argument>, <argument><expr><call><name><name>b</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+	<return>return <expr><operator>(</operator><call><name>cmp</name><argument_list>(<argument><expr><name>a1</name></expr></argument>, <argument><expr><name>b2</name></expr></argument>)</argument_list></call> <operator>and</operator> <call><name>cmp</name><argument_list>(<argument><expr><name>a2</name></expr></argument>, <argument><expr><name>b1</name></expr></argument>)</argument_list></call><operator>)</operator> <operator>or</operator> <operator>(</operator><call><name>cmp</name><argument_list>(<argument><expr><name>a1</name></expr></argument>, <argument><expr><name>b1</name></expr></argument>)</argument_list></call> <operator>and</operator> <call><name>cmp</name><argument_list>(<argument><expr><name>a2</name></expr></argument>, <argument><expr><name>b2</name></expr></argument>)</argument_list></call><operator>)</operator></expr>;</return>
+
+
+}</block></function>
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+
+	<decl_stmt><decl><type><name>string</name></type> <name>a</name></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>string</name></type> <name>b</name></decl>;</decl_stmt>
+
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>a</name></expr>;</expr_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>b</name></expr>;</expr_stmt>
+	<if>if<condition>(<expr><call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call><operator>%</operator><literal type="number">2</literal> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then><block>{
+		<if>if<condition>(<expr><name>a</name> <operator>==</operator> <name>b</name></expr>)</condition><then><block>{
+			<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+			<return>return <expr><literal type="number">0</literal></expr>;</return>
+		}</block></then><else>else<block>{
+			
+				<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"NO"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+				<return>return <expr><literal type="number">0</literal></expr>;</return>
+			}</block></else></if>
+		}</block></then></if>
+
+	<comment type="block">/*a.append(b);
+
+	int n = a.size();
+
+	for (int i = 0; i &lt; n; ++i)
+	{
+		if(a[i] != a[n-1-i]){
+			cout &lt;&lt; "NO" &lt;&lt; endl;
+			return 0;
+		}
+
+	}*/</comment>
+
+	<if>if<condition>(<expr><call><name>cmp</name><argument_list>(<argument><expr><name>a</name></expr></argument>, <argument><expr><name>b</name></expr></argument>)</argument_list></call></expr>)</condition><then><block>{
+
+		<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+	}</block></then><else>else<block>{
+		<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"NO"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+	}</block></else></if>
+
+	
+
+}</block></function></unit>

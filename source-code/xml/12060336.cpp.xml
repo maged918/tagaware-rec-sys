@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12060336.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<decl_stmt><decl><type><name>ll</name></type> <name>num</name><init>=<expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>,<decl><type ref="prev"/><name>ans</name><init>=<expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>,<decl><type ref="prev"/><name>a</name></decl>,<decl><type ref="prev"/><name>i</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>set</name><argument_list type="generic">&lt; <argument><expr><name>ll</name></expr></argument> &gt;</argument_list></name></type><name>s</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>ll</name></type> <name><name>pa</name><index>[<expr><literal type="number">200005</literal></expr>]</index></name><init>=<expr><block>{<expr><literal type="number">0</literal></expr>}</block></expr></init></decl>,<decl><type ref="prev"/><name><name>pacount</name><index>[<expr><literal type="number">200005</literal></expr>]</index></name><init>=<expr><block>{<expr><literal type="number">0</literal></expr>}</block></expr></init></decl>,<decl><type ref="prev"/><name>n</name></decl>,<decl><type ref="prev"/><name><name>cnt</name><index>[<expr><literal type="number">200005</literal></expr>]</index></name><init>=<expr><block>{<expr><literal type="number">0</literal></expr>}</block></expr></init></decl>,<decl><type ref="prev"/><name><name>dp</name><index>[<expr><literal type="number">200005</literal></expr>]</index></name></decl>;</decl_stmt>
+
+
+<function><type><name>void</name></type> <name>mul</name><parameter_list>(<parameter><decl><type><name>ll</name></type> <name>x</name></decl></parameter>)</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>ll</name></type> <name>u</name> <init>= <expr><name>x</name></expr></init></decl>,<decl><type ref="prev"/><name>vv</name> <init>= <expr><name>x</name></expr></init></decl>,<decl><type ref="prev"/><name>val</name> <init>= <expr><name><name>cnt</name><index>[<expr><name>x</name></expr>]</index></name></expr></init></decl>,<decl><type ref="prev"/><name>c</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <while>while<condition>(<expr><name>u</name></expr>)</condition>
+    <block>{
+        <decl_stmt><decl><type><name>ll</name></type> <name>p</name> <init>= <expr><name>u</name></expr></init></decl>,<decl><type ref="prev"/><name>jj</name>  <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+        <while>while<condition>(<expr><name>p</name> <operator>&lt;=</operator> <name>num</name></expr>)</condition>
+        <block>{
+            <if>if<condition>(<expr><name><name>dp</name><index>[<expr><name>p</name></expr>]</index></name> <operator>!=</operator> <name>vv</name></expr>)</condition><then>
+            <block>{
+        
+                <expr_stmt><expr><name><name>pa</name><index>[<expr><name>p</name></expr>]</index></name> <operator>=</operator> <name><name>pa</name><index>[<expr><name>p</name></expr>]</index></name> <operator>+</operator> <operator>(</operator><name>c</name> <operator>+</operator> <name>jj</name><operator>)</operator><operator>*</operator><name>val</name></expr>;</expr_stmt>
+                <expr_stmt><expr><name><name>pacount</name><index>[<expr><name>p</name></expr>]</index></name><operator>+=</operator><name>val</name></expr>;</expr_stmt>
+                <expr_stmt><expr><name><name>dp</name><index>[<expr><name>p</name></expr>]</index></name> <operator>=</operator> <name>vv</name></expr>;</expr_stmt>
+            }</block></then></if>
+            <expr_stmt><expr><name>p</name> <operator>*=</operator> <literal type="number">2</literal></expr>;</expr_stmt>
+            <expr_stmt><expr><name>jj</name><operator>++</operator></expr>;</expr_stmt>
+        }</block></while>
+        <expr_stmt><expr><name>u</name> <operator>/=</operator> <literal type="number">2</literal></expr>;</expr_stmt>
+        <expr_stmt><expr><name>c</name><operator>++</operator></expr>;</expr_stmt>
+    }</block></while>
+
+}</block></function>
+
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> 
+<block>{
+    <expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt><expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">0</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>a</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>num</name> <operator>=</operator> <call><name>max</name><argument_list>(<argument><expr><name>num</name></expr></argument>,<argument><expr><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>cnt</name><index>[<expr><name>a</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>s</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></for>
+    
+    <decl_stmt><decl><type><name><name><name>set</name><argument_list type="generic">&lt; <argument><expr><name>ll</name></expr></argument> &gt;</argument_list></name><operator>::</operator><name>iterator</name></name></type> <name>it</name></decl>;</decl_stmt>
+    <for>for<control>(<init><expr><name>it</name><operator>=</operator><call><name><name>s</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr>;</init><condition><expr><name>it</name><operator>!=</operator><call><name><name>s</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>;</condition><incr><expr><operator>++</operator><name>it</name></expr></incr>)</control>
+    <block>{
+        
+        <expr_stmt><expr><call><name>mul</name><argument_list>(<argument><expr><operator>*</operator><name>it</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        
+        
+    }</block></for>
+    <expr_stmt><expr><name>ans</name><operator>=</operator><literal type="number">100000000ll</literal></expr>;</expr_stmt>
+    <comment type="line">//cout&lt;&lt;pacount[4]&lt;&lt;" ";</comment>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">0</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>num</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <if>if<condition>(<expr><name><name>pacount</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><name>n</name></expr>)</condition><then><block>{
+            <comment type="line">//cout&lt;&lt;pa[i]&lt;&lt;","&lt;&lt;i&lt;&lt;" ";</comment>
+            <expr_stmt><expr><name>ans</name> <operator>=</operator> <call><name>min</name><argument_list>(<argument><expr><name>ans</name></expr></argument>,<argument><expr><name><name>pa</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></for>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>ans</name></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

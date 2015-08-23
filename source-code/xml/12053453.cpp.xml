@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12053453.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>int</name></type> <name><name>h1</name><index>[<expr><literal type="number">1000006</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>h2</name><index>[<expr><literal type="number">1000006</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>h3</name><index>[<expr><literal type="number">1000006</literal></expr>]</index></name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>x</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>min</name> <init>= <expr><literal type="number">1000000000</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>l</name></decl>,<decl><type ref="prev"/><name>r</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>max</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name><name>a</name><index>[<expr><literal type="number">100005</literal></expr>]</index></name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>map</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>m</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name><name>map</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name><operator>::</operator><name>iterator</name></name></type> <name>it</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>h1</name></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><sizeof>sizeof<argument_list>(<argument><expr><name>h1</name></expr></argument>)</argument_list></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>h2</name></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><sizeof>sizeof<argument_list>(<argument><expr><name>h2</name></expr></argument>)</argument_list></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt>
+    <for>for<control>(<init><expr><name>i</name> <operator>=</operator> <literal type="number">1</literal></expr>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>m</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name><name>m</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>&gt;</operator> <name>max</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>max</name> <operator>=</operator> <name><name>m</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></for>
+
+    <for>for<control>(<init><expr><name>i</name> <operator>=</operator> <literal type="number">1</literal></expr>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+        <if>if<condition>(<expr><name><name>h1</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name><name>h1</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>=</operator> <name>i</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></for>
+    <for>for<control>(<init><expr><name>i</name> <operator>=</operator> <name>n</name></expr>;</init> <condition><expr><name>i</name> <operator>&gt;=</operator> <literal type="number">1</literal></expr>;</condition> <incr><expr><name>i</name><operator>--</operator></expr></incr>)</control> <block>{
+        <if>if<condition>(<expr><name><name>h2</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name><name>h2</name><index>[<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>=</operator> <name>i</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></for>
+    <for>for<control>(<init><expr><name>it</name> <operator>=</operator> <call><name><name>m</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr>;</init> <condition><expr><name>it</name><operator>!=</operator> <call><name><name>m</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>it</name><operator>++</operator></expr></incr>)</control> <block>{
+        <if>if<condition>(<expr><name><name>it</name><operator>-&gt;</operator><name>second</name></name> <operator>==</operator> <name>max</name></expr>)</condition><then> <block>{
+           <comment type="line">// cout&lt;&lt;h2[it-&gt;first]&lt;&lt;' '&lt;&lt;h1[it-&gt;first]&lt;&lt;' '&lt;&lt;it-&gt;first&lt;&lt;endl;</comment>
+            <if>if<condition>(<expr><name><name>h2</name><index>[<expr><name><name>it</name><operator>-&gt;</operator><name>first</name></name></expr>]</index></name> <operator>-</operator> <name><name>h1</name><index>[<expr><name><name>it</name><operator>-&gt;</operator><name>first</name></name></expr>]</index></name> <operator>+</operator> <literal type="number">1</literal> <operator>&lt;</operator> <name>min</name></expr>)</condition><then> <block>{
+                <expr_stmt><expr><name>min</name> <operator>=</operator> <name><name>h2</name><index>[<expr><name><name>it</name><operator>-&gt;</operator><name>first</name></name></expr>]</index></name> <operator>-</operator> <name><name>h1</name><index>[<expr><name><name>it</name><operator>-&gt;</operator><name>first</name></name></expr>]</index></name> <operator>+</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+                <expr_stmt><expr><name>l</name> <operator>=</operator> <name><name>h1</name><index>[<expr><name><name>it</name><operator>-&gt;</operator><name>first</name></name></expr>]</index></name></expr>;</expr_stmt>
+                <expr_stmt><expr><name>r</name> <operator>=</operator> <name><name>h2</name><index>[<expr><name><name>it</name><operator>-&gt;</operator><name>first</name></name></expr>]</index></name></expr>;</expr_stmt>
+            }</block></then></if>
+        }</block></then></if>
+    }</block></for>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>l</name><operator>&lt;&lt;</operator><literal type="char">' '</literal><operator>&lt;&lt;</operator><name>r</name></expr>;</expr_stmt>
+
+
+}</block></function>
+</unit>

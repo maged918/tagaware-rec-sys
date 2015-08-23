@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12402049.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<comment type="line">//ill hit the bottom and escape</comment>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>pb</name></cpp:macro> <cpp:value>push_back</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>pf</name></cpp:macro> <cpp:value>push_front</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ppb</name></cpp:macro> <cpp:value>pop_back</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ppf</name></cpp:macro> <cpp:value>pop_front</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>lwb</name></cpp:macro> <cpp:value>lower_bound</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>upb</name></cpp:macro> <cpp:value>upper_bound</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>X</name></cpp:macro> <cpp:value>first</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>Y</name></cpp:macro> <cpp:value>second</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>int</name></cpp:macro> <cpp:value>long long</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>double</name></cpp:macro> <cpp:value>long double</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>slowdown</name></cpp:macro> <cpp:value>ios :: sync_with_stdio(false)</cpp:value></cpp:define>
+<comment type="line">//#define cin fin</comment>
+<comment type="line">//#define cout fout</comment>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pii</name>;</typedef>
+<typedef>typedef <type><name><name>complex</name><argument_list type="generic">&lt;<argument><expr><name>double</name></expr></argument>&gt;</argument_list></name></type> <name>point</name>;</typedef>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>double</name></type> <name>pi</name> <init>= <expr><call><name>acos</name><argument_list>(<argument><expr><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>md</name> <init>= <expr><literal type="number">1000</literal> <operator>*</operator> <literal type="number">1000</literal> <operator>*</operator> <literal type="number">1000</literal> <operator>+</operator> <literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>o</name> <init>= <expr><literal type="number">1000</literal> <operator>*</operator> <literal type="number">1000</literal> <operator>*</operator> <literal type="number">1000</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>oo</name> <init>= <expr><name>o</name> <operator>*</operator> <name>o</name></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>double</name></type> <name>eps</name> <init>= <expr><literal type="number">1e-7</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>maxn</name> <init>= <expr><literal type="number">2</literal> <operator>*</operator> <literal type="number">100</literal> <operator>*</operator> <literal type="number">1000</literal> <operator>+</operator> <literal type="number">100</literal></expr></init></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>k</name></decl>, <decl><type ref="prev"/><name>a</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>m</name></decl>, <decl><type ref="prev"/><name>num</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>dp</name><index>[<expr><name>maxn</name></expr>]</index></name></decl>, <decl><type ref="prev"/><name><name>x</name><index>[<expr><name>maxn</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>s</name></decl>;</decl_stmt>
+
+<function><name>main</name><parameter_list>()</parameter_list> <block>{
+	<expr_stmt><expr><name>slowdown</name></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>k</name> <operator>&gt;&gt;</operator> <name>a</name></expr>;</expr_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>m</name></expr>;</expr_stmt>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name> <operator>&lt;</operator> <name>m</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> 
+		<block type="pseudo"><expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>x</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+
+	<expr_stmt><expr><call><name><name>s</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name><name>s</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>n</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>n</name> <operator>+</operator> <literal type="number">1</literal></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+		<block type="pseudo"><if>if <condition>(<expr><name>i</name> <operator>==</operator> <name>a</name></expr>)</condition><then>
+			<block type="pseudo"><expr_stmt><expr><name><name>dp</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt></block></then>
+		<elseif>else <if>if <condition>(<expr><name>i</name> <operator>&gt;</operator> <name>a</name></expr>)</condition><then>
+			<block type="pseudo"><expr_stmt><expr><name><name>dp</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name><name>dp</name><index>[<expr><name>i</name> <operator>-</operator> <name>a</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name> <operator>+</operator> <literal type="number">1</literal></expr>;</expr_stmt></block></then></if></elseif></if></block></for>
+
+	<expr_stmt><expr><name>num</name> <operator>=</operator> <name><name>dp</name><index>[<expr><name>n</name></expr>]</index></name></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>ans</name> <init>= <expr><operator>-</operator><literal type="number">2</literal></expr></init></decl>;</decl_stmt>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>m</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+		<decl_stmt><decl><type><name>auto</name></type> <name>it1</name> <init>= <expr><call><name><name>s</name><operator>.</operator><name>upb</name></name><argument_list>(<argument><expr><name><name>x</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr></init></decl>, <decl><type ref="prev"/><name>it2</name> <init>= <expr><name>it1</name></expr></init></decl>;</decl_stmt>
+		<expr_stmt><expr><name>it1</name><operator>--</operator></expr>;</expr_stmt>
+		<decl_stmt><decl><type><name>int</name></type> <name>tmp1</name> <init>= <expr><operator>*</operator><name>it1</name></expr></init></decl>, <decl><type ref="prev"/><name>tmp2</name> <init>= <expr><operator>*</operator><name>it2</name></expr></init></decl>;</decl_stmt>
+		<expr_stmt><expr><name>num</name> <operator>-=</operator> <name><name>dp</name><index>[<expr><name>tmp2</name> <operator>-</operator> <name>tmp1</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt>
+		<expr_stmt><expr><name>num</name> <operator>+=</operator> <name><name>dp</name><index>[<expr><name><name>x</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <name>tmp1</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt> 
+		<expr_stmt><expr><name>num</name> <operator>+=</operator> <name><name>dp</name><index>[<expr><name>tmp2</name> <operator>-</operator> <name><name>x</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt>
+		<expr_stmt><expr><call><name><name>s</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name><name>x</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<if>if <condition>(<expr><name>num</name> <operator>&lt;</operator> <name>k</name></expr>)</condition><then> <block>{
+			<expr_stmt><expr><name>ans</name> <operator>=</operator> <name>i</name></expr>;</expr_stmt>
+			<break>break;</break>
+
+		}</block></then></if>
+	}</block></for>
+
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>ans</name> <operator>+</operator> <literal type="number">1</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+
+
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+
+</unit>

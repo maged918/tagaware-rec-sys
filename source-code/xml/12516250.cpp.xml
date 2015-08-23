@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12516250.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;stdio.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;map&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iterator&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>char</name></type> <name><name>cad</name><index>[<expr><literal type="number">300050</literal></expr>]</index></name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>m</name></decl>,<decl><type ref="prev"/><name>n</name></decl>,<decl><type ref="prev"/><name>aux</name><init>=<expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name>idx</name></decl>,<decl><type ref="prev"/><name>fs</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>char</name></type> <name>car</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>n</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>m</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%s"</literal></expr></argument>,<argument><expr><name>cad</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+        <if>if<condition>(<expr><name><name>cad</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{
+            <expr_stmt><expr><name>aux</name><operator>++</operator></expr>;</expr_stmt>
+        }</block></then>
+        <else>else<block>{
+            <if>if<condition>(<expr><name>aux</name><operator>&gt;=</operator><literal type="number">1</literal></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name>fs</name><operator>+=</operator><name>aux</name><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if>
+            <expr_stmt><expr><name>aux</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></for>
+    <if>if<condition>(<expr><name>aux</name><operator>&gt;=</operator><literal type="number">1</literal></expr>)</condition><then><block type="pseudo"><expr_stmt><expr><name>fs</name><operator>+=</operator><name>aux</name><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if>
+    <while>while<condition>(<expr><name>m</name><operator>--</operator></expr>)</condition><block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>idx</name></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %c"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>idx</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>car</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>idx</name><operator>--</operator></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name>car</name><operator>==</operator><literal type="char">'.'</literal><operator>&amp;&amp;</operator> <name><name>cad</name><index>[<expr><name>idx</name></expr>]</index></name><operator>!=</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{
+            <if>if<condition>(<expr><name>idx</name><operator>!=</operator><literal type="number">0</literal> <operator>&amp;&amp;</operator> <name><name>cad</name><index>[<expr><name>idx</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>fs</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+            <if>if<condition>(<expr><name>idx</name><operator>!=</operator><name>n</name><operator>-</operator><literal type="number">1</literal><operator>&amp;&amp;</operator><name><name>cad</name><index>[<expr><name>idx</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>fs</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+        }</block></then></if>
+        <if>if<condition>(<expr><name>car</name><operator>!=</operator><literal type="char">'.'</literal> <operator>&amp;&amp;</operator> <name><name>cad</name><index>[<expr><name>idx</name></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{
+            <if>if<condition>(<expr><name>idx</name><operator>!=</operator><literal type="number">0</literal> <operator>&amp;&amp;</operator> <name><name>cad</name><index>[<expr><name>idx</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>fs</name><operator>--</operator></expr>;</expr_stmt></block></then></if>
+            <if>if<condition>(<expr><name>idx</name><operator>!=</operator><name>n</name><operator>-</operator><literal type="number">1</literal> <operator>&amp;&amp;</operator> <name><name>cad</name><index>[<expr><name>idx</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>fs</name><operator>--</operator></expr>;</expr_stmt></block></then></if>
+        }</block></then></if>
+        <expr_stmt><expr><name><name>cad</name><index>[<expr><name>idx</name></expr>]</index></name><operator>=</operator><name>car</name></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>fs</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></while>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

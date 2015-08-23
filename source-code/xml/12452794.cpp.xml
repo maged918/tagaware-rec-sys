@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12452794.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>Nmax</name></cpp:macro> <cpp:value>5005</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>MOD</name></cpp:macro> <cpp:value>1000000007</cpp:value></cpp:define>
+<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name><name>S2</name><index>[<expr><name>Nmax</name></expr>]</index><index>[<expr><name>Nmax</name></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <comment type="line" format="doxygen">///freopen("D.in","r",stdin);</comment>
+    <expr_stmt><expr><name><name>S2</name><index>[<expr><literal type="number">0</literal></expr>]</index><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>long</name> <name>long</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>Nmax</name></expr>;</condition> <incr><expr><operator>++</operator><name>i</name></expr></incr>)</control>
+        <block type="pseudo"><for>for<control>(<init><decl><type><name>long</name> <name>long</name></type> <name>j</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;=</operator> <name>i</name></expr>;</condition> <incr><expr><operator>++</operator><name>j</name></expr></incr>)</control>
+            <block type="pseudo"><expr_stmt><expr><name><name>S2</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <operator>(</operator><operator>(</operator><name>j</name><operator>*</operator><name><name>S2</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index><index>[<expr><name>j</name></expr>]</index></name><operator>)</operator><operator>%</operator><name>MOD</name> <operator>+</operator> <operator>(</operator><name><name>S2</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index><index>[<expr><name>j</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>)</operator><operator>%</operator><name>MOD</name><operator>)</operator> <operator>%</operator> <name>MOD</name></expr>;</expr_stmt></block></for></block></for>
+
+    <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>rez</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name>N</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%I64d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>N</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><operator>--</operator><name>N</name></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>k</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>k</name> <operator>&lt;=</operator> <name>N</name> <operator>+</operator> <literal type="number">1</literal></expr>;</condition> <incr><expr><operator>++</operator><name>k</name></expr></incr>)</control>
+        <block type="pseudo"><expr_stmt><expr><name>rez</name> <operator>=</operator> <operator>(</operator><name>rez</name> <operator>+</operator> <operator>(</operator><name>k</name> <operator>*</operator> <name><name>S2</name><index>[<expr><name>N</name><operator>+</operator><literal type="number">1</literal></expr>]</index><index>[<expr><name>k</name></expr>]</index></name><operator>)</operator> <operator>%</operator> <name>MOD</name> <operator>)</operator><operator>%</operator><name>MOD</name></expr>;</expr_stmt></block></for>
+    <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%I64d\n"</literal></expr></argument>,<argument><expr><name>rez</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

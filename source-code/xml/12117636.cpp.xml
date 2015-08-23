@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12117636.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>llint</name></cpp:macro> <cpp:value>long long int</cpp:value></cpp:define>
+
+<struct>struct <name>data</name><block>{<public type="default">
+  <decl_stmt><decl><type><name>int</name></type> <name>index</name></decl>;</decl_stmt>
+  <decl_stmt><decl><type><name>int</name></type> <name>value</name></decl>;</decl_stmt>
+</public>}</block>;</struct>
+
+<function><type><name>bool</name></type> <name>compareFunctionInc</name><parameter_list>(<parameter><decl><type><name>data</name></type> <name>a</name></decl></parameter>, <parameter><decl><type><name>data</name></type> <name>b</name></decl></parameter>)</parameter_list><block>{
+  <if>if <condition>(<expr><name><name>a</name><operator>.</operator><name>index</name></name> <operator>&lt;</operator> <name><name>b</name><operator>.</operator><name>index</name></name></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="boolean">true</literal></expr>;</return></block></then>
+  <else>else <block type="pseudo"><return>return <expr><literal type="boolean">false</literal></expr>;</return></block></else></if>
+}</block></function>
+
+<function><type><name>bool</name></type> <name>compareFunctionDec</name><parameter_list>(<parameter><decl><type><name>data</name></type> <name>a</name></decl></parameter>, <parameter><decl><type><name>data</name></type> <name>b</name></decl></parameter>)</parameter_list><block>{
+  <if>if <condition>(<expr><name><name>a</name><operator>.</operator><name>index</name></name> <operator>&gt;</operator> <name><name>b</name><operator>.</operator><name>index</name></name></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="boolean">true</literal></expr>;</return></block></then>
+  <else>else <block type="pseudo"><return>return <expr><literal type="boolean">false</literal></expr>;</return></block></else></if>
+}</block></function>
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+  <expr_stmt><expr><call><name><name>ios</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+  <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>;</expr_stmt>
+
+  <decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr>struct <name>data</name></expr></argument>&gt;</argument_list></name></type> <name>posArray</name></decl>;</decl_stmt>
+  <decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr>struct <name>data</name></expr></argument>&gt;</argument_list></name></type> <name>negArray</name></decl>;</decl_stmt>
+
+  <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl> ;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr> ;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>tmpindex</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>tmpindex</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>tmpval</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>tmpval</name></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name><name>struct</name> <name>data</name></name></type> <name>d</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name><name>d</name><operator>.</operator><name>index</name></name> <operator>=</operator> <name>tmpindex</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>d</name><operator>.</operator><name>value</name></name> <operator>=</operator> <name>tmpval</name></expr>;</expr_stmt>
+
+    <if>if <condition>(<expr><name>tmpindex</name> <operator>&gt;</operator> <literal type="number">0</literal></expr>)</condition><then> <block>{
+      <expr_stmt><expr><call><name><name>posArray</name><operator>.</operator><name>push_back</name></name><argument_list>(<argument><expr><name>d</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></then>
+    <else>else<block>{
+      <expr_stmt><expr><call><name><name>negArray</name><operator>.</operator><name>push_back</name></name><argument_list>(<argument><expr><name>d</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></else></if>
+  }</block></for>
+
+  <expr_stmt><expr><call><name>sort</name><argument_list>(<argument><expr><call><name><name>posArray</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name><name>posArray</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>compareFunctionInc</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  <expr_stmt><expr><call><name>sort</name><argument_list>(<argument><expr><call><name><name>negArray</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name><name>negArray</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>compareFunctionDec</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+  <decl_stmt><decl><type><name>int</name></type> <name>size</name> <init>= <expr><call><name>min</name><argument_list>( <argument><expr><call><name><name>posArray</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name><name>negArray</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr></argument> )</argument_list></call></expr></init></decl>;</decl_stmt>
+
+  <decl_stmt><decl><type><name>int</name></type> <name>index</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+  <decl_stmt><decl><type><name>llint</name></type> <name>sum</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+  <while>while <condition>(<expr><name>index</name> <operator>&lt;</operator> <name>size</name></expr>)</condition><block>{
+    <expr_stmt><expr><name>sum</name> <operator>=</operator> <name>sum</name> <operator>+</operator> <name><name>posArray</name><index>[<expr><name>index</name></expr>]</index></name><operator>.</operator><name>value</name> <operator>+</operator> <name><name>negArray</name><index>[<expr><name>index</name></expr>]</index></name><operator>.</operator><name>value</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>index</name><operator>++</operator></expr>;</expr_stmt>
+  }</block></while>
+  <if>if <condition>(<expr><name>size</name> <operator>&lt;</operator> <call><name><name>posArray</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr>)</condition><then><block>{
+    <expr_stmt><expr><name>sum</name> <operator>=</operator> <name>sum</name> <operator>+</operator> <name><name>posArray</name><index>[<expr><name>index</name></expr>]</index></name><operator>.</operator><name>value</name></expr>;</expr_stmt>
+  }</block></then>
+  <elseif>else <if>if <condition>(<expr><name>size</name> <operator>&lt;</operator> <call><name><name>negArray</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr>)</condition><then><block>{
+    <expr_stmt><expr><name>sum</name> <operator>=</operator> <name>sum</name> <operator>+</operator> <name><name>negArray</name><index>[<expr><name>index</name></expr>]</index></name><operator>.</operator><name>value</name></expr>;</expr_stmt>
+  }</block></then></if></elseif></if>
+  <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>sum</name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+
+  <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

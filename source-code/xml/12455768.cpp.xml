@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12455768.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>PB</name></cpp:macro> <cpp:value>push_back</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>MP</name></cpp:macro> <cpp:value>make_pair</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>INF</name></cpp:macro> <cpp:value>0x3f3f3f3f</cpp:value></cpp:define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<function><type><name>bool</name></type> <name>palin</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>a</name></decl></parameter>)</parameter_list><block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>aux</name> <init>= <expr><name>a</name></expr></init></decl>;</decl_stmt>
+    <while>while<condition>(<expr><name>aux</name><operator>!=</operator><literal type="number">0</literal></expr>)</condition><block>{
+        <expr_stmt><expr><name>n</name> <operator>=</operator> <name>n</name><operator>*</operator><literal type="number">10</literal> <operator>+</operator> <operator>(</operator><name>aux</name><operator>%</operator><literal type="number">10</literal><operator>)</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name>aux</name><operator>/=</operator><literal type="number">10</literal></expr>;</expr_stmt>
+    }</block></while>
+    <return>return <expr><name>n</name><operator>==</operator><name>a</name></expr>;</return>
+}</block></function>
+<decl_stmt><decl><type><name>bool</name></type> <name><name>prime</name><index>[<expr><literal type="number">10000010</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name><name>primes</name><index>[<expr><literal type="number">10000010</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name><name>palins</name><index>[<expr><literal type="number">10000010</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>N</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>p</name></decl>, <decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+<function><type><name>void</name></type> <name>sieve</name><parameter_list>()</parameter_list><block>{
+    <expr_stmt><expr><name>N</name> <operator>=</operator> <literal type="number">10000000</literal></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>sq</name> <init>= <expr><operator>(</operator><name>int</name><operator>)</operator><call><name>sqrt</name><argument_list>(<argument><expr><name>N</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>prime</name></expr></argument>, <argument><expr><literal type="boolean">true</literal></expr></argument>, <argument><expr><sizeof>sizeof<argument_list>(<argument><expr><name>prime</name></expr></argument>)</argument_list></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>prime</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <name><name>prime</name><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <literal type="boolean">false</literal></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">2</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;=</operator><name>sq</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+        <if>if<condition>(<expr><operator>!</operator><name><name>prime</name><index>[<expr><name>i</name></expr>]</index></name></expr>)</condition><then> <block type="pseudo"><continue>continue;</continue></block></then></if>
+        <for>for<control>(<init><decl><type><name>int</name></type> <name>j</name><init>=<expr><name>i</name></expr></init></decl>;</init> <condition><expr><name>j</name><operator>*</operator><name>i</name><operator>&lt;=</operator><name>N</name></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><name><name>prime</name><index>[<expr><name>i</name><operator>*</operator><name>j</name></expr>]</index></name> <operator>=</operator> <literal type="boolean">false</literal></expr>;</expr_stmt></block></for>
+    }</block></for>
+    <expr_stmt><expr><name><name>primes</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;=</operator><name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><name><name>primes</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name><name>primes</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name> <operator>+</operator> <name><name>prime</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;=</operator><name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><name><name>primes</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name>q</name><operator>*</operator><name><name>primes</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+}</block></function>
+<function><type><name>int</name></type> <name>palfill</name><parameter_list>()</parameter_list><block>{
+    <expr_stmt><expr><name><name>palins</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;=</operator><name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{ 
+        <expr_stmt><expr><name><name>palins</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name><name>palins</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name> <operator>+</operator> <call><name>palin</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></for>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;=</operator><name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><name><name>palins</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name>p</name><operator>*</operator><name><name>palins</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+}</block></function>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+
+    <decl_stmt><decl><type><name>int</name></type> <name>x</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>p</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>q</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>sieve</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>palfill</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>answer</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <comment type="line">//printf("%d %d\n", primes[173], palins[173]);</comment>
+    <for>for<control>(<init><expr><name>x</name><operator>=</operator><name>N</name></expr>;</init> <condition><expr><name>x</name><operator>&gt;=</operator><literal type="number">1</literal></expr>;</condition> <incr><expr><name>x</name><operator>--</operator></expr></incr>)</control><block>{
+        <if>if<condition>(<expr><name><name>primes</name><index>[<expr><name>x</name></expr>]</index></name><operator>&lt;=</operator><name><name>palins</name><index>[<expr><name>x</name></expr>]</index></name></expr>)</condition><then><block>{
+        <comment type="line">//  printf("%d %d\n", primes[x], palins[x]);</comment>
+        <comment type="line">//  printf("%d %d\n", primes[x]/q, palins[x]/p);</comment>
+            <expr_stmt><expr><name>answer</name> <operator>=</operator> <name>x</name></expr>;</expr_stmt>
+            <break>break;</break>
+        }</block></then></if>
+    }</block></for>
+    <comment type="line">//printf("%d %d\n", primes[41], palins[41]);</comment>
+    <if>if<condition>(<expr><name>answer</name><operator>==</operator><literal type="number">0</literal> <operator>||</operator> <name>answer</name> <operator>==</operator> <name>N</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"Palindromic tree is better than splay tree\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+    <else>else <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>answer</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

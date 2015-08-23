@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12355775.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>fst</name></cpp:macro> <cpp:value>first</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>snd</name></cpp:macro> <cpp:value>second</cpp:value></cpp:define>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pii</name>;</typedef>
+<typedef>typedef <type><name>unsigned</name> <name>long</name> <name>long</name></type> <name>ull</name>;</typedef>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name>long</name> <name>double</name></type> <name>ld</name>;</typedef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>pb</name></cpp:macro> <cpp:value>push_back</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>for_tests</name><parameter_list>(<parameter><type><name>t</name></type></parameter>, <parameter><type><name>tt</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>int t; scanf("%d", &amp;t); for(int tt = 1; tt &lt;= t; tt++)</cpp:value></cpp:define>
+<function><template>template<parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template> <specifier>inline</specifier> <type><name>T</name></type> <name>abs</name><parameter_list>(<parameter><decl><type><name>T</name></type> <name>t</name></decl></parameter>)</parameter_list> <block>{ <return>return <expr><ternary><condition><expr><name>t</name> <operator>&lt;</operator> <literal type="number">0</literal></expr>?</condition><then> <expr><operator>-</operator><name>t</name></expr> </then><else>: <expr><name>t</name></expr></else></ternary></expr>;</return> }</block></function>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ull</name></type> <name>modn</name> <init>= <expr><literal type="number">1000000007</literal></expr></init></decl>;</decl_stmt>
+<function><specifier>inline</specifier> <type><name>ull</name></type> <name>mod</name><parameter_list>(<parameter><decl><type><name>ull</name></type> <name>x</name></decl></parameter>)</parameter_list> <block>{ <return>return <expr><name>x</name> <operator>%</operator> <name>modn</name></expr>;</return> }</block></function>
+
+<decl_stmt><decl><type><name>int</name></type> <name><name>a</name><index>[<expr><literal type="number">1000009</literal></expr>]</index></name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>, <decl><type ref="prev"/><name>n</name></decl>, <decl><type ref="prev"/><name>x</name></decl>;</decl_stmt> <decl_stmt><decl><type><name>char</name></type> <name>c</name></decl>;</decl_stmt>
+	<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>mxcp</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>curcp</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+	<for>for<control>(<init><expr><name>i</name> <operator>=</operator> <literal type="number">0</literal></expr>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+		<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">" %c %d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>c</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>x</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<if>if<condition>(<expr><name>c</name> <operator>==</operator> <literal type="char">'+'</literal></expr>)</condition><then> <block>{
+			<expr_stmt><expr><name>curcp</name><operator>++</operator></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>a</name><index>[<expr><name>x</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+			<expr_stmt><expr><name>mxcp</name> <operator>=</operator> <call><name>max</name><argument_list>(<argument><expr><name>mxcp</name></expr></argument>, <argument><expr><name>curcp</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		}</block></then> <else>else <block>{
+			<if>if<condition>(<expr><name><name>a</name><index>[<expr><name>x</name></expr>]</index></name></expr>)</condition><then> <block>{ <expr_stmt><expr><name>curcp</name><operator>--</operator></expr>;</expr_stmt> <expr_stmt><expr><name><name>a</name><index>[<expr><name>x</name></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt> }</block></then>
+			<else>else <block>{
+				<expr_stmt><expr><name>mxcp</name><operator>++</operator></expr>;</expr_stmt>
+			}</block></else></if>
+		}</block></else></if>
+	}</block></for>
+	<expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>mxcp</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

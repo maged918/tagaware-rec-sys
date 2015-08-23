@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12189925.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ll</name></cpp:macro> <cpp:value>long long</cpp:value></cpp:define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<function><type><name>string</name></type> <name>smallest</name><parameter_list>(<parameter><decl><type><name>string</name></type> <name>s</name></decl></parameter>)</parameter_list>
+<block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>l</name> <init>=<expr><call><name><name>s</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+	<if>if<condition>(<expr><name>l</name><operator>&amp;</operator><literal type="number">1</literal></expr>)</condition><then> <comment type="line">//odd</comment>
+	<block type="pseudo"><return>return <expr><name>s</name></expr>;</return></block></then>
+	<else>else
+	<block>{
+		<decl_stmt><decl><type><name>string</name></type> <name>x1</name><init>=<expr><call><name>smallest</name><argument_list>(<argument><expr><call><name><name>s</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><name>l</name><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+		<decl_stmt><decl><type><name>string</name></type> <name>x2</name><init>=<expr><call><name>smallest</name><argument_list>(<argument><expr><call><name><name>s</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><name>l</name><operator>/</operator><literal type="number">2</literal></expr></argument>,<argument><expr><name>l</name><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+		<if>if<condition>(<expr><name>x1</name><operator>&lt;</operator><name>x2</name></expr>)</condition><then>
+		<block type="pseudo"><return>return <expr><name>x1</name><operator>+</operator><name>x2</name></expr>;</return></block></then></if>
+		<return>return <expr><name>x2</name><operator>+</operator><name>x1</name></expr>;</return>
+	}</block></else></if>
+}</block></function>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<decl_stmt><decl><type><name>string</name></type> <name>s1</name></decl>,<decl><type ref="prev"/><name>s2</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>s1</name><operator>&gt;&gt;</operator><name>s2</name></expr>;</expr_stmt>
+	<expr_stmt><expr><name>s1</name><operator>=</operator><call><name>smallest</name><argument_list>(<argument><expr><name>s1</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><name>s2</name><operator>=</operator><call><name>smallest</name><argument_list>(<argument><expr><name>s2</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<comment type="line">//~ cout&lt;&lt;s1&lt;&lt;" "&lt;&lt;s2&lt;&lt;endl;</comment>
+	<if>if<condition>(<expr><name>s1</name><operator>==</operator><name>s2</name></expr>)</condition><then>
+	<block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"YES\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+	<else>else
+	<block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"NO\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12429553.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>l</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>char</name></type> <name>c</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>ans</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>ans1</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name><name>arr</name><index>[<expr><literal type="number">1000005</literal></expr>]</index></name> <init>= <expr><block>{<expr><literal type="number">0</literal></expr>}</block></expr></init></decl>;</decl_stmt>
+
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>;</expr_stmt>
+
+    <while>while<condition>(<expr><name>n</name><operator>--</operator></expr>)</condition>
+    <block>{
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>c</name> <operator>&gt;&gt;</operator> <name>l</name></expr>;</expr_stmt>
+
+        <if>if<condition>(<expr><name>c</name> <operator>==</operator> <literal type="char">'+'</literal></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>ans1</name><operator>++</operator></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>arr</name><index>[<expr><name>l</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+            <expr_stmt><expr><name>ans</name> <operator>=</operator> <call><name>max</name><argument_list>(<argument><expr><name>ans</name></expr></argument>, <argument><expr><name>ans1</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then>
+        <elseif>else <if>if<condition>(<expr><name><name>arr</name><index>[<expr><name>l</name></expr>]</index></name> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>ans1</name><operator>--</operator></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>arr</name><index>[<expr><name>l</name></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+        }</block></then></if></elseif>
+        <else>else
+            <block type="pseudo"><expr_stmt><expr><name>ans</name><operator>++</operator></expr>;</expr_stmt></block></else></if>
+    }</block></while>
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>ans</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

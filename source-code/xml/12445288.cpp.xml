@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12445288.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<comment type="line">//#include &lt;vector&gt;</comment>
+<comment type="line">//#include &lt;string&gt;</comment>
+<comment type="line">//#include &lt;stack&gt;</comment>
+<comment type="line">//#include &lt;queue&gt;</comment>
+<comment type="line">//#include &lt;cstdlib&gt;</comment>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>max_num</name></cpp:macro> <cpp:value>100005</cpp:value></cpp:define>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>(<parameter><decl><type><name>void</name></type></decl></parameter>)</parameter_list><block>{
+	<decl_stmt><decl><type><name>long</name> <name>int</name></type> <name>T</name></decl>, <decl><type ref="prev"/><name>S</name></decl>, <decl><type ref="prev"/><name>q</name></decl>, <decl><type ref="prev"/><name>num</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>T</name> <operator>&gt;&gt;</operator> <name>S</name> <operator>&gt;&gt;</operator> <name>q</name></expr>;</expr_stmt>
+	<decl_stmt><decl><type><specifier>register</specifier> <name>int</name></type> <name>i</name></decl>, <decl><type ref="prev"/><name>j</name></decl>, <decl><type ref="prev"/><name>temp</name> <init>= <expr><name>S</name></expr></init></decl>;</decl_stmt>
+	<while>while<condition>(<expr><name>temp</name><operator>*</operator><name>q</name> <operator>&lt;</operator> <name>T</name></expr>)</condition><block>{
+        <expr_stmt><expr><name>temp</name> <operator>=</operator> <name>temp</name><operator>*</operator><name>q</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>num</name><operator>++</operator></expr>;</expr_stmt>
+    }</block></while>
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>num</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+}</block></function>
+</unit>

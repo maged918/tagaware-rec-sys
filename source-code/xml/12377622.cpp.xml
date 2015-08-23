@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12377622.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstdio&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;vector&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;algorithm&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;map&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<decl_stmt><decl><type><name><name>map</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>m</name></decl>;</decl_stmt><comment type="line">//number,count</comment>
+<decl_stmt><decl><type><name><name><name>map</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name> <operator>::</operator> <name>iterator</name></name></type> <name>it</name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>ll</name></type> <name>k</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name><operator>&gt;&gt;</operator><name>k</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>,<decl><type ref="prev"/><name>j</name></decl>,<decl><type ref="prev"/><name><name>a</name><index>[<expr><name>n</name></expr>]</index></name></decl>;</decl_stmt>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">0</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block type="pseudo"><expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+    <decl_stmt><decl><type><name>ll</name></type> <name><name>dp</name><index>[<expr><name>n</name></expr>]</index></name></decl>;</decl_stmt>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><name>n</name><operator>-</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>i</name><operator>&gt;=</operator><literal type="number">0</literal></expr>;</condition><incr><expr><name>i</name><operator>--</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name>it</name><operator>=</operator><call><name><name>m</name><operator>.</operator><name>find</name></name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>*</operator><name>k</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name>it</name><operator>==</operator><call><name><name>m</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name><name>dp</name><index>[<expr><name>i</name></expr>]</index></name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt></block></then>
+        <else>else
+            <block type="pseudo"><expr_stmt><expr><name><name>dp</name><index>[<expr><name>i</name></expr>]</index></name><operator>=</operator><name><name>it</name><operator>-&gt;</operator><name>second</name></name></expr>;</expr_stmt></block></else></if>
+        <comment type="line">//upd count of a[i]</comment>
+        <expr_stmt><expr><name>it</name><operator>=</operator><call><name><name>m</name><operator>.</operator><name>find</name></name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name>it</name><operator>!=</operator><call><name><name>m</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name><name>it</name><operator>-&gt;</operator><name>second</name></name><operator>++</operator></expr>;</expr_stmt></block></then>
+        <else>else
+            <block type="pseudo"><expr_stmt><expr><call><name><name>m</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><call><name>make_pair</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+    }</block></for>
+    <comment type="line">//for(i=0;i&lt;n;i++)cout&lt;&lt;dp[i]&lt;&lt;",";</comment>
+    <expr_stmt><expr><call><name><name>m</name><operator>.</operator><name>clear</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">0</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <if>if<condition>(<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>%</operator><name>k</name><operator>!=</operator><literal type="number">0</literal></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name><name>dp</name><index>[<expr><name>i</name></expr>]</index></name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+            <goto>goto <name>here</name>;</goto>
+        }</block></then></if>
+        <expr_stmt><expr><name>it</name><operator>=</operator><call><name><name>m</name><operator>.</operator><name>find</name></name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>/</operator><name>k</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name>it</name><operator>==</operator><call><name><name>m</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name><name>dp</name><index>[<expr><name>i</name></expr>]</index></name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt></block></then>
+        <else>else
+            <block type="pseudo"><expr_stmt><expr><name><name>dp</name><index>[<expr><name>i</name></expr>]</index></name><operator>*=</operator><name><name>it</name><operator>-&gt;</operator><name>second</name></name></expr>;</expr_stmt></block></else></if>
+        <comment type="line">//upd count of a[i]</comment>
+        <label><name>here</name>:</label>
+        <expr_stmt><expr><name>it</name><operator>=</operator><call><name><name>m</name><operator>.</operator><name>find</name></name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name>it</name><operator>!=</operator><call><name><name>m</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name><name>it</name><operator>-&gt;</operator><name>second</name></name><operator>++</operator></expr>;</expr_stmt></block></then>
+        <else>else
+            <block type="pseudo"><expr_stmt><expr><call><name><name>m</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><call><name>make_pair</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+    }</block></for>
+    <decl_stmt><decl><type><name>ll</name></type> <name>ans</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <comment type="line">//for(i=0;i&lt;n;i++)cout&lt;&lt;dp[i]&lt;&lt;",";</comment>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">0</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block type="pseudo"><expr_stmt><expr><name>ans</name><operator>+=</operator><name><name>dp</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>ans</name></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

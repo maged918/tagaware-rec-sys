@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12044952.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>maxn</name></cpp:macro> <cpp:value>1000005</cpp:value></cpp:define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<struct>struct <name>data</name>
+<block>{<public type="default">
+	<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>a</name></decl>, <decl><type ref="prev"/><name>x</name></decl>;</decl_stmt>
+</public>}</block>;</struct>
+
+<decl_stmt><decl><type><name>data</name></type> <name><name>a</name><index>[ <expr><name>maxn</name></expr> ]</index></name></decl>;</decl_stmt>
+
+<function><type><name>bool</name></type> <name>cmp</name><parameter_list>( <parameter><decl><type><name>data</name></type> <name>x</name></decl></parameter>, <parameter><decl><type><name>data</name></type> <name>y</name></decl></parameter> )</parameter_list>
+<block>{
+	<return>return <expr><name><name>x</name><operator>.</operator><name>x</name></name> <operator>&lt;</operator> <name><name>y</name><operator>.</operator><name>x</name></name></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>;</expr_stmt>
+	
+	<for>for<control>( <init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr> )</control>
+	<block>{
+		<expr_stmt><expr><call><name>scanf</name><argument_list>( <argument><expr><literal type="string">"%lld %lld"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name><name>a</name><index>[ <expr><name>i</name></expr> ]</index></name><operator>.</operator><name>x</name></expr></argument>, <argument><expr><operator>&amp;</operator><name><name>a</name><index>[ <expr><name>i</name></expr> ]</index></name><operator>.</operator><name>a</name></expr></argument> )</argument_list></call></expr>;</expr_stmt>
+	}</block></for>
+	
+	<expr_stmt><expr><call><name>sort</name><argument_list>( <argument><expr><name>a</name></expr></argument>, <argument><expr><name>a</name> <operator>+</operator> <name>n</name></expr></argument>, <argument><expr><name>cmp</name></expr></argument> )</argument_list></call></expr>;</expr_stmt>
+	
+	<decl_stmt><decl><type><name>int</name></type> <name>m</name> <init>= <expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+	
+	<for>for<control>( <init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr> )</control>
+	<block>{
+		<if>if<condition>( <expr><name><name>a</name><index>[ <expr><name>i</name></expr> ]</index></name><operator>.</operator><name>x</name> <operator>&gt;</operator> <literal type="number">0</literal></expr> )</condition><then>
+		<block>{
+			<break>break;</break>
+		}</block></then></if>
+		
+		<expr_stmt><expr><name>m</name><operator>++</operator></expr>;</expr_stmt>
+	}</block></for>
+	
+	<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>ans</name> <init>= <expr><literal type="number">0LL</literal></expr></init></decl>;</decl_stmt>
+	<for>for<control>( <init><decl><type><name>int</name></type> <name>d</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><literal type="boolean">true</literal></expr>;</condition> <incr><expr><name>d</name><operator>++</operator></expr></incr> )</control>
+	<block>{
+		<decl_stmt><decl><type><name>int</name></type> <name>L</name> <init>= <expr><name>m</name> <operator>-</operator> <name>d</name></expr></init></decl>, <decl><type ref="prev"/><name>R</name> <init>= <expr><name>m</name> <operator>+</operator> <name>d</name><operator>+</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+		
+		<if>if<condition>( <expr><name>L</name> <operator>&lt;</operator> <literal type="number">0</literal> <operator>||</operator> <name>R</name> <operator>==</operator> <name>n</name></expr> )</condition><then>
+		<block>{
+			<if>if<condition>( <expr><name>L</name> <operator>&gt;=</operator> <literal type="number">0</literal></expr> )</condition><then>
+			<block>{
+				<expr_stmt><expr><name>ans</name> <operator>+=</operator> <name><name>a</name><index>[ <expr><name>L</name></expr> ]</index></name><operator>.</operator><name>a</name></expr>;</expr_stmt>
+			}</block></then></if>
+			
+			<if>if<condition>( <expr><name>R</name> <operator>&lt;</operator> <name>n</name></expr> )</condition><then>
+			<block>{
+				<expr_stmt><expr><name>ans</name> <operator>+=</operator> <name><name>a</name><index>[ <expr><name>R</name></expr> ]</index></name><operator>.</operator><name>a</name></expr>;</expr_stmt>
+			}</block></then></if>
+			
+			<break>break;</break>
+		}</block></then></if>
+		
+		<expr_stmt><expr><name>ans</name> <operator>+=</operator> <name><name>a</name><index>[ <expr><name>L</name></expr> ]</index></name><operator>.</operator><name>a</name> <operator>+</operator> <name><name>a</name><index>[ <expr><name>R</name></expr> ]</index></name><operator>.</operator><name>a</name></expr>;</expr_stmt>
+	}</block></for>
+	
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>ans</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+	
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

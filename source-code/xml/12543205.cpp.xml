@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12543205.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;stdio.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;string.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;algorithm&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;queue&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;stack&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>char</name></type> <name><name>q</name><index>[<expr><literal type="number">3</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>a</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>char</name></type> <name><name>tmp</name><index>[<expr><literal type="number">300010</literal></expr>]</index></name></decl>;</decl_stmt>
+<struct>struct <name>st</name>
+<block>{<public type="default">
+    <decl_stmt><decl><type><name>int</name></type> <name>s</name></decl>,<decl><type ref="prev"/><name>e</name></decl>,<decl><type ref="prev"/><name>zu</name></decl>,<decl><type ref="prev"/><name>num</name></decl>;</decl_stmt>
+</public>}</block>;</struct>
+<decl_stmt><decl><type><name>st</name></type> <name><name>tree</name><index>[<expr><literal type="number">300010</literal><operator>&lt;&lt;</operator><literal type="number">2</literal></expr>]</index></name></decl>;</decl_stmt>
+<function><type><name>void</name></type> <name>build</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>st</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>ed</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>k</name></decl></parameter>)</parameter_list>
+<block>{
+    <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>s</name><operator>=</operator><name>st</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>e</name><operator>=</operator><name>ed</name></expr>;</expr_stmt>
+    <if>if<condition>(<expr><name>st</name><operator>==</operator><name>ed</name></expr>)</condition><then>
+    <block>{
+        <if>if<condition>(<expr><name><name>tmp</name><index>[<expr><name>st</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>num</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>zu</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+        }</block></then>
+        <else>else
+        <block>{
+            <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>num</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>zu</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+        }</block></else></if>
+        <return>return;</return>
+    }</block></then></if>
+    <decl_stmt><decl><type><name>int</name></type> <name>mid</name><init>=<expr><operator>(</operator><name>st</name><operator>+</operator><name>ed</name><operator>)</operator><operator>&gt;&gt;</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>build</name><argument_list>(<argument><expr><name>st</name></expr></argument>,<argument><expr><name>mid</name></expr></argument>,<argument><expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>build</name><argument_list>(<argument><expr><name>mid</name><operator>+</operator><literal type="number">1</literal></expr></argument>,<argument><expr><name>ed</name></expr></argument>,<argument><expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal><operator>|</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>zu</name><operator>=</operator><name><name>tree</name><index>[<expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>zu</name><operator>+</operator><name><name>tree</name><index>[<expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal><operator>|</operator><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>zu</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>num</name><operator>=</operator><name><name>tree</name><index>[<expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>num</name><operator>+</operator><name><name>tree</name><index>[<expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal><operator>|</operator><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>num</name></expr>;</expr_stmt>
+    <if>if<condition>(<expr><name><name>tmp</name><index>[<expr><name><name>tree</name><index>[<expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal><operator>|</operator><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>s</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal><operator>&amp;&amp;</operator><name><name>tmp</name><index>[<expr><name><name>tree</name><index>[<expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>e</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>zu</name><operator>--</operator></expr>;</expr_stmt></block></then></if>
+}</block></function>
+<function><type><name>void</name></type> <name>update</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>k</name></decl></parameter>)</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>st</name><init>=<expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>s</name></expr></init></decl>;</decl_stmt>
+    <if>if<condition>(<expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>s</name><operator>==</operator><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>e</name></expr>)</condition><then>
+    <block>{
+        <if>if<condition>(<expr><name><name>tmp</name><index>[<expr><name>st</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>num</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>zu</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+        }</block></then>
+        <else>else
+        <block>{
+            <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>num</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>zu</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+        }</block></else></if>
+        <return>return;</return>
+    }</block></then></if>
+    <decl_stmt><decl><type><name>int</name></type> <name>mid</name><init>=<expr><operator>(</operator><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>s</name><operator>+</operator><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>e</name><operator>)</operator><operator>&gt;&gt;</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+    <if>if<condition>(<expr><name>mid</name><operator>&lt;</operator><name>a</name></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal><operator>|</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+    <else>else
+        <block type="pseudo"><expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+    <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>zu</name><operator>=</operator><name><name>tree</name><index>[<expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>zu</name><operator>+</operator><name><name>tree</name><index>[<expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal><operator>|</operator><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>zu</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>num</name><operator>=</operator><name><name>tree</name><index>[<expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>num</name><operator>+</operator><name><name>tree</name><index>[<expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal><operator>|</operator><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>num</name></expr>;</expr_stmt>
+    <if>if<condition>(<expr><name><name>tmp</name><index>[<expr><name><name>tree</name><index>[<expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal><operator>|</operator><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>s</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal><operator>&amp;&amp;</operator><name><name>tmp</name><index>[<expr><name><name>tree</name><index>[<expr><name>k</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>e</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>k</name></expr>]</index></name><operator>.</operator><name>zu</name><operator>--</operator></expr>;</expr_stmt></block></then></if>
+}</block></function>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>n</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>m</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>getchar</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%s"</literal></expr></argument>,<argument><expr><name>tmp</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>build</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>,<argument><expr><name>n</name></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>m</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><call><name>getchar</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d%s"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>a</name></expr></argument>,<argument><expr><name>q</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>tmp</name><index>[<expr><name>a</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>=</operator><name><name>q</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name><name>tree</name><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>num</name><operator>-</operator><name><name>tree</name><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>zu</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></for>
+}</block></function>
+
+      	 		 	   	  		  	 				</unit>

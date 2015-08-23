@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12364358.cpp"><comment type="line">//Language: MS C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;algorithm&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;cmath&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;vector&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;string&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cmath&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<comment type="line">//ifstream cin("input.txt");</comment>
+<comment type="line">//ofstream cout("output.txt"); </comment>
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>i</name></decl>, <decl><type ref="prev"/><name><name>a</name><index>[<expr><literal type="number">1000005</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>long</name> <name>long</name> <name>int</name></type>  <name>mina</name> <init>= <expr><literal type="number">2000000005</literal></expr></init></decl>, <decl><type ref="prev"/><name>minb</name> <init>= <expr><literal type="number">2000000005</literal></expr></init></decl>, <decl><type ref="prev"/><name>maxa</name></decl>, <decl><type ref="prev"/><name>maxb</name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>;</expr_stmt>
+	<for>for <control>(<init><expr><name>i</name> <operator>=</operator> <literal type="number">0</literal></expr>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><operator>++</operator><name>i</name></expr></incr>)</control>
+		<block type="pseudo"><expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+	<for>for <control>(<init><expr><name>i</name> <operator>=</operator> <literal type="number">0</literal></expr>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+		<if>if <condition>(<expr><name>i</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then><block>{
+			<expr_stmt><expr><name>mina</name> <operator>=</operator> <call><name>abs</name> <argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <name><name>a</name><index>[<expr><name>i</name> <operator>+</operator> <literal type="number">1</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+			<expr_stmt><expr><name>maxa</name> <operator>=</operator> <call><name>abs</name> <argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <name><name>a</name><index>[<expr><name>n</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		}</block></then></if>
+		<if>if <condition>(<expr><name>i</name> <operator>==</operator> <name>n</name> <operator>-</operator> <literal type="number">1</literal></expr>)</condition><then><block>{
+			<expr_stmt><expr><name>mina</name> <operator>=</operator> <call><name>abs</name> <argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <name><name>a</name><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+			<expr_stmt><expr><name>maxa</name> <operator>=</operator> <call><name>abs</name> <argument_list>(<argument><expr><name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>-</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		}</block></then></if>
+		<if>if <condition>(<expr><name>i</name> <operator>!=</operator> <name>n</name> <operator>-</operator> <literal type="number">1</literal> <operator>&amp;&amp;</operator> <name>i</name> <operator>!=</operator> <literal type="number">0</literal></expr>)</condition><then><block>{
+			<expr_stmt><expr><name>mina</name> <operator>=</operator> <call><name>abs</name> <argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <name><name>a</name><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+			<expr_stmt><expr><name>maxa</name> <operator>=</operator> <call><name>abs</name> <argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <name><name>a</name><index>[<expr><name>n</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+			<expr_stmt><expr><name>minb</name> <operator>=</operator> <call><name>abs</name> <argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <name><name>a</name><index>[<expr><name>i</name> <operator>+</operator> <literal type="number">1</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+			<expr_stmt><expr><name>maxb</name> <operator>=</operator> <call><name>abs</name> <argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		}</block></then></if>
+		<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <call><name>min</name><argument_list>(<argument><expr><name>mina</name></expr></argument>, <argument><expr><name>minb</name></expr></argument>)</argument_list></call> <operator>&lt;&lt;</operator> <literal type="char">' '</literal> <operator>&lt;&lt;</operator> <call><name>max</name> <argument_list>(<argument><expr><name>maxa</name></expr></argument>, <argument><expr><name>maxb</name></expr></argument>)</argument_list></call> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+	}</block></for>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

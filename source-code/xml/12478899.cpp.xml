@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12478899.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<comment type="line">// -*- compile-command: "g++ -g -Wno-return-type -Wall -Wextra -DLOCAL -std=c++11 -D_GLIBCXX_DEBUG b.cpp -ob &amp;&amp; ./b " -*-</comment>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>f</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>for(int i=0;i&lt;(n);i++)</cpp:value></cpp:define>
+
+<decl_stmt><decl><type><name>int</name></type> <name><name>f</name><index>[<expr><literal type="number">1000001</literal></expr>]</index></name></decl>,<decl><type ref="prev"/><name><name>s</name><index>[<expr><literal type="number">1000001</literal></expr>]</index></name></decl>,<decl><type ref="prev"/><name><name>e</name><index>[<expr><literal type="number">1000001</literal></expr>]</index></name></decl>;</decl_stmt>
+
+<function><name>main</name><parameter_list>()</parameter_list><block>{
+	<expr_stmt><expr><call><name><name>ios</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr><operator>,</operator><expr><call><name><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>a</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>s</name></expr></argument>,<argument><expr><operator>-</operator><literal type="number">1</literal></expr></argument>,<argument><expr><sizeof>sizeof<argument_list>(<argument><expr><name>s</name></expr></argument>)</argument_list></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>mx</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+	<macro><name>f</name><argument_list>(<argument>i</argument>,<argument>n</argument>)</argument_list></macro><block>{
+		<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>a</name></expr>;</expr_stmt>
+		<expr_stmt><expr><name>mx</name><operator>=</operator><call><name>max</name><argument_list>(<argument><expr><name>mx</name></expr></argument>,<argument><expr><operator>++</operator><name><name>f</name><index>[<expr><name>a</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<if>if<condition>(<expr><operator>!</operator><operator>~</operator><name><name>s</name><index>[<expr><name>a</name></expr>]</index></name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name><name>s</name><index>[<expr><name>a</name></expr>]</index></name><operator>=</operator><name>i</name><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if>
+		<expr_stmt><expr><name><name>e</name><index>[<expr><name>a</name></expr>]</index></name><operator>=</operator><name>i</name><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt>
+	}</block>
+	<decl_stmt><decl><type><name>int</name></type> <name>l</name><init>=<expr><literal type="number">1</literal></expr></init></decl>,<decl><type ref="prev"/><name>r</name><init>=<expr><name>n</name></expr></init></decl>;</decl_stmt>
+	<macro><name>f</name><argument_list>(<argument>i</argument>,<argument><literal type="number">1000001</literal></argument>)</argument_list></macro><block>{
+		<if>if<condition>(<expr><name><name>f</name><index>[<expr><name>i</name></expr>]</index></name><operator>!=</operator><name>mx</name></expr>)</condition><then> <block type="pseudo"><continue>continue;</continue></block></then></if>
+		<if>if<condition>(<expr><name><name>e</name><index>[<expr><name>i</name></expr>]</index></name><operator>-</operator><name><name>s</name><index>[<expr><name>i</name></expr>]</index></name><operator>&lt;</operator><name>r</name><operator>-</operator><name>l</name></expr>)</condition><then>
+			<block type="pseudo"><expr_stmt><expr><name>l</name><operator>=</operator><name><name>s</name><index>[<expr><name>i</name></expr>]</index></name></expr><operator>,</operator><expr><name>r</name><operator>=</operator><name><name>e</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></then></if>
+	}</block>
+	<expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>l</name><operator>&lt;&lt;</operator><literal type="string">" "</literal><operator>&lt;&lt;</operator><name>r</name><operator>&lt;&lt;</operator><literal type="char">'\n'</literal></expr>;</expr_stmt>
+}</block></function>
+</unit>

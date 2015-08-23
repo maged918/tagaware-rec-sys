@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12470391.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>string</name></type> <name>str</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>string</name></expr></argument>&gt;</argument_list></name></type> <name>s</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>string</name></expr></argument>&gt;</argument_list></name><operator>::</operator><name>iterator</name></name></type> <name>it</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>getline</name><argument_list>(<argument><expr><name>cin</name></expr></argument>,<argument><expr><name>str</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>maxv</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition><incr><expr><operator>++</operator><name>i</name></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><call><name>getline</name><argument_list>(<argument><expr><name>cin</name></expr></argument>,<argument><expr><name>str</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <comment type="line">//cout&lt;&lt;str.substr(2)&lt;&lt;endl;</comment>
+        <if>if<condition>(<expr><name><name>str</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>==</operator><literal type="char">'-'</literal> <operator>&amp;&amp;</operator> <operator>!</operator><call><name><name>s</name><operator>.</operator><name>count</name></name><argument_list>(<argument><expr><call><name><name>str</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">2</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then>
+        <block>{
+            <comment type="line">//s.insert(str.substr(2));</comment>
+            <comment type="line">//if(s.size()&gt;maxv)</comment>
+            <comment type="line">//  maxv=s.size();</comment>
+            <expr_stmt><expr><name>maxv</name><operator>++</operator></expr>;</expr_stmt>
+        }</block></then>
+        <elseif>else <if>if<condition>(<expr><name><name>str</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>==</operator><literal type="char">'-'</literal> <operator>&amp;&amp;</operator> <call><name><name>s</name><operator>.</operator><name>count</name></name><argument_list>(<argument><expr><call><name><name>str</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">2</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>it</name><operator>=</operator><call><name><name>s</name><operator>.</operator><name>find</name></name><argument_list>(<argument><expr><call><name><name>str</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">2</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><call><name><name>s</name><operator>.</operator><name>erase</name></name><argument_list>(<argument><expr><name>it</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <if>if<condition>(<expr><call><name><name>s</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call><operator>&gt;</operator><name>maxv</name></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><name>maxv</name><operator>=</operator><call><name><name>s</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt></block></then></if>
+        }</block></then></if></elseif>
+        <else>else
+        <block>{
+            <expr_stmt><expr><call><name><name>s</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><call><name><name>str</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">2</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <if>if<condition>(<expr><call><name><name>s</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call><operator>&gt;</operator><name>maxv</name></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><name>maxv</name><operator>=</operator><call><name><name>s</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt></block></then></if>
+        }</block></else></if>
+    }</block></for>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>maxv</name></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

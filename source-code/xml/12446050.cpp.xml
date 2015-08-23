@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12446050.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<comment type="line" format="doxygen">///==============[ Definings Here ]========================</comment>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>sc</name></cpp:macro>              <cpp:value>scanf</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>pr</name></cpp:macro>              <cpp:value>printf</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>mx</name></cpp:macro>              <cpp:value>100009</cpp:value></cpp:define>          <comment type="line">//====[10^6]====</comment>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>PI</name></cpp:macro>              <cpp:value>acos(-1)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>pb</name></cpp:macro>              <cpp:value>push_back</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ll</name></cpp:macro>              <cpp:value>long long</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>NN</name></cpp:macro>              <cpp:value>100000000</cpp:value></cpp:define>        <comment type="line">//===[10^8]====</comment>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>pll</name></cpp:macro>             <cpp:value>pair&lt;ll,ll&gt;</cpp:value></cpp:define>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>readInt</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></cpp:macro>      <cpp:value>sc("%d",&amp;a)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>readChar</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></cpp:macro>     <cpp:value>sc("%c",&amp;a)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>readString</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></cpp:macro>   <cpp:value>sc("%s",&amp;a)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>readLong</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></cpp:macro>     <cpp:value>sc("%lld",&amp;a)</cpp:value></cpp:define>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>FOR</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></cpp:macro>      <cpp:value>for(i=a;i&lt;=b;i++)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ROF</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></cpp:macro>      <cpp:value>for(i=a;i&gt;=b;i--)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>readLong2</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></cpp:macro>  <cpp:value>sc("%lld %lld",&amp;a,&amp;b)</cpp:value></cpp:define>
+
+
+<comment type="line" format="doxygen">///==============[ Global Variables &amp; Declared Functions Here ]================</comment>
+<decl_stmt><decl><type><name>int</name></type> <name><name>arr</name><index>[<expr><name>mx</name></expr>]</index></name></decl>,<decl><type ref="prev"/><name><name>cnt</name><index>[<expr><name>mx</name></expr>]</index></name></decl>,<decl><type ref="prev"/><name><name>f</name><index>[<expr><name>mx</name></expr>]</index></name></decl>;</decl_stmt>
+
+<comment type="line" format="doxygen">///=====================================[ Main ]===========================================</comment>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>i</name></decl>,<decl><type ref="prev"/><name>h</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type><name>v</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt>
+    <macro><name>FOR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">1</literal></argument>,<argument>n</argument>)</argument_list></macro><block>{
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>f</name><index>[<expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+    }</block>
+    <macro><name>FOR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">1</literal></argument>,<argument>n</argument>)</argument_list></macro><block>{
+        <if>if<condition>(<expr><name><name>f</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><call><name><name>v</name><operator>.</operator><name>pb</name></name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if>
+    }</block>
+    <decl_stmt><decl><type><name>int</name></type> <name>ind</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <macro><name>FOR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">1</literal></argument>,<argument>n</argument>)</argument_list></macro><block>{
+        <if>if<condition>(<expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>&gt;=</operator><literal type="number">1</literal> <operator>and</operator> <name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>&lt;=</operator><name>n</name> <operator>and</operator> <name><name>cnt</name><index>[<expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>  <block type="pseudo"><expr_stmt><expr><name><name>cnt</name><index>[<expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then>
+        <else>else<block>{
+            <expr_stmt><expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>=</operator><name><name>v</name><index>[<expr><name>ind</name></expr>]</index></name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>ind</name><operator>++</operator></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block>
+    <macro><name>FOR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">1</literal></argument>,<argument>n</argument>)</argument_list></macro><block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>&lt;&lt;</operator><literal type="string">" "</literal></expr>;</expr_stmt>
+    }</block>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+}</block></function>
+</unit>

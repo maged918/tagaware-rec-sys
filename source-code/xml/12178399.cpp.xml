@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12178399.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;vector&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstring&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstdio&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;memory.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;queue&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;map&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cmath&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;algorithm&gt;</cpp:file></cpp:include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>MAX_N</name> <init>= <expr><literal type="number">200001</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>char</name></type> <name><name>a</name><index>[<expr><name>MAX_N</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>char</name></type> <name><name>b</name><index>[<expr><name>MAX_N</name></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>bool</name></type> <name>div</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>ab</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>ae</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>bb</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>be</name></decl></parameter>)</parameter_list>
+<block>{
+    <if>if <condition>(<expr><operator>(</operator><name>ae</name><operator>-</operator><name>ab</name><operator>)</operator><operator>%</operator><literal type="number">2</literal> <operator>==</operator> <literal type="number">1</literal> <operator>||</operator> <operator>(</operator><name>be</name><operator>-</operator><name>bb</name><operator>)</operator><operator>%</operator><literal type="number">2</literal> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then> <block>{
+        <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>ae</name><operator>-</operator><name>ab</name></expr>;</condition> <incr><expr><operator>++</operator><name>i</name></expr></incr>)</control> <block>{
+            <if>if <condition>(<expr><name><name>a</name><index>[<expr><name>ab</name><operator>+</operator><name>i</name></expr>]</index></name> <operator>!=</operator> <name><name>b</name><index>[<expr><name>bb</name><operator>+</operator><name>i</name></expr>]</index></name></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="boolean">false</literal></expr>;</return></block></then></if>
+        }</block></for>
+        <return>return <expr><literal type="boolean">true</literal></expr>;</return>
+    }</block></then></if>
+    <return>return <expr><operator>(</operator><call><name>div</name><argument_list>(<argument><expr><name>ab</name></expr></argument>, <argument><expr><operator>(</operator><name>ab</name><operator>+</operator><name>ae</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><name>bb</name></expr></argument>, <argument><expr><operator>(</operator><name>bb</name><operator>+</operator><name>be</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call> <operator>&amp;&amp;</operator> <call><name>div</name><argument_list>(<argument><expr><operator>(</operator><name>ab</name><operator>+</operator><name>ae</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><name>ae</name></expr></argument>, <argument><expr><operator>(</operator><name>bb</name><operator>+</operator><name>be</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><name>be</name></expr></argument>)</argument_list></call> <operator>||</operator>
+            <call><name>div</name><argument_list>(<argument><expr><name>ab</name></expr></argument>, <argument><expr><operator>(</operator><name>ab</name><operator>+</operator><name>ae</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><operator>(</operator><name>bb</name><operator>+</operator><name>be</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><name>be</name></expr></argument>)</argument_list></call> <operator>&amp;&amp;</operator> <call><name>div</name><argument_list>(<argument><expr><operator>(</operator><name>ab</name><operator>+</operator><name>ae</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><name>ae</name></expr></argument>, <argument><expr><name>bb</name></expr></argument>, <argument><expr><operator>(</operator><name>bb</name><operator>+</operator><name>be</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call> <operator>)</operator></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name>gets</name><argument_list>(<argument><expr><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>gets</name><argument_list>(<argument><expr><name>b</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <if>if <condition>(<expr><call><name>strlen</name><argument_list>(<argument><expr><name>a</name></expr></argument>)</argument_list></call> <operator>!=</operator> <call><name>strlen</name><argument_list>(<argument><expr><name>b</name></expr></argument>)</argument_list></call> <operator>||</operator> <operator>!</operator><call><name>div</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><call><name>strlen</name><argument_list>(<argument><expr><name>a</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><call><name>strlen</name><argument_list>(<argument><expr><name>b</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"NO\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+    <else>else <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"YES\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

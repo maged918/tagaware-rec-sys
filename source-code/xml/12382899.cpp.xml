@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12382899.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ll</name></cpp:macro> <cpp:value>long long</cpp:value></cpp:define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>int</name></type> <name><name>v</name><index>[<expr><literal type="number">1000010</literal></expr>]</index></name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>;</decl_stmt>
+	<expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>v</name></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><sizeof>sizeof<argument_list>(<argument><expr><name>v</name></expr></argument>)</argument_list></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>t</name></decl>;</decl_stmt><comment type="line">//time</comment>
+	<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>t</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>string</name></type> <name>s</name></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>id</name></decl>,<decl><type ref="prev"/><name>ans</name><init>=<expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name>cur</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+	<for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">0</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>t</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+	<block>{
+		<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>s</name><operator>&gt;&gt;</operator><name>id</name></expr>;</expr_stmt>
+		<if>if<condition>(<expr><name>s</name><operator>==</operator><literal type="string">"+"</literal></expr>)</condition><then>
+		<block>{
+			<expr_stmt><expr><name>cur</name><operator>++</operator></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>v</name><index>[<expr><name>id</name></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt> <comment type="line">//visited</comment>
+		}</block></then>
+		<elseif>else <if>if<condition>(<expr><name>s</name><operator>==</operator><literal type="string">"-"</literal></expr>)</condition><then>
+		<block>{
+			<if>if<condition>(<expr><name><name>v</name><index>[<expr><name>id</name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then><comment type="line">//No arrival details</comment>
+			<block>{
+				<expr_stmt><expr><name>ans</name><operator>++</operator></expr>;</expr_stmt>
+			}</block></then>
+			<else>else
+			<block>{
+				<expr_stmt><expr><name>cur</name><operator>--</operator></expr>;</expr_stmt>
+				<expr_stmt><expr><name><name>v</name><index>[<expr><name>id</name></expr>]</index></name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt><comment type="line">//Left</comment>
+			}</block></else></if>
+		}</block></then></if></elseif></if>
+		<expr_stmt><expr><name>ans</name><operator>=</operator><call><name>max</name><argument_list>(<argument><expr><name>ans</name></expr></argument>,<argument><expr><name>cur</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	}</block></for>
+	<expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>ans</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

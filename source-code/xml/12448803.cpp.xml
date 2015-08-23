@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12448803.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+	<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>T</name></decl>, <decl><type ref="prev"/><name>S</name></decl>, <decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>T</name> <operator>&gt;&gt;</operator> <name>S</name> <operator>&gt;&gt;</operator> <name>q</name></expr>;</expr_stmt>
+
+	<decl_stmt><decl><type><name>int</name></type> <name>ans</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>cur</name> <init>= <expr><name>S</name> <operator>*</operator> <name>q</name></expr></init></decl>;</decl_stmt>
+	<while>while <condition>(<expr><name>cur</name> <operator>&lt;</operator> <name>T</name></expr>)</condition> <block>{
+		<expr_stmt><expr><name>ans</name><operator>++</operator></expr>;</expr_stmt>
+		<expr_stmt><expr><name>cur</name> <operator>*=</operator> <name>q</name></expr>;</expr_stmt>
+	}</block></while>
+
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>ans</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12500382.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<comment type="line">//pranjalr34</comment>
+
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>PB</name></cpp:macro> <cpp:value>push_back</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>MP</name></cpp:macro> <cpp:value>make_pair</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>F</name></cpp:macro> <cpp:value>first</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>S</name></cpp:macro> <cpp:value>second</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>all</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>a.begin(),a.end()</cpp:value></cpp:define>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>PII</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>VI</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt; <argument><expr><name>PII</name></expr></argument> &gt;</argument_list></name></type> <name>VPII</name>;</typedef>
+<typedef>typedef <type><name>long</name> <name>long</name> <name>int</name></type> <name>LL</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>LL</name></expr></argument>,<argument><expr><name>LL</name></expr></argument>&gt;</argument_list></name></type> <name>PLL</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>LL</name></expr></argument>&gt;</argument_list></name></type> <name>VLL</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt; <argument><expr><name>PLL</name></expr></argument> &gt;</argument_list></name></type> <name>VPLL</name>;</typedef>
+
+<comment type="line">//long long int gcd(long long int m, long long int n){if(n == 0) return m;return gcd(n, m % n);}  </comment>
+<comment type="line">//long long int fastpow(long long int a, long long int b,long long int m){long long int r = 1;while (b &gt; 0){if (b % 2 == 1)r = (r * a) % m;b = b &gt;&gt; 1;a = (a * a) % m;}return r;}</comment>
+<comment type="line">//int prime(long long int x){if(x==1)return 0;if(x&lt;=3)return 1;if(x%6==1||x%6==5){long long int y=sqrt(x),i;for(i=2;i&lt;=y;i++)if(x%i==0)return 0;return 1;} return 0;}</comment>
+<comment type="line">//LL root(LL x){return v[x]&lt;0?x:(v[x]=root(v[x]));}  //returns the root of the node x</comment>
+<comment type="line">//void merge(int x,int y){    if((x = root(x)) == (y = root(y)))     return ;if(v[y] &lt; v[x]) swap(x, y);v[x] += v[y];v[y] = x;}  //(merges two sets) further if i is a root then v[i] is the negative of size of its set</comment>
+<comment type="line">//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</comment>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>LL</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator><name>n</name><operator>&gt;&gt;</operator><name>m</name></expr>;</expr_stmt>
+    <if>if<condition>(<expr><name>n</name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator><literal type="number">1</literal><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    <if>if<condition>(<expr><name>n</name><operator>%</operator><literal type="number">2</literal><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+    <block>{
+        <if>if<condition>(<expr><name>m</name><operator>&lt;=</operator><name>n</name><operator>/</operator><literal type="number">2</literal></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator><name>m</name><operator>+</operator><literal type="number">1</literal><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt></block></then></if>
+        <if>if<condition>(<expr><name>m</name><operator>&gt;</operator><name>n</name><operator>/</operator><literal type="number">2</literal></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator><name>m</name><operator>-</operator><literal type="number">1</literal><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt></block></then></if>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    <if>if<condition>(<expr><name>m</name><operator>==</operator><operator>(</operator><name>n</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator><name>m</name><operator>-</operator><literal type="number">1</literal><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    <if>if<condition>(<expr><name>m</name><operator>&lt;</operator><operator>(</operator><name>n</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator><name>m</name><operator>+</operator><literal type="number">1</literal><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then>
+    <else>else
+        <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator><name>m</name><operator>-</operator><literal type="number">1</literal><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt></block></else></if>    
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

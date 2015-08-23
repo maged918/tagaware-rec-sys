@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12374889.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bits/stdc++.h&gt;</cpp:file></cpp:include>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ll</name></cpp:macro> <cpp:value>long long</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ff</name></cpp:macro> <cpp:value>first</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ss</name></cpp:macro> <cpp:value>second</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>pb</name></cpp:macro> <cpp:value>push_back</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ins</name></cpp:macro> <cpp:value>insert</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>mp</name></cpp:macro> <cpp:value>make_pair</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>iOS</name></cpp:macro> <cpp:value>ios::sync_with_stdio(false)</cpp:value></cpp:define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>ll</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>k</name></decl>,<decl><type ref="prev"/><name>a</name></decl>,<decl><type ref="prev"/><name>m</name></decl>,<decl><type ref="prev"/><name><name>arr</name><index>[<expr><literal type="number">200005</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name></type> <name>s</name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><name>iOS</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name><operator>&gt;&gt;</operator><name>k</name><operator>&gt;&gt;</operator><name>a</name><operator>&gt;&gt;</operator><name>m</name></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>m</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block type="pseudo"><expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+    <decl_stmt><decl><type><name>ll</name></type> <name>can</name><init>=<expr><name>n</name><operator>/</operator><name>k</name></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name><name>s</name><operator>.</operator><name>ins</name></name><argument_list>(<argument><expr><name><name>arr</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name>can</name><operator>=</operator><operator>(</operator><name><name>arr</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>+</operator><operator>(</operator><name>n</name><operator>-</operator><name><name>arr</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt>
+    <comment type="line">//cout&lt;&lt;can&lt;&lt;endl;</comment>
+    <if>if<condition>(<expr><name>can</name><operator>&lt;</operator><name>k</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="number">1</literal><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    <decl_stmt><decl><type><name><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name><operator>::</operator><name>iterator</name></name></type> <name>it</name></decl>,<decl><type ref="prev"/><name>r</name></decl>,<decl><type ref="prev"/><name>l</name></decl>,<decl><type ref="prev"/><name>ch</name></decl>;</decl_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>m</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><call><name><name>s</name><operator>.</operator><name>ins</name></name><argument_list>(<argument><expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>ch</name><operator>=</operator><call><name><name>s</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>ch</name><operator>--</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name>it</name><operator>=</operator><call><name><name>s</name><operator>.</operator><name>find</name></name><argument_list>(<argument><expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name>it</name><operator>==</operator><call><name><name>s</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>r</name><operator>=</operator><operator>++</operator><name>it</name></expr>;</expr_stmt>
+            <comment type="line">//cout&lt;&lt;arr[i]&lt;&lt;" "&lt;&lt;*r&lt;&lt;endl;</comment>
+            <expr_stmt><expr><name>can</name><operator>=</operator><name>can</name><operator>-</operator><operator>(</operator><operator>*</operator><name>r</name><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>+</operator><operator>(</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>+</operator><operator>(</operator><operator>*</operator><name>r</name><operator>-</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt>
+        }</block></then>
+        <elseif>else <if>if<condition>(<expr><operator>++</operator><name>it</name><operator>==</operator><call><name><name>s</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><operator>--</operator><name>it</name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>l</name><operator>=</operator><operator>--</operator><name>it</name></expr>;</expr_stmt>
+            <comment type="line">//cout&lt;&lt;arr[i]&lt;&lt;" "&lt;&lt;*l&lt;&lt;endl;</comment>
+            <expr_stmt><expr><name>can</name><operator>=</operator><name>can</name><operator>-</operator><operator>(</operator><name>n</name><operator>-</operator><operator>*</operator><name>l</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>+</operator><operator>(</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>-</operator><operator>*</operator><name>l</name><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>+</operator><operator>(</operator><name>n</name><operator>-</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt>
+        }</block></then></if></elseif>
+        <else>else
+        <block>{
+            <comment type="line">//cout&lt;&lt;"yolo"&lt;&lt;endl;</comment>
+            <expr_stmt><expr><operator>--</operator><name>it</name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>r</name><operator>=</operator><operator>++</operator><name>it</name></expr>;</expr_stmt>
+            <expr_stmt><expr><operator>--</operator><name>it</name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>l</name><operator>=</operator><operator>--</operator><name>it</name></expr>;</expr_stmt>
+            <comment type="line">//cout&lt;&lt;arr[i]&lt;&lt;" "&lt;&lt;*l&lt;&lt;" "&lt;&lt;*r&lt;&lt;endl;</comment>
+            <expr_stmt><expr><name>can</name><operator>=</operator><name>can</name><operator>-</operator><operator>(</operator><operator>*</operator><name>r</name><operator>-</operator><operator>*</operator><name>l</name><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>+</operator><operator>(</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>-</operator><operator>*</operator><name>l</name><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>+</operator><operator>(</operator><operator>*</operator><name>r</name><operator>-</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt>
+        }</block></else></if>
+        <comment type="line">//cout&lt;&lt;can&lt;&lt;endl;</comment>
+        <if>if<condition>(<expr><name>can</name><operator>&lt;</operator><name>k</name></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>i</name><operator>+</operator><literal type="number">1</literal><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+            <return>return <expr><literal type="number">0</literal></expr>;</return>
+        }</block></then></if>
+    }</block></for>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><operator>-</operator><literal type="number">1</literal><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+}</block></function>
+</unit>

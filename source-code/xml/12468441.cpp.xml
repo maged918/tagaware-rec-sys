@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12468441.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;fstream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;queue&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;limits.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;time.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;math.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;vector&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;string&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;algorithm&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;map&gt;</cpp:file></cpp:include> 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;set&gt;</cpp:file></cpp:include>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>endl</name></cpp:macro> <cpp:value>"\n"</cpp:value></cpp:define>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<typedef>typedef <type><name>long</name> <name>long</name> <name>int</name></type> <name>lint</name>;</typedef>
+
+<class>class <name>Combinatorics</name><block>{<private type="default">
+</private><private>private:
+	<decl_stmt><decl><type><name>lint</name></type> <name>fmax</name></decl>, <decl><type ref="prev"/><name>rmax</name></decl>, <decl><type ref="prev"/><name>mod</name></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name><name>std</name><operator>::</operator><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>lint</name></expr></argument>&gt;</argument_list></name></name></type> <name>fact</name></decl>, <decl><type ref="prev"/><name>rfact</name></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>bool</name></type> <name><name>bits</name><index>[<expr><literal type="number">64</literal></expr>]</index></name></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>bits_size</name></decl>;</decl_stmt>
+
+	<function_decl><type><name>lint</name></type> <name>rev</name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>a</name></decl></parameter>)</parameter_list>;</function_decl>
+</private><public>public:
+	<constructor_decl><name>Combinatorics</name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>mod</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>fmax</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>rmax</name></decl></parameter>)</parameter_list>;</constructor_decl>
+	<constructor_decl><name>Combinatorics</name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>mod</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>maxval</name></decl></parameter>)</parameter_list>;</constructor_decl>
+	<constructor_decl><name>Combinatorics</name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>mod</name></decl></parameter>)</parameter_list>;</constructor_decl>
+
+	<function_decl><type><name>void</name></type> <name>fit</name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>fmax</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>rmax</name></decl></parameter>)</parameter_list>;</function_decl>
+	<function_decl><type><name>void</name></type> <name>fit_if_needed</name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>fmax</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>rmax</name></decl></parameter>)</parameter_list>;</function_decl>
+	<function_decl><type><name>void</name></type> <name>chmod</name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>new_mod</name></decl></parameter>)</parameter_list>;</function_decl>
+
+	<function_decl><type><name>lint</name></type> <name>C</name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>n</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>k</name></decl></parameter>)</parameter_list>;</function_decl>
+	<function_decl><type><name>lint</name></type> <name>factorial</name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>n</name></decl></parameter>)</parameter_list>;</function_decl>
+	<function_decl><type><name>lint</name></type> <name>P</name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>n</name></decl></parameter>)</parameter_list>;</function_decl>
+	<function_decl><type><name>lint</name></type> <name>A</name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>n</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>k</name></decl></parameter>)</parameter_list>;</function_decl>
+</public>}</block>;</class>
+
+<function><type><name>void</name></type> <name><name>Combinatorics</name><operator>::</operator><name>chmod</name></name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>nmod</name></decl></parameter>)</parameter_list><block>{
+	<expr_stmt><expr><name>mod</name> <operator>=</operator> <name>nmod</name></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>lint</name></type> <name>k</name> <init>= <expr><name>mod</name> <operator>-</operator> <literal type="number">2</literal></expr></init></decl>;</decl_stmt>
+	<expr_stmt><expr><name>bits_size</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+	<while>while <condition>(<expr><name>k</name> <operator>&gt;</operator> <literal type="number">0</literal></expr>)</condition><block>{
+		<expr_stmt><expr><name><name>bits</name><index>[<expr><name>bits_size</name></expr>]</index></name> <operator>=</operator> <name>k</name> <operator>%</operator> <literal type="number">2</literal></expr>;</expr_stmt>
+		<expr_stmt><expr><name>bits_size</name><operator>++</operator></expr>;</expr_stmt>
+		<expr_stmt><expr><name>k</name> <operator>/=</operator> <literal type="number">2</literal></expr>;</expr_stmt>
+	}</block></while>
+	<decl_stmt><decl><type><name>lint</name></type> <name>f</name> <init>= <expr><name>fmax</name></expr></init></decl>, <decl><type ref="prev"/><name>r</name> <init>= <expr><name>rmax</name></expr></init></decl>;</decl_stmt>
+	<expr_stmt><expr><name>fmax</name> <operator>=</operator> <operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt>
+	<expr_stmt><expr><name>rmax</name> <operator>=</operator> <operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name>fit</name><argument_list>(<argument><expr><name>f</name></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+}</block></function>
+
+<function><type><name>lint</name></type> <name><name>Combinatorics</name><operator>::</operator><name>rev</name></name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>a</name></decl></parameter>)</parameter_list><block>{
+	<decl_stmt><decl><type><name>lint</name></type> <name>r</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><name>bits_size</name> <operator>-</operator> <literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&gt;=</operator> <literal type="number">0</literal></expr>;</condition> <incr><expr><name>i</name><operator>--</operator></expr></incr>)</control><block>{
+		<expr_stmt><expr><name>r</name> <operator>=</operator> <name>r</name><operator>*</operator><name>r</name> <operator>%</operator><name>mod</name></expr>;</expr_stmt>
+		<if>if <condition>(<expr><name><name>bits</name><index>[<expr><name>i</name></expr>]</index></name></expr>)</condition><then>
+			<block type="pseudo"><expr_stmt><expr><name>r</name> <operator>=</operator> <name>r</name><operator>*</operator><name>a</name> <operator>%</operator><name>mod</name></expr>;</expr_stmt></block></then></if>
+	}</block></for>
+	<return>return <expr><name>r</name></expr>;</return>
+}</block></function>
+
+<constructor><name><name>Combinatorics</name><operator>::</operator><name>Combinatorics</name></name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>mod</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>fmax</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>rmax</name></decl></parameter>)</parameter_list> <member_init_list>:<call><name>fmax</name><argument_list>(<argument><expr><name>fmax</name></expr></argument>)</argument_list></call>, <call><name>rmax</name><argument_list>(<argument><expr><name>rmax</name></expr></argument>)</argument_list></call></member_init_list><block>{
+	<expr_stmt><expr><call><name>chmod</name><argument_list>(<argument><expr><name>mod</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+}</block></constructor>
+
+<constructor><name><name>Combinatorics</name><operator>::</operator><name>Combinatorics</name></name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>mod</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>maxval</name></decl></parameter>)</parameter_list> <member_init_list>: <call><name>Combinatorics</name><argument_list>(<argument><expr><name>mod</name></expr></argument>, <argument><expr><name>maxval</name></expr></argument>, <argument><expr><name>maxval</name></expr></argument>)</argument_list></call></member_init_list><block>{}</block></constructor>
+
+<constructor><name><name>Combinatorics</name><operator>::</operator><name>Combinatorics</name></name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>mod</name></decl></parameter>)</parameter_list> <member_init_list>: <call><name>Combinatorics</name><argument_list>(<argument><expr><name>mod</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></member_init_list><block>{}</block></constructor>
+
+<function><type><name>void</name></type> <name><name>Combinatorics</name><operator>::</operator><name>fit</name></name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>f</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>r</name></decl></parameter>)</parameter_list><block>{
+	<expr_stmt><expr><call><name><operator>(</operator><name><name>this</name><operator>-&gt;</operator><name>fact</name></name><operator>)</operator><operator>.</operator><name>resize</name></name><argument_list>(<argument><expr><name>f</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name><operator>(</operator><name><name>this</name><operator>-&gt;</operator><name>rfact</name></name><operator>)</operator><operator>.</operator><name>resize</name></name><argument_list>(<argument><expr><name>r</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<if>if <condition>(<expr><name>f</name> <operator>&lt;</operator> <name>r</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>f</name> <operator>=</operator> <name>r</name></expr>;</expr_stmt></block></then></if>
+	<if>if <condition>(<expr><name>f</name> <operator>&gt;</operator> <name>fmax</name></expr>)</condition><then><block>{
+		<expr_stmt><expr><name><name>this</name><operator>-&gt;</operator><name>fact</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+		<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><call><name><name>std</name><operator>::</operator><name>max</name></name><argument_list>(<argument><expr><name>fmax</name></expr></argument>, <argument><expr><literal type="number">1LL</literal></expr></argument>)</argument_list></call></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>f</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+			<expr_stmt><expr><name><name>this</name><operator>-&gt;</operator><name>fact</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name><name>this</name><operator>-&gt;</operator><name>fact</name><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name> <operator>*</operator> <name>i</name><operator>%</operator><name>mod</name></expr>;</expr_stmt>
+		}</block></for>
+	}</block></then></if>
+	<if>if <condition>(<expr><name>r</name> <operator>&gt;</operator> <name>rmax</name></expr>)</condition><then><block>{
+		<expr_stmt><expr><name><name>this</name><operator>-&gt;</operator><name>rfact</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+		<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><call><name><name>std</name><operator>::</operator><name>max</name></name><argument_list>(<argument><expr><name>rmax</name></expr></argument>, <argument><expr><literal type="number">1LL</literal></expr></argument>)</argument_list></call></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>r</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+			<expr_stmt><expr><name><name>this</name><operator>-&gt;</operator><name>rfact</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <call><name>rev</name><argument_list>(<argument><expr><name><name>this</name><operator>-&gt;</operator><name>fact</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		}</block></for>
+	}</block></then></if>
+	<expr_stmt><expr><name>fmax</name> <operator>=</operator> <name>f</name></expr>;</expr_stmt>
+	<expr_stmt><expr><name>rmax</name> <operator>=</operator> <name>r</name></expr>;</expr_stmt>
+}</block></function>
+
+<function><type><name>void</name></type> <name><name>Combinatorics</name><operator>::</operator><name>fit_if_needed</name></name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>f</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>r</name></decl></parameter>)</parameter_list><block>{
+	<if>if <condition>(<expr><name>f</name> <operator>&gt;</operator> <name>fmax</name> <operator>||</operator> <name>r</name> <operator>&gt;</operator> <name>rmax</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><call><name>fit</name><argument_list>(<argument><expr><name>f</name></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if>
+}</block></function>
+
+<function><type><name>lint</name></type> <name><name>Combinatorics</name><operator>::</operator><name>factorial</name></name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>n</name></decl></parameter>)</parameter_list><block>{
+	<expr_stmt><expr><call><name>fit_if_needed</name><argument_list>(<argument><expr><name>n</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<return>return <expr><name><name>fact</name><index>[<expr><name>n</name></expr>]</index></name></expr>;</return>
+}</block></function>
+
+<function><type><name>lint</name></type> <name><name>Combinatorics</name><operator>::</operator><name>P</name></name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>n</name></decl></parameter>)</parameter_list><block>{
+	<expr_stmt><expr><call><name>fit_if_needed</name><argument_list>(<argument><expr><name>n</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<return>return <expr><name><name>fact</name><index>[<expr><name>n</name></expr>]</index></name></expr>;</return>
+}</block></function>
+
+<function><type><name>lint</name></type> <name><name>Combinatorics</name><operator>::</operator><name>A</name></name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>n</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>k</name></decl></parameter>)</parameter_list><block>{
+	<expr_stmt><expr><call><name>fit_if_needed</name><argument_list>(<argument><expr><name>n</name></expr></argument>, <argument><expr><name>n</name> <operator>-</operator> <name>k</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<return>return <expr><name><name>fact</name><index>[<expr><name>n</name></expr>]</index></name> <operator>*</operator> <name><name>rfact</name><index>[<expr><name>n</name> <operator>-</operator> <name>k</name></expr>]</index></name> <operator>%</operator> <name>mod</name></expr>;</return>
+}</block></function>
+
+<function><type><name>lint</name></type> <name><name>Combinatorics</name><operator>::</operator><name>C</name></name><parameter_list>(<parameter><decl><type><name>lint</name></type> <name>n</name></decl></parameter>, <parameter><decl><type><name>lint</name></type> <name>k</name></decl></parameter>)</parameter_list><block>{
+	<expr_stmt><expr><call><name>fit_if_needed</name><argument_list>(<argument><expr><name>n</name></expr></argument>, <argument><expr><call><name><name>std</name><operator>::</operator><name>max</name></name><argument_list>(<argument><expr><name>k</name></expr></argument>, <argument><expr><name>n</name> <operator>-</operator> <name>k</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<return>return <expr><name><name>fact</name><index>[<expr><name>n</name></expr>]</index></name> <operator>*</operator> <name><name>rfact</name><index>[<expr><name>n</name> <operator>-</operator> <name>k</name></expr>]</index></name> <operator>%</operator> <name>mod</name> <operator>*</operator>  <name><name>rfact</name><index>[<expr><name>k</name></expr>]</index></name> <operator>%</operator> <name>mod</name></expr>;</return>
+}</block></function>
+
+<decl_stmt><decl><type><name>lint</name></type> <name><name>bell</name><index>[<expr><literal type="number">4001</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>lint</name></type> <name><name>eq</name><index>[<expr><literal type="number">4001</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>lint</name></type> <name>mod</name> <init>= <expr><literal type="number">1000000007</literal></expr></init></decl>;</decl_stmt>
+
+<function><type><name>void</name></type> <name>task</name><parameter_list>()</parameter_list><block>{
+	<decl_stmt><decl><type><name>Combinatorics</name></type> <name>c</name><argument_list>(<argument><expr><name>mod</name></expr></argument>)</argument_list></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>;</expr_stmt>
+	<expr_stmt><expr><name><name>bell</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+	<expr_stmt><expr><name><name>eq</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name><operator>+</operator><literal type="number">1</literal></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+		<expr_stmt><expr><name><name>bell</name><index>[<expr><name>i</name> <operator>+</operator> <literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+		<for>for <control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;=</operator> <name>i</name></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr></incr>)</control><block>{
+			<expr_stmt><expr><name><name>bell</name><index>[<expr><name>i</name> <operator>+</operator> <literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <operator>(</operator><name><name>bell</name><index>[<expr><name>i</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name> <operator>+</operator> <operator>(</operator><name><name>bell</name><index>[<expr><name>j</name></expr>]</index></name> <operator>*</operator> <call><name><name>c</name><operator>.</operator><name>C</name></name><argument_list>(<argument><expr><name>i</name></expr></argument>, <argument><expr><name>j</name></expr></argument>)</argument_list></call><operator>)</operator> <operator>%</operator> <name>mod</name><operator>)</operator><operator>%</operator><name>mod</name></expr>;</expr_stmt>
+		}</block></for>
+	}</block></for>
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <operator>(</operator><ternary><condition><expr><operator>(</operator><name><name>bell</name><index>[<expr><name>n</name> <operator>+</operator> <literal type="number">1</literal></expr>]</index></name> <operator>-</operator> <name><name>bell</name><index>[<expr><name>n</name></expr>]</index></name><operator>)</operator><operator>&gt;</operator><literal type="number">0</literal></expr> ?</condition><then> <expr><operator>(</operator><name><name>bell</name><index>[<expr><name>n</name> <operator>+</operator> <literal type="number">1</literal></expr>]</index></name> <operator>-</operator> <name><name>bell</name><index>[<expr><name>n</name></expr>]</index></name><operator>)</operator></expr> </then><else>: <expr><operator>(</operator><name><name>bell</name><index>[<expr><name>n</name> <operator>+</operator> <literal type="number">1</literal></expr>]</index></name> <operator>-</operator> <name><name>bell</name><index>[<expr><name>n</name></expr>]</index></name> <operator>+</operator> <literal type="number">10</literal><operator>*</operator><name>mod</name><operator>)</operator></expr></else></ternary><operator>)</operator> <operator>%</operator> <name>mod</name></expr>;</expr_stmt>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+
+<cpp:ifdef>#<cpp:directive>ifdef</cpp:directive> <name>ILEASILE</name></cpp:ifdef>
+	<expr_stmt><expr><call><name>freopen</name><argument_list>(<argument><expr><literal type="string">"input.txt"</literal></expr></argument>, <argument><expr><literal type="string">"r"</literal></expr></argument>, <argument><expr><name>stdin</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name>freopen</name><argument_list>(<argument><expr><literal type="string">"output.txt"</literal></expr></argument>, <argument><expr><literal type="string">"w"</literal></expr></argument>, <argument><expr><name>stdout</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>clock_t</name></type> <name>start</name> <init>= <expr><call><name>clock</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+	<expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+	<expr_stmt><expr><call><name>task</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+
+<cpp:ifdef>#<cpp:directive>ifdef</cpp:directive> <name>ILEASILE</name></cpp:ifdef>
+	<decl_stmt><decl><type><name>clock_t</name></type> <name>finish</name> <init>= <expr><call><name>clock</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator><literal type="string">"\n\n=============\n"</literal> <operator>&lt;&lt;</operator><operator>(</operator><name>finish</name> <operator>-</operator> <name>start</name><operator>)</operator> <operator>/</operator> <operator>(</operator><name>double</name><operator>)</operator><name>CLOCKS_PER_SEC</name></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name>fclose</name><argument_list>(<argument><expr><name>stdin</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name>fclose</name><argument_list>(<argument><expr><name>stdout</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

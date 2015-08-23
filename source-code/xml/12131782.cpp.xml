@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12131782.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstdio&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;algorithm&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>Maxn</name> <init>= <expr><literal type="number">1048577</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>Inf</name> <init>= <expr><literal type="number">2000000000</literal></expr></init></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>cnt</name><index>[<expr><name>Maxn</name></expr>]</index></name></decl>, <decl><type ref="prev"/><name><name>res</name><index>[<expr><name>Maxn</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>bool</name></type> <name><name>tk</name><index>[<expr><name>Maxn</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>cost</name><index>[<expr><name>Maxn</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>tmp</name><index>[<expr><name>Maxn</name></expr>]</index></name></decl>, <decl><type ref="prev"/><name>tlen</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>tres</name> <init>= <expr><name>Inf</name></expr></init></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+		<decl_stmt><decl><type><name>int</name></type> <name>a</name></decl>;</decl_stmt> <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <literal type="number">20</literal></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+			<decl_stmt><decl><type><name>int</name></type> <name>num</name> <init>= <expr><name>a</name> <operator>&gt;&gt;</operator> <name>i</name></expr></init></decl>;</decl_stmt>
+			<if>if <condition>(<expr><name>num</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then> <block type="pseudo"><continue>continue;</continue></block></then></if>
+			<for>for <control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>num</name> <operator>&lt;</operator> <name>Maxn</name></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr><operator>,</operator> <expr><name>num</name> <operator>*=</operator> <literal type="number">2</literal></expr></incr>)</control>
+				<block type="pseudo"><if>if <condition>(<expr><operator>!</operator><name><name>tk</name><index>[<expr><name>num</name></expr>]</index></name></expr>)</condition><then> <block>{ <expr_stmt><expr><name><name>cost</name><index>[<expr><name>num</name></expr>]</index></name> <operator>=</operator> <name>i</name> <operator>+</operator> <name>j</name></expr>;</expr_stmt> <expr_stmt><expr><name><name>tmp</name><index>[<expr><name>tlen</name><operator>++</operator></expr>]</index></name> <operator>=</operator> <name>num</name></expr>;</expr_stmt> <expr_stmt><expr><name><name>tk</name><index>[<expr><name>num</name></expr>]</index></name> <operator>=</operator> <literal type="boolean">true</literal></expr>;</expr_stmt> }</block></then></if></block></for>
+				<comment type="line">//else if (tk[num]) cost[num] = min(cost[num], i + j);</comment>
+		}</block></for>
+		<for>for <control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;</operator> <name>tlen</name></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr></incr>)</control> <block>{
+			<expr_stmt><expr><name><name>tk</name><index>[<expr><name><name>tmp</name><index>[<expr><name>j</name></expr>]</index></name></expr>]</index></name> <operator>=</operator> <literal type="boolean">false</literal></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>cnt</name><index>[<expr><name><name>tmp</name><index>[<expr><name>j</name></expr>]</index></name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt> <expr_stmt><expr><name><name>res</name><index>[<expr><name><name>tmp</name><index>[<expr><name>j</name></expr>]</index></name></expr>]</index></name> <operator>+=</operator> <name><name>cost</name><index>[<expr><name><name>tmp</name><index>[<expr><name>j</name></expr>]</index></name></expr>]</index></name></expr>;</expr_stmt>
+		}</block></for>
+		<expr_stmt><expr><name>tlen</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+	}</block></for>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>Maxn</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+		<block type="pseudo"><if>if <condition>(<expr><name><name>cnt</name><index>[<expr><name>i</name></expr>]</index></name> <operator>==</operator> <name>n</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>tres</name> <operator>=</operator> <call><name>min</name><argument_list>(<argument><expr><name>tres</name></expr></argument>, <argument><expr><name><name>res</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if></block></for>
+	<expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>tres</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

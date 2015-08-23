@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12587148.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;stdio.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>MAX_N</name></cpp:macro> <cpp:value>500</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>MAX_M</name></cpp:macro> <cpp:value>500</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>MAX_MAP_SIZE</name></cpp:macro> <cpp:value>MAX_N*MAX_M</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>MODBASE</name></cpp:macro> <cpp:value>(1000000007)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>PAIRCNT_SIZE</name></cpp:macro> <cpp:value>60*1024*1024</cpp:value></cpp:define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>m</name></decl>, <decl><type ref="prev"/><name>mapSize</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>char</name></type> <name><name>map</name><index>[<expr><name>MAX_N</name><operator>+</operator><literal type="number">1</literal></expr>]</index><index>[<expr><name>MAX_M</name><operator>+</operator><literal type="number">2</literal></expr>]</index></name></decl>;</decl_stmt>
+<comment type="line">//int pairCnt[MAX_MAP_SIZE+1][MAX_MAP_SIZE+1];</comment>
+<decl_stmt><decl><type><name>int</name></type> <name><name>pairCntPos</name><index>[<expr><name>MAX_N</name><operator>+</operator><literal type="number">1</literal></expr>]</index><index>[<expr><name>MAX_M</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name></decl>;</decl_stmt> <comment type="line">// the first half </comment>
+<decl_stmt><decl><type><name>int</name></type> <name><name>pairCnt</name><index>[<expr><name>PAIRCNT_SIZE</name></expr>]</index></name></decl>;</decl_stmt>  <comment type="line">//</comment>
+
+<function><type><name>int</name></type> <name>isFirstHalf</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>r</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>c</name></decl></parameter>)</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>d1</name></decl>, <decl><type ref="prev"/><name>d2</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>d1</name> <operator>=</operator> <name>r</name><operator>-</operator><literal type="number">1</literal> <operator>+</operator> <name>c</name><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt>
+    <expr_stmt><expr><name>d2</name> <operator>=</operator> <name>n</name><operator>-</operator><name>r</name> <operator>+</operator> <name>m</name><operator>-</operator><name>c</name></expr>;</expr_stmt>
+    <if>if <condition>(<expr><name>d1</name> <operator>&lt;</operator> <name>d2</name></expr>)</condition><then>
+        <block type="pseudo"><return>return <expr><literal type="number">1</literal></expr>;</return></block></then></if>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+
+<function><type><name>void</name></type> <name>init</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>;</decl_stmt>
+    <for>for <control>(<init><expr><name>i</name><operator>=</operator><literal type="number">0</literal></expr>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>PAIRCNT_SIZE</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name><name>pairCnt</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt>
+    }</block></for>
+    <decl_stmt><decl><type><name>int</name></type> <name>r</name></decl>, <decl><type ref="prev"/><name>c</name></decl>, <decl><type ref="prev"/><name>lastGSize</name><init>=<expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>lastGPos</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    
+    <for>for <control>(<init><expr><name>r</name><operator>=</operator><literal type="number">1</literal></expr> ;</init> <condition><expr><name>r</name> <operator>&lt;=</operator> <name>n</name></expr> ;</condition> <incr><expr><name>r</name><operator>++</operator></expr></incr>)</control>
+        <block type="pseudo"><for>for <control>(<init><expr><name>c</name><operator>=</operator><literal type="number">1</literal></expr> ;</init> <condition><expr><name>c</name> <operator>&lt;=</operator> <name>m</name></expr> ;</condition> <incr><expr><name>c</name><operator>++</operator></expr></incr>)</control>
+        <block>{
+            <if>if <condition>(<expr><operator>!</operator><call><name>isFirstHalf</name><argument_list>(<argument><expr><name>r</name></expr></argument>, <argument><expr><name>c</name></expr></argument>)</argument_list></call></expr>)</condition><then>
+                <block type="pseudo"><continue>continue;</continue></block></then></if>
+            <expr_stmt><expr><name><name>pairCntPos</name><index>[<expr><name>r</name></expr>]</index><index>[<expr><name>c</name></expr>]</index></name><operator>=</operator> <name>lastGPos</name> <operator>+</operator> <name>lastGSize</name></expr>;</expr_stmt>
+      <comment type="line">//      cout &lt;&lt; "r = " &lt;&lt; r &lt;&lt; " c = " &lt;&lt; c &lt;&lt; "pos = " &lt;&lt;  pairCntPos[r][c] &lt;&lt; endl;</comment>
+            <expr_stmt><expr><name>lastGPos</name> <operator>=</operator> <name><name>pairCntPos</name><index>[<expr><name>r</name></expr>]</index><index>[<expr><name>c</name></expr>]</index></name></expr>;</expr_stmt>
+            
+            <if>if <condition>(<expr><name>n</name><operator>&gt;=</operator> <operator>(</operator><name>r</name><operator>-</operator><literal type="number">1</literal><operator>+</operator><name>c</name><operator>)</operator></expr>)</condition><then> <comment type="line">// c = m</comment>
+            <block>{
+                <if>if <condition>(<expr><name>m</name><operator>&gt;=</operator> <operator>(</operator><name>r</name><operator>-</operator><literal type="number">1</literal><operator>+</operator><name>c</name><operator>)</operator></expr>)</condition><then>
+                    <block type="pseudo"><expr_stmt><expr><name>lastGSize</name> <operator>=</operator> <name>r</name><operator>-</operator><literal type="number">1</literal><operator>+</operator><name>c</name></expr>;</expr_stmt></block></then>
+                <else>else    
+                    <block type="pseudo"><expr_stmt><expr><name>lastGSize</name> <operator>=</operator> <name>m</name></expr>;</expr_stmt></block></else></if>
+            }</block></then>
+            <else>else
+            <block>{
+                <expr_stmt><expr><name>lastGSize</name> <operator>=</operator> <name>n</name></expr>;</expr_stmt>
+            }</block></else></if>
+        }</block></for></block></for>
+}</block></function>
+
+<function><type><name>int</name></type> <name>insideRect</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>r</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>c</name></decl></parameter>)</parameter_list>
+<block>{
+    <if>if <condition>(<expr><name>r</name><operator>&gt;=</operator><literal type="number">1</literal> <operator>&amp;&amp;</operator> <name>r</name> <operator>&lt;=</operator> <name>n</name> <operator>&amp;&amp;</operator> <name>c</name><operator>&gt;=</operator><literal type="number">1</literal> <operator>&amp;&amp;</operator> <name>c</name><operator>&lt;=</operator> <name>m</name></expr>)</condition><then>
+        <block type="pseudo"><return>return <expr><literal type="number">1</literal></expr>;</return></block></then></if>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>get_pairCnt</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>r1</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>c1</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>r2</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>c2</name></decl></parameter>)</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>pos</name> <init>= <expr><name><name>pairCntPos</name><index>[<expr><name>r1</name></expr>]</index><index>[<expr><name>c1</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>rMin</name></decl>;</decl_stmt>
+    <if>if <condition>(<expr><name>n</name><operator>&gt;=</operator> <operator>(</operator><name>r1</name><operator>-</operator><literal type="number">1</literal><operator>+</operator><name>c1</name><operator>)</operator></expr>)</condition><then> <comment type="line">// c = m</comment>
+    <block>{
+        <expr_stmt><expr><name>rMin</name> <operator>=</operator> <name>n</name><operator>-</operator><operator>(</operator><name>r1</name><operator>-</operator><literal type="number">1</literal><operator>+</operator><name>c1</name><operator>)</operator><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt>
+      
+    }</block></then>
+    <else>else
+    <block>{
+        <expr_stmt><expr><name>rMin</name> <operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+    }</block></else></if>
+<comment type="line">//    printf("GET (%d, %d)&lt;-&gt;(%d, %d) : %d \n", r1, c1, r2, c2,pairCnt[pos+r2-rMin]);</comment>
+    <return>return <expr><name><name>pairCnt</name><index>[<expr><name>pos</name><operator>+</operator><name>r2</name><operator>-</operator><name>rMin</name></expr>]</index></name></expr>;</return>
+}</block></function>
+
+<function><type><name>void</name></type> <name>set_pairCnt</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>r1</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>c1</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>r2</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>c2</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>cnt</name></decl></parameter>)</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>pos</name> <init>= <expr><name><name>pairCntPos</name><index>[<expr><name>r1</name></expr>]</index><index>[<expr><name>c1</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>rMin</name></decl>;</decl_stmt>
+    <if>if <condition>(<expr><name>n</name><operator>&gt;=</operator> <operator>(</operator><name>r1</name><operator>-</operator><literal type="number">1</literal><operator>+</operator><name>c1</name><operator>)</operator></expr>)</condition><then> <comment type="line">// c = m</comment>
+    <block>{
+        <expr_stmt><expr><name>rMin</name> <operator>=</operator> <name>n</name><operator>-</operator><operator>(</operator><name>r1</name><operator>-</operator><literal type="number">1</literal><operator>+</operator><name>c1</name><operator>)</operator><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt>
+      
+    }</block></then>
+    <else>else
+    <block>{
+        <expr_stmt><expr><name>rMin</name> <operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+    }</block></else></if>
+    <expr_stmt><expr><name><name>pairCnt</name><index>[<expr><name>pos</name><operator>+</operator><name>r2</name><operator>-</operator><name>rMin</name></expr>]</index></name> <operator>=</operator> <name>cnt</name></expr>;</expr_stmt>
+<comment type="line">//    printf("SET (%d, %d)&lt;-&gt;(%d, %d) : %d \n", r1, c1, r2, c2,pairCnt[pos+r2-rMin]);</comment>
+}</block></function>
+
+<function><type><name>int</name></type> <name>count</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>r1</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>c1</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>r2</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>c2</name></decl></parameter>)</parameter_list>
+<block>{
+<comment type="line">//    printf("CNT (%d, %d)&lt;-&gt;(%d, %d)\n", r1, c1, r2, c2);</comment>
+    <decl_stmt><decl><type><name>int</name></type> <name>cnt</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    
+    <if>if <condition>(<expr><operator>!</operator><call><name>insideRect</name><argument_list>(<argument><expr><name>r1</name></expr></argument>, <argument><expr><name>c1</name></expr></argument>)</argument_list></call> <operator>||</operator> <operator>!</operator><call><name>insideRect</name><argument_list>(<argument><expr><name>r2</name></expr></argument>, <argument><expr><name>c2</name></expr></argument>)</argument_list></call></expr>)</condition><then>
+        <block type="pseudo"><return>return <expr><literal type="number">0</literal></expr>;</return></block></then></if>
+    
+    <if>if <condition>(<expr><operator>(</operator><name>cnt</name><operator>=</operator> <call><name>get_pairCnt</name><argument_list>(<argument><expr><name>r1</name></expr></argument>, <argument><expr><name>c1</name></expr></argument>, <argument><expr><name>r2</name></expr></argument>, <argument><expr><name>c2</name></expr></argument>)</argument_list></call><operator>)</operator><operator>&gt;=</operator><literal type="number">0</literal></expr>)</condition><then>
+        <block type="pseudo"><return>return <expr><name>cnt</name></expr>;</return></block></then></if>
+
+    <if>if <condition>(<expr><name><name>map</name><index>[<expr><name>r1</name></expr>]</index><index>[<expr><name>c1</name></expr>]</index></name> <operator>!=</operator> <name><name>map</name><index>[<expr><name>r2</name></expr>]</index><index>[<expr><name>c2</name></expr>]</index></name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><call><name>set_pairCnt</name><argument_list>(<argument><expr><name>r1</name></expr></argument>, <argument><expr><name>c1</name></expr></argument>, <argument><expr><name>r2</name></expr></argument>, <argument><expr><name>c2</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    <if>if <condition>(<expr><name>r1</name><operator>==</operator><literal type="number">1</literal> <operator>&amp;&amp;</operator> <name>c1</name><operator>==</operator><literal type="number">1</literal> <operator>&amp;&amp;</operator> <name>r2</name> <operator>==</operator> <name>n</name> <operator>&amp;&amp;</operator> <name>c2</name> <operator>==</operator> <name>m</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><call><name>set_pairCnt</name><argument_list>(<argument><expr><name>r1</name></expr></argument>, <argument><expr><name>c1</name></expr></argument>, <argument><expr><name>r2</name></expr></argument>, <argument><expr><name>c2</name></expr></argument>, <argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">1</literal></expr>;</return>
+    }</block></then></if>
+    <expr_stmt><expr><name>cnt</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+ <comment type="line">//   printf("CNT (%d, %d)&lt;-&gt;(%d, %d): cnt %d\n", r1, c1, r2, c2, count(r1-1, c1, r2, c2+1)%MODBASE);</comment>
+    <expr_stmt><expr><name>cnt</name> <operator>+=</operator> <operator>(</operator><call><name>count</name><argument_list>(<argument><expr><name>r1</name><operator>-</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>c1</name></expr></argument>, <argument><expr><name>r2</name></expr></argument>, <argument><expr><name>c2</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call> <operator>%</operator> <name>MODBASE</name><operator>)</operator></expr>;</expr_stmt>
+ <comment type="line">//   printf("CNT (%d, %d)&lt;-&gt;(%d, %d): cnt %d\n", r1, c1, r2, c2, cnt);</comment>
+    <expr_stmt><expr><name>cnt</name> <operator>%=</operator> <name>MODBASE</name></expr>;</expr_stmt>
+<comment type="line">//    printf("CNT (%d, %d)&lt;-&gt;(%d, %d): cnt %d\n", r1, c1, r2, c2, cnt);</comment>
+    <expr_stmt><expr><name>cnt</name> <operator>+=</operator> <operator>(</operator><call><name>count</name><argument_list>(<argument><expr><name>r1</name><operator>-</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>c1</name></expr></argument>, <argument><expr><name>r2</name><operator>+</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>c2</name></expr></argument>)</argument_list></call> <operator>%</operator> <name>MODBASE</name><operator>)</operator></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cnt</name> <operator>%=</operator> <name>MODBASE</name></expr>;</expr_stmt>
+ <comment type="line">//   printf("CNT (%d, %d)&lt;-&gt;(%d, %d): cnt %d\n", r1, c1, r2, c2, cnt);</comment>
+    <expr_stmt><expr><name>cnt</name> <operator>+=</operator> <operator>(</operator><call><name>count</name><argument_list>(<argument><expr><name>r1</name></expr></argument>, <argument><expr><name>c1</name><operator>-</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>r2</name></expr></argument>, <argument><expr><name>c2</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call> <operator>%</operator> <name>MODBASE</name><operator>)</operator></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cnt</name> <operator>%=</operator> <name>MODBASE</name></expr>;</expr_stmt>
+<comment type="line">//    printf("CNT (%d, %d)&lt;-&gt;(%d, %d): cnt %d\n", r1, c1, r2, c2, cnt);</comment>
+    <expr_stmt><expr><name>cnt</name> <operator>+=</operator> <operator>(</operator><call><name>count</name><argument_list>(<argument><expr><name>r1</name></expr></argument>, <argument><expr><name>c1</name><operator>-</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>r2</name><operator>+</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>c2</name></expr></argument>)</argument_list></call> <operator>%</operator> <name>MODBASE</name><operator>)</operator></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cnt</name> <operator>%=</operator> <name>MODBASE</name></expr>;</expr_stmt>
+ <comment type="line">//   printf("CNT (%d, %d)&lt;-&gt;(%d, %d): cnt %d\n", r1, c1, r2, c2, cnt);</comment>
+    <expr_stmt><expr><call><name>set_pairCnt</name><argument_list>(<argument><expr><name>r1</name></expr></argument>, <argument><expr><name>c1</name></expr></argument>, <argument><expr><name>r2</name></expr></argument>, <argument><expr><name>c2</name></expr></argument>, <argument><expr><name>cnt</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <return>return <expr><name>cnt</name></expr>;</return>
+}</block></function>
+
+
+<function><type><name>void</name></type> <name>find_solution</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>r</name></decl>, <decl><type ref="prev"/><name>c</name></decl>, <decl><type ref="prev"/><name>mi</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>pCnt</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>oddPath</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>init</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    
+    <if>if <condition>(<expr><operator>(</operator><name>n</name><operator>+</operator><name>m</name><operator>)</operator><operator>%</operator><literal type="number">2</literal><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>mi</name> <operator>=</operator> <operator>(</operator><name>n</name><operator>+</operator><name>m</name><operator>)</operator><operator>/</operator><literal type="number">2</literal><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt>
+        <expr_stmt><expr><name>oddPath</name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+    }</block></then>
+    <else>else
+        <block type="pseudo"><expr_stmt><expr><name>mi</name> <operator>=</operator> <operator>(</operator><name>n</name><operator>+</operator><name>m</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr>;</expr_stmt></block></else></if>
+        
+    <if>if <condition>(<expr><name>n</name><operator>&lt;=</operator><name>m</name></expr>)</condition><then>    
+    <block>{
+        <expr_stmt><expr><name>r</name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+        <expr_stmt><expr><name>c</name> <operator>=</operator> <name>mi</name></expr>;</expr_stmt>
+    }</block></then>
+    <else>else
+    <block>{
+        <expr_stmt><expr><name>r</name> <operator>=</operator> <name>mi</name><operator>-</operator><name>m</name><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt>
+        <expr_stmt><expr><name>c</name> <operator>=</operator> <name>m</name></expr>;</expr_stmt>
+    }</block></else></if>
+   <comment type="line">// cout &lt;&lt; "r = " &lt;&lt; r &lt;&lt; " c = " &lt;&lt; c &lt;&lt; endl;</comment>
+    <for>for <control>( <init>;</init> <condition><expr><call><name>insideRect</name><argument_list>(<argument><expr><name>r</name></expr></argument>, <argument><expr><name>c</name></expr></argument>)</argument_list></call></expr> ;</condition> <incr><expr><name>r</name><operator>++</operator></expr><operator>,</operator> <expr><name>c</name><operator>--</operator></expr></incr>)</control>    
+    <block>{
+        <if>if <condition>(<expr><name>oddPath</name></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>pCnt</name> <operator>+=</operator> <call><name>count</name><argument_list>(<argument><expr><name>r</name></expr></argument>, <argument><expr><name>c</name></expr></argument>, <argument><expr><name>r</name></expr></argument>, <argument><expr><name>c</name><operator>+</operator><literal type="number">2</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><name>pCnt</name> <operator>%=</operator> <name>MODBASE</name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>pCnt</name> <operator>+=</operator> <call><name>count</name><argument_list>(<argument><expr><name>r</name></expr></argument>, <argument><expr><name>c</name></expr></argument>, <argument><expr><name>r</name><operator>+</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>c</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><name>pCnt</name> <operator>%=</operator> <name>MODBASE</name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>pCnt</name> <operator>+=</operator> <call><name>count</name><argument_list>(<argument><expr><name>r</name></expr></argument>, <argument><expr><name>c</name></expr></argument>, <argument><expr><name>r</name><operator>+</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>c</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><name>pCnt</name> <operator>%=</operator> <name>MODBASE</name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>pCnt</name> <operator>+=</operator> <call><name>count</name><argument_list>(<argument><expr><name>r</name></expr></argument>, <argument><expr><name>c</name></expr></argument>, <argument><expr><name>r</name><operator>+</operator><literal type="number">2</literal></expr></argument>, <argument><expr><name>c</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><name>pCnt</name> <operator>%=</operator> <name>MODBASE</name></expr>;</expr_stmt>
+        }</block></then>
+        <else>else
+        <block>{
+            <expr_stmt><expr><name>pCnt</name> <operator>+=</operator> <call><name>count</name><argument_list>(<argument><expr><name>r</name></expr></argument>, <argument><expr><name>c</name></expr></argument>, <argument><expr><name>r</name></expr></argument>, <argument><expr><name>c</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><name>pCnt</name> <operator>%=</operator> <name>MODBASE</name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>pCnt</name> <operator>+=</operator> <call><name>count</name><argument_list>(<argument><expr><name>r</name></expr></argument>, <argument><expr><name>c</name></expr></argument>, <argument><expr><name>r</name><operator>+</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>c</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><name>pCnt</name> <operator>%=</operator> <name>MODBASE</name></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></for>
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>pCnt</name></expr>;</expr_stmt>
+}</block></function>
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>argc</name></decl></parameter>, <parameter><decl><type><name>char</name> <modifier>*</modifier><modifier>*</modifier></type><name>argv</name></decl></parameter>)</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>in</name></decl>;</decl_stmt>
+    
+<comment type="line">//    freopen("sample_input.txt", "r", stdin);</comment>
+    
+ <comment type="line">//   cin &gt;&gt; tc;</comment>
+    
+ <comment type="line">//   for (it=0 ; it &lt; tc ; it++)</comment>
+    <block>{
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>m</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>mapSize</name> <operator>=</operator> <name>n</name><operator>*</operator><name>m</name></expr>;</expr_stmt>
+   <comment type="line">//     cout &lt;&lt; n &lt;&lt; endl;</comment>
+   <comment type="line">//     cout &lt;&lt; m &lt;&lt; endl;</comment>
+        <for>for <control>(<init><expr><name>in</name><operator>=</operator><literal type="number">1</literal></expr> ;</init> <condition><expr><name>in</name> <operator>&lt;=</operator> <name>n</name></expr> ;</condition> <incr><expr><name>in</name><operator>++</operator></expr></incr>)</control>
+        <block>{
+            <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <operator>&amp;</operator><name><name>map</name><index>[<expr><name>in</name></expr>]</index><index>[<expr><literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt>
+    <comment type="line">//        cout &lt;&lt; &amp;map[in][1] &lt;&lt; endl; </comment>
+        }</block></for>
+    
+        
+        <expr_stmt><expr><call><name>find_solution</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block>
+    
+    <return>return <expr><literal type="number">0</literal></expr>;</return>    
+
+}</block></function></unit>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12459012.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><name>int</name></type> <name><name>count</name><index>[<expr><literal type="number">100006</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>arr</name><index>[<expr><literal type="number">100006</literal></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>temp</name></decl>,<decl><type ref="prev"/><name>n</name></decl>,<decl><type ref="prev"/><name>i</name></decl>,<decl><type ref="prev"/><name>ptr</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt>
+	<for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">0</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+	<block>{	<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt> 
+	<expr_stmt><expr><name><name>count</name><index>[<expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt> 
+	}</block></for>
+
+	<for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">0</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+	<block>{
+		<while>while<condition>(<expr><name><name>count</name><index>[<expr><name>ptr</name></expr>]</index></name><operator>!=</operator><literal type="number">0</literal></expr>)</condition><block type="pseudo"><expr_stmt><expr><name>ptr</name><operator>++</operator></expr>;</expr_stmt></block></while>
+		<if>if<condition>(<expr><name><name>count</name><index>[<expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>==</operator><literal type="number">1</literal> <operator>&amp;&amp;</operator> <name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>&lt;=</operator><name>n</name></expr>)</condition><then>
+			<block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name><operator>&lt;&lt;</operator><literal type="string">" "</literal></expr>;</expr_stmt></block></then>
+		<else>else<block>{
+			<expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>ptr</name><operator>&lt;&lt;</operator><literal type="string">" "</literal></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>count</name><index>[<expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>--</operator></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>count</name><index>[<expr><name>ptr</name></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+		}</block></else></if>
+	}</block></for>
+
+
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

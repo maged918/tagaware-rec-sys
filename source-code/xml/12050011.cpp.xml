@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12050011.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;vector&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;algorithm&gt;</cpp:file></cpp:include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><struct>struct <name>_node</name>
+<block>{<public type="default">
+    <decl_stmt><decl><type><name>int</name></type> <name>value</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>start</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>length</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>started</name></decl>;</decl_stmt>
+    <constructor><name>_node</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>s</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>value</name></decl></parameter>)</parameter_list>
+    <block>{
+        <expr_stmt><expr><name>start</name><operator>=</operator><name>s</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>this</name><operator>-&gt;</operator><name>value</name></name><operator>=</operator><name>value</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>started</name><operator>=</operator><literal type="boolean">true</literal></expr>;</expr_stmt>
+    }</block></constructor>
+    <constructor><name>_node</name><parameter_list>()</parameter_list>
+    <block>{
+        <expr_stmt><expr><name>start</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+        <expr_stmt><expr><name>started</name><operator>=</operator><literal type="boolean">false</literal></expr>;</expr_stmt>
+    }</block></constructor>
+</public>}</block></struct></type><name>Node</name>;</typedef>
+
+<decl_stmt><decl><type><name><name>vector</name> <argument_list type="generic">&lt;<argument><expr><name>Node</name></expr></argument>&gt;</argument_list></name></type> <name>container</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>last_end</name><index>[<expr><literal type="number">1000001</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>cnt</name><index>[<expr><literal type="number">1000001</literal></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>bool</name></type> <name>my_compare</name><parameter_list>(<parameter><decl><type><name>Node</name></type> <name>a</name></decl></parameter>,<parameter><decl><type><name>Node</name></type> <name>b</name></decl></parameter>)</parameter_list>
+<block>{
+    <if>if <condition>(<expr><name><name>cnt</name><index>[<expr><name><name>a</name><operator>.</operator><name>value</name></name></expr>]</index></name><operator>&gt;</operator><name><name>cnt</name><index>[<expr><name><name>b</name><operator>.</operator><name>value</name></name></expr>]</index></name></expr>)</condition><then>
+        <block type="pseudo"><return>return <expr><literal type="boolean">true</literal></expr>;</return></block></then>
+    <elseif>else <if>if <condition>(<expr><name><name>cnt</name><index>[<expr><name><name>a</name><operator>.</operator><name>value</name></name></expr>]</index></name><operator>&lt;</operator><name><name>cnt</name><index>[<expr><name><name>b</name><operator>.</operator><name>value</name></name></expr>]</index></name></expr>)</condition><then>
+        <block type="pseudo"><return>return <expr><literal type="boolean">false</literal></expr>;</return></block></then></if></elseif>
+    <else>else
+        <block type="pseudo"><return>return <expr><name><name>a</name><operator>.</operator><name>length</name></name><operator>&lt;</operator><name><name>b</name><operator>.</operator><name>length</name></name></expr>;</return></block></else></if>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>(<parameter><decl><type><name>void</name></type></decl></parameter>)</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>N</name></decl>,<decl><type ref="prev"/><name>tmp</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>N</name></expr>;</expr_stmt>
+
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>N</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>tmp</name></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name><name>last_end</name><index>[<expr><name>tmp</name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><call><name><name>container</name><operator>.</operator><name>push_back</name></name><argument_list>(<argument><expr><call><name>Node</name><argument_list>(<argument><expr><name>i</name></expr></argument>,<argument><expr><name>tmp</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if>
+        <expr_stmt><expr><name><name>last_end</name><index>[<expr><name>tmp</name></expr>]</index></name><operator>=</operator><name>i</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>cnt</name><index>[<expr><name>tmp</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+    }</block></for>
+
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><call><name><name>container</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <decl_stmt><decl><type><name>Node</name></type> <name>tmp</name><init>=<expr><name><name>container</name><index>[<expr><name>i</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><name><name>tmp</name><operator>.</operator><name>length</name></name><operator>=</operator><name><name>last_end</name><index>[<expr><name><name>tmp</name><operator>.</operator><name>value</name></name></expr>]</index></name><operator>-</operator><name><name>tmp</name><operator>.</operator><name>start</name></name></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>container</name><index>[<expr><name>i</name></expr>]</index></name><operator>=</operator><name>tmp</name></expr>;</expr_stmt>
+    }</block></for>
+
+    <expr_stmt><expr><call><name>sort</name><argument_list>(<argument><expr><call><name><name>container</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>,<argument><expr><call><name><name>container</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>,<argument><expr><name>my_compare</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>Node</name></type> <name>last</name><init>=<expr><name><name>container</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></init></decl>;</decl_stmt>
+
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name><name>last</name><operator>.</operator><name>start</name></name><operator>&lt;&lt;</operator><literal type="string">" "</literal><operator>&lt;&lt;</operator><name><name>last</name><operator>.</operator><name>start</name></name><operator>+</operator><name><name>last</name><operator>.</operator><name>length</name></name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

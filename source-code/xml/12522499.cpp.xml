@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12522499.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;map&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;vector&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;algorithm&gt;</cpp:file></cpp:include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ll</name></cpp:macro> <cpp:value>long long</cpp:value></cpp:define>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>m</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt>
+    
+    <decl_stmt><decl><type><name><name>map</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>nii</name></decl>;</decl_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>x</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>ll</name></type> <name>a</name></decl>,<decl><type ref="prev"/><name>cnt</name><init>=<expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+        <for>for<control>(<init><decl><type><name>int</name></type> <name>j</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>j</name><operator>&lt;=</operator><name>m</name></expr>;</condition><incr><expr><name>j</name><operator>++</operator></expr></incr>)</control><block>{
+            <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>a</name></expr>;</expr_stmt>
+            <if>if<condition>(<expr><name>a</name><operator>&gt;</operator><name>cnt</name></expr>)</condition><then><block>{
+                <expr_stmt><expr><name>cnt</name><operator>=</operator><name>a</name></expr>;</expr_stmt>
+                <expr_stmt><expr><name>x</name> <operator>=</operator> <name>j</name></expr>;</expr_stmt>
+            }</block></then></if>
+        }</block></for>
+        <expr_stmt><expr><name><name>nii</name><index>[<expr><name>x</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+    }</block></for>
+    <decl_stmt><decl><type><name><name><name>map</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name><operator>::</operator><name>iterator</name></name></type> <name>itr</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>x</name><init>=<expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>,<decl><type ref="prev"/><name>cnt</name><init>=<expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+    <for>for<control>(<init><expr><name>itr</name><operator>=</operator><call><name><name>nii</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr>;</init><condition><expr><name>itr</name><operator>!=</operator><call><name><name>nii</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>;</condition><incr><expr><name>itr</name><operator>++</operator></expr></incr>)</control><block>{
+        <if>if<condition>(<expr><name><name>itr</name><operator>-&gt;</operator><name>second</name></name> <operator>&gt;</operator><name>cnt</name></expr>)</condition><then><block>{
+            <expr_stmt><expr><name>x</name> <operator>=</operator> <name><name>itr</name><operator>-&gt;</operator><name>first</name></name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>cnt</name> <operator>=</operator> <name><name>itr</name><operator>-&gt;</operator><name>second</name></name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></for>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>x</name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+    
+}</block></function></unit>

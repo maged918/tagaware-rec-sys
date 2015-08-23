@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12206781.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstring&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>string</name></type> <name>solve</name><parameter_list>(<parameter><decl><type><name>string</name></type> <name>cad</name></decl></parameter>)</parameter_list><block>{
+	<decl_stmt><decl><type><name>string</name></type> <name>res</name> <init>= <expr><literal type="string">""</literal></expr></init></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>l</name> <init>= <expr><call><name><name>cad</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+	<if>if <condition>(<expr><name>l</name> <operator>%</operator> <literal type="number">2</literal> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then><block>{
+		<expr_stmt><expr><name>res</name> <operator>=</operator> <name>cad</name></expr>;</expr_stmt>
+	}</block></then> <else>else <block>{
+		<decl_stmt><decl><type><name>string</name></type> <name>a</name> <init>= <expr><call><name><name>cad</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>l</name><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+		<decl_stmt><decl><type><name>string</name></type> <name>b</name> <init>= <expr><call><name><name>cad</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><name>l</name><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><name>l</name><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+		<expr_stmt><expr><name>a</name> <operator>=</operator> <call><name>solve</name><argument_list>(<argument><expr><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><name>b</name> <operator>=</operator> <call><name>solve</name><argument_list>(<argument><expr><name>b</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+		<if>if <condition>(<expr><name>a</name> <operator>&gt;</operator> <name>b</name></expr>)</condition><then>
+			<block type="pseudo"><expr_stmt><expr><call><name>swap</name><argument_list>(<argument><expr><name>a</name></expr></argument>, <argument><expr><name>b</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if>
+		<expr_stmt><expr><name>res</name> <operator>=</operator> <name>a</name> <operator>+</operator> <name>b</name></expr>;</expr_stmt>
+	}</block></else></if>
+
+	<return>return <expr><name>res</name></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+	<decl_stmt><decl><type><name>string</name></type> <name>a</name></decl>, <decl><type ref="prev"/><name>b</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>a</name><operator>&gt;&gt;</operator><name>b</name></expr>;</expr_stmt>
+
+	<if>if <condition>(<expr><call><name>solve</name><argument_list>(<argument><expr><name>a</name></expr></argument>)</argument_list></call> <operator>==</operator> <call><name>solve</name><argument_list>(<argument><expr><name>b</name></expr></argument>)</argument_list></call></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"YES"</literal><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt></block></then>
+	<else>else
+		<block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"NO"</literal><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt></block></else></if>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

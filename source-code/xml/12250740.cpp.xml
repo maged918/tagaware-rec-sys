@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12250740.cpp"><comment type="line">//Language: MS C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;cstdio&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;vector&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;string&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;algorithm&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;map&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;iterator&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;set&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;stack&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;queue&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;fstream&gt;</cpp:file></cpp:include>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>rep</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>m</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>for(ll i = (m); i &lt; (n); i++)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>repd</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>m</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>for(ll i=(m); i &gt; (n); i--)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>ll</name></cpp:macro> <cpp:value>long long</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>pii</name></cpp:macro> <cpp:value>pair&lt;ll,ll&gt;</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>mp</name></cpp:macro> <cpp:value>make_pair</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>endl</name></cpp:macro> <cpp:value>'\n'</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>x</name></cpp:macro> <cpp:value>first</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>y</name></cpp:macro> <cpp:value>second</cpp:value></cpp:define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ll</name></type> <name>modd</name> <init>= <expr><literal type="number">1000</literal><operator>*</operator><literal type="number">1000</literal><operator>*</operator><literal type="number">1000</literal> <operator>+</operator> <literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+<struct>struct <name>info</name><block>{<public type="default">
+    <decl_stmt><decl><type><name>int</name></type> <name>l</name></decl>,<decl><type ref="prev"/><name>r</name></decl>,<decl><type ref="prev"/><name>number</name></decl>;</decl_stmt>
+    <constructor><name>info</name><parameter_list>()</parameter_list><block>{}</block></constructor>
+    <constructor><name>info</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>l1</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>r1</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>number1</name></decl></parameter>)</parameter_list>
+    <block>{
+        <expr_stmt><expr><name>l</name> <operator>=</operator> <name>l1</name></expr><operator>,</operator> <expr><name>r</name> <operator>=</operator> <name>r1</name></expr><operator>,</operator> <expr><name>number</name> <operator>=</operator> <name>number1</name></expr>;</expr_stmt>
+    }</block></constructor>
+</public>}</block>;</struct>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>cout</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name><name>map</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>info</name></expr></argument>&gt;</argument_list></name></type> <name>mapp</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>x</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>;</expr_stmt>
+    <macro><name>rep</name><argument_list>(<argument>i</argument>,<argument><literal type="number">0</literal></argument>,<argument>n</argument>)</argument_list></macro>
+    <block>{
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>x</name></expr>;</expr_stmt>
+        <if>if <condition>(<expr><call><name><name>mapp</name><operator>.</operator><name>find</name></name><argument_list>(<argument><expr><name>x</name></expr></argument>)</argument_list></call> <operator>==</operator> <call><name><name>mapp</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name><name>mapp</name><index>[<expr><name>x</name></expr>]</index></name> <operator>=</operator> <call><name>info</name><argument_list>(<argument><expr><name>i</name></expr></argument>,<argument><expr><name>i</name></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then><else>else
+        <block>{
+            <expr_stmt><expr><name><name>mapp</name><index>[<expr><name>x</name></expr>]</index></name><operator>.</operator><name>number</name><operator>++</operator></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>mapp</name><index>[<expr><name>x</name></expr>]</index></name><operator>.</operator><name>r</name> <operator>=</operator> <name>i</name></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block>
+    <decl_stmt><decl><type><name>int</name></type> <name>coun</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>l</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>r</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+
+
+    <for>for <control>(<init><decl><type><name>auto</name></type> <name>i</name> <init>= <expr><call><name><name>mapp</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>!=</operator> <call><name><name>mapp</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <if>if <condition>(<expr><name><name>i</name> <operator>-&gt;</operator> <name>second</name><operator>.</operator><name>number</name></name> <operator>&gt;</operator> <name>coun</name></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>coun</name> <operator>=</operator> <name><name>i</name> <operator>-&gt;</operator> <name>second</name><operator>.</operator><name>number</name></name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>l</name> <operator>=</operator> <name><name>i</name> <operator>-&gt;</operator> <name>second</name><operator>.</operator><name>l</name></name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>r</name> <operator>=</operator> <name><name>i</name> <operator>-&gt;</operator> <name>second</name><operator>.</operator><name>r</name></name></expr>;</expr_stmt>
+        }</block></then></if>
+
+        <if>if <condition>(<expr><name><name>i</name> <operator>-&gt;</operator> <name>second</name><operator>.</operator><name>number</name></name> <operator>==</operator> <name>coun</name></expr>)</condition><then>
+        <block>{
+            <if>if <condition>(<expr><name>r</name> <operator>-</operator> <name>l</name> <operator>&gt;</operator> <name><name>i</name> <operator>-&gt;</operator> <name>second</name><operator>.</operator><name>r</name></name> <operator>-</operator> <name><name>i</name> <operator>-&gt;</operator> <name>second</name><operator>.</operator><name>l</name></name></expr>)</condition><then>
+            <block>{
+                <expr_stmt><expr><name>r</name> <operator>=</operator> <name><name>i</name> <operator>-&gt;</operator> <name>second</name><operator>.</operator><name>r</name></name></expr>;</expr_stmt>
+                <expr_stmt><expr><name>l</name> <operator>=</operator> <name><name>i</name> <operator>-&gt;</operator> <name>second</name><operator>.</operator><name>l</name></name></expr>;</expr_stmt>
+            }</block></then></if>
+        }</block></then></if>
+    }</block></for>
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>l</name> <operator>+</operator> <literal type="number">1</literal> <operator>&lt;&lt;</operator> <literal type="string">" "</literal> <operator>&lt;&lt;</operator> <name>r</name> <operator>+</operator> <literal type="number">1</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

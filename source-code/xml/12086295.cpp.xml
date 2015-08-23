@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12086295.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<comment type="block">/*           !         !
+            ! !       ! !
+           ! . !     ! . !
+             ^ ^ ^ ^ ^ ^
+           ^             ^
+      ___^  (0)   _   (0)  ^___
+    ____^        '"'        ^____
+       ^          ^          ^
+     ^     * * * * * * * *     ^
+    ^   *   /\   /\   /\    *    ^
+   ^   *                     *    ^
+  ^   *   /\   /\   /\   /\   *    ^
+ ^   *                         *    ^
+ ^  *                           *   ^
+ ^  *                           *   ^
+  ^ *                           *  ^
+   ^*                           *^
+    ^ *                       * ^
+    ^  *                     *  ^
+      ^ *        ) (        * ^
+          ^^^^^^^^ ^^^^^^^^ */</comment>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;algorithm&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstdio&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;deque&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;functional&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;limits&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;list&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;map&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;numeric&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;queue&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;set&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;string&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;unordered_map&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;unordered_set&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;vector&gt;</cpp:file></cpp:include>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>umap</name></cpp:macro> <cpp:value>std::unordered_map</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>uset</name></cpp:macro> <cpp:value>std::unordered_set</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>qnan</name></cpp:macro> <cpp:value>std::numeric_limits&lt;double&gt;::quiet_NaN()</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>infin</name></cpp:macro> <cpp:value>std::numeric_limits&lt;double&gt;::infinity()</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>all</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>(x).begin(), (x).end()</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>in</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>x</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>((x).find(a) != (x).end())</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>Odd</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>(x &amp; 1)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>Even</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>!(x &amp; 1)</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>For</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>a</name></type></parameter>, <parameter><type><name>n</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>for( int i = a; i &lt; n; ++i )</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>Rof</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>a</name></type></parameter>, <parameter><type><name>n</name></type></parameter>)</parameter_list></cpp:macro> <cpp:value>for( int i = n - 1; i &gt;= a; --i )</cpp:value></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <cpp:macro><name>oo</name></cpp:macro> <cpp:value>INT_MAX</cpp:value></cpp:define>
+
+<typedef>typedef <type><name>unsigned</name> <name>char</name></type> <name>uchar</name>;</typedef>
+<typedef>typedef <type><name>unsigned</name> <name>short</name></type> <name>ushort</name>;</typedef>
+<typedef>typedef <type><name>unsigned</name> <name>int</name></type> <name>uint</name>;</typedef>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>dint</name>;</typedef>
+<typedef>typedef <type><name>unsigned</name> <name>long</name> <name>long</name></type> <name>udint</name>;</typedef>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<struct>struct <name>LR</name>
+<block>{<public type="default">
+	<decl_stmt><decl><type><name>dint</name></type> <name>left</name></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>dint</name></type> <name>right</name></decl>;</decl_stmt>
+</public>}</block>;</struct>
+<function type="operator"><type><name>bool</name></type> <name>operator<name>&lt;</name></name> <parameter_list>(<parameter><decl><type><specifier>const</specifier> <name>LR</name><modifier>&amp;</modifier></type> <name>lr</name></decl></parameter>, <parameter><decl><type><specifier>const</specifier> <name>LR</name><modifier>&amp;</modifier></type> <name>lr2</name></decl></parameter>)</parameter_list> <block>{ <return>return <expr><name><name>lr</name><operator>.</operator><name>left</name></name> <operator>&lt;</operator> <name><name>lr2</name><operator>.</operator><name>left</name></name></expr>;</return> }</block></function>
+<function type="operator"><type><name>bool</name></type> <name>operator<name>&lt;</name></name> <parameter_list>(<parameter><decl><type><specifier>const</specifier> <name>LR</name><modifier>&amp;</modifier></type> <name>lr</name></decl></parameter>, <parameter><decl><type><name>dint</name></type> <name>x</name></decl></parameter>)</parameter_list> <block>{ <return>return <expr><name><name>lr</name><operator>.</operator><name>left</name></name> <operator>&lt;</operator> <name>x</name></expr>;</return> }</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>argc</name></decl></parameter>, <parameter><decl><type><name>char</name><modifier>*</modifier><modifier>*</modifier></type></decl></parameter>)</parameter_list>
+<block>{
+	<if>if<condition>( <expr><name>argc</name> <operator>&gt;</operator> <literal type="number">1</literal></expr> )</condition><then>
+	<block>{
+		<expr_stmt><expr><call><name>freopen</name><argument_list>(<argument><expr><literal type="string">"debug/1.in"</literal></expr></argument>, <argument><expr><literal type="string">"r"</literal></expr></argument>, <argument><expr><name>stdin</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><call><name>freopen</name><argument_list>(<argument><expr><literal type="string">"debug/out.txt"</literal></expr></argument>, <argument><expr><literal type="string">"w"</literal></expr></argument>, <argument><expr><name>stdout</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	}</block></then></if>
+	<expr_stmt><expr><call><name><name>ios</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>h</name></decl>, <decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>h</name> <operator>&gt;&gt;</operator> <name>q</name></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name><name>deque</name><argument_list type="generic">&lt;<argument><expr><name>LR</name></expr></argument>&gt;</argument_list></name></type> <name>v</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>LR</name></expr></argument>&gt;</argument_list></name></type> <name>nai</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name><name>nai</name><operator>.</operator><name>reserve</name></name><argument_list>(<argument><expr><name>q</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>dint</name></type> <name>aruMin</name> <init>= <expr><literal type="number">1LL</literal> <operator>&lt;&lt;</operator> <operator>(</operator><name>h</name> <operator>-</operator> <literal type="number">1</literal><operator>)</operator></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>dint</name></type> <name>aruMax</name> <init>= <expr><literal type="number">1LL</literal> <operator>&lt;&lt;</operator> <name>h</name></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>, <decl><type ref="prev"/><name>a</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>dint</name></type> <name>l</name></decl>, <decl><type ref="prev"/><name>r</name></decl>;</decl_stmt>
+    <macro><name>For</name><argument_list>( <argument>j</argument>, <argument><literal type="number">0</literal></argument>, <argument>q</argument> )</argument_list></macro>
+    <block>{
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>i</name> <operator>&gt;&gt;</operator> <name>l</name> <operator>&gt;&gt;</operator> <name>r</name> <operator>&gt;&gt;</operator> <name>a</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>l</name> <operator>=</operator> <name>l</name> <operator>&lt;&lt;</operator> <operator>(</operator><name>h</name> <operator>-</operator> <name>i</name><operator>)</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name>r</name> <operator>=</operator> <operator>(</operator><name>r</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>&lt;&lt;</operator> <operator>(</operator><name>h</name> <operator>-</operator> <name>i</name><operator>)</operator></expr>;</expr_stmt>
+        <if>if<condition>( <expr><name>a</name></expr> )</condition><then>
+        <block>{
+            <expr_stmt><expr><name>aruMin</name> <operator>=</operator> <call><name>max</name><argument_list>(<argument><expr><name>aruMin</name></expr></argument>, <argument><expr><name>l</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><name>aruMax</name> <operator>=</operator> <call><name>min</name><argument_list>(<argument><expr><name>aruMax</name></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then>
+        <else>else <block type="pseudo"><expr_stmt><expr><call><name><name>nai</name><operator>.</operator><name>push_back</name></name><argument_list>(<argument><expr><block>{<expr><name>l</name></expr>, <expr><name>r</name></expr>}</block></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+    }</block>
+    <expr_stmt><expr><call><name>sort</name><argument_list>(<argument><expr><call><name>all</name><argument_list>(<argument><expr><name>nai</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <if>if<condition>( <expr><name>aruMin</name> <operator>&lt;</operator> <name>aruMax</name></expr> )</condition><then>
+    <block>{
+        <expr_stmt><expr><call><name><name>v</name><operator>.</operator><name>push_back</name></name><argument_list>(<argument><expr><block>{<expr><name>aruMin</name></expr>, <expr><name>aruMax</name></expr>}</block></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <for>for<control>( <init><expr><name>auto</name><operator>&amp;</operator> <name>pa</name> <operator>:</operator> <name>nai</name></expr></init> )</control>
+        <block>{
+            <expr_stmt><expr><name>l</name> <operator>=</operator> <name><name>pa</name><operator>.</operator><name>left</name></name></expr>;</expr_stmt>
+            <expr_stmt><expr><name>r</name> <operator>=</operator> <name><name>pa</name><operator>.</operator><name>right</name></name></expr>;</expr_stmt>
+            <decl_stmt><decl><type><name>auto</name></type> <name>iL</name> <init>= <expr><call><name>lower_bound</name><argument_list>(<argument><expr><call><name>all</name><argument_list>(<argument><expr><name>v</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><name>l</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+            <if>if<condition>( <expr><name>iL</name> <operator>!=</operator> <call><name><name>v</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr> )</condition><then>
+            <block>{
+                <decl_stmt><decl><type><name>auto</name></type> <name>iPrev</name> <init>= <expr><call><name>prev</name><argument_list>(<argument><expr><name>iL</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+                <if>if<condition>( <expr><name><name>iPrev</name><operator>-&gt;</operator><name>right</name></name> <operator>&gt;</operator> <name>l</name></expr> )</condition><then>
+                <block>{
+                    <decl_stmt><decl><type><name>dint</name></type> <name>rPrev</name> <init>= <expr><name><name>iPrev</name><operator>-&gt;</operator><name>right</name></name></expr></init></decl>;</decl_stmt>
+                    <expr_stmt><expr><name><name>iPrev</name><operator>-&gt;</operator><name>right</name></name> <operator>=</operator> <name>l</name></expr>;</expr_stmt>
+
+                    <if>if<condition>( <expr><name>rPrev</name> <operator>&gt;</operator> <name>r</name></expr> )</condition><then>
+                    <block>{
+                        <comment type="line">// divide</comment>
+                        <expr_stmt><expr><call><name><name>v</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>iL</name></expr></argument>, <block>{<expr_stmt><expr><name>r</name></expr><operator>,</operator> <expr><name>rPrev</name></expr></expr_stmt>}</block></argument_list></call></expr></expr_stmt>)</block><empty_stmt>;</empty_stmt></then></if>
+                        <if>if<condition>( <expr><call><name><name>v</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call> <operator>&gt;</operator> <literal type="number">2</literal></expr> )</condition><then> <block type="pseudo"><break>break;</break></block></then></if>
+                        <continue>continue;</continue>
+                    }</block></then></if>
+                }</block></then></if>
+            }</block></for>
+
+            <decl_stmt><decl><type><name>auto</name></type> <name>iR</name> <init>= <expr><call><name>lower_bound</name><argument_list>(<argument><expr><call><name>all</name><argument_list>(<argument><expr><name>v</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+            <if>if<condition>( <expr><name>iR</name> <operator>!=</operator> <call><name><name>v</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr> )</condition><then>
+            <block>{
+                <if>if<condition>( <expr><call><name>prev</name><argument_list>(<argument><expr><name>iR</name></expr></argument>)</argument_list></call><operator>-&gt;</operator><name>right</name> <operator>&gt;</operator> <name>r</name></expr> )</condition><then> <block>{ <expr_stmt><expr><operator>--</operator><name>iR</name></expr>;</expr_stmt> <expr_stmt><expr><name><name>iR</name><operator>-&gt;</operator><name>left</name></name> <operator>=</operator> <name>r</name></expr>;</expr_stmt> }</block></then></if>
+            }</block></then></if>
+            <expr_stmt><expr><call><name><name>v</name><operator>.</operator><name>erase</name></name><argument_list>(<argument><expr><name>iL</name></expr></argument>, <argument><expr><name>iR</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
+
+    <if>if<condition>( <expr><operator>!</operator><call><name><name>v</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call></expr> )</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"Game cheated!"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt> <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    <if>if<condition>( <expr><call><name><name>v</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call> <operator>&gt;</operator> <literal type="number">1</literal> <operator>||</operator> <call><name><name>v</name><operator>.</operator><name>front</name></name><argument_list>()</argument_list></call><operator>.</operator><name>right</name> <operator>-</operator> <call><name><name>v</name><operator>.</operator><name>front</name></name><argument_list>()</argument_list></call><operator>.</operator><name>left</name> <operator>&gt;</operator> <literal type="number">1</literal></expr> )</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"Data not sufficient!"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt> <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <call><name><name>v</name><operator>.</operator><name>front</name></name><argument_list>()</argument_list></call><operator>.</operator><name>left</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+}
+</unit>

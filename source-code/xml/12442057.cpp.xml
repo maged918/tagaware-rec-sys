@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12442057.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstdio&gt;</cpp:file></cpp:include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>, <decl><type ref="prev"/><name>j</name></decl>, <decl><type ref="prev"/><name>k</name></decl>, <decl><type ref="prev"/><name>n</name></decl>, <decl><type ref="prev"/><name>m</name></decl>, <decl><type ref="prev"/><name>t</name></decl>, <decl><type ref="prev"/><name>p</name></decl>, <decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+
+    <while>while<condition>(<expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %d %d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>t</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>j</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>q</name></expr></argument>)</argument_list></call><operator>==</operator><literal type="number">3</literal></expr>)</condition>
+    <block>{
+        <expr_stmt><expr><name>q</name><operator>=</operator><name>q</name><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt><expr_stmt><expr><name>p</name><operator>=</operator><name>j</name></expr>;</expr_stmt><expr_stmt><expr><name>m</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+        <while>while<condition>(<expr><name>j</name><operator>&lt;</operator><name>t</name></expr>)</condition>
+        <block>{
+            <for>for<control>( <init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init> <condition><expr><name>i</name><operator>&lt;=</operator><name>j</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+            <block>{
+                <expr_stmt><expr><name>p</name><operator>+=</operator><name>q</name></expr>;</expr_stmt>
+            }</block></for>
+            <expr_stmt><expr><name>j</name><operator>=</operator><name>p</name></expr>;</expr_stmt><expr_stmt><expr><name>m</name><operator>++</operator></expr>;</expr_stmt>
+        }</block></while>
+        <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>m</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></while>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

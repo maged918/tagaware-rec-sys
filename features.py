@@ -35,32 +35,8 @@ tree = etree.parse(file)
 
 features = defaultdict()
 
-#Feature 1: if inside while (binary search, kmp)
-features['IF_IN_WHILE'] = tree.xpath('.//loop/if')
+# features['IF_IN_LOOP'] = len(tree.xpath('.//for/block/if')) + len(tree.xpath('.//while/block/if')) +len(tree.xpath('.//do/block/if'))
 
-##################################################
 
-#Feature 2: bag of words, {dp, mid, lo, hi, graph, query, update, solve, point, line} (binary search, graphs, segment trees)
-methods = tree.xpath('.//method')
-variables = tree.xpath('.//local-variable')
-
-common_names = ['dp', 'mid', 'lo', 'hi', 'graph', 'query', 'update', 'solve', 'point', 'line','dfs','bfs','dijkstra']
-
-features.update(dict(zip(common_names,[0]*len(common_names))))
-
-# class name
-class_name = dict(tree.xpath('.//class')[0].items())['name']
-if class_name in common_names: features[class_name.upper] += 1
-
-# methods
-for method in methods:
-	name = dict(method.items())['name'].lower()
-	if name in common_names: features[name.upper()] += 1
-
-# vars
-for var in variables:
-	name = dict(var.items())['name'].lower()
-	if name in common_names: features[name.upper()] += 1
-##################################################
 
 

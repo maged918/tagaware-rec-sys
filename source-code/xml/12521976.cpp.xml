@@ -1,92 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="0.9.5" language="C++" filename="cpp/12521976.cpp"><comment type="line">//Language: MS C++</comment>
-
-
-<comment type="line">//#include &lt;bits/stdc++.h&gt;</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;algorithm&gt;</cpp:file>ããã</cpp:include> <comment type="line">//STL éç¨ç®æ³</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;bitset&gt;</cpp:file>ããããã</cpp:include><comment type="line">//STL ä½éå®¹å¨</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cctype&gt;</cpp:file></cpp:include>         <comment type="line">//å­ç¬¦å¤ç</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cerrno&gt;</cpp:file> ãããã</cpp:include> <comment type="line">//å®ä¹éè¯¯ç </comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cfloat&gt;</cpp:file>ãããã</cpp:include> <comment type="line">//æµ®ç¹æ°å¤ç</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;ciso646&gt;</cpp:file></cpp:include>         <comment type="line">//å¯¹åºåç§è¿ç®ç¬¦çå®</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;climits&gt;</cpp:file> ãããã</cpp:include><comment type="line">//å®ä¹åç§æ°æ®ç±»åæå¼çå¸¸é</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;clocale&gt;</cpp:file> ãããã</cpp:include><comment type="line">//å®ä¹æ¬å°åå½æ°</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cmath&gt;</cpp:file> ããããã</cpp:include><comment type="line">//å®ä¹æ°å­¦å½æ°</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;complex&gt;</cpp:file>ãããã</cpp:include> <comment type="line">//å¤æ°ç±»</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;csignal&gt;</cpp:file></cpp:include>         <comment type="line">//ä¿¡å·æºå¶æ¯æ</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;csetjmp&gt;</cpp:file></cpp:include>         <comment type="line">//å¼å¸¸å¤çæ¯æ</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstdarg&gt;</cpp:file></cpp:include>         <comment type="line">//ä¸å®åæ°åè¡¨æ¯æ</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstddef&gt;</cpp:file></cpp:include>         <comment type="line">//å¸¸ç¨å¸¸é</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstdio&gt;</cpp:file> ãããã</cpp:include> <comment type="line">//å®ä¹è¾å¥ï¼è¾åºå½æ°</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstdlib&gt;</cpp:file> ãããã</cpp:include><comment type="line">//å®ä¹æé¡¹å½æ°ååå­åéå½æ°</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstring&gt;</cpp:file> ãããã</cpp:include><comment type="line">//å­ç¬¦ä¸²å¤ç</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;ctime&gt;</cpp:file> ããããã</cpp:include><comment type="line">//å®ä¹å³äºæ¶é´çå½æ°</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cwchar&gt;</cpp:file> ãããã</cpp:include> <comment type="line">//å®½å­ç¬¦å¤çåè¾å¥ï¼è¾åº</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cwctype&gt;</cpp:file> ãããã</cpp:include><comment type="line">//å®½å­ç¬¦åç±»</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;deque&gt;</cpp:file>ããããã</cpp:include> <comment type="line">//STL åç«¯éåå®¹å¨</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;exception&gt;</cpp:file>ããã</cpp:include> <comment type="line">//å¼å¸¸å¤çç±»</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;fstream&gt;</cpp:file> ããã</cpp:include> <comment type="line">//æä»¶è¾å¥ï¼è¾åº</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;functional&gt;</cpp:file>ããã</cpp:include><comment type="line">//STL å®ä¹è¿ç®å½æ°ï¼ä»£æ¿è¿ç®ç¬¦ï¼</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;limits&gt;</cpp:file> ãããã</cpp:include> <comment type="line">//å®ä¹åç§æ°æ®ç±»åæå¼å¸¸é</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;list&gt;</cpp:file>ãããããã</cpp:include><comment type="line">//STL çº¿æ§åè¡¨å®¹å¨</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;locale&gt;</cpp:file></cpp:include>         <comment type="line">//æ¬å°åç¹å®ä¿¡æ¯</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;map&gt;</cpp:file>ãããããã</cpp:include> <comment type="line">//STL æ å°å®¹å¨</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;memory&gt;</cpp:file></cpp:include>         <comment type="line">//STLéè¿åéå¨è¿è¡çåå­åé</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive><cpp:file>&lt;new&gt;</cpp:file></cpp:include>            <comment type="line">//å¨æåå­åé</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;numeric&gt;</cpp:file></cpp:include>         <comment type="line">//STLå¸¸ç¨çæ°å­æä½</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iomanip&gt;</cpp:file> ããã</cpp:include> <comment type="line">//åæ°åè¾å¥ï¼è¾åº</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;ios&gt;</cpp:file>ãããããã</cpp:include> <comment type="line">//åºæ¬è¾å¥ï¼è¾åºæ¯æ</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iosfwd&gt;</cpp:file>ããããã</cpp:include><comment type="line">//è¾å¥ï¼è¾åºç³»ç»ä½¿ç¨çåç½®å£°æ</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file> ããã</cpp:include><comment type="line">//æ°æ®æµè¾å¥ï¼è¾åº</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;istream&gt;</cpp:file>ãããã</cpp:include> <comment type="line">//åºæ¬è¾å¥æµ</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iterator&gt;</cpp:file></cpp:include>        <comment type="line">//STLè¿­ä»£å¨</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;ostream&gt;</cpp:file>ãããã</cpp:include> <comment type="line">//åºæ¬è¾åºæµ</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;queue&gt;</cpp:file>ããããã</cpp:include> <comment type="line">//STL éåå®¹å¨</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;set&gt;</cpp:file>ãããããã</cpp:include> <comment type="line">//STL éåå®¹å¨</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;sstream&gt;</cpp:file>ãããã</cpp:include> <comment type="line">//åºäºå­ç¬¦ä¸²çæµ</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;stack&gt;</cpp:file>ããããã</cpp:include> <comment type="line">//STL å æ å®¹å¨</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;stdexcept&gt;</cpp:file>ããã</cpp:include> <comment type="line">//æ åå¼å¸¸ç±»</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;streambuf&gt;</cpp:file>ããã</cpp:include> <comment type="line">//åºå±è¾å¥ï¼è¾åºæ¯æ</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;string&gt;</cpp:file>ããããã</cpp:include><comment type="line">//å­ç¬¦ä¸²ç±»</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;typeinfo&gt;</cpp:file></cpp:include>        <comment type="line">//è¿è¡æé´ç±»åä¿¡æ¯</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;utility&gt;</cpp:file>ãããã</cpp:include> <comment type="line">//STL éç¨æ¨¡æ¿ç±»</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;valarray&gt;</cpp:file></cpp:include>        <comment type="line">//å¯¹åå«å¼çæ°ç»çæä½</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;vector&gt;</cpp:file>ããããã</cpp:include><comment type="line">//STL å¨ææ°ç»å®¹å¨</comment>
-<using>using <namespace>namespace <name>std</name>;</namespace></using>
-<decl_stmt><decl><type><name>int</name></type> <name><name>a</name><index>[<expr><literal type="number">110</literal></expr>]</index><index>[<expr><literal type="number">110</literal></expr>]</index></name><init>=<expr><block>{<expr><literal type="number">0</literal></expr>}</block></expr></init></decl>,<decl><type ref="prev"/><name>n</name><init>=<expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name><name>b</name><index>[<expr><literal type="number">110</literal></expr>]</index></name><init>=<expr><block>{<expr><literal type="number">0</literal></expr>}</block></expr></init></decl>;</decl_stmt>
-<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
-<block>{
-     <decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>,<decl><type ref="prev"/><name>j</name></decl>,<decl><type ref="prev"/><name>k</name></decl>,<decl><type ref="prev"/><name>m</name></decl>,<decl><type ref="prev"/><name>uu</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
-    <comment type="line">// int mm=0,mmm=0;</comment>
-    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>n</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>m</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>m</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
-    <block>{
-         <decl_stmt><decl><type><name>int</name></type> <name>p</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
-         <decl_stmt><decl><type><name>int</name></type> <name>mm</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
-         <for>for<control>(<init><expr><name>j</name><operator>=</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>j</name><operator>&lt;=</operator><name>n</name></expr>;</condition><incr><expr><name>j</name><operator>++</operator></expr></incr>)</control>
-         <block>{
-              <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>k</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-             <comment type="line">// if(k==0) uu++;</comment>
-              <if>if<condition>(<expr><name>k</name><operator>&gt;</operator><name>mm</name></expr>)</condition><then>
-               <block>{<expr_stmt><expr><name>mm</name><operator>=</operator><name>k</name></expr>;</expr_stmt>
-               <expr_stmt><expr><name>p</name><operator>=</operator><name>j</name></expr>;</expr_stmt>
-               }</block></then></if>
-         }</block></for>
-         <comment type="line">//if(p!=0)</comment>
-         <expr_stmt><expr><name><name>b</name><index>[<expr><name>p</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
-    }</block></for>
-    <decl_stmt><decl><type><name>int</name></type> <name>pos</name><init>=<expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name>mmm</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
-    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
-    <block>{
-         <if>if<condition>(<expr><name><name>b</name><index>[<expr><name>i</name></expr>]</index></name><operator>&gt;</operator><name>mmm</name></expr>)</condition><then>
-         <block>{
-              <expr_stmt><expr><name>mmm</name><operator>=</operator><name><name>b</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
-              <expr_stmt><expr><name>pos</name><operator>=</operator><name>i</name></expr>;</expr_stmt>
-         }</block></then></if>
-    }</block></for>
-    <comment type="line">//if(uu==n*m) pos=1;</comment>
-    <comment type="line">//if(pos==0) pos=1;</comment>
-    <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>pos</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-    <return>return <expr><literal type="number">0</literal></expr>;</return>
-}</block></function>
-</unit>

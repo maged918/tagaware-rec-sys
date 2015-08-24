@@ -1,4 +1,5 @@
 # author: tarek
+# date: Aug 23rd 2015
 # desc: takes in data dir path, produces xml files by srcml and cleans unnecessary namespaces
 # assuming that srcml command is working, http://www.srcml.org/downloads.html
 
@@ -10,9 +11,9 @@ for contest in $(ls); do
 		cd $index
 		echo "in $index"
 		for file in $(ls); do srcml $file -o $file.xml --in-order; done
-		sed -i -e 's/xmlns=\"http:\/\/www.srcML.org\/srcML\/src\"//g' *.xml 
+		sed -i -e 's/xmlns=\"http:\/\/www.srcML.org\/srcML\/src\"//g' *.xml
 		sed -i -e 's/xmlns:cpp=\"http:\/\/www.srcML.org\/srcML\/cpp\"//g' *.xml
-		sed -i -e 's/cpp://g' *.xml		
+		sed -i -e 's/cpp://g' *.xml
 		rm *.xml-e
 		cd ..
 	done

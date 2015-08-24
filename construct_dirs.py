@@ -1,6 +1,11 @@
 import os.path
 import shutil
 
+'''
+author: tarek
+date: Aug 23rd 2015
+desc: parses submissions.txt looking for contest number, then problems index to groups cpp submissions together in the data dir
+'''
 
 if not os.path.exists('data'):
 	os.makedirs('data')

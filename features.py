@@ -41,7 +41,6 @@ Feature 8: Number of variables (geometry, graphs, binary search)
 16. no. of arithmetic operations
 16. names of variables classes and methods -> word clusters
 
-
 '''
 
 from collections import defaultdict
@@ -74,8 +73,7 @@ def extract_feats(file):
 			curr_feats += [single_loop,0,0]
 
 		else:
-			triple_loop =	evalute(WHILE,WHILE,WHILE) 	+ evalute(WHILE,WHILE,FOR) + evalute(WHILE,FOR,WHILE) + evalute(WHILE,FOR,FOR) +
-							evalute(FOR,WHILE,WHILE)	+ evalute(FOR,WHILE,FOR) + evalute(FOR,FOR,WHILE) + evalute(FOR,FOR,FOR)
+			triple_loop = evalute(WHILE,WHILE,WHILE) + evalute(WHILE,WHILE,FOR) + evalute(WHILE,FOR,WHILE) + evalute(WHILE,FOR,FOR) + evalute(FOR,WHILE,WHILE) + evalute(FOR,WHILE,FOR) + evalute(FOR,FOR,WHILE) + evalute(FOR,FOR,FOR)
 			if triple_loop == 0:
 				curr_feats += [0,double_loop,0]
 			else:
@@ -88,6 +86,18 @@ def extract_feats(file):
 	# feature 5
 
 	# feature 6
+	rec = 0
+	functions = tree.xpath(".//function")
+	for f in functions:
+		name = f.xpath(".//name")[1].text
+		calls = f.xpath(".//call/name")
+
+		for c in calls:
+			if c.text == name:
+				rec += 1
+	curr_feats.append(rec)
+
+
 
 	# feature 7: could be in a declared statement, or an expression (cin and cout should be excluded)
 	for expr in tree.xpath(".//expr"):

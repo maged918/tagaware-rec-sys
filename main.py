@@ -4,10 +4,15 @@ Created on Aug 1, 2015
 @author: maged
 '''
 
-from collections import defaultdict
-from scipy.stats import pearsonr
 import numpy as np
 import scipy as scipy
+import sklearn
+
+from collections import defaultdict
+from scipy.stats import pearsonr
+from numpy import zeros 
+from sklearn.cluster import KMeans
+from sklearn import datasets
 
 '''
 Count number of unique users, problems, tags
@@ -23,7 +28,7 @@ f = open('Submissions.txt', 'r')
 handles = set([line.split(' ')[1].rstrip()
               for line in f if line.split(' ')[0] == 'Handle:'])
 users = dict(zip(list(handles), range(len(handles))))
-#TO DO: Check the logic of this edit!
+# TO DO: Check the logic of this edit!
 print(users)
 f.close()
 
@@ -65,6 +70,13 @@ tags = dict(zip(list(tags), range(len(tags))))
 print(tags)
 f.close()
 
+users_count = len(users)
+problems_count = len(problems)
+tags_count = len(tags)
+print('User count = ' + str(users_count))
+print('Problem count = ' + str(problems_count))
+print('Tag count = ' + str(tags_count))
+
 '''
 TODO:
 Serialize all dicts, and then load them later to save computation time.
@@ -81,7 +93,7 @@ handle = ''
 users_problems = []
 for u in users:
   users_problems.append([])
-#print(len(users_problems))
+
 for l in f:
   if l == '\n':
     continue
@@ -94,8 +106,8 @@ for l in f:
     handle = arr[1].rstrip()
     user_id = users[handle]
     problem_id = problems[contest_id + index]
-    #print(contest_id + index + ' : ' + handle)
-    #print(user_id, problem_id)
+    # print(contest_id + index + ' : ' + handle)
+    # print(user_id, problem_id)
     users_problems[user_id].append(problem_id)
 print(users_problems)
 f.close()
@@ -103,6 +115,7 @@ f.close()
 '''
 Parse Submissions.txt, for all submissions -> get problem_id, tag_id -> build adjacency list.
 Build problem-tag graph.
+Build tag-problem graph.
 '''
 f = open('Problems-tags.txt', 'r')
 contest_id = ''
@@ -124,7 +137,6 @@ for l in f:
     tags_ids = [tags[tag] for tag in current_tags]
     problem_id = problems[contest_id + index]
     problems_tags[problem_id] += tags_ids
-    #print(tags_ids)
 print(problems_tags)
 f.close()
 
@@ -149,12 +161,12 @@ for handle in users:
   for t in users_tags[u]:
     users_tags[u][t] /= (len(users_problems[u]) * 1.0)
 print(users_tags)
-#print(tags["geometry"], tags["implementation"], tags["sortings"])
+# print(tags["geometry"], tags["implementation"], tags["sortings"])
 
 '''
 Calcultaing user similarity using Pearson's Correlation
 NOTE: If needed (if this is taking too much time), possible optimization:
-    p(x,y) = p(y,x)
+    p(x,yاسيوط) = p(y,x)
 '''
 correlation = []
 for i1, u1 in zip(range(len(users)), users):
@@ -169,14 +181,17 @@ for i1, u1 in zip(range(len(users)), users):
     for k in users_tags[id2]:
       l2[k] = users_tags[id2][k]
     correlation[i1].append(pearsonr(l1, l2)[0])
+  print(correlation[i1])
+
 for user in correlation:
   for other_user in user:
-    print(other_user, end = ' ')
+    print(other_user, end=' ')
   print()
 
 '''
 Calculating Temporal Weight between users and tags
 '''
+
 import datetime
 import dateutil.relativedelta
 from math import exp, log
@@ -210,6 +225,52 @@ for l in f:
     for t in current_problem_tags:
       temporal_values[user_id][t] += temporal_value
 print(temporal_values)
+
+
+'''
+Incorporating Diversity
+1. Clustering tags
+'''
+
+tags_problems = []
+
+for t in tags:
+  tags_problems.append(set())
+
+for idx in range(len(problems_tags)):
+  for t in problems_tags[idx]:
+    tags_problems[t].add(idx)
+  
+print("Tag-problem graph: ", tags_problems)
+
+tag_vectors = []
+for t in tags:
+  tag_vectors.append(np.zeros(problems_count))
+
+for idx in range(len(tags_problems)):
+  for p in tags_problems[idx]:
+    tag_vectors[idx][p]=1
+  tag_vectors[idx] = tag_vectors[idx].tolist()
+  
+print("Tag-vectors: ", tag_vectors)    
+
+k = 10
+engine = KMeans(n_clusters=k)
+labels = engine.fit(tag_vectors).labels_
+
+print("Tag labels: ", labels)
+
+inverse_tags= dict()
+
+for tag in tags:
+  inverse_tags[tags[tag]] = tag
+
+for i in range(k):
+  print("Cluster ", i)
+  for tag_idx in range(len(labels)):
+    if labels[tag_idx] == i:
+      print(inverse_tags[tag_idx])
+
 
 '''
 Introduction:

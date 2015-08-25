@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12489415.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name> <parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>t</name></decl>, <decl><type ref="prev"/><name>s</name></decl>, <decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>scanf</name> <argument_list>(<argument><expr><literal type="string">"%d %d %d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>t</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>s</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>q</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>nr</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <while>while <condition>(<expr><name>s</name> <operator>&lt;</operator> <name>t</name></expr>)</condition>
+    <block>{
+        <expr_stmt><expr><name>s</name> <operator>*=</operator> <name>q</name></expr>;</expr_stmt>
+        <expr_stmt><expr><operator>++</operator><name>nr</name></expr>;</expr_stmt>
+    }</block></while>
+
+    <expr_stmt><expr><call><name>printf</name> <argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>nr</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

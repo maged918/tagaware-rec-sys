@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12198071.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<comment type="line">//Ø¨Ø³Ù Ø§ÙÙÙ Ø§ÙØ±Ø­ÙÙ Ø§ÙØ±Ø­ÙÙÂ</comment>
+<include>#<directive>include</directive><file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>int</name></type> <name>w</name></decl>, <decl><type ref="prev"/><name>h</name></decl>, <decl><type ref="prev"/><name>a</name></decl>, <decl><type ref="prev"/><name>b</name></decl>, <decl><type ref="prev"/><name>a2</name></decl>, <decl><type ref="prev"/><name>b2</name></decl>;</decl_stmt>
+<function><type><name>bool</name></type> <name>rotateup</name><parameter_list>()</parameter_list> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>s</name> <init>= <expr><name>b</name> <operator>+</operator> <name>a2</name></expr></init></decl>;</decl_stmt>
+    <return>return <expr><name>h</name> <operator>&gt;=</operator> <name>a</name> <operator>&amp;&amp;</operator> <name>h</name> <operator>&gt;=</operator> <name>b2</name> <operator>&amp;&amp;</operator> <name>w</name> <operator>&gt;=</operator> <name>s</name></expr>;</return>
+}</block></function>
+<function><type><name>bool</name></type> <name>rotaterright</name><parameter_list>()</parameter_list> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>s</name> <init>= <expr><name>a</name> <operator>+</operator> <name>b2</name></expr></init></decl>;</decl_stmt>
+    <return>return <expr><name>h</name> <operator>&gt;=</operator> <name>b</name> <operator>&amp;&amp;</operator> <name>h</name> <operator>&gt;=</operator> <name>a2</name> <operator>&amp;&amp;</operator> <name>w</name> <operator>&gt;=</operator> <name>s</name></expr>;</return>
+}</block></function>
+<function><type><name>bool</name></type> <name>rotatedown</name><parameter_list>()</parameter_list> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>s</name> <init>= <expr><name>a</name> <operator>+</operator> <name>b2</name></expr></init></decl>;</decl_stmt>
+    <return>return <expr><name>h</name> <operator>&gt;=</operator> <name>s</name> <operator>&amp;&amp;</operator> <name>w</name> <operator>&gt;=</operator> <name>a2</name> <operator>&amp;&amp;</operator> <name>w</name> <operator>&gt;=</operator> <name>b</name></expr>;</return>
+}</block></function>
+<function><type><name>bool</name></type> <name>rotateleft</name><parameter_list>()</parameter_list> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>s</name> <init>= <expr><name>b</name> <operator>+</operator> <name>a2</name></expr></init></decl>;</decl_stmt>
+    <return>return <expr><name>w</name> <operator>&gt;=</operator> <name>a</name> <operator>&amp;&amp;</operator> <name>h</name> <operator>&gt;=</operator> <name>s</name> <operator>&amp;&amp;</operator> <name>w</name> <operator>&gt;=</operator> <name>b2</name></expr>;</return>
+}</block></function>
+<function><type><name>bool</name></type> <name>check</name><parameter_list>()</parameter_list><block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>s</name><init>=<expr><name>a</name><operator>+</operator><name>a2</name></expr></init></decl>;</decl_stmt>
+    <return>return <expr><name>w</name><operator>&gt;=</operator><name>b</name> <operator>&amp;&amp;</operator> <name>w</name><operator>&gt;=</operator><name>b2</name> <operator>&amp;&amp;</operator> <name>h</name><operator>&gt;=</operator><name>s</name></expr>;</return>
+}</block></function>
+<function><type><name>bool</name></type> <name>check2</name><parameter_list>()</parameter_list><block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>s</name><init>=<expr><name>b</name><operator>+</operator><name>b2</name></expr></init></decl>;</decl_stmt>
+    <return>return <expr><name>h</name><operator>&gt;=</operator><name>a</name> <operator>&amp;&amp;</operator> <name>h</name><operator>&gt;=</operator><name>a2</name> <operator>&amp;&amp;</operator> <name>w</name><operator>&gt;=</operator><name>s</name></expr>;</return>
+}</block></function>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+<ifndef>#<directive>ifndef</directive> <name>ONLINE_JUDGE</name></ifndef>
+    <expr_stmt><expr><call><name>freopen</name><argument_list>(<argument><expr><literal type="string">"input.txt"</literal></expr></argument>, <argument><expr><literal type="string">"r"</literal></expr></argument>, <argument><expr><name>stdin</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <comment type="line">//freopen("output.txt", "w", stdout);</comment>
+<endif>#<directive>endif</directive></endif>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>w</name> <operator>&gt;&gt;</operator> <name>h</name> <operator>&gt;&gt;</operator> <name>a</name> <operator>&gt;&gt;</operator> <name>b</name> <operator>&gt;&gt;</operator> <name>a2</name> <operator>&gt;&gt;</operator> <name>b2</name></expr>;</expr_stmt>
+    <if>if <condition>(<expr><name>w</name> <operator>&gt;=</operator> <name>a</name> <operator>&amp;&amp;</operator> <name>w</name> <operator>&gt;=</operator> <name>a2</name> <operator>&amp;&amp;</operator> <operator>(</operator><name>b</name> <operator>+</operator> <name>b2</name><operator>)</operator> <operator>&lt;=</operator> <name>h</name></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES\n"</literal></expr>;</expr_stmt></block></then>
+    <elseif>else <if>if <condition>(<expr><name>h</name> <operator>&gt;=</operator> <name>b</name> <operator>&amp;&amp;</operator> <name>h</name> <operator>&gt;=</operator> <name>b2</name> <operator>&amp;&amp;</operator> <name>w</name> <operator>&gt;=</operator> <name>a</name> <operator>+</operator> <name>a2</name></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES\n"</literal></expr>;</expr_stmt></block></then></if></elseif>
+    <elseif>else <if>if <condition>(<expr><call><name>rotateup</name><argument_list>()</argument_list></call> <operator>||</operator> <call><name>rotaterright</name><argument_list>()</argument_list></call> <operator>||</operator> <call><name>rotatedown</name><argument_list>()</argument_list></call> <operator>||</operator> <call><name>rotateleft</name><argument_list>()</argument_list></call> <operator>||</operator> <call><name>check</name><argument_list>()</argument_list></call> <operator>||</operator> <call><name>check2</name><argument_list>()</argument_list></call></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES\n"</literal></expr>;</expr_stmt></block></then></if></elseif>
+    <else>else
+        <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"NO\n"</literal></expr>;</expr_stmt></block></else></if>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

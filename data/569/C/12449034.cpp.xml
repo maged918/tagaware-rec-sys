@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12449034.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stdio.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;math.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cassert&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+ 
+<define>#<directive>define</directive> <macro><name>ll</name></macro> <value>long long int</value></define>
+<define>#<directive>define</directive> <macro><name>vi</name></macro> <value>vector &lt;int&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>vl</name></macro> <value>vector &lt;ll&gt;</value></define> 
+<define>#<directive>define</directive> <macro><name>pii</name></macro> <value>pair&lt;int, int&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>pll</name></macro> <value>pair&lt;ll, ll&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>vpii</name></macro> <value>vector &lt;pii &gt;</value></define>
+<define>#<directive>define</directive> <macro><name>vpll</name></macro> <value>vector &lt;pll &gt;</value></define>
+ 
+ 
+<define>#<directive>define</directive> <macro><name>f</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>s</name></macro> <value>second</value></define>
+ 
+<define>#<directive>define</directive> <macro><name>sd</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>scanf("%d", &amp;n)</value></define>
+<define>#<directive>define</directive> <macro><name>sl</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>scanf("%lld", &amp;n)</value></define>
+<define>#<directive>define</directive> <macro><name>rep</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>j</name></type></parameter>,<parameter><type><name>k</name></type></parameter>)</parameter_list></macro> <value>for(int i=j; i&lt;=k; i++)</value></define>
+<define>#<directive>define</directive> <macro><name>repd</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>j</name></type></parameter>,<parameter><type><name>k</name></type></parameter>)</parameter_list></macro> <value>for(int i=j; i&gt;=k; i--)</value></define>
+ 
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>pob</name></macro> <value>pop_back</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+ 
+<define>#<directive>define</directive> <macro><name>max_size</name></macro> <value>200005</value></define>
+<define>#<directive>define</directive> <macro><name>max_capacity</name></macro> <value>INT_MAX</value></define>
+<define>#<directive>define</directive> <macro><name>max_string_size</name></macro> <value>1000</value></define>
+<define>#<directive>define</directive> <macro><name>max_node_size</name></macro> <value>340</value></define>
+<define>#<directive>define</directive> <macro><name>max_power</name></macro> <value>26</value></define>
+<define>#<directive>define</directive> <macro><name>max_sieve_size</name></macro> <value>1300005</value></define>
+<define>#<directive>define</directive> <macro><name>max_log</name></macro> <value>17</value></define>
+<define>#<directive>define</directive> <macro><name>MOD</name></macro> <value>1000000007L</value></define>
+ 
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<comment type="block">/* This function calculates primes upto the given max_sieve_size. */</comment>
+<decl_stmt><decl><type><name>ll</name></type> <name><name>sieve</name><index>[<expr><name>max_sieve_size</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>ll</name></type> <name><name>suf</name><index>[<expr><name>max_sieve_size</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>vector</name> <argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name></type> <name>primes</name></decl>;</decl_stmt>
+<function><type><name>void</name></type> <name>calc_sieve</name><parameter_list>()</parameter_list>
+<block>{
+	<expr_stmt><expr><name><name>sieve</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <name><name>sieve</name><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt>
+	<expr_stmt><expr><name><name>suf</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <name><name>suf</name><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+ 
+	<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">2</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>max_sieve_size</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+	<block>{
+		<expr_stmt><expr><name><name>suf</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name><name>suf</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt>
+		<if>if<condition>(<expr><name><name>sieve</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+		<block>{
+			<expr_stmt><expr><name><name>suf</name><index>[<expr><name>i</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+			<expr_stmt><expr><call><name><name>primes</name><operator>.</operator><name>pb</name></name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+			<for>for<control>(<init><decl><type><name>ll</name></type> <name>j</name><init>=<expr><name>i</name></expr></init></decl>;</init> <condition><expr><name>j</name><operator>&lt;</operator><name>max_sieve_size</name></expr>;</condition> <incr><expr><name>j</name><operator>=</operator><name>j</name><operator>+</operator><name>i</name></expr></incr>)</control>
+			<block>{
+				<expr_stmt><expr><name><name>sieve</name><index>[<expr><name>j</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+			}</block></for>
+		}</block></then></if>
+	}</block></for>
+}</block></function>
+
+<decl_stmt><decl><type><name>ll</name></type> <name><name>suf2</name><index>[<expr><name>max_sieve_size</name></expr>]</index></name></decl>;</decl_stmt>
+<function><type><name>void</name></type> <name>palindromic</name><parameter_list>()</parameter_list> <block>{
+	<expr_stmt><expr><name><name>suf2</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+	<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;=</operator><literal type="number">1300000</literal></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+
+		<expr_stmt><expr><name><name>suf2</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name><name>suf2</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt>
+		<decl_stmt><decl><type><name>ll</name></type> <name>j</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>k</name> <init>= <expr><name>i</name></expr></init></decl>;</decl_stmt>
+		<while>while<condition>(<expr><name>k</name></expr>)</condition><block>{
+			<expr_stmt><expr><name>j</name> <operator>=</operator> <name>j</name><operator>*</operator><literal type="number">10</literal> <operator>+</operator> <name>k</name><operator>%</operator><literal type="number">10</literal></expr>;</expr_stmt>
+			<expr_stmt><expr><name>k</name> <operator>=</operator> <name>k</name><operator>/</operator><literal type="number">10</literal></expr>;</expr_stmt>
+		}</block></while>
+
+		<if>if<condition>(<expr><name>j</name><operator>==</operator><name>i</name></expr>)</condition><then>
+			<block type="pseudo"><expr_stmt><expr><name><name>suf2</name><index>[<expr><name>i</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+	}</block></for>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+	<expr_stmt><expr><call><name>calc_sieve</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name>palindromic</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+
+	<decl_stmt><decl><type><name>ll</name></type> <name>p</name></decl>, <decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>p</name><operator>&gt;&gt;</operator><name>q</name></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>ll</name></type> <name>ans</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+	<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;=</operator><literal type="number">1300000</literal></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+		<if>if<condition>(<expr><name>q</name><operator>*</operator><name><name>suf</name><index>[<expr><name>i</name></expr>]</index></name><operator>&lt;=</operator><name>p</name><operator>*</operator><name><name>suf2</name><index>[<expr><name>i</name></expr>]</index></name></expr>)</condition><then>
+			<block type="pseudo"><expr_stmt><expr><name>ans</name> <operator>=</operator> <name>i</name></expr>;</expr_stmt></block></then></if>
+	}</block></for>
+
+	<expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>ans</name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

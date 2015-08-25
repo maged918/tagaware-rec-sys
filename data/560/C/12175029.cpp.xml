@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12175029.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+
+<comment type="line">//~        Author : Sarvesh Mahajan                             </comment>
+<comment type="line">//               IIIT,Hyderabad                                   </comment>
+<comment type="line">//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</comment>
+<ifndef>#<directive>ifndef</directive> <name>ONLINE_JUDGE</name></ifndef>
+<define>#<directive>define</directive> <macro><name>DEBUG</name></macro></define>
+<endif>#<directive>endif</directive></endif>
+
+<include>#<directive>include</directive><file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>clr</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>x.clear()</value></define>
+<define>#<directive>define</directive> <macro><name>For</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(i=a;i&lt;b;i++)</value></define>
+<define>#<directive>define</directive> <macro><name>loop</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(i=0;i&lt;b;i++)</value></define>
+<define>#<directive>define</directive> <macro><name>Loop</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(i=1;i&lt;=b;i++)</value></define>
+<define>#<directive>define</directive> <macro><name>pi</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>cout&lt;&lt;n&lt;&lt;' '</value></define>
+<define>#<directive>define</directive> <macro><name>si</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>cin&gt;&gt;n</value></define>
+<define>#<directive>define</directive> <macro><name>int</name></macro> <value>long long</value></define> 
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>MOD</name><init>=<expr><literal type="number">1e9</literal><operator>+</operator><literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>PII</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>PII</name></expr></argument>&gt;</argument_list></name></type> <name>VPII</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>VI</name>;</typedef>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>LL</name>;</typedef>
+<define>#<directive>define</directive> <macro><name>F</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>S</name></macro> <value>second</value></define>
+<define>#<directive>define</directive> <macro><name>sz</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>(int) x.size()</value></define>
+<define>#<directive>define</directive> <macro><name>pLL</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>cout&lt;&lt;x&lt;&lt;' '</value></define>
+<define>#<directive>define</directive> <macro><name>fill</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>c</name></type></parameter>)</parameter_list></macro> <value>memset(x,c,sizeof(x))</value></define>
+<define>#<directive>define</directive> <macro><name>LET</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>__typeof(a) x(a)</value></define>
+<define>#<directive>define</directive> <macro><name>IFOR</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(LET(i,a);i!=(b);++i)</value></define>
+<define>#<directive>define</directive> <macro><name>EACH</name><parameter_list>(<parameter><type><name>it</name></type></parameter>,<parameter><type><name>v</name></type></parameter>)</parameter_list></macro> <value>IFOR(it,v.begin(),v.end())</value></define>
+<ifdef>#<directive>ifdef</directive> <name>DEBUG</name></ifdef>
+<define>#<directive>define</directive> <macro><name>DB</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro>              <value>cout&lt;&lt;__LINE__&lt;&lt;" :: "&lt;&lt;#x&lt;&lt; ": "&lt;&lt;x&lt;&lt;endl;</value></define>
+<define>#<directive>define</directive> <macro><name>DB2</name><parameter_list>(<parameter><type><name>x</name></type></parameter>, <parameter><type><name>y</name></type></parameter>)</parameter_list></macro>          <value>cout&lt;&lt;__LINE__&lt;&lt;" :: "&lt;&lt;#x&lt;&lt; ": "&lt;&lt;x&lt;&lt;" | "&lt;&lt;#y&lt;&lt; ": "&lt;&lt;y&lt;&lt;endl;</value></define>
+<define>#<directive>define</directive> <macro><name>DB3</name><parameter_list>(<parameter><type><name>x</name></type></parameter>, <parameter><type><name>y</name></type></parameter>, <parameter><type><name>z</name></type></parameter>)</parameter_list></macro>       <value>cout&lt;&lt;__LINE__&lt;&lt;" :: "&lt;&lt;#x&lt;&lt; ": "&lt;&lt;x&lt;&lt;" | "&lt;&lt;#y&lt;&lt; ": "&lt;&lt;y&lt;&lt;" | "&lt;&lt;#z&lt;&lt;": "&lt;&lt;z&lt;&lt;endl;</value></define>
+<else>#<directive>else</directive></else>
+<define>#<directive>define</directive> <macro><name>DB</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro></define>
+<define>#<directive>define</directive> <macro><name>DB2</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>y</name></type></parameter>)</parameter_list></macro></define>
+<define>#<directive>define</directive> <macro><name>DB3</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>y</name></type></parameter>,<parameter><type><name>z</name></type></parameter>)</parameter_list></macro></define>
+<endif>#<directive>endif</directive></endif>
+
+<function><type><name>int</name></type> <name>sq</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>x</name></decl></parameter>)</parameter_list>
+<block>{
+	<return>return <expr><name>x</name><operator>*</operator><name>x</name></expr>;</return>
+}</block></function>
+
+<decl_stmt><decl><type><name>int</name></type> <name><name>a</name><index>[<expr><literal type="number">10</literal></expr>]</index></name></decl>;</decl_stmt>
+
+
+<undef>#<directive>undef</directive> <name>int</name></undef>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+<define>#<directive>define</directive> <macro><name>int</name></macro> <value>long long</value></define>
+<expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>t</name></decl>,<decl><type ref="prev"/><name>m</name></decl>,<decl><type ref="prev"/><name>l</name></decl>,<decl><type ref="prev"/><name>k</name></decl>,<decl><type ref="prev"/><name>ans</name></decl>,<decl><type ref="prev"/><name>i</name></decl>,<decl><type ref="prev"/><name>j</name></decl>,<decl><type ref="prev"/><name>res</name><init>=<expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name>fl</name></decl>;</decl_stmt>
+<expr_stmt><expr><name>t</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+<comment type="line">//cin&gt;&gt;(t);</comment>
+<while>while<condition>(<expr><name>t</name><operator>--</operator></expr>)</condition>
+<block>{
+	<macro><name>loop</name><argument_list>(<argument>i</argument>,<argument><literal type="number">6</literal></argument>)</argument_list></macro>
+		<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>pp</name><init>=<expr><call><name>sq</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>+</operator><name><name>a</name><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>+</operator><name><name>a</name><index>[<expr><literal type="number">2</literal></expr>]</index></name></expr></argument>)</argument_list></call><operator>-</operator><call><name>sq</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>)</argument_list></call><operator>-</operator><call><name>sq</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><literal type="number">2</literal></expr>]</index></name></expr></argument>)</argument_list></call><operator>-</operator><call><name>sq</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><literal type="number">4</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+	<expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>pp</name><operator>&lt;&lt;</operator><literal type="char">'\n'</literal></expr>;</expr_stmt>
+
+}</block></while>
+<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

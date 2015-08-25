@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12359982.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<define>#<directive>define</directive> <macro><name>maxN</name></macro> <value>long(1e6+100)</value></define>
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name>unsigned</name> <name>long</name> <name>long</name></type> <name>ull</name>;</typedef>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>long</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>i</name></decl>,<decl><type ref="prev"/><name>res</name></decl>,<decl><type ref="prev"/><name>tmp</name></decl>,<decl><type ref="prev"/><name><name>q</name><index>[<expr><name>maxN</name></expr>]</index><index>[<expr><literal type="number">3</literal></expr>]</index></name></decl>,<decl><type ref="prev"/><name><name>f</name><index>[<expr><name>maxN</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>string</name></type> <name>c</name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<comment type="line">//freopen("B.inp","r",stdin);</comment>
+	<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%ld"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<for>for <control>(<init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init> <condition><expr><name>i</name><operator>&lt;=</operator><name>n</name></expr>;</condition> <incr><expr><operator>++</operator><name>i</name></expr></incr>)</control>
+	<block>{
+		<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>c</name></expr>;</expr_stmt>
+		<if>if <condition>(<expr><name><name>c</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>==</operator><literal type="char">'-'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name><name>q</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then> <else>else <block type="pseudo"><expr_stmt><expr><name><name>q</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt></block></else></if>
+		<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%ld"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name><name>q</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><literal type="number">2</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<if>if <condition>(<expr><name>c</name><operator>==</operator><literal type="string">"-"</literal> <operator>&amp;&amp;</operator> <name><name>f</name><index>[<expr><name><name>q</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><literal type="number">2</literal></expr>]</index></name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+		<block>{
+			<expr_stmt><expr><name>tmp</name><operator>++</operator></expr>;</expr_stmt>
+			<expr_stmt><expr><name>res</name><operator>=</operator><call><name>max</name><argument_list>(<argument><expr><name>res</name></expr></argument>,<argument><expr><name>tmp</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		}</block></then> <else>else <block type="pseudo"><expr_stmt><expr><name><name>f</name><index>[<expr><name><name>q</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><literal type="number">2</literal></expr>]</index></name></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt></block></else></if>
+	}</block></for>
+	
+	<for>for <control>(<init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init> <condition><expr><name>i</name><operator>&lt;=</operator><name>n</name></expr>;</condition> <incr><expr><operator>++</operator><name>i</name></expr></incr>)</control>
+	<block>{
+		<if>if <condition>(<expr><name><name>q</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then>
+		<block>{
+			<expr_stmt><expr><name>tmp</name><operator>--</operator></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>f</name><index>[<expr><name><name>q</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><literal type="number">2</literal></expr>]</index></name></expr>]</index></name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+		}</block></then>
+		<else>else 
+		<block>{
+			<expr_stmt><expr><name>tmp</name><operator>++</operator></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>f</name><index>[<expr><name><name>q</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><literal type="number">2</literal></expr>]</index></name></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+		}</block></else></if>
+		<expr_stmt><expr><name>res</name><operator>=</operator><call><name>max</name><argument_list>(<argument><expr><name>res</name></expr></argument>,<argument><expr><name>tmp</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	}</block></for>
+	<expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%ld"</literal></expr></argument>,<argument><expr><name>res</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

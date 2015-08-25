@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12255578.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<typedef>typedef  <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<define>#<directive>define</directive> <macro><name>read</name><parameter_list>()</parameter_list></macro> <value>freopen("in.txt","r",stdin)</value></define>
+<define>#<directive>define</directive> <macro><name>arrsize</name></macro> <value>(ll)1e5+1</value></define>
+<define>#<directive>define</directive> <macro><name>vul</name><parameter_list>()</parameter_list></macro>  <value>prllf("impossible\n");</value></define>
+
+<decl_stmt><decl><type><name>ll</name></type> <name><name>arr</name><index>[<expr><name>arrsize</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>ll</name></type> <name><name>total</name><index>[<expr><operator>(</operator><name>int</name><operator>)</operator><literal type="number">1e6</literal><operator>+</operator><literal type="number">1</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>ll</name></type> <name><name>leftt</name><index>[<expr><operator>(</operator><name>int</name><operator>)</operator><literal type="number">1e6</literal><operator>+</operator><literal type="number">1</literal></expr>]</index></name></decl> , <decl><type ref="prev"/><name><name>rightt</name><index>[<expr><operator>(</operator><name>int</name><operator>)</operator><literal type="number">1e6</literal><operator>+</operator><literal type="number">1</literal></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl> ;</decl_stmt>
+    <while>while<condition>(<expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>)</condition>
+    <block>{
+        <expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>arr</name></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><sizeof>sizeof <name>arr</name></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>total</name></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><sizeof>sizeof <name>total</name></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>rightt</name></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><sizeof>sizeof <name>rightt</name></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>leftt</name></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><sizeof>sizeof <name>leftt</name></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <decl_stmt><decl><type><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name></type> <name>v</name></decl>;</decl_stmt>
+
+        <for>for<control>( <init><decl><type><name>int</name></type> <name>i</name> <init>=<expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;=</operator><name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block>{
+            <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+            <expr_stmt><expr><call><name><name>v</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+            <expr_stmt><expr><name><name>total</name><index>[<expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+
+            <if>if<condition>(<expr><name><name>leftt</name><index>[<expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><name><name>leftt</name><index>[<expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>=</operator><name>i</name></expr>;</expr_stmt></block></then></if>
+            <expr_stmt><expr><name><name>rightt</name><index>[<expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>=</operator><name>i</name></expr>;</expr_stmt>
+        }</block></for>
+        <decl_stmt><decl><type><name>ll</name></type> <name>maxi</name> <init>= <expr><name>INT_MIN</name></expr></init></decl>, <decl><type ref="prev"/><name>smallx</name><init>=<expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>smally</name><init>=<expr><name>n</name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name> <operator>::</operator><name>iterator</name></name></type> <name>it</name></decl>;</decl_stmt>
+        <for>for<control>(  <init><expr><name>it</name> <operator>=</operator><call><name><name>v</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr>;</init> <condition><expr><name>it</name><operator>!=</operator><call><name><name>v</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>it</name><operator>++</operator></expr></incr>)</control>
+        <block>{
+            <if>if<condition>( <expr><name>maxi</name><operator>&lt;=</operator> <name><name>total</name><index>[<expr><operator>*</operator><name>it</name></expr>]</index></name></expr>)</condition><then>
+            <block>{
+                <expr_stmt><expr><name>maxi</name> <operator>=</operator> <name><name>total</name><index>[<expr><operator>*</operator><name>it</name></expr>]</index></name></expr>;</expr_stmt>
+            }</block></then></if>
+        }</block></for>
+        <for>for<control>(  <init><expr><name>it</name> <operator>=</operator><call><name><name>v</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr>;</init> <condition><expr><name>it</name><operator>!=</operator><call><name><name>v</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>it</name><operator>++</operator></expr></incr>)</control>
+        <block>{
+            <if>if<condition>(<expr><name>maxi</name><operator>==</operator><name><name>total</name><index>[<expr><operator>*</operator><name>it</name></expr>]</index></name></expr>)</condition><then>
+            <block>{
+                <decl_stmt><decl><type><name>ll</name></type> <name>presentdif</name> <init>= <expr><name><name>rightt</name><index>[<expr><operator>*</operator><name>it</name></expr>]</index></name> <operator>-</operator> <name><name>leftt</name><index>[<expr><operator>*</operator><name>it</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+                <comment type="line">//cout&lt;&lt;rightt[*it]&lt;&lt;ends&lt;&lt;leftt[*it]&lt;&lt;ends&lt;&lt;*it&lt;&lt;endl;</comment>
+                <if>if<condition>(<expr><name>presentdif</name><operator>&lt;</operator><operator>(</operator><name>smally</name><operator>-</operator><name>smallx</name><operator>)</operator></expr>)</condition><then>
+                <block>{
+                    <expr_stmt><expr><name>smallx</name> <operator>=</operator> <name><name>leftt</name><index>[<expr><operator>*</operator><name>it</name></expr>]</index></name></expr>;</expr_stmt>
+                    <expr_stmt><expr><name>smally</name> <operator>=</operator> <name><name>rightt</name><index>[<expr><operator>*</operator><name>it</name></expr>]</index></name></expr>;</expr_stmt>
+                    <comment type="line">//cout&lt;&lt;smallx&lt;&lt;ends&lt;&lt;smally&lt;&lt;endl;</comment>
+                }</block></then></if>
+            }</block></then></if>
+        }</block></for>
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>smallx</name><operator>&lt;&lt;</operator><literal type="string">" "</literal><operator>&lt;&lt;</operator><name>smally</name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+
+    }</block></while>
+
+}</block></function>
+</unit>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12536670.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pii</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>, <argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name></type> <name>pll</name>;</typedef>
+<typedef>typedef <type><name>unsigned</name> <name>long</name> <name>long</name></type> <name>ull</name>;</typedef>
+<define>#<directive>define</directive> <macro><name>RI</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>scanf("%d",&amp;x)</value></define>
+<define>#<directive>define</directive> <macro><name>RII</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>y</name></type></parameter>)</parameter_list></macro> <value>scanf("%d%d",&amp;x,&amp;y)</value></define>
+<define>#<directive>define</directive> <macro><name>DRI</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>int x;RI(x)</value></define>
+<define>#<directive>define</directive> <macro><name>DRII</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>y</name></type></parameter>)</parameter_list></macro> <value>int x,y;RII(x,y)</value></define>
+<define>#<directive>define</directive> <macro><name>PI</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>printf("%d\n",x)</value></define>
+<define>#<directive>define</directive> <macro><name>PIS</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>printf("%d ",x)</value></define>
+<define>#<directive>define</directive> <macro><name>sf</name></macro> <value>scanf</value></define>
+<define>#<directive>define</directive> <macro><name>pf</name></macro> <value>printf</value></define>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>F</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>S</name></macro> <value>second</value></define>
+<define>#<directive>define</directive> <macro><name>all</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>a.begin(),a.end()</value></define>
+<define>#<directive>define</directive> <macro><name>min3</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>,<parameter><type><name>c</name></type></parameter>)</parameter_list></macro> <value>min(a, min(b,c))</value></define>
+<define>#<directive>define</directive> <macro><name>max3</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>,<parameter><type><name>c</name></type></parameter>)</parameter_list></macro> <value>max(a, max(b,c))</value></define>
+<define>#<directive>define</directive> <macro><name>sz</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>((int)a.size())</value></define>
+<define>#<directive>define</directive> <macro><name>clr</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>memset(x, a, sizeof x)</value></define>
+<define>#<directive>define</directive> <macro><name>REP</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for(int i=0; i&lt;n; ++i)</value></define>
+<define>#<directive>define</directive> <macro><name>rep</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(int i=a; i&lt;b; ++i)</value></define>
+<define>#<directive>define</directive> <macro><name>repp</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(int i=a ; i&gt;=b ; --i)</value></define>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>MAX</name><init>=<expr><literal type="number">123456789</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>inf</name><init>=<expr><literal type="number">123456789</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>double</name></type> <name>EPS</name> <init>= <expr><literal type="number">1e-10</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>double</name></type> <name>PI</name> <init>= <expr><literal type="number">2</literal><operator>*</operator><call><name>asin</name><argument_list>(<argument><expr><literal type="number">1.0</literal></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ll</name></type> <name>mod</name><init>=<expr><literal type="number">1e9</literal><operator>+</operator><literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+<function><specifier>inline</specifier> <type><name>int</name></type> <name>double_cmp</name><parameter_list>(<parameter><decl><type><name>double</name></type> <name>x</name></decl></parameter>, <parameter><decl><type><name>double</name></type> <name>y</name> <init>= <expr><literal type="number">0</literal></expr></init></decl></parameter>, <parameter><decl><type><name>double</name></type> <name>tol</name> <init>= <expr><name>EPS</name></expr></init></decl></parameter>)</parameter_list><block>{<return>return <expr><ternary><condition><expr><operator>(</operator><name>x</name> <operator>&lt;=</operator> <name>y</name> <operator>+</operator> <name>tol</name><operator>)</operator></expr> ?</condition><then> <expr><ternary><condition><expr><operator>(</operator><name>x</name> <operator>+</operator> <name>tol</name> <operator>&lt;</operator> <name>y</name><operator>)</operator></expr> ?</condition><then> <expr><operator>-</operator><literal type="number">1</literal></expr> </then><else>: <expr><literal type="number">0</literal></expr></else></ternary></expr> </then><else>: <expr><literal type="number">1</literal></expr></else></ternary></expr>;</return>}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> 
+<block>{
+	<expr_stmt><expr><call><name>DRII</name><argument_list>(<argument><expr><name>n</name></expr></argument>, <argument><expr><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	
+	<if>if<condition>(<expr><name>n</name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then><block type="pseudo"><expr_stmt><expr><call><name>PI</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+	<elseif>else <if>if<condition>(<expr><name>a</name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then><block type="pseudo"><expr_stmt><expr><call><name>PI</name><argument_list>(<argument><expr><literal type="number">2</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if></elseif>
+	<elseif>else <if>if<condition>(<expr><name>a</name><operator>==</operator><name>n</name></expr>)</condition><then><block type="pseudo"><expr_stmt><expr><call><name>PI</name><argument_list>(<argument><expr><name>n</name><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if></elseif>
+	<elseif>else <if>if<condition>(<expr><call><name>abs</name><argument_list>(<argument><expr><name>n</name><operator>-</operator><name>a</name></expr></argument>)</argument_list></call><operator>&lt;</operator><name>a</name></expr>)</condition><then><block type="pseudo"><expr_stmt><expr><call><name>PI</name><argument_list>(<argument><expr><name>a</name><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if></elseif>
+	<else>else <block type="pseudo"><expr_stmt><expr><call><name>PI</name><argument_list>(<argument><expr><name>a</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+}</block></function>
+</unit>

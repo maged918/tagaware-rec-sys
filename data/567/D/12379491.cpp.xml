@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12379491.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive><file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<define>#<directive>define</directive> <macro><name>len</name><parameter_list>(<parameter><type><name>val</name></type></parameter>)</parameter_list></macro> <value>static_cast&lt;long long&gt;(val.size())</value></define>
+<define>#<directive>define</directive> <macro><name>rep</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for(int i=0; i&lt;(n); i++)</value></define>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>P</name>;</typedef>
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>ios</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>N</name></decl>, <decl><type ref="prev"/><name>K</name></decl>, <decl><type ref="prev"/><name>A</name></decl>;</decl_stmt> <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>N</name> <operator>&gt;&gt;</operator> <name>K</name> <operator>&gt;&gt;</operator> <name>A</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>M</name></decl>;</decl_stmt> <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>M</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name><name>S</name><index>[<expr><name>M</name></expr>]</index></name></decl>;</decl_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>M</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>S</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt> <expr_stmt><expr><name><name>S</name><index>[<expr><name>i</name></expr>]</index></name><operator>--</operator></expr>;</expr_stmt>
+    }</block></for>
+    <decl_stmt><decl><type><name>int</name></type> <name>low</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>high</name> <init>= <expr><name>M</name><operator>+</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+    <while>while<condition>(<expr><name>high</name><operator>-</operator><name>low</name> <operator>&gt;</operator> <literal type="number">1</literal></expr>)</condition><block>{
+        <comment type="line">//cout &lt;&lt; low &lt;&lt; " " &lt;&lt; high &lt;&lt; "---------" &lt;&lt; endl;</comment>
+        <decl_stmt><decl><type><name>int</name></type> <name>mid</name> <init>= <expr><operator>(</operator><name>low</name><operator>+</operator><name>high</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>bool</name></type> <name>ok</name> <init>= <expr><literal type="boolean">false</literal></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name><name>imos</name><index>[<expr><name>N</name></expr>]</index></name></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>bool</name></type> <name><name>used</name><index>[<expr><name>N</name></expr>]</index></name></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>used</name></expr></argument>, <argument><expr><literal type="boolean">false</literal></expr></argument>, <argument><expr><sizeof>sizeof<argument_list>(<argument><expr><name>used</name></expr></argument>)</argument_list></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>imos</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><sizeof>sizeof<argument_list>(<argument><expr><name>imos</name></expr></argument>)</argument_list></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>mid</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+            <expr_stmt><expr><name><name>used</name><index>[<expr><name><name>S</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>=</operator> <literal type="boolean">true</literal></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>imos</name><index>[<expr><name><name>S</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+        }</block></for>
+        <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+            <expr_stmt><expr><name><name>imos</name><index>[<expr><name>i</name></expr>]</index></name> <operator>+=</operator> <name><name>imos</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt>
+        }</block></for>
+        <decl_stmt><decl><type><name>int</name></type> <name>cnt</name> <init>= <expr><name>K</name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>now</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+        <while>while<condition>(<expr><name>cnt</name> <operator>&gt;</operator> <literal type="number">0</literal> <operator>&amp;&amp;</operator> <name>now</name><operator>+</operator><name>A</name><operator>-</operator><literal type="number">1</literal> <operator>&lt;</operator> <name>N</name></expr>)</condition><block>{
+            <comment type="line">//cout &lt;&lt; cnt &lt;&lt; " " &lt;&lt; now &lt;&lt; endl;</comment>
+            <if>if<condition>(<expr><name><name>used</name><index>[<expr><name>now</name></expr>]</index></name></expr>)</condition><then><block>{
+                <expr_stmt><expr><name>now</name><operator>++</operator></expr>;</expr_stmt>
+                <continue>continue;</continue>
+            }</block></then></if>
+            <if>if<condition>(<expr><name><name>imos</name><index>[<expr><name>now</name></expr>]</index></name> <operator>!=</operator> <name><name>imos</name><index>[<expr><name>now</name><operator>+</operator><name>A</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name></expr>)</condition><then><block>{
+                <expr_stmt><expr><name>now</name><operator>++</operator></expr>;</expr_stmt>
+                <continue>continue;</continue>
+            }</block></then></if>
+            <expr_stmt><expr><name>cnt</name><operator>--</operator></expr>;</expr_stmt>
+            <expr_stmt><expr><name>now</name> <operator>=</operator> <name>now</name><operator>+</operator><name>A</name><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt>
+        }</block></while>
+        <if>if<condition>(<expr><name>cnt</name> <operator>==</operator> <literal type="number">0</literal> <operator>&amp;&amp;</operator> <name>mid</name> <operator>==</operator> <name>M</name></expr>)</condition><then><block>{
+            <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <operator>-</operator><literal type="number">1</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+            <return>return <expr><literal type="number">0</literal></expr>;</return>
+        }</block></then></if>
+        <if>if<condition>(<expr><name>cnt</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>ok</name> <operator>=</operator> <literal type="boolean">true</literal></expr>;</expr_stmt></block></then></if>
+        <if>if<condition>(<expr><name>ok</name></expr>)</condition><then><block>{
+            <expr_stmt><expr><name>low</name> <operator>=</operator> <name>mid</name></expr>;</expr_stmt>
+        }</block></then><else>else<block>{
+            <expr_stmt><expr><name>high</name> <operator>=</operator> <name>mid</name></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></while>
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>low</name><operator>+</operator><literal type="number">1</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+}</block></function>
+</unit>

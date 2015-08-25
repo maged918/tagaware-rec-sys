@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12172376.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive><file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstdio&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>a1</name></decl>,<decl><type ref="prev"/><name>a2</name></decl>,<decl><type ref="prev"/><name>a3</name></decl>,<decl><type ref="prev"/><name>a4</name></decl>,<decl><type ref="prev"/><name>a5</name></decl>,<decl><type ref="prev"/><name>a6</name></decl>;</decl_stmt>
+    <while>while<condition>(<expr><call><name>~<name>scanf</name></name><argument_list>(<argument><expr><literal type="string">"%d %d %d %d %d %d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>a1</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>a2</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>a3</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>a4</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>a5</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>a6</name></expr></argument>)</argument_list></call></expr>)</condition><block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>x1</name><init>=<expr><name>a1</name><operator>+</operator><name>a2</name><operator>+</operator><name>a6</name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>sum</name><init>=<expr><name>x1</name><operator>*</operator><name>x1</name><operator>-</operator><name>a2</name><operator>*</operator><name>a2</name><operator>-</operator><name>a4</name><operator>*</operator><name>a4</name><operator>-</operator><name>a6</name><operator>*</operator><name>a6</name></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>sum</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></while>
+}</block></function></unit>

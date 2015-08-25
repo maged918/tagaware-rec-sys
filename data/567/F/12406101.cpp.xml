@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12406101.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+
+<using>using <name>Int</name> <init>= <type><name>long</name> <name>long</name> <name>unsigned</name></type></init>;</using>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>unsigned</name></type> <name>MAX_POS</name> <init>= <expr><literal type="number">76</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>unsigned</name></type> <name>MAX_CONSTRAINTS</name> <init>= <expr><literal type="number">101</literal></expr></init></decl>;</decl_stmt>
+
+
+<decl_stmt><decl><type><name>unsigned</name></type> <name>n</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>Int</name></type> <name><name>dp</name><index>[<expr><name>MAX_POS</name></expr>]</index><index>[<expr><name>MAX_POS</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>bool</name></type> <name><name>seen</name><index>[<expr><name>MAX_POS</name></expr>]</index><index>[<expr><name>MAX_POS</name></expr>]</index></name></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name><name>std</name><operator>::</operator><name><name>tuple</name><argument_list type="generic">&lt;<argument><expr><name>unsigned</name></expr></argument>,<argument><expr><name><name>std</name><operator>::</operator><name>string</name></name></expr></argument>,<argument><expr><name>unsigned</name></expr></argument>&gt;</argument_list></name></name></type> <name><name>constraints</name><index>[<expr><name>MAX_CONSTRAINTS</name></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>bool</name></type> <name>check_constraints_end</name> <parameter_list>( <parameter><decl><type><name>unsigned</name></type> <name>l</name></decl></parameter> , <parameter><decl><type><name>unsigned</name></type> <name>r</name></decl></parameter> )</parameter_list> <block>{
+    <for>for <control>( <init><expr><name>auto</name><operator>&amp;</operator> <name>c</name> <operator>:</operator> <name>constraints</name></expr></init> )</control> <block>{
+        <decl_stmt><decl><type><name>unsigned</name></type> <name>x</name> <argument_list>{<argument><expr><macro><name>std</name></macro><name><operator>::</operator><name><name>get</name><argument_list type="generic">&lt;<argument><expr><literal type="number">0</literal></expr></argument>&gt;</argument_list></name></name><operator>(</operator><name>c</name><operator>)</operator></expr></argument>}</argument_list></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name>string</name></name></type> <name>s</name> <argument_list>{<argument><expr><macro><name>std</name></macro><name><operator>::</operator><name><name>get</name><argument_list type="generic">&lt;<argument><expr><literal type="number">1</literal></expr></argument>&gt;</argument_list></name></name><operator>(</operator><name>c</name><operator>)</operator></expr></argument>}</argument_list></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>unsigned</name></type> <name>y</name> <argument_list>{<argument><expr><macro><name>std</name></macro><name><operator>::</operator><name><name>get</name><argument_list type="generic">&lt;<argument><expr><literal type="number">2</literal></expr></argument>&gt;</argument_list></name></name><operator>(</operator><name>c</name><operator>)</operator></expr></argument>}</argument_list></decl>;</decl_stmt>
+        
+        <if>if <condition>( <expr><name>y</name> <operator>==</operator> <name>l</name> <operator>||</operator> <name>y</name> <operator>==</operator> <name>r</name></expr> )</condition><then> <block>{
+            <expr_stmt><expr><call><name><name>std</name><operator>::</operator><name>swap</name></name><argument_list>(<argument><expr><name>x</name></expr></argument>, <argument><expr><name>y</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <if>if <condition>( <expr><name><name>s</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>==</operator> <literal type="char">'&lt;'</literal></expr> )</condition><then> <block>{
+                <expr_stmt><expr><name><name>s</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="char">'&gt;'</literal></expr>;</expr_stmt>
+            }</block></then>
+            <elseif>else <if>if <condition>( <expr><name><name>s</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>==</operator> <literal type="char">'&gt;'</literal></expr> )</condition><then> <block>{
+                <expr_stmt><expr><name><name>s</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="char">'&lt;'</literal></expr>;</expr_stmt>
+            }</block></then></if></elseif></if>
+        }</block></then></if>
+
+        <if>if <condition>( <expr><operator>(</operator><name>x</name> <operator>==</operator> <name>l</name> <operator>||</operator> <name>x</name> <operator>==</operator> <name>r</name><operator>)</operator> <operator>&amp;&amp;</operator> <operator>(</operator><name>s</name> <operator>==</operator> <literal type="string">"&lt;"</literal> <operator>||</operator> <name>s</name> <operator>==</operator> <literal type="string">"&gt;"</literal><operator>)</operator> <operator>&amp;&amp;</operator> <operator>(</operator><name>y</name> <operator>==</operator> <name>l</name> <operator>||</operator> <name>y</name> <operator>==</operator> <name>r</name><operator>)</operator></expr> )</condition><then> <block>{
+            <return>return <expr><literal type="boolean">false</literal></expr>;</return>   
+        }</block></then></if>
+    }</block></for>
+
+    <return>return <expr><literal type="boolean">true</literal></expr>;</return>
+}</block></function>
+<function><type><name>bool</name></type> <name>check_constraints</name> <parameter_list>( <parameter><decl><type><name>unsigned</name></type> <name>gt_fr</name></decl></parameter> , <parameter><decl><type><name>unsigned</name></type> <name>gt_to</name></decl></parameter> , <parameter><decl><type><name>unsigned</name></type> <name>l</name></decl></parameter> , <parameter><decl><type><name>unsigned</name></type> <name>r</name></decl></parameter> )</parameter_list> <block>{
+    <for>for <control>( <init><expr><name>auto</name><operator>&amp;</operator> <name>c</name> <operator>:</operator> <name>constraints</name></expr></init> )</control> <block>{
+        <decl_stmt><decl><type><name>unsigned</name></type> <name>x</name> <argument_list>{<argument><expr><macro><name>std</name></macro><name><operator>::</operator><name><name>get</name><argument_list type="generic">&lt;<argument><expr><literal type="number">0</literal></expr></argument>&gt;</argument_list></name></name><operator>(</operator><name>c</name><operator>)</operator></expr></argument>}</argument_list></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name>string</name></name></type> <name>s</name> <argument_list>{<argument><expr><macro><name>std</name></macro><name><operator>::</operator><name><name>get</name><argument_list type="generic">&lt;<argument><expr><literal type="number">1</literal></expr></argument>&gt;</argument_list></name></name><operator>(</operator><name>c</name><operator>)</operator></expr></argument>}</argument_list></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>unsigned</name></type> <name>y</name> <argument_list>{<argument><expr><macro><name>std</name></macro><name><operator>::</operator><name><name>get</name><argument_list type="generic">&lt;<argument><expr><literal type="number">2</literal></expr></argument>&gt;</argument_list></name></name><operator>(</operator><name>c</name><operator>)</operator></expr></argument>}</argument_list></decl>;</decl_stmt>
+        
+        <if>if <condition>( <expr><name>y</name> <operator>==</operator> <name>l</name> <operator>||</operator> <name>y</name> <operator>==</operator> <name>r</name></expr> )</condition><then> <block>{
+            <expr_stmt><expr><call><name><name>std</name><operator>::</operator><name>swap</name></name><argument_list>(<argument><expr><name>x</name></expr></argument>, <argument><expr><name>y</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <if>if <condition>( <expr><name><name>s</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>==</operator> <literal type="char">'&lt;'</literal></expr> )</condition><then> <block>{
+                <expr_stmt><expr><name><name>s</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="char">'&gt;'</literal></expr>;</expr_stmt>
+            }</block></then>
+            <elseif>else <if>if <condition>( <expr><name><name>s</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>==</operator> <literal type="char">'&gt;'</literal></expr> )</condition><then> <block>{
+                <expr_stmt><expr><name><name>s</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="char">'&lt;'</literal></expr>;</expr_stmt>
+            }</block></then></if></elseif></if>
+        }</block></then></if>
+
+        <if>if <condition>( <expr><name>x</name> <operator>==</operator> <name>l</name> <operator>||</operator> <name>x</name> <operator>==</operator> <name>r</name></expr> )</condition><then> <block>{
+            <comment type="line">//std::cerr &lt;&lt; " ** at " &lt;&lt; gt_fr &lt;&lt; " " &lt;&lt; gt_to &lt;&lt; " " &lt;&lt; l &lt;&lt; " " &lt;&lt; r &lt;&lt; " checking " &lt;&lt; x &lt;&lt; " " &lt;&lt; s &lt;&lt; " " &lt;&lt; y &lt;&lt; std::endl;</comment>
+            <if>if <condition>( <expr><name>s</name> <operator>==</operator> <literal type="string">"&lt;"</literal></expr> )</condition><then> <block>{
+                <if>if <condition>( <expr><name><name>y</name> <argument_list type="generic">&lt; <argument><expr><name>gt_fr</name> <operator>||</operator> <name>y</name></expr></argument> &gt;</argument_list></name> <name>gt_to</name></expr> )</condition><then> <block>{
+                    <return>return <expr><literal type="boolean">false</literal></expr>;</return>   
+                }</block></then></if>
+            }</block></then>
+            <elseif>else <if>if <condition>( <expr><name>s</name> <operator>==</operator> <literal type="string">"&lt;="</literal></expr> )</condition><then> <block>{
+                <if>if <condition>( <expr><name>y</name> <operator>&lt;</operator> <call><name><name>std</name><operator>::</operator><name>min</name></name><argument_list>(<argument><expr><name>gt_fr</name></expr></argument>, <argument><expr><name>l</name></expr></argument>)</argument_list></call> <operator>||</operator> <name>y</name> <operator>&gt;</operator> <call><name><name>std</name><operator>::</operator><name>max</name></name><argument_list>(<argument><expr><name>gt_to</name></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr> )</condition><then> <block>{
+                    <return>return <expr><literal type="boolean">false</literal></expr>;</return>
+                }</block></then></if>
+            }</block></then></if></elseif>
+            <elseif>else <if>if <condition>( <expr><name>s</name> <operator>==</operator> <literal type="string">"="</literal></expr> )</condition><then> <block>{
+                <if>if <condition>( <expr><name>y</name> <operator>!=</operator> <name>l</name> <operator>&amp;&amp;</operator> <name>y</name> <operator>!=</operator> <name>r</name></expr> )</condition><then> <block>{
+                    <return>return <expr><literal type="boolean">false</literal></expr>;</return>
+                }</block></then></if>
+            }</block></then></if></elseif>
+            <elseif>else <if>if <condition>( <expr><name>s</name> <operator>==</operator> <literal type="string">"&gt;="</literal></expr> )</condition><then> <block>{
+                <if>if <condition>( <expr><name>y</name> <operator>&gt;=</operator> <name>gt_fr</name> <operator>&amp;&amp;</operator> <name>y</name> <operator>&lt;=</operator> <name>gt_to</name></expr> )</condition><then> <block>{
+                    <return>return <expr><literal type="boolean">false</literal></expr>;</return> 
+                }</block></then></if>
+            }</block></then></if></elseif>
+            <else>else <block>{
+                <if>if <condition>( <expr><name>y</name> <operator>&gt;=</operator> <call><name><name>std</name><operator>::</operator><name>min</name></name><argument_list>(<argument><expr><name>gt_fr</name></expr></argument>, <argument><expr><name>l</name></expr></argument>)</argument_list></call> <operator>&amp;&amp;</operator> <name>y</name> <operator>&lt;=</operator> <call><name><name>std</name><operator>::</operator><name>max</name></name><argument_list>(<argument><expr><name>gt_to</name></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr> )</condition><then> <block>{
+                    <return>return <expr><literal type="boolean">false</literal></expr>;</return>
+                }</block></then></if>
+            }</block></else></if>
+        }</block></then></if>
+    }</block></for>
+
+    <return>return <expr><literal type="boolean">true</literal></expr>;</return>
+}</block></function>
+
+
+<function><type><name>Int</name></type> <name>count</name> <parameter_list>( <parameter><decl><type><name>unsigned</name></type> <name>l_pos</name></decl></parameter> , <parameter><decl><type><name>unsigned</name></type> <name>r_pos</name></decl></parameter> )</parameter_list> <block>{
+    <decl_stmt><decl><type><name>Int</name><modifier>&amp;</modifier></type> <name>answer</name> <init>= <expr><name><name>dp</name><index>[<expr><name>l_pos</name></expr>]</index><index>[<expr><name>r_pos</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+    <if>if <condition>( <expr><name><name>seen</name><index>[<expr><name>l_pos</name></expr>]</index><index>[<expr><name>r_pos</name></expr>]</index></name> <operator>++</operator></expr> )</condition><then> <block>{
+        <return>return <expr><name>answer</name></expr>;</return>
+    }</block></then></if>
+    
+    <if>if <condition>( <expr><name>l_pos</name> <operator>+</operator> <literal type="number">1</literal> <operator>==</operator> <name>r_pos</name></expr> )</condition><then> <block>{
+        <comment type="line">//std::cerr &lt;&lt; "at " &lt;&lt; l_pos &lt;&lt; " " &lt;&lt; r_pos &lt;&lt; " answer = " &lt;&lt; (check_constraints(MAX_POS, MAX_POS, l_pos, r_pos)) &lt;&lt; std::endl;</comment>
+        <return>return <expr><name>answer</name> <operator>=</operator> <operator>(</operator><call><name>check_constraints_end</name><argument_list>(<argument><expr><name>l_pos</name></expr></argument>, <argument><expr><name>r_pos</name></expr></argument>)</argument_list></call><operator>)</operator></expr>;</return>
+    }</block></then></if>
+
+    <expr_stmt><expr><name>answer</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+
+    <comment type="line">// left</comment>
+    <if>if <condition>( <expr><call><name>check_constraints</name><argument_list>(<argument><expr><name>l_pos</name> <operator>+</operator> <literal type="number">2</literal></expr></argument>, <argument><expr><name>r_pos</name></expr></argument>, <argument><expr><name>l_pos</name></expr></argument>, <argument><expr><name>l_pos</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr> )</condition><then> <block>{
+        <comment type="line">//std::cerr &lt;&lt; "left from " &lt;&lt; l_pos &lt;&lt; " " &lt;&lt; r_pos &lt;&lt; " to " &lt;&lt; l_pos + 2 &lt;&lt; " " &lt;&lt; r_pos &lt;&lt; std::endl;</comment>
+        <expr_stmt><expr><name>answer</name> <operator>+=</operator> <call><name>count</name><argument_list>(<argument><expr><name>l_pos</name> <operator>+</operator> <literal type="number">2</literal></expr></argument>, <argument><expr><name>r_pos</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></then></if>
+    <comment type="line">// middle</comment>
+    <if>if <condition>( <expr><call><name>check_constraints</name><argument_list>(<argument><expr><name>l_pos</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><name>r_pos</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><name>l_pos</name></expr></argument>, <argument><expr><name>r_pos</name></expr></argument>)</argument_list></call></expr> )</condition><then> <block>{
+        <comment type="line">//std::cerr &lt;&lt; "middle from " &lt;&lt; l_pos &lt;&lt; " " &lt;&lt; r_pos &lt;&lt; " to " &lt;&lt; l_pos + 1 &lt;&lt; " " &lt;&lt; r_pos - 1 &lt;&lt; std::endl;</comment>
+        <expr_stmt><expr><name>answer</name> <operator>+=</operator> <call><name>count</name><argument_list>(<argument><expr><name>l_pos</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><name>r_pos</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></then></if>
+    <comment type="line">// right</comment>
+    <if>if <condition>( <expr><call><name>check_constraints</name><argument_list>(<argument><expr><name>l_pos</name></expr></argument>, <argument><expr><name>r_pos</name> <operator>-</operator> <literal type="number">2</literal></expr></argument>, <argument><expr><name>r_pos</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><name>r_pos</name></expr></argument>)</argument_list></call></expr> )</condition><then> <block>{
+        <comment type="line">//std::cerr &lt;&lt; "right from " &lt;&lt; l_pos &lt;&lt; " " &lt;&lt; r_pos &lt;&lt; " to " &lt;&lt; l_pos &lt;&lt; " " &lt;&lt; r_pos - 2 &lt;&lt; std::endl;</comment>
+        <expr_stmt><expr><name>answer</name> <operator>+=</operator> <call><name>count</name><argument_list>(<argument><expr><name>l_pos</name></expr></argument>, <argument><expr><name>r_pos</name> <operator>-</operator> <literal type="number">2</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></then></if>
+
+    <comment type="line">//std::cerr &lt;&lt; "at " &lt;&lt; l_pos &lt;&lt; " " &lt;&lt; r_pos &lt;&lt; " answer = " &lt;&lt; answer &lt;&lt; std::endl;</comment>
+    <return>return <expr><name>answer</name></expr>;</return>
+}</block></function>
+
+
+<function><type><name>int</name></type> <name>main</name> <parameter_list>( <parameter><decl><type><name>void</name></type></decl></parameter> )</parameter_list> <block>{
+
+    <expr_stmt><expr><call><name><name>std</name><operator>::</operator><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>std</name><operator>::</operator><name>ios</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name>unsigned</name></type> <name>k</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name><name>std</name><operator>::</operator><name>cin</name></name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>k</name></expr>;</expr_stmt>
+
+    <for>for <control>( <init><decl><type><name>unsigned</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl> ;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>k</name></expr> ;</condition> <incr><expr><operator>++</operator> <name>i</name></expr></incr> )</control> <block>{
+        <decl_stmt><decl><type><name>unsigned</name></type> <name>a</name></decl>;</decl_stmt> <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name>string</name></name></type> <name>s</name></decl>;</decl_stmt> <decl_stmt><decl><type><name>unsigned</name></type> <name>b</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name><name>std</name><operator>::</operator><name>cin</name></name> <operator>&gt;&gt;</operator> <name>a</name> <operator>&gt;&gt;</operator> <name>s</name> <operator>&gt;&gt;</operator> <name>b</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name><name>constraints</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <call><name><name>std</name><operator>::</operator><name>make_tuple</name></name><argument_list>(<argument><expr><call><name><name>std</name><operator>::</operator><name>move</name></name><argument_list>(<argument><expr><name>a</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><call><name><name>std</name><operator>::</operator><name>move</name></name><argument_list>(<argument><expr><name>s</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><call><name><name>std</name><operator>::</operator><name>move</name></name><argument_list>(<argument><expr><name>b</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></for>
+
+    <expr_stmt><expr><name><name>std</name><operator>::</operator><name>cout</name></name> <operator>&lt;&lt;</operator> <call><name>count</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>, <argument><expr><literal type="number">2</literal><operator>*</operator><name>n</name></expr></argument>)</argument_list></call> <operator>&lt;&lt;</operator> <name><name>std</name><operator>::</operator><name>endl</name></name></expr>;</expr_stmt>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

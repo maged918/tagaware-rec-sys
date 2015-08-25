@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12185365.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+
+<define>#<directive>define</directive> <macro><name>FOR</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(int i=(a),_b=(b); i&lt;=_b; i++)</value></define>
+<define>#<directive>define</directive> <macro><name>FORD</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(int i=(a),_b=(b); i&gt;=_b; i--)</value></define>
+<define>#<directive>define</directive> <macro><name>REP</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>for(int i=0,_a=(a); i&lt;_a; i++)</value></define>
+<define>#<directive>define</directive> <macro><name>EACH</name><parameter_list>(<parameter><type><name>it</name></type></parameter>,<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>for(__typeof(a.begin()) it = a.begin(); it != a.end(); ++it)</value></define>
+
+<define>#<directive>define</directive> <macro><name>DEBUG</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>{ cout &lt;&lt; #x &lt;&lt; " = "; cout &lt;&lt; (x) &lt;&lt; endl; }</value></define>
+<define>#<directive>define</directive> <macro><name>PR</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>{ cout &lt;&lt; #a &lt;&lt; " = "; FOR(_,1,n) cout &lt;&lt; a[_] &lt;&lt; ' '; cout &lt;&lt; endl; }</value></define>
+<define>#<directive>define</directive> <macro><name>PR0</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>{ cout &lt;&lt; #a &lt;&lt; " = "; REP(_,n) cout &lt;&lt; a[_] &lt;&lt; ' '; cout &lt;&lt; endl; }</value></define>
+
+<define>#<directive>define</directive> <macro><name>sqr</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>((x) * (x))</value></define>
+<define>#<directive>define</directive> <macro><name>ll</name></macro> <value>long long</value></define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    <expr_stmt><expr><call><name><name>ios</name> <operator>::</operator> <name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="boolean">false</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+    <while>while <condition>(<expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>)</condition> <block>{
+        <decl_stmt><decl><type><name>bool</name></type> <name>good</name> <init>= <expr><literal type="boolean">false</literal></expr></init></decl>;</decl_stmt>
+        <macro><name>FOR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">1</literal></argument>,<argument>n</argument>)</argument_list></macro> <block>{
+            <decl_stmt><decl><type><name>int</name></type> <name>a</name></decl>;</decl_stmt> <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>a</name></expr>;</expr_stmt>
+            <if>if <condition>(<expr><name>a</name> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>good</name> <operator>=</operator> <literal type="boolean">true</literal></expr>;</expr_stmt></block></then></if>
+        }</block>
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <operator>(</operator><ternary><condition><expr><name>good</name></expr> ?</condition><then> <expr><operator>-</operator><literal type="number">1</literal></expr> </then><else>: <expr><literal type="number">1</literal></expr></else></ternary><operator>)</operator> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+    }</block></while>
+}</block></function>
+</unit>

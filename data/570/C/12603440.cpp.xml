@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12603440.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<define>#<directive>define</directive> <macro><name>all</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>x.begin(), x.end()</value></define>
+<define>#<directive>define</directive> <macro><name>f</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(int i = (a); i &lt;= (b); i++)</value></define>
+<define>#<directive>define</directive> <macro><name>fd</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(int i = (a); i &gt;= (b); i--)</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>faster_io</name><parameter_list>()</parameter_list></macro> <value>ios_base::sync_with_stdio(false)</value></define>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>pii</name></macro> <value>pair&lt;int,int&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>SZ</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>((int)x.size())</value></define>
+<define>#<directive>define</directive> <macro><name>vii</name></macro> <value>vector&lt;pair&lt;int,int&gt;&gt;</value></define>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>INF</name> <init>= <expr><literal type="number">1000000002</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ll</name></type> <name>INFLL</name> <init>= <expr><literal type="number">100000000000000000ll</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ll</name></type> <name>MOD</name> <init>= <expr><literal type="number">1000000007</literal></expr></init></decl>;</decl_stmt>
+
+<comment type="line">// ----------------------------------------------------------------------------------------------------------</comment>
+
+<decl_stmt><decl><type><name>int</name></type> <name>N</name></decl>, <decl><type ref="prev"/><name>Q</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>string</name></type> <name>S</name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>N</name> <operator>&gt;&gt;</operator> <name>Q</name> <operator>&gt;&gt;</operator> <name>S</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>ans</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <macro><name>f</name><argument_list>(<argument>i</argument>,<argument><literal type="number">1</literal></argument>,<argument>N-<literal type="number">1</literal></argument>)</argument_list></macro> <if>if<condition>(<expr><name><name>S</name><index>[<expr><name>i</name></expr>]</index></name> <operator>==</operator> <literal type="char">'.'</literal> <operator>&amp;&amp;</operator> <name><name>S</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name> <operator>==</operator> <literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>ans</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+    <while>while<condition>(<expr><name>Q</name><operator>--</operator></expr>)</condition>
+    <block>{
+        <decl_stmt><decl><type><name>char</name></type> <name>v</name></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>p</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>p</name> <operator>&gt;&gt;</operator> <name>v</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>p</name><operator>--</operator></expr>;</expr_stmt>
+        <if>if<condition>(<expr><operator>(</operator><name><name>S</name><index>[<expr><name>p</name></expr>]</index></name> <operator>==</operator> <literal type="char">'.'</literal> <operator>&amp;&amp;</operator> <name>v</name> <operator>!=</operator> <literal type="char">'.'</literal><operator>)</operator> <operator>||</operator> <operator>(</operator><name><name>S</name><index>[<expr><name>p</name></expr>]</index></name> <operator>!=</operator> <literal type="char">'.'</literal> <operator>&amp;&amp;</operator> <name>v</name> <operator>==</operator> <literal type="char">'.'</literal><operator>)</operator></expr>)</condition><then>
+        <block>{
+            <if>if<condition>(<expr><name>v</name> <operator>==</operator> <literal type="char">'.'</literal></expr>)</condition><then>
+            <block>{
+                <if>if<condition>(<expr><name>p</name><operator>&gt;</operator><literal type="number">0</literal> <operator>&amp;&amp;</operator> <name><name>S</name><index>[<expr><name>p</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name> <operator>==</operator> <literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>ans</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+                <if>if<condition>(<expr><name>p</name><operator>&lt;</operator><name>N</name> <operator>&amp;&amp;</operator> <name><name>S</name><index>[<expr><name>p</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name> <operator>==</operator> <literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>ans</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+            }</block></then>
+            <else>else
+            <block>{
+                <if>if<condition>(<expr><name>p</name><operator>&gt;</operator><literal type="number">0</literal> <operator>&amp;&amp;</operator> <name><name>S</name><index>[<expr><name>p</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name> <operator>==</operator> <literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>ans</name><operator>--</operator></expr>;</expr_stmt></block></then></if>
+                <if>if<condition>(<expr><name>p</name><operator>&lt;</operator><name>N</name> <operator>&amp;&amp;</operator> <name><name>S</name><index>[<expr><name>p</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name> <operator>==</operator> <literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>ans</name><operator>--</operator></expr>;</expr_stmt></block></then></if>
+            }</block></else></if>
+        }</block></then></if>
+
+        <expr_stmt><expr><name><name>S</name><index>[<expr><name>p</name></expr>]</index></name> <operator>=</operator> <name>v</name></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>ans</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></while>
+}</block></function>
+</unit>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12441887.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;fstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;sstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cctype&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;list&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;numeric&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>clr</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>memset(a,0,sizeof(a))</value></define>
+<define>#<directive>define</directive> <macro><name>full</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>memset(a,63,sizeof(a))</value></define>
+<define>#<directive>define</directive> <macro><name>pi</name></macro> <value>2*acos(0.0)</value></define>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+     <decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>,<decl><type ref="prev"/><name>j</name></decl>,<decl><type ref="prev"/><name>k</name></decl>,<decl><type ref="prev"/><name>l</name></decl>,<decl><type ref="prev"/><name>m</name></decl>,<decl><type ref="prev"/><name>n</name></decl>,<decl><type ref="prev"/><name>ans</name></decl>,<decl><type ref="prev"/><name>sum</name></decl>,<decl><type ref="prev"/><name>t</name></decl>,<decl><type ref="prev"/><name>s</name></decl>,<decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+     <while>while<condition>(<expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d%d%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>t</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>s</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>q</name></expr></argument>)</argument_list></call><operator>==</operator><literal type="number">3</literal></expr>)</condition>
+     <block>{
+         <expr_stmt><expr><name>i</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+         <expr_stmt><expr><name>q</name><operator>--</operator></expr>;</expr_stmt>
+         <expr_stmt><expr><name>sum</name><operator>=</operator><name>s</name></expr>;</expr_stmt>
+         <while>while<condition>(<expr><name>sum</name><operator>&lt;</operator><name>t</name></expr>)</condition>
+         <block>{
+             <expr_stmt><expr><name>sum</name><operator>=</operator><name>sum</name><operator>+</operator><operator>(</operator><name>sum</name><operator>*</operator><name>q</name><operator>)</operator></expr>;</expr_stmt>
+             <expr_stmt><expr><name>i</name><operator>++</operator></expr>;</expr_stmt>
+         }</block></while>
+         <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+     }</block></while>
+     <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

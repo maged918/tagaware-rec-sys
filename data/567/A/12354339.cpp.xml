@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12354339.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cctype&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;list&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;sstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;bitset&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;utility&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;numeric&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;ctime&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iterator&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;limits&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;fstream&gt;</file></include>
+
+<define>#<directive>define</directive> <macro><name>F</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>for( int i = (b); i &lt; (a); i++ )</value></define>
+<define>#<directive>define</directive> <macro><name>Fs</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>sz</name></type></parameter>)</parameter_list></macro> <value>for( size_t i = 0; i &lt; sz.size (); i++ )</value></define>
+<define>#<directive>define</directive> <macro><name>Fe</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>for(typeof (x.begin()) i = x.begin(); i != x.end (); i++)</value></define>
+<define>#<directive>define</directive> <macro><name>Set</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>s</name></type></parameter>)</parameter_list></macro> <value>memset(a, s, sizeof (a))</value></define>
+<define>#<directive>define</directive> <macro><name>Max</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>)</parameter_list></macro>  <value>(a &lt; b ? b : a)</value></define>
+<define>#<directive>define</directive> <macro><name>Min</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>)</parameter_list></macro>  <value>(a &gt; b ? b : a)</value></define>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pii</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>vi</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>string</name></expr></argument>&gt;</argument_list></name></type> <name>vs</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>pii</name></expr></argument>&gt;</argument_list></name></type> <name>vii</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>vi</name></expr></argument>&gt;</argument_list></name></type> <name>vvi</name>;</typedef>
+<typedef>typedef <type><name><name>map</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>mpii</name>;</typedef>
+<typedef>typedef <type><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>seti</name>;</typedef>
+
+<decl_stmt><decl><type><name>int</name></type> <name><name>arr</name> <index>[<expr><literal type="number">100005</literal></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+    <comment type="line">// freopen("input.txt", "r", stdin);</comment>
+    <comment type="line">// freopen("output.txt", "w+", stdout);</comment>
+
+    <comment type="line">//STARTS</comment>
+    <decl_stmt><decl><type><name>int</name></type> <name>size</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>size</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <macro><name>F</name><argument_list>(<argument>i</argument>, <argument><literal type="number">0</literal></argument>, <argument>size</argument>)</argument_list></macro><block>{
+        <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block>
+    <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d %d\n"</literal></expr></argument>, <argument><expr><name><name>arr</name><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>-</operator> <name><name>arr</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>, <argument><expr><name><name>arr</name><index>[<expr><name>size</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name> <operator>-</operator> <name><name>arr</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <macro><name>F</name><argument_list>(<argument>i</argument>, <argument><literal type="number">1</literal></argument>, <argument>size-<literal type="number">1</literal></argument>)</argument_list></macro><block>{
+        <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d %d\n"</literal></expr></argument>, <argument><expr><call><name>min</name><argument_list>(<argument><expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <name><name>arr</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name></expr></argument>, <argument><expr><name><name>arr</name><index>[<expr><name>i</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name> <operator>-</operator> <name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><call><name>max</name><argument_list>(<argument><expr><name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <name><name>arr</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>, <argument><expr><name><name>arr</name><index>[<expr><name>size</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name> <operator>-</operator> <name><name>arr</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block>
+    <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d %d\n"</literal></expr></argument>, <argument><expr><name><name>arr</name><index>[<expr><name>size</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name> <operator>-</operator> <name><name>arr</name><index>[<expr><name>size</name><operator>-</operator><literal type="number">2</literal></expr>]</index></name></expr></argument>, <argument><expr><name><name>arr</name><index>[<expr><name>size</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name> <operator>-</operator> <name><name>arr</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <comment type="line">//END</comment>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

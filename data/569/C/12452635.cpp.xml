@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12452635.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;ctime&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>int</name></type> <name>prime</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>hui</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>num</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>p</name></decl>, <decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+<function><specifier>inline</specifier> <type><name>int</name></type> <name>get_prime</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>x</name></decl></parameter>)</parameter_list>
+<block>{
+	<if>if <condition>(<expr><name>x</name> <operator>==</operator> <literal type="number">0</literal> <operator>||</operator> <name>x</name> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then>
+		<block type="pseudo"><return>return <expr><literal type="number">0</literal></expr>;</return></block></then></if>
+	<if>if <condition>(<expr><name>x</name> <operator>==</operator> <literal type="number">2</literal></expr>)</condition><then>
+		<block type="pseudo"><return>return <expr><literal type="number">1</literal></expr>;</return></block></then></if>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">2</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;=</operator> <call><name>sqrt</name><argument_list>(<argument><expr><name>x</name></expr></argument>)</argument_list></call> <operator>+</operator> <literal type="number">1</literal></expr>;</condition> <incr><expr><operator>++</operator><name>j</name></expr></incr>)</control>
+		<block type="pseudo"><if>if <condition>(<expr><name>x</name> <operator>%</operator> <name>j</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then>
+			<block type="pseudo"><return>return <expr><literal type="number">0</literal></expr>;</return></block></then></if></block></for>
+	<return>return <expr><literal type="number">1</literal></expr>;</return>
+}</block></function>
+<function><specifier>inline</specifier> <type><name>int</name></type> <name>get_hui</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>x</name></decl></parameter>)</parameter_list>
+<block>{
+	<decl_stmt><decl><type><name>int</name></type> <name><name>q1</name><index>[<expr><literal type="number">50</literal></expr>]</index></name></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>y</name> <init>= <expr><name>x</name></expr></init></decl>, <decl><type ref="prev"/><name>f</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+	<while>while <condition>(<expr><name>y</name> <operator>&gt;</operator> <literal type="number">0</literal></expr>)</condition>
+	<block>{
+		<expr_stmt><expr><operator>++</operator><name>f</name></expr>;</expr_stmt>
+		<expr_stmt><expr><name><name>q1</name><index>[<expr><name>f</name></expr>]</index></name> <operator>=</operator> <name>y</name> <operator>%</operator> <literal type="number">10</literal></expr>;</expr_stmt>
+		<expr_stmt><expr><name>y</name> <operator>/=</operator> <literal type="number">10</literal></expr>;</expr_stmt>
+	}</block></while>
+	<decl_stmt><decl><type><name>bool</name></type> <name>oo</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <operator>(</operator><name>f</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>/</operator> <literal type="number">2</literal></expr>;</condition> <incr><expr><operator>++</operator><name>i</name></expr></incr>)</control>
+		<block type="pseudo"><if>if <condition>(<expr><name><name>q1</name><index>[<expr><name>i</name></expr>]</index></name> <operator>!=</operator> <name><name>q1</name><index>[<expr><name>f</name> <operator>-</operator> <name>i</name> <operator>+</operator> <literal type="number">1</literal></expr>]</index></name></expr>)</condition><then>
+			<block type="pseudo"><return>return <expr><literal type="number">0</literal></expr>;</return></block></then></if></block></for>
+	<return>return <expr><literal type="number">1</literal></expr>;</return>
+}</block></function>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d%d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>p</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>q</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<decl_stmt><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+	<while>while <condition>(<expr><name>i</name> <operator>&lt;=</operator> <literal type="number">2000000</literal></expr>)</condition>
+	<block>{
+		<expr_stmt><expr><name>prime</name> <operator>+=</operator> <call><name>get_prime</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><name>hui</name> <operator>+=</operator> <call><name>get_hui</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<comment type="line">//printf("%d %d %d\n", i, prime, hui);</comment>
+		<if>if <condition>(<expr><name>prime</name> <operator>&lt;=</operator> <name>hui</name> <operator>*</operator> <name>p</name> <operator>/</operator> <name>q</name></expr>)</condition><then>
+			<block type="pseudo"><expr_stmt><expr><name>num</name> <operator>=</operator> <name>i</name></expr>;</expr_stmt></block></then></if>
+		<expr_stmt><expr><operator>++</operator><name>i</name></expr>;</expr_stmt>
+	}</block></while>
+	<if>if <condition>(<expr><name>num</name> <operator>&lt;</operator> <literal type="number">2000000</literal></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>num</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+	<else>else
+		<block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"Palindromic tree is better than splay tree\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

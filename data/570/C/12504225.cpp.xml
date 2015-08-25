@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12504225.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>int</name></type> <name>N</name></decl>,<decl><type ref="prev"/><name>M</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>Array</name><index>[<expr><literal type="number">300005</literal></expr>]</index></name></decl>;</decl_stmt>
+<function><type><name>void</name></type> <name>Read</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>N</name><operator>&gt;&gt;</operator><name>M</name></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>N</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <decl_stmt><decl><type><name>char</name></type> <name>ch</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>ch</name></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name>ch</name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name><name>Array</name><index>[<expr><name>i</name></expr>]</index></name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt></block></then>
+        <else>else
+            <block type="pseudo"><expr_stmt><expr><name><name>Array</name><index>[<expr><name>i</name></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt></block></else></if>
+    }</block></for>
+}</block></function>
+
+<function><type><name>void</name></type> <name>Solve</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>cont</name><init>=<expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name>ans</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><name><name>Array</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>=</operator><name><name>Array</name><index>[<expr><name>N</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>N</name><operator>+</operator><literal type="number">1</literal></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <if>if<condition>(<expr><name><name>Array</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><operator>++</operator><name>cont</name></expr>;</expr_stmt></block></then>
+        <else>else
+            <block type="pseudo"><expr_stmt><expr><name>ans</name><operator>+=</operator><call><name>max</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><name>cont</name><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr><operator>,</operator><expr><name>cont</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt></block></else></if>
+    }</block></for>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>M</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>poz</name></decl>,<decl><type ref="prev"/><name>val</name></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>char</name></type> <name>ch</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>poz</name><operator>&gt;&gt;</operator><name>ch</name></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name>ch</name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name>val</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt></block></then>
+        <else>else
+            <block type="pseudo"><expr_stmt><expr><name>val</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt></block></else></if>
+        <if>if<condition>(<expr><name>val</name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+        <block>{
+            <if>if<condition>(<expr><name><name>Array</name><index>[<expr><name>poz</name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+            <block>{
+                <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>ans</name><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt>
+                <continue>continue;</continue>
+            }</block></then></if>
+
+            <expr_stmt><expr><name><name>Array</name><index>[<expr><name>poz</name></expr>]</index></name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+            <if>if<condition>(<expr><name><name>Array</name><index>[<expr><name>poz</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>!=</operator><name><name>Array</name><index>[<expr><name>poz</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><operator>++</operator><name>ans</name></expr>;</expr_stmt></block></then></if>
+            <if>if<condition>(<expr><name><name>Array</name><index>[<expr><name>poz</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="number">0</literal> <operator>&amp;&amp;</operator> <name><name>Array</name><index>[<expr><name>poz</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><name>ans</name><operator>+=</operator><literal type="number">2</literal></expr>;</expr_stmt></block></then></if>
+        }</block></then>
+        <else>else
+        <block>{
+            <if>if<condition>(<expr><name><name>Array</name><index>[<expr><name>poz</name></expr>]</index></name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then>
+            <block>{
+                <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>ans</name><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt>
+                <continue>continue;</continue>
+            }</block></then></if>
+            <expr_stmt><expr><name><name>Array</name><index>[<expr><name>poz</name></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+            <if>if<condition>(<expr><name><name>Array</name><index>[<expr><name>poz</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>!=</operator><name><name>Array</name><index>[<expr><name>poz</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><operator>--</operator><name>ans</name></expr>;</expr_stmt></block></then></if>
+             <if>if<condition>(<expr><name><name>Array</name><index>[<expr><name>poz</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="number">0</literal> <operator>&amp;&amp;</operator> <name><name>Array</name><index>[<expr><name>poz</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><name>ans</name><operator>-=</operator><literal type="number">2</literal></expr>;</expr_stmt></block></then></if>
+        }</block></else></if>
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>ans</name><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt>
+    }</block></for>
+}</block></function>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name>Read</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>Solve</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

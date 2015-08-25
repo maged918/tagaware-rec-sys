@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="11858073.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<comment type="line">//INAIS</comment>
+<include>#<directive>include</directive><file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<define>#<directive>define</directive> <macro><name>sz</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>((int)a.size())</value></define>
+<define>#<directive>define</directive> <macro><name>forv1</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>for(int i=0;i&lt;sz(a);i++)</value></define>
+<define>#<directive>define</directive> <macro><name>forv2</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>for(int i=sz(a)-1;i&gt;=0;i--)</value></define>
+<define>#<directive>define</directive> <macro><name>rep</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(int i=a;i&lt;=b;i++)</value></define>
+<define>#<directive>define</directive> <macro><name>rev</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(int i=a;i&gt;=b;i--)</value></define>
+<define>#<directive>define</directive> <macro><name>all</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>a.begin(),a.end()</value></define>
+<define>#<directive>define</directive> <macro><name>dbg</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>printf("HERE COMES THE PACKAGE %d\n",x)</value></define>
+
+<define>#<directive>define</directive> <macro><name>READ</name><parameter_list>(<parameter><type><name>f</name></type></parameter>)</parameter_list></macro> <value>freopen(f, "r", stdin)</value></define>
+<define>#<directive>define</directive> <macro><name>WRITE</name><parameter_list>(<parameter><type><name>f</name></type></parameter>)</parameter_list></macro> <value>freopen(f, "w", stdout)</value></define>
+<define>#<directive>define</directive> <macro><name>pb</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>push_back(a)</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>make_pair(a,b)</value></define>
+<define>#<directive>define</directive> <macro><name>refINF</name></macro> <value>100000</value></define>
+<define>#<directive>define</directive> <macro><name>INF</name></macro> <value>0x7FFFFFFF</value></define>
+<define>#<directive>define</directive> <macro><name>PI</name></macro> <value>3.1415926535897932384626433832795</value></define>
+<define>#<directive>define</directive> <macro><name>SET</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>val</name></type></parameter>)</parameter_list></macro> <value>memset(a,val,sizeof(a))</value></define>
+<define>#<directive>define</directive> <macro><name>eps</name></macro> <value>1e-9</value></define>
+
+
+<define>#<directive>define</directive> <macro><name>in</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>x</name></type></parameter>,<parameter><type><name>y</name></type></parameter>)</parameter_list></macro> <value>(a&gt;=x &amp;&amp; a&lt;=y)</value></define>
+<define>#<directive>define</directive> <macro><name>out</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>x</name></type></parameter>,<parameter><type><name>y</name></type></parameter>)</parameter_list></macro> <value>(!in(a,x,y))</value></define>
+
+
+<define>#<directive>define</directive> <macro><name>eq</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>(fabs(a-b)&lt;eps)</value></define>
+<define>#<directive>define</directive> <macro><name>less</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>(a+eps&lt;b)</value></define>
+<define>#<directive>define</directive> <macro><name>great</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>(a&gt;b+eps)</value></define>
+
+
+<define>#<directive>define</directive> <macro><name>uu</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>vv</name></macro> <value>second</value></define>
+<define>#<directive>define</directive> <macro><name>ll</name></macro> <value>long long</value></define>
+<define>#<directive>define</directive> <macro><name>ld</name></macro> <value>long double</value></define>
+<define>#<directive>define</directive> <macro><name>ull</name></macro> <value>unsigned long long</value></define>
+<define>#<directive>define</directive> <macro><name>lld</name></macro> <value>I64D</value></define>
+
+<define>#<directive>define</directive> <macro><name>pii</name></macro> <value>pair&lt;int,int&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>pll</name></macro> <value>pair&lt;ll,ll&gt;</value></define>
+
+<define>#<directive>define</directive> <macro><name>sI</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>scanf("%d",&amp;a)</value></define>
+<define>#<directive>define</directive> <macro><name>sII</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>scanf("%d %d",&amp;a,&amp;b)</value></define>
+<define>#<directive>define</directive> <macro><name>sL</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>scanf("%lld",&amp;a)</value></define>
+<define>#<directive>define</directive> <macro><name>sLL</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>scanf("%lld %lld",&amp;a,&amp;b)</value></define>
+
+<define>#<directive>define</directive> <macro><name>MAX</name></macro></define>
+<define>#<directive>define</directive> <macro><name>MOD</name></macro></define>
+
+<comment type="line">//int dx[]={-1,-1,-1,0,0,1,1,1}; int dy[]={-1,0,1,-1,1,-1,0,1}; // 8 direction</comment>
+<comment type="line">//int dx[]={-1,1,0,0}; int dy[]={0,0,-1,1}; // 4 direction</comment>
+<comment type="line">//int dx[] = {-1,-1,0,0,1,1}; int dy[] = {-1,0,-1,1,0,1}; // hexagonal direction</comment>
+<comment type="line">//int dx[]={2,1,-1,-2,-2,-1,1,2};int dy[]={1,2,2,1,-1,-2,-2,-1}; // Knight Direction</comment>
+<comment type="line">//int gcd(int a, int b){return b==0?a:gcd(b,a%b);}</comment>
+<comment type="line">//int lcm(int a, int b){return (int)a*(b/gcd(a,b));}</comment>
+
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <comment type="line">//READ("input.txt");</comment>
+    <decl_stmt><decl><type><name>ll</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>min1</name></decl>,<decl><type ref="prev"/><name>max1</name></decl>,<decl><type ref="prev"/><name>min2</name></decl>,<decl><type ref="prev"/><name>max2</name></decl>,<decl><type ref="prev"/><name>min3</name></decl>,<decl><type ref="prev"/><name>max3</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>min1</name><operator>&gt;&gt;</operator><name>max1</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>min2</name><operator>&gt;&gt;</operator><name>max2</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>min3</name><operator>&gt;&gt;</operator><name>max3</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>ll</name></type> <name>a1</name></decl>,<decl><type ref="prev"/><name>a2</name></decl>,<decl><type ref="prev"/><name>a3</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>a1</name><operator>=</operator><name>min1</name></expr><operator>,</operator><expr><name>a2</name><operator>=</operator><name>min2</name></expr><operator>,</operator><expr><name>a3</name><operator>=</operator><name>min3</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>n</name><operator>=</operator><name>n</name><operator>-</operator><name>min1</name><operator>-</operator><name>min2</name><operator>-</operator><name>min3</name></expr>;</expr_stmt>
+    <comment type="line">//cout&lt;&lt;n&lt;&lt;endl;</comment>
+    <if>if<condition>(<expr><name>n</name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then><block type="pseudo"><return>return <expr><name>cout</name><operator>&lt;&lt;</operator><name>a1</name><operator>&lt;&lt;</operator><literal type="string">" "</literal><operator>&lt;&lt;</operator><name>a2</name><operator>&lt;&lt;</operator><literal type="string">" "</literal><operator>&lt;&lt;</operator><name>a3</name><operator>&lt;&lt;</operator><name>endl</name></expr><operator>,</operator><expr><literal type="number">0</literal></expr>;</return></block></then>
+    <else>else<block>{
+        <while>while<condition>(<expr><name>n</name><operator>&gt;</operator><literal type="number">0</literal><operator>&amp;&amp;</operator><name>a1</name><operator>&lt;</operator><name>max1</name></expr>)</condition><block>{
+            <expr_stmt><expr><name>a1</name><operator>++</operator></expr>;</expr_stmt><expr_stmt><expr><name>n</name><operator>--</operator></expr>;</expr_stmt>
+        }</block></while>
+        <while>while<condition>(<expr><name>n</name><operator>&gt;</operator><literal type="number">0</literal><operator>&amp;&amp;</operator><name>a2</name><operator>&lt;</operator><name>max2</name></expr>)</condition><block>{
+            <expr_stmt><expr><name>n</name><operator>--</operator></expr>;</expr_stmt>
+            <expr_stmt><expr><name>a2</name><operator>++</operator></expr>;</expr_stmt>
+        }</block></while>
+        <while>while<condition>(<expr><name>n</name><operator>&gt;</operator><literal type="number">0</literal><operator>&amp;&amp;</operator><name>a3</name><operator>&lt;</operator><name>max3</name></expr>)</condition><block>{
+            <expr_stmt><expr><name>n</name><operator>--</operator></expr>;</expr_stmt>
+            <expr_stmt><expr><name>a3</name><operator>++</operator></expr>;</expr_stmt>
+        }</block></while>
+        
+
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>a1</name><operator>&lt;&lt;</operator><literal type="string">" "</literal><operator>&lt;&lt;</operator><name>a2</name><operator>&lt;&lt;</operator><literal type="string">" "</literal><operator>&lt;&lt;</operator><name>a3</name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+
+
+
+    }</block></else></if>
+
+
+
+
+<return>return <expr><literal type="number">0</literal></expr>;</return>
+
+}</block></function>
+
+
+</unit>

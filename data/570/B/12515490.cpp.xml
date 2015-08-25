@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12515490.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;fstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;utility&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;math.h&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>vi</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pi</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></expr></argument> &gt;</argument_list></name></type> <name>vpi</name>;</typedef>
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+  <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+  <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name><operator>&gt;&gt;</operator><name>m</name></expr>;</expr_stmt>
+  <if>if<condition>(<expr><name>n</name> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then>
+  <elseif>else <if>if<condition>(<expr><name>n</name> <operator>-</operator> <name>m</name> <operator>+</operator> <literal type="number">1</literal> <operator>==</operator> <name>m</name> <operator>-</operator> <literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>m</name><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if></elseif>
+  <elseif>else <if>if<condition>(<expr><name>n</name> <operator>-</operator> <name>m</name> <operator>==</operator> <name>m</name><operator>-</operator><literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>m</name><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if></elseif>
+  <elseif>else <if>if<condition>(<expr><name>m</name> <operator>==</operator> <name>n</name> <operator>-</operator> <name>m</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>m</name><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if></elseif>
+  <elseif>else <if>if<condition>(<expr><name>n</name><operator>-</operator><name>m</name><operator>+</operator><literal type="number">1</literal> <operator>&lt;</operator> <name>m</name><operator>-</operator><literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>m</name><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if></elseif>
+  <elseif>else <if>if<condition>(<expr><name>n</name><operator>-</operator><name>m</name><operator>+</operator><literal type="number">1</literal> <operator>&gt;</operator> <name>m</name><operator>-</operator><literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>m</name><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if></elseif></if>
+
+  <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

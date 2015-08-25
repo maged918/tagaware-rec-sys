@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12501337.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive><file>&lt;iostream&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>string</name></type> <name>s</name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>,<decl><type ref="prev"/><name>n</name></decl>,<decl><type ref="prev"/><name>q</name></decl>,<decl><type ref="prev"/><name>o</name><init>=<expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name>l</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>char</name></type> <name>c</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name><operator>&gt;&gt;</operator><name>q</name><operator>&gt;&gt;</operator><name>s</name></expr>;</expr_stmt>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block type="pseudo"><if>if<condition>(<expr><name><name>s</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><name><name>s</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name> <operator>&amp;&amp;</operator> <name><name>s</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then><block type="pseudo"><expr_stmt><expr><name>o</name><operator>++</operator></expr>;</expr_stmt></block></then></if></block></for>
+    <for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">0</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>q</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>l</name><operator>&gt;&gt;</operator><name>c</name></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name><name>s</name><index>[<expr><name>l</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal> <operator>&amp;&amp;</operator> <name>c</name><operator>!=</operator><literal type="char">'.'</literal></expr>)</condition><then>
+        <block>{
+            <if>if<condition>(<expr><name>l</name><operator>&gt;</operator><literal type="number">1</literal></expr>)</condition><then><block type="pseudo"><expr_stmt><expr><name>o</name><operator>-=</operator><name><name>s</name><index>[<expr><name>l</name><operator>-</operator><literal type="number">2</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>;</expr_stmt></block></then></if>
+            <if>if<condition>(<expr><name>l</name><operator>&lt;</operator><name>n</name></expr>)</condition><then><block type="pseudo"><expr_stmt><expr><name>o</name><operator>-=</operator><name><name>s</name><index>[<expr><name>l</name></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>;</expr_stmt></block></then></if>
+        }</block></then></if>
+        <if>if<condition>(<expr><name><name>s</name><index>[<expr><name>l</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>!=</operator><literal type="char">'.'</literal> <operator>&amp;&amp;</operator> <name>c</name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then>
+        <block>{
+            <if>if<condition>(<expr><name>l</name><operator>&gt;</operator><literal type="number">1</literal></expr>)</condition><then><block type="pseudo"><expr_stmt><expr><name>o</name><operator>+=</operator><name><name>s</name><index>[<expr><name>l</name><operator>-</operator><literal type="number">2</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>;</expr_stmt></block></then></if>
+            <if>if<condition>(<expr><name>l</name><operator>&lt;</operator><name>n</name></expr>)</condition><then><block type="pseudo"><expr_stmt><expr><name>o</name><operator>+=</operator><name><name>s</name><index>[<expr><name>l</name></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>;</expr_stmt></block></then></if>
+        }</block></then></if>
+        <expr_stmt><expr><name><name>s</name><index>[<expr><name>l</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>=</operator><name>c</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>o</name><operator>&lt;&lt;</operator><literal type="char">'\n'</literal></expr>;</expr_stmt>
+    }</block></for>
+}</block></function>
+</unit>

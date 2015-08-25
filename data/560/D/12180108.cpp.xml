@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12180108.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>char</name></type> <name><name>a</name><index>[<expr><literal type="number">200000</literal></expr>]</index></name></decl>,<decl><type ref="prev"/><name><name>b</name><index>[<expr><literal type="number">200000</literal></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>checkstr</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>al</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>ar</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>bl</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>br</name></decl></parameter>)</parameter_list>
+<block>{
+	<if>if<condition>( <expr><operator>(</operator><name>ar</name><operator>-</operator><name>al</name><operator>)</operator><operator>%</operator><literal type="number">2</literal> <operator>==</operator> <literal type="number">1</literal></expr> )</condition><then>
+	<block>{
+		<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><operator>(</operator><name>br</name><operator>-</operator><name>bl</name><operator>)</operator></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+		<block>{
+			<if>if<condition>( <expr><name><name>a</name><index>[<expr><name>al</name><operator>+</operator><name>i</name></expr>]</index></name> <operator>!=</operator> <name><name>b</name><index>[<expr><name>bl</name><operator>+</operator><name>i</name></expr>]</index></name></expr> )</condition><then>
+				<block type="pseudo"><return>return <expr><literal type="number">0</literal></expr>;</return></block></then></if>
+		}</block></for>
+
+		<return>return <expr><literal type="number">1</literal></expr>;</return>
+	}</block></then>
+	<else>else
+	<block>{
+		<decl_stmt><decl><type><name>int</name></type> <name>mid</name> <init>= <expr><operator>(</operator><name>ar</name><operator>-</operator><name>al</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr></init></decl>;</decl_stmt>
+
+		<if>if<condition>( <expr><call><name>checkstr</name><argument_list>(<argument><expr><name>al</name></expr></argument>,<argument><expr><name>al</name><operator>+</operator><name>mid</name></expr></argument>,<argument><expr><name>bl</name></expr></argument>,<argument><expr><name>bl</name><operator>+</operator><name>mid</name></expr></argument>)</argument_list></call><operator>==</operator><literal type="number">1</literal> <operator>&amp;&amp;</operator> <call><name>checkstr</name><argument_list>(<argument><expr><name>al</name><operator>+</operator><name>mid</name></expr></argument>,<argument><expr><name>ar</name></expr></argument>,<argument><expr><name>bl</name><operator>+</operator><name>mid</name></expr></argument>,<argument><expr><name>br</name></expr></argument>)</argument_list></call><operator>==</operator><literal type="number">1</literal></expr> )</condition><then>
+			<block type="pseudo"><return>return <expr><literal type="number">1</literal></expr>;</return></block></then></if>
+		<if>if<condition>( <expr><call><name>checkstr</name><argument_list>(<argument><expr><name>al</name></expr></argument>,<argument><expr><name>al</name><operator>+</operator><name>mid</name></expr></argument>,<argument><expr><name>bl</name><operator>+</operator><name>mid</name></expr></argument>,<argument><expr><name>br</name></expr></argument>)</argument_list></call><operator>==</operator><literal type="number">1</literal> <operator>&amp;&amp;</operator> <call><name>checkstr</name><argument_list>(<argument><expr><name>al</name><operator>+</operator><name>mid</name></expr></argument>,<argument><expr><name>ar</name></expr></argument>,<argument><expr><name>bl</name></expr></argument>,<argument><expr><name>bl</name><operator>+</operator><name>mid</name></expr></argument>)</argument_list></call><operator>==</operator><literal type="number">1</literal></expr> )</condition><then>
+			<block type="pseudo"><return>return <expr><literal type="number">1</literal></expr>;</return></block></then>
+		<else>else <block type="pseudo"><return>return <expr><literal type="number">0</literal></expr>;</return></block></else></if>
+	}</block></else></if>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>a</name><operator>&gt;&gt;</operator><name>b</name></expr>;</expr_stmt>
+
+	<expr_stmt><expr><name>n</name><operator>=</operator><call><name>strlen</name><argument_list>(<argument><expr><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+	<decl_stmt><decl><type><name>int</name></type> <name>ans</name><init>=<expr><call><name>checkstr</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><name>n</name></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><name>n</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+	<if>if<condition>(<expr><name>ans</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"YES\n"</literal></expr>;</expr_stmt></block></then>
+	<else>else <block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"NO\n"</literal></expr>;</expr_stmt></block></else></if>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

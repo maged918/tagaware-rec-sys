@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12509071.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name><name>arr</name><index>[<expr><literal type="number">105</literal></expr>]</index><index>[<expr><literal type="number">105</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>win</name><index>[<expr><literal type="number">105</literal></expr>]</index></name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name><operator>&gt;&gt;</operator><name>m</name></expr>;</expr_stmt>
+    <if>if<condition>(<expr><name>n</name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then><block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+    <if>if<condition>(<expr><name>n</name><operator>%</operator><literal type="number">2</literal><operator>==</operator><literal type="number">1</literal></expr>)</condition><then><block>{
+        <if>if<condition>(<expr><name>m</name><operator>==</operator><operator>(</operator><name>n</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr>)</condition><then><block>{
+            <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>m</name><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt>
+            <return>return <expr><literal type="number">0</literal></expr>;</return>
+        }</block></then></if>
+    }</block></then></if>
+    
+    <if>if<condition>(<expr><name>m</name><operator>&lt;=</operator><name>n</name><operator>/</operator><literal type="number">2</literal></expr>)</condition><then><block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>m</name><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then>
+    <else>else <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>m</name><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></else></if>
+    
+        
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

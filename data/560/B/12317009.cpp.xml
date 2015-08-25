@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12317009.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive><file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>a</name></decl>, <decl><type ref="prev"/><name>b</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>c</name></decl>, <decl><type ref="prev"/><name>d</name></decl>, <decl><type ref="prev"/><name>x</name></decl>, <decl><type ref="prev"/><name>y</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>a</name><operator>&gt;&gt;</operator><name>b</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>c</name><operator>&gt;&gt;</operator><name>d</name><operator>&gt;&gt;</operator><name>x</name><operator>&gt;&gt;</operator><name>y</name></expr>;</expr_stmt>
+    <if>if<condition>(<expr><name>c</name><operator>+</operator><name>x</name><operator>&lt;=</operator><name>a</name><operator>&amp;&amp;</operator><call><name>max</name><argument_list>(<argument><expr><name>d</name></expr></argument>,<argument><expr><name>y</name></expr></argument>)</argument_list></call><operator>&lt;=</operator><name>b</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"YES"</literal></expr>;</expr_stmt>
+    }</block></then>
+    <elseif>else <if>if<condition>(<expr><name>c</name><operator>+</operator><name>y</name><operator>&lt;=</operator><name>a</name><operator>&amp;&amp;</operator><call><name>max</name><argument_list>(<argument><expr><name>d</name></expr></argument>,<argument><expr><name>x</name></expr></argument>)</argument_list></call><operator>&lt;=</operator><name>b</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"YES"</literal></expr>;</expr_stmt>
+    }</block></then></if></elseif>
+    <elseif>else <if>if<condition>(<expr><name>c</name><operator>+</operator><name>x</name><operator>&lt;=</operator><name>b</name><operator>&amp;&amp;</operator><call><name>max</name><argument_list>(<argument><expr><name>d</name></expr></argument>,<argument><expr><name>y</name></expr></argument>)</argument_list></call><operator>&lt;=</operator><name>a</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"YES"</literal></expr>;</expr_stmt>
+    }</block></then></if></elseif>
+    <elseif>else <if>if<condition>(<expr><name>c</name><operator>+</operator><name>y</name><operator>&lt;=</operator><name>b</name><operator>&amp;&amp;</operator><call><name>max</name><argument_list>(<argument><expr><name>d</name></expr></argument>,<argument><expr><name>x</name></expr></argument>)</argument_list></call><operator>&lt;=</operator><name>a</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"YES"</literal></expr>;</expr_stmt>
+    }</block></then></if></elseif>
+    <elseif>else <if>if<condition>(<expr><name>d</name><operator>+</operator><name>x</name><operator>&lt;=</operator><name>a</name><operator>&amp;&amp;</operator><call><name>max</name><argument_list>(<argument><expr><name>c</name></expr></argument>,<argument><expr><name>y</name></expr></argument>)</argument_list></call><operator>&lt;=</operator><name>b</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"YES"</literal></expr>;</expr_stmt>
+    }</block></then></if></elseif>
+    <elseif>else <if>if<condition>(<expr><name>d</name><operator>+</operator><name>y</name><operator>&lt;=</operator><name>a</name><operator>&amp;&amp;</operator><call><name>max</name><argument_list>(<argument><expr><name>c</name></expr></argument>,<argument><expr><name>x</name></expr></argument>)</argument_list></call><operator>&lt;=</operator><name>b</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"YES"</literal></expr>;</expr_stmt>
+    }</block></then></if></elseif>
+    <elseif>else <if>if<condition>(<expr><name>d</name><operator>+</operator><name>x</name><operator>&lt;=</operator><name>b</name><operator>&amp;&amp;</operator><call><name>max</name><argument_list>(<argument><expr><name>c</name></expr></argument>,<argument><expr><name>y</name></expr></argument>)</argument_list></call><operator>&lt;=</operator><name>a</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"YES"</literal></expr>;</expr_stmt>
+    }</block></then></if></elseif>
+    <elseif>else <if>if<condition>(<expr><name>d</name><operator>+</operator><name>y</name><operator>&lt;=</operator><name>b</name><operator>&amp;&amp;</operator><call><name>max</name><argument_list>(<argument><expr><name>c</name></expr></argument>,<argument><expr><name>x</name></expr></argument>)</argument_list></call><operator>&lt;=</operator><name>a</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"YES"</literal></expr>;</expr_stmt>
+    }</block></then></if></elseif>
+    <else>else
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"NO"</literal></expr>;</expr_stmt>
+    }</block></else></if>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

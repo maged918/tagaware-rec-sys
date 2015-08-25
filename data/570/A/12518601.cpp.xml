@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12518601.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+ <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>,<decl><type ref="prev"/><name>i</name></decl>,<decl><type ref="prev"/><name>j</name></decl>,<decl><type ref="prev"/><name>ind</name></decl>,<decl><type ref="prev"/><name>v</name></decl>,<decl><type ref="prev"/><name>max</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>hash</name><index>[<expr><literal type="number">101</literal></expr>]</index></name><init>=<expr><block>{<expr><literal type="number">0</literal></expr>}</block></expr></init></decl>;</decl_stmt>
+<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name><operator>&gt;&gt;</operator><name>m</name></expr>;</expr_stmt>
+
+<for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>m</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+<block>{
+<expr_stmt><expr><name>max</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt><expr_stmt><expr><name>ind</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+ <for>for<control>(<init><expr><name>j</name><operator>=</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>j</name><operator>&lt;=</operator><name>n</name></expr>;</condition><incr><expr><name>j</name><operator>++</operator></expr></incr>)</control><block>{
+ <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>v</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+ <if>if<condition>(<expr><name>v</name><operator>&gt;</operator><name>max</name></expr>)</condition><then>
+ <block>{<expr_stmt><expr><name>max</name><operator>=</operator><name>v</name></expr>;</expr_stmt><expr_stmt><expr><name>ind</name><operator>=</operator><name>j</name></expr>;</expr_stmt>}</block></then></if>
+ }</block></for>
+<expr_stmt><expr><operator>++</operator><name><name>hash</name><index>[<expr><name>ind</name></expr>]</index></name></expr>;</expr_stmt>
+}</block></for>
+<expr_stmt><expr><name>max</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt><expr_stmt><expr><name>ind</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+<for>for<control>(<init><expr><name>i</name><operator>=</operator><literal type="number">1</literal></expr>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+<block>{
+<if>if<condition>(<expr><name><name>hash</name><index>[<expr><name>i</name></expr>]</index></name><operator>&gt;</operator><name>max</name></expr>)</condition><then>
+<block>{<expr_stmt><expr><name>max</name><operator>=</operator><name><name>hash</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt><expr_stmt><expr><name>ind</name><operator>=</operator><name>i</name></expr>;</expr_stmt>}</block></then></if>
+}</block></for>
+<expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>ind</name></expr>;</expr_stmt>
+}</block></function>
+</unit>

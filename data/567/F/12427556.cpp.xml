@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12427556.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>N</name> <init>= <expr><literal type="number">100</literal></expr></init></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>k</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>a</name><index>[<expr><name>N</name></expr>]</index></name></decl>, <decl><type ref="prev"/><name><name>b</name><index>[<expr><name>N</name></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>string</name></type> <name><name>sign</name><index>[<expr><name>N</name></expr>]</index></name></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name><name>dp</name><index>[<expr><name>N</name></expr>]</index><index>[<expr><name>N</name></expr>]</index></name></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>int</name></type> <name>L</name></decl>, <decl><type ref="prev"/><name>R</name></decl>, <decl><type ref="prev"/><name>A</name></decl>, <decl><type ref="prev"/><name>B</name></decl>;</decl_stmt>
+
+<enum>enum <block>{
+  <decl><name>OLD</name></decl>,
+  <decl><name>CUR</name></decl>,
+  <decl><name>NEW</name></decl>,
+}</block>;</enum>
+
+<function><type><name>bool</name></type> <name>valid_time</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>ltime</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>rtime</name></decl></parameter>, <parameter><decl><type><name>string</name></type> <name>sign</name></decl></parameter>)</parameter_list> <block>{
+  <if>if <condition>(<expr><name>sign</name> <operator>==</operator> <literal type="string">"&gt;"</literal></expr>)</condition><then> <block>{
+    <return>return <expr><name>ltime</name> <operator>&gt;</operator> <name>rtime</name></expr>;</return>
+  }</block></then></if>
+  <if>if <condition>(<expr><name>sign</name> <operator>==</operator> <literal type="string">"&lt;"</literal></expr>)</condition><then> <block>{
+    <return>return <expr><name>ltime</name> <operator>&lt;</operator> <name>rtime</name></expr>;</return>
+  }</block></then></if>
+  <if>if <condition>(<expr><name>sign</name> <operator>==</operator> <literal type="string">"="</literal></expr>)</condition><then> <block>{
+    <return>return <expr><name>ltime</name> <operator>==</operator> <name>rtime</name></expr>;</return>
+  }</block></then></if>
+  <if>if <condition>(<expr><name>sign</name> <operator>==</operator> <literal type="string">"&gt;="</literal></expr>)</condition><then> <block>{
+    <return>return <expr><name>ltime</name> <operator>&gt;=</operator> <name>rtime</name></expr>;</return>
+  }</block></then></if>
+  <if>if <condition>(<expr><name>sign</name> <operator>==</operator> <literal type="string">"&lt;="</literal></expr>)</condition><then> <block>{
+    <return>return <expr><name>ltime</name> <operator>&lt;=</operator> <name>rtime</name></expr>;</return>
+  }</block></then></if>
+}</block></function>
+
+<function><type><name>int</name></type> <name>time</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>idx</name></decl></parameter>)</parameter_list> <block>{
+  <if>if <condition>(<expr><name><name>idx</name> <argument_list type="generic">&lt; <argument><expr><name>L</name> <operator>||</operator> <name>idx</name></expr></argument> &gt;</argument_list></name> <name>R</name></expr>)</condition><then> <block>{
+    <return>return <expr><name>OLD</name></expr>;</return>
+  }</block></then></if>
+  <if>if <condition>(<expr><name>idx</name> <operator>==</operator> <name>A</name> <operator>||</operator> <name>idx</name> <operator>==</operator> <name>B</name></expr>)</condition><then> <block>{
+    <return>return <expr><name>CUR</name></expr>;</return>
+  }</block></then></if>
+  <return>return <expr><name>NEW</name></expr>;</return>
+}</block></function>
+
+<function><type><name>bool</name></type> <name>valid</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>l</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>r</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>lput</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>rput</name></decl></parameter>)</parameter_list> <block>{
+  <expr_stmt><expr><name>L</name> <operator>=</operator> <name>l</name></expr><operator>,</operator> <expr><name>R</name> <operator>=</operator> <name>r</name></expr><operator>,</operator> <expr><name>A</name> <operator>=</operator> <name>lput</name></expr><operator>,</operator> <expr><name>B</name> <operator>=</operator> <name>rput</name></expr>;</expr_stmt>
+  <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>k</name></expr>;</condition> <incr><expr><name>i</name> <operator>++</operator></expr></incr>)</control> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>ltime</name> <init>= <expr><call><name>time</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>rtime</name> <init>= <expr><call><name>time</name><argument_list>(<argument><expr><name><name>b</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+    <if>if <condition>(<expr><name>ltime</name> <operator>==</operator> <name>CUR</name> <operator>||</operator> <name>rtime</name> <operator>==</operator> <name>CUR</name></expr>)</condition><then> <block>{
+      <if>if <condition>(<expr><operator>!</operator><call><name>valid_time</name><argument_list>(<argument><expr><name>ltime</name></expr></argument>, <argument><expr><name>rtime</name></expr></argument>, <argument><expr><name><name>sign</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+        <return>return <expr><literal type="boolean">false</literal></expr>;</return>
+      }</block></then></if>
+    }</block></then></if>
+  }</block></for>
+  <return>return <expr><literal type="boolean">true</literal></expr>;</return>
+}</block></function>
+
+<function><type><name>long</name> <name>long</name></type> <name>calcdp</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>l</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>r</name></decl></parameter>)</parameter_list> <block>{
+  <decl_stmt><decl><type><name>long</name> <name>long</name> <modifier>&amp;</modifier></type><name>res</name> <init>= <expr><name><name>dp</name><index>[<expr><name>l</name></expr>]</index><index>[<expr><name>r</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+  <if>if <condition>(<expr><name>res</name> <operator>!=</operator> <operator>-</operator><literal type="number">1</literal></expr>)</condition><then> <block>{
+    <return>return <expr><name>res</name></expr>;</return>
+  }</block></then></if>
+  <expr_stmt><expr><name>res</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+  <if>if <condition>(<expr><name>l</name> <operator>+</operator> <literal type="number">1</literal> <operator>==</operator> <name>r</name></expr>)</condition><then> <block>{
+    <if>if <condition>(<expr><call><name>valid</name><argument_list>(<argument><expr><name>l</name></expr></argument>, <argument><expr><name>r</name></expr></argument>, <argument><expr><name>l</name></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+      <expr_stmt><expr><name>res</name><operator>++</operator></expr>;</expr_stmt>
+    }</block></then></if>
+  }</block></then> <else>else <block>{
+    <if>if <condition>(<expr><call><name>valid</name><argument_list>(<argument><expr><name>l</name></expr></argument>, <argument><expr><name>r</name></expr></argument>, <argument><expr><name>l</name></expr></argument>, <argument><expr><name>l</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+      <expr_stmt><expr><name>res</name> <operator>+=</operator> <call><name>calcdp</name><argument_list>(<argument><expr><name>l</name> <operator>+</operator> <literal type="number">2</literal></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></then></if>
+    <if>if <condition>(<expr><call><name>valid</name><argument_list>(<argument><expr><name>l</name></expr></argument>, <argument><expr><name>r</name></expr></argument>, <argument><expr><name>l</name></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+      <expr_stmt><expr><name>res</name> <operator>+=</operator> <call><name>calcdp</name><argument_list>(<argument><expr><name>l</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><name>r</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></then></if>
+    <if>if <condition>(<expr><call><name>valid</name><argument_list>(<argument><expr><name>l</name></expr></argument>, <argument><expr><name>r</name></expr></argument>, <argument><expr><name>r</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+      <expr_stmt><expr><name>res</name> <operator>+=</operator> <call><name>calcdp</name><argument_list>(<argument><expr><name>l</name></expr></argument>, <argument><expr><name>r</name> <operator>-</operator> <literal type="number">2</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></then></if>
+  }</block></else></if>
+  <return>return <expr><name>res</name></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+  <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>k</name></expr>;</expr_stmt>
+  <expr_stmt><expr><name>n</name> <operator>&lt;&lt;=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+  <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>k</name></expr>;</condition> <incr><expr><name>i</name> <operator>++</operator></expr></incr>)</control> <block>{
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&gt;&gt;</operator> <name><name>sign</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&gt;&gt;</operator> <name><name>b</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>--</operator></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>b</name><index>[<expr><name>i</name></expr>]</index></name><operator>--</operator></expr>;</expr_stmt>
+  }</block></for>
+  <expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>dp</name></expr></argument>, <argument><expr><operator>-</operator><literal type="number">1</literal></expr></argument>, <argument><expr><sizeof>sizeof<argument_list>(<argument><expr><name>dp</name></expr></argument>)</argument_list></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <call><name>calcdp</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>n</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+}</block></function>
+</unit>

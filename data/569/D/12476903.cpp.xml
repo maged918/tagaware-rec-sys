@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12476903.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;list&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;deque&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;bitset&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cctype&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;complex&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;fstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;sstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;utility&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;functional&gt;</file></include>
+<define>#<directive>define</directive> <macro><name>LL</name></macro> <value>long long</value></define>
+<define>#<directive>define</directive> <macro><name>INF</name></macro> <value>0x7fffffff</value></define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>MOD</name> <init>= <expr><literal type="number">1e9</literal><operator>+</operator><literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>LL</name></type> <name><name>Bell</name><index>[<expr><literal type="number">4005</literal></expr>]</index><index>[<expr><literal type="number">4005</literal></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+	<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><name><name>Bell</name><index>[<expr><literal type="number">0</literal></expr>]</index><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+	<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name> <operator>++</operator></expr></incr>)</control> <block>{
+		<expr_stmt><expr><name><name>Bell</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <name><name>Bell</name><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt>
+		<for>for<control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;=</operator> <name>i</name></expr>;</condition> <incr><expr><name>j</name> <operator>++</operator></expr></incr>)</control> <block>{
+			<expr_stmt><expr><name><name>Bell</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <operator>(</operator><name><name>Bell</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name> <operator>+</operator> <name><name>Bell</name><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index><index>[<expr><name>j</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name><operator>)</operator> <operator>%</operator> <name>MOD</name></expr>;</expr_stmt>
+		}</block></for>
+	}</block></for>
+	<expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%I64d\n"</literal></expr></argument>, <argument><expr><name><name>Bell</name><index>[<expr><name>n</name></expr>]</index><index>[<expr><name>n</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

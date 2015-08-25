@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12171802.cpp"><comment type="line">//Language: MS C++</comment>
+
+
+<include>#<directive>include</directive><file>&lt;stdio.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;string.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;math.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;stdlib.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>(<parameter><decl><type><name>void</name></type></decl></parameter>)</parameter_list>
+<block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>a</name></decl>,<decl><type ref="prev"/><name>b</name></decl>,<decl><type ref="prev"/><name>c</name></decl>,<decl><type ref="prev"/><name>d</name></decl>,<decl><type ref="prev"/><name>e</name></decl>,<decl><type ref="prev"/><name>f</name></decl>,<decl><type ref="prev"/><name>ans</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>a</name> <operator>&gt;&gt;</operator> <name>b</name> <operator>&gt;&gt;</operator> <name>c</name> <operator>&gt;&gt;</operator> <name>d</name> <operator>&gt;&gt;</operator> <name>e</name> <operator>&gt;&gt;</operator> <name>f</name></expr>;</expr_stmt>
+	<if>if<condition>(<expr><operator>(</operator><name>a</name><operator>&gt;=</operator><name>c</name><operator>+</operator><name>e</name> <operator>&amp;&amp;</operator> <name>b</name><operator>&gt;=</operator><name>d</name> <operator>&amp;&amp;</operator> <name>b</name><operator>&gt;=</operator><name>f</name><operator>)</operator> <operator>||</operator> <operator>(</operator><name>b</name><operator>&gt;=</operator><name>c</name><operator>+</operator><name>e</name> <operator>&amp;&amp;</operator> <name>a</name><operator>&gt;=</operator><name>d</name> <operator>&amp;&amp;</operator> <name>a</name><operator>&gt;=</operator><name>f</name><operator>)</operator></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><name>ans</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if>
+	<if>if<condition>(<expr><operator>(</operator><name>a</name><operator>&gt;=</operator><name>c</name><operator>+</operator><name>f</name> <operator>&amp;&amp;</operator> <name>b</name><operator>&gt;=</operator><name>d</name> <operator>&amp;&amp;</operator> <name>b</name><operator>&gt;=</operator><name>e</name><operator>)</operator> <operator>||</operator> <operator>(</operator><name>b</name><operator>&gt;=</operator><name>c</name><operator>+</operator><name>f</name> <operator>&amp;&amp;</operator> <name>a</name><operator>&gt;=</operator><name>d</name> <operator>&amp;&amp;</operator> <name>a</name><operator>&gt;=</operator><name>e</name><operator>)</operator></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><name>ans</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if>
+	<if>if<condition>(<expr><operator>(</operator><name>a</name><operator>&gt;=</operator><name>d</name><operator>+</operator><name>e</name> <operator>&amp;&amp;</operator> <name>b</name><operator>&gt;=</operator><name>c</name> <operator>&amp;&amp;</operator> <name>b</name><operator>&gt;=</operator><name>f</name><operator>)</operator> <operator>||</operator> <operator>(</operator><name>b</name><operator>&gt;=</operator><name>d</name><operator>+</operator><name>e</name> <operator>&amp;&amp;</operator> <name>a</name><operator>&gt;=</operator><name>c</name> <operator>&amp;&amp;</operator> <name>a</name><operator>&gt;=</operator><name>f</name><operator>)</operator></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><name>ans</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if>
+	<if>if<condition>(<expr><operator>(</operator><name>a</name><operator>&gt;=</operator><name>d</name><operator>+</operator><name>f</name> <operator>&amp;&amp;</operator> <name>b</name><operator>&gt;=</operator><name>c</name> <operator>&amp;&amp;</operator> <name>b</name><operator>&gt;=</operator><name>e</name><operator>)</operator> <operator>||</operator> <operator>(</operator><name>b</name><operator>&gt;=</operator><name>d</name><operator>+</operator><name>f</name> <operator>&amp;&amp;</operator> <name>a</name><operator>&gt;=</operator><name>c</name> <operator>&amp;&amp;</operator> <name>a</name><operator>&gt;=</operator><name>e</name><operator>)</operator></expr>)</condition><then> 
+		<block type="pseudo"><expr_stmt><expr><name>ans</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt></block></then></if>
+	<if>if<condition>(<expr><name>ans</name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"YES\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+	<else>else
+		<block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"NO\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

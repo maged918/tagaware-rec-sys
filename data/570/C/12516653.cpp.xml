@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12516653.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<comment type="line">// AUthor: thecodekaiser</comment>
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<define>#<directive>define</directive> <macro><name>MXN</name></macro> <value>300100</value></define>
+
+<decl_stmt><decl><type><name>string</name></type> <name>str</name></decl>;</decl_stmt>
+
+<struct>struct <name>Node</name>
+<block>{<public type="default">
+	<decl_stmt><decl><type><name>int</name></type> <name>left</name></decl>, <decl><type ref="prev"/><name>right</name></decl>, <decl><type ref="prev"/><name>len</name></decl>, <decl><type ref="prev"/><name>ans</name></decl>;</decl_stmt>
+
+</public>}</block><decl><name><name>tree</name><index>[<expr><name>MXN</name> <operator>*</operator> <literal type="number">4</literal></expr>]</index></name></decl>;</struct>
+
+<function><type><name>void</name></type> <name>build</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>Node</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>l</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>r</name></decl></parameter>)</parameter_list>
+<block>{
+	<if>if<condition>(<expr><name>l</name> <operator>&gt;</operator> <name>r</name></expr>)</condition><then>
+		<block type="pseudo"><return>return;</return></block></then></if>
+
+	<if>if<condition>(<expr><name>l</name> <operator>==</operator> <name>r</name></expr>)</condition><then>
+	<block>{
+		<if>if<condition>(<expr><name><name>str</name><index>[<expr><name>l</name></expr>]</index></name> <operator>==</operator> <literal type="char">'.'</literal></expr>)</condition><then>
+		<block>{
+			<expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+		}</block></then>
+		<else>else
+		<block>{
+			<expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+		}</block></else></if>
+		<expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>len</name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+		<return>return;</return>
+	}</block></then></if>
+
+	<decl_stmt><decl><type><name>int</name></type> <name>mid</name> <init>= <expr><operator>(</operator><name>l</name><operator>+</operator><name>r</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr></init></decl>, <decl><type ref="prev"/><name>left</name> <init>= <expr><literal type="number">2</literal><operator>*</operator><name>Node</name></expr></init></decl>, <decl><type ref="prev"/><name>right</name> <init>= <expr><literal type="number">2</literal><operator>*</operator><name>Node</name><operator>+</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+
+	<expr_stmt><expr><call><name>build</name><argument_list>(<argument><expr><name>left</name></expr></argument>, <argument><expr><name>l</name></expr></argument>, <argument><expr><name>mid</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name>build</name><argument_list>(<argument><expr><name>right</name></expr></argument>, <argument><expr><name>mid</name><operator>+</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>r</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+	<if>if<condition>(<expr><name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>==</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>len</name></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>+</operator> <name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>right</name></expr>;</expr_stmt></block></then>
+	<else>else
+		<block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>right</name></expr>;</expr_stmt></block></else></if>
+
+	<if>if<condition>(<expr><name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>==</operator> <name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>len</name></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>+</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>left</name></expr>;</expr_stmt></block></then>
+	<else>else
+		<block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>left</name></expr>;</expr_stmt></block></else></if>
+
+	<if>if<condition>(<expr><name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>&gt;=</operator> <literal type="number">1</literal> <operator>and</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>&gt;=</operator> <literal type="number">1</literal></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>=</operator> <operator>(</operator><name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>-</operator> <operator>(</operator><name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>right</name><operator>-</operator><literal type="number">1</literal><operator>)</operator><operator>)</operator> <operator>+</operator> <operator>(</operator><name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>-</operator> <operator>(</operator><name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>left</name><operator>-</operator><literal type="number">1</literal><operator>)</operator><operator>)</operator> <operator>+</operator> <operator>(</operator><name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>+</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>-</operator> <literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt></block></then>
+	<else>else
+		<block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>=</operator> <operator>(</operator><name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>+</operator> <name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>ans</name><operator>)</operator></expr>;</expr_stmt></block></else></if>
+
+	<expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>len</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>len</name> <operator>+</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>len</name></expr>;</expr_stmt>
+	<return>return;</return>
+
+}</block></function>
+
+<function><type><name>void</name></type> <name>update</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>Node</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>l</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>r</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>i</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>j</name></decl></parameter>)</parameter_list>
+<block>{
+	<if>if<condition>(<expr><name>l</name> <operator>&gt;</operator> <name>r</name> <operator>or</operator> <name>j</name> <operator>&lt;</operator> <name>l</name> <operator>or</operator> <name>r</name> <operator>&lt;</operator> <name>i</name></expr>)</condition><then>
+		<block type="pseudo"><return>return;</return></block></then></if>
+
+	<if>if<condition>(<expr><name>i</name> <operator>&lt;=</operator> <name>l</name> <operator>and</operator> <name>r</name> <operator>&lt;=</operator> <name>j</name></expr>)</condition><then>
+	<block>{
+		<if>if<condition>(<expr><name><name>str</name><index>[<expr><name>l</name></expr>]</index></name> <operator>==</operator> <literal type="char">'.'</literal></expr>)</condition><then>
+		<block>{
+			<expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+		}</block></then>
+		<else>else
+		<block>{
+			<expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+			<expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+		}</block></else></if>
+		<return>return;</return>
+	}</block></then></if>
+
+	<decl_stmt><decl><type><name>int</name></type> <name>mid</name> <init>= <expr><operator>(</operator><name>l</name><operator>+</operator><name>r</name><operator>)</operator><operator>/</operator><literal type="number">2</literal></expr></init></decl>, <decl><type ref="prev"/><name>left</name> <init>= <expr><literal type="number">2</literal><operator>*</operator><name>Node</name></expr></init></decl>, <decl><type ref="prev"/><name>right</name> <init>= <expr><literal type="number">2</literal><operator>*</operator><name>Node</name><operator>+</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+
+	<expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><name>left</name></expr></argument>, <argument><expr><name>l</name></expr></argument>, <argument><expr><name>mid</name></expr></argument>, <argument><expr><name>i</name></expr></argument>, <argument><expr><name>j</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><name>right</name></expr></argument>, <argument><expr><name>mid</name><operator>+</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>r</name></expr></argument>, <argument><expr><name>i</name></expr></argument>, <argument><expr><name>j</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+	<if>if<condition>(<expr><name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>==</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>len</name></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>+</operator> <name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>right</name></expr>;</expr_stmt></block></then>
+	<else>else
+		<block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>right</name></expr>;</expr_stmt></block></else></if>
+
+	<if>if<condition>(<expr><name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>==</operator> <name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>len</name></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>+</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>left</name></expr>;</expr_stmt></block></then>
+	<else>else
+		<block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>=</operator> <name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>left</name></expr>;</expr_stmt></block></else></if>
+
+	<if>if<condition>(<expr><name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>&gt;=</operator> <literal type="number">1</literal> <operator>and</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>&gt;=</operator> <literal type="number">1</literal></expr>)</condition><then>
+		<block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>=</operator> <operator>(</operator><name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>-</operator> <operator>(</operator><name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>right</name><operator>-</operator><literal type="number">1</literal><operator>)</operator><operator>)</operator> <operator>+</operator> <operator>(</operator><name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>-</operator> <operator>(</operator><name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>left</name><operator>-</operator><literal type="number">1</literal><operator>)</operator><operator>)</operator> <operator>+</operator> <operator>(</operator><name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>right</name> <operator>+</operator> <name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>left</name> <operator>-</operator> <literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt></block></then>
+	<else>else
+		<block type="pseudo"><expr_stmt><expr><name><name>tree</name><index>[<expr><name>Node</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>=</operator> <operator>(</operator><name><name>tree</name><index>[<expr><name>right</name></expr>]</index></name><operator>.</operator><name>ans</name> <operator>+</operator> <name><name>tree</name><index>[<expr><name>left</name></expr>]</index></name><operator>.</operator><name>ans</name><operator>)</operator></expr>;</expr_stmt></block></else></if>
+
+	<return>return;</return>
+
+}</block></function>
+
+<function><type><name>void</name></type> <name>solve</name><parameter_list>()</parameter_list>
+<block>{
+	<decl_stmt><decl><type><name>int</name></type> <name>len</name></decl>, <decl><type ref="prev"/><name>Q</name></decl>;</decl_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>len</name> <operator>&gt;&gt;</operator> <name>Q</name></expr>;</expr_stmt>
+
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>str</name></expr>;</expr_stmt>
+
+	<decl_stmt><decl><type><name>int</name></type> <name>idx</name></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>char</name></type> <name>ch</name></decl>;</decl_stmt>
+
+	<expr_stmt><expr><call><name>build</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>len</name><operator>-</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<comment type="line">//cout &lt;&lt; tree[1].ans &lt;&lt; endl;</comment>
+	<comment type="line">//cout &lt;&lt; tree[1].left &lt;&lt; " " &lt;&lt; tree[1].right &lt;&lt; endl;</comment>
+	<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>Q</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+	<block>{
+		<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %c"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>idx</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>ch</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><name>idx</name><operator>--</operator></expr>;</expr_stmt>
+		<expr_stmt><expr><name><name>str</name><index>[<expr><name>idx</name></expr>]</index></name> <operator>=</operator> <name>ch</name></expr>;</expr_stmt>
+
+		<expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>len</name><operator>-</operator><literal type="number">1</literal></expr></argument>, <argument><expr><name>idx</name></expr></argument>, <argument><expr><name>idx</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name><name>tree</name><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>.</operator><name>ans</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	}</block></for>
+	<return>return;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<expr_stmt><expr><call><name>solve</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

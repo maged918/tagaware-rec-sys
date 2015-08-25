@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12484507.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>a1</name></decl>, <decl><type ref="prev"/><name>b1</name></decl>, <decl><type ref="prev"/><name>a2</name></decl>, <decl><type ref="prev"/><name>b2</name></decl>, <decl><type ref="prev"/><name>a3</name></decl>, <decl><type ref="prev"/><name>b3</name></decl>;</decl_stmt>
+
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>a1</name> <operator>&gt;&gt;</operator> <name>b1</name> <operator>&gt;&gt;</operator> <name>a2</name> <operator>&gt;&gt;</operator> <name>b2</name> <operator>&gt;&gt;</operator> <name>a3</name> <operator>&gt;&gt;</operator> <name>b3</name></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name>int</name></type> <name><name>xdim1</name><index>[<expr><literal type="number">4</literal></expr>]</index></name> <init>= <expr><block>{<expr><name>a2</name></expr>, <expr><name>a2</name></expr>, <expr><name>b2</name></expr>, <expr><name>b2</name></expr>}</block></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name><name>ydim1</name><index>[<expr><literal type="number">4</literal></expr>]</index></name> <init>= <expr><block>{<expr><name>b2</name></expr>, <expr><name>b2</name></expr>, <expr><name>a2</name></expr>, <expr><name>a2</name></expr>}</block></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name><name>xdim2</name><index>[<expr><literal type="number">4</literal></expr>]</index></name> <init>= <expr><block>{<expr><name>a3</name></expr>, <expr><name>b3</name></expr>, <expr><name>a3</name></expr>, <expr><name>b3</name></expr>}</block></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name><name>ydim2</name><index>[<expr><literal type="number">4</literal></expr>]</index></name> <init>= <expr><block>{<expr><name>b3</name></expr>, <expr><name>a3</name></expr>, <expr><name>b3</name></expr>, <expr><name>a3</name></expr>}</block></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>bool</name></type> <name>ok</name> <init>= <expr><literal type="boolean">false</literal></expr></init></decl>;</decl_stmt>
+
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <literal type="number">4</literal></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+        <if>if <condition>(<expr><name><name>xdim1</name><index>[<expr><name>i</name></expr>]</index></name> <operator>+</operator> <name><name>xdim2</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&lt;=</operator> <name>b1</name></expr>)</condition><then> <block>{
+            <if>if <condition>(<expr><name><name>ydim1</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&lt;=</operator> <name>a1</name> <operator>&amp;&amp;</operator> <name><name>ydim2</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&lt;=</operator> <name>a1</name></expr>)</condition><then> <block>{
+                <expr_stmt><expr><name>ok</name> <operator>=</operator> <literal type="boolean">true</literal></expr>;</expr_stmt>
+                <break>break;</break>
+            }</block></then></if>
+        }</block></then></if>
+
+        <if>if <condition>(<expr><name><name>ydim1</name><index>[<expr><name>i</name></expr>]</index></name> <operator>+</operator> <name><name>ydim2</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&lt;=</operator> <name>a1</name></expr>)</condition><then> <block>{
+            <if>if <condition>(<expr><name><name>xdim1</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&lt;=</operator> <name>b1</name> <operator>&amp;&amp;</operator> <name><name>xdim2</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&lt;=</operator> <name>b1</name></expr>)</condition><then> <block>{
+                <expr_stmt><expr><name>ok</name> <operator>=</operator> <literal type="boolean">true</literal></expr>;</expr_stmt>
+                <break>break;</break>
+            }</block></then></if>
+        }</block></then></if>
+    }</block></for>
+
+    <if>if <condition>(<expr><name>ok</name></expr>)</condition><then> <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+    }</block></then> <else>else <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"NO"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+    }</block></else></if>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

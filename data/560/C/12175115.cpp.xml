@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12175115.cpp"><comment type="line">//Language: MS C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;fstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iomanip&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+ <comment type="line">//   ifstream cin("input.txt");</comment>
+   <comment type="line">// ofstream cout("output.txt");</comment>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>c1</name></decl>, <decl><type ref="prev"/><name>c2</name></decl>, <decl><type ref="prev"/><name>c3</name></decl>, <decl><type ref="prev"/><name>c4</name></decl>, <decl><type ref="prev"/><name>c5</name></decl>, <decl><type ref="prev"/><name>c6</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>c1</name> <operator>&gt;&gt;</operator> <name>c2</name> <operator>&gt;&gt;</operator> <name>c3</name> <operator>&gt;&gt;</operator> <name>c4</name> <operator>&gt;&gt;</operator> <name>c5</name> <operator>&gt;&gt;</operator> <name>c6</name></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>tek</name> <init>= <expr><name>c2</name></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>answer</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <call><name>min</name><argument_list>(<argument><expr><name>c1</name></expr></argument>, <argument><expr><name>c3</name></expr></argument>)</argument_list></call></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name>answer</name> <operator>+=</operator> <name>tek</name> <operator>+</operator> <name>tek</name> <operator>+</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+        <expr_stmt><expr><name>tek</name><operator>++</operator></expr>;</expr_stmt>
+    }</block></for>
+
+    <if>if <condition>(<expr><name>c1</name> <operator>!=</operator> <name>c3</name></expr>)</condition><then>
+        <block type="pseudo"><for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <call><name>abs</name><argument_list>(<argument><expr><name>c1</name> <operator>-</operator> <name>c3</name></expr></argument>)</argument_list></call></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block>{
+            <expr_stmt><expr><name>answer</name> <operator>+=</operator> <name>tek</name> <operator>+</operator> <name>tek</name></expr>;</expr_stmt>
+        }</block></for></block></then></if>
+
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <call><name>min</name><argument_list>(<argument><expr><name>c4</name></expr></argument>, <argument><expr><name>c6</name></expr></argument>)</argument_list></call></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name>answer</name> <operator>+=</operator> <name>tek</name> <operator>+</operator> <name>tek</name> <operator>-</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+        <expr_stmt><expr><name>tek</name><operator>--</operator></expr>;</expr_stmt>
+    }</block></for>
+
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>answer</name></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

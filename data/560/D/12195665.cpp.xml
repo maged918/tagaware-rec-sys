@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12195665.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string.h&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><name>string</name></type> <name>s1</name></decl>,<decl><type ref="prev"/><name>s2</name></decl>;</decl_stmt>
+
+<function><type><name>string</name></type> <name>smallest</name><parameter_list>(<parameter><decl><type><name>string</name></type> <name>s</name></decl></parameter>)</parameter_list>
+<block>{
+    <if>if <condition>(<expr><call><name><name>s</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call> <operator>%</operator> <literal type="number">2</literal> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><return>return <expr><name>s</name></expr>;</return></block></then></if>
+    <decl_stmt><decl><type><name>string</name></type> <name>s1</name> <init>= <expr><call><name>smallest</name><argument_list>(<argument><expr><call><name><name>s</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><call><name><name>s</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>string</name></type> <name>s2</name> <init>= <expr><call><name>smallest</name><argument_list>(<argument><expr><call><name><name>s</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><call><name><name>s</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call><operator>/</operator><literal type="number">2</literal></expr></argument>, <argument><expr><call><name><name>s</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <if>if <condition>(<expr><name>s1</name> <operator>&lt;</operator> <name>s2</name></expr>)</condition><then> <block type="pseudo"><return>return <expr><name>s1</name> <operator>+</operator> <name>s2</name></expr>;</return></block></then>
+    <else>else <block type="pseudo"><return>return <expr><name>s2</name> <operator>+</operator> <name>s1</name></expr>;</return></block></else></if>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>s1</name> <operator>&gt;&gt;</operator> <name>s2</name></expr>;</expr_stmt>
+	<if>if<condition>(<expr><call><name>smallest</name><argument_list>(<argument><expr><name>s1</name></expr></argument>)</argument_list></call><operator>==</operator><call><name>smallest</name><argument_list>(<argument><expr><name>s2</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"YES"</literal></expr>;</expr_stmt></block></then> <else>else <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"NO"</literal></expr>;</expr_stmt></block></else></if>
+	<comment type="line">//getchar();getchar();</comment>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12447218.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<comment type="line">//Includes</comment>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include> 
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;bitset&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include> 
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;utility&gt;</file></include> <comment type="line">//Pair</comment>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;sstream&gt;</file></include> <comment type="line">// istringstream&gt;&gt; ostring stream&lt;&lt;</comment>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include> 
+<include>#<directive>include</directive> <file>&lt;iomanip&gt;</file></include> 
+<comment type="line">//setbase - cout &lt;&lt; setbase (16); cout &lt;&lt; 100 &lt;&lt; endl; Prints 64</comment>
+<comment type="line">//setfill -   cout &lt;&lt; setfill ('x') &lt;&lt; setw (5); cout &lt;&lt; 77 &lt;&lt; endl; prints xxx77</comment>
+<comment type="line">//setprecision - cout &lt;&lt; setprecision (4) &lt;&lt; f &lt;&lt; endl; Prints x.xxxx</comment>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cassert&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;ctime&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;limits&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<comment type="line">//M lazy ;)</comment>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name> <argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>vi</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt; <argument><expr><name>int</name></expr></argument> ,<argument><expr><name>int</name></expr></argument> &gt;</argument_list></name></type> <name>pii</name>;</typedef>
+<typedef>typedef <type><name>istringstream</name></type> <name>iss</name>;</typedef>
+<typedef>typedef <type><name>ostringstream</name></type> <name>oss</name>;</typedef>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>ff</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>ss</name></macro> <value>second</value></define>
+<define>#<directive>define</directive> <macro><name>sz</name></macro> <value>size()</value></define>
+<define>#<directive>define</directive> <macro><name>ln</name></macro> <value>length()</value></define>
+<define>#<directive>define</directive> <macro><name>rep</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for(int i=0;i&lt;n;i++)</value></define>
+<define>#<directive>define</directive> <macro><name>fu</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for(int i=a;i&lt;=n;i++)</value></define>
+<define>#<directive>define</directive> <macro><name>fd</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>n</name></type></parameter>,<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>for(int i=n;i&gt;=a;i--)</value></define>
+<define>#<directive>define</directive> <macro><name>all</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro>  <value>a.begin(),a.end()</value></define> 
+<define>#<directive>define</directive> <macro><name>ESP</name></macro> <value>(1e-9)</value></define>
+<define>#<directive>define</directive> <macro><name>snuke</name><parameter_list>(<parameter><type><name>c</name></type></parameter>,<parameter><type><name>itr</name></type></parameter>)</parameter_list></macro> <value>for(__typeof((c).begin()) itr=(c).begin();itr!=(c).end();itr++)</value></define>
+
+<define>#<directive>define</directive> <macro><name>gi</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>scanf("%d",&amp;n)</value></define>
+<define>#<directive>define</directive> <macro><name>gl</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>cin &gt;&gt; n</value></define>
+<define>#<directive>define</directive> <macro><name>pi</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>printf("%d",n)</value></define>
+<define>#<directive>define</directive> <macro><name>pl</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>cout &lt;&lt; n</value></define>
+<define>#<directive>define</directive> <macro><name>ps</name></macro> <value>printf(" ")</value></define>
+<define>#<directive>define</directive> <macro><name>pn</name></macro> <value>printf("\n")</value></define>
+<define>#<directive>define</directive> <macro><name>dg</name><parameter_list>(<parameter><type><name>n</name></type></parameter>,<parameter><type><name>s</name></type></parameter>)</parameter_list></macro><value>; printf("%s %d",s,n)</value></define>
+<define>#<directive>define</directive> <macro><name>imax</name></macro> <value>numeric_limits&lt;int&gt;::max()</value></define>
+<define>#<directive>define</directive> <macro><name>imin</name></macro> <value>numeric_limits&lt;int&gt;::min()</value></define>
+<define>#<directive>define</directive> <macro><name>lmax</name></macro> <value>numeric_limits&lt;ll&gt;::max()</value></define>
+<define>#<directive>define</directive> <macro><name>lmin</name></macro> <value>numeric_limits&lt;ll&gt;::min()</value></define>
+<define>#<directive>define</directive> <macro><name>TRACE</name></macro></define>
+ 
+<ifdef>#<directive>ifdef</directive> <name>TRACE</name></ifdef>
+<define>#<directive>define</directive> <macro><name>trace1</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro>                <value>cerr &lt;&lt; #x &lt;&lt; ": " &lt;&lt; x &lt;&lt; endl;</value></define>
+<define>#<directive>define</directive> <macro><name>trace2</name><parameter_list>(<parameter><type><name>x</name></type></parameter>, <parameter><type><name>y</name></type></parameter>)</parameter_list></macro>             <value>cerr &lt;&lt; #x &lt;&lt; ": " &lt;&lt; x &lt;&lt; " | " &lt;&lt; #y &lt;&lt; ": " &lt;&lt; y &lt;&lt; endl;</value></define>
+<define>#<directive>define</directive> <macro><name>trace3</name><parameter_list>(<parameter><type><name>x</name></type></parameter>, <parameter><type><name>y</name></type></parameter>, <parameter><type><name>z</name></type></parameter>)</parameter_list></macro>          <value>cerr &lt;&lt; #x &lt;&lt; ": " &lt;&lt; x &lt;&lt; " | " &lt;&lt; #y &lt;&lt; ": " &lt;&lt; y &lt;&lt; " | " &lt;&lt; #z &lt;&lt; ": " &lt;&lt; z &lt;&lt; endl;</value></define>
+<define>#<directive>define</directive> <macro><name>trace4</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>c</name></type></parameter>, <parameter><type><name>d</name></type></parameter>)</parameter_list></macro>       <value>cerr &lt;&lt; #a &lt;&lt; ": " &lt;&lt; a &lt;&lt; " | " &lt;&lt; #b &lt;&lt; ": " &lt;&lt; b &lt;&lt; " | " &lt;&lt; #c &lt;&lt; ": " &lt;&lt; c &lt;&lt; " | " &lt;&lt; #d &lt;&lt; ": " &lt;&lt; d &lt;&lt; endl;</value></define>
+<define>#<directive>define</directive> <macro><name>trace5</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>c</name></type></parameter>, <parameter><type><name>d</name></type></parameter>, <parameter><type><name>e</name></type></parameter>)</parameter_list></macro>    <value>cerr &lt;&lt; #a &lt;&lt; ": " &lt;&lt; a &lt;&lt; " | " &lt;&lt; #b &lt;&lt; ": " &lt;&lt; b &lt;&lt; " | " &lt;&lt; #c &lt;&lt; ": " &lt;&lt; c &lt;&lt; " | " &lt;&lt; #d &lt;&lt; ": " &lt;&lt; d &lt;&lt; " | " &lt;&lt; #e &lt;&lt; ": " &lt;&lt; e &lt;&lt; endl;</value></define>
+<define>#<directive>define</directive> <macro><name>trace6</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>c</name></type></parameter>, <parameter><type><name>d</name></type></parameter>, <parameter><type><name>e</name></type></parameter>, <parameter><type><name>f</name></type></parameter>)</parameter_list></macro> <value>cerr &lt;&lt; #a &lt;&lt; ": " &lt;&lt; a &lt;&lt; " | " &lt;&lt; #b &lt;&lt; ": " &lt;&lt; b &lt;&lt; " | " &lt;&lt; #c &lt;&lt; ": " &lt;&lt; c &lt;&lt; " | " &lt;&lt; #d &lt;&lt; ": " &lt;&lt; d &lt;&lt; " | " &lt;&lt; #e &lt;&lt; ": " &lt;&lt; e &lt;&lt; " | " &lt;&lt; #f &lt;&lt; ": " &lt;&lt; f &lt;&lt; endl;</value></define>
+ 
+<else>#<directive>else</directive></else>
+ 
+<define>#<directive>define</directive> <macro><name>trace1</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro></define>
+<define>#<directive>define</directive> <macro><name>trace2</name><parameter_list>(<parameter><type><name>x</name></type></parameter>, <parameter><type><name>y</name></type></parameter>)</parameter_list></macro></define>
+<define>#<directive>define</directive> <macro><name>trace3</name><parameter_list>(<parameter><type><name>x</name></type></parameter>, <parameter><type><name>y</name></type></parameter>, <parameter><type><name>z</name></type></parameter>)</parameter_list></macro></define>
+<define>#<directive>define</directive> <macro><name>trace4</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>c</name></type></parameter>, <parameter><type><name>d</name></type></parameter>)</parameter_list></macro></define>
+<define>#<directive>define</directive> <macro><name>trace5</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>c</name></type></parameter>, <parameter><type><name>d</name></type></parameter>, <parameter><type><name>e</name></type></parameter>)</parameter_list></macro></define>
+<define>#<directive>define</directive> <macro><name>trace6</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>, <parameter><type><name>c</name></type></parameter>, <parameter><type><name>d</name></type></parameter>, <parameter><type><name>e</name></type></parameter>, <parameter><type><name>f</name></type></parameter>)</parameter_list></macro></define>
+ 
+<endif>#<directive>endif</directive></endif>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+	
+	<comment type="line">//freopen("input.txt","r",stdin);</comment>
+
+	<comment type="line">//Exception	</comment>
+	<try>try<block>{
+	<comment type="line">//Exception</comment>
+	
+	<decl_stmt><decl><type><name>int</name></type> <name>T</name></decl>,<decl><type ref="prev"/><name>S</name></decl>,<decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+	
+	<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>T</name><operator>&gt;&gt;</operator><name>S</name><operator>&gt;&gt;</operator><name>q</name></expr>;</expr_stmt>
+	
+	<decl_stmt><decl><type><name>int</name></type> <name>i</name> <init>= <expr><name>S</name></expr></init></decl>,<decl><type ref="prev"/><name>c</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+	<while>while<condition>(<expr><name>i</name><operator>&lt;</operator><name>T</name></expr>)</condition><block>{
+		<expr_stmt><expr><name>c</name> <operator>++</operator></expr>;</expr_stmt>
+		<expr_stmt><expr><name>i</name> <operator>*=</operator> <name>q</name></expr>;</expr_stmt>
+	}</block></while>
+	<expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>c</name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+	
+	<comment type="line">//Exception</comment>
+	<comment type="line">//int *a=new int [int(1e9)];    bad_alloc exception</comment>
+	}</block>	
+	<catch>catch<parameter_list>(<parameter><decl><type><name>exception</name><modifier>&amp;</modifier></type> <name>e</name></decl></parameter>)</parameter_list><block>{
+		<expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"Exception: "</literal><operator>&lt;&lt;</operator><call><name><name>e</name><operator>.</operator><name>what</name></name><argument_list>()</argument_list></call><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+	}</block></catch></try>
+	<comment type="line">//Exception</comment>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

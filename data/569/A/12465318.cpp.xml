@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12465318.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+<decl_stmt><decl><type><name>int</name></type> <name>t</name></decl>,<decl><type ref="prev"/><name>s</name></decl>,<decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>t</name><operator>&gt;&gt;</operator><name>s</name><operator>&gt;&gt;</operator><name>q</name></expr>;</expr_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>ans</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+<while>while<condition>(<expr><name>s</name><operator>&lt;</operator><name>t</name></expr>)</condition>
+<block>{  
+    <expr_stmt><expr><name>s</name><operator>*=</operator><name>q</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>ans</name><operator>++</operator></expr>;</expr_stmt>
+}</block></while>
+<expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>ans</name></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

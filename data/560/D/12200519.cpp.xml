@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12200519.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive><file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cctype&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;stack&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<define>#<directive>define</directive> <macro><name>LL</name></macro> <value>long long</value></define>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>N</name><init>=<expr><literal type="number">200000</literal><operator>+</operator><literal type="number">10</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>char</name></type> <name><name>A</name><index>[<expr><name>N</name></expr>]</index></name></decl>,<decl><type ref="prev"/><name><name>B</name><index>[<expr><name>N</name></expr>]</index></name></decl>;</decl_stmt>
+<function><type><name>bool</name></type> <name>cmp</name><parameter_list>(<parameter><decl><type><name>char</name></type> <name><name>x</name><index>[]</index></name></decl></parameter>,<parameter><decl><type><name>char</name></type> <name><name>y</name><index>[]</index></name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>len</name></decl></parameter>)</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>bool</name></type> <name>isok</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>len</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <if>if<condition>(<expr><name><name>x</name><index>[<expr><name>i</name></expr>]</index></name><operator>!=</operator><name><name>y</name><index>[<expr><name>i</name></expr>]</index></name></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name>isok</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt></block></then></if>
+    }</block></for>
+    <return>return <expr><name>isok</name></expr>;</return>
+}</block></function>
+<function><type><name>bool</name></type> <name>equ</name><parameter_list>(<parameter><decl><type><name>char</name></type> <name><name>x</name><index>[]</index></name></decl></parameter>,<parameter><decl><type><name>char</name></type> <name><name>y</name><index>[]</index></name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>len</name></decl></parameter>)</parameter_list>
+<block>{
+    <if>if<condition>(<expr><call><name>cmp</name><argument_list>(<argument><expr><name>x</name></expr></argument>,<argument><expr><name>y</name></expr></argument>,<argument><expr><name>len</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="number">1</literal></expr>;</return></block></then></if>
+    <if>if<condition>(<expr><name>len</name><operator>%</operator><literal type="number">2</literal><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+    <block>{
+        <if>if<condition>(<expr><call><name>equ</name><argument_list>(<argument><expr><name>x</name></expr></argument>,<argument><expr><name>y</name><operator>+</operator><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>,<argument><expr><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call></expr>)</condition><then>
+            <block type="pseudo"><return>return <expr><call><name>equ</name><argument_list>(<argument><expr><name>x</name><operator>+</operator><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>,<argument><expr><name>y</name></expr></argument>,<argument><expr><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call></expr>;</return></block></then>
+        <else>else
+            <block type="pseudo"><return>return <expr><call><name>equ</name><argument_list>(<argument><expr><name>x</name><operator>+</operator><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>,<argument><expr><name>y</name><operator>+</operator><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>,<argument><expr><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call><operator>&amp;&amp;</operator><call><name>equ</name><argument_list>(<argument><expr><name>x</name></expr></argument>,<argument><expr><name>y</name></expr></argument>,<argument><expr><name>len</name><operator>/</operator><literal type="number">2</literal></expr></argument>)</argument_list></call></expr>;</return></block></else></if>
+    }</block></then></if>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%s%s"</literal></expr></argument>,<argument><expr><name>A</name></expr></argument>,<argument><expr><name>B</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>len</name><init>=<expr><call><name>strlen</name><argument_list>(<argument><expr><name>A</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%s\n"</literal></expr></argument>,<argument><expr><ternary><condition><expr><call><name>equ</name><argument_list>(<argument><expr><name>A</name></expr></argument>,<argument><expr><name>B</name></expr></argument>,<argument><expr><name>len</name></expr></argument>)</argument_list></call></expr>?</condition><then><expr><literal type="string">"YES"</literal></expr></then><else>:<expr><literal type="string">"NO"</literal></expr></else></ternary></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

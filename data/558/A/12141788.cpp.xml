@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12141788.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<comment type="block" format="doxygen">/*****************
+    Ashutosh Tiwari
+    NIT PATNA
+*****************/</comment>
+<include>#<directive>include</directive><file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;bitset&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;utility&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;climits&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cassert&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;queue&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<define>#<directive>define</directive> <macro><name>LL</name></macro> <value>long long int</value></define>
+<define>#<directive>define</directive> <macro><name>mfor</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for(int i=0;i&lt;n;i++)</value></define>
+<define>#<directive>define</directive> <macro><name>FOR</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro>  <value>for(int i=a;i&lt;=b;i++)</value></define>
+<define>#<directive>define</directive> <macro><name>RFOR</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro>   <value>for(int i=a;i&gt;=b;i--)</value></define>
+<define>#<directive>define</directive> <macro><name>snd</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>int (n); scanf("%d",&amp;(n))</value></define>
+<define>#<directive>define</directive> <macro><name>sd</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro>  <value>scanf("%d",&amp;n)</value></define>
+<define>#<directive>define</directive> <macro><name>sd2</name><parameter_list>(<parameter><type><name>n</name></type></parameter>,<parameter><type><name>m</name></type></parameter>)</parameter_list></macro> <value>scanf("%d %d",&amp;(n),&amp;(m))</value></define>
+<define>#<directive>define</directive> <macro><name>snd2</name><parameter_list>(<parameter><type><name>n</name></type></parameter>,<parameter><type><name>m</name></type></parameter>)</parameter_list></macro> <value>int (n),(m); scanf("%d %d",&amp;(n),&amp;(m))</value></define>
+<define>#<directive>define</directive> <macro><name>snd3</name><parameter_list>(<parameter><type><name>n</name></type></parameter>,<parameter><type><name>m</name></type></parameter>,<parameter><type><name>k</name></type></parameter>)</parameter_list></macro> <value>int (n),(m),(k); scanf("%d %d %d",&amp;(n),&amp;(m),&amp;(k))</value></define>
+<define>#<directive>define</directive> <macro><name>ptd</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>printf("%d\n",(x))</value></define>
+<define>#<directive>define</directive> <macro><name>ptl</name></macro> <value>printf("\n");</value></define>
+<define>#<directive>define</directive> <macro><name>OPEN</name></macro> <value>freopen("in1.txt","r",stdin)</value></define>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>IS_ODD</name><parameter_list>( <parameter><type><name>num</name></type></parameter> )</parameter_list></macro> <value>((num) &amp; 1)</value></define>
+<define>#<directive>define</directive> <macro><name>IS_EVEN</name><parameter_list>( <parameter><type><name>num</name></type></parameter> )</parameter_list></macro> <value>(!IS_ODD( (num) ))</value></define>
+<define>#<directive>define</directive> <macro><name>MEM</name><parameter_list>(<parameter><type><name>dest</name></type></parameter>,<parameter><type><name>val</name></type></parameter>)</parameter_list></macro> <value>memset(dest,val,sizeof(dest))</value></define>
+<define>#<directive>define</directive> <macro><name>MOD</name></macro> <value>1000000007</value></define>
+<define>#<directive>define</directive> <macro><name>NMAX</name></macro> <value>1001</value></define>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type><name>vi</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type><name>ii</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>ii</name></expr></argument>&gt;</argument_list></name></type><name>vii</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>vii</name></expr></argument>&gt;</argument_list></name></type><name>tvi</name>;</typedef><comment type="line">//adjlist</comment>
+<typedef>typedef <type><name><name>map</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type><name>MAP</name>;</typedef>
+<typedef>typedef <type><name><name>set</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type><name>SET</name>;</typedef>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+    <comment type="line">//OPEN;</comment>
+    <decl_stmt><decl><type><name>vii</name></type> <name>pos</name></decl>,<decl><type ref="prev"/><name>neg</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>negno</name><init>=<expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name>cnt</name><init>=<expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name>posno</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>snd</name><argument_list>(<argument><expr><name>tc</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <macro><name>mfor</name><argument_list>(<argument>ik</argument>,<argument>tc</argument>)</argument_list></macro><block>{
+        <expr_stmt><expr><call><name>snd2</name><argument_list>(<argument><expr><name>c</name></expr></argument>,<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+       <comment type="line">// cout&lt;&lt;c&lt;&lt; " " &lt;&lt;p&lt;&lt;endl;</comment>
+        <if>if<condition>(<expr><name>c</name><operator>&gt;</operator><literal type="number">0</literal></expr>)</condition><then><block type="pseudo"><expr_stmt><expr><call><name><name>pos</name><operator>.</operator><name>pb</name></name><argument_list>(<argument><expr><call><name>mp</name><argument_list>(<argument><expr><name>c</name></expr></argument>,<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+        <else>else <block>{<expr_stmt><expr><call><name><name>neg</name><operator>.</operator><name>pb</name></name><argument_list>(<argument><expr><call><name>mp</name><argument_list>(<argument><expr><name>c</name></expr></argument>,<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt><expr_stmt><expr><name>negno</name><operator>++</operator></expr>;</expr_stmt>}</block></else></if>
+    }</block>
+    <expr_stmt><expr><call><name>sort</name><argument_list>(<argument><expr><call><name><name>pos</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>,<argument><expr><call><name><name>pos</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>sort</name><argument_list>(<argument><expr><call><name><name>neg</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>,<argument><expr><call><name><name>neg</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>reverse</name><argument_list>(<argument><expr><call><name><name>neg</name><operator>.</operator><name>begin</name></name><argument_list>()</argument_list></call></expr></argument>,<argument><expr><call><name><name>neg</name><operator>.</operator><name>end</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name>posno</name><operator>=</operator><name>tc</name><operator>-</operator><name>negno</name></expr>;</expr_stmt>
+    <comment type="line">//cout&lt;&lt;posno&lt;&lt;" "&lt;&lt;negno&lt;&lt;endl;</comment>
+    <if>if<condition>(<expr><name>posno</name><operator>&lt;</operator><name>negno</name></expr>)</condition><then><block>{
+        <macro><name>mfor</name><argument_list>(<argument>i</argument>,<argument>posno</argument>)</argument_list></macro><expr_stmt><expr><name>cnt</name><operator>+=</operator><name><name>pos</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name><operator>+</operator><name><name>neg</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>cnt</name><operator>+=</operator><name><name>neg</name><index>[<expr><name>posno</name></expr>]</index></name><operator>.</operator><name>second</name></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>ptd</name><argument_list>(<argument><expr><name>cnt</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    }</block></then>
+    <elseif>else <if>if<condition>(<expr><name>negno</name><operator>&lt;</operator><name>posno</name></expr>)</condition><then><block>{
+        <macro><name>mfor</name><argument_list>(<argument>i</argument>,<argument>negno</argument>)</argument_list></macro><expr_stmt><expr><name>cnt</name><operator>+=</operator><name><name>pos</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name><operator>+</operator><name><name>neg</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>cnt</name><operator>+=</operator><name><name>pos</name><index>[<expr><name>negno</name></expr>]</index></name><operator>.</operator><name>second</name></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>ptd</name><argument_list>(<argument><expr><name>cnt</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    }</block></then></if></elseif>
+    <else>else<block>{
+        <macro><name>mfor</name><argument_list>(<argument>i</argument>,<argument>negno</argument>)</argument_list></macro><expr_stmt><expr><name>cnt</name><operator>+=</operator><name><name>pos</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name><operator>+</operator><name><name>neg</name><index>[<expr><name>i</name></expr>]</index></name><operator>.</operator><name>second</name></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>ptd</name><argument_list>(<argument><expr><name>cnt</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    }</block></else></if>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+
+}</block></function>
+</unit>

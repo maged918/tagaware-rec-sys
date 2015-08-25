@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12392897.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;cassert&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<define>#<directive>define</directive> <macro><name>err</name><parameter_list>(<parameter><type><modifier>...</modifier></type></parameter>)</parameter_list></macro> <value>fprintf(stderr,__VA_ARGS__)</value></define>
+
+<decl_stmt><decl><type><name>int</name></type> <name>N</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>a</name><index>[<expr><literal type="number">100000</literal></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+	<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>N</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><name>a</name><operator>+</operator><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></for>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+		<decl_stmt><decl><type><name>int</name></type> <name>small</name> <init>= <expr><literal type="number">2000000000</literal></expr></init></decl>;</decl_stmt>
+		<decl_stmt><decl><type><name>int</name></type> <name>large</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+		<if>if <condition>(<expr><name>i</name> <operator>&gt;</operator> <literal type="number">0</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>small</name> <operator>=</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>-</operator><name><name>a</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt></block></then></if>
+		<if>if <condition>(<expr><name>i</name> <operator>&lt;</operator> <name>N</name><operator>-</operator><literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>small</name> <operator>=</operator> <call><name>min</name><argument_list>(<argument><expr><name>small</name></expr></argument>, <argument><expr><name><name>a</name><index>[<expr><name>i</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>-</operator><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if>
+		<expr_stmt><expr><name>large</name> <operator>=</operator> <call><name>max</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>-</operator><name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>,<argument><expr><name><name>a</name><index>[<expr><name>N</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>-</operator><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d %d\n"</literal></expr></argument>,<argument><expr><name>small</name></expr></argument>,<argument><expr><name>large</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	}</block></for>
+}</block></function>
+</unit>

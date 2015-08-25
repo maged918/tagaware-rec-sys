@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12591930.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive><file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<define>#<directive>define</directive> <macro><name>all</name><parameter_list>(<parameter><type><name>v</name></type></parameter>)</parameter_list></macro> <value>v.begin(),v.end()</value></define>
+<define>#<directive>define</directive> <macro><name>allR</name><parameter_list>(<parameter><type><name>v</name></type></parameter>)</parameter_list></macro> <value>v.rbegin(),v.rend()</value></define>
+<define>#<directive>define</directive> <macro><name>V</name></macro> <value>vector</value></define>
+<define>#<directive>define</directive> <macro><name>IO</name></macro> <value>cin.tie(0);std::ios::sync_with_stdio(false);</value></define>
+<define>#<directive>define</directive> <macro><name>S</name></macro> <value>string</value></define>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>pf</name></macro> <value>push_front</value></define>
+<define>#<directive>define</directive> <macro><name>set</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>memset(a,b,sizeof(a))</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>sz</name></macro> <value>size()</value></define>
+<define>#<directive>define</directive> <macro><name>dist</name><parameter_list>(<parameter><type><name>x1</name></type></parameter>,<parameter><type><name>y1</name></type></parameter>,<parameter><type><name>x2</name></type></parameter>,<parameter><type><name>y2</name></type></parameter>)</parameter_list></macro> <value>(x1-x2)*(x1-x2) + ((y1-y2)*(y1-y2))</value></define>
+<define>#<directive>define</directive> <macro><name>get</name></macro> <value>cin&gt;&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>print</name></macro> <value>cout&lt;&lt;</value></define>
+<define>#<directive>define</directive> <macro><name>getArr</name><parameter_list>(<parameter><type><name>ar</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for(int i=0;i&lt;n;get ar[i++])</value></define>
+<define>#<directive>define</directive> <macro><name>printArr</name><parameter_list>(<parameter><type><name>ar</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for(int i=0;i&lt;n;print ar[i++]&lt;&lt;' ')</value></define>
+<define>#<directive>define</directive> <macro><name>OO</name></macro> <value>1e6</value></define>
+<define>#<directive>define</directive> <macro><name>pii</name></macro> <value>pair&lt;int,int&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>st</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>nd</name></macro> <value>second</value></define>
+<define>#<directive>define</directive> <macro><name>file</name></macro> <value>freopen("input.txt", "r", stdin);freopen("output.txt", "w", stdout);</value></define>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name>unsigned</name> <name>long</name> <name>long</name></type> <name>ull</name>;</typedef>
+<typedef>typedef <type><name>double</name></type> <name>lf</name>;</typedef>
+<decl_stmt><decl><type><name>int</name></type> <name><name>dx</name><index>[]</index></name> <init>= <expr><block>{ <expr><literal type="number">1</literal></expr> , <expr><operator>-</operator><literal type="number">1</literal></expr> , <expr><literal type="number">0</literal></expr> , <expr><literal type="number">0</literal></expr> }</block></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>dy</name><index>[]</index></name> <init>= <expr><block>{ <expr><literal type="number">0</literal></expr> , <expr><literal type="number">0</literal></expr> , <expr><literal type="number">1</literal></expr> , <expr><operator>-</operator><literal type="number">1</literal></expr> }</block></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ll</name></type> <name>mod</name> <init>= <expr><literal type="number">1000000007</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>lf</name></type> <name>pi</name> <init>= <expr><literal type="number">3.1415926536</literal></expr></init></decl>;</decl_stmt>
+<comment type="line">//int u[100000+1];</comment>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+    <decl_stmt><decl><type><name>IO</name> <comment type="line">//set(u,0);</comment>
+    <name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>;</decl_stmt> <decl_stmt><decl><type><name>get</name></type> <name>n</name>&gt;&gt;<name>m</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>V</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type><name>ar</name><argument_list>(<argument><expr><name>n</name><operator>+</operator><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></decl>;</decl_stmt> <decl_stmt><decl><type><name>int</name></type> <name>maximum</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>m</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>mx</name><init>=<expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>,<decl><type ref="prev"/><name>idx</name></decl>;</decl_stmt>
+        <for>for<control>(<init><decl><type><name>int</name></type> <name>j</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>j</name><operator>&lt;</operator><name>n</name></expr>;</condition><incr><expr><name>j</name><operator>++</operator></expr></incr>)</control><block>{
+            <decl_stmt><decl><type><name>int</name></type> <name>x</name></decl> ;</decl_stmt><decl_stmt><decl><type><name>get</name></type> <name>x</name></decl>;</decl_stmt>
+            <if>if<condition>(<expr><name>x</name><operator>&gt;</operator><name>mx</name></expr>)</condition><then><block>{
+                <expr_stmt><expr><name>mx</name> <operator>=</operator> <name>x</name></expr>;</expr_stmt>
+                <expr_stmt><expr><name>idx</name> <operator>=</operator> <name>j</name><operator>+</operator><literal type="number">1</literal></expr>;</expr_stmt>
+            }</block></then></if>
+        }</block></for>
+        <expr_stmt><expr><name><name>ar</name><index>[<expr><name>idx</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name>maximum</name><operator>=</operator><call><name>max</name><argument_list>(<argument><expr><name>maximum</name></expr></argument>,<argument><expr><name><name>ar</name><index>[<expr><name>idx</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></for>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+        <if>if<condition>(<expr><name><name>ar</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><name>maximum</name></expr>)</condition><then><block>{
+            <decl_stmt><decl><type><name>print</name></type> <name>i</name></decl>;</decl_stmt> <return>return <expr><literal type="number">0</literal></expr>;</return>
+        }</block></then></if>
+    }</block></for>
+}</block></function>
+<comment type="block">/*
+*/</comment>
+</unit>

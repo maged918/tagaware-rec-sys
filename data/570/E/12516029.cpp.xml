@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12516029.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;utility&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iomanip&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>MAXN</name> <init>= <expr><literal type="number">502</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>long</name> <name>long</name></type> <name>modulo</name> <init>= <expr><literal type="number">1000000007</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>inf</name> <init>= <expr><literal type="number">1000000001</literal></expr></init></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>char</name></type> <name><name>a</name><index>[<expr><name>MAXN</name></expr>]</index><index>[<expr><name>MAXN</name></expr>]</index></name></decl>;</decl_stmt>
+
+<function><type><name>void</name></type> <name>printTable</name><parameter_list>( <parameter><decl><type><name>int</name></type> <name>N</name></decl></parameter> , <parameter><decl><type><name>int</name></type> <name>M</name></decl></parameter> )</parameter_list>
+<block>{
+    <for>for <control>( <init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <for>for <control>( <init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;=</operator> <name>M</name></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr></incr>)</control>
+            <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+    }</block></for>
+}</block></function>
+
+<function><type><name>void</name></type> <name>ExpandTable</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>N</name></decl></parameter> , <parameter><decl><type><name>int</name><modifier>&amp;</modifier></type> <name>M</name></decl></parameter>)</parameter_list>
+<block>{
+    <expr_stmt><expr><name>M</name><operator>++</operator></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>Half</name> <init>= <expr><operator>(</operator><operator>(</operator><name>N</name> <operator>+</operator> <name>M</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>/</operator> <literal type="number">2</literal><operator>)</operator> <operator>+</operator> <literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+    <for>for <control>( <init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>j</name> <init>= <expr><name>M</name></expr></init></decl>;</decl_stmt>
+        <while>while <condition>( <expr><name>i</name> <operator>+</operator> <name>j</name> <operator>&gt;=</operator> <name>Half</name></expr> )</condition>
+        <block>{
+            <expr_stmt><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name> <operator>+</operator> <literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <literal type="char">'z'</literal></expr>;</expr_stmt>
+            <expr_stmt><expr><name>j</name><operator>--</operator></expr>;</expr_stmt>
+        }</block></while>
+    }</block></for>
+}</block></function>
+
+<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name><name>dp</name><index>[<expr><name>MAXN</name></expr>]</index><index>[<expr><name>MAXN</name></expr>]</index></name> <init>= <expr><block>{<expr><literal type="number">0</literal></expr>}</block></expr></init></decl> , <decl><type ref="prev"/><name><name>prevDp</name><index>[<expr><name>MAXN</name></expr>]</index><index>[<expr><name>MAXN</name></expr>]</index></name> <init>= <expr><block>{<expr><literal type="number">0</literal></expr>}</block></expr></init></decl>;</decl_stmt>
+
+<function><type><name>void</name></type> <name>reNewDP</name><parameter_list>()</parameter_list>
+<block>{
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>MAXN</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <for>for <control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;</operator> <name>MAXN</name></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr></incr>)</control>
+        <block>{
+            <expr_stmt><expr><name><name>prevDp</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <name><name>dp</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name></expr>;</expr_stmt>
+            <expr_stmt><expr><name><name>dp</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+         }</block></for>
+    }</block></for>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <comment type="line">//freopen("input.in" , "r" , stdin);</comment>
+    <decl_stmt><decl><type><name>int</name></type> <name>N</name></decl> , <decl><type ref="prev"/><name>M</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d%d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>N</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>M</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <if>if <condition>( <expr><name>N</name> <operator>==</operator> <literal type="number">1</literal> <operator>&amp;&amp;</operator> <name>M</name> <operator>==</operator> <literal type="number">1</literal></expr> )</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="number">1</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+
+    <for>for <control>( <init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <decl_stmt><decl><type><name>char</name></type> <name>crap</name></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%c"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>crap</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <for>for <control>( <init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;=</operator> <name>M</name></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr></incr>)</control>
+        <block>{
+            <if>if <condition>( <expr><name>N</name> <operator>&lt;=</operator> <name>M</name></expr> )</condition><then>
+                <block type="pseudo"><expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%c"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name><name>a</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+            <else>else
+                <block type="pseudo"><expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%c"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name><name>a</name><index>[<expr><name>j</name></expr>]</index><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+        }</block></for>
+    }</block></for>
+
+    <if>if <condition>( <expr><name>N</name> <operator>&gt;</operator> <name>M</name></expr> )</condition><then> <block type="pseudo"><expr_stmt><expr><call><name>swap</name><argument_list>( <argument><expr><name>N</name></expr></argument> , <argument><expr><name>M</name></expr></argument> )</argument_list></call></expr>;</expr_stmt></block></then></if>
+
+    <comment type="line">//if ( (N + M) % 2 == 1 )</comment>
+      <comment type="line">//  ExpandTable(N , M);</comment>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>Mid</name> <init>= <expr><operator>(</operator> <name>N</name> <operator>+</operator> <name>M</name> <operator>)</operator> <operator>/</operator> <literal type="number">2</literal></expr></init></decl>;</decl_stmt>
+
+    <if>if <condition>( <expr><name><name>a</name><index>[<expr><literal type="number">1</literal></expr>]</index><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>!=</operator> <name><name>a</name><index>[<expr><name>N</name></expr>]</index><index>[<expr><name>M</name></expr>]</index></name></expr> )</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="number">0</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+    }</block></then></if>
+
+
+    <expr_stmt><expr><name><name>prevDp</name><index>[<expr><literal type="number">1</literal></expr>]</index><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+    <for>for <control>( <init><decl><type><name>int</name></type> <name>level</name> <init>= <expr><literal type="number">2</literal></expr></init></decl>;</init> <condition><expr><name>level</name> <operator>&lt;=</operator> <name>Mid</name></expr>;</condition> <incr><expr><name>level</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>Cells</name> <init>= <expr><call><name>min</name><argument_list>( <argument><expr><name>level</name></expr></argument> , <argument><expr><name>N</name></expr></argument> )</argument_list></call></expr></init></decl>;</decl_stmt>
+        <comment type="line">//cout &lt;&lt; "Level " &lt;&lt; level &lt;&lt; endl;</comment>
+        <for>for <control>( <init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>Cells</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block>{
+            <for>for <control>( <init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;=</operator> <name>Cells</name></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr></incr>)</control>
+            <block>{
+                <decl_stmt><decl><type><name>int</name></type> <name>upX</name></decl> , <decl><type ref="prev"/><name>upY</name></decl>, <decl><type ref="prev"/><name>downX</name></decl>, <decl><type ref="prev"/><name>downY</name></decl>;</decl_stmt>
+                <expr_stmt><expr><name>upX</name>   <operator>=</operator> <name>i</name></expr>;</expr_stmt>
+                <expr_stmt><expr><name>upY</name>   <operator>=</operator> <operator>(</operator><name>level</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>-</operator> <name>upX</name></expr>;</expr_stmt>
+                <expr_stmt><expr><name>downX</name> <operator>=</operator> <operator>(</operator><name>N</name> <operator>-</operator> <name>Cells</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>+</operator>  <operator>(</operator><name>j</name> <operator>-</operator> <literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt>
+                <expr_stmt><expr><name>downY</name> <operator>=</operator> <operator>(</operator><name>N</name> <operator>+</operator> <name>M</name> <operator>-</operator> <name>level</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>-</operator> <name>downX</name></expr>;</expr_stmt>
+
+                <comment type="line">//cout &lt;&lt; upX &lt;&lt; " " &lt;&lt; upY &lt;&lt; " " &lt;&lt; downX &lt;&lt; " "  &lt;&lt; downY &lt;&lt; endl;</comment>
+
+                <if>if <condition>( <expr><name><name>a</name><index>[<expr><name>upX</name></expr>]</index><index>[<expr><name>upY</name></expr>]</index></name> <operator>!=</operator> <name><name>a</name><index>[<expr><name>downX</name></expr>]</index><index>[<expr><name>downY</name></expr>]</index></name></expr> )</condition><then>
+                <block>{
+                    <expr_stmt><expr><name><name>dp</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+                    <comment type="line">//cout &lt;&lt; "dp[" &lt;&lt; level &lt;&lt; "][" &lt;&lt; i &lt;&lt; "][" &lt;&lt; j &lt;&lt; "] = " &lt;&lt; dp[level][i][j] &lt;&lt; endl;</comment>
+                    <continue>continue;</continue>
+                }</block></then></if>
+
+                <comment type="line">//cout &lt;&lt; upX &lt;&lt; " " &lt;&lt; upY &lt;&lt; " " &lt;&lt; downX &lt;&lt; " "  &lt;&lt; downY &lt;&lt; endl;</comment>
+                <comment type="line">//cout &lt;&lt; i &lt;&lt; " " &lt;&lt; j &lt;&lt; endl;</comment>
+                <comment type="line">//cout &lt;&lt; "Ended " &lt;&lt; endl;</comment>
+
+                <decl_stmt><decl><type><name>int</name></type> <name>extra</name> <init>= <expr><operator>(</operator><ternary><condition><expr><name>level</name> <operator>&gt;</operator> <name>N</name></expr> ?</condition><then> <expr><literal type="number">1</literal></expr> </then><else>: <expr><operator>-</operator><literal type="number">1</literal></expr></else></ternary><operator>)</operator></expr></init></decl>;</decl_stmt>
+
+                <expr_stmt><expr><name><name>dp</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <name><name>prevDp</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index><index>[<expr><name>j</name><operator>+</operator><name>extra</name></expr>]</index></name> <operator>+</operator>
+                           <name><name>prevDp</name><index>[ <expr><name>i</name></expr> ]</index><index>[<expr><name>j</name><operator>+</operator><name>extra</name></expr>]</index></name> <operator>+</operator>
+                           <name><name>prevDp</name><index>[<expr><name>i</name><operator>-</operator><literal type="number">1</literal></expr>]</index><index>[ <expr><name>j</name></expr>     ]</index></name> <operator>+</operator>
+                           <name><name>prevDp</name><index>[ <expr><name>i</name></expr> ]</index><index>[ <expr><name>j</name></expr>     ]</index></name></expr>;</expr_stmt>
+
+                <expr_stmt><expr><name><name>dp</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>%=</operator> <name>modulo</name></expr>;</expr_stmt>
+                <comment type="line">//cout &lt;&lt; upX &lt;&lt; " " &lt;&lt; upY &lt;&lt; " " &lt;&lt; downX &lt;&lt; " "  &lt;&lt; downY &lt;&lt; " " &lt;&lt; dp[level][i][j] &lt;&lt; endl;</comment>
+                <comment type="line">//cout &lt;&lt; "dp[" &lt;&lt; level &lt;&lt; "][" &lt;&lt; i &lt;&lt; "][" &lt;&lt; j &lt;&lt; "] = " &lt;&lt; dp[level][i][j] &lt;&lt; endl;</comment>
+            }</block></for>
+        }</block></for>
+        <expr_stmt><expr><call><name>reNewDP</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+
+    }</block></for>
+
+    <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>ans</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <if>if <condition>( <expr><operator>(</operator><name>M</name> <operator>+</operator> <name>N</name><operator>)</operator> <operator>%</operator> <literal type="number">2</literal> <operator>==</operator> <literal type="number">0</literal></expr>)</condition><then>
+    <block>{
+        <for>for <control>( <init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+            <block type="pseudo"><expr_stmt><expr><name>ans</name> <operator>+=</operator> <name><name>prevDp</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+    }</block></then>
+    <else>else
+    <block>{
+        <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+            <block type="pseudo"><expr_stmt><expr><name>ans</name> <operator>+=</operator> <name><name>prevDp</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>i</name></expr>]</index></name> <operator>+</operator> <name><name>prevDp</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>i</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt></block></for>
+    }</block></else></if>
+
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>ans</name> <operator>%</operator> <name>modulo</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

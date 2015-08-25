@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12489908.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive><file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstdio&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>bool</name></type> <name>isprime</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>x</name></decl></parameter>)</parameter_list>
+<block>{
+  <if>if<condition>(<expr><name>x</name><operator>&lt;</operator><literal type="number">2</literal></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="number">0</literal></expr>;</return></block></then></if>
+  <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">2</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>*</operator><name>i</name><operator>&lt;=</operator><name>x</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block type="pseudo"><if>if<condition>(<expr><name>x</name><operator>%</operator><name>i</name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="number">0</literal></expr>;</return></block></then></if></block></for>
+  <return>return <expr><literal type="number">1</literal></expr>;</return>
+}</block></function>
+
+<function><type><name>bool</name></type> <name>ispalindromic</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>x</name></decl></parameter>)</parameter_list>
+<block>{
+  <decl_stmt><decl><type><name>int</name></type> <name>re</name><init>=<expr><name>x</name></expr></init></decl>,<decl><type ref="prev"/><name>next</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+  <while>while<condition>(<expr><name>x</name></expr>)</condition>
+  <block>{
+    <expr_stmt><expr><name>next</name><operator>*=</operator><literal type="number">10</literal></expr>;</expr_stmt>
+    <expr_stmt><expr><name>next</name><operator>+=</operator> <operator>(</operator><name>x</name><operator>%</operator><literal type="number">10</literal><operator>)</operator></expr>;</expr_stmt>
+    <expr_stmt><expr><name>x</name><operator>/=</operator><literal type="number">10</literal></expr>;</expr_stmt>
+  }</block></while>
+  <if>if<condition>(<expr><name>re</name><operator>==</operator><name>next</name></expr>)</condition><then>
+    <block type="pseudo"><return>return <expr><literal type="number">1</literal></expr>;</return></block></then></if>
+  <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+  <decl_stmt><decl><type><name>unsigned</name> <name>long</name> <name>long</name> <name>int</name></type> <name>p</name></decl>,<decl><type ref="prev"/><name>q</name></decl>,<decl><type ref="prev"/><name>pnum</name><init>=<expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name>qnum</name><init>=<expr><literal type="number">0</literal></expr></init></decl>,<decl><type ref="prev"/><name>Max</name></decl>;</decl_stmt>
+  <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>p</name><operator>&gt;&gt;</operator><name>q</name></expr>;</expr_stmt>
+  <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><literal type="number">1200000</literal></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+  <block>{
+    <if>if<condition>(<expr><call><name>isprime</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>)</condition><then>
+      <block type="pseudo"><expr_stmt><expr><name>qnum</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+    <if>if<condition>(<expr><call><name>ispalindromic</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>)</condition><then>
+      <block type="pseudo"><expr_stmt><expr><name>pnum</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+    <if>if<condition>(<expr><name>q</name><operator>*</operator><name>qnum</name><operator>&lt;=</operator><name>p</name><operator>*</operator><name>pnum</name></expr>)</condition><then>
+      <block type="pseudo"><expr_stmt><expr><name>Max</name><operator>=</operator><name>i</name></expr>;</expr_stmt></block></then></if>
+  }</block></for>
+  <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>Max</name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+}</block></function></unit>

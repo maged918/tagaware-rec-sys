@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12184450.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive><file>&lt;stdio.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;math.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stdlib.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;limits.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<function><type><name>int</name></type> <name>main</name><parameter_list>(<parameter><decl><type><name>void</name></type></decl></parameter>)</parameter_list>
+<block>{
+        <comment type="line">//freopen("in.txt", "r", stdin);</comment>
+        <comment type="line">//freopen("out1.txt", "w", stdout);</comment>
+        <comment type="line">//memset(dp1,0,5001*3001*sizeof(int));</comment>
+        <comment type="line">//map&lt;long long int,   int&gt;ma;</comment>
+        <comment type="line">//vector&lt;long long int&gt;::iterator iter;</comment>
+        <comment type="line">//memset(m,0,100000*sizeof(int));</comment>
+        <comment type="line">//for(int x=1;x&lt;=n;x++)</comment>
+        <comment type="line">//scanf("%d%d",&amp;a,&amp;b);</comment>
+        <comment type="line">//printf("%d\n",0x7FFFFFFF);</comment>
+        <comment type="line">//freopen("ate.in ", "r", stdin);</comment>
+        <comment type="line">//freopen("ate.out ", "w", stdout);</comment>
+        <decl_stmt><decl><type><name>int</name></type> <name>a</name></decl>,<decl><type ref="prev"/><name>s</name></decl>,<decl><type ref="prev"/><name>d</name></decl>,<decl><type ref="prev"/><name>f</name></decl>,<decl><type ref="prev"/><name>g</name></decl>,<decl><type ref="prev"/><name>h</name></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d%d%d%d%d%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>a</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>s</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>d</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>f</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>g</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>h</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><operator>(</operator><name>a</name><operator>+</operator><name>s</name><operator>+</operator><name>d</name><operator>)</operator><operator>*</operator><operator>(</operator><name>a</name><operator>+</operator><name>s</name><operator>+</operator><name>d</name><operator>)</operator><operator>-</operator><name>a</name><operator>*</operator><name>a</name><operator>-</operator><name>d</name><operator>*</operator><name>d</name><operator>-</operator><name>g</name><operator>*</operator><name>g</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr><literal type="number">0</literal></expr>;</return>
+
+}</block></function>
+
+
+
+
+
+
+
+</unit>

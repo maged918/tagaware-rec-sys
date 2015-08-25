@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12193228.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<comment type="block">/*
+    Name: Domestic Networks
+    Copyright: @lzt2002
+    Author: lzt2002
+    Date: 20/07/15 20:08
+    Description: POJ
+*/</comment>
+
+<include>#<directive>include</directive><file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;math.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;ctype.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;bitset&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cassert&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cctype&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cerrno&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cfloat&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;ciso646&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;climits&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;clocale&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;complex&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;csetjmp&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;csignal&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstdarg&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstddef&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;ctime&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cwchar&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cwctype&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;deque&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;exception&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;fstream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;functional&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;iomanip&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;ios&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;iosfwd&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;istream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;iterator&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;limits&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;list&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;locale&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;memory&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;new&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;numeric&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;ostream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;sstream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;stdexcept&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;streambuf&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;typeinfo&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;utility&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;valarray&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;string.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;stdlib.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;stdio.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<define>#<directive>define</directive> <macro><name>havetxt</name></macro> <value>0</value></define>
+<define>#<directive>define</directive> <macro><name>shuru</name></macro> <value>"input.txt"</value></define>
+<define>#<directive>define</directive> <macro><name>shuchu</name></macro> <value>"output.txt"</value></define>
+<define>#<directive>define</directive> <macro><name>inf</name></macro> <value>0x7fffffff</value></define>
+<define>#<directive>define</directive> <macro><name>esp</name></macro> <value>1e-9</value></define>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>bool</name></type> <name>flag</name></decl>;</decl_stmt>
+
+<function><type><name>void</name></type> <name>init</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name></expr>;</expr_stmt>
+    
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;=</operator><name>n</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>a</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>a</name></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name>a</name><operator>==</operator><literal type="number">1</literal></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>flag</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></for>
+    
+    <if>if<condition>(<expr><name>flag</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><operator>-</operator><literal type="number">1</literal><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+    }</block></then>
+    <else>else
+    <block>{
+        <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="number">1</literal><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+    }</block></else></if>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name>init</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

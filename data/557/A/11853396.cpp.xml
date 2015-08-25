@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="11853396.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>l1</name></decl>, <decl><type ref="prev"/><name>l2</name></decl>, <decl><type ref="prev"/><name>l3</name></decl>, <decl><type ref="prev"/><name>m1</name></decl>, <decl><type ref="prev"/><name>m2</name></decl>, <decl><type ref="prev"/><name>m3</name></decl>, <decl><type ref="prev"/><name>a1</name></decl>, <decl><type ref="prev"/><name>a2</name></decl>, <decl><type ref="prev"/><name>a3</name></decl>;</decl_stmt>
+
+<function><type><name>void</name></type> <name>ans</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><name>a1</name> <operator>=</operator> <name>m1</name></expr>;</expr_stmt> <expr_stmt><expr><name>a2</name> <operator>=</operator> <name>m2</name></expr>;</expr_stmt> <expr_stmt><expr><name>a3</name> <operator>=</operator> <name>m3</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>s</name> <init>= <expr><name>a1</name> <operator>+</operator> <name>a2</name> <operator>+</operator> <name>a3</name></expr></init></decl>;</decl_stmt>
+    <if>if <condition>(<expr><name>s</name> <operator>&gt;</operator> <name>n</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>s</name> <operator>-=</operator> <operator>(</operator><name>m3</name> <operator>-</operator> <name>l3</name><operator>)</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name>a3</name> <operator>=</operator> <name>l3</name></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name>s</name> <operator>&lt;</operator> <name>n</name></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>a3</name> <operator>+=</operator> <operator>(</operator><name>n</name> <operator>-</operator> <name>s</name><operator>)</operator></expr>;</expr_stmt>
+            <return>return;</return>
+        }</block></then></if>
+    }</block></then></if>
+    <if>if <condition>(<expr><name>s</name> <operator>&gt;</operator> <name>n</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>s</name> <operator>-=</operator> <operator>(</operator><name>m2</name> <operator>-</operator> <name>l2</name><operator>)</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name>a2</name> <operator>=</operator> <name>l2</name></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name>s</name> <operator>&lt;</operator> <name>n</name></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>a2</name> <operator>+=</operator> <operator>(</operator><name>n</name> <operator>-</operator> <name>s</name><operator>)</operator></expr>;</expr_stmt>
+            <return>return;</return>
+        }</block></then></if>
+    }</block></then></if>
+    <if>if <condition>(<expr><name>s</name> <operator>&gt;</operator> <name>n</name></expr>)</condition><then>
+    <block>{
+        <expr_stmt><expr><name>s</name> <operator>-=</operator> <operator>(</operator><name>m1</name> <operator>-</operator> <name>l1</name><operator>)</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name>a1</name> <operator>=</operator> <name>l1</name></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name>s</name> <operator>&lt;</operator> <name>n</name></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>a1</name> <operator>+=</operator> <operator>(</operator><name>n</name> <operator>-</operator> <name>s</name><operator>)</operator></expr>;</expr_stmt>
+            <return>return;</return>
+        }</block></then></if>
+    }</block></then></if>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>l1</name> <operator>&gt;&gt;</operator> <name>m1</name> <operator>&gt;&gt;</operator> <name>l2</name> <operator>&gt;&gt;</operator> <name>m2</name> <operator>&gt;&gt;</operator> <name>l3</name> <operator>&gt;&gt;</operator> <name>m3</name></expr>;</expr_stmt>
+    <if>if <condition>(<expr><name>m1</name> <operator>&gt;</operator> <name>n</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>m1</name> <operator>=</operator> <name>n</name></expr>;</expr_stmt></block></then></if>
+    <if>if <condition>(<expr><name>m2</name> <operator>&gt;</operator> <name>n</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>m2</name> <operator>=</operator> <name>n</name></expr>;</expr_stmt></block></then></if>
+    <if>if <condition>(<expr><name>m3</name> <operator>&gt;</operator> <name>n</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>m3</name> <operator>=</operator> <name>n</name></expr>;</expr_stmt></block></then></if>
+    <expr_stmt><expr><call><name>ans</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>a1</name> <operator>&lt;&lt;</operator> <literal type="string">" "</literal> <operator>&lt;&lt;</operator> <name>a2</name> <operator>&lt;&lt;</operator> <literal type="string">" "</literal> <operator>&lt;&lt;</operator> <name>a3</name></expr>;</expr_stmt>
+}</block></function>
+</unit>

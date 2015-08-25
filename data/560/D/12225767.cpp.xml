@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12225767.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<comment type="block">/*input
+abcdxyzt
+abcdtzxy
+*/</comment>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;deque&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;list&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;bitset&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;fstream&gt;</file></include>
+
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>st</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>nd</name></macro> <value>second</value></define>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>lld</name>;</typedef>
+<typedef>typedef <type><name>unsigned</name> <name>long</name> <name>long</name></type> <name>llu</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>vi</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>long</name> <name>long</name></expr></argument>&gt;</argument_list></name></type> <name>vll</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>unsigned</name> <name>long</name> <name>long</name></expr></argument>&gt;</argument_list></name></type> <name>vlu</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>, <argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>pii</name>;</typedef>
+
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>string</name></type> <name>s</name></decl>, <decl><type ref="prev"/><name>t</name></decl>;</decl_stmt>
+
+<function><type><name>bool</name></type> <name>canEqual</name> <parameter_list>(<parameter><decl><type><name>string</name></type> <name>s</name></decl></parameter>, <parameter><decl><type><name>string</name></type> <name>t</name></decl></parameter>)</parameter_list> <block>{
+	<decl_stmt><decl><type><name>int</name></type> <name><name>mark</name><index>[<expr><literal type="number">26</literal> <operator>+</operator> <literal type="number">8</literal></expr>]</index></name></decl>;</decl_stmt>
+	<expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>mark</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><sizeof>sizeof <name>mark</name></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <call><name><name>s</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><name><name>mark</name><index>[<expr><name><name>s</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <literal type="char">'a'</literal></expr>]</index></name><operator>++</operator></expr>;</expr_stmt></block></for>
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <call><name><name>t</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><name><name>mark</name><index>[<expr><name><name>t</name><index>[<expr><name>i</name></expr>]</index></name> <operator>-</operator> <literal type="char">'a'</literal></expr>]</index></name><operator>--</operator></expr>;</expr_stmt></block></for>
+
+	<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <literal type="number">26</literal> <operator>+</operator> <literal type="number">8</literal></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+		<block type="pseudo"><if>if <condition>(<expr><name><name>mark</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&gt;</operator> <literal type="number">0</literal></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="boolean">false</literal></expr>;</return></block></then></if></block></for>
+	<return>return <expr><literal type="boolean">true</literal></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>match</name><parameter_list>(<parameter><decl><type><name>string</name></type> <name>x</name></decl></parameter>, <parameter><decl><type><name>string</name></type> <name>y</name></decl></parameter>)</parameter_list> <block>{
+	<comment type="line">// cout &lt;&lt; x &lt;&lt; " " &lt;&lt; y &lt;&lt; endl;</comment>
+	<if>if <condition>(<expr><name>x</name> <operator>==</operator> <name>y</name></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="boolean">true</literal></expr>;</return></block></then></if>
+	<if>if <condition>(<expr><call><name><name>x</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call> <operator>%</operator> <literal type="number">2</literal> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="boolean">false</literal></expr>;</return></block></then></if>
+	<if>if <condition>(<expr><operator>!</operator><call><name>canEqual</name><argument_list>(<argument><expr><name>x</name></expr></argument>, <argument><expr><name>y</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="boolean">false</literal></expr>;</return></block></then></if>
+
+	<decl_stmt><decl><type><name>int</name></type> <name>len</name> <init>= <expr><call><name><name>x</name><operator>.</operator><name>length</name></name><argument_list>()</argument_list></call> <operator>/</operator> <literal type="number">2</literal></expr></init></decl>;</decl_stmt>
+	<decl_stmt><decl><type><name>bool</name></type> <name>flag1</name> <init>= <expr><call><name>match</name><argument_list>(<argument><expr><call><name><name>x</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>len</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><call><name><name>y</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><name>len</name></expr></argument>, <argument><expr><name>len</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call> <operator>&amp;&amp;</operator> <call><name>match</name><argument_list>(<argument><expr><call><name><name>x</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><name>len</name></expr></argument>, <argument><expr><name>len</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><call><name><name>y</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>len</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+	<if>if <condition>(<expr><name>flag1</name></expr>)</condition><then> <block type="pseudo"><return>return <expr><name>flag1</name></expr>;</return></block></then></if>
+
+	<decl_stmt><decl><type><name>bool</name></type> <name>flag2</name> <init>= <expr><call><name>match</name><argument_list>(<argument><expr><call><name><name>x</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>len</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><call><name><name>y</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>len</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call> <operator>&amp;&amp;</operator> <call><name>match</name><argument_list>(<argument><expr><call><name><name>x</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><name>len</name></expr></argument>, <argument><expr><name>len</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><call><name><name>y</name><operator>.</operator><name>substr</name></name><argument_list>(<argument><expr><name>len</name></expr></argument>, <argument><expr><name>len</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+	<return>return <expr><name>flag2</name></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>s</name> <operator>&gt;&gt;</operator> <name>t</name></expr>;</expr_stmt>
+	<expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <operator>(</operator><ternary><condition><expr><call><name>match</name><argument_list>(<argument><expr><name>s</name></expr></argument>, <argument><expr><name>t</name></expr></argument>)</argument_list></call></expr> ?</condition><then> <expr><literal type="string">"YES"</literal></expr> </then><else>: <expr><literal type="string">"NO"</literal></expr></else></ternary><operator>)</operator> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

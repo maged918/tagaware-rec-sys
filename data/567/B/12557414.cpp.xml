@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12557414.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+<define>#<directive>define</directive> <macro><name>X</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>Y</name></macro> <value>second</value></define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>int</name> <specifier>const</specifier></type> <name>N</name> <init>= <expr><literal type="number">101</literal></expr></init></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>mx</name></decl>, <decl><type ref="prev"/><name>n</name></decl>, <decl><type ref="prev"/><name>ans</name></decl>, <decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name><name>set</name> <argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>a</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>char</name></type> <name>ch</name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    <comment type="line">//freopen("input.txt","r",stdin);</comment>
+    <expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>;</expr_stmt>
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>ch</name> <operator>&gt;&gt;</operator> <name>m</name></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name>ch</name> <operator>==</operator> <literal type="char">'+'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><call><name><name>a</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>m</name></expr></argument>)</argument_list></call></expr><operator>,</operator> <expr><name>mx</name><operator>++</operator></expr>;</expr_stmt></block></then>
+        <elseif>else <if>if <condition>(<expr><call><name><name>a</name><operator>.</operator><name>count</name></name><argument_list>(<argument><expr><name>m</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>mx</name><operator>--</operator></expr><operator>,</operator> <expr><call><name><name>a</name><operator>.</operator><name>erase</name></name><argument_list>(<argument><expr><name>m</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if></elseif>
+            <else>else <block type="pseudo"><expr_stmt><expr><name>ans</name><operator>++</operator></expr>;</expr_stmt></block></else></if>
+            <expr_stmt><expr><name>ans</name> <operator>=</operator> <call><name>max</name><argument_list>(<argument><expr><name>ans</name></expr></argument>, <argument><expr><name>mx</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></for>
+    <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>ans</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12454496.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;ctime&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;deque&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;fstream&gt;</file></include>
+
+<define>#<directive>define</directive> <macro><name>sqr</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro>  <value>((x) * (x))</value></define>
+<define>#<directive>define</directive> <macro><name>rep</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>n</name></type></parameter>)</parameter_list></macro>  <value>for(int i = 0;i &lt; (n);++i)</value></define>
+<define>#<directive>define</directive> <macro><name>fill</name><parameter_list>(<parameter><type><name>x</name></type></parameter>,<parameter><type><name>y</name></type></parameter>)</parameter_list></macro> <value>memset(x,y,sizeof(x))</value></define>
+<define>#<directive>define</directive> <macro><name>REP</name><parameter_list>(<parameter><type><name>v</name></type></parameter>,<parameter><type><name>p</name></type></parameter>,<parameter><type><name>k</name></type></parameter>)</parameter_list></macro> <value>for(int v=p;v&lt;=k;++v)</value></define>
+<define>#<directive>define</directive> <macro><name>sz</name><parameter_list>(<parameter><type><name>c</name></type></parameter>)</parameter_list></macro> <value>(int)c.size()</value></define>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef> 
+<typedef>typedef <type><name>unsigned</name> <name>int</name></type> <name>uint</name>;</typedef>
+
+<typedef>typedef <type><name>long</name> <name>double</name></type> <name>ld</name>;</typedef>
+<typedef>typedef <type><name>unsigned</name> <name>long</name> <name>long</name></type> <name>ull</name>;</typedef>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+	<expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>( <argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+<comment type="line">//	clock_t start = clock();</comment>
+<comment type="line">//	freopen("INPUT.txt","r",stdin);</comment>
+<comment type="line">//	freopen("OUTPUT.txt","w",stdout);</comment>
+<comment type="line">//	cout &lt;&lt; endl &lt;&lt; double(clock() - start) / CLOCKS_PER_SEC &lt;&lt; endl;	</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>p</name></decl>,<decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>p</name> <operator>&gt;&gt;</operator> <name>q</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>a</name> <init>= <expr><literal type="boolean">true</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>z</name> <init>= <expr><literal type="boolean">true</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>kol1</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>kol2</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>ans</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>pi</name> <init>= <expr><literal type="boolean">false</literal></expr></init></decl>;</decl_stmt>
+    <while>while<condition>(<expr><name>i</name> <operator>&lt;</operator> <literal type="number">2000000</literal></expr>)</condition><block>{
+    	<decl_stmt><decl><type><name>int</name></type> <name>y</name> <init>= <expr><call><name>int</name><argument_list>(<argument><expr><call><name>sqrt</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    	<for>for<control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init><condition><expr><name>j</name> <operator>&lt;</operator> <name>y</name> <operator>+</operator> <literal type="number">1</literal></expr>;</condition><incr><expr><operator>++</operator><name>j</name></expr></incr>)</control><block>{
+    		<if>if<condition>(<expr><operator>(</operator><name>i</name> <operator>!=</operator> <name>j</name> <operator>&amp;&amp;</operator> <name>i</name> <operator>%</operator> <name>j</name> <operator>==</operator> <literal type="number">0</literal> <operator>&amp;&amp;</operator> <name>j</name> <operator>!=</operator> <literal type="number">1</literal> <operator>)</operator><operator>||</operator> <operator>(</operator><name>i</name> <operator>==</operator> <literal type="number">1</literal><operator>)</operator></expr>)</condition><then><block>{
+    			<expr_stmt><expr><name>z</name> <operator>=</operator> <literal type="boolean">false</literal></expr>;</expr_stmt>
+    			<break>break;</break>
+    		}</block></then></if>                   	
+    	}</block></for>
+    	<if>if<condition>(<expr><name>z</name> <operator>==</operator> <literal type="boolean">true</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>kol1</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+    	<expr_stmt><expr><name>z</name> <operator>=</operator> <literal type="boolean">true</literal></expr>;</expr_stmt>		
+   
+    	<decl_stmt><decl><type><name>int</name></type> <name>u</name> <init>= <expr><name>i</name></expr></init></decl>;</decl_stmt>
+    	<decl_stmt><decl><type><name>int</name></type> <name>o</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    	<while>while<condition>(<expr><name>u</name> <operator>!=</operator> <literal type="number">0</literal></expr>)</condition><block>{
+    		<expr_stmt><expr><name>o</name> <operator>=</operator> <name>o</name> <operator>*</operator> <literal type="number">10</literal> <operator>+</operator> <name>u</name> <operator>%</operator> <literal type="number">10</literal></expr>;</expr_stmt>
+    		<expr_stmt><expr><name>u</name><operator>/=</operator><literal type="number">10</literal></expr>;</expr_stmt>
+    	}</block></while>	
+    	<if>if<condition>(<expr><name>i</name> <operator>==</operator> <name>o</name></expr>)</condition><then><block>{
+    		<expr_stmt><expr><name>kol2</name><operator>++</operator></expr>;</expr_stmt>
+    	}</block></then></if>
+    	<decl_stmt><decl><type><name>double</name></type> <name>k1</name></decl>,<decl><type ref="prev"/><name>k2</name></decl>;</decl_stmt>
+    	<expr_stmt><expr><name>k1</name> <operator>=</operator> <call><name>double</name><argument_list>(<argument><expr><name>kol1</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    	<expr_stmt><expr><name>k2</name> <operator>=</operator> <call><name>double</name><argument_list>(<argument><expr><name>kol2</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <comment type="line">//	cout &lt;&lt; kol1 &lt;&lt; " " &lt;&lt; kol2 &lt;&lt; " " &lt;&lt; i &lt;&lt; "\n";</comment>
+    	<if>if<condition>(<expr><name>k1</name> <operator>-</operator> <operator>(</operator><name>p</name> <operator>/</operator> <name>q</name><operator>)</operator> <operator>*</operator> <name>k2</name> <operator>&gt;</operator> <literal type="number">0.000000001</literal></expr>)</condition><then><block>{
+    		<if>if<condition>(<expr><name>pi</name> <operator>==</operator> <literal type="boolean">false</literal></expr>)</condition><then><block>{
+    			<expr_stmt><expr><name>ans</name> <operator>=</operator> <name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>;</expr_stmt>    
+       			<expr_stmt><expr><name>pi</name> <operator>=</operator> <literal type="boolean">true</literal></expr>;</expr_stmt>
+       		}</block></then></if>
+    	}</block></then>
+    	<else>else <block type="pseudo"><expr_stmt><expr><name>pi</name> <operator>=</operator> <literal type="boolean">false</literal></expr>;</expr_stmt></block></else></if>
+    	<expr_stmt><expr><name>i</name><operator>++</operator></expr>;</expr_stmt>
+    }</block></while>
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>ans</name></expr>;</expr_stmt>
+	<return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12451876.cpp"><comment type="line">//Language: MS C++</comment>
+
+
+<include>#<directive>include</directive><file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;sstream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;iterator&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstdio&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name>double</name></type> <name>db</name>;</typedef>
+<decl_stmt><decl><type><name>int</name></type> <name>N</name><init>=<expr><literal type="number">50000000</literal></expr></init></decl>;</decl_stmt>
+
+<function><type><name>bool</name></type> <name>check</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>n</name></decl></parameter>)</parameter_list><block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>m</name><init>=<expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>nn</name><init>=<expr><name>n</name></expr></init></decl>;</decl_stmt>
+    <while>while <condition>(<expr><name>n</name></expr>)</condition><block>{<expr_stmt><expr><name>m</name><operator>=</operator><name>m</name><operator>*</operator><literal type="number">10</literal><operator>+</operator><name>n</name><operator>%</operator><literal type="number">10</literal></expr>;</expr_stmt> <expr_stmt><expr><name>n</name><operator>/=</operator><literal type="number">10</literal></expr>;</expr_stmt>}</block></while>
+    <return>return <expr><name>m</name><operator>==</operator><name>nn</name></expr>;</return>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+    <decl_stmt><decl><type><name>ll</name></type> <name>A</name></decl>, <decl><type ref="prev"/><name>p</name></decl>, <decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>p</name><operator>&gt;&gt;</operator><name>q</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name><name>vector</name> <argument_list type="generic">&lt;<argument><expr><name>bool</name></expr></argument>&gt;</argument_list></name></type> <name>a</name><argument_list>(<argument><expr><name>N</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>ll</name></type> <name>splay</name><init>=<expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>palindrom</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+<for>for <control>(<init><decl><type><name>ll</name></type> <name>i</name><init>=<expr><literal type="number">2</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block type="pseudo"><if>if <condition>(<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+        <block type="pseudo"><for>for <control>(<init><decl><type><name>ll</name></type> <name>j</name><init>=<expr><name>i</name><operator>*</operator><name>i</name></expr></init></decl>;</init> <condition><expr><name>j</name><operator>&lt;</operator><name>N</name></expr>;</condition> <incr><expr><name>j</name><operator>+=</operator><name>i</name></expr></incr>)</control>
+            <block type="pseudo"><expr_stmt><expr><name><name>a</name><index>[<expr><name>j</name></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt></block></for></block></then></if></block></for>
+<expr_stmt><expr><name><name>a</name><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt>
+
+<decl_stmt><decl><type><name>int</name></type> <name>ans</name><init>=<expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+<for>for <control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+    <if>if <condition>(<expr><operator>!</operator><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><name>splay</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+    
+    <if>if <condition>(<expr><call><name>check</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><name>palindrom</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+
+    <if>if <condition>(<expr><name>q</name><operator>*</operator><name>splay</name><operator>&lt;=</operator><name>p</name><operator>*</operator><name>palindrom</name></expr>)</condition><then>
+        <block type="pseudo"><expr_stmt><expr><name>ans</name><operator>=</operator><name>i</name></expr>;</expr_stmt></block></then></if>
+}</block></for>
+<if>if <condition>(<expr><name>ans</name><operator>!=</operator><operator>-</operator><literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>ans</name></expr>;</expr_stmt></block></then>
+<else>else <block type="pseudo"><expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"Palindromic tree is better than splay tree"</literal></expr>;</expr_stmt></block></else></if>
+}</block></function></unit>

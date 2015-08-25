@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12203837.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<comment type="line">//</comment>
+<comment type="line">//  main.cpp</comment>
+<comment type="line">//  df s</comment>
+<comment type="line">//</comment>
+<comment type="line">//  Created by hahaha on 15/6/22.</comment>
+<comment type="line">//  Copyright (c) 2015å¹´ hahaha. All rights reserved.</comment>
+<include>#<directive>include</directive><file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cmath&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list><block>{
+    <decl_stmt><decl><type><name>int</name></type> <name><name>a</name><index>[<expr><literal type="number">7</literal></expr>]</index></name></decl>;</decl_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><literal type="number">6</literal></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block type="pseudo"><expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>a</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <operator>(</operator><name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>+</operator><name><name>a</name><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>+</operator><name><name>a</name><index>[<expr><literal type="number">2</literal></expr>]</index></name><operator>)</operator><operator>*</operator><operator>(</operator><name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>+</operator><name><name>a</name><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>+</operator><name><name>a</name><index>[<expr><literal type="number">2</literal></expr>]</index></name><operator>)</operator><operator>-</operator><name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>*</operator><name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name><operator>-</operator><name><name>a</name><index>[<expr><literal type="number">4</literal></expr>]</index></name><operator>*</operator><name><name>a</name><index>[<expr><literal type="number">4</literal></expr>]</index></name><operator>-</operator><name><name>a</name><index>[<expr><literal type="number">2</literal></expr>]</index></name><operator>*</operator><name><name>a</name><index>[<expr><literal type="number">2</literal></expr>]</index></name><operator>&lt;&lt;</operator><name>endl</name></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

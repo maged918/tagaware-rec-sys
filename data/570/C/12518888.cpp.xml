@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12518888.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<comment type="line">//#define _CRT_SECURE_NO_WARNINGS</comment>
+<comment type="line">//#include &lt;iostream&gt;</comment>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<comment type="line">//#include &lt;vector&gt;</comment>
+<comment type="line">//#include &lt;cmath&gt;</comment>
+<comment type="line">//#include &lt;stdio.h&gt;</comment>
+<comment type="line">//#include &lt;algorithm&gt;</comment>
+<comment type="line">//#include &lt;set&gt;</comment>
+<comment type="line">//#include &lt;map&gt;</comment>
+<comment type="line">//#include &lt;fstream&gt;</comment>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    <comment type="line">//ifstream cin("in.txt");</comment>
+    <comment type="line">//ofstream cout("ou.txt");</comment>
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+    <comment type="line">//cin&gt;&gt;n&gt;&gt;m;    </comment>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>n</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>m</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>char</name></type> <name><name>buffer</name><index>[<expr><literal type="number">300100</literal></expr>]</index></name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%s"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>buffer</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>string</name></type> <name>s</name><argument_list>(<argument><expr><name>buffer</name></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>dot</name><init>=<expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>c</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>otr</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>  
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>n</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+        <if>if <condition>(<expr><name><name>s</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{         
+            <expr_stmt><expr><name>c</name><operator>++</operator></expr>;</expr_stmt>
+            <expr_stmt><expr><name>dot</name><operator>++</operator></expr>;</expr_stmt>
+        }</block></then> <else>else <block>{
+            <if>if <condition>(<expr><name>c</name> <operator>&gt;</operator> <literal type="number">0</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>otr</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+            <expr_stmt><expr><name>c</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></for>
+    <if>if <condition>(<expr><name>c</name> <operator>&gt;</operator> <literal type="number">0</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>otr</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+    
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>&lt;</operator><name>m</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control><block>{
+        <decl_stmt><decl><type><name>int</name></type> <name>x</name></decl>;</decl_stmt> <decl_stmt><decl><type><name>char</name></type> <name>c</name></decl>;</decl_stmt>
+        <comment type="line">//cin&gt;&gt;x&gt;&gt;c;</comment>
+        <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %c"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>x</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>c</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>x</name><operator>--</operator></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name><name>s</name><index>[<expr><name>x</name></expr>]</index></name><operator>!=</operator><literal type="char">'.'</literal> <operator>&amp;&amp;</operator> <name>c</name><operator>!=</operator><literal type="char">'.'</literal></expr>)</condition><then> <block>{ <comment type="block">/*cout&lt;&lt;dot-otr&lt;&lt;endl;*/</comment> <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>dot</name><operator>-</operator><name>otr</name></expr></argument>)</argument_list></call></expr>;</expr_stmt> <continue>continue;</continue> }</block></then></if> <comment type="line">// obe bukv</comment>
+        <if>if <condition>(<expr><name><name>s</name><index>[<expr><name>x</name></expr>]</index></name><operator>==</operator><name>c</name></expr>)</condition><then> <block>{ <comment type="block">/*cout&lt;&lt;dot-otr&lt;&lt;endl;*/</comment> <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>dot</name><operator>-</operator><name>otr</name></expr></argument>)</argument_list></call></expr>;</expr_stmt> <continue>continue;</continue> }</block></then></if> <comment type="line">// odinakov</comment>
+        <if>if <condition>(<expr><name>c</name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{ <comment type="line">// vstavit tochky</comment>
+            <expr_stmt><expr><name><name>s</name><index>[<expr><name>x</name></expr>]</index></name> <operator>=</operator> <name>c</name></expr>;</expr_stmt>
+            <if>if <condition>(<expr><name>x</name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then><block>{
+                <if>if <condition>(<expr><name>n</name><operator>&gt;</operator><literal type="number">1</literal></expr>)</condition><then><block>{
+                    <if>if <condition>(<expr><name><name>s</name><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{
+                        <expr_stmt><expr><name>dot</name><operator>++</operator></expr>;</expr_stmt>
+                    }</block></then> <else>else<block>{
+                        <expr_stmt><expr><name>dot</name><operator>++</operator></expr>;</expr_stmt>
+                        <expr_stmt><expr><name>otr</name><operator>++</operator></expr>;</expr_stmt>
+                    }</block></else></if>
+                }</block></then> <else>else<block>{
+                    <expr_stmt><expr><name>otr</name><operator>++</operator></expr>;</expr_stmt>
+                    <expr_stmt><expr><name>dot</name><operator>++</operator></expr>;</expr_stmt>
+                }</block></else></if>
+            }</block></then> <else>else<block>{
+                <if>if <condition>(<expr><name>x</name><operator>==</operator><name>n</name><operator>-</operator><literal type="number">1</literal></expr>)</condition><then><block>{
+                    <if>if <condition>(<expr><name>n</name><operator>&gt;</operator><literal type="number">1</literal></expr>)</condition><then><block>{
+                        <if>if <condition>(<expr><name><name>s</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">2</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{
+                            <expr_stmt><expr><name>dot</name><operator>++</operator></expr>;</expr_stmt>
+                        }</block></then> <else>else<block>{
+                            <expr_stmt><expr><name>dot</name><operator>++</operator></expr>;</expr_stmt>
+                            <expr_stmt><expr><name>otr</name><operator>++</operator></expr>;</expr_stmt>
+                        }</block></else></if>
+                    }</block></then> <else>else<block>{
+                        <expr_stmt><expr><name>otr</name><operator>++</operator></expr>;</expr_stmt>
+                        <expr_stmt><expr><name>dot</name><operator>++</operator></expr>;</expr_stmt>
+                    }</block></else></if>
+                }</block></then> <else>else<block>{
+                    <if>if <condition>(<expr><name><name>s</name><index>[<expr><name>x</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal> <operator>&amp;&amp;</operator> <name><name>s</name><index>[<expr><name>x</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{
+                        <expr_stmt><expr><name>dot</name><operator>++</operator></expr>;</expr_stmt>
+                        <expr_stmt><expr><name>otr</name><operator>--</operator></expr>;</expr_stmt>
+                    }</block></then> <else>else<block>{
+                        <if>if <condition>(<expr><name><name>s</name><index>[<expr><name>x</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal> <operator>||</operator> <name><name>s</name><index>[<expr><name>x</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{
+                            <expr_stmt><expr><name>dot</name><operator>++</operator></expr>;</expr_stmt>
+                        }</block></then> <else>else<block>{
+                            <expr_stmt><expr><name>dot</name><operator>++</operator></expr>;</expr_stmt>
+                            <expr_stmt><expr><name>otr</name><operator>++</operator></expr>;</expr_stmt>
+                        }</block></else></if>
+                    }</block></else></if>
+                }</block></else></if>
+            }</block></else></if>
+            <comment type="line">//cout&lt;&lt;dot-otr&lt;&lt;endl;</comment>
+            <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>dot</name><operator>-</operator><name>otr</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <continue>continue;</continue>
+        }</block></then></if>
+        <comment type="line">//vstavit bukvy         </comment>
+        <expr_stmt><expr><name><name>s</name><index>[<expr><name>x</name></expr>]</index></name> <operator>=</operator> <name>c</name></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name>x</name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then><block>{
+            <if>if <condition>(<expr><name>n</name><operator>&gt;</operator><literal type="number">1</literal></expr>)</condition><then><block>{
+                <if>if <condition>(<expr><name><name>s</name><index>[<expr><literal type="number">1</literal></expr>]</index></name><operator>!=</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{
+                    <expr_stmt><expr><name>otr</name><operator>--</operator></expr>;</expr_stmt>
+                    <expr_stmt><expr><name>dot</name><operator>--</operator></expr>;</expr_stmt>
+                }</block></then> <else>else<block>{
+                    <expr_stmt><expr><name>dot</name><operator>--</operator></expr>;</expr_stmt>
+                }</block></else></if>
+            }</block></then> <else>else<block>{
+                <expr_stmt><expr><name>otr</name><operator>--</operator></expr>;</expr_stmt>
+                <expr_stmt><expr><name>dot</name><operator>--</operator></expr>;</expr_stmt>
+            }</block></else></if>
+        }</block></then> <else>else<block>{
+            <if>if <condition>(<expr><name>x</name><operator>==</operator><name>n</name><operator>-</operator><literal type="number">1</literal></expr>)</condition><then><block>{
+                <if>if <condition>(<expr><name>n</name><operator>&gt;</operator><literal type="number">1</literal></expr>)</condition><then><block>{
+                    <if>if <condition>(<expr><name><name>s</name><index>[<expr><name>n</name><operator>-</operator><literal type="number">2</literal></expr>]</index></name><operator>!=</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{
+                        <expr_stmt><expr><name>otr</name><operator>--</operator></expr>;</expr_stmt>
+                        <expr_stmt><expr><name>dot</name><operator>--</operator></expr>;</expr_stmt>
+                    }</block></then> <else>else<block>{
+                        <expr_stmt><expr><name>dot</name><operator>--</operator></expr>;</expr_stmt>
+                    }</block></else></if>
+                }</block></then> <else>else<block>{
+                    <expr_stmt><expr><name>otr</name><operator>--</operator></expr>;</expr_stmt>
+                    <expr_stmt><expr><name>dot</name><operator>--</operator></expr>;</expr_stmt>
+                }</block></else></if>
+            }</block></then> <else>else<block>{
+                <if>if <condition>(<expr><name><name>s</name><index>[<expr><name>x</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>!=</operator><literal type="char">'.'</literal> <operator>&amp;&amp;</operator> <name><name>s</name><index>[<expr><name>x</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>!=</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{
+                    <expr_stmt><expr><name>otr</name><operator>--</operator></expr>;</expr_stmt>
+                    <expr_stmt><expr><name>dot</name><operator>--</operator></expr>;</expr_stmt>
+                }</block></then> <else>else<block>{
+                    <if>if <condition>(<expr><name><name>s</name><index>[<expr><name>x</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>!=</operator><literal type="char">'.'</literal> <operator>||</operator> <name><name>s</name><index>[<expr><name>x</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>!=</operator><literal type="char">'.'</literal></expr>)</condition><then><block>{
+                        <expr_stmt><expr><name>dot</name><operator>--</operator></expr>;</expr_stmt>
+                    }</block></then> <else>else<block>{
+                        <expr_stmt><expr><name>otr</name><operator>++</operator></expr>;</expr_stmt>
+                        <expr_stmt><expr><name>dot</name><operator>--</operator></expr>;</expr_stmt>
+                    }</block></else></if>
+                }</block></else></if>
+            }</block></else></if>
+        }</block></else></if>
+        <comment type="line">//cout&lt;&lt;dot-otr&lt;&lt;endl;</comment>
+        <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>dot</name><operator>-</operator><name>otr</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></for>
+    
+}</block></function></unit>

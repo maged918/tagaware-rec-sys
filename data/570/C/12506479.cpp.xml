@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12506479.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>fi</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>sc</name></macro> <value>second</value></define>
+<define>#<directive>define</directive> <macro><name>inf</name></macro> <value>2000000000</value></define>
+<define>#<directive>define</directive> <macro><name>MP</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>orta</name></macro> <value>((a+b)/2)</value></define>
+<define>#<directive>define</directive> <macro><name>min3</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>,<parameter><type><name>c</name></type></parameter>)</parameter_list></macro> <value>min(a,min(b,c))</value></define>
+<define>#<directive>define</directive> <macro><name>max3</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>,<parameter><type><name>c</name></type></parameter>)</parameter_list></macro> <value>max(a,max(b,c))</value></define>
+<define>#<directive>define</directive> <macro><name>dbg</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>cerr&lt;&lt;#x&lt;&lt;":"&lt;&lt;x&lt;&lt;endl</value></define>
+<define>#<directive>define</directive> <macro><name>N</name></macro> <value>100005</value></define>
+<define>#<directive>define</directive> <macro><name>MOD</name></macro> <value>1000000007</value></define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<typedef>typedef  <type><name><name>pair</name> <argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument> ,<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>ii</name>;</typedef>
+<typedef>typedef  <type><name>long</name> <name>long</name> <name>int</name></type> <name>lint</name>;</typedef>
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>,<decl><type ref="prev"/><name>q</name></decl>,<decl><type ref="prev"/><name>cevap</name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>string</name></type> <name>a</name></decl>;</decl_stmt>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+	<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>n</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>m</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	<expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>a</name></expr>;</expr_stmt>
+	<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call><operator>-</operator><literal type="number">1</literal></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+		<block type="pseudo"><if>if<condition>(<expr><name><name>a</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal> <operator>&amp;&amp;</operator> <name><name>a</name><index>[<expr><name>i</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then>
+			<block type="pseudo"><expr_stmt><expr><name>cevap</name><operator>++</operator></expr>;</expr_stmt></block></then></if></block></for>
+	<for>for<control>(<init><decl><type><name>int</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>m</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+	<block>{
+		<decl_stmt><decl><type><name>int</name></type> <name>x</name></decl>;</decl_stmt>
+		<decl_stmt><decl><type><name>char</name></type> <name>c</name></decl>;</decl_stmt>
+		<expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %c"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>x</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>c</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+		<expr_stmt><expr><name>x</name><operator>--</operator></expr>;</expr_stmt>
+		<if>if<condition>(<expr><name><name>a</name><index>[<expr><name>x</name></expr>]</index></name><operator>==</operator><name>c</name> <operator>||</operator> <operator>(</operator><name><name>a</name><index>[<expr><name>x</name></expr>]</index></name><operator>!=</operator><literal type="char">'.'</literal> <operator>&amp;&amp;</operator> <name>c</name><operator>!=</operator><literal type="char">'.'</literal><operator>)</operator></expr>)</condition><then>
+		<block>{
+			<expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>cevap</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>	
+			<continue>continue;</continue>
+		}</block></then></if>
+		<if>if<condition>(<expr><name>c</name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then>
+		<block>{
+			<if>if<condition>(<expr><name>x</name><operator>&gt;</operator><literal type="number">0</literal> <operator>&amp;&amp;</operator> <name><name>a</name><index>[<expr><name>x</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cevap</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+			<if>if<condition>(<expr><call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call><operator>-</operator><literal type="number">1</literal><operator>&gt;</operator><name>x</name> <operator>&amp;&amp;</operator> <name><name>a</name><index>[<expr><name>x</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cevap</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+		}</block></then>
+		<else>else
+		<block>{
+			<if>if<condition>(<expr><name>x</name><operator>&gt;</operator><literal type="number">0</literal> <operator>&amp;&amp;</operator> <name><name>a</name><index>[<expr><name>x</name><operator>-</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cevap</name><operator>--</operator></expr>;</expr_stmt></block></then></if>
+			<if>if<condition>(<expr><call><name><name>a</name><operator>.</operator><name>size</name></name><argument_list>()</argument_list></call><operator>-</operator><literal type="number">1</literal><operator>&gt;</operator><name>x</name> <operator>&amp;&amp;</operator> <name><name>a</name><index>[<expr><name>x</name><operator>+</operator><literal type="number">1</literal></expr>]</index></name><operator>==</operator><literal type="char">'.'</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cevap</name><operator>--</operator></expr>;</expr_stmt></block></then></if>			
+		}</block></else></if>
+		<expr_stmt><expr><name><name>a</name><index>[<expr><name>x</name></expr>]</index></name><operator>=</operator><name>c</name></expr>;</expr_stmt>
+		<expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>cevap</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+	}</block></for>
+	
+	
+}</block></function>
+</unit>

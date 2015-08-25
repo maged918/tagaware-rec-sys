@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12450137.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;utility&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;sstream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;iomanip&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef>
+<typedef>typedef <type><name><name>vector</name> <argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>vi</name>;</typedef>
+<typedef>typedef <type><name><name>pair</name><argument_list type="generic">&lt; <argument><expr><name>int</name></expr></argument> ,<argument><expr><name>int</name></expr></argument> &gt;</argument_list></name></type> <name>pii</name>;</typedef>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>sz</name></macro> <value>size()</value></define>
+<define>#<directive>define</directive> <macro><name>ln</name></macro> <value>length()</value></define>
+<define>#<directive>define</directive> <macro><name>fore</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(int i=a;i&lt;b;i++)</value></define>
+<define>#<directive>define</directive> <macro><name>fores</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(int i=a;i&lt;=b;i++)</value></define>
+<define>#<directive>define</directive> <macro><name>ford</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(int i=a;i&gt;=b;i--)</value></define>
+<define>#<directive>define</directive> <macro><name>all</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>a.begin(),a.end()</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>ff</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>ss</name></macro> <value>second</value></define>
+<define>#<directive>define</directive> <macro><name>sc</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>scanf("%d",&amp;a)</value></define>
+<define>#<directive>define</directive> <macro><name>md</name></macro> <value>1000000007</value></define>
+<define>#<directive>define</directive> <macro><name>bl</name></macro> <value>1</value></define>
+<define>#<directive>define</directive> <macro><name>wh</name></macro> <value>0</value></define>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>;</expr_stmt>
+    
+    <decl_stmt><decl><type><name>vi</name></type> <name>num</name><argument_list>(<argument><expr><name>n</name></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>vi</name></type> <name>sp</name><argument_list>(<argument><expr><literal type="number">100001</literal></expr></argument>)</argument_list></decl>;</decl_stmt>
+    
+    <macro><name>fore</name><argument_list>(<argument>i</argument>,<argument><literal type="number">0</literal></argument>,<argument>n</argument>)</argument_list></macro>
+    <block>{
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>num</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+        <if>if<condition>(<expr><name><name>sp</name><index>[<expr><name><name>num</name><index>[<expr><name>i</name></expr>]</index></name></expr>]</index></name><operator>&gt;</operator><literal type="number">0</literal> <operator>||</operator> <name><name>num</name><index>[<expr><name>i</name></expr>]</index></name><operator>&gt;</operator><name>n</name></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name><name>num</name><index>[<expr><name>i</name></expr>]</index></name><operator>*=</operator><operator>-</operator><literal type="number">1</literal></expr>;</expr_stmt>
+        }</block></then></if>
+        
+        <expr_stmt><expr><name><name>sp</name><index>[<expr><call><name>abs</name><argument_list>(<argument><expr><name><name>num</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+    }</block>
+    
+    <decl_stmt><decl><type><name>vi</name></type> <name>note</name></decl>;</decl_stmt>
+    
+    <macro><name>fores</name><argument_list>(<argument>i</argument>,<argument><literal type="number">1</literal></argument>,<argument>n</argument>)</argument_list></macro>
+    <block>{
+        <if>if<condition>(<expr><name><name>sp</name><index>[<expr><name>i</name></expr>]</index></name><operator>==</operator><literal type="number">0</literal></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><call><name><name>note</name><operator>.</operator><name>pb</name></name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block>
+    
+    <decl_stmt><decl><type><name>int</name></type> <name>iter</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    
+    <macro><name>fore</name><argument_list>(<argument>i</argument>,<argument><literal type="number">0</literal></argument>,<argument>n</argument>)</argument_list></macro>
+    <block>{
+        <if>if<condition>(<expr><name><name>num</name><index>[<expr><name>i</name></expr>]</index></name><operator>&gt;</operator><literal type="number">0</literal></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name><name>num</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&lt;&lt;</operator> <literal type="string">" "</literal></expr>;</expr_stmt>
+        }</block></then>
+        <else>else
+        <block>{
+            <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name><name>note</name><index>[<expr><name>iter</name></expr>]</index></name> <operator>&lt;&lt;</operator> <literal type="string">" "</literal></expr>;</expr_stmt>
+            <expr_stmt><expr><name>iter</name><operator>++</operator></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block>
+    
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+
+
+
+
+</unit>

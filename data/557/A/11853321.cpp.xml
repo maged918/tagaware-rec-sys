@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="11853321.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include> 
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include> 
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include> 
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include> 
+<include>#<directive>include</directive> <file>&lt;limits&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;utility&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<define>#<directive>define</directive> <macro><name>TRACE</name><parameter_list>(<parameter><type><name>x</name><modifier>...</modifier></type></parameter>)</parameter_list></macro> <value>x</value></define>
+<define>#<directive>define</directive> <macro><name>WATCH</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>TRACE(cout &lt;&lt; #x" = " &lt;&lt; x &lt;&lt; endl)</value></define>
+<define>#<directive>define</directive> <macro><name>PRINT</name><parameter_list>(<parameter><type><name>x</name><modifier>...</modifier></type></parameter>)</parameter_list></macro> <value>TRACE(printf(x); fflush(stdout))</value></define>
+
+<define>#<directive>define</directive> <macro><name>gc</name></macro> <value>getchar</value></define>  <comment type="line">//unlocked linux</comment>
+<define>#<directive>define</directive> <macro><name>all</name><parameter_list>(<parameter><type><name>v</name></type></parameter>)</parameter_list></macro> <value>(v).begin(), (v).end()</value></define>
+<define>#<directive>define</directive> <macro><name>FU</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(decltype(b) i = (a); i &lt; (b); ++i)</value></define> 
+<define>#<directive>define</directive> <macro><name>fu</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>FU(i, 0, n)</value></define>
+<define>#<directive>define</directive> <macro><name>FD</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for (decltype(b) i = (b)-1; i &gt;= a; --i)</value></define> 
+<define>#<directive>define</directive> <macro><name>fd</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>FD(i, 0, n)</value></define>
+<define>#<directive>define</directive> <macro><name>mod</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>((((a)%(b))+(b))%(b))</value></define> 
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define> 
+<define>#<directive>define</directive> <macro><name>sz</name><parameter_list>(<parameter><type><name>c</name></type></parameter>)</parameter_list></macro> <value>int((c).size())</value></define>
+<define>#<directive>define</directive> <macro><name>mk</name></macro> <value>make_pair</value></define>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>INF</name> <init>= <expr><literal type="number">0x3F3F3F3F</literal></expr></init></decl>;</decl_stmt> <decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>NEGINF</name> <init>= <expr><literal type="number">0xC0C0C0C0</literal></expr></init></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><specifier>const</specifier> <name>double</name></type> <name>EPS</name> <init>= <expr><literal type="number">1e-8</literal></expr></init></decl>;</decl_stmt>
+
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>vi</name>;</typedef> 
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>vi</name></expr></argument>&gt;</argument_list></name></type> <name>vvi</name>;</typedef> 
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>double</name></expr></argument>&gt;</argument_list></name></type> <name>vd</name>;</typedef> 
+<typedef>typedef <type><name>long</name> <name>long</name></type> <name>ll</name>;</typedef> 
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name></type> <name>vll</name>;</typedef> 
+<typedef>typedef <type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>vll</name></expr></argument>&gt;</argument_list></name></type> <name>vvll</name>;</typedef>
+
+<function><type><name>int</name></type> <name>cmp_double</name><parameter_list>(<parameter><decl><type><name>double</name></type> <name>a</name></decl></parameter>, <parameter><decl><type><name>double</name></type> <name>b</name></decl></parameter>, <parameter><decl><type><name>double</name></type> <name>eps</name> <init>= <expr><literal type="number">1e-9</literal></expr></init></decl></parameter>)</parameter_list><block>{
+  <return>return <expr><ternary><condition><expr><name>a</name> <operator>+</operator> <name>eps</name> <operator>&gt;</operator> <name>b</name></expr> ?</condition><then> <expr><ternary><condition><expr><name>b</name> <operator>+</operator> <name>eps</name> <operator>&gt;</operator> <name>a</name></expr> ?</condition><then> <expr><literal type="number">0</literal></expr> </then><else>: <expr><literal type="number">1</literal></expr></else></ternary></expr> </then><else>: <expr><operator>-</operator><literal type="number">1</literal></expr></else></ternary></expr>;</return>  <comment type="line">//0 = iguais, 1 = a maior</comment>
+}</block></function>
+
+
+<function><specifier>inline</specifier> <type><name>void</name></type> <name>scanint</name><parameter_list>(<parameter><decl><type><name>int</name> <modifier>&amp;</modifier></type><name>x</name></decl></parameter>)</parameter_list><block>{
+  <decl_stmt><decl><type><specifier>register</specifier> <name>int</name></type> <name>c</name> <init>= <expr><call><name>gc</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+  <expr_stmt><expr><name>x</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+  <decl_stmt><decl><type><name>int</name></type> <name>neg</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+  <for>for<control>(<init>;</init><condition><expr><operator>(</operator><operator>(</operator><name><name>c</name><argument_list type="generic">&lt;<argument><expr><literal type="number">48</literal> <operator>||</operator> <name>c</name></expr></argument>&gt;</argument_list></name><literal type="number">57</literal><operator>)</operator> <operator>&amp;&amp;</operator> <name>c</name> <operator>!=</operator> <literal type="char">'-'</literal><operator>)</operator></expr>;</condition><incr><expr><name>c</name> <operator>=</operator> <call><name>gc</name><argument_list>()</argument_list></call></expr></incr>)</control><block type="pseudo"><empty_stmt>;</empty_stmt></block></for>
+  <if>if<condition>(<expr><name>c</name><operator>==</operator><literal type="char">'-'</literal></expr>)</condition><then> <block>{<expr_stmt><expr><name>neg</name><operator>=</operator><literal type="number">1</literal></expr>;</expr_stmt><expr_stmt><expr><name>c</name><operator>=</operator><call><name>gc</name><argument_list>()</argument_list></call></expr>;</expr_stmt>}</block></then></if>
+  <for>for<control>(<init>;</init><condition><expr><name>c</name><operator>&gt;</operator><literal type="number">47</literal> <operator>&amp;&amp;</operator> <name>c</name><operator>&lt;</operator><literal type="number">58</literal></expr>;</condition><incr><expr><name>c</name> <operator>=</operator> <call><name>gc</name><argument_list>()</argument_list></call></expr></incr>)</control> <block>{<expr_stmt><expr><name>x</name> <operator>=</operator> <operator>(</operator><name>x</name><operator>&lt;&lt;</operator><literal type="number">1</literal><operator>)</operator> <operator>+</operator> <operator>(</operator><name>x</name><operator>&lt;&lt;</operator><literal type="number">3</literal><operator>)</operator> <operator>+</operator> <name>c</name> <operator>-</operator> <literal type="number">48</literal></expr>;</expr_stmt>}</block></for>
+  <if>if<condition>(<expr><name>neg</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>x</name><operator>=</operator><operator>-</operator><name>x</name></expr>;</expr_stmt></block></then></if>
+}</block></function>
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+  <decl_stmt><decl><type><name>int</name></type> <name>N</name></decl>;</decl_stmt>
+  
+  <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>N</name></expr>;</expr_stmt>
+  <decl_stmt><decl><type><name>int</name></type> <name>min1</name></decl>, <decl><type ref="prev"/><name>max1</name></decl>, <decl><type ref="prev"/><name>min2</name></decl>, <decl><type ref="prev"/><name>max2</name></decl>, <decl><type ref="prev"/><name>min3</name></decl>, <decl><type ref="prev"/><name>max3</name></decl>;</decl_stmt>
+  <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>min1</name> <operator>&gt;&gt;</operator> <name>max1</name> <operator>&gt;&gt;</operator> <name>min2</name> <operator>&gt;&gt;</operator> <name>max2</name> <operator>&gt;&gt;</operator> <name>min3</name> <operator>&gt;&gt;</operator> <name>max3</name></expr>;</expr_stmt>
+  <decl_stmt><decl><type><name>int</name></type> <name>ans1</name> <init>= <expr><name>min1</name></expr></init></decl>;</decl_stmt>
+  <decl_stmt><decl><type><name>int</name></type> <name>ans2</name> <init>= <expr><name>min2</name></expr></init></decl>;</decl_stmt>
+  <decl_stmt><decl><type><name>int</name></type> <name>ans3</name> <init>= <expr><name>min3</name></expr></init></decl>;</decl_stmt>
+  
+  <decl_stmt><decl><type><name>int</name></type> <name>left</name> <init>= <expr><name>N</name> <operator>-</operator> <operator>(</operator><name>ans1</name><operator>+</operator><name>ans2</name><operator>+</operator><name>ans3</name><operator>)</operator></expr></init></decl>;</decl_stmt>
+  
+  <expr_stmt><expr><name>ans1</name> <operator>+=</operator> <call><name>min</name><argument_list>(<argument><expr><name>left</name></expr></argument>, <argument><expr><name>max1</name><operator>-</operator><name>min1</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  
+  <expr_stmt><expr><name>left</name> <operator>-=</operator> <operator>(</operator><name>max1</name><operator>-</operator><name>min1</name><operator>)</operator></expr>;</expr_stmt>
+  <if>if <condition>(<expr><name>left</name> <operator>&lt;=</operator> <literal type="number">0</literal></expr>)</condition><then> <block>{
+    <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d %d %d\n"</literal></expr></argument>, <argument><expr><name>ans1</name></expr></argument>, <argument><expr><name>ans2</name></expr></argument>, <argument><expr><name>ans3</name></expr></argument>)</argument_list></call></expr>;</expr_stmt> <return>return <expr><literal type="number">0</literal></expr>;</return>
+  }</block></then></if>
+  
+  <expr_stmt><expr><name>ans2</name> <operator>+=</operator> <call><name>min</name><argument_list>(<argument><expr><name>left</name></expr></argument>, <argument><expr><name>max2</name><operator>-</operator><name>min2</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+   <expr_stmt><expr><name>left</name> <operator>-=</operator> <operator>(</operator><name>max2</name><operator>-</operator><name>min2</name><operator>)</operator></expr>;</expr_stmt>
+  <if>if <condition>(<expr><name>left</name> <operator>&lt;=</operator> <literal type="number">0</literal></expr>)</condition><then> <block>{
+    <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d %d %d\n"</literal></expr></argument>, <argument><expr><name>ans1</name></expr></argument>, <argument><expr><name>ans2</name></expr></argument>, <argument><expr><name>ans3</name></expr></argument>)</argument_list></call></expr>;</expr_stmt> <return>return <expr><literal type="number">0</literal></expr>;</return>
+  }</block></then></if> 
+  
+  <expr_stmt><expr><name>ans3</name> <operator>+=</operator> <call><name>min</name><argument_list>(<argument><expr><name>left</name></expr></argument>, <argument><expr><name>max3</name><operator>-</operator><name>min3</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d %d %d\n"</literal></expr></argument>, <argument><expr><name>ans1</name></expr></argument>, <argument><expr><name>ans2</name></expr></argument>, <argument><expr><name>ans3</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    
+  <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+
+</unit>

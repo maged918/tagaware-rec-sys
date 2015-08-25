@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12379097.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<comment type="line">// 567D_ships.cc - Codeforces.com 567D Ships program by Sergey 2015</comment>
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<comment type="line" format="doxygen">///////////////////////////////////////////////////////////////////////////////</comment>
+<comment type="line">// Unit tests base Class</comment>
+<comment type="line" format="doxygen">///////////////////////////////////////////////////////////////////////////////</comment>
+
+
+<class>class <name>Unittest</name> <block>{<private type="default"> </private><public>public:
+    <define>#<directive>define</directive> <macro><name>CHECK</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro>  <value>check&lt;long long&gt;(a, b, #a, #b, __FILE__, __LINE__, __FUNCTION__);</value></define>
+    <define>#<directive>define</directive> <macro><name>CHECKT</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro>   <value>check&lt;int&gt;(a, 1, #a, "true", __FILE__, __LINE__, __FUNCTION__);</value></define>
+    <define>#<directive>define</directive> <macro><name>CHECKS</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>check&lt;cs&gt;(a, b, #a, #b, __FILE__, __LINE__, __FUNCTION__);</value></define>
+    <typedef>typedef <type><specifier>const</specifier> <name>string</name><modifier>&amp;</modifier></type> <name>cs</name>;</typedef>
+    <decl_stmt><decl><type><name>int</name></type> <name>checks</name></decl>, <decl><type ref="prev"/><name>fails</name></decl>;</decl_stmt> <decl_stmt><decl><type><name>ostringstream</name></type> <name>serr</name></decl>;</decl_stmt> <decl_stmt><decl><type><name>istringstream</name> <modifier>*</modifier></type><name>in</name></decl>;</decl_stmt>
+    <constructor><name>Unittest</name><parameter_list>()</parameter_list> <block>{ <expr_stmt><expr><name>checks</name> <operator>=</operator> <name>fails</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>}</block></constructor>
+    <constructor><name>run</name><parameter_list>()</parameter_list> <block>{ <decl_stmt><decl><type><name>streambuf</name><modifier>*</modifier></type> <name>ocin</name> <init>= <expr><call><name><name>cin</name><operator>.</operator><name>rdbuf</name></name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt> <expr_stmt><expr><call><name>test_list</name><argument_list>()</argument_list></call></expr>;</expr_stmt> <expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>rdbuf</name></name><argument_list>(<argument><expr><name>ocin</name></expr></argument>)</argument_list></call></expr>;</expr_stmt> <return>return <expr><call><name>status</name><argument_list>()</argument_list></call></expr>;</return> }</block></constructor>
+    <constructor><specifier>virtual</specifier> <name>test_list</name><parameter_list>()</parameter_list> <block>{ <expr_stmt><expr><call><name>single_test</name><argument_list>()</argument_list></call></expr>;</expr_stmt> }</block></constructor>
+    <constructor><specifier>virtual</specifier> <name>single_test</name><parameter_list>()</parameter_list> <block>{}</block></constructor>
+    <constructor><name>test_cin</name><parameter_list>(<parameter><decl><type><name>cs</name></type> <name>s</name></decl></parameter>)</parameter_list><block>{ <expr_stmt><expr><name>in</name> <operator>=</operator> <operator>new</operator> <call><name>istringstream</name><argument_list>(<argument><expr><name>s</name></expr></argument>)</argument_list></call></expr>;</expr_stmt> <expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>rdbuf</name></name><argument_list>(<argument><expr><call><name><name>in</name><operator>-&gt;</operator><name>rdbuf</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt> }</block></constructor>
+    <constructor><template>template <parameter_list>&lt;<parameter><type><name>typename</name></type> <name>T</name></parameter>&gt;</parameter_list></template> <name>check</name><parameter_list>(<parameter><decl><type><name>T</name></type> <name>a</name></decl></parameter>, <parameter><decl><type><name>T</name></type> <name>b</name></decl></parameter>, <parameter><decl><type><name>cs</name></type> <name>stra</name></decl></parameter>, <parameter><decl><type><name>cs</name></type> <name>strb</name></decl></parameter>, <parameter><decl><type><name>cs</name></type> <name>file</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>line</name></decl></parameter>, <parameter><decl><type><name>cs</name></type> <name>func</name></decl></parameter>)</parameter_list> <block>{
+        <expr_stmt><expr><name>checks</name><operator>++</operator></expr>;</expr_stmt> <if>if <condition>(<expr><name>a</name> <operator>==</operator> <name>b</name></expr>)</condition><then> <block>{ <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"."</literal></expr>;</expr_stmt> <return>return <expr><literal type="number">0</literal></expr>;</return> }</block></then></if> 
+        <expr_stmt><expr><name>fails</name><operator>++</operator></expr>;</expr_stmt> <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"F"</literal></expr>;</expr_stmt> <expr_stmt><expr><call><name>hdr</name><argument_list>(<argument><expr><name>stra</name></expr></argument>, <argument><expr><name>strb</name></expr></argument>, <argument><expr><name>file</name></expr></argument>, <argument><expr><name>line</name></expr></argument>, <argument><expr><name>func</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>serr</name> <operator>&lt;&lt;</operator> <literal type="string">"  Error: \""</literal> <operator>&lt;&lt;</operator> <name>a</name> <operator>&lt;&lt;</operator> <literal type="string">"\" ! = \""</literal> <operator>&lt;&lt;</operator> <name>b</name> <operator>&lt;&lt;</operator> <literal type="string">"\""</literal> <operator>&lt;&lt;</operator> <name>endl</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+    }</block></constructor>
+    <constructor><name>hdr</name><parameter_list>(<parameter><decl><type><name>cs</name></type> <name>stra</name></decl></parameter>, <parameter><decl><type><name>cs</name></type> <name>strb</name></decl></parameter>, <parameter><decl><type><name>cs</name></type> <name>file</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>line</name></decl></parameter>, <parameter><decl><type><name>cs</name></type> <name>func</name></decl></parameter>)</parameter_list> <block>{
+        <expr_stmt><expr><name>serr</name> <operator>&lt;&lt;</operator> <literal type="string">"=================================================="</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>serr</name> <operator>&lt;&lt;</operator> <literal type="string">"FAIL: "</literal> <operator>&lt;&lt;</operator> <name>func</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>serr</name> <operator>&lt;&lt;</operator> <literal type="string">"--------------------------------------------------"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>serr</name> <operator>&lt;&lt;</operator> <literal type="string">"File \""</literal> <operator>&lt;&lt;</operator> <name>file</name> <operator>&lt;&lt;</operator> <literal type="string">"\", line "</literal> <operator>&lt;&lt;</operator> <name>line</name> <operator>&lt;&lt;</operator> <literal type="string">" in "</literal> <operator>&lt;&lt;</operator> <name>func</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>serr</name> <operator>&lt;&lt;</operator> <literal type="string">"  Checking "</literal> <operator>&lt;&lt;</operator> <name>stra</name> <operator>&lt;&lt;</operator> <literal type="string">" == "</literal> <operator>&lt;&lt;</operator> <name>strb</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+    }</block></constructor>
+    <constructor><name>status</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt> <if>if <condition>(<expr><name>fails</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <call><name><name>serr</name><operator>.</operator><name>str</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt></block></then></if>
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"--------------------------------------------------"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"Ran "</literal> <operator>&lt;&lt;</operator> <name>checks</name> <operator>&lt;&lt;</operator> <literal type="string">" checks in "</literal> <operator>&lt;&lt;</operator> <call><name>dclock</name><argument_list>()</argument_list></call> <operator>&lt;&lt;</operator> <literal type="string">"s"</literal> <operator>&lt;&lt;</operator> <name>endl</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name>fails</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"FAILED (failures="</literal> <operator>&lt;&lt;</operator> <name>fails</name> <operator>&lt;&lt;</operator> <literal type="string">")"</literal></expr>;</expr_stmt></block></then> <else>else <block type="pseudo"><expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <literal type="string">"OK"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt></block></else></if>
+        <return>return <expr><name>fails</name> <operator>&gt;</operator> <literal type="number">0</literal></expr>;</return>
+    }</block></constructor>
+    <function><type><name>double</name></type> <name>dclock</name><parameter_list>()</parameter_list> <block>{ <return>return <expr><call><name>double</name><argument_list>(<argument><expr><call><name>clock</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call> <operator>/</operator> <name>CLOCKS_PER_SEC</name></expr>;</return> }</block></function>
+</public>}</block>;</class>
+
+<comment type="line" format="doxygen">///////////////////////////////////////////////////////////////////////////////</comment>
+<comment type="line">// Ships Class (Main Program)</comment>
+<comment type="line" format="doxygen">///////////////////////////////////////////////////////////////////////////////</comment>
+
+<class>class <name>Ships</name> <block>{<private type="default"> </private><public>public:
+
+    <decl_stmt><decl><specifier>static</specifier> <type><name>int</name> <specifier>const</specifier></type> <name>N</name> <init>= <expr><literal type="number">200002</literal></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>k</name></decl>, <decl><type ref="prev"/><name>a</name></decl>, <decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name><name>nums</name><index>[<expr><name>N</name></expr>]</index></name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name><name>set</name> <argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>field</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>max</name></decl>;</decl_stmt>
+
+    <constructor><name>Ships</name><parameter_list>()</parameter_list><block>{
+
+        <comment type="line">// Decoding input max sizes</comment>
+        <expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name> <operator>&gt;&gt;</operator> <name>k</name> <operator>&gt;&gt;</operator> <name>a</name> <operator>&gt;&gt;</operator> <name>m</name></expr>;</expr_stmt>
+
+        <comment type="line">// Decoding input list</comment>
+        <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>m</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><name>cin</name> <operator>&gt;&gt;</operator> <name><name>nums</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+
+        <expr_stmt><expr><call><name><name>field</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>n</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>field</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <expr_stmt><expr><name>max</name> <operator>=</operator> <call><name>num_ships</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><name>n</name> <operator>+</operator> <literal type="number">1</literal></expr></argument>, <argument><expr><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></constructor>
+
+    <constructor><name>num_ships</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>a</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>b</name></decl></parameter>, <parameter><decl><type><name>int</name></type> <name>size</name></decl></parameter>)</parameter_list><block>{
+        <if>if <condition>(<expr><name>a</name> <operator>&lt;</operator> <name>b</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><call><name>swap</name><argument_list>(<argument><expr><name>a</name></expr></argument>, <argument><expr><name>b</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if>
+        <decl_stmt><decl><type><name>int</name></type> <name>len</name> <init>= <expr><call><name>abs</name><argument_list>(<argument><expr><name>a</name> <operator>-</operator> <name>b</name> <operator>-</operator> <literal type="number">1</literal></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>result</name> <init>= <expr><name>len</name> <operator>/</operator> <operator>(</operator><name>size</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>rem</name> <init>= <expr><name>len</name> <operator>%</operator> <operator>(</operator><name>size</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator></expr></init></decl>;</decl_stmt>
+        <if>if <condition>(<expr><name>rem</name> <operator>==</operator> <name>size</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>result</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
+        <return>return <expr><name>result</name></expr>;</return>
+    }</block></constructor>
+
+    <constructor><name>step</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>x</name></decl></parameter>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name>auto</name></type> <name>ilb</name> <init>= <expr><call><name><name>field</name><operator>.</operator><name>lower_bound</name></name><argument_list>(<argument><expr><name>x</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>lb</name> <init>= <expr><operator>*</operator><name>ilb</name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>int</name></type> <name>pr</name> <init>= <expr><operator>*</operator><operator>(</operator><operator>--</operator><name>ilb</name><operator>)</operator></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><name>max</name> <operator>-=</operator> <call><name>num_ships</name><argument_list>(<argument><expr><name>lb</name></expr></argument>, <argument><expr><name>pr</name></expr></argument>, <argument><expr><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>max</name> <operator>+=</operator> <call><name>num_ships</name><argument_list>(<argument><expr><name>pr</name></expr></argument>, <argument><expr><name>x</name></expr></argument>, <argument><expr><name>a</name></expr></argument>)</argument_list></call> <operator>+</operator> <call><name>num_ships</name><argument_list>(<argument><expr><name>lb</name></expr></argument>, <argument><expr><name>x</name></expr></argument>, <argument><expr><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>field</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>x</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></constructor>
+
+    <function><type><name>string</name></type> <name>calculate</name><parameter_list>()</parameter_list><block>{
+
+        <decl_stmt><decl><type><name>long</name> <name>long</name></type> <name>result</name> <init>= <expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+
+        <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>m</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+
+            <expr_stmt><expr><call><name>step</name><argument_list>(<argument><expr><name><name>nums</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <if>if <condition>(<expr><name>max</name> <operator>&lt;</operator> <name>k</name></expr>)</condition><then> <block>{ <expr_stmt><expr><name>result</name> <operator>=</operator> <name>i</name> <operator>+</operator> <literal type="number">1</literal></expr>;</expr_stmt> <break>break;</break> }</block></then></if>
+        }</block></for>
+
+        <decl_stmt><decl><type><name>ostringstream</name></type> <name>resstr</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>resstr</name> <operator>&lt;&lt;</operator> <name>result</name></expr>;</expr_stmt>
+
+        <return>return <expr><call><name><name>resstr</name><operator>.</operator><name>str</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+</public>}</block>;</class>
+
+
+
+<comment type="line" format="doxygen">///////////////////////////////////////////////////////////////////////////////</comment>
+<comment type="line">// Local Unit tests</comment>
+<comment type="line" format="doxygen">///////////////////////////////////////////////////////////////////////////////</comment>
+
+
+<class>class <name>LocalUnittest</name><super>: <specifier>public</specifier> <name>Unittest</name></super> <block>{<private type="default">
+
+    <decl_stmt><decl><type><name>Ships</name><modifier>*</modifier></type> <name>d</name></decl>;</decl_stmt>
+
+    <constructor><name>single_test</name><parameter_list>()</parameter_list> <block>{
+
+        <comment type="line">// Constructor test</comment>
+        <decl_stmt><decl><type><name>string</name></type> <name>test</name> <init>= <expr><literal type="string">"11 3 3\n5\n4 8 6 1 11"</literal></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>test_cin</name><argument_list>(<argument><expr><name>test</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>d</name> <operator>=</operator> <operator>new</operator> <name>Ships</name></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>CHECK</name><argument_list>(<argument><expr><name><name>d</name><operator>-&gt;</operator><name>n</name></name></expr></argument>, <argument><expr><literal type="number">11</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>CHECK</name><argument_list>(<argument><expr><name><name>d</name><operator>-&gt;</operator><name>m</name></name></expr></argument>, <argument><expr><literal type="number">5</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>CHECK</name><argument_list>(<argument><expr><name><name>d</name><operator>-&gt;</operator><name>nums</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>, <argument><expr><literal type="number">4</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <expr_stmt><expr><call><name>CHECK</name><argument_list>(<argument><expr><name><name>d</name><operator>-&gt;</operator><name>max</name></name></expr></argument>, <argument><expr><literal type="number">3</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>d</name><operator>-&gt;</operator><name>step</name></name><argument_list>(<argument><expr><literal type="number">4</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>CHECK</name><argument_list>(<argument><expr><name><name>d</name><operator>-&gt;</operator><name>max</name></name></expr></argument>, <argument><expr><literal type="number">3</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>d</name><operator>-&gt;</operator><name>step</name></name><argument_list>(<argument><expr><literal type="number">8</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>CHECK</name><argument_list>(<argument><expr><name><name>d</name><operator>-&gt;</operator><name>max</name></name></expr></argument>, <argument><expr><literal type="number">3</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <macro><name>CHECK</name><argument_list>(<argument>d-&gt;num_ships(<literal type="number">0</literal>, <literal type="number">1</literal>, <literal type="number">2</literal>)</argument>, <argument><literal type="number">0</literal></argument>)</argument_list></macro>
+        <macro><name>CHECK</name><argument_list>(<argument>d-&gt;num_ships(<literal type="number">0</literal>, <literal type="number">2</literal>, <literal type="number">2</literal>)</argument>, <argument><literal type="number">0</literal></argument>)</argument_list></macro>
+        <macro><name>CHECK</name><argument_list>(<argument>d-&gt;num_ships(<literal type="number">0</literal>, <literal type="number">3</literal>, <literal type="number">2</literal>)</argument>, <argument><literal type="number">1</literal></argument>)</argument_list></macro>
+        <macro><name>CHECK</name><argument_list>(<argument>d-&gt;num_ships(<literal type="number">0</literal>, <literal type="number">4</literal>, <literal type="number">2</literal>)</argument>, <argument><literal type="number">1</literal></argument>)</argument_list></macro>
+        <macro><name>CHECK</name><argument_list>(<argument>d-&gt;num_ships(<literal type="number">0</literal>, <literal type="number">5</literal>, <literal type="number">2</literal>)</argument>, <argument><literal type="number">1</literal></argument>)</argument_list></macro>
+        <macro><name>CHECK</name><argument_list>(<argument>d-&gt;num_ships(<literal type="number">0</literal>, <literal type="number">6</literal>, <literal type="number">2</literal>)</argument>, <argument><literal type="number">2</literal></argument>)</argument_list></macro>
+
+        <comment type="line">// Sample test</comment>
+        <expr_stmt><expr><call><name>test_cin</name><argument_list>(<argument><expr><name>test</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>CHECKS</name><argument_list>(<argument><expr><operator>(</operator><operator>new</operator> <name>Ships</name><operator>)</operator><operator>-&gt;</operator><call><name>calculate</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><literal type="string">"3"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <comment type="line">// Sample test</comment>
+        <expr_stmt><expr><call><name>test_cin</name><argument_list>(<argument><expr><literal type="string">"5 1 3\n2\n1 5"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>CHECKS</name><argument_list>(<argument><expr><operator>(</operator><operator>new</operator> <name>Ships</name><operator>)</operator><operator>-&gt;</operator><call><name>calculate</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><literal type="string">"-1"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <comment type="line">// Sample test</comment>
+        <expr_stmt><expr><call><name>test_cin</name><argument_list>(<argument><expr><literal type="string">"5 1 3\n1\n3"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>CHECKS</name><argument_list>(<argument><expr><operator>(</operator><operator>new</operator> <name>Ships</name><operator>)</operator><operator>-&gt;</operator><call><name>calculate</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><literal type="string">"1"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <comment type="line">// My test</comment>
+        <expr_stmt><expr><call><name>test_cin</name><argument_list>(<argument><expr><literal type="string">"5000 1660 2\n20\n"</literal>
+        <literal type="string">"1 100 18 102 300 81 19 25 44 88 1337 4999 1054 1203 91 16 164 914 1419 1487"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>CHECKS</name><argument_list>(<argument><expr><operator>(</operator><operator>new</operator> <name>Ships</name><operator>)</operator><operator>-&gt;</operator><call><name>calculate</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><literal type="string">"18"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <comment type="line">// Time limit test</comment>
+        <comment type="line">// time_limit_test(10000);</comment>
+    }</block></constructor>
+
+    <constructor><name>time_limit_test</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>nmax</name></decl></parameter>)</parameter_list><block>{
+
+        <decl_stmt><decl><type><name>int</name></type> <name>smax</name> <init>= <expr><name>nmax</name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>ostringstream</name></type> <name>stest</name></decl>;</decl_stmt>
+        
+        <comment type="line">// Random inputs</comment>
+        <expr_stmt><expr><name>stest</name> <operator>&lt;&lt;</operator> <name>nmax</name> <operator>&lt;&lt;</operator> <literal type="string">" "</literal> <operator>&lt;&lt;</operator> <name>smax</name> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+        <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>nmax</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><name>stest</name> <operator>&lt;&lt;</operator> <name>i</name> <operator>&lt;&lt;</operator> <literal type="string">" "</literal> <operator>&lt;&lt;</operator> <name>i</name><operator>+</operator><literal type="number">1</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt></block></for>
+        <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>smax</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block type="pseudo"><expr_stmt><expr><name>stest</name> <operator>&lt;&lt;</operator> <name>i</name> <operator>*</operator> <literal type="number">5</literal> <operator>%</operator> <literal type="number">40</literal> <operator>&lt;&lt;</operator> <literal type="string">" "</literal></expr>;</expr_stmt></block></for>
+
+        <comment type="line">// Run the test</comment>
+        <decl_stmt><decl><type><name>double</name></type> <name>start</name> <init>= <expr><call><name>dclock</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>test_cin</name><argument_list>(<argument><expr><call><name><name>stest</name><operator>.</operator><name>str</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>d</name> <operator>=</operator> <operator>new</operator> <name>Ships</name></expr>;</expr_stmt>
+        <decl_stmt><decl><type><name>double</name></type> <name>calc</name> <init>= <expr><call><name>dclock</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name><name>d</name><operator>-&gt;</operator><name>calculate</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <decl_stmt><decl><type><name>double</name></type> <name>stop</name> <init>= <expr><call><name>dclock</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>endl</name> <operator>&lt;&lt;</operator> <literal type="string">"Timelimit Test: "</literal> <operator>&lt;&lt;</operator> <name>stop</name> <operator>-</operator> <name>start</name> <operator>&lt;&lt;</operator> <literal type="string">"s (init "</literal></expr>;</expr_stmt>
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name>calc</name> <operator>-</operator> <name>start</name> <operator>&lt;&lt;</operator> <literal type="string">"s calc "</literal> <operator>&lt;&lt;</operator> <name>stop</name> <operator>-</operator> <name>calc</name> <operator>&lt;&lt;</operator> <literal type="string">"s)"</literal> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+    }</block></constructor>
+</private>}</block>;</class>
+
+<comment type="line" format="doxygen">///////////////////////////////////////////////////////////////////////////////</comment>
+<comment type="line">// Main Execution</comment>
+<comment type="line" format="doxygen">///////////////////////////////////////////////////////////////////////////////</comment>
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>argc</name></decl></parameter>, <parameter><decl><type><name>char</name> <modifier>*</modifier></type><name><name>argv</name><index>[]</index></name></decl></parameter>)</parameter_list> <block>{
+
+    <comment type="line">// Faster cin and cout</comment>
+    <expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt><expr_stmt><expr><call><name><name>cin</name><operator>.</operator><name>tie</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <if>if <condition>(<expr><name>argc</name> <operator>&gt;</operator> <literal type="number">1</literal> <operator>&amp;&amp;</operator> <operator>!</operator><call><name>strcmp</name><argument_list>(<argument><expr><name><name>argv</name><index>[<expr><literal type="number">1</literal></expr>]</index></name></expr></argument>, <argument><expr><literal type="string">"-ut"</literal></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+        <decl_stmt><decl><type><name>LocalUnittest</name></type> <name>lut</name></decl>;</decl_stmt>
+        <return>return <expr><call><name><name>lut</name><operator>.</operator><name>run</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></then></if>
+    <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <operator>(</operator><operator>new</operator> <name>Ships</name><operator>)</operator><operator>-&gt;</operator><call><name>calculate</name><argument_list>()</argument_list></call> <operator>&lt;&lt;</operator> <name>endl</name></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+
+</unit>

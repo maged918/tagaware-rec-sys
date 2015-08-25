@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12445292.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive><file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;set&gt;</file></include>
+<define>#<directive>define</directive> <macro><name>LL</name></macro> <value>__int64</value></define>
+<define>#<directive>define</directive> <macro><name>N</name></macro> <value>1200000</value></define>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<decl_stmt><decl><type><name>bool</name></type> <name><name>prime</name><index>[<expr><name>N</name> <operator>+</operator> <literal type="number">20</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>bool</name></type> <name><name>huiwen</name><index>[<expr><name>N</name> <operator>+</operator> <literal type="number">20</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>sump</name><index>[<expr><name>N</name><operator>+</operator><literal type="number">20</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name><name>sumh</name><index>[<expr><name>N</name><operator>+</operator><literal type="number">20</literal></expr>]</index></name></decl>;</decl_stmt>
+<function><type><name>bool</name></type> <name>ok</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>x</name></decl></parameter>)</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>char</name></type> <name><name>s</name><index>[<expr><literal type="number">20</literal></expr>]</index></name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>sprintf</name><argument_list>(<argument><expr><name>s</name></expr></argument>,<argument><expr><literal type="string">"%d"</literal></expr></argument>, <argument><expr><name>x</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>len</name> <init>= <expr><call><name>strlen</name><argument_list>(<argument><expr><name>s</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>, <decl><type ref="prev"/><name>j</name> <init>= <expr><name>len</name> <operator>-</operator> <literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>j</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr><operator>,</operator> <expr><name>j</name><operator>--</operator></expr></incr>)</control>
+    <block>{
+        <if>if <condition>(<expr><name><name>s</name><index>[<expr><name>i</name></expr>]</index></name> <operator>!=</operator> <name><name>s</name><index>[<expr><name>j</name></expr>]</index></name></expr>)</condition><then> <block type="pseudo"><return>return <expr><literal type="boolean">false</literal></expr>;</return></block></then></if>
+    }</block></for>
+    <return>return <expr><literal type="boolean">true</literal></expr>;</return>
+}</block></function>
+<function><type><name>void</name></type> <name>init</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><name><name>prime</name><index>[<expr><literal type="number">0</literal></expr>]</index></name> <operator>=</operator> <name><name>prime</name><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">2</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block type="pseudo"><expr_stmt><expr><name><name>prime</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt></block></for>
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">2</literal></expr></init></decl>;</init> <condition><expr><name>i</name><operator>*</operator><name>i</name> <operator>&lt;=</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block type="pseudo"><if>if <condition>(<expr><name><name>prime</name><index>[<expr><name>i</name></expr>]</index></name></expr>)</condition><then>
+            <block type="pseudo"><for>for <control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><name>i</name><operator>*</operator><name>i</name></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;=</operator> <name>N</name></expr>;</condition> <incr><expr><name>j</name> <operator>+=</operator> <name>i</name></expr></incr>)</control>
+                <block type="pseudo"><expr_stmt><expr><name><name>prime</name><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt></block></for></block></then></if></block></for>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">2</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block type="pseudo"><expr_stmt><expr><name><name>sump</name><index>[<expr><name>i</name></expr>]</index></name> <operator>=</operator> <name><name>sump</name><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name> <operator>+</operator> <name><name>prime</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt></block></for>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block type="pseudo"><expr_stmt><expr><name><name>sumh</name><index>[<expr><name>i</name></expr>]</index></name> <operator>+=</operator> <name><name>sumh</name><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name> <operator>+</operator> <call><name>ok</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></for>
+}</block></function>
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <expr_stmt><expr><call><name>init</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>p</name></decl>,<decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %d"</literal></expr></argument>, <argument><expr><operator>&amp;</operator><name>p</name></expr></argument>, <argument><expr><operator>&amp;</operator><name>q</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>A</name> <init>= <expr><call><name>double</name><argument_list>(<argument><expr><name>p</name></expr></argument>)</argument_list></call><operator>/</operator><name>q</name></expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>pos</name> <init>= <expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+    <for>for <control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <name>N</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+        <block type="pseudo"><if>if<condition>(<expr><name><name>sump</name><index>[<expr><name>i</name></expr>]</index></name> <operator>*</operator> <name>q</name> <operator>&lt;=</operator> <name>p</name><operator>*</operator><name><name>sumh</name><index>[<expr><name>i</name></expr>]</index></name></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name>pos</name> <operator>=</operator> <name>i</name></expr>;</expr_stmt></block></then></if></block></for>
+    <if>if<condition>(<expr><name>pos</name> <operator>==</operator> <operator>-</operator><literal type="number">1</literal></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"Palindromic tree is better than splay tree\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
+    <else>else <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>pos</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

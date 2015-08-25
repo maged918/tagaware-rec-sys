@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12508937.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;bits/stdc++.h&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<define>#<directive>define</directive> <macro><name>PB</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>MP</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>SZ</name></macro> <value>size()</value></define>
+<define>#<directive>define</directive> <macro><name>all</name><parameter_list>(<parameter><type><name>v</name></type></parameter>)</parameter_list></macro> <value>v.begin(), v.end()</value></define>
+<define>#<directive>define</directive> <macro><name>REP</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for(int i = 0; i &lt; (int)n; i++)</value></define>
+<define>#<directive>define</directive> <macro><name>ITR</name><parameter_list>(<parameter><type><name>i</name></type></parameter>, <parameter><type><name>j</name></type></parameter>, <parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>for(int i = j; i &lt; (int)n; i++)</value></define>
+<define>#<directive>define</directive> <macro><name>mem</name><parameter_list>(<parameter><type><name>array</name></type></parameter>, <parameter><type><name>val</name></type></parameter>)</parameter_list></macro> <value>memset(array, val, sizeof(array))</value></define>
+<define>#<directive>define</directive> <macro><name>READ</name><parameter_list>(<parameter><type><name>filename</name></type></parameter>)</parameter_list></macro> <value>freopen(filename, "r", stdin)</value></define>
+<define>#<directive>define</directive> <macro><name>WRITE</name><parameter_list>(<parameter><type><name>filename</name></type></parameter>)</parameter_list></macro> <value>freopen(filename, "w", stdout)</value></define>
+<define>#<directive>define</directive> <macro><name>Pii</name></macro> <value>pair &lt;int, int&gt;</value></define>
+<define>#<directive>define</directive> <macro><name>Fr</name></macro> <value>first</value></define>
+<define>#<directive>define</directive> <macro><name>Sc</name></macro> <value>second</value></define>
+<define>#<directive>define</directive> <macro><name>Long</name></macro> <value>long long</value></define>
+<define>#<directive>define</directive> <macro><name>si</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>scanf("%d", &amp;a)</value></define>
+<define>#<directive>define</directive> <macro><name>sl</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>scanf("%I64d", &amp;a)</value></define>
+<define>#<directive>define</directive> <macro><name>sd</name><parameter_list>(<parameter><type><name>a</name></type></parameter>)</parameter_list></macro> <value>scanf("%lf", &amp;a)</value></define>
+<define>#<directive>define</directive> <macro><name>sii</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>scanf("%d%d", &amp;a, &amp;b)</value></define>
+<define>#<directive>define</directive> <macro><name>sll</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>scanf("%I64d%I64d", &amp;a, &amp;b)</value></define>
+<define>#<directive>define</directive> <macro><name>sdd</name><parameter_list>(<parameter><type><name>a</name></type></parameter>, <parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>scanf("%lf%lf", &amp;a, &amp;b)</value></define>
+<define>#<directive>define</directive> <macro><name>Fast_IO</name></macro> <value>ios_base::sync_with_stdio(0);cin.tie(0)</value></define>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+   <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>, <decl><type ref="prev"/><name>m</name></decl>, <decl><type ref="prev"/><name><name>ara</name><index>[<expr><literal type="number">100</literal></expr>]</index></name></decl>;</decl_stmt>
+   <expr_stmt><expr><call><name>mem</name><argument_list>(<argument><expr><name>ara</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+   <expr_stmt><expr><call><name>sii</name><argument_list>(<argument><expr><name>n</name></expr></argument>, <argument><expr><name>m</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+   <macro><name>REP</name><argument_list>(<argument>i</argument>, <argument>m</argument>)</argument_list></macro> <block>{
+      <decl_stmt><decl><type><name>int</name></type> <name>mi</name> <init>= <expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>, <decl><type ref="prev"/><name>id</name> <init>= <expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+      <macro><name>REP</name><argument_list>(<argument>j</argument>, <argument>n</argument>)</argument_list></macro> <block>{
+         <decl_stmt><decl><type><name>int</name></type> <name>a</name></decl>;</decl_stmt>
+         <expr_stmt><expr><call><name>si</name><argument_list>(<argument><expr><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+         <if>if<condition>(<expr><name>a</name> <operator>&gt;</operator> <name>mi</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>mi</name> <operator>=</operator> <name>a</name></expr><operator>,</operator> <expr><name>id</name> <operator>=</operator> <name>j</name></expr>;</expr_stmt></block></then></if>
+      }</block>
+      <expr_stmt><expr><name><name>ara</name><index>[<expr><name>id</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+   }</block>
+   <decl_stmt><decl><type><name>int</name></type> <name>mi</name> <init>= <expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>, <decl><type ref="prev"/><name>id</name> <init>= <expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
+   <macro><name>REP</name><argument_list>(<argument>i</argument>, <argument>n</argument>)</argument_list></macro> <if>if<condition>(<expr><name><name>ara</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&gt;</operator> <name>mi</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>mi</name> <operator>=</operator> <name><name>ara</name><index>[<expr><name>i</name></expr>]</index></name></expr><operator>,</operator> <expr><name>id</name> <operator>=</operator> <name>i</name></expr>;</expr_stmt></block></then></if>
+   <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>, <argument><expr><name>id</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+   <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12505676.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive><file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;stdio.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;stdlib.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;stack&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;string.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;math.h&gt;</file></include>
+<include>#<directive>include</directive><file>&lt;limits.h&gt;</file></include>
+<define>#<directive>define</directive> <macro><name>si</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>scanf("%d",&amp;n)</value></define>
+<comment type="line">//#define sl(n) scanf("%lld",&amp;n)</comment>
+<define>#<directive>define</directive> <macro><name>ss</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>scanf("%s",n)</value></define>
+<define>#<directive>define</directive> <macro><name>sf</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>scanf("%f",&amp;n)</value></define>
+
+<define>#<directive>define</directive> <macro><name>pi</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>printf("%d\n",n)</value></define>
+<comment type="line">//#define pl(n) printf("%lld\n",n)</comment>
+<define>#<directive>define</directive> <macro><name>ps</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>printf("%s\n",n)</value></define>
+<define>#<directive>define</directive> <macro><name>pf</name><parameter_list>(<parameter><type><name>n</name></type></parameter>)</parameter_list></macro> <value>printf("%.0f\n",n)</value></define>
+
+<comment type="line">//#define ll long long int</comment>
+<define>#<directive>define</directive> <macro><name>r0</name></macro> <value>return 0</value></define>
+<define>#<directive>define</directive> <macro><name>INF</name></macro> <value>INT_MAX</value></define>
+<define>#<directive>define</directive> <macro><name>FR</name><parameter_list>(<parameter><type><name>i</name></type></parameter>,<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>for(i=a;i&lt;b;i++)</value></define>
+<define>#<directive>define</directive> <macro><name>decit</name></macro> <value>int i,j,k</value></define>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>si</name><argument_list>(<argument><expr><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>si</name><argument_list>(<argument><expr><name>m</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name>decit</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>a</name><argument_list>(<argument><expr><name>n</name><operator>+</operator><literal type="number">5</literal></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>vector</name><argument_list type="generic">&lt;<argument><expr><name>int</name></expr></argument>&gt;</argument_list></name></type> <name>b</name><argument_list>(<argument><expr><name>n</name><operator>+</operator><literal type="number">5</literal></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <macro><name>FR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">0</literal></argument>,<argument>n+<literal type="number">2</literal></argument>)</argument_list></macro>
+        <expr_stmt><expr><name><name>b</name><index>[<expr><name>i</name></expr>]</index></name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>min</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+    <macro><name>FR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">0</literal></argument>,<argument>m</argument>)</argument_list></macro>
+    <block>{
+        <expr_stmt><expr><call><name>si</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><literal type="number">0</literal></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>min</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+        <macro><name>FR</name><argument_list>(<argument>j</argument>,<argument><literal type="number">1</literal></argument>,<argument>n</argument>)</argument_list></macro>
+        <block>{
+            <expr_stmt><expr><call><name>si</name><argument_list>(<argument><expr><name><name>a</name><index>[<expr><name>j</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <if>if<condition>(<expr><name><name>a</name><index>[<expr><name>min</name></expr>]</index></name><operator>&lt;</operator><name><name>a</name><index>[<expr><name>j</name></expr>]</index></name></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><name>min</name><operator>=</operator><name>j</name></expr>;</expr_stmt></block></then></if>
+        }</block>
+        <expr_stmt><expr><name><name>b</name><index>[<expr><name>min</name></expr>]</index></name><operator>++</operator></expr>;</expr_stmt>
+    }</block>
+    <expr_stmt><expr><name>min</name><operator>=</operator><literal type="number">0</literal></expr>;</expr_stmt>
+    <macro><name>FR</name><argument_list>(<argument>i</argument>,<argument><literal type="number">1</literal></argument>,<argument>n</argument>)</argument_list></macro>
+    <block>{
+        <if>if<condition>(<expr><name><name>b</name><index>[<expr><name>i</name></expr>]</index></name> <operator>&gt;</operator> <name><name>b</name><index>[<expr><name>min</name></expr>]</index></name></expr>)</condition><then>
+            <block type="pseudo"><expr_stmt><expr><name>min</name><operator>=</operator><name>i</name></expr>;</expr_stmt></block></then></if>
+    }</block>
+    <expr_stmt><expr><call><name>pi</name><argument_list>(<argument><expr><name>min</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+<expr_stmt><expr><name>r0</name></expr>;</expr_stmt>
+}</block></function>
+</unit>

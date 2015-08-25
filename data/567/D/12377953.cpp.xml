@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12377953.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<comment type="line">//  .cpp</comment>
+<comment type="line">//</comment>
+<comment type="line">//  Created by shikhar thakur</comment>
+<comment type="line">//</comment>
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iomanip&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<define>#<directive>define</directive> <macro><name>ll</name></macro> <value>long long</value></define>
+<define>#<directive>define</directive> <macro><name>pb</name></macro> <value>push_back</value></define>
+<define>#<directive>define</directive> <macro><name>mp</name></macro> <value>make_pair</value></define>
+<define>#<directive>define</directive> <macro><name>gcd</name><parameter_list>(<parameter><type><name>a</name></type></parameter>,<parameter><type><name>b</name></type></parameter>)</parameter_list></macro> <value>__gcd(a,b)</value></define>
+<define>#<directive>define</directive> <macro><name>fillm</name><parameter_list>(<parameter><type><name>v</name></type></parameter>,<parameter><type><name>val</name></type></parameter>)</parameter_list></macro> <value>memset(v,val,sizeof(v))</value></define>
+<define>#<directive>define</directive> <macro><name>_iosync</name></macro> <value>ios_base::sync_with_stdio(false);cin.tie(0);</value></define>
+<decl_stmt><decl><type><specifier>const</specifier> <name>ll</name></type> <name>mod</name><init>= <expr><literal type="number">1000000007ll</literal></expr></init></decl>;</decl_stmt>
+<define>#<directive>define</directive> <macro><name>pi</name></macro> <value>acos(-1.0)</value></define>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<decl_stmt><decl><type><name><name>multiset</name><argument_list type="generic">&lt;<argument><expr><name>ll</name></expr></argument>&gt;</argument_list></name></type><name>indexofseg</name></decl>;</decl_stmt>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
+<block>{
+    <ifndef>#<directive>ifndef</directive> <name>ONLINE_JUDGE</name></ifndef>
+    <expr_stmt><expr><call><name>freopen</name><argument_list>(<argument><expr><literal type="string">"input.txt"</literal></expr></argument>,<argument><expr><literal type="string">"r"</literal></expr></argument>,<argument><expr><name>stdin</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <endif>#<directive>endif</directive></endif>
+    <decl_stmt><decl><type><name>_iosync</name>
+    <name>ll</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>k</name></decl>,<decl><type ref="prev"/><name>a</name></decl>,<decl><type ref="prev"/><name>m</name></decl>,<decl><type ref="prev"/><name>possible</name></decl>;</decl_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>n</name><operator>&gt;&gt;</operator><name>k</name><operator>&gt;&gt;</operator><name>a</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>m</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>ll</name></type> <name><name>ar</name><index>[<expr><name>m</name></expr>]</index></name></decl>;</decl_stmt>
+    <for>for<control>(<init><decl><type><name>ll</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>m</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name><name>ar</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</expr_stmt>
+    }</block></for>
+    <expr_stmt><expr><name>possible</name><operator>=</operator><operator>(</operator><name>n</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>indexofseg</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>indexofseg</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>n</name><operator>+</operator><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>ll</name></type> <name>tmp</name></decl>;</decl_stmt>
+    <for>for<control>(<init><decl><type><name>ll</name></type> <name>i</name><init>=<expr><literal type="number">0</literal></expr></init></decl>;</init><condition><expr><name>i</name><operator>&lt;</operator><name>m</name></expr>;</condition><incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
+    <block>{
+        <decl_stmt><decl><type><name>ll</name></type> <name>q</name><init>=<expr><name><name>ar</name><index>[<expr><name>i</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>auto</name></type> <name>l</name><init>=<expr><call><name><name>indexofseg</name><operator>.</operator><name>upper_bound</name></name><argument_list>(<argument><expr><name>q</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>auto</name></type> <name>r</name><init>=<expr><name>l</name></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><name>l</name><operator>--</operator></expr>;</expr_stmt>        
+        
+        <expr_stmt><expr><call><name><name>indexofseg</name><operator>.</operator><name>insert</name></name><argument_list>(<argument><expr><name>q</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        
+        <expr_stmt><expr><name>tmp</name><operator>=</operator><operator>(</operator><operator>(</operator><name>q</name><operator>-</operator><operator>(</operator><operator>*</operator><name>l</name><operator>)</operator><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator> <operator>+</operator> <operator>(</operator><operator>(</operator><operator>*</operator><name>r</name><operator>)</operator><operator>-</operator><name>q</name><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator><operator>)</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name>possible</name><operator>+=</operator><operator>(</operator><name>tmp</name><operator>)</operator></expr>;</expr_stmt>
+        <expr_stmt><expr><name>possible</name><operator>-=</operator><operator>(</operator><operator>(</operator><operator>*</operator><name>r</name><operator>)</operator><operator>-</operator><operator>(</operator><operator>*</operator><name>l</name><operator>)</operator><operator>)</operator><operator>/</operator><operator>(</operator><name>a</name><operator>+</operator><literal type="number">1</literal><operator>)</operator></expr> ;</expr_stmt>
+        
+        <if>if<condition>(<expr><name>possible</name><operator>&lt;</operator><name>k</name></expr>)</condition><then>
+        <block>{
+            <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>i</name><operator>+</operator><literal type="number">1</literal><operator>&lt;&lt;</operator><literal type="string">"\n"</literal></expr>;</expr_stmt>
+            <return>return <expr><literal type="number">0</literal></expr>;</return>
+        }</block></then></if>
+    }</block></for>
+    <expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><literal type="string">"-1\n"</literal></expr>;</expr_stmt>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function></unit>

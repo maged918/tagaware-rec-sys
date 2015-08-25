@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12453403.cpp"><comment type="line">//Language: GNU C++11</comment>
+
+
+<comment type="line">//</comment>
+<comment type="line">//  Created by TaoSama on 2015-08-11</comment>
+<comment type="line">//  Copyright (c) 2015 TaoSama. All rights reserved.</comment>
+<comment type="line">//</comment>
+<comment type="line">//#pragma comment(linker, "/STACK:1024000000,1024000000")</comment>
+<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cctype&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iomanip&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;map&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;string&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;set&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;vector&gt;</file></include>
+
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+<define>#<directive>define</directive> <macro><name>pr</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>cout &lt;&lt; #x &lt;&lt; " = " &lt;&lt; x &lt;&lt; "  "</value></define>
+<define>#<directive>define</directive> <macro><name>prln</name><parameter_list>(<parameter><type><name>x</name></type></parameter>)</parameter_list></macro> <value>cout &lt;&lt; #x &lt;&lt; " = " &lt;&lt; x &lt;&lt; endl</value></define>
+<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>N</name> <init>= <expr><literal type="number">1e5</literal> <operator>+</operator> <literal type="number">10</literal></expr></init></decl>, <decl><type ref="prev"/><name>INF</name> <init>= <expr><literal type="number">0x3f3f3f3f</literal></expr></init></decl>, <decl><type ref="prev"/><name>MOD</name> <init>= <expr><literal type="number">1e9</literal> <operator>+</operator> <literal type="number">7</literal></expr></init></decl>;</decl_stmt>
+
+<decl_stmt><decl><type><name>long</name> <name>long</name></type> <name><name>B</name><index>[<expr><literal type="number">4010</literal></expr>]</index><index>[<expr><literal type="number">4010</literal></expr>]</index></name></decl>;</decl_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>;</decl_stmt>
+
+<function><type><name>void</name></type> <name>gao</name><parameter_list>()</parameter_list> <block>{
+    <expr_stmt><expr><name><name>B</name><index>[<expr><literal type="number">1</literal></expr>]</index><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>B</name><index>[<expr><literal type="number">2</literal></expr>]</index><index>[<expr><literal type="number">1</literal></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
+    <expr_stmt><expr><name><name>B</name><index>[<expr><literal type="number">2</literal></expr>]</index><index>[<expr><literal type="number">2</literal></expr>]</index></name> <operator>=</operator> <literal type="number">2</literal></expr>;</expr_stmt>
+    <for>for<control>(<init><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">3</literal></expr></init></decl>;</init> <condition><expr><name>i</name> <operator>&lt;</operator> <literal type="number">4010</literal></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control> <block>{
+        <for>for<control>(<init><decl><type><name>int</name></type> <name>j</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</init> <condition><expr><name>j</name> <operator>&lt;</operator> <literal type="number">4010</literal></expr>;</condition> <incr><expr><name>j</name><operator>++</operator></expr></incr>)</control> <block>{
+            <if>if<condition>(<expr><name>j</name> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then>
+                <block type="pseudo"><expr_stmt><expr><name><name>B</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <name><name>B</name><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt></block></then>
+            <else>else
+                <block type="pseudo"><expr_stmt><expr><name><name>B</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name></expr>]</index></name> <operator>=</operator> <operator>(</operator><name><name>B</name><index>[<expr><name>i</name></expr>]</index><index>[<expr><name>j</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name> <operator>+</operator> <name><name>B</name><index>[<expr><name>i</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index><index>[<expr><name>j</name> <operator>-</operator> <literal type="number">1</literal></expr>]</index></name><operator>)</operator> <operator>%</operator> <name>MOD</name></expr>;</expr_stmt></block></else></if>
+        }</block></for>
+    }</block></for>
+}</block></function>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+<ifdef>#<directive>ifdef</directive> <name>LOCAL</name></ifdef>
+    <expr_stmt><expr><call><name>freopen</name><argument_list>(<argument><expr><literal type="string">"in.txt"</literal></expr></argument>, <argument><expr><literal type="string">"r"</literal></expr></argument>, <argument><expr><name>stdin</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+<comment type="line">//  freopen("out.txt","w",stdout);</comment>
+<endif>#<directive>endif</directive></endif>
+    <expr_stmt><expr><call><name><name>ios_base</name><operator>::</operator><name>sync_with_stdio</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <expr_stmt><expr><call><name>gao</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    <while>while<condition>(<expr><name>cin</name> <operator>&gt;&gt;</operator> <name>n</name></expr>)</condition> <block>{
+        <expr_stmt><expr><name>cout</name> <operator>&lt;&lt;</operator> <name><name>B</name><index>[<expr><name>n</name> <operator>+</operator> <literal type="number">1</literal></expr>]</index><index>[<expr><name>n</name></expr>]</index></name> <operator>&lt;&lt;</operator> <literal type="char">'\n'</literal></expr>;</expr_stmt>
+    }</block></while>
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

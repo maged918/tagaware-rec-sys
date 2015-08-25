@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit   revision="0.9.5" language="C++" filename="12457643.cpp"><comment type="line">//Language: GNU C++</comment>
+
+
+<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
+<using>using <namespace>namespace <name>std</name>;</namespace></using>
+
+<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{
+<decl_stmt><decl><type><name>int</name></type> <name>T</name></decl>,<decl><type ref="prev"/><name>S</name></decl>,<decl><type ref="prev"/><name>q</name></decl>;</decl_stmt>
+<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>T</name></expr>;</expr_stmt>
+<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>S</name></expr>;</expr_stmt>
+<expr_stmt><expr><name>cin</name><operator>&gt;&gt;</operator><name>q</name></expr>;</expr_stmt>
+<decl_stmt><decl><type><name>int</name></type> <name>i</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
+
+    
+<while>while<condition>(<expr><name>S</name><operator>&lt;</operator><name>T</name></expr>)</condition><block>{
+    <expr_stmt><expr><name>S</name><operator>=</operator> <name>S</name><operator>*</operator><name>q</name></expr>;</expr_stmt>
+    <expr_stmt><expr><name>i</name><operator>++</operator></expr>;</expr_stmt>
+    
+ 
+}</block></while>
+<expr_stmt><expr><name>cout</name><operator>&lt;&lt;</operator><name>i</name></expr>;</expr_stmt>
+
+    <return>return <expr><literal type="number">0</literal></expr>;</return>
+}</block></function>
+</unit>

@@ -1,116 +1,1592 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<unit   revision="0.9.5" language="C++" filename="12370177.cpp"><comment type="line">//Language: GNU C++11</comment>
+<unit revision="0.9.5" language="C++" filename="12370177.cpp">
+	<comment type="line">//Language: GNU C++11</comment>
 
 
-<include>#<directive>include</directive> <file>&lt;cstdio&gt;</file></include>
-<include>#<directive>include</directive> <file>&lt;cstring&gt;</file></include>
-<include>#<directive>include</directive> <file>&lt;cmath&gt;</file></include>
-<include>#<directive>include</directive> <file>&lt;queue&gt;</file></include>
-<include>#<directive>include</directive> <file>&lt;cstdlib&gt;</file></include>
-<include>#<directive>include</directive> <file>&lt;iostream&gt;</file></include>
-<include>#<directive>include</directive> <file>&lt;algorithm&gt;</file></include>
-<define>#<directive>define</directive> <macro><name>lson</name></macro> <value>l,mid,o&lt;&lt;1</value></define>
-<define>#<directive>define</directive> <macro><name>rson</name></macro> <value>mid + 1,r,o&lt;&lt;1|1</value></define>
-<using>using <namespace>namespace <name>std</name>;</namespace></using>
-<typedef>typedef <type><name>__int64</name></type> <name>LL</name>;</typedef>
-<decl_stmt><decl><type><specifier>const</specifier> <name>int</name></type> <name>maxn</name> <init>= <expr><literal type="number">200005</literal></expr></init></decl>;</decl_stmt>
-<decl_stmt><decl><type><name>int</name></type> <name><name>a</name><index>[<expr><name>maxn</name></expr>]</index></name></decl>,<decl><type ref="prev"/><name><name>sum</name><index>[<expr><name>maxn</name><operator>&lt;&lt;</operator><literal type="number">2</literal></expr>]</index></name></decl>;</decl_stmt>
-<decl_stmt><decl><type><name>int</name></type> <name>n</name></decl>,<decl><type ref="prev"/><name>m</name></decl>,<decl><type ref="prev"/><name>k</name></decl>;</decl_stmt>
-<decl_stmt><decl><type><name>int</name></type> <name>A</name></decl>,<decl><type ref="prev"/><name>B</name></decl>;</decl_stmt>
-<function><type><name>void</name></type> <name>update</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>l</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>r</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>o</name></decl></parameter>)</parameter_list>
-<block>{
-    <if>if<condition>(<expr><name>l</name> <operator>==</operator> <name>r</name></expr>)</condition><then>
-    <block>{
-        <expr_stmt><expr><name><name>sum</name><index>[<expr><name>o</name></expr>]</index></name> <operator>=</operator> <literal type="number">1</literal></expr>;</expr_stmt>
-        <return>return;</return>
-    }</block></then></if>
-    <decl_stmt><decl><type><name>int</name></type> <name>mid</name> <init>= <expr><operator>(</operator><name>l</name> <operator>+</operator> <name>r</name><operator>)</operator> <operator>&gt;&gt;</operator> <literal type="number">1</literal></expr></init></decl>;</decl_stmt>
-    <if>if<condition>(<expr><name>A</name> <operator>&lt;=</operator> <name>mid</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><name>lson</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
-    <else>else <block type="pseudo"><expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><name>rson</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
-    <expr_stmt><expr><name><name>sum</name><index>[<expr><name>o</name></expr>]</index></name> <operator>=</operator> <name><name>sum</name><index>[<expr><name>o</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr>]</index></name> <operator>+</operator> <name><name>sum</name><index>[<expr><name>o</name><operator>&lt;&lt;</operator><literal type="number">1</literal><operator>|</operator><literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt>
-}</block></function>
-<function><type><name>int</name></type> <name>qurry</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>l</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>r</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>o</name></decl></parameter>)</parameter_list>
-<block>{
-    <if>if<condition>(<expr><name>A</name> <operator>&lt;=</operator> <name>l</name> <operator>&amp;&amp;</operator> <name>r</name> <operator>&lt;=</operator> <name>B</name></expr>)</condition><then>
-    <block>{
-        <return>return <expr><name><name>sum</name><index>[<expr><name>o</name></expr>]</index></name></expr>;</return>
-    }</block></then></if>
-    <decl_stmt><decl><type><name>int</name></type> <name>mid</name> <init>= <expr><operator>(</operator><name>l</name> <operator>+</operator> <name>r</name><operator>)</operator> <operator>&gt;&gt;</operator> <literal type="number">1</literal></expr></init></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>int</name></type> <name>ans</name> <init>= <expr><literal type="number">0</literal></expr></init></decl>;</decl_stmt>
-    <if>if<condition>(<expr><name>A</name> <operator>&lt;=</operator> <name>mid</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>ans</name> <operator>+=</operator> <call><name>qurry</name><argument_list>(<argument><expr><name>lson</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if>
-    <if>if<condition>(<expr><name>B</name> <operator>&gt;</operator> <name>mid</name></expr>)</condition><then> <block type="pseudo"><expr_stmt><expr><name>ans</name> <operator>+=</operator> <call><name>qurry</name><argument_list>(<argument><expr><name>rson</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then></if>
-    <return>return <expr><name>ans</name></expr>;</return>
-}</block></function>
-<decl_stmt><decl><type><name>int</name></type> <name>C</name></decl>;</decl_stmt>
-<function><type><name>int</name></type> <name>qq</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>l</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>r</name></decl></parameter>,<parameter><decl><type><name>int</name></type> <name>o</name></decl></parameter>)</parameter_list>
-<block>{
-    <if>if<condition>(<expr><name>l</name> <operator>==</operator> <name>r</name></expr>)</condition><then>
-        <block type="pseudo"><return>return <expr><name>l</name></expr>;</return></block></then></if>
-    <decl_stmt><decl><type><name>int</name></type> <name>mid</name> <init>= <expr><operator>(</operator><name>l</name> <operator>+</operator> <name>r</name><operator>)</operator> <operator>&gt;&gt;</operator> <literal type="number">1</literal></expr></init></decl>;</decl_stmt>
-    <if>if<condition>(<expr><name>C</name> <operator>&gt;</operator> <name><name>sum</name><index>[<expr><name>o</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr>]</index></name></expr>)</condition><then>
-    <block>{
-        <expr_stmt><expr><name>C</name> <operator>-=</operator> <name><name>sum</name><index>[<expr><name>o</name><operator>&lt;&lt;</operator><literal type="number">1</literal></expr>]</index></name></expr>;</expr_stmt>
-        <return>return <expr><call><name>qq</name><argument_list>(<argument><expr><name>rson</name></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></then>
+	<include>
+		#
+		<directive>include</directive>
+		<file>&lt;cstdio&gt;</file>
+	</include>
+	<include>
+		#
+		<directive>include</directive>
+		<file>&lt;cstring&gt;</file>
+	</include>
+	<include>
+		#
+		<directive>include</directive>
+		<file>&lt;cmath&gt;</file>
+	</include>
+	<include>
+		#
+		<directive>include</directive>
+		<file>&lt;queue&gt;</file>
+	</include>
+	<include>
+		#
+		<directive>include</directive>
+		<file>&lt;cstdlib&gt;</file>
+	</include>
+	<include>
+		#
+		<directive>include</directive>
+		<file>&lt;iostream&gt;</file>
+	</include>
+	<include>
+		#
+		<directive>include</directive>
+		<file>&lt;algorithm&gt;</file>
+	</include>
+	<define>
+		#
+		<directive>define</directive>
+		<macro>
+			<name>lson</name>
+		</macro>
+		<value>l,mid,o&lt;&lt;1</value>
+	</define>
+	<define>
+		#
+		<directive>define</directive>
+		<macro>
+			<name>rson</name>
+		</macro>
+		<value>mid + 1,r,o&lt;&lt;1|1</value>
+	</define>
+	<using>
+		using
+		<namespace>
+			namespace
+			<name>std</name>
+			;
+		</namespace>
+	</using>
+	<typedef>
+		typedef
+		<type>
+			<name>__int64</name>
+		</type>
+		<name>LL</name>
+		;
+	</typedef>
+	<decl_stmt>
+		<decl>
+			<type>
+				<specifier>const</specifier>
+				<name>int</name>
+			</type>
+			<name>maxn</name>
+			<init>
+				=
+				<expr>
+					<literal type="number">200005</literal>
+				</expr>
+			</init>
+		</decl>
+		;
+	</decl_stmt>
+	<decl_stmt>
+		<decl>
+			<type>
+				<name>int</name>
+			</type>
+			<name>
+				<name>a</name>
+				<index>
+					[
+					<expr>
+						<name>maxn</name>
+					</expr>
+					]
+				</index>
+			</name>
+		</decl>
+		,
+		<decl>
+			<type ref="prev" />
+			<name>
+				<name>sum</name>
+				<index>
+					[
+					<expr>
+						<name>maxn</name>
+						<operator>&lt;&lt;</operator>
+						<literal type="number">2</literal>
+					</expr>
+					]
+				</index>
+			</name>
+		</decl>
+		;
+	</decl_stmt>
+	<decl_stmt>
+		<decl>
+			<type>
+				<name>int</name>
+			</type>
+			<name>n</name>
+		</decl>
+		,
+		<decl>
+			<type ref="prev" />
+			<name>m</name>
+		</decl>
+		,
+		<decl>
+			<type ref="prev" />
+			<name>k</name>
+		</decl>
+		;
+	</decl_stmt>
+	<decl_stmt>
+		<decl>
+			<type>
+				<name>int</name>
+			</type>
+			<name>A</name>
+		</decl>
+		,
+		<decl>
+			<type ref="prev" />
+			<name>B</name>
+		</decl>
+		;
+	</decl_stmt>
+	<function>
+		<type>
+			<name>void</name>
+		</type>
+		<name>update</name>
+		<parameter_list>
+			(
+			<parameter>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>l</name>
+				</decl>
+			</parameter>
+			,
+			<parameter>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>r</name>
+				</decl>
+			</parameter>
+			,
+			<parameter>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>o</name>
+				</decl>
+			</parameter>
+			)
+		</parameter_list>
+		<block>
+			{
+			<if>
+				if
+				<condition>
+					(
+					<expr>
+						<name>l</name>
+						<operator>==</operator>
+						<name>r</name>
+					</expr>
+					)
+				</condition>
+				<then>
+					<block>
+						{
+						<expr_stmt>
+							<expr>
+								<name>
+									<name>sum</name>
+									<index>
+										[
+										<expr>
+											<name>o</name>
+										</expr>
+										]
+									</index>
+								</name>
+								<operator>=</operator>
+								<literal type="number">1</literal>
+							</expr>
+							;
+						</expr_stmt>
+						<return>return;</return>
+						}
+					</block>
+				</then>
+			</if>
+			<decl_stmt>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>mid</name>
+					<init>
+						=
+						<expr>
+							<operator>(</operator>
+							<name>l</name>
+							<operator>+</operator>
+							<name>r</name>
+							<operator>)</operator>
+							<operator>&gt;&gt;</operator>
+							<literal type="number">1</literal>
+						</expr>
+					</init>
+				</decl>
+				;
+			</decl_stmt>
+			<if>
+				if
+				<condition>
+					(
+					<expr>
+						<name>A</name>
+						<operator>&lt;=</operator>
+						<name>mid</name>
+					</expr>
+					)
+				</condition>
+				<then>
+					<block type="pseudo">
+						<expr_stmt>
+							<expr>
+								<call>
+									<name>update</name>
+									<argument_list>
+										(
+										<argument>
+											<expr>
+												<name>lson</name>
+											</expr>
+										</argument>
+										)
+									</argument_list>
+								</call>
+							</expr>
+							;
+						</expr_stmt>
+					</block>
+				</then>
+				<else>
+					else
+					<block type="pseudo">
+						<expr_stmt>
+							<expr>
+								<call>
+									<name>update</name>
+									<argument_list>
+										(
+										<argument>
+											<expr>
+												<name>rson</name>
+											</expr>
+										</argument>
+										)
+									</argument_list>
+								</call>
+							</expr>
+							;
+						</expr_stmt>
+					</block>
+				</else>
+			</if>
+			<expr_stmt>
+				<expr>
+					<name>
+						<name>sum</name>
+						<index>
+							[
+							<expr>
+								<name>o</name>
+							</expr>
+							]
+						</index>
+					</name>
+					<operator>=</operator>
+					<name>
+						<name>sum</name>
+						<index>
+							[
+							<expr>
+								<name>o</name>
+								<operator>&lt;&lt;</operator>
+								<literal type="number">1</literal>
+							</expr>
+							]
+						</index>
+					</name>
+					<operator>+</operator>
+					<name>
+						<name>sum</name>
+						<index>
+							[
+							<expr>
+								<name>o</name>
+								<operator>&lt;&lt;</operator>
+								<literal type="number">1</literal>
+								<operator>|</operator>
+								<literal type="number">1</literal>
+							</expr>
+							]
+						</index>
+					</name>
+				</expr>
+				;
+			</expr_stmt>
+			}
+		</block>
+	</function>
+	<function>
+		<type>
+			<name>int</name>
+		</type>
+		<name>qurry</name>
+		<parameter_list>
+			(
+			<parameter>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>l</name>
+				</decl>
+			</parameter>
+			,
+			<parameter>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>r</name>
+				</decl>
+			</parameter>
+			,
+			<parameter>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>o</name>
+				</decl>
+			</parameter>
+			)
+		</parameter_list>
+		<block>
+			{
+			<if>
+				if
+				<condition>
+					(
+					<expr>
+						<name>A</name>
+						<operator>&lt;=</operator>
+						<name>l</name>
+						<operator>&amp;&amp;</operator>
+						<name>r</name>
+						<operator>&lt;=</operator>
+						<name>B</name>
+					</expr>
+					)
+				</condition>
+				<then>
+					<block>
+						{
+						<return>
+							return
+							<expr>
+								<name>
+									<name>sum</name>
+									<index>
+										[
+										<expr>
+											<name>o</name>
+										</expr>
+										]
+									</index>
+								</name>
+							</expr>
+							;
+						</return>
+						}
+					</block>
+				</then>
+			</if>
+			<decl_stmt>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>mid</name>
+					<init>
+						=
+						<expr>
+							<operator>(</operator>
+							<name>l</name>
+							<operator>+</operator>
+							<name>r</name>
+							<operator>)</operator>
+							<operator>&gt;&gt;</operator>
+							<literal type="number">1</literal>
+						</expr>
+					</init>
+				</decl>
+				;
+			</decl_stmt>
+			<decl_stmt>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>ans</name>
+					<init>
+						=
+						<expr>
+							<literal type="number">0</literal>
+						</expr>
+					</init>
+				</decl>
+				;
+			</decl_stmt>
+			<if>
+				if
+				<condition>
+					(
+					<expr>
+						<name>A</name>
+						<operator>&lt;=</operator>
+						<name>mid</name>
+					</expr>
+					)
+				</condition>
+				<then>
+					<block type="pseudo">
+						<expr_stmt>
+							<expr>
+								<name>ans</name>
+								<operator>+=</operator>
+								<call>
+									<name>qurry</name>
+									<argument_list>
+										(
+										<argument>
+											<expr>
+												<name>lson</name>
+											</expr>
+										</argument>
+										)
+									</argument_list>
+								</call>
+							</expr>
+							;
+						</expr_stmt>
+					</block>
+				</then>
+			</if>
+			<if>
+				if
+				<condition>
+					(
+					<expr>
+						<name>B</name>
+						<operator>&gt;</operator>
+						<name>mid</name>
+					</expr>
+					)
+				</condition>
+				<then>
+					<block type="pseudo">
+						<expr_stmt>
+							<expr>
+								<name>ans</name>
+								<operator>+=</operator>
+								<call>
+									<name>qurry</name>
+									<argument_list>
+										(
+										<argument>
+											<expr>
+												<name>rson</name>
+											</expr>
+										</argument>
+										)
+									</argument_list>
+								</call>
+							</expr>
+							;
+						</expr_stmt>
+					</block>
+				</then>
+			</if>
+			<return>
+				return
+				<expr>
+					<name>ans</name>
+				</expr>
+				;
+			</return>
+			}
+		</block>
+	</function>
+	<decl_stmt>
+		<decl>
+			<type>
+				<name>int</name>
+			</type>
+			<name>C</name>
+		</decl>
+		;
+	</decl_stmt>
+	<function>
+		<type>
+			<name>int</name>
+		</type>
+		<name>qq</name>
+		<parameter_list>
+			(
+			<parameter>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>l</name>
+				</decl>
+			</parameter>
+			,
+			<parameter>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>r</name>
+				</decl>
+			</parameter>
+			,
+			<parameter>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>o</name>
+				</decl>
+			</parameter>
+			)
+		</parameter_list>
+		<block>
+			{
+			<if>
+				if
+				<condition>
+					(
+					<expr>
+						<name>l</name>
+						<operator>==</operator>
+						<name>r</name>
+					</expr>
+					)
+				</condition>
+				<then>
+					<block type="pseudo">
+						<return>
+							return
+							<expr>
+								<name>l</name>
+							</expr>
+							;
+						</return>
+					</block>
+				</then>
+			</if>
+			<decl_stmt>
+				<decl>
+					<type>
+						<name>int</name>
+					</type>
+					<name>mid</name>
+					<init>
+						=
+						<expr>
+							<operator>(</operator>
+							<name>l</name>
+							<operator>+</operator>
+							<name>r</name>
+							<operator>)</operator>
+							<operator>&gt;&gt;</operator>
+							<literal type="number">1</literal>
+						</expr>
+					</init>
+				</decl>
+				;
+			</decl_stmt>
+			<if>
+				if
+				<condition>
+					(
+					<expr>
+						<name>C</name>
+						<operator>&gt;</operator>
+						<name>
+							<name>sum</name>
+							<index>
+								[
+								<expr>
+									<name>o</name>
+									<operator>&lt;&lt;</operator>
+									<literal type="number">1</literal>
+								</expr>
+								]
+							</index>
+						</name>
+					</expr>
+					)
+				</condition>
+				<then>
+					<block>
+						{
+						<expr_stmt>
+							<expr>
+								<name>C</name>
+								<operator>-=</operator>
+								<name>
+									<name>sum</name>
+									<index>
+										[
+										<expr>
+											<name>o</name>
+											<operator>&lt;&lt;</operator>
+											<literal type="number">1</literal>
+										</expr>
+										]
+									</index>
+								</name>
+							</expr>
+							;
+						</expr_stmt>
+						<return>
+							return
+							<expr>
+								<call>
+									<name>qq</name>
+									<argument_list>
+										(
+										<argument>
+											<expr>
+												<name>rson</name>
+											</expr>
+										</argument>
+										)
+									</argument_list>
+								</call>
+							</expr>
+							;
+						</return>
+						}
+					</block>
+				</then>
 
-    <else>else
-        <block type="pseudo"><return>return <expr><call><name>qq</name><argument_list>(<argument><expr><name>lson</name></expr></argument>)</argument_list></call></expr>;</return></block></else></if>
-}</block></function>
-<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list>
-<block>{
-    <while>while<condition>(<expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d %d %d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>n</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>m</name></expr></argument>,<argument><expr><operator>&amp;</operator><name>k</name></expr></argument>)</argument_list></call> <operator>!=</operator> <name>EOF</name></expr>)</condition>
-    <block>{
-        <decl_stmt><decl><type><name>int</name></type> <name>tot</name></decl>;</decl_stmt>
-        <expr_stmt><expr><call><name>memset</name><argument_list>(<argument><expr><name>sum</name></expr></argument>,<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><sizeof>sizeof<argument_list>(<argument><expr><name>sum</name></expr></argument>)</argument_list></sizeof></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-        <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>tot</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-        <decl_stmt><decl><type><name>int</name></type> <name>i</name></decl>,<decl><type ref="prev"/><name>j</name></decl>;</decl_stmt>
-        <expr_stmt><expr><name>A</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
-        <expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><name>n</name><operator>+</operator><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-        <expr_stmt><expr><name>A</name> <operator>=</operator> <name>n</name> <operator>+</operator> <literal type="number">1</literal></expr>;</expr_stmt>
-        <expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><name>n</name><operator>+</operator><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-        <decl_stmt><decl><type><name>int</name></type> <name>ans</name> <init>= <expr><name>n</name> <operator>/</operator> <operator>(</operator><name>k</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator></expr></init></decl>;</decl_stmt>
-        <if>if<condition>(<expr><name>n</name> <operator>%</operator> <operator>(</operator><name>k</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>==</operator> <name>k</name></expr>)</condition><then>
-            <block type="pseudo"><expr_stmt><expr><name>ans</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
-        <decl_stmt><decl><type><name>int</name></type> <name>ok</name> <init>= <expr><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
-        <decl_stmt><decl><type><name>int</name></type> <name>last</name> <init>= <expr><operator>-</operator><literal type="number">1</literal></expr></init></decl>;</decl_stmt>
-        <for>for<control>(<init><expr><name>i</name> <operator>=</operator> <literal type="number">1</literal></expr>;</init> <condition><expr><name>i</name> <operator>&lt;=</operator> <name>tot</name></expr>;</condition> <incr><expr><name>i</name><operator>++</operator></expr></incr>)</control>
-        <block>{
-            <decl_stmt><decl><type><name>int</name></type> <name>l</name></decl>,<decl><type ref="prev"/><name>r</name></decl>,<decl><type ref="prev"/><name>kk</name></decl>;</decl_stmt>
-            <expr_stmt><expr><call><name>scanf</name><argument_list>(<argument><expr><literal type="string">"%d"</literal></expr></argument>,<argument><expr><operator>&amp;</operator><name>kk</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-            <expr_stmt><expr><name>A</name> <operator>=</operator> <literal type="number">0</literal></expr><operator>,</operator><expr><name>B</name> <operator>=</operator> <name>kk</name></expr>;</expr_stmt>
-            <decl_stmt><decl><type><name>int</name></type> <name>ss</name> <init>= <expr><call><name>qurry</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><name>n</name><operator>+</operator><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
-            <expr_stmt><expr><name>C</name> <operator>=</operator> <name>ss</name></expr>;</expr_stmt>
-            <expr_stmt><expr><name>l</name> <operator>=</operator> <call><name>qq</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><name>n</name><operator>+</operator><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-            <expr_stmt><expr><name>C</name> <operator>=</operator> <name>ss</name> <operator>+</operator> <literal type="number">1</literal></expr>;</expr_stmt>
-            <expr_stmt><expr><name>r</name> <operator>=</operator> <call><name>qq</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><name>n</name><operator>+</operator><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-            <decl_stmt><decl><type><name>int</name></type> <name>len</name> <init>= <expr><name>r</name> <operator>-</operator> <name>l</name> <operator>-</operator> <literal type="number">1</literal></expr></init></decl>;</decl_stmt>
-            <decl_stmt><decl><type><name>int</name></type> <name>ans1</name> <init>= <expr><name>len</name> <operator>/</operator> <operator>(</operator><name>k</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator></expr></init></decl>;</decl_stmt>
-            <if>if<condition>(<expr><name>len</name> <operator>%</operator><operator>(</operator><name>k</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>==</operator> <name>k</name></expr>)</condition><then>
-                <block type="pseudo"><expr_stmt><expr><name>ans1</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
-            <expr_stmt><expr><name>ans</name> <operator>-=</operator> <name>ans1</name></expr>;</expr_stmt>
-            <expr_stmt><expr><name>len</name> <operator>=</operator> <name>kk</name> <operator>-</operator> <name>l</name> <operator>-</operator> <literal type="number">1</literal></expr>;</expr_stmt>
-            <expr_stmt><expr><name>ans1</name> <operator>=</operator> <name>len</name> <operator>/</operator> <operator>(</operator><name>k</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt>
-            <if>if<condition>(<expr><name>len</name> <operator>%</operator><operator>(</operator><name>k</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>==</operator> <name>k</name></expr>)</condition><then>
-                <block type="pseudo"><expr_stmt><expr><name>ans1</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
-            <expr_stmt><expr><name>ans</name> <operator>+=</operator> <name>ans1</name></expr>;</expr_stmt>
-            <expr_stmt><expr><name>len</name> <operator>=</operator> <name>r</name> <operator>-</operator> <name>kk</name> <operator>-</operator> <literal type="number">1</literal></expr>;</expr_stmt>
-            <expr_stmt><expr><name>ans1</name> <operator>=</operator> <name>len</name> <operator>/</operator> <operator>(</operator><name>k</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator></expr>;</expr_stmt>
-            <if>if<condition>(<expr><name>len</name> <operator>%</operator><operator>(</operator><name>k</name> <operator>+</operator> <literal type="number">1</literal><operator>)</operator> <operator>==</operator> <name>k</name></expr>)</condition><then>
-                <block type="pseudo"><expr_stmt><expr><name>ans1</name><operator>++</operator></expr>;</expr_stmt></block></then></if>
-            <expr_stmt><expr><name>ans</name> <operator>+=</operator> <name>ans1</name></expr>;</expr_stmt>
-            <if>if<condition>(<expr><name>ans</name> <operator>&lt;</operator> <name>m</name> <operator>&amp;&amp;</operator> <name>ok</name> <operator>==</operator> <literal type="number">1</literal></expr>)</condition><then>
-            <block>{
-                <expr_stmt><expr><name>last</name> <operator>=</operator> <name>i</name></expr>;</expr_stmt>
-                <expr_stmt><expr><name>ok</name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
-            }</block></then></if>
-            <expr_stmt><expr><name>A</name> <operator>=</operator> <name>kk</name></expr>;</expr_stmt>
-            <expr_stmt><expr><call><name>update</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>,<argument><expr><name>n</name><operator>+</operator><literal type="number">1</literal></expr></argument>,<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-        }</block></for>
-        <if>if<condition>(<expr><name>ok</name></expr>)</condition><then>
-            <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"-1\n"</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></then>
-        <else>else
-            <block type="pseudo"><expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr><literal type="string">"%d\n"</literal></expr></argument>,<argument><expr><name>last</name></expr></argument>)</argument_list></call></expr>;</expr_stmt></block></else></if>
-    }</block></while>
-    <return>return <expr><literal type="number">0</literal></expr>;</return>
-}</block></function>
+				<else>
+					else
+					<block type="pseudo">
+						<return>
+							return
+							<expr>
+								<call>
+									<name>qq</name>
+									<argument_list>
+										(
+										<argument>
+											<expr>
+												<name>lson</name>
+											</expr>
+										</argument>
+										)
+									</argument_list>
+								</call>
+							</expr>
+							;
+						</return>
+					</block>
+				</else>
+			</if>
+			}
+		</block>
+	</function>
+	<function>
+		<type>
+			<name>int</name>
+		</type>
+		<name>main</name>
+		<parameter_list>()</parameter_list>
+		<block>
+			{
+			<while>
+				while
+				<condition>
+					(
+					<expr>
+						<call>
+							<name>scanf</name>
+							<argument_list>
+								(
+								<argument>
+									<expr>
+										<literal type="string">"%d %d %d"</literal>
+									</expr>
+								</argument>
+								,
+								<argument>
+									<expr>
+										<operator>&amp;</operator>
+										<name>n</name>
+									</expr>
+								</argument>
+								,
+								<argument>
+									<expr>
+										<operator>&amp;</operator>
+										<name>m</name>
+									</expr>
+								</argument>
+								,
+								<argument>
+									<expr>
+										<operator>&amp;</operator>
+										<name>k</name>
+									</expr>
+								</argument>
+								)
+							</argument_list>
+						</call>
+						<operator>!=</operator>
+						<name>EOF</name>
+					</expr>
+					)
+				</condition>
+				<block>
+					{
+					<decl_stmt>
+						<decl>
+							<type>
+								<name>int</name>
+							</type>
+							<name>tot</name>
+						</decl>
+						;
+					</decl_stmt>
+					<expr_stmt>
+						<expr>
+							<call>
+								<name>memset</name>
+								<argument_list>
+									(
+									<argument>
+										<expr>
+											<name>sum</name>
+										</expr>
+									</argument>
+									,
+									<argument>
+										<expr>
+											<literal type="number">0</literal>
+										</expr>
+									</argument>
+									,
+									<argument>
+										<expr>
+											<sizeof>
+												sizeof
+												<argument_list>
+													(
+													<argument>
+														<expr>
+															<name>sum</name>
+														</expr>
+													</argument>
+													)
+												</argument_list>
+											</sizeof>
+										</expr>
+									</argument>
+									)
+								</argument_list>
+							</call>
+						</expr>
+						;
+					</expr_stmt>
+					<expr_stmt>
+						<expr>
+							<call>
+								<name>scanf</name>
+								<argument_list>
+									(
+									<argument>
+										<expr>
+											<literal type="string">"%d"</literal>
+										</expr>
+									</argument>
+									,
+									<argument>
+										<expr>
+											<operator>&amp;</operator>
+											<name>tot</name>
+										</expr>
+									</argument>
+									)
+								</argument_list>
+							</call>
+						</expr>
+						;
+					</expr_stmt>
+					<decl_stmt>
+						<decl>
+							<type>
+								<name>int</name>
+							</type>
+							<name>i</name>
+						</decl>
+						,
+						<decl>
+							<type ref="prev" />
+							<name>j</name>
+						</decl>
+						;
+					</decl_stmt>
+					<expr_stmt>
+						<expr>
+							<name>A</name>
+							<operator>=</operator>
+							<literal type="number">0</literal>
+						</expr>
+						;
+					</expr_stmt>
+					<expr_stmt>
+						<expr>
+							<call>
+								<name>update</name>
+								<argument_list>
+									(
+									<argument>
+										<expr>
+											<literal type="number">0</literal>
+										</expr>
+									</argument>
+									,
+									<argument>
+										<expr>
+											<name>n</name>
+											<operator>+</operator>
+											<literal type="number">1</literal>
+										</expr>
+									</argument>
+									,
+									<argument>
+										<expr>
+											<literal type="number">1</literal>
+										</expr>
+									</argument>
+									)
+								</argument_list>
+							</call>
+						</expr>
+						;
+					</expr_stmt>
+					<expr_stmt>
+						<expr>
+							<name>A</name>
+							<operator>=</operator>
+							<name>n</name>
+							<operator>+</operator>
+							<literal type="number">1</literal>
+						</expr>
+						;
+					</expr_stmt>
+					<expr_stmt>
+						<expr>
+							<call>
+								<name>update</name>
+								<argument_list>
+									(
+									<argument>
+										<expr>
+											<literal type="number">0</literal>
+										</expr>
+									</argument>
+									,
+									<argument>
+										<expr>
+											<name>n</name>
+											<operator>+</operator>
+											<literal type="number">1</literal>
+										</expr>
+									</argument>
+									,
+									<argument>
+										<expr>
+											<literal type="number">1</literal>
+										</expr>
+									</argument>
+									)
+								</argument_list>
+							</call>
+						</expr>
+						;
+					</expr_stmt>
+					<decl_stmt>
+						<decl>
+							<type>
+								<name>int</name>
+							</type>
+							<name>ans</name>
+							<init>
+								=
+								<expr>
+									<name>n</name>
+									<operator>/</operator>
+									<operator>(</operator>
+									<name>k</name>
+									<operator>+</operator>
+									<literal type="number">1</literal>
+									<operator>)</operator>
+								</expr>
+							</init>
+						</decl>
+						;
+					</decl_stmt>
+					<if>
+						if
+						<condition>
+							(
+							<expr>
+								<name>n</name>
+								<operator>%</operator>
+								<operator>(</operator>
+								<name>k</name>
+								<operator>+</operator>
+								<literal type="number">1</literal>
+								<operator>)</operator>
+								<operator>==</operator>
+								<name>k</name>
+							</expr>
+							)
+						</condition>
+						<then>
+							<block type="pseudo">
+								<expr_stmt>
+									<expr>
+										<name>ans</name>
+										<operator>++</operator>
+									</expr>
+									;
+								</expr_stmt>
+							</block>
+						</then>
+					</if>
+					<decl_stmt>
+						<decl>
+							<type>
+								<name>int</name>
+							</type>
+							<name>ok</name>
+							<init>
+								=
+								<expr>
+									<literal type="number">1</literal>
+								</expr>
+							</init>
+						</decl>
+						;
+					</decl_stmt>
+					<decl_stmt>
+						<decl>
+							<type>
+								<name>int</name>
+							</type>
+							<name>last</name>
+							<init>
+								=
+								<expr>
+									<operator>-</operator>
+									<literal type="number">1</literal>
+								</expr>
+							</init>
+						</decl>
+						;
+					</decl_stmt>
+					<for>
+						for
+						<control>
+							(
+							<init>
+								<expr>
+									<name>i</name>
+									<operator>=</operator>
+									<literal type="number">1</literal>
+								</expr>
+								;
+							</init>
+							<condition>
+								<expr>
+									<name>i</name>
+									<operator>&lt;=</operator>
+									<name>tot</name>
+								</expr>
+								;
+							</condition>
+							<incr>
+								<expr>
+									<name>i</name>
+									<operator>++</operator>
+								</expr>
+							</incr>
+							)
+						</control>
+						<block>
+							{
+							<decl_stmt>
+								<decl>
+									<type>
+										<name>int</name>
+									</type>
+									<name>l</name>
+								</decl>
+								,
+								<decl>
+									<type ref="prev" />
+									<name>r</name>
+								</decl>
+								,
+								<decl>
+									<type ref="prev" />
+									<name>kk</name>
+								</decl>
+								;
+							</decl_stmt>
+							<expr_stmt>
+								<expr>
+									<call>
+										<name>scanf</name>
+										<argument_list>
+											(
+											<argument>
+												<expr>
+													<literal type="string">"%d"</literal>
+												</expr>
+											</argument>
+											,
+											<argument>
+												<expr>
+													<operator>&amp;</operator>
+													<name>kk</name>
+												</expr>
+											</argument>
+											)
+										</argument_list>
+									</call>
+								</expr>
+								;
+							</expr_stmt>
+							<expr_stmt>
+								<expr>
+									<name>A</name>
+									<operator>=</operator>
+									<literal type="number">0</literal>
+								</expr>
+								<operator>,</operator>
+								<expr>
+									<name>B</name>
+									<operator>=</operator>
+									<name>kk</name>
+								</expr>
+								;
+							</expr_stmt>
+							<decl_stmt>
+								<decl>
+									<type>
+										<name>int</name>
+									</type>
+									<name>ss</name>
+									<init>
+										=
+										<expr>
+											<call>
+												<name>qurry</name>
+												<argument_list>
+													(
+													<argument>
+														<expr>
+															<literal type="number">0</literal>
+														</expr>
+													</argument>
+													,
+													<argument>
+														<expr>
+															<name>n</name>
+															<operator>+</operator>
+															<literal type="number">1</literal>
+														</expr>
+													</argument>
+													,
+													<argument>
+														<expr>
+															<literal type="number">1</literal>
+														</expr>
+													</argument>
+													)
+												</argument_list>
+											</call>
+										</expr>
+									</init>
+								</decl>
+								;
+							</decl_stmt>
+							<expr_stmt>
+								<expr>
+									<name>C</name>
+									<operator>=</operator>
+									<name>ss</name>
+								</expr>
+								;
+							</expr_stmt>
+							<expr_stmt>
+								<expr>
+									<name>l</name>
+									<operator>=</operator>
+									<call>
+										<name>qq</name>
+										<argument_list>
+											(
+											<argument>
+												<expr>
+													<literal type="number">0</literal>
+												</expr>
+											</argument>
+											,
+											<argument>
+												<expr>
+													<name>n</name>
+													<operator>+</operator>
+													<literal type="number">1</literal>
+												</expr>
+											</argument>
+											,
+											<argument>
+												<expr>
+													<literal type="number">1</literal>
+												</expr>
+											</argument>
+											)
+										</argument_list>
+									</call>
+								</expr>
+								;
+							</expr_stmt>
+							<expr_stmt>
+								<expr>
+									<name>C</name>
+									<operator>=</operator>
+									<name>ss</name>
+									<operator>+</operator>
+									<literal type="number">1</literal>
+								</expr>
+								;
+							</expr_stmt>
+							<expr_stmt>
+								<expr>
+									<name>r</name>
+									<operator>=</operator>
+									<call>
+										<name>qq</name>
+										<argument_list>
+											(
+											<argument>
+												<expr>
+													<literal type="number">0</literal>
+												</expr>
+											</argument>
+											,
+											<argument>
+												<expr>
+													<name>n</name>
+													<operator>+</operator>
+													<literal type="number">1</literal>
+												</expr>
+											</argument>
+											,
+											<argument>
+												<expr>
+													<literal type="number">1</literal>
+												</expr>
+											</argument>
+											)
+										</argument_list>
+									</call>
+								</expr>
+								;
+							</expr_stmt>
+							<decl_stmt>
+								<decl>
+									<type>
+										<name>int</name>
+									</type>
+									<name>len</name>
+									<init>
+										=
+										<expr>
+											<name>r</name>
+											<operator>-</operator>
+											<name>l</name>
+											<operator>-</operator>
+											<literal type="number">1</literal>
+										</expr>
+									</init>
+								</decl>
+								;
+							</decl_stmt>
+							<decl_stmt>
+								<decl>
+									<type>
+										<name>int</name>
+									</type>
+									<name>ans1</name>
+									<init>
+										=
+										<expr>
+											<name>len</name>
+											<operator>/</operator>
+											<operator>(</operator>
+											<name>k</name>
+											<operator>+</operator>
+											<literal type="number">1</literal>
+											<operator>)</operator>
+										</expr>
+									</init>
+								</decl>
+								;
+							</decl_stmt>
+							<if>
+								if
+								<condition>
+									(
+									<expr>
+										<name>len</name>
+										<operator>%</operator>
+										<operator>(</operator>
+										<name>k</name>
+										<operator>+</operator>
+										<literal type="number">1</literal>
+										<operator>)</operator>
+										<operator>==</operator>
+										<name>k</name>
+									</expr>
+									)
+								</condition>
+								<then>
+									<block type="pseudo">
+										<expr_stmt>
+											<expr>
+												<name>ans1</name>
+												<operator>++</operator>
+											</expr>
+											;
+										</expr_stmt>
+									</block>
+								</then>
+							</if>
+							<expr_stmt>
+								<expr>
+									<name>ans</name>
+									<operator>-=</operator>
+									<name>ans1</name>
+								</expr>
+								;
+							</expr_stmt>
+							<expr_stmt>
+								<expr>
+									<name>len</name>
+									<operator>=</operator>
+									<name>kk</name>
+									<operator>-</operator>
+									<name>l</name>
+									<operator>-</operator>
+									<literal type="number">1</literal>
+								</expr>
+								;
+							</expr_stmt>
+							<expr_stmt>
+								<expr>
+									<name>ans1</name>
+									<operator>=</operator>
+									<name>len</name>
+									<operator>/</operator>
+									<operator>(</operator>
+									<name>k</name>
+									<operator>+</operator>
+									<literal type="number">1</literal>
+									<operator>)</operator>
+								</expr>
+								;
+							</expr_stmt>
+							<if>
+								if
+								<condition>
+									(
+									<expr>
+										<name>len</name>
+										<operator>%</operator>
+										<operator>(</operator>
+										<name>k</name>
+										<operator>+</operator>
+										<literal type="number">1</literal>
+										<operator>)</operator>
+										<operator>==</operator>
+										<name>k</name>
+									</expr>
+									)
+								</condition>
+								<then>
+									<block type="pseudo">
+										<expr_stmt>
+											<expr>
+												<name>ans1</name>
+												<operator>++</operator>
+											</expr>
+											;
+										</expr_stmt>
+									</block>
+								</then>
+							</if>
+							<expr_stmt>
+								<expr>
+									<name>ans</name>
+									<operator>+=</operator>
+									<name>ans1</name>
+								</expr>
+								;
+							</expr_stmt>
+							<expr_stmt>
+								<expr>
+									<name>len</name>
+									<operator>=</operator>
+									<name>r</name>
+									<operator>-</operator>
+									<name>kk</name>
+									<operator>-</operator>
+									<literal type="number">1</literal>
+								</expr>
+								;
+							</expr_stmt>
+							<expr_stmt>
+								<expr>
+									<name>ans1</name>
+									<operator>=</operator>
+									<name>len</name>
+									<operator>/</operator>
+									<operator>(</operator>
+									<name>k</name>
+									<operator>+</operator>
+									<literal type="number">1</literal>
+									<operator>)</operator>
+								</expr>
+								;
+							</expr_stmt>
+							<if>
+								if
+								<condition>
+									(
+									<expr>
+										<name>len</name>
+										<operator>%</operator>
+										<operator>(</operator>
+										<name>k</name>
+										<operator>+</operator>
+										<literal type="number">1</literal>
+										<operator>)</operator>
+										<operator>==</operator>
+										<name>k</name>
+									</expr>
+									)
+								</condition>
+								<then>
+									<block type="pseudo">
+										<expr_stmt>
+											<expr>
+												<name>ans1</name>
+												<operator>++</operator>
+											</expr>
+											;
+										</expr_stmt>
+									</block>
+								</then>
+							</if>
+							<expr_stmt>
+								<expr>
+									<name>ans</name>
+									<operator>+=</operator>
+									<name>ans1</name>
+								</expr>
+								;
+							</expr_stmt>
+							<if>
+								if
+								<condition>
+									(
+									<expr>
+										<name>ans</name>
+										<operator>&lt;</operator>
+										<name>m</name>
+										<operator>&amp;&amp;</operator>
+										<name>ok</name>
+										<operator>==</operator>
+										<literal type="number">1</literal>
+									</expr>
+									)
+								</condition>
+								<then>
+									<block>
+										{
+										<expr_stmt>
+											<expr>
+												<name>last</name>
+												<operator>=</operator>
+												<name>i</name>
+											</expr>
+											;
+										</expr_stmt>
+										<expr_stmt>
+											<expr>
+												<name>ok</name>
+												<operator>=</operator>
+												<literal type="number">0</literal>
+											</expr>
+											;
+										</expr_stmt>
+										}
+									</block>
+								</then>
+							</if>
+							<expr_stmt>
+								<expr>
+									<name>A</name>
+									<operator>=</operator>
+									<name>kk</name>
+								</expr>
+								;
+							</expr_stmt>
+							<expr_stmt>
+								<expr>
+									<call>
+										<name>update</name>
+										<argument_list>
+											(
+											<argument>
+												<expr>
+													<literal type="number">0</literal>
+												</expr>
+											</argument>
+											,
+											<argument>
+												<expr>
+													<name>n</name>
+													<operator>+</operator>
+													<literal type="number">1</literal>
+												</expr>
+											</argument>
+											,
+											<argument>
+												<expr>
+													<literal type="number">1</literal>
+												</expr>
+											</argument>
+											)
+										</argument_list>
+									</call>
+								</expr>
+								;
+							</expr_stmt>
+							}
+						</block>
+					</for>
+					<if>
+						if
+						<condition>
+							(
+							<expr>
+								<name>ok</name>
+							</expr>
+							)
+						</condition>
+						<then>
+							<block type="pseudo">
+								<expr_stmt>
+									<expr>
+										<call>
+											<name>printf</name>
+											<argument_list>
+												(
+												<argument>
+													<expr>
+														<literal type="string">"-1\n"</literal>
+													</expr>
+												</argument>
+												)
+											</argument_list>
+										</call>
+									</expr>
+									;
+								</expr_stmt>
+							</block>
+						</then>
+						<else>
+							else
+							<block type="pseudo">
+								<expr_stmt>
+									<expr>
+										<call>
+											<name>printf</name>
+											<argument_list>
+												(
+												<argument>
+													<expr>
+														<literal type="string">"%d\n"</literal>
+													</expr>
+												</argument>
+												,
+												<argument>
+													<expr>
+														<name>last</name>
+													</expr>
+												</argument>
+												)
+											</argument_list>
+										</call>
+									</expr>
+									;
+								</expr_stmt>
+							</block>
+						</else>
+					</if>
+					}
+				</block>
+			</while>
+			<return>
+				return
+				<expr>
+					<literal type="number">0</literal>
+				</expr>
+				;
+			</return>
+			}
+		</block>
+	</function>
 </unit>

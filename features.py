@@ -46,7 +46,6 @@ Feature 8: Number of variables (geometry, graphs, binary search)
 from collections import defaultdict
 from lxml import etree
 
-import requests
 import sys
 import os
 import numpy as np
@@ -78,7 +77,8 @@ def extract_feats(file):
 				curr_feats += [0,double_loop,0]
 			else:
 				curr_feats += [0,0,triple_loop]
-
+	else:
+		curr_feats += [0,0,0]
 
 	# feature 4
 	curr_feats.append(evalute(tree,FOR,IF) + evalute(tree,WHILE,IF))
@@ -95,7 +95,7 @@ def extract_feats(file):
 		for c in calls:
 			if c.text == name:
 				rec += 1
-	print "recursion", rec
+	# print "recursion", rec
 	curr_feats.append(rec)
 
 	# feature 7: could be in a declared statement, or an expression (cin and cout should be excluded)
@@ -139,7 +139,7 @@ def extract_feats(file):
 		cnt_vars += len(tmp)
 		if(len(tmp) > 0):
 			for key in types:
-				if tmp[0].xpath('./type/name')[0].text == key:
+				if tmp[0].xpath('./type/name') and tmp[0].xpath('./type/name')[0].text == key:
 					cnt_types[types[key]] += len(tmp)
 
 			query_vectors = tmp[0].xpath('./type/name/name')
@@ -178,22 +178,24 @@ RETURN='/block/return'
 
 data_dir = sys.argv[1]
 
-print extract_feats(data_dir)
 
 
-# feature_set = {}
-# for contest in next(os.walk(data_dir))[1]:
-# 	for problem in next(os.walk(data_dir+"/"+contest))[1]:
-# 		problem_features =  []
-# 		for submission in os.listdir(data_dir+"/"+contest+"/"+problem):
-# 			if submission.endswith(".xml"):
-# 				problem_features.append(extract_feats(submission))
-# 		arr = np.asarray(problem_features)
-# 		arr.astype(float)
-# 		avg = np.average(arr, axis=0)
-# 		feature_set[contest + "_" + problem] = avg
+feature_set = {}
+for contest in next(os.walk(data_dir))[1]:
+	for problem in next(os.walk(data_dir+"/"+contest))[1]:
+		problem_features =  []
+		for count,submission in enumerate(os.listdir(data_dir+"/"+contest+"/"+problem)):
+			path = data_dir+"/"+contest+"/"+problem+ "/" + submission
+			if submission.endswith(".xml"):
+				print(path)
+				problem_features.append(extract_feats(path))
+		arr = np.asarray(problem_features)
+		arr.astype(float)
+		avg = np.average(arr, axis=0)
+		feature_set[contest + "_" + problem] = avg
 
 
 
+print(len(feature_set))
 
 

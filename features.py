@@ -39,7 +39,7 @@ Feature 8: Number of variables (geometry, graphs, binary search)
 14. no. of params per method (avg)
 15. no. of functions
 16. no. of arithmetic operations
-16. names of variables classes and methods -> word clusters
+16. names of variables classes and methods -> word clusters (LATERZZ)
 
 '''
 
@@ -95,6 +95,7 @@ def extract_feats(file):
 		for c in calls:
 			if c.text == name:
 				rec += 1
+	print "recursion", rec
 	curr_feats.append(rec)
 
 	# feature 7: could be in a declared statement, or an expression (cin and cout should be excluded)
@@ -152,9 +153,22 @@ def extract_feats(file):
 	curr_feats.append(cnt_vars)
 	curr_feats += cnt_types
 	curr_feats.append(cnt_vectors)
+
+	# feature 14
+	curr_feats.append(len(tree.xpath(".//parameter_list/parameter"))/len(tree.xpath(".//function")))
+
+	# feature 15, number of methods excluding main
+	curr_feats.append(len(tree.xpath(".//function/name[text()!='main']")))
+
+	ops = 0
+	for op in tree.xpath(".//operator"):
+		if op.text in operations:
+			ops += 1
+	curr_feats.append(ops)
+
 	return curr_feats
 
-
+operations = ['+','-','*','/','%','+=','-=','*=','/=','++','--']
 FOR='/for/block/'
 WHILE='/while/block/'
 IF='/if/block'

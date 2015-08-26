@@ -49,7 +49,7 @@ from lxml import etree
 import sys
 import os
 import numpy as np
-
+import pickle
 
 def evalute(tree,*args):
 	query = './'
@@ -192,10 +192,11 @@ for contest in next(os.walk(data_dir))[1]:
 		arr = np.asarray(problem_features)
 		arr.astype(float)
 		avg = np.average(arr, axis=0)
-		feature_set[contest + "_" + problem] = avg
+		feature_set[contest + "/" + problem] = avg
 
 
 
-print(len(feature_set))
-
-
+print("Done feature extraction for: " + str(len(feature_set)) + " problems")
+f = open('features.pickle', 'wb')
+pickle.dump(feature_set, f)
+f.close()

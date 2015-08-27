@@ -2,15 +2,15 @@ import os.path
 
 '''
 author: tarek
-date: Aug 23rd 2015
-desc: parses submissions.txt looking for contest number, then problems index to groups cpp submissions together in the data dir
+date: Aug 26th 2015
+desc: parses Problems-tags.txt to produce a file with the problem path alongside its associated tags, to be fed later into the classification module
 '''
 
 # feed tag rules in here
 def update_tag(tag):
 	return tag
 
-out_file = open("problems-tags-updated.txt",'w')
+out_file = open("train-tags.txt",'w')
 
 with open("Problems-tags.txt") as f:
 
@@ -26,8 +26,11 @@ with open("Problems-tags.txt") as f:
 
 			if arr_line[0].lower() == "tags:":
 				out_file.write(path +":")
-				for i in arr_line[1:]:
-					out_file.write(str(update_tag(i))+ ",")
-				out_file.write("\n")
+				string = ''
+				tags = line.split(':')[1].strip()
+				tags_list = tags.split(',')
+				for i in tags_list:
+					string += str(update_tag(i.strip())) + ","
+				out_file.write(string[:-1] + "\n")
 		else:
 			path = ''

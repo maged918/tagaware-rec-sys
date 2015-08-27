@@ -10,7 +10,7 @@ import sklearn
 
 from collections import defaultdict
 from scipy.stats import pearsonr
-from numpy import zeros 
+from numpy import zeros
 from sklearn.cluster import KMeans
 from sklearn import datasets
 
@@ -26,10 +26,10 @@ Length of dict is the number of users.
 '''
 f = open('Submissions.txt', 'r')
 handles = set([line.split(' ')[1].rstrip()
-              for line in f if line.split(' ')[0] == 'Handle:'])
+               for line in f if line.split(' ')[0] == 'Handle:'])
 users = dict(zip(list(handles), range(len(handles))))
 # TO DO: Check the logic of this edit!
-print(users)
+# print(users)
 f.close()
 
 '''
@@ -50,7 +50,7 @@ for line in f:
     index += [s[1].rstrip()]
 problems = [str(c) + i for c, i in zip(contest, index)]
 problems = dict(zip(problems, range(len(problems))))
-print(problems)
+# print(problems)
 f.close()
 
 '''
@@ -67,7 +67,7 @@ for line in f:
     tags |= set(line.split(' ', 1)[1:][0].rstrip().split(','))
 tags = set(map(lambda x: x.lstrip(), tags))
 tags = dict(zip(list(tags), range(len(tags))))
-print(tags)
+# print(tags)
 f.close()
 
 users_count = len(users)
@@ -93,7 +93,6 @@ handle = ''
 users_problems = []
 for u in users:
   users_problems.append([])
-
 for l in f:
   if l == '\n':
     continue
@@ -109,7 +108,7 @@ for l in f:
     # print(contest_id + index + ' : ' + handle)
     # print(user_id, problem_id)
     users_problems[user_id].append(problem_id)
-print(users_problems)
+# print(users_problems)
 f.close()
 
 '''
@@ -137,7 +136,7 @@ for l in f:
     tags_ids = [tags[tag] for tag in current_tags]
     problem_id = problems[contest_id + index]
     problems_tags[problem_id] += tags_ids
-print(problems_tags)
+# print(problems_tags)
 f.close()
 
 '''
@@ -160,17 +159,16 @@ for handle in users:
   # print(len(users_problems[u]))
   for t in users_tags[u]:
     users_tags[u][t] /= (len(users_problems[u]) * 1.0)
-print(users_tags)
+# print(users_tags)
 # print(tags["geometry"], tags["implementation"], tags["sortings"])
 
 '''
 Calcultaing user similarity using Pearson's Correlation
 NOTE: If needed (if this is taking too much time), possible optimization:
-    p(x,yاسيوط) = p(y,x)
+    p(x,y) = p(y,x)
 '''
-correlation = []
-for i1, u1 in zip(range(len(users)), users):
-  correlation.append([])
+correlation = [dict()] * len(users)
+for u1 in users:
   for u2 in users:
     id1 = users[u1]
     id2 = users[u2]
@@ -180,13 +178,10 @@ for i1, u1 in zip(range(len(users)), users):
       l1[k] = users_tags[id1][k]
     for k in users_tags[id2]:
       l2[k] = users_tags[id2][k]
-    correlation[i1].append(pearsonr(l1, l2)[0])
-  print(correlation[i1])
+    correlation[id1][id2] = pearsonr(l1, l2)[0]
 
-for user in correlation:
-  for other_user in user:
-    print(other_user, end=' ')
-  print()
+print(correlation[0])
+#print(correlation)
 
 '''
 Calculating Temporal Weight between users and tags
@@ -219,12 +214,14 @@ for l in f:
     problem_id = problems[contest_id + index]
     current_problem_tags = problems_tags[problem_id]
     problem_date = datetime.datetime.fromtimestamp(int(time_stamp))
-    date_diff = dateutil.relativedelta.relativedelta (current_date, problem_date)
+    date_diff = dateutil.relativedelta.relativedelta(
+        current_date,
+        problem_date)
     days = abs(date_diff.days)
     temporal_value = exp(-log(2) * days / half_life)
     for t in current_problem_tags:
       temporal_values[user_id][t] += temporal_value
-print(temporal_values)
+# print(temporal_values)
 
 
 '''
@@ -240,7 +237,7 @@ for t in tags:
 for idx in range(len(problems_tags)):
   for t in problems_tags[idx]:
     tags_problems[t].add(idx)
-  
+
 print("Tag-problem graph: ", tags_problems)
 
 tag_vectors = []
@@ -249,10 +246,10 @@ for t in tags:
 
 for idx in range(len(tags_problems)):
   for p in tags_problems[idx]:
-    tag_vectors[idx][p]=1
+    tag_vectors[idx][p] = 1
   tag_vectors[idx] = tag_vectors[idx].tolist()
-  
-print("Tag-vectors: ", tag_vectors)    
+
+print("Tag-vectors: ", tag_vectors)
 
 k = 10
 engine = KMeans(n_clusters=k)
@@ -260,7 +257,7 @@ labels = engine.fit(tag_vectors).labels_
 
 print("Tag labels: ", labels)
 
-inverse_tags= dict()
+inverse_tags = dict()
 
 for tag in tags:
   inverse_tags[tags[tag]] = tag
@@ -271,6 +268,66 @@ for i in range(k):
     if labels[tag_idx] == i:
       print(inverse_tags[tag_idx])
 
+'''
+Calculating the final scores
+user_problem_collaborative_score is a list of dictionaries with dimensions users_count * problem_count
+user_problem_collaborative_score[u][p] is the score given to problem p for user u
+'''
+user_problem_collaborative_score = [dict()] * len(users)
+# collaborative filtering scores
+for u in users:
+  uid = users[u]
+  for p in problems:
+    pid = problems[p]
+    sum = 0
+    users_solved_p = 0
+    for u2 in users:
+      if u == u2:
+        continue
+      u2id = users[u2]
+      sum += correlation[uid][u2id] * (pid in users_problems[u2id])
+      if pid in users_problems[u2id]:
+        users_solved_p += 1
+#<<<<<<<<<<<<<<<<<what should I do if a problem is not solved by anyone so users_solved_p is equal to zero
+#<<<<<<<<<<<<<<<<<I would say set it to zero
+    if users_solved_p == 0:
+      user_problem_collaborative_score[uid][pid] = 0
+    else:
+      user_problem_collaborative_score[uid][pid] = sum / users_solved_p
+
+print(user_problem_collaborative_score[0])
+
+# temporal based scores
+#<<<<<<<<<<<<<<<<< what should I do to problems solved by the user
+#<<<<<<<<<<<<<<<<< I would say set its value to -1 so that we won't recommend it
+#<<<<<<<<<<<<<<<<< or 1 and execlude them from our recommendations
+#<<<<<<<<<<<<<<<<< this could also be the case when we are considering diversity
+#<<<<<<<<<<<<<<<<< Also, I used pearsonr not cosine similarity (I want to know why cosine similarity)
+user_problem_temporal_score = [dict()] * len(users)
+for u in users:
+  uid = users[u]
+  for p in problems:
+    pid = problems[p]
+    user_tag = [0] * len(tags)
+    problem_tag = [0] * len(tags)
+    for t in users_tags[uid]:
+      user_tag[t] = users_tags[uid][t]
+    for t in problems_tags[pid]:
+      problem_tag[t] = 1
+    user_problem_temporal_score[uid][pid] = pearsonr(user_tag, problem_tag)[0]
+#<<<<<<<<<<<<<<<< I need to check whether I need to divide by a number to normalize but I am too sleepy to do it now
+print(user_problem_temporal_score[0])
+
+# final scores
+alpha = 0.7
+user_problem_final_score = [dict()] * len(users)
+for u in users:
+  uid = users[u]
+  for p in problems:
+    pid = problems[p]
+    user_problem_final_score[uid][pid] = alpha * user_problem_collaborative_score[
+        uid][pid] + (1 - alpha) * user_problem_temporal_score[uid][pid]
+print(user_problem_final_score[0])
 
 '''
 Introduction:

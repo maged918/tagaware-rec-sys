@@ -112,7 +112,7 @@ def create_code(submission):
 	subprocess.call(["touch", './source-code/' + str(submission['id']) + ".cpp"])
 	fi3 = open('./source-code/' + str(submission['id']) + ".cpp" , "w")
 	fi3.write("//Language: " + str(submission['programmingLanguage']) + "\n\n\n")
-	result = soup.pre.get_text()
+	result = soup.pre.get_text().encode('utf-8').decode('utf-8 ')
 	fi3.write(result)
 	fi3.close()
 

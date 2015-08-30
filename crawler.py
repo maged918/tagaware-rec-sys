@@ -12,10 +12,10 @@ from urllib3 import request
 from urllib3 import util 
 
 flags = {
-			'proxy': 0
+			'proxy': 1
 		}
 
-password = 'INSERT PASSWORD'
+password = 'PASSWORD'
 
 subprocess.call(["touch", "Submissions.txt"])
 subprocess.call(["touch", "Problems-tags.txt"])
@@ -34,6 +34,9 @@ if flags['proxy'] == 1:
 else:
 	proxyDict = {}
 	auth = {}
+
+problem_limit = 20
+bs4_error_text = '<ERROR>'
 
 def filter_Contests(contests):
 	filtered = []
@@ -62,8 +65,8 @@ def filter_Submissions(submissions, contestID):
 			dictionary[submission['problem']['index']].append(submission)
 	
 	for problem in problems:
-		if(problem['index'] in dictionary and len(dictionary[problem['index']]) >= 50):
-			filtered.extend(sample(dictionary[problem['index']], 50))
+		if(problem['index'] in dictionary and len(dictionary[problem['index']]) >= problem_limit):
+			filtered.extend(sample(dictionary[problem['index']], problem_limit))
 			fi2.write("Contest ID: " + str(contestID) + "\n")
 			fi2.write("Index: " + str(problem['index']) + "\n")
 			fi2.write("Name: " + str(problem['name']) + "\n")
@@ -112,7 +115,10 @@ def create_code(submission):
 	subprocess.call(["touch", './source-code/' + str(submission['id']) + ".cpp"])
 	fi3 = open('./source-code/' + str(submission['id']) + ".cpp" , "w")
 	fi3.write("//Language: " + str(submission['programmingLanguage']) + "\n\n\n")
-	result = soup.pre.get_text().encode('utf-8').decode('utf-8 ')
+	try:
+		result = soup.pre.get_text().encode('utf-8').decode('utf-8 ')
+	except AttributeError:
+		result = bs4_error_text
 	fi3.write(result)
 	fi3.close()
 

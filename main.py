@@ -5,19 +5,18 @@ Created on Aug 1, 2015
 '''
 
 import numpy as np
-import scipy as scipy
-import sklearn
 import datetime
+import codecs
 
 from collections import defaultdict
 from scipy.stats import pearsonr
 from numpy import zeros
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, AgglomerativeClustering
 from sklearn import datasets
 import dateutil.relativedelta
 from math import exp, log
 
-users, problems, tags, users_problems, problems_tags, users_tags, correlation, temporal_values = []
+users, problems, tags, users_problems, problems_tags, users_tags, correlation, temporal_values = (0,)*8
 
 '''
 Parse Submissions.txt, generate dict of user_handle --> user_id (0-based)
@@ -40,7 +39,7 @@ Length of dict is the number of problems
 
 def create_problems():
     global problems
-    f = open('Problems-tags.txt', 'r')
+    f = codecs.open('Problems-tags.txt', 'r', 'utf-8')
     contest = []
     index = []
     for line in f:
@@ -62,7 +61,7 @@ Length of dict is the number of tags
 
 def create_tags():
     global tags
-    f = open('Problems-tags.txt', 'r')
+    f = codecs.open('Problems-tags.txt', 'r', 'utf-8')
     tags = set()
     for line in f:
         if line == '\n':
@@ -116,7 +115,7 @@ Build tag-problem graph.
 
 def create_problems_tags():
     global problems_tags
-    f = open('Problems-tags.txt', 'r')
+    f = codecs.open('Problems-tags.txt', 'r', 'utf-8')
     contest_id = ''
     index = ''
     current_tags = ''
@@ -226,47 +225,51 @@ def create_clusters():
     tags_problems = []
     
     for t in tags:
-      tags_problems.append(set())
+        tags_problems.append(set())
     
     for idx in range(len(problems_tags)):
-      for t in problems_tags[idx]:
-        tags_problems[t].add(idx)
-    
-    print("Tag-problem graph: ", tags_problems)
+        for t in problems_tags[idx]:
+            tags_problems[t].add(idx)
+
+    #print("Tag-problem graph: ", tags_problems)
     
     tag_vectors = []
     for t in tags:
-      tag_vectors.append(np.zeros(len(problems)))
+        tag_vectors.append(np.zeros(len(problems)))
     
     for idx in range(len(tags_problems)):
-      for p in tags_problems[idx]:
-        tag_vectors[idx][p] = 1
-      tag_vectors[idx] = tag_vectors[idx].tolist()
+        for p in tags_problems[idx]:
+            tag_vectors[idx][p] = 1
+        tag_vectors[idx] = tag_vectors[idx].tolist()
     
-    print("Tag-vectors: ", tag_vectors)
+    #print("Tag-vectors: ", tag_vectors)
     
-    k = 10
+    k = 5
+    engine = AgglomerativeClustering(n_clusters=k, affinity='cosine', linkage='average')
+    labels = engine.fit(tag_vectors).labels_
+    '''
     engine = KMeans(n_clusters=k)
     labels = engine.fit(tag_vectors).labels_
-    
-    print("Tag labels: ", labels)
+    '''
+
+    #print("Tag labels: ", labels)
     
     inverse_tags = dict()
     
     for tag in tags:
-      inverse_tags[tags[tag]] = tag
+        inverse_tags[tags[tag]] = tag
     
     for i in range(k):
-      print("Cluster ", i)
-      for tag_idx in range(len(labels)):
-        if labels[tag_idx] == i:
-          print(inverse_tags[tag_idx])
+        print("Cluster ", i)
+        for tag_idx in range(len(labels)):
+            if labels[tag_idx] == i:
+                print(inverse_tags[tag_idx])
     
 '''
 Calculating the final scores
 user_problem_collaborative_score is a list of dictionaries with dimensions users_count * problem_count
 user_problem_collaborative_score[u][p] is the score given to problem p for user u
-'''
+
 user_problem_collaborative_score = [dict()] * len(users)
 # collaborative filtering scores
 for u in users:
@@ -322,21 +325,20 @@ for u in users:
     user_problem_final_score[uid][pid] = alpha * user_problem_collaborative_score[
         uid][pid] + (1 - alpha) * user_problem_temporal_score[uid][pid]
 print(user_problem_final_score[0])
-
+'''
 
 
 def main():
     create_users()
+    print('Users = ', len(users))
     create_problems()
     create_tags()
-    print('Count of users = ', len(users), users, end=' ')
-    print('Count of problems = ', len(problems), problems, end=' ')
-    print('Count of tags = ', len(tags), tags, end=' ')
     create_users_problems()
     create_problems_tags()
     create_users_tags()
-    create_users_correlations()
-    create_temporal()
+    #create_users_correlations()
+    #create_temporal()
+    create_clusters()
     
 
 main()

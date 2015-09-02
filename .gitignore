@@ -1,0 +1,4 @@
+data/*
+source-code/*
+*.pyc
+data.zip

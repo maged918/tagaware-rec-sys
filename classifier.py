@@ -10,7 +10,7 @@ features = pickle.load(f)
 labelled_tags = {}
 tags_list = []
 
-with open("train-tags.txt") as f:
+with open("data-set.txt") as f:
 	for line in f:
 		if line != "\n":
 

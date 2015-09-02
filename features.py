@@ -155,8 +155,10 @@ def extract_feats(file):
 	curr_feats.append(cnt_vectors)
 
 	# feature 14
-	curr_feats.append(len(tree.xpath(".//parameter_list/parameter"))/len(tree.xpath(".//function")))
-
+	if len(tree.xpath(".//function")) != 0:
+		curr_feats.append(len(tree.xpath(".//parameter_list/parameter"))/len(tree.xpath(".//function")))
+	else:
+		curr_feats.append(0.0)
 	# feature 15, number of methods excluding main
 	curr_feats.append(len(tree.xpath(".//function/name[text()!='main']")))
 

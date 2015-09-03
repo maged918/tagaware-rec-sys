@@ -32,6 +32,6 @@ with open("Submissions.txt") as f:
 				file_id = arr_line[2] + ".cpp"
 				shutil.copy("source-code/" + file_id, "data/"+contest+"/"+index+"/"+file_id)
 
- 		else:
+		else:
 			contest = ''
 			index = ''

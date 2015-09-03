@@ -18,6 +18,7 @@ import numpy as np
 import time
 
 users, problems, tags, users_problems, problems_tags, users_tags, correlation, temporal_values, users_problems_temporal_score = (0,)*9
+flag_print = 1
 
 '''
 Parse Submissions.txt, generate dict of user_handle --> user_id (0-based)
@@ -31,6 +32,8 @@ def create_users():
                    for line in f if line.split(' ')[0] == 'Handle:'])
     users = dict(zip(list(handles), range(len(handles))))
     f.close()
+    if(flag_print):
+        print(users)
 
 '''
 Parse Problems-tags.txt, the unique problem name is ContestID + Index
@@ -54,6 +57,8 @@ def create_problems():
     problems = [str(c) + i for c, i in zip(contest, index)]
     problems = dict(zip(problems, range(len(problems))))
     f.close()
+    if(flag_print):
+        print(problems)
 
 '''
 Parse Problems-tags.txt, generate dict of tag --> tag_id (0-based)
@@ -73,6 +78,8 @@ def create_tags():
     tags = set(map(lambda x: x.lstrip(), tags))
     tags = dict(zip(list(tags), range(len(tags))))
     f.close()
+    if(flag_print):
+        print(tags)
 
 '''
 TODO:
@@ -107,6 +114,8 @@ def create_users_problems():
             problem_id = problems[contest_id + index]
             users_problems[user_id].append(problem_id)
     f.close()
+    if(flag_print):
+        print(users_problems)
 
 '''
 Parse Submissions.txt, for all submissions -> get problem_id, tag_id -> build adjacency list.
@@ -137,6 +146,8 @@ def create_problems_tags():
             problem_id = problems[contest_id + index]
             problems_tags[problem_id] += tags_ids
     f.close()
+    if(flag_print):
+        print(problems_tags)
 
 '''
 For each user, we loop over all problems. For each problem, we loop over all tags. We increment the count of this tag for this user.
@@ -159,7 +170,7 @@ def create_users_tags():
                 u = users[handle]
                 for t in users_tags[u]:
                     users_tags[u][t] /= (len(users_problems[u]) * 1.0)
-
+    print('Users Tags: ', users_tags)
 '''
 Calcultaing user similarity using Pearson's Correlation
 NOTE: If needed (if this is taking too much time), possible optimization:
@@ -237,49 +248,55 @@ Incorporating Diversity
 1. Clustering tags
 '''
 def create_clusters():
-    tags_problems = []
     
-    for t in tags:
-        tags_problems.append(set())
+    #cluster_graph = inverse_graph(problems_tags, len(tags))
+    #cluster_vecs = to_vector(cluster_graph, len(problems))
     
-    for idx in range(len(problems_tags)):
-        for t in problems_tags[idx]:
-            tags_problems[t].add(idx)
+    cluster_graph = inverse_graph(users_tags, len(tags))
+    cluster_vecs = to_vector(cluster_graph, len(users))
 
-    #print("Tag-problem graph: ", tags_problems)
-    
-    tag_vectors = []
-    for t in tags:
-        tag_vectors.append(np.zeros(len(problems)))
-    
-    for idx in range(len(tags_problems)):
-        for p in tags_problems[idx]:
-            tag_vectors[idx][p] = 1
-        tag_vectors[idx] = tag_vectors[idx].tolist()
-    
-    #print("Tag-vectors: ", tag_vectors)
-    
     k = 5
+    '''
     engine = AgglomerativeClustering(n_clusters=k, affinity='cosine', linkage='average')
-    labels = engine.fit(tag_vectors).labels_
+    labels = engine.fit(cluster_vecs).labels_
     '''
     engine = KMeans(n_clusters=k)
-    labels = engine.fit(tag_vectors).labels_
-    '''
-
-    #print("Tag labels: ", labels)
+    labels = engine.fit(cluster_vecs).labels_
     
+    print("Tag labels: ", labels)
     inverse_tags = dict()
     
     for tag in tags:
         inverse_tags[tags[tag]] = tag
     
-    #for i in range(k):
-        #print("Cluster ", i)
-        #for tag_idx in range(len(labels)):
-            #if labels[tag_idx] == i:
-                #print(inverse_tags[tag_idx])
+    for i in range(k):
+        print("Cluster ", i)
+        for tag_idx in range(len(labels)):
+            if labels[tag_idx] == i:
+                print(inverse_tags[tag_idx])
+
+def inverse_graph(graph, n):
+    inverse_graph = []
     
+    for _ in range(n):
+        inverse_graph.append(set())
+    
+    for idx in range(len(graph)):
+        for node in graph[idx]:
+            inverse_graph[node].add(idx)
+    #print("Tag-problem graph: ", inverse_graph)
+    return inverse_graph
+
+def to_vector(graph, n):
+    vectors=[]
+    for _ in graph:
+        vectors.append(np.zeros(n))
+    
+    for idx in range(len(graph)):
+        for node in graph[idx]:
+            vectors[idx][node] = 1
+        vectors[idx] = vectors[idx].tolist()    
+    return vectors
 '''
 Calculating the final scores
 user_problem_collaborative_score is a list of dictionaries with dimensions users_count * problem_count
@@ -338,6 +355,21 @@ for u in users:
 print(user_problem_final_score[0])
 '''
 
+def testing():
+    '''
+    to_vector works correctly
+    '''
+    #print(to_vector(testing_graph(), 6))
+    #print(inverse_graph(testing_graph(),6))
+    
+
+def testing_graph():
+    set1 = {1,2,3}
+    set2 = {2,3,5}
+    set3 = {1,3,4,5}
+    graph = [set1, set2, set3]
+    return graph
+ 
 
 if __name__ == '__main__':
     start_time = time.time()
@@ -369,8 +401,9 @@ if __name__ == '__main__':
     start_time = time.time()
     compute_temporal_score()
     print("compute temporal score --- %s seconds ---" % (time.time() - start_time))
-    #start_time = time.time()
-    #print("Temporal Score --- %s seconds ---" % (time.time() - start_time))
+    create_clusters()
+    
+   
 
 '''
 Introduction:

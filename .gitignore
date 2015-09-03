@@ -1,0 +1,8 @@
+data/*
+source-code/*
+*.pyc
+data.zip
+java-submissions/*
+.fuse_hidden*
+.project
+.pydevproject

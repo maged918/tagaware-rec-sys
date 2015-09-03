@@ -12,10 +12,10 @@ from urllib3 import request
 from urllib3 import util 
 
 flags = {
-			'proxy': 1
+			'proxy': 0
 		}
 
-password = 'Thread.X15'
+password = 'PASSWORD'
 
 #subprocess.call(["touch", "Submissions.txt"])
 #subprocess.call(["touch", "All-Submissions.txt"])
@@ -29,8 +29,8 @@ if not os.path.exists('./source-code'):
 
 if flags['proxy'] == 1:
 	proxyDict = { 
-	          'http'  : 'http://10.0.0.5:8080', 
-	          'https' : 'http://10.0.0.5:8080'
+	          'http'  : 'http://50.0.0.5:8080', 
+	          'https' : 'http://50.0.0.5:8080'
 	        }
 	auth = HTTPProxyAuth('maged.shalaby', password)
 else:
@@ -133,7 +133,7 @@ def create_code(submission):
 	fi3 = open('./source-code/' + str(submission['id']) + ".cpp" , "w")
 	fi3.write("//Language: " + str(submission['programmingLanguage']) + "\n\n\n")
 	try:
-		result = soup.pre.get_text().encode('utf-8', errors='replace').decode('utf-8 ')
+		result = soup.pre.get_text().encode('utf-8', errors='replace').decode('utf-8')
 	except AttributeError:
 		result = bs4_error_text
 	except UnicodeDecodeError:
@@ -150,7 +150,7 @@ MAIN
 
 
 requestParams = {'gym':'false'}
-r = requests.get("http://codeforces.com/api/contest.list", params=requestParams, 
+r = requests.get("http://www.codeforces.com/api/contest.list", params=requestParams, 
 				proxies = proxyDict, auth = auth)
 contests = r.json()
 filtered = filter_Contests(contests['result'])

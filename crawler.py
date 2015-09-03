@@ -150,8 +150,7 @@ MAIN
 
 
 requestParams = {'gym':'false'}
-r = requests.get("http://www.codeforces.com/api/contest.list", params=requestParams, 
-				proxies = proxyDict, auth = auth)
+r = requests.get("http://www.codeforces.com/api/contest.list", params=requestParams, proxies = proxyDict, auth = auth)
 contests = r.json()
 filtered = filter_Contests(contests['result'])
 

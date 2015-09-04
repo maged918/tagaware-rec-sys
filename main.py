@@ -4,19 +4,20 @@ Created on Aug 1, 2015
 @author: maged
 '''
 
-import numpy as np
-import datetime
-import codecs
-
 from collections import defaultdict
-from scipy.stats import pearsonr
-from numpy import zeros
-from sklearn.cluster import KMeans, AgglomerativeClustering
-from sklearn import datasets
-import dateutil.relativedelta
 from math import exp, log
+from numpy import zeros
+from scipy.spatial.distance import cosine
+from scipy.stats import pearsonr
+from sklearn import datasets
+from sklearn.cluster import KMeans, AgglomerativeClustering
+import codecs
+import datetime
+import dateutil.relativedelta
+import numpy as np
+import time
 
-users, problems, tags, users_problems, problems_tags, users_tags, correlation, temporal_values = (0,)*8
+users, problems, tags, users_problems, problems_tags, users_tags, correlation, temporal_values, users_problems_temporal_score = (0,)*9
 flag_print = 1
 
 '''
@@ -184,11 +185,19 @@ def create_users_correlations():
             id2 = users[u2]
             l1 = [0] * len(tags)
             l2 = [0] * len(tags)
-            for k in users_tags[id1]:
-                l1[k] = users_tags[id1][k]
-            for k in users_tags[id2]:
-                l2[k] = users_tags[id2][k]
-            correlation[id1][id2] = pearsonr(l1, l2)[0]
+            for k1 in users_tags[id1]:
+                l1[k1] = users_tags[id1][k1]
+            for k2 in users_tags[id2]:
+                l2[k2] = users_tags[id2][k2]
+            if id1 == id2:
+                correlation[id1][id2] = 1
+            if np.sum(l1) == 0 or np.sum(l2) == 0:
+                continue
+            #correlation[id1][id2] = pearsonr(l1, l2)[0]
+            correlation[id1][id2] = cosine(l1, l2)
+            #print(np.dot(l1,l2))
+            #print(np.linalg.norm(l1), np.linalg.norm(l2))
+            #input()
 
 '''
 Calculating Temporal Weight between users and tags
@@ -197,6 +206,7 @@ Calculating Temporal Weight between users and tags
 def create_temporal():
     global temporal_values
     temporal_values = [[0] * len(tags)] * len(users)
+    users_problems_in_tags = [[0] * len(tags)] * len(users)
     f = open('Submissions.txt', 'r')
     contest_id = ''
     index = ''
@@ -227,6 +237,11 @@ def create_temporal():
             temporal_value = exp(-log(2) * days / half_life)
             for t in current_problem_tags:
                 temporal_values[user_id][t] += temporal_value
+                users_problems_in_tags[user_id][t] += 1
+    temporal_values = np.matrix(temporal_values)
+    users_problems_in_tags = np.matrix(users_problems_in_tags)
+    temporal_values = (temporal_values / users_problems_in_tags).tolist()
+
 
 '''
 Incorporating Diversity
@@ -310,28 +325,24 @@ for u in users:
       user_problem_collaborative_score[uid][pid] = sum / users_solved_p
 
 print(user_problem_collaborative_score[0])
+'''
 
-# temporal based scores
-#<<<<<<<<<<<<<<<<< what should I do to problems solved by the user
-#<<<<<<<<<<<<<<<<< I would say set its value to -1 so that we won't recommend it
-#<<<<<<<<<<<<<<<<< or 1 and execlude them from our recommendations
-#<<<<<<<<<<<<<<<<< this could also be the case when we are considering diversity
-#<<<<<<<<<<<<<<<<< Also, I used pearsonr not cosine similarity (I want to know why cosine similarity)
-user_problem_temporal_score = [dict()] * len(users)
-for u in users:
-  uid = users[u]
-  for p in problems:
-    pid = problems[p]
-    user_tag = [0] * len(tags)
-    problem_tag = [0] * len(tags)
-    for t in users_tags[uid]:
-      user_tag[t] = users_tags[uid][t]
-    for t in problems_tags[pid]:
-      problem_tag[t] = 1
-    user_problem_temporal_score[uid][pid] = pearsonr(user_tag, problem_tag)[0]
-#<<<<<<<<<<<<<<<< I need to check whether I need to divide by a number to normalize but I am too sleepy to do it now
-print(user_problem_temporal_score[0])
 
+def compute_temporal_score():
+    #<<<<<<<<<<<<<<<<< what should I do to problems solved by the user?
+    global users_problems_temporal_score
+    users_problems_temporal_score = [dict()] * len(users)
+    for u in users:
+        uid = users[u]
+        for p in problems:
+            pid = problems[p]
+            user_tag = temporal_values[uid]
+            problem_tag = [0] * len(tags)
+            for t in problems_tags[pid]:
+                problem_tag[t] = 1
+            users_problems_temporal_score[uid][pid] = pearsonr(user_tag, problem_tag)[0]
+
+'''
 # final scores
 alpha = 0.7
 user_problem_final_score = [dict()] * len(users)
@@ -340,24 +351,10 @@ for u in users:
   for p in problems:
     pid = problems[p]
     user_problem_final_score[uid][pid] = alpha * user_problem_collaborative_score[
-        uid][pid] + (1 - alpha) * user_problem_temporal_score[uid][pid]
+        uid][pid] + (1 - alpha) * users_problems_temporal_score[uid][pid]
 print(user_problem_final_score[0])
 '''
 
-
-def main():
-    #testing()
-    
-    create_users()
-    create_problems()
-    create_tags()
-    create_users_problems()
-    create_problems_tags()
-    create_users_tags()
-    #create_users_correlations()
-    #create_temporal()
-    create_clusters()
-    
 def testing():
     '''
     to_vector works correctly
@@ -372,8 +369,41 @@ def testing_graph():
     set3 = {1,3,4,5}
     graph = [set1, set2, set3]
     return graph
+ 
+
+if __name__ == '__main__':
+    start_time = time.time()
+    create_users()
+    print("create users --- %s seconds ---" % (time.time() - start_time))
+    start_time = time.time()
+    create_problems()
+    print("create problems --- %s seconds ---" % (time.time() - start_time))
+    start_time = time.time()
+    create_tags()
+    print("create tags --- %s seconds ---" % (time.time() - start_time))
+    start_time = time.time()
+    create_users_problems()
+    print("create users problems --- %s seconds ---" % (time.time() - start_time))
+    start_time = time.time()
+    create_problems_tags()
+    print("create problems tags --- %s seconds ---" % (time.time() - start_time))
+    start_time = time.time()
+    create_users_tags()
+    print("create users tags --- %s seconds ---" % (time.time() - start_time))
+    start_time = time.time()
+    create_users_correlations()
+    print("correlations --- %s seconds ---" % (time.time() - start_time))
+
+    start_time = time.time()
+    create_temporal()
+    print("create temporal --- %s seconds ---" % (time.time() - start_time))
+    #create_clusters()
+    start_time = time.time()
+    compute_temporal_score()
+    print("compute temporal score --- %s seconds ---" % (time.time() - start_time))
+    create_clusters()
     
-main()
+   
 
 '''
 Introduction:

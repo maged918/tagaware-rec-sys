@@ -1,7 +1,7 @@
 '''
 Created on Aug 1, 2015
 
-@author: maged
+@author: maged, hossam
 '''
 
 from collections import defaultdict
@@ -18,7 +18,9 @@ import numpy as np
 import time
 
 users, problems, tags, users_problems, problems_tags, users_tags, correlation, temporal_values, users_problems_temporal_score = (0,)*9
-flag_print = 1
+count_problems, count_users, count_tags = (0,)*3
+flag_print = 0
+submissions_file = 'All-Submissions.txt'
 
 '''
 Parse Submissions.txt, generate dict of user_handle --> user_id (0-based)
@@ -26,11 +28,12 @@ Length of dict is the number of users.
 '''
   
 def create_users():
-    global users
-    f = open('Submissions.txt', 'r')
+    global users, count_users
+    f = open(submissions_file, 'r')
     handles = set([line.split(' ')[1].rstrip()
                    for line in f if line.split(' ')[0] == 'Handle:'])
     users = dict(zip(list(handles), range(len(handles))))
+    count_users = len(users)
     f.close()
     if(flag_print):
         print(users)
@@ -42,7 +45,7 @@ Length of dict is the number of problems
 '''
 
 def create_problems():
-    global problems
+    global problems, count_problems
     f = codecs.open('Problems-tags.txt', 'r', 'utf-8')
     contest = []
     index = []
@@ -56,6 +59,7 @@ def create_problems():
             index += [s[1].rstrip()]
     problems = [str(c) + i for c, i in zip(contest, index)]
     problems = dict(zip(problems, range(len(problems))))
+    count_problems = len(problems)
     f.close()
     if(flag_print):
         print(problems)
@@ -66,7 +70,7 @@ Length of dict is the number of tags
 '''
 
 def create_tags():
-    global tags
+    global tags, count_tags
     f = codecs.open('Problems-tags.txt', 'r', 'utf-8')
     tags = set()
     for line in f:
@@ -77,6 +81,7 @@ def create_tags():
             tags |= set(line.split(' ', 1)[1:][0].rstrip().split(','))
     tags = set(map(lambda x: x.lstrip(), tags))
     tags = dict(zip(list(tags), range(len(tags))))
+    count_tags = len(tags)
     f.close()
     if(flag_print):
         print(tags)
@@ -93,7 +98,7 @@ Build user-problem graph.
 
 def create_users_problems():
     global users_problems
-    f = open('Submissions.txt', 'r')
+    f = open(submissions_file, 'r')
     contest_id = ''
     index = ''
     handle = ''
@@ -111,11 +116,21 @@ def create_users_problems():
         if arr[0] == 'Handle:':
             handle = arr[1].rstrip()
             user_id = users[handle]
-            problem_id = problems[contest_id + index]
+            #problem_id = problems[contest_id + index]
+            problem_id = get_problem_id(contest_id+index)
             users_problems[user_id].append(problem_id)
     f.close()
     if(flag_print):
         print(users_problems)
+
+def get_problem_id(id):
+    global problems
+    if id not in problems:
+        idx = count_problems
+        problems[id] = idx
+        return idx
+    else:
+        return problems[id]
 
 '''
 Parse Submissions.txt, for all submissions -> get problem_id, tag_id -> build adjacency list.
@@ -171,6 +186,18 @@ def create_users_tags():
                 for t in users_tags[u]:
                     users_tags[u][t] /= (len(users_problems[u]) * 1.0)
     print('Users Tags: ', users_tags)
+    
+def create_users_tags_matrix():
+    global users_tags
+    users_tags = [[0 for t in tags] for u in users]
+    for handle in users:
+        u = users[handle]
+        for p in users_problems[u]:
+            for t in problems_tags[p]:
+                users_tags[u][t] += 1
+            for t in tags.values():
+                users_tags[u][t] /= (len(users_problems[u]) * 1.0)
+    #print('Users Tags: ', users_tags)
 '''
 Calcultaing user similarity using Pearson's Correlation
 NOTE: If needed (if this is taking too much time), possible optimization:
@@ -385,10 +412,13 @@ if __name__ == '__main__':
     create_users_problems()
     print("create users problems --- %s seconds ---" % (time.time() - start_time))
     start_time = time.time()
+    
+    print("There are %i users, %i problems and %i tags" % (count_users, count_problems, count_tags))
+    
     create_problems_tags()
     print("create problems tags --- %s seconds ---" % (time.time() - start_time))
     start_time = time.time()
-    create_users_tags()
+    create_users_tags_matrix()
     print("create users tags --- %s seconds ---" % (time.time() - start_time))
     start_time = time.time()
     create_users_correlations()
@@ -397,11 +427,10 @@ if __name__ == '__main__':
     start_time = time.time()
     create_temporal()
     print("create temporal --- %s seconds ---" % (time.time() - start_time))
-    #create_clusters()
     start_time = time.time()
     compute_temporal_score()
     print("compute temporal score --- %s seconds ---" % (time.time() - start_time))
-    create_clusters()
+    #create_clusters() #Gives error! in 313, list indices must be integers
     
    
 

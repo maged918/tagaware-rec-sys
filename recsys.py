@@ -15,8 +15,8 @@ import numpy as np
 import time
 from cmath import sqrt
 
-users, problems, tags, users_problems, problems_tags, users_tags, correlation, \
-        temporal_values, users_problems_temporal_score, labels = (0,)*10
+users, problems, tags, users_problems, problems_tags, users_tags, \
+        temporal_values, users_problems_temporal_score, labels = (0,)*9
 
 count_problems, count_users, count_tags = (0,)*3
 flag_print = 0
@@ -183,25 +183,15 @@ Calcultaing user similarity using Pearson's Correlation
 NOTE: If needed (if this is taking too much time), possible optimization:
     p(x,y) = p(y,x)
 '''
-def create_users_correlations():
-    global correlation
-    correlation = [dict()] * len(users)
-    for u1 in users:
-        for u2 in users:
-            id1 = users[u1]
-            id2 = users[u2]
-            l1 = [0] * len(tags)
-            l2 = [0] * len(tags)
-            for k1 in users_tags[id1]:
-                l1[k1] = users_tags[id1][k1]
-            for k2 in users_tags[id2]:
-                l2[k2] = users_tags[id2][k2]
-            if id1 == id2:
-                correlation[id1][id2] = 1
-            if np.sum(l1) == 0 or np.sum(l2) == 0:
-                continue
-            #correlation[id1][id2] = pearsonr(l1, l2)[0]
-            correlation[id1][id2] = cosine(l1, l2)
+def create_users_correlations(u1):
+    correlation = [0] * len(users)
+    id1 = users[u1]
+    for u2 in users:
+        id2 = users[u2]
+        l1 = users_tags[id1]
+        l2 = users_tags[id2]
+        #correlation[id1][id2] = pearsonr(l1, l2)[0]
+        correlation[id2] = cosine(l1, l2)
 
 '''
 Calculating Temporal Weight between users and tags

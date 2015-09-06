@@ -97,9 +97,7 @@ def create_users_problems():
     contest_id = ''
     index = ''
     handle = ''
-    users_problems = []
-    for _ in users:
-        users_problems.append([])
+    users_problems = [set() for _ in users]
     for l in f:
         if l == '\n':
             continue
@@ -113,7 +111,7 @@ def create_users_problems():
             user_id = users[handle]
             #problem_id = problems[contest_id + index]
             problem_id = get_problem_id(contest_id+index)
-            users_problems[user_id].append(problem_id)
+            users_problems[user_id].add(problem_id)
     f.close()
     if(flag_print):
         print(users_problems)
@@ -257,6 +255,9 @@ def create_clusters():
     global labels    
     cluster_vecs = [list(x) for x in zip(*users_tags)]
     
+    #for v in cluster_vecs:
+    #    print (v[users['moathwafeeq']])
+    
     k = 5
     
     engine = KMeans(n_clusters=k)
@@ -274,7 +275,7 @@ def create_clusters():
             if labels[tag_idx] == i:
                 print(inverse_tags[tag_idx])
 
-def compute_diversity_score():
+def compute_diversity_score(user):
     # Some function on labels, problems in each tag, return score
     return 
 
@@ -307,12 +308,16 @@ if __name__ == '__main__':
     start_time = time.time()
     
     print("There are %i users, %i problems and %i tags" % (count_users, count_problems, count_tags))
+    #print(users_problems[users['moathwafeeq']])
     
     create_problems_tags()
     print("create problems tags --- %s seconds ---" % (time.time() - start_time))
     start_time = time.time()
     create_users_tags_matrix()
     print("create users tags --- %s seconds ---" % (time.time() - start_time))
+    #print(users_tags[users['moathwafeeq']])
+    
+    
     start_time = time.time()
     #create_users_correlations()
     print("correlations --- %s seconds ---" % (time.time() - start_time))

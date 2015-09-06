@@ -4,20 +4,20 @@ Created on Aug 1, 2015
 @author: maged, hossam
 '''
 
-from collections import defaultdict
 from math import exp, log
-from numpy import zeros
 from scipy.spatial.distance import cosine
 from scipy.stats import pearsonr
-from sklearn import datasets
-from sklearn.cluster import KMeans, AgglomerativeClustering
+from sklearn.cluster import KMeans
 import codecs
 import datetime
 import dateutil.relativedelta
 import numpy as np
 import time
+from cmath import sqrt
 
-users, problems, tags, users_problems, problems_tags, users_tags, correlation, temporal_values, users_problems_temporal_score = (0,)*9
+users, problems, tags, users_problems, problems_tags, users_tags, correlation, \
+        temporal_values, users_problems_temporal_score, labels = (0,)*10
+
 count_problems, count_users, count_tags = (0,)*3
 flag_print = 0
 submissions_file = 'All-Submissions.txt'
@@ -87,11 +87,6 @@ def create_tags():
         print(tags)
 
 '''
-TODO:
-Serialize all dicts, and then load them later to save computation time.
-'''
-
-'''
 Parse Submissions.txt, for all submissions -> get user_id, problem_id, build adjacency list
 Build user-problem graph.
 '''
@@ -123,14 +118,14 @@ def create_users_problems():
     if(flag_print):
         print(users_problems)
 
-def get_problem_id(id):
+def get_problem_id(i):
     global problems
-    if id not in problems:
+    if i not in problems:
         idx = count_problems
-        problems[id] = idx
+        problems[i] = idx
         return idx
     else:
-        return problems[id]
+        return problems[i]
 
 '''
 Parse Submissions.txt, for all submissions -> get problem_id, tag_id -> build adjacency list.
@@ -171,21 +166,6 @@ At the end, we divide by the number of problems for this user.
 NOTE: Might need to add all tags in user-tag graph even if with zero weights.
 NOTE: Might need to use PrettyPrint/better printing for defaultdict
 '''
-#def create_users_tags():
-    #global users_tags
-    #users_tags = []
-    #for u in users:
-        #users_tags.append(defaultdict(int))
-    #for handle in users:
-        #u = users[handle]
-        #for p in users_problems[u]:
-            #for t in problems_tags[p]:
-                #users_tags[u][t] += 1
-            #for handle in users:
-                #u = users[handle]
-                #for t in users_tags[u]:
-                    #users_tags[u][t] /= (len(users_problems[u]) * 1.0)
-    #print('Users Tags: ', users_tags)
     
 def create_users_tags_matrix():
     global users_tags
@@ -222,9 +202,6 @@ def create_users_correlations():
                 continue
             #correlation[id1][id2] = pearsonr(l1, l2)[0]
             correlation[id1][id2] = cosine(l1, l2)
-            #print(np.dot(l1,l2))
-            #print(np.linalg.norm(l1), np.linalg.norm(l2))
-            #input()
 
 '''
 Calculating Temporal Weight between users and tags
@@ -269,24 +246,29 @@ def create_temporal():
     users_problems_in_tags = np.matrix(users_problems_in_tags)
     temporal_values = (temporal_values / users_problems_in_tags).tolist()
 
+def compute_temporal_score():
+    global users_problems_temporal_score
+    users_problems_temporal_score = [dict()] * len(users)
+    for u in users:
+        uid = users[u]
+        for p in problems:
+            pid = problems[p]
+            user_tag = temporal_values[uid]
+            problem_tag = [0] * len(tags)
+            for t in problems_tags[pid]:
+                problem_tag[t] = 1
+            users_problems_temporal_score[uid][pid] = pearsonr(user_tag, problem_tag)[0]
 
 '''
 Incorporating Diversity
 1. Clustering tags
 '''
 def create_clusters():
+    global labels    
+    cluster_vecs = [list(x) for x in zip(*users_tags)]
     
-    #cluster_graph = inverse_graph(problems_tags, len(tags))
-    #cluster_vecs = to_vector(cluster_graph, len(problems))
-    
-    cluster_graph = inverse_graph(users_tags, len(tags))
-    cluster_vecs = to_vector(cluster_graph, len(users))
-
     k = 5
-    '''
-    engine = AgglomerativeClustering(n_clusters=k, affinity='cosine', linkage='average')
-    labels = engine.fit(cluster_vecs).labels_
-    '''
+    
     engine = KMeans(n_clusters=k)
     labels = engine.fit(cluster_vecs).labels_
     
@@ -302,72 +284,9 @@ def create_clusters():
             if labels[tag_idx] == i:
                 print(inverse_tags[tag_idx])
 
-def inverse_graph(graph, n):
-    inverse_graph = []
-    
-    for _ in range(n):
-        inverse_graph.append(set())
-    
-    for idx in range(len(graph)):
-        for node in graph[idx]:
-            inverse_graph[node].add(idx)
-    #print("Tag-problem graph: ", inverse_graph)
-    return inverse_graph
-
-def to_vector(graph, n):
-    vectors=[]
-    for _ in graph:
-        vectors.append(np.zeros(n))
-    
-    for idx in range(len(graph)):
-        for node in graph[idx]:
-            vectors[idx][node] = 1
-        vectors[idx] = vectors[idx].tolist()    
-    return vectors
-'''
-Calculating the final scores
-user_problem_collaborative_score is a list of dictionaries with dimensions users_count * problem_count
-user_problem_collaborative_score[u][p] is the score given to problem p for user u
-
-user_problem_collaborative_score = [dict()] * len(users)
-# collaborative filtering scores
-for u in users:
-  uid = users[u]
-  for p in problems:
-    pid = problems[p]
-    sum = 0
-    users_solved_p = 0
-    for u2 in users:
-      if u == u2:
-        continue
-      u2id = users[u2]
-      sum += correlation[uid][u2id] * (pid in users_problems[u2id])
-      if pid in users_problems[u2id]:
-        users_solved_p += 1
-#<<<<<<<<<<<<<<<<<what should I do if a problem is not solved by anyone so users_solved_p is equal to zero
-#<<<<<<<<<<<<<<<<<I would say set it to zero
-    if users_solved_p == 0:
-      user_problem_collaborative_score[uid][pid] = 0
-    else:
-      user_problem_collaborative_score[uid][pid] = sum / users_solved_p
-
-print(user_problem_collaborative_score[0])
-'''
-
-
-def compute_temporal_score():
-    #<<<<<<<<<<<<<<<<< what should I do to problems solved by the user?
-    global users_problems_temporal_score
-    users_problems_temporal_score = [dict()] * len(users)
-    for u in users:
-        uid = users[u]
-        for p in problems:
-            pid = problems[p]
-            user_tag = temporal_values[uid]
-            problem_tag = [0] * len(tags)
-            for t in problems_tags[pid]:
-                problem_tag[t] = 1
-            users_problems_temporal_score[uid][pid] = pearsonr(user_tag, problem_tag)[0]
+def compute_diversity_score():
+    # Some function on labels, problems in each tag, return score
+    return 
 
 '''
 # final scores
@@ -381,22 +300,6 @@ for u in users:
         uid][pid] + (1 - alpha) * users_problems_temporal_score[uid][pid]
 print(user_problem_final_score[0])
 '''
-
-def testing():
-    '''
-    to_vector works correctly
-    '''
-    #print(to_vector(testing_graph(), 6))
-    #print(inverse_graph(testing_graph(),6))
-    
-
-def testing_graph():
-    set1 = {1,2,3}
-    set2 = {2,3,5}
-    set3 = {1,3,4,5}
-    graph = [set1, set2, set3]
-    return graph
- 
 
 if __name__ == '__main__':
     start_time = time.time()
@@ -421,16 +324,16 @@ if __name__ == '__main__':
     create_users_tags_matrix()
     print("create users tags --- %s seconds ---" % (time.time() - start_time))
     start_time = time.time()
-    create_users_correlations()
+    #create_users_correlations()
     print("correlations --- %s seconds ---" % (time.time() - start_time))
 
     start_time = time.time()
-    create_temporal()
+    #create_temporal()
     print("create temporal --- %s seconds ---" % (time.time() - start_time))
     start_time = time.time()
-    compute_temporal_score()
+    #compute_temporal_score()
     print("compute temporal score --- %s seconds ---" % (time.time() - start_time))
-    #create_clusters() #Gives error! in 313, list indices must be integers
+    create_clusters() #Gives error!
     
    
 

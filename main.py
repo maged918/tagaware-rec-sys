@@ -171,21 +171,21 @@ At the end, we divide by the number of problems for this user.
 NOTE: Might need to add all tags in user-tag graph even if with zero weights.
 NOTE: Might need to use PrettyPrint/better printing for defaultdict
 '''
-def create_users_tags():
-    global users_tags
-    users_tags = []
-    for u in users:
-        users_tags.append(defaultdict(int))
-    for handle in users:
-        u = users[handle]
-        for p in users_problems[u]:
-            for t in problems_tags[p]:
-                users_tags[u][t] += 1
-            for handle in users:
-                u = users[handle]
-                for t in users_tags[u]:
-                    users_tags[u][t] /= (len(users_problems[u]) * 1.0)
-    print('Users Tags: ', users_tags)
+#def create_users_tags():
+    #global users_tags
+    #users_tags = []
+    #for u in users:
+        #users_tags.append(defaultdict(int))
+    #for handle in users:
+        #u = users[handle]
+        #for p in users_problems[u]:
+            #for t in problems_tags[p]:
+                #users_tags[u][t] += 1
+            #for handle in users:
+                #u = users[handle]
+                #for t in users_tags[u]:
+                    #users_tags[u][t] /= (len(users_problems[u]) * 1.0)
+    #print('Users Tags: ', users_tags)
     
 def create_users_tags_matrix():
     global users_tags

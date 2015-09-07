@@ -14,13 +14,14 @@ import dateutil.relativedelta
 import numpy as np
 import time
 from cmath import sqrt
+from sklearn.cluster.spectral import SpectralClustering
 
 users, problems, tags, users_problems, problems_tags, users_tags, correlation, \
         temporal_values, users_problems_temporal_score, labels = (0,)*10
 
 count_problems, count_users, count_tags = (0,)*3
 flag_print = 0
-submissions_file = 'All-Submissions.txt'
+submissions_file = 'Submissions.txt'
 
 '''
 Parse Submissions.txt, generate dict of user_handle --> user_id (0-based)
@@ -173,8 +174,8 @@ def create_users_tags_matrix():
         for p in users_problems[u]:
             for t in problems_tags[p]:
                 users_tags[u][t] += 1
-            for t in tags.values():
-                users_tags[u][t] /= (len(users_problems[u]) * 1.0)
+#         for t in tags.values():
+#             users_tags[u][t] /= (len(users_problems[u]) * 1.0)
     #print('Users Tags: ', users_tags)
 '''
 Calcultaing user similarity using Pearson's Correlation
@@ -261,17 +262,50 @@ def compute_temporal_score():
 Incorporating Diversity
 1. Clustering tags
 '''
+
+from sklearn.metrics.pairwise import cosine_similarity as cosine_similarity            
+def new_euclidean_distances(X, Y=None, Y_norm_squared=None, squared=False): 
+    return cosine_similarity(X,Y)
+
+# monkey patch (ensure cosine dist function is used)
+'''
+from sklearn.cluster import k_means_
+from sklearn.cluster.k_means_ import euclidean_distances
+k_means_.euclidean_distances = new_euclidean_distances
+'''
+
 def create_clusters():
     global labels    
     cluster_vecs = [list(x) for x in zip(*users_tags)]
+    mat = [[0 for i in range(count_tags)] for j in range(count_tags)]
+    for i in range(len(cluster_vecs)):
+        for j in range(len(cluster_vecs)):
+                mat[i][j] = cosine(cluster_vecs[i], cluster_vecs[j])
     
+    print(mat)
+    '''MADE SURE OF EXISTENCE OF VALUES IN cluster_vecs
+    for u in range(count_users):
+        print(cluster_vecs[0][u], cluster_vecs[1][u])
+    
+    for t in range(count_tags):
+        print(np.sum(cluster_vecs[t]))
+    '''
+    #print('-----------------')
+    #print(cosine(cluster_vecs[0], cluster_vecs[1]))
+    
+    #print(cluster_vecs[tags['implementation']][users['shalaboka']])
     #for v in cluster_vecs:
     #    print (v[users['moathwafeeq']])
     
     k = 5
-    
+    '''
     engine = KMeans(n_clusters=k)
     labels = engine.fit(cluster_vecs).labels_
+    '''
+    
+    engine = SpectralClustering(n_clusters=k, affinity='precomputed')
+    labels = engine.fit(mat).labels_
+    #labels = engine.fit(cluster_vecs).labels_
     
     print("Tag labels: ", labels)
     inverse_tags = dict()
@@ -284,7 +318,7 @@ def create_clusters():
         for tag_idx in range(len(labels)):
             if labels[tag_idx] == i:
                 print(inverse_tags[tag_idx])
-
+    
 def compute_diversity_score(user):
     # Some function on labels, problems in each tag, return score
     return 
@@ -301,6 +335,10 @@ for u in users:
         uid][pid] + (1 - alpha) * users_problems_temporal_score[uid][pid]
 print(user_problem_final_score[0])
 '''
+
+def test_users_tags():
+    for i in range(len(users_tags)):
+        print(users_tags[i][0])
 
 if __name__ == '__main__':
     start_time = time.time()
@@ -325,8 +363,8 @@ if __name__ == '__main__':
     start_time = time.time()
     create_users_tags_matrix()
     print("create users tags --- %s seconds ---" % (time.time() - start_time))
-    #print(users_tags[users['moathwafeeq']])
     
+    #test_users_tags()
     
     start_time = time.time()
     #create_users_correlations()

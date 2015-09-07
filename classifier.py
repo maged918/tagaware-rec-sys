@@ -91,8 +91,9 @@ def evaluate(pred,test):
 
 	macro_scores = dict(zip(tags_list,[defaultdict(float)] * len(tags_list)))
 
-	metrics = ['ACC','TP','TN','FN','FP']
-	micro_scores = dict((element,0.0) for element in metrics)
+	labels = ['ACC','TP','TN','FN','FP']
+	micro_scores = dict((element,0.0) for element in labels)
+
 	print(micro_scores)
 
 	for tag_idx,tag in enumerate(tags_list):
@@ -102,28 +103,26 @@ def evaluate(pred,test):
 		macro_scores[tag] = get_eval_metrics(macro_scores[tag])
 
 	print("Macro Scores:\nTag\tP\tR\tF1\tAcc")
-	p=0
-	r=0
-	f=0
-	a=0
+
+	metrics = ['P','R','F1','ACC']
+	macro_average = dict((element,0.0) for element in metrics)
+
 	for tag in macro_scores:
-		p += macro_scores[tag]['P']
-		r += macro_scores[tag]['R']
-		f += macro_scores[tag]['F1']
-		a += macro_scores[tag]['ACC']
+
+		metrics = dict(Counter(metrics) + Counter(macro_scores[tag]))
 
 		print(	str(tag[:5])							+"..\t"+	\
-				str("%.2f" % macro_scores[tag]['P'])	+"\t"+	\
-				str("%.2f" % macro_scores[tag]['R'])	+"\t"+	\
-				str("%.2f" % macro_scores[tag]['F1'])	+"\t"+	\
+				str("%.2f" % macro_scores[tag]['P'])	+"\t"+		\
+				str("%.2f" % macro_scores[tag]['R'])	+"\t"+		\
+				str("%.2f" % macro_scores[tag]['F1'])	+"\t"+		\
 				str("%.2f" % macro_scores[tag]['ACC']))
 
 
-	print(	"Averaged Macro Scores:\nP\tR\tF1\tAcc"	+"\n"+	\
-			str("%.2f" % (p/len(tags_list)))		+"\t"+	\
-			str("%.2f" % (r/len(tags_list)))		+"\t"+ 	\
-			str("%.2f" % (f/len(tags_list)))		+"\t"+ 	\
-			str("%.2f" % (a/len(tags_list))))
+	print(	"Averaged Macro Scores:\nP\tR\tF1\tAcc"			+"\n"+	\
+			str("%.2f" % (metrics['P']/len(tags_list)))		+"\t"+	\
+			str("%.2f" % (metrics['R']/len(tags_list)))		+"\t"+ 	\
+			str("%.2f" % (metrics['F1']/len(tags_list)))	+"\t"+ 	\
+			str("%.2f" % (metrics['ACC']/len(tags_list))))
 
 
 	for instance_idx in range(len(pred)):

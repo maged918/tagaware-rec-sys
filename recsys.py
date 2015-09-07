@@ -15,12 +15,15 @@ import numpy as np
 import time
 from cmath import sqrt
 
-users, problems, tags, users_problems, problems_tags, users_tags, \
-        temporal_values, users_problems_temporal_score, labels = (0,)*9
+users, problems, tags, users_problems, users_submissions, problems_tags, users_tags, \
+        labels, current_date = (0,)*9
 
 count_problems, count_users, count_tags = (0,)*3
 flag_print = 0
-submissions_file = 'All-Submissions.txt'
+half_life = 2
+alpha = 0.7
+#submissions_file = 'All-Submissions.txt'
+submissions_file = 'Submissions.txt'
 
 '''
 Parse Submissions.txt, generate dict of user_handle --> user_id (0-based)
@@ -92,12 +95,14 @@ Build user-problem graph.
 '''
 
 def create_users_problems():
-    global users_problems
+    global users_problems, users_submissions
     f = open(submissions_file, 'r')
     contest_id = ''
     index = ''
     handle = ''
-    users_problems = [set() for _ in users]
+    time_stamp = ''
+    users_problems = [set()] * len(users)
+    users_submissions = [dict()] * len(users)
     for l in f:
         if l == '\n':
             continue
@@ -108,10 +113,13 @@ def create_users_problems():
             index = arr[1].rstrip()
         if arr[0] == 'Handle:':
             handle = arr[1].rstrip()
+        if arr[1] == 'Time:':
+            time_stamp = arr[2].rstrip()
             user_id = users[handle]
             #problem_id = problems[contest_id + index]
             problem_id = get_problem_id(contest_id+index)
             users_problems[user_id].add(problem_id)
+            users_submissions[user_id][problem_id] = time_stamp
     f.close()
     if(flag_print):
         print(users_problems)
@@ -188,64 +196,45 @@ def create_users_correlations(u1):
         id2 = users[u2]
         l1 = users_tags[id1]
         l2 = users_tags[id2]
-        #correlation[id1][id2] = pearsonr(l1, l2)[0]
+        #correlation[id2] = pearsonr(l1, l2)[0]
         correlation[id2] = cosine(l1, l2)
+    return correlation
 
 '''
 Calculating Temporal Weight between users and tags
 '''
 
-def create_temporal():
-    global temporal_values
-    temporal_values = [[0] * len(tags)] * len(users)
-    users_problems_in_tags = [[0] * len(tags)] * len(users)
-    f = open('Submissions.txt', 'r')
-    contest_id = ''
-    index = ''
-    handle = ''
-    time_stamp = ''
-    current_date = datetime.datetime.now()
-    half_life = 2
-    for l in f:
-        if l == '\n':
-            continue
-        arr = l.split(' ')
-        if arr[0] == 'Contest':
-            contest_id = arr[2].rstrip()
-        if arr[0] == 'Index:':
-            index = arr[1].rstrip()
-        if arr[0] == 'Handle:':
-            handle = arr[1].rstrip()
-        if arr[1] == 'Time:':
-            time_stamp = arr[2].rstrip()
-            user_id = users[handle]
-            problem_id = problems[contest_id + index]
-            current_problem_tags = problems_tags[problem_id]
-            problem_date = datetime.datetime.fromtimestamp(int(time_stamp))
-            date_diff = dateutil.relativedelta.relativedelta(
-                current_date,
-                problem_date)
-            days = abs(date_diff.days)
-            temporal_value = exp(-log(2) * days / half_life)
-            for t in current_problem_tags:
-                temporal_values[user_id][t] += temporal_value
-                users_problems_in_tags[user_id][t] += 1
-    temporal_values = np.matrix(temporal_values)
-    users_problems_in_tags = np.matrix(users_problems_in_tags)
-    temporal_values = (temporal_values / users_problems_in_tags).tolist()
+def create_temporal(u):
+    temporal_values = [0] * len(tags)
+    user_problems_in_tags = [0] * len(tags)
+    uid = users[u]
+    for pid in users_problems[uid]:
+        time_stamp = users_submissions[uid][pid]
+        current_problem_tags = problems_tags[pid]
+        problem_date = datetime.datetime.fromtimestamp(int(time_stamp))
+        date_diff = dateutil.relativedelta.relativedelta(
+            current_date,
+            problem_date)
+        days = abs(date_diff.days)
+        temporal_value = exp(-log(2) * days / half_life)
+        for t in current_problem_tags:
+            temporal_values[t] += temporal_value
+            user_problems_in_tags[t] += 1
+    temporal_values = np.array(temporal_values)
+    user_problems_in_tags = np.array(user_problems_in_tags)
+    return (temporal_values / user_problems_in_tags).tolist()
 
-def compute_temporal_score():
-    global users_problems_temporal_score
-    users_problems_temporal_score = [dict()] * len(users)
-    for u in users:
-        uid = users[u]
-        for p in problems:
-            pid = problems[p]
-            user_tag = temporal_values[uid]
-            problem_tag = [0] * len(tags)
-            for t in problems_tags[pid]:
-                problem_tag[t] = 1
-            users_problems_temporal_score[uid][pid] = pearsonr(user_tag, problem_tag)[0]
+def compute_temporal_score(u, user_tag):
+    user_problems_temporal_score = [0] * len(problems)
+    uid = users[u]
+    for p in problems:
+        pid = problems[p]
+        problem_tag = [0] * len(tags)
+        for t in problems_tags[pid]:
+            problem_tag[t] = 1
+        user_problems_temporal_score[pid] = pearsonr(user_tag, problem_tag)[0]
+    return user_problems_temporal_score
+
 
 '''
 Incorporating Diversity
@@ -279,20 +268,48 @@ def compute_diversity_score(user):
     # Some function on labels, problems in each tag, return score
     return 
 
-'''
+def compute_user_collaborative_score(u, correlation):
+    correlation = create_users_correlations(u)
+    user_problem_collaborative_score = [0] * len(problems)
+    # collaborative filtering scores
+    uid = users[u]
+    for p in problems:
+        pid = problems[p]
+        score_sum = 0
+        users_solved_p = 0
+        for u2 in users:
+            if u == u2:
+                continue
+            u2id = users[u2]
+            score_sum += correlation[u2id] * (pid in users_problems[u2id])
+            if pid in users_problems[u2id]:
+                users_solved_p += 1
+        if users_solved_p == 0:
+            user_problem_collaborative_score[pid] = 0
+        else:
+            user_problem_collaborative_score[pid] = score_sum / users_solved_p
+    return user_problem_collaborative_score
+
 # final scores
-alpha = 0.7
-user_problem_final_score = [dict()] * len(users)
-for u in users:
-  uid = users[u]
-  for p in problems:
-    pid = problems[p]
-    user_problem_final_score[uid][pid] = alpha * user_problem_collaborative_score[
-        uid][pid] + (1 - alpha) * users_problems_temporal_score[uid][pid]
-print(user_problem_final_score[0])
-'''
+def compute_final_score(u):
+    user_final_score = [0] * len(problems)
+    uid = users[u]
+    correlation = create_users_correlations(u)
+    user_problem_collaborative_score = compute_user_collaborative_score(u, correlation)
+    user_problem_temporal_score = compute_temporal_score(u, users_tags[uid])
+    user_final_score= [alpha * c + (1 - alpha) * t for c, t in zip(user_problem_collaborative_score, user_problem_temporal_score)]
+    print(user_final_score)
+    #user_problem_diversity_score = .....
+
+    #for p in problems:
+        #pid = problems[p]
+        #user_problem_final_score[uid][pid] = alpha * user_problem_collaborative_score[
+            #uid][pid] + (1 - alpha) * users_problems_temporal_score[uid][pid]
+    #print(user_problem_final_score[0])
+
 
 if __name__ == '__main__':
+    current_date = datetime.datetime.now()
     start_time = time.time()
     create_users()
     print("create users --- %s seconds ---" % (time.time() - start_time))
@@ -318,17 +335,19 @@ if __name__ == '__main__':
     #print(users_tags[users['moathwafeeq']])
     
     
-    start_time = time.time()
-    #create_users_correlations()
-    print("correlations --- %s seconds ---" % (time.time() - start_time))
+    #start_time = time.time()
+    #create_users_correlations('yeti')
+    #print("correlations --- %s seconds ---" % (time.time() - start_time))
 
+    #start_time = time.time()
+    #temporal_values = create_temporal('yeti')
+    #print("create temporal --- %s seconds ---" % (time.time() - start_time))
+    
     start_time = time.time()
-    #create_temporal()
-    print("create temporal --- %s seconds ---" % (time.time() - start_time))
-    start_time = time.time()
-    #compute_temporal_score()
-    print("compute temporal score --- %s seconds ---" % (time.time() - start_time))
-    create_clusters() #Gives error!
+    t = compute_final_score('yeti')
+    print("compute final score --- %s seconds ---" % (time.time() - start_time))
+ 
+    #create_clusters() #Gives error!
     
    
 

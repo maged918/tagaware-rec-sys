@@ -48,12 +48,9 @@ def prepare_data(feats_file,tags_file):
 	Y = MultiLabelBinarizer().fit_transform(Y)
 	return (X,Y)
 
-def classify(train,gold,test, multi):
+def classify(train,gold,test):
 
-	if multi:
-		clf = OneVsRestClassifier(SVC(kernel='poly'))
-	else:
-		clf = SVC(kernel='poly')
+	clf = OneVsRestClassifier(SVC(kernel='poly'))
 
 	clf.fit(train, gold)
 	preds = clf.predict(test)
@@ -91,10 +88,10 @@ def evaluate(pred,test):
 
 	macro_scores = dict(zip(tags_list,[defaultdict(float)] * len(tags_list)))
 
-	labels = ['ACC','TP','TN','FN','FP']
+	labels = ['ACC','TP','TN','FN','FP','P','R','F1','ACC']
 	micro_scores = dict((element,0.0) for element in labels)
+	macro_average = dict((element,0.0) for element in labels)
 
-	print(micro_scores)
 
 	for tag_idx,tag in enumerate(tags_list):
 		curr_results = get_measurements(pred[:,tag_idx],test[:,tag_idx])
@@ -104,12 +101,10 @@ def evaluate(pred,test):
 
 	print("Macro Scores:\nTag\tP\tR\tF1\tAcc")
 
-	metrics = ['P','R','F1','ACC']
-	macro_average = dict((element,0.0) for element in metrics)
 
 	for tag in macro_scores:
 
-		metrics = dict(Counter(metrics) + Counter(macro_scores[tag]))
+		macro_average = dict(Counter(macro_average) + Counter(macro_scores[tag]))
 
 		print(	str(tag[:5])							+"..\t"+	\
 				str("%.2f" % macro_scores[tag]['P'])	+"\t"+		\
@@ -119,10 +114,10 @@ def evaluate(pred,test):
 
 
 	print(	"Averaged Macro Scores:\nP\tR\tF1\tAcc"			+"\n"+	\
-			str("%.2f" % (metrics['P']/len(tags_list)))		+"\t"+	\
-			str("%.2f" % (metrics['R']/len(tags_list)))		+"\t"+ 	\
-			str("%.2f" % (metrics['F1']/len(tags_list)))	+"\t"+ 	\
-			str("%.2f" % (metrics['ACC']/len(tags_list))))
+			str("%.2f" % (macro_average['P']/len(tags_list)))		+"\t"+	\
+			str("%.2f" % (macro_average['R']/len(tags_list)))		+"\t"+ 	\
+			str("%.2f" % (macro_average['F1']/len(tags_list)))	+"\t"+ 	\
+			str("%.2f" % (macro_average['ACC']/len(tags_list))))
 
 
 	for instance_idx in range(len(pred)):
@@ -138,9 +133,65 @@ def evaluate(pred,test):
 			str("%.2f" % micro_scores['F1'])	+"\t"+ 	\
 			str("%.2f" % micro_scores['ACC']))
 
+	for key in macro_average:
+		macro_average[key] /= len(tags_list)
+	return(micro_scores,macro_average)
 
 
+def cross_validate(X,Y,cv_val):
 
+
+	print("Running " + str(cv_val) + " fold cross validation")
+
+	labels = ['ACC','TP','TN','FN','FP','P','R','F1','ACC']
+
+	total_micro = dict((element,0.0) for element in labels)
+	total_macro = dict((element,0.0) for element in labels)
+
+	for i in range(cv_val):
+		print("########################### Starting run no. " + str(i+1) + " ##############################")
+		print("Splitting datasets")
+		X_splits = np.array_split(X,cv_val)
+		Y_splits = np.array_split(Y,cv_val)
+
+		X_test = X_splits[i]
+		Y_test = Y_splits[i]
+
+		del(X_splits[i])
+		del(Y_splits[i])
+
+		X_train = np.concatenate(X_splits)
+		Y_train = np.concatenate(Y_splits)
+
+
+		print(	"Dataset shapes:\n"+\
+				"Training X:\t" + str(X_train.shape) 	+ "\n" + \
+				"Training Y:\t" + str(Y_train.shape)	+ "\n" + \
+				"Testing X:\t" + str(X_test.shape)		+ "\n" + \
+				"Testing Y:\t" + str(Y_test.shape))
+
+		print("Started Classification")
+
+		pred = classify(X_train,Y_train,X_test)
+		print("Evaluating ...")
+		eval_res = evaluate(pred, Y_test)
+
+		total_micro = dict(Counter(total_micro) + Counter(eval_res[0]))
+		total_macro = dict(Counter(total_macro) + Counter(eval_res[1]))
+
+		print("############################################################################")
+	print(	"Final Averaged Results\n"+					\
+			"P\tR\tF1\tAcc\n"+							\
+			"Averaged Micro Scores\n"+					\
+			str("%.2f" % (total_micro['P']/cv_val))		+"\t"+	\
+			str("%.2f" % (total_micro['R']/cv_val))		+"\t"+	\
+			str("%.2f" % (total_micro['F1']/cv_val))		+"\t"+	\
+			str("%.2f" % (total_micro['ACC']/cv_val))	+ "\n"+	\
+			"Averaged Macro Scores\n"+					\
+			str("%.2f" % (total_macro['P']/cv_val))		+"\t"+	\
+			str("%.2f" % (total_macro['R']/cv_val))		+"\t"+	\
+			str("%.2f" % (total_micro['F1']/cv_val))		+"\t"+ 	\
+			str("%.2f" % (total_macro['ACC']/cv_val)))
 # str("%.2f" % avg_p) + "\n")
 
 global kernel
@@ -152,27 +203,28 @@ split = 0.8
 kernel = 'poly'
 feats_file = 'features.pickle'
 tags_file = 'data-set.txt'
-cross_valid = 10
+cross_valid = 5
 
 data = prepare_data(feats_file, tags_file)
 X = data[0]
 Y = data[1]
 
+cross_validate(X,Y,cross_valid)
 
-xsplit = int(split * len(X))
-ysplit = int(split * len(Y))
+# xsplit = int(split * len(X))
+# ysplit = int(split * len(Y))
 
-X_train = X[xsplit:]
-X_test = X[:xsplit]
+# X_train = X[xsplit:]
+# X_test = X[:xsplit]
 
-Y_train = Y[ysplit:]
-Y_test = Y[:ysplit]
+# Y_train = Y[ysplit:]
+# Y_test = Y[:ysplit]
 
 
 
-pred = classify(X_train,Y_train,X_test,True)
+# pred = classify(X_train,Y_train,X_test,True)
 
-evaluate(pred, Y_test)
+# evaluate(pred, Y_test)
 
 # if not os.path.exists('preds.pickle'):
 # 	pred = classify(X_train,Y_train,X_test,True)

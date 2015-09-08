@@ -48,17 +48,27 @@ def prepare_data(feats_file,tags_file):
 		X.append(inst_feats[instance])
 		Y.append(inst_tags[instance])
 
+
 	X = np.array(X)
 	Y = np.array(Y)
+
+	# feature scaling
+	for col in range(X.shape[1]):
+		X[:,col] /= X.shape[1]
+
 
 	Y = MultiLabelBinarizer().fit_transform(Y)
 	return (X,Y)
 
-def classify(train,gold,test):
+def classify(train,gold,test, multi):
 
-	if np.sum(gold) <= 1:
-		return np.zeros(test.shape[0])
-	clf = svm.SVC()
+	if multi:
+		clf = OneVsRestClassifier(svm.SVC(kernel='poly'))
+	else:
+
+		if np.sum(gold) <= 1:
+			return np.zeros(test.shape[0])
+		clf = svm.SVC()
 
 	clf.fit(train, gold)
 	preds = clf.predict(test)
@@ -115,11 +125,11 @@ def evaluate(pred,test):
 
 		macro_average = dict(Counter(macro_average) + Counter(macro_scores[tag]))
 
-		print(	str(tag[:5])							+"..\t"+\
-				str("%.2f" % macro_scores[tag]['P'])	+"\t"+	\
-				str("%.2f" % macro_scores[tag]['R'])	+"\t"+	\
-				str("%.2f" % macro_scores[tag]['F1'])	+"\t"+	\
-				str("%.2f" % macro_scores[tag]['ACC']))
+		# print(	str(tag[:5])							+"..\t"+\
+		# 		str("%.2f" % macro_scores[tag]['P'])	+"\t"+	\
+		# 		str("%.2f" % macro_scores[tag]['R'])	+"\t"+	\
+		# 		str("%.2f" % macro_scores[tag]['F1'])	+"\t"+	\
+		# 		str("%.2f" % macro_scores[tag]['ACC']))
 
 
 	print(	"Averaged Macro Scores:\nP\tR\tF1\tAcc"				+"\n"+\
@@ -147,7 +157,7 @@ def evaluate(pred,test):
 	return(micro_scores,macro_average)
 
 
-def cross_validate(X,Y,cv_val):
+def cross_validate(X,Y,cv_val, multi):
 
 
 	print("Running " + str(cv_val) + " fold cross validation")
@@ -183,9 +193,14 @@ def cross_validate(X,Y,cv_val):
 
 		print("Starting Classification...")
 
-		pred = np.zeros(Y_test.shape)
-		for i in range(Y_train.shape[1]):
-			pred[:,i] = classify(X_train,Y_train[:,i],X_test)
+		if multi:
+			pred = classify(X_train,Y_train,X_test,True)
+		else:
+
+			pred = np.zeros(Y_test.shape)
+			for i in range(Y_train.shape[1]):
+				pred[:,i] = classify(X_train,Y_train[:,i],X_test,False)
+
 
 		print("Evaluating ...")
 		eval_res = evaluate(pred, Y_test)
@@ -193,7 +208,7 @@ def cross_validate(X,Y,cv_val):
 		total_micro = dict(Counter(total_micro) + Counter(eval_res[0]))
 		total_macro = dict(Counter(total_macro) + Counter(eval_res[1]))
 
-		print("############################################################################")
+		print("#############################################################################")
 
 
 
@@ -207,7 +222,7 @@ def cross_validate(X,Y,cv_val):
 			"Averaged Macro Scores" 					+"\n"+	\
 			str("%.2f" % (total_macro['P']/cv_val))		+"\t"+	\
 			str("%.2f" % (total_macro['R']/cv_val))		+"\t"+	\
-			str("%.2f" % (total_micro['F1']/cv_val))	+"\t"+ 	\
+			str("%.2f" % (total_macro['F1']/cv_val))	+"\t"+ 	\
 			str("%.2f" % (total_macro['ACC']/cv_val)))
 # str("%.2f" % avg_p) + "\n")
 
@@ -215,7 +230,7 @@ split = 0.8
 kernel = 'poly'
 feats_file = 'features.pickle'
 tags_file = 'data-set.txt'
-cross_valid = 10
+cross_valid = 5
 
 data = prepare_data(feats_file, tags_file)
 X = data[0]
@@ -224,7 +239,7 @@ Y = data[1]
 print("X Shape: ", X.shape)
 print("Y Shape: ", Y.shape)
 print("No. of tags: ", len(tags_list))
-cross_validate(X,Y,cross_valid)
+cross_validate(X,Y,cross_valid, False)
 
 # if not os.path.exists('preds.pickle'):
 # 	pred = classify(X_train,Y_train,X_test,True)

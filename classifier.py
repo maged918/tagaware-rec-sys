@@ -1,10 +1,16 @@
+'''
+Created on Aug 23, 2015
+
+@author: tarek
+'''
+
+
 import pickle
 import numpy as np
 
-
 from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.multiclass import OneVsRestClassifier
-from sklearn.svm import SVC
+from sklearn import svm
 
 from collections import defaultdict
 from collections import Counter
@@ -50,10 +56,13 @@ def prepare_data(feats_file,tags_file):
 
 def classify(train,gold,test):
 
-	clf = OneVsRestClassifier(SVC(kernel='poly'))
+	if np.sum(gold) <= 1:
+		return np.zeros(test.shape[0])
+	clf = svm.SVC()
 
 	clf.fit(train, gold)
 	preds = clf.predict(test)
+
 	return preds
 
 def get_measurements(a,b):
@@ -106,17 +115,17 @@ def evaluate(pred,test):
 
 		macro_average = dict(Counter(macro_average) + Counter(macro_scores[tag]))
 
-		print(	str(tag[:5])							+"..\t"+	\
-				str("%.2f" % macro_scores[tag]['P'])	+"\t"+		\
-				str("%.2f" % macro_scores[tag]['R'])	+"\t"+		\
-				str("%.2f" % macro_scores[tag]['F1'])	+"\t"+		\
+		print(	str(tag[:5])							+"..\t"+\
+				str("%.2f" % macro_scores[tag]['P'])	+"\t"+	\
+				str("%.2f" % macro_scores[tag]['R'])	+"\t"+	\
+				str("%.2f" % macro_scores[tag]['F1'])	+"\t"+	\
 				str("%.2f" % macro_scores[tag]['ACC']))
 
 
-	print(	"Averaged Macro Scores:\nP\tR\tF1\tAcc"			+"\n"+	\
-			str("%.2f" % (macro_average['P']/len(tags_list)))		+"\t"+	\
-			str("%.2f" % (macro_average['R']/len(tags_list)))		+"\t"+ 	\
-			str("%.2f" % (macro_average['F1']/len(tags_list)))	+"\t"+ 	\
+	print(	"Averaged Macro Scores:\nP\tR\tF1\tAcc"				+"\n"+\
+			str("%.2f" % (macro_average['P']/len(tags_list)))	+"\t"+\
+			str("%.2f" % (macro_average['R']/len(tags_list)))	+"\t"+\
+			str("%.2f" % (macro_average['F1']/len(tags_list)))	+"\t"+\
 			str("%.2f" % (macro_average['ACC']/len(tags_list))))
 
 
@@ -149,8 +158,10 @@ def cross_validate(X,Y,cv_val):
 	total_macro = dict((element,0.0) for element in labels)
 
 	for i in range(cv_val):
+
 		print("########################### Starting run no. " + str(i+1) + " ##############################")
 		print("Splitting datasets")
+
 		X_splits = np.array_split(X,cv_val)
 		Y_splits = np.array_split(Y,cv_val)
 
@@ -164,15 +175,18 @@ def cross_validate(X,Y,cv_val):
 		Y_train = np.concatenate(Y_splits)
 
 
-		print(	"Dataset shapes:\n"+\
-				"Training X:\t" + str(X_train.shape) 	+ "\n" + \
-				"Training Y:\t" + str(Y_train.shape)	+ "\n" + \
-				"Testing X:\t" + str(X_test.shape)		+ "\n" + \
-				"Testing Y:\t" + str(Y_test.shape))
+		# print(	"Dataset shapes:\n"+\
+		# 		"Training X:\t" + str(X_train.shape) 	+ "\n" + \
+		# 		"Training Y:\t" + str(Y_train.shape)	+ "\n" + \
+		# 		"Testing X:\t" + str(X_test.shape)		+ "\n" + \
+		# 		"Testing Y:\t" + str(Y_test.shape))
 
-		print("Started Classification")
+		print("Starting Classification...")
 
-		pred = classify(X_train,Y_train,X_test)
+		pred = np.zeros(Y_test.shape)
+		for i in range(Y_train.shape[1]):
+			pred[:,i] = classify(X_train,Y_train[:,i],X_test)
+
 		print("Evaluating ...")
 		eval_res = evaluate(pred, Y_test)
 
@@ -180,35 +194,36 @@ def cross_validate(X,Y,cv_val):
 		total_macro = dict(Counter(total_macro) + Counter(eval_res[1]))
 
 		print("############################################################################")
-	print(	"Final Averaged Results\n"+					\
-			"P\tR\tF1\tAcc\n"+							\
-			"Averaged Micro Scores\n"+					\
+
+
+
+	print(	"Final Averaged Results"					+"\n"+	\
+			"P\tR\tF1\tAcc" 							+"\n"+	\
+			"Averaged Micro Scores\n"+							\
 			str("%.2f" % (total_micro['P']/cv_val))		+"\t"+	\
 			str("%.2f" % (total_micro['R']/cv_val))		+"\t"+	\
-			str("%.2f" % (total_micro['F1']/cv_val))		+"\t"+	\
-			str("%.2f" % (total_micro['ACC']/cv_val))	+ "\n"+	\
-			"Averaged Macro Scores\n"+					\
+			str("%.2f" % (total_micro['F1']/cv_val))	+"\t"+	\
+			str("%.2f" % (total_micro['ACC']/cv_val))	+"\n"+	\
+			"Averaged Macro Scores" 					+"\n"+	\
 			str("%.2f" % (total_macro['P']/cv_val))		+"\t"+	\
 			str("%.2f" % (total_macro['R']/cv_val))		+"\t"+	\
-			str("%.2f" % (total_micro['F1']/cv_val))		+"\t"+ 	\
+			str("%.2f" % (total_micro['F1']/cv_val))	+"\t"+ 	\
 			str("%.2f" % (total_macro['ACC']/cv_val)))
 # str("%.2f" % avg_p) + "\n")
-
-global kernel
-global split
-global cross_valid
-
 
 split = 0.8
 kernel = 'poly'
 feats_file = 'features.pickle'
 tags_file = 'data-set.txt'
-cross_valid = 5
+cross_valid = 10
 
 data = prepare_data(feats_file, tags_file)
 X = data[0]
 Y = data[1]
 
+print("X Shape: ", X.shape)
+print("Y Shape: ", Y.shape)
+print("No. of tags: ", len(tags_list))
 cross_validate(X,Y,cross_valid)
 
 # if not os.path.exists('preds.pickle'):

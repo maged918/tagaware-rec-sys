@@ -211,21 +211,6 @@ Y = data[1]
 
 cross_validate(X,Y,cross_valid)
 
-# xsplit = int(split * len(X))
-# ysplit = int(split * len(Y))
-
-# X_train = X[xsplit:]
-# X_test = X[:xsplit]
-
-# Y_train = Y[ysplit:]
-# Y_test = Y[:ysplit]
-
-
-
-# pred = classify(X_train,Y_train,X_test,True)
-
-# evaluate(pred, Y_test)
-
 # if not os.path.exists('preds.pickle'):
 # 	pred = classify(X_train,Y_train,X_test,True)
 # else:

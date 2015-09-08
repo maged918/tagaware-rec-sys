@@ -102,8 +102,8 @@ def create_users_problems():
     index = ''
     handle = ''
     time_stamp = ''
-    users_problems = [set()] * len(users)
-    users_submissions = [dict()] * len(users)
+    users_problems = [set() for i in range(len(users))]
+    users_submissions = [dict() for i in range(len(users))]
     for l in f:
         if l == '\n':
             continue
@@ -193,12 +193,12 @@ NOTE: If needed (if this is taking too much time), possible optimization:
 def create_users_correlations(u1):
     correlation = [0] * len(users)
     id1 = users[u1]
+    l1 = users_tags[id1]
     for u2 in users:
         id2 = users[u2]
-        l1 = users_tags[id1]
         l2 = users_tags[id2]
-        #correlation[id2] = pearsonr(l1, l2)[0]
-        correlation[id2] = cosine(l1, l2)
+        correlation[id2] = pearsonr(l1, l2)[0]
+        #correlation[id2] = cosine(l1, l2)
     return correlation
 
 '''
@@ -303,7 +303,6 @@ def compute_diversity_score(user):
     return 
 
 def compute_user_collaborative_score(u, correlation):
-    correlation = create_users_correlations(u)
     user_problem_collaborative_score = [0] * len(problems)
     # collaborative filtering scores
     uid = users[u]
@@ -332,14 +331,6 @@ def compute_final_score(u):
     user_problem_collaborative_score = compute_user_collaborative_score(u, correlation)
     user_problem_temporal_score = compute_temporal_score(u, users_tags[uid])
     user_final_score= [alpha * c + (1 - alpha) * t for c, t in zip(user_problem_collaborative_score, user_problem_temporal_score)]
-    print(user_final_score)
-    #user_problem_diversity_score = .....
-
-    #for p in problems:
-        #pid = problems[p]
-        #user_problem_final_score[uid][pid] = alpha * user_problem_collaborative_score[
-            #uid][pid] + (1 - alpha) * users_problems_temporal_score[uid][pid]
-    #print(user_problem_final_score[0])
 
 
 def test_users_tags():

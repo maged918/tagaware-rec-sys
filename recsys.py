@@ -4,7 +4,7 @@ Created on Aug 1, 2015
 @author: maged, hossam
 '''
 
-from math import exp, log
+from math import exp, log, isnan
 from scipy.spatial.distance import cosine
 from scipy.stats import pearsonr
 from sklearn.cluster import KMeans
@@ -21,8 +21,8 @@ users, problems, tags, users_problems, users_submissions, problems_tags, users_t
 
 count_problems, count_users, count_tags = (0,)*3
 flag_print = 0
-half_life = 2
-alpha = 0.7
+half_life = 1 # The larger the half life value the slower the forgetting rate
+alpha = 0 # This is the value multiplied by the collaborative score
 #submissions_file = 'All-Submissions.txt'
 submissions_file = 'Submissions.txt'
 
@@ -217,15 +217,20 @@ def create_temporal(u):
             current_date,
             problem_date)
         days = abs(date_diff.days)
-        temporal_value = exp(-log(2) * days / half_life)
+        temporal_value = temporal_function(days)
         for t in current_problem_tags:
             temporal_values[t] += temporal_value
             user_problems_in_tags[t] += 1
     temporal_values = np.array(temporal_values)
     user_problems_in_tags = np.array(user_problems_in_tags)
-    return (temporal_values / user_problems_in_tags).tolist()
+    temporal_values = (temporal_values / user_problems_in_tags).tolist()
+    return [val if not isnan(val) else 0 for val in temporal_values]
 
-def compute_temporal_score(u, user_tag):
+def temporal_function(days):
+    # This 2 is given by the paper containing the formula
+    return exp(-log(2) * days / half_life)
+
+def compute_temporal_score(u, user_tags_temporal_score):
     user_problems_temporal_score = [0] * len(problems)
     uid = users[u]
     for p in problems:
@@ -233,7 +238,7 @@ def compute_temporal_score(u, user_tag):
         problem_tag = [0] * len(tags)
         for t in problems_tags[pid]:
             problem_tag[t] = 1
-        user_problems_temporal_score[pid] = pearsonr(user_tag, problem_tag)[0]
+        user_problems_temporal_score[pid] = pearsonr(user_tags_temporal_score, problem_tag)[0]
     return user_problems_temporal_score
 
 
@@ -329,13 +334,68 @@ def compute_final_score(u):
     uid = users[u]
     correlation = create_users_correlations(u)
     user_problem_collaborative_score = compute_user_collaborative_score(u, correlation)
-    user_problem_temporal_score = compute_temporal_score(u, users_tags[uid])
+    users_tags_temporal_score = create_temporal(u)
+    user_problem_temporal_score = compute_temporal_score(u, users_tags_temporal_score)
     user_final_score= [alpha * c + (1 - alpha) * t for c, t in zip(user_problem_collaborative_score, user_problem_temporal_score)]
-
+    return user_final_score
 
 def test_users_tags():
     for i in range(len(users_tags)):
         print(users_tags[i][0])
+
+def get_problem_name(pid):
+    for p in problems:
+        if problems[p] == pid:
+            return p
+
+def get_tag_name(tid):
+    for t in tags:
+        if tags[t] ==  tid:
+            return t
+
+def test():
+    global alpha, half_life
+    alpha = 0.5
+    from collections import defaultdict
+    u = 'VastoLorde95'
+    uid = users[u]
+    d = defaultdict(int)
+    print('---------------------------------------')
+    print('Probelms the user solved')
+    for pid in users_problems[uid]:
+        print(get_problem_name(pid), end = ' ')
+        p_tags = problems_tags[pid]
+        for tid in p_tags:
+            d[tid] += 1
+            print(get_tag_name(tid), end=' ')
+        print()
+    print('---------------------------------------')
+    print('sum of tags the user solved in')
+    for t in tags:
+        if d[tags[t]] == 0:
+            continue
+        print(t, d[tags[t]])
+    print('---------------------------------------')
+    t = compute_final_score(u)
+    for j in range(20):
+        index = np.argmax(t)
+        t[index] = -1
+        print(get_problem_name(index), end = ' ')
+        for i in problems_tags[index]:
+            print(get_tag_name(i), end = ', ')
+        print()
+    half_life = 2000
+    print('---------------------------------------')
+    print('half_life changed to 2000 so slower forgetting rate')
+    t = compute_final_score(u)
+    for j in range(20):
+        index = np.argmax(t)
+        t[index] = -1
+        print(get_problem_name(index), end = ' ')
+        for i in problems_tags[index]:
+            print(get_tag_name(i), end = ', ')
+        print()
+    
 
 if __name__ == '__main__':
     current_date = datetime.datetime.now()
@@ -361,9 +421,11 @@ if __name__ == '__main__':
     start_time = time.time()
     create_users_tags_matrix()
     print("create users tags --- %s seconds ---" % (time.time() - start_time))
-    
+
+
+    test()
     #test_users_tags()
-    
+
     #start_time = time.time()
     #create_users_correlations('yeti')
     #print("correlations --- %s seconds ---" % (time.time() - start_time))
@@ -371,11 +433,7 @@ if __name__ == '__main__':
     #start_time = time.time()
     #temporal_values = create_temporal('yeti')
     #print("create temporal --- %s seconds ---" % (time.time() - start_time))
-    
-    start_time = time.time()
-    t = compute_final_score('yeti')
-    print("compute final score --- %s seconds ---" % (time.time() - start_time))
- 
+
     #create_clusters() #Gives error!
     
    

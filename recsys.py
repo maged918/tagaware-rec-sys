@@ -353,11 +353,35 @@ def get_tag_name(tid):
         if tags[t] ==  tid:
             return t
 
+def evaluate(u):
+    uid = users[u]
+    if users_problems[uid] == 1:
+        print('Can not evaluate on the user ', u)
+        return None
+    solved_problems = list(users_problems[uid])
+    # TODO fix the users_problems graph
+    # BAD WRONG HACK !!!!!!!!!!!!! 
+    # the set does not keep order and therefore this does not take the last
+    # 20% solved by the user
+    test_problems = set(solved_problems[int(0.8 * len(solved_problems)):])
+    users_problems[uid] = set(solved_problems[:int(0.8 * len(solved_problems))])
+    t = compute_final_score(u)
+    count_matches = 0
+    for j in range(100):
+        index = np.argmax(t)
+        t[index] = -1
+        if index in test_problems:
+            count_matches += 1
+    accuracy = 100 * count_matches / len(test_problems) 
+    users_problems[uid] = set(solved_problems)
+    return accuracy
+
 def test():
     global alpha, half_life
     alpha = 0.5
     from collections import defaultdict
-    u = 'VastoLorde95'
+    #u = 'VastoLorde95'
+    u = 'vjudge5'
     uid = users[u]
     d = defaultdict(int)
     print('---------------------------------------')
@@ -395,6 +419,10 @@ def test():
         for i in problems_tags[index]:
             print(get_tag_name(i), end = ', ')
         print()
+    print('---------------------------------------')
+    print('Evaluating Accuracy')
+    accuracy = evaluate(u)
+    print('Accuracy: ', accuracy)
     
 
 if __name__ == '__main__':

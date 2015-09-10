@@ -10,7 +10,7 @@ desc: parses Problems-tags.txt to produce a file with the problem path alongside
 def update_tag(tag):
 	return tag
 
-out_file = open("train-tags.txt",'w')
+out_file = open("data-set.txt",'w')
 
 with open("Problems-tags.txt") as f:
 

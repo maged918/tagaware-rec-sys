@@ -1,7 +1,7 @@
 # Author: Tarek
 # Date: 2.9.15
 # Algorithm recognition pipeline
-# assuming that source-code dir is there:
+# assuming that source-code dir (crawler.py output) is there:
 
 
 # constructs data dir
@@ -9,7 +9,7 @@ rm -rf data
 python3 construct_dirs.py
 
 # create xml files and clean them
-bash srcml_and_clean.sh
+bash srcml_and_clean.sh data/
 
 
 # extract features to be saved in features.pickle

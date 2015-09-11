@@ -7,14 +7,18 @@ Created on Aug 1, 2015
 from math import exp, log, isnan
 from scipy.spatial.distance import cosine
 from scipy.stats import pearsonr
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, SpectralClustering
+from sklearn.decomposition import RandomizedPCA
 import codecs
 import datetime
 import dateutil.relativedelta
 import numpy as np
 import time
-from cmath import sqrt
-from sklearn.cluster.spectral import SpectralClustering
+import os
+
+os.environ['MDP_DISABLE_SKLEARN']='yes'
+import mdp
+
 
 users, problems, tags, users_problems, users_submissions, problems_tags, users_tags, \
         labels, current_date = (0,)*9
@@ -24,7 +28,7 @@ flag_print = 0
 half_life = 1 # The larger the half life value the slower the forgetting rate
 alpha = 0 # This is the value multiplied by the collaborative score
 #submissions_file = 'All-Submissions.txt'
-submissions_file = 'Submissions.txt'
+submissions_file = 'All-Submissions.txt'
 
 '''
 Parse Submissions.txt, generate dict of user_handle --> user_id (0-based)
@@ -102,8 +106,8 @@ def create_users_problems():
     index = ''
     handle = ''
     time_stamp = ''
-    users_problems = [set() for i in range(len(users))]
-    users_submissions = [dict() for i in range(len(users))]
+    users_problems = [set() for _ in range(len(users))]
+    users_submissions = [dict() for _ in range(len(users))]
     for l in f:
         if l == '\n':
             continue
@@ -232,7 +236,6 @@ def temporal_function(days):
 
 def compute_temporal_score(u, user_tags_temporal_score):
     user_problems_temporal_score = [0] * len(problems)
-    uid = users[u]
     for p in problems:
         pid = problems[p]
         problem_tag = [0] * len(tags)
@@ -260,36 +263,40 @@ k_means_.euclidean_distances = new_euclidean_distances
 
 def create_clusters():
     global labels    
-    cluster_vecs = [list(x) for x in zip(*users_tags)]
+    k = 10
+    pca_vecs = [list(x) for x in zip(*users_tags)]
+    
+    '''
+    cluster_vecs = np.array(cluster_vecs).astype(float)
+    pcan = mdp.nodes.PCANode(output_dim=100)
+    pcar = pcan.train(cluster_vecs)
+    y = pcan.execute(cluster_vecs)
+    print(y)
+    '''
+    
+    '''
     mat = [[0 for i in range(count_tags)] for j in range(count_tags)]
     for i in range(len(cluster_vecs)):
         for j in range(len(cluster_vecs)):
                 mat[i][j] = cosine(cluster_vecs[i], cluster_vecs[j])
-    
-    print(mat)
-    '''MADE SURE OF EXISTENCE OF VALUES IN cluster_vecs
-    for u in range(count_users):
-        print(cluster_vecs[0][u], cluster_vecs[1][u])
-    
-    for t in range(count_tags):
-        print(np.sum(cluster_vecs[t]))
     '''
-    #print('-----------------')
-    #print(cosine(cluster_vecs[0], cluster_vecs[1]))
     
-    #print(cluster_vecs[tags['implementation']][users['shalaboka']])
-    #for v in cluster_vecs:
-    #    print (v[users['moathwafeeq']])
-    
-    k = 5
     '''
+    pca = RandomizedPCA(n_components = 200).fit(pca_vecs)
+    cluster_vecs = pca.transform(pca_vecs)
+    print(cluster_vecs)
+    '''
+   
+    '''
+    cluster_vecs = pca_vecs
     engine = KMeans(n_clusters=k)
     labels = engine.fit(cluster_vecs).labels_
     '''
     
-    engine = SpectralClustering(n_clusters=k, affinity='precomputed')
-    labels = engine.fit(mat).labels_
-    #labels = engine.fit(cluster_vecs).labels_
+    '''
+    engine = SpectralClustering(n_clusters=k)
+    labels = engine.fit_predict(cluster_vecs)
+    '''
     
     print("Tag labels: ", labels)
     inverse_tags = dict()
@@ -449,9 +456,10 @@ if __name__ == '__main__':
     start_time = time.time()
     create_users_tags_matrix()
     print("create users tags --- %s seconds ---" % (time.time() - start_time))
+    
+    #create_clusters()
 
-
-    test()
+    #test()
     #test_users_tags()
 
     #start_time = time.time()
@@ -461,10 +469,6 @@ if __name__ == '__main__':
     #start_time = time.time()
     #temporal_values = create_temporal('yeti')
     #print("create temporal --- %s seconds ---" % (time.time() - start_time))
-
-    #create_clusters() #Gives error!
-    
-   
 
 '''
 Introduction:

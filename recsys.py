@@ -16,10 +16,6 @@ import numpy as np
 import time
 import os
 
-os.environ['MDP_DISABLE_SKLEARN']='yes'
-import mdp
-
-
 users, problems, tags, users_problems, users_submissions, problems_tags, users_tags, \
         labels, current_date = (0,)*9
 
@@ -28,7 +24,7 @@ flag_print = 0
 half_life = 1 # The larger the half life value the slower the forgetting rate
 alpha = 0 # This is the value multiplied by the collaborative score
 #submissions_file = 'All-Submissions.txt'
-submissions_file = 'All-Submissions.txt'
+submissions_file = 'Submissions.txt'
 
 '''
 Parse Submissions.txt, generate dict of user_handle --> user_id (0-based)
@@ -244,72 +240,39 @@ def compute_temporal_score(u, user_tags_temporal_score):
         user_problems_temporal_score[pid] = pearsonr(user_tags_temporal_score, problem_tag)[0]
     return user_problems_temporal_score
 
-
 '''
 Incorporating Diversity
-1. Clustering tags
+1. Finding Set cover of problems that cover a user's tags
+Optional: Expand users tags to include similar tags
 '''
 
-from sklearn.metrics.pairwise import cosine_similarity as cosine_similarity            
-def new_euclidean_distances(X, Y=None, Y_norm_squared=None, squared=False): 
-    return cosine_similarity(X,Y)
+def min_set_cover(user_id):
+    universe = set()
+    for i in range(count_tags):
+        if users_tags[user_id][i] >= 1:
+            universe.add(i)
+    covered_tags = set()
+    rec_problems = set()
+    
+    while not (len(universe)==0):
+        max_problem = -1
+        max_intersection = -1
+        for problem_id in problems.values():
+            if problem_id in users_problems[user_id] or problem_id in rec_problems:
+                continue
+            cur_intersection = len(universe&set(problems_tags[problem_id]))
+            if cur_intersection > max_intersection:
+                max_problem = problem_id
+                max_intersection = cur_intersection
+        if max_problem == -1:
+            break
+        rec_problems.add(max_problem)
+        for t in problems_tags[max_problem]:
+            covered_tags.add(t)
+        universe = universe - covered_tags
+    
+    return rec_problems
 
-# monkey patch (ensure cosine dist function is used)
-'''
-from sklearn.cluster import k_means_
-from sklearn.cluster.k_means_ import euclidean_distances
-k_means_.euclidean_distances = new_euclidean_distances
-'''
-
-def create_clusters():
-    global labels    
-    k = 10
-    pca_vecs = [list(x) for x in zip(*users_tags)]
-    
-    '''
-    cluster_vecs = np.array(cluster_vecs).astype(float)
-    pcan = mdp.nodes.PCANode(output_dim=100)
-    pcar = pcan.train(cluster_vecs)
-    y = pcan.execute(cluster_vecs)
-    print(y)
-    '''
-    
-    '''
-    mat = [[0 for i in range(count_tags)] for j in range(count_tags)]
-    for i in range(len(cluster_vecs)):
-        for j in range(len(cluster_vecs)):
-                mat[i][j] = cosine(cluster_vecs[i], cluster_vecs[j])
-    '''
-    
-    '''
-    pca = RandomizedPCA(n_components = 200).fit(pca_vecs)
-    cluster_vecs = pca.transform(pca_vecs)
-    print(cluster_vecs)
-    '''
-   
-    '''
-    cluster_vecs = pca_vecs
-    engine = KMeans(n_clusters=k)
-    labels = engine.fit(cluster_vecs).labels_
-    '''
-    
-    '''
-    engine = SpectralClustering(n_clusters=k)
-    labels = engine.fit_predict(cluster_vecs)
-    '''
-    
-    print("Tag labels: ", labels)
-    inverse_tags = dict()
-    
-    for tag in tags:
-        inverse_tags[tags[tag]] = tag
-    
-    for i in range(k):
-        print("Cluster ", i)
-        for tag_idx in range(len(labels)):
-            if labels[tag_idx] == i:
-                print(inverse_tags[tag_idx])
-    
 def compute_diversity_score(user):
     # Some function on labels, problems in each tag, return score
     return 
@@ -336,6 +299,7 @@ def compute_user_collaborative_score(u, correlation):
     return user_problem_collaborative_score
 
 # final scores
+
 def compute_final_score(u):
     user_final_score = [0] * len(problems)
     uid = users[u]
@@ -350,6 +314,11 @@ def test_users_tags():
     for i in range(len(users_tags)):
         print(users_tags[i][0])
 
+def get_user_name(uid):
+    for u in users:
+        if users[u] == uid:
+            return u
+
 def get_problem_name(pid):
     for p in problems:
         if problems[p] == pid:
@@ -359,6 +328,12 @@ def get_tag_name(tid):
     for t in tags:
         if tags[t] ==  tid:
             return t
+
+def to_array(adj_vector, length):
+    arr = [0 for _ in range(length)]
+    for i in adj_vector:
+        arr[i] = 1
+    return arr
 
 def evaluate(u):
     uid = users[u]
@@ -430,8 +405,22 @@ def test():
     print('Evaluating Accuracy')
     accuracy = evaluate(u)
     print('Accuracy: ', accuracy)
-    
 
+def test_maged():
+    user_id = 0
+    for i in range(count_users):
+        if len(users_problems[i])>=50:
+            user_id = i
+            break
+    user_handle = get_user_name(user_id)
+    print(user_handle)
+    print(users_tags[user_id])
+    rec_problems = min_set_cover(user_id)
+#     print(rec_problems)
+    for p in rec_problems:
+        print(to_array(problems_tags[p], count_tags))
+            
+    
 if __name__ == '__main__':
     current_date = datetime.datetime.now()
     start_time = time.time()
@@ -461,7 +450,8 @@ if __name__ == '__main__':
 
     #test()
     #test_users_tags()
-
+    test_maged()
+    
     #start_time = time.time()
     #create_users_correlations('yeti')
     #print("correlations --- %s seconds ---" % (time.time() - start_time))

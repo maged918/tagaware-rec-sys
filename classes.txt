@@ -1,0 +1,8 @@
+number theory
+geometry
+graphs
+dp
+strings
+data structures
+adhoc
+brute force

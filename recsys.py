@@ -24,13 +24,15 @@ flag_print = 0
 half_life = 1 # The larger the half life value the slower the forgetting rate
 alpha = 0 # This is the value multiplied by the collaborative score
 #submissions_file = 'All-Submissions.txt'
+minimum_user_problems = 5
+number_of_recommendations = 20
 submissions_file = 'Submissions.txt'
 
 '''
 Parse Submissions.txt, generate dict of user_handle --> user_id (0-based)
 Length of dict is the number of users.
 '''
-  
+
 def create_users():
     global users, count_users
     f = open(submissions_file, 'r')
@@ -173,7 +175,7 @@ At the end, we divide by the number of problems for this user.
 NOTE: Might need to add all tags in user-tag graph even if with zero weights.
 NOTE: Might need to use PrettyPrint/better printing for defaultdict
 '''
-    
+
 def create_users_tags_matrix():
     global users_tags
     users_tags = [[0 for t in tags] for u in users]
@@ -186,7 +188,7 @@ def create_users_tags_matrix():
 #             users_tags[u][t] /= (len(users_problems[u]) * 1.0)
     #print('Users Tags: ', users_tags)
 '''
-Calcultaing user similarity using Pearson's Correlation
+Calcultaing user similarity using Pearson's/ Cosine's Correlation
 NOTE: If needed (if this is taking too much time), possible optimization:
     p(x,y) = p(y,x)
 '''
@@ -197,8 +199,8 @@ def create_users_correlations(u1):
     for u2 in users:
         id2 = users[u2]
         l2 = users_tags[id2]
-        correlation[id2] = pearsonr(l1, l2)[0]
-        #correlation[id2] = cosine(l1, l2)
+        #correlation[id2] = pearsonr(l1, l2)[0]
+        correlation[id2] = cosine(l1, l2)
     return correlation
 
 '''
@@ -238,7 +240,8 @@ def compute_temporal_score(u, user_tags_temporal_score):
         problem_tag = [0] * len(tags)
         for t in problems_tags[pid]:
             problem_tag[t] = 1
-        user_problems_temporal_score[pid] = pearsonr(user_tags_temporal_score, problem_tag)[0]
+        #user_problems_temporal_score[pid] = pearsonr(user_tags_temporal_score, problem_tag)[0]
+        user_problems_temporal_score[pid] = cosine(user_tags_temporal_score, problem_tag)
     return user_problems_temporal_score
 
 
@@ -264,45 +267,45 @@ def create_clusters():
     mat = [[0 for i in range(count_tags)] for j in range(count_tags)]
     for i in range(len(cluster_vecs)):
         for j in range(len(cluster_vecs)):
-                mat[i][j] = cosine(cluster_vecs[i], cluster_vecs[j])
-    
+            mat[i][j] = cosine(cluster_vecs[i], cluster_vecs[j])
+
     print(mat)
     '''MADE SURE OF EXISTENCE OF VALUES IN cluster_vecs
     for u in range(count_users):
         print(cluster_vecs[0][u], cluster_vecs[1][u])
-    
+
     for t in range(count_tags):
         print(np.sum(cluster_vecs[t]))
     '''
     #print('-----------------')
     #print(cosine(cluster_vecs[0], cluster_vecs[1]))
-    
+
     #print(cluster_vecs[tags['implementation']][users['shalaboka']])
     #for v in cluster_vecs:
     #    print (v[users['moathwafeeq']])
-    
+
     k = 5
     '''
     engine = KMeans(n_clusters=k)
     labels = engine.fit(cluster_vecs).labels_
     '''
-    
+
     engine = SpectralClustering(n_clusters=k, affinity='precomputed')
     labels = engine.fit(mat).labels_
     #labels = engine.fit(cluster_vecs).labels_
-    
+
     print("Tag labels: ", labels)
     inverse_tags = dict()
-    
+
     for tag in tags:
         inverse_tags[tags[tag]] = tag
-    
+
     for i in range(k):
         print("Cluster ", i)
         for tag_idx in range(len(labels)):
             if labels[tag_idx] == i:
                 print(inverse_tags[tag_idx])
-    
+
 def compute_diversity_score(user):
     # Some function on labels, problems in each tag, return score
     return 
@@ -310,6 +313,7 @@ def compute_diversity_score(user):
 def compute_user_collaborative_score(u, correlation):
     user_problem_collaborative_score = [0] * len(problems)
     # collaborative filtering scores
+    #change here to use only max correlation <<<
     uid = users[u]
     for p in problems:
         pid = problems[p]
@@ -353,28 +357,40 @@ def get_tag_name(tid):
         if tags[t] ==  tid:
             return t
 
+def get_key(d, val):
+    for key in d:
+        if d[key] == val:
+            return key
+
 def evaluate(u):
     uid = users[u]
-    if users_problems[uid] == 1:
+    if len(users_problems[uid]) == minimum_user_problems:
         print('Can not evaluate on the user ', u)
         return None
-    solved_problems = list(users_problems[uid])
-    # TODO fix the users_problems graph
-    # BAD WRONG HACK !!!!!!!!!!!!! 
-    # the set does not keep order and therefore this does not take the last
-    # 20% solved by the user
-    test_problems = set(solved_problems[int(0.8 * len(solved_problems)):])
-    users_problems[uid] = set(solved_problems[:int(0.8 * len(solved_problems))])
+
+    submissions = users_submissions[uid]
+    submission_times = sorted(list(map(lambda x: int(x), list(submissions.values()))))
+    solved_problems_in_order = [get_key(submissions, str(t)) for t in submission_times]
+    train_problems = set(solved_problems_in_order[:int(0.8 * len(solved_problems_in_order))])
+    test_problems = set(solved_problems_in_order[int(0.8 * len(solved_problems_in_order)):])
+    users_problems[uid] = train_problems
+
     t = compute_final_score(u)
     count_matches = 0
-    for j in range(100):
+    for j in range(number_of_recommendations):
         index = np.argmax(t)
         t[index] = -1
         if index in test_problems:
             count_matches += 1
     accuracy = 100 * count_matches / len(test_problems) 
-    users_problems[uid] = set(solved_problems)
+    users_problems[uid] = set(solved_problems_in_order)
     return accuracy
+
+def calculate_accuracy():
+    accuracies = [evaluate(u) for u in users]
+    none_count = accuracies.count(None)
+    print('#########', none_count, end = '######## \n')
+    return sum(filter(None, accuracies)) / (len(users) - none_count)
 
 def test():
     global alpha, half_life
@@ -423,7 +439,7 @@ def test():
     print('Evaluating Accuracy')
     accuracy = evaluate(u)
     print('Accuracy: ', accuracy)
-    
+
 
 if __name__ == '__main__':
     current_date = datetime.datetime.now()
@@ -440,10 +456,10 @@ if __name__ == '__main__':
     create_users_problems()
     print("create users problems --- %s seconds ---" % (time.time() - start_time))
     start_time = time.time()
-    
+
     print("There are %i users, %i problems and %i tags" % (count_users, count_problems, count_tags))
     #print(users_problems[users['moathwafeeq']])
-    
+
     create_problems_tags()
     print("create problems tags --- %s seconds ---" % (time.time() - start_time))
     start_time = time.time()
@@ -452,6 +468,15 @@ if __name__ == '__main__':
 
 
     test()
+
+    #start_time = time.time()
+    #evaluate('SkyDec')
+    #print("Evaluating a user --- %s seconds ---" % (time.time() - start_time))
+   
+    #start_time = time.time()
+    #print(calculate_accuracy())
+    #print("Overall accuracy --- %s seconds ---" % (time.time() - start_time))
+   
     #test_users_tags()
 
     #start_time = time.time()
@@ -463,8 +488,8 @@ if __name__ == '__main__':
     #print("create temporal --- %s seconds ---" % (time.time() - start_time))
 
     #create_clusters() #Gives error!
-    
-   
+
+
 
 '''
 Introduction:

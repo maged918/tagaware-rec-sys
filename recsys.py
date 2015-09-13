@@ -7,14 +7,14 @@ Created on Aug 1, 2015
 from math import exp, log, isnan
 from scipy.spatial.distance import cosine
 from scipy.stats import pearsonr
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, SpectralClustering
+from sklearn.decomposition import RandomizedPCA
 import codecs
 import datetime
 import dateutil.relativedelta
 import numpy as np
 import time
-from cmath import sqrt
-from sklearn.cluster.spectral import SpectralClustering
+import os
 
 users, problems, tags, users_problems, users_submissions, problems_tags, users_tags, \
         labels, current_date = (0,)*9
@@ -104,8 +104,8 @@ def create_users_problems():
     index = ''
     handle = ''
     time_stamp = ''
-    users_problems = [set() for i in range(len(users))]
-    users_submissions = [dict() for i in range(len(users))]
+    users_problems = [set() for _ in range(len(users))]
+    users_submissions = [dict() for _ in range(len(users))]
     for l in f:
         if l == '\n':
             continue
@@ -234,7 +234,6 @@ def temporal_function(days):
 
 def compute_temporal_score(u, user_tags_temporal_score):
     user_problems_temporal_score = [0] * len(problems)
-    uid = users[u]
     for p in problems:
         pid = problems[p]
         problem_tag = [0] * len(tags)
@@ -244,67 +243,38 @@ def compute_temporal_score(u, user_tags_temporal_score):
         user_problems_temporal_score[pid] = cosine(user_tags_temporal_score, problem_tag)
     return user_problems_temporal_score
 
-
 '''
 Incorporating Diversity
-1. Clustering tags
+1. Finding Set cover of problems that cover a user's tags
+Optional: Expand users tags to include similar tags
 '''
 
-from sklearn.metrics.pairwise import cosine_similarity as cosine_similarity            
-def new_euclidean_distances(X, Y=None, Y_norm_squared=None, squared=False): 
-    return cosine_similarity(X,Y)
-
-# monkey patch (ensure cosine dist function is used)
-'''
-from sklearn.cluster import k_means_
-from sklearn.cluster.k_means_ import euclidean_distances
-k_means_.euclidean_distances = new_euclidean_distances
-'''
-
-def create_clusters():
-    global labels    
-    cluster_vecs = [list(x) for x in zip(*users_tags)]
-    mat = [[0 for i in range(count_tags)] for j in range(count_tags)]
-    for i in range(len(cluster_vecs)):
-        for j in range(len(cluster_vecs)):
-            mat[i][j] = cosine(cluster_vecs[i], cluster_vecs[j])
-
-    print(mat)
-    '''MADE SURE OF EXISTENCE OF VALUES IN cluster_vecs
-    for u in range(count_users):
-        print(cluster_vecs[0][u], cluster_vecs[1][u])
-
-    for t in range(count_tags):
-        print(np.sum(cluster_vecs[t]))
-    '''
-    #print('-----------------')
-    #print(cosine(cluster_vecs[0], cluster_vecs[1]))
-
-    #print(cluster_vecs[tags['implementation']][users['shalaboka']])
-    #for v in cluster_vecs:
-    #    print (v[users['moathwafeeq']])
-
-    k = 5
-    '''
-    engine = KMeans(n_clusters=k)
-    labels = engine.fit(cluster_vecs).labels_
-    '''
-
-    engine = SpectralClustering(n_clusters=k, affinity='precomputed')
-    labels = engine.fit(mat).labels_
-    #labels = engine.fit(cluster_vecs).labels_
-
-    print("Tag labels: ", labels)
-    inverse_tags = dict()
-
-    for tag in tags:
-        inverse_tags[tags[tag]] = tag
-
-    for i in range(k):
-        print("Cluster ", i)
-        for tag_idx in range(len(labels)):
-            if labels[tag_idx] == i:
-                print(inverse_tags[tag_idx])
+def min_set_cover(user_id):
+    universe = set()
+    for i in range(count_tags):
+        if users_tags[user_id][i] >= 1:
+            universe.add(i)
+    covered_tags = set()
+    rec_problems = set()
+    
+    while not (len(universe)==0):
+        max_problem = -1
+        max_intersection = -1
+        for problem_id in problems.values():
+            if problem_id in users_problems[user_id] or problem_id in rec_problems:
+                continue
+            cur_intersection = len(universe&set(problems_tags[problem_id]))
+            if cur_intersection > max_intersection:
+                max_problem = problem_id
+                max_intersection = cur_intersection
+        if max_problem == -1:
+            break
+        rec_problems.add(max_problem)
+        for t in problems_tags[max_problem]:
+            covered_tags.add(t)
+        universe = universe - covered_tags
+    
+    return rec_problems
 
 def compute_diversity_score(user):
     # Some function on labels, problems in each tag, return score
@@ -333,6 +303,7 @@ def compute_user_collaborative_score(u, correlation):
     return user_problem_collaborative_score
 
 # final scores
+
 def compute_final_score(u):
     user_final_score = [0] * len(problems)
     uid = users[u]
@@ -346,6 +317,11 @@ def compute_final_score(u):
 def test_users_tags():
     for i in range(len(users_tags)):
         print(users_tags[i][0])
+
+def get_user_name(uid):
+    for u in users:
+        if users[u] == uid:
+            return u
 
 def get_problem_name(pid):
     for p in problems:
@@ -361,6 +337,12 @@ def get_key(d, val):
     for key in d:
         if d[key] == val:
             return key
+
+def to_array(adj_vector, length):
+    arr = [0 for _ in range(length)]
+    for i in adj_vector:
+        arr[i] = 1
+    return arr
 
 def evaluate(u):
     uid = users[u]
@@ -440,7 +422,21 @@ def test():
     accuracy = evaluate(u)
     print('Accuracy: ', accuracy)
 
-
+def test_maged():
+    user_id = 0
+    for i in range(count_users):
+        if len(users_problems[i])>=50:
+            user_id = i
+            break
+    user_handle = get_user_name(user_id)
+    print(user_handle)
+    print(users_tags[user_id])
+    rec_problems = min_set_cover(user_id)
+#     print(rec_problems)
+    for p in rec_problems:
+        print(to_array(problems_tags[p], count_tags))
+            
+    
 if __name__ == '__main__':
     current_date = datetime.datetime.now()
     start_time = time.time()
@@ -465,6 +461,8 @@ if __name__ == '__main__':
     start_time = time.time()
     create_users_tags_matrix()
     print("create users tags --- %s seconds ---" % (time.time() - start_time))
+    
+    #create_clusters()
 
 
     test()
@@ -478,7 +476,8 @@ if __name__ == '__main__':
     #print("Overall accuracy --- %s seconds ---" % (time.time() - start_time))
    
     #test_users_tags()
-
+    test_maged()
+    
     #start_time = time.time()
     #create_users_correlations('yeti')
     #print("correlations --- %s seconds ---" % (time.time() - start_time))
@@ -488,7 +487,6 @@ if __name__ == '__main__':
     #print("create temporal --- %s seconds ---" % (time.time() - start_time))
 
     #create_clusters() #Gives error!
-
 
 
 '''

@@ -28,7 +28,7 @@ alpha = 0 # This is the value multiplied by the collaborative score
 #submissions_file = 'All-Submissions.txt'
 minimum_user_problems = 5
 number_of_recommendations = 20
-submissions_file = 'All-Submissions.txt'
+submissions_file = 'Submissions.txt'
 
 '''
 Parse Submissions.txt, generate dict of user_handle --> user_id (0-based)
@@ -100,7 +100,7 @@ Build user-problem graph.
 '''
 
 def create_users_problems():
-    global users_problems, users_submissions, count_problems
+    global users_problems, users_submissions, count_problems, problems_users
     f = open(submissions_file, 'r')
     contest_id = ''
     index = ''
@@ -108,6 +108,7 @@ def create_users_problems():
     time_stamp = ''
     users_problems = [set() for _ in range(len(users))]
     users_submissions = [dict() for _ in range(len(users))]
+    problems_users = [np.array([]) for _ in range(len(problems))]
     for l in f:
         if l == '\n':
             continue
@@ -124,6 +125,7 @@ def create_users_problems():
             #problem_id = problems[contest_id + index]
             problem_id = get_problem_id(contest_id+index)
             users_problems[user_id].add(problem_id)
+            problems_users[problem_id] = np.append(problems_users[problem_id], user_id)
             users_submissions[user_id][problem_id] = time_stamp
     f.close()
     print("New count of problems: ", count_problems)
@@ -289,20 +291,15 @@ def compute_user_collaborative_score(u, correlation):
     # collaborative filtering scores
     #change here to use only max correlation <<<
     for pid in problems.values():
-        score_sum = 0
-        users_solved_p = 0
-        for u2 in users:
-            if u == u2:
-                continue
-            u2id = users[u2]
-#             score_sum += correlation[u2id] * (pid in users_problems[u2id])
-            if pid in users_problems[u2id]:
-                users_solved_p += 1
-                score_sum+= correlation[u2id]
-        if users_solved_p == 0:
+        uid = users[u]
+        cor = [correlation[int(u2id)] for u2id in problems_users[pid] if u2id != uid]
+        score = sum(cor)
+        size = len(cor)
+        if size == 0:
             user_problem_collaborative_score[pid] = 0
         else:
-            user_problem_collaborative_score[pid] = score_sum / users_solved_p
+            user_problem_collaborative_score[pid] = score / size
+    
     return user_problem_collaborative_score
 
 # final scores
@@ -460,7 +457,7 @@ def test_maged():
 
     for problem_id in range(count_problems):
         print(problem_id, len(problems_users[problem_id]))
-        
+
 if __name__ == '__main__':
     current_date = datetime.datetime.now()
     
@@ -492,11 +489,10 @@ if __name__ == '__main__':
             , time.time() - start_time)
     
     #test()
- 
     start_time = time.time()
     evaluate('SkyDec')
     print("Evaluating a user --- %s seconds ---" % (time.time() - start_time))
-            
+    
     #start_time = time.time()
     #print(calculate_accuracy())
     #print("Overall accuracy --- %s seconds ---" % (time.time() - start_time))

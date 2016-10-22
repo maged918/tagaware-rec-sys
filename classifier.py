@@ -11,6 +11,8 @@ import numpy as np
 from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn import svm
+from sklearn import metrics
+from sklearn.neural_network import MLPClassifier
 
 from collections import defaultdict
 from collections import Counter
@@ -60,10 +62,11 @@ def prepare_data(feats_file,tags_file):
 	Y = MultiLabelBinarizer().fit_transform(Y)
 	return (X,Y)
 
-def classify(train,gold,test, multi):
+def classify(train,gold,test, test_y,multi):
 
 	if multi:
-		clf = OneVsRestClassifier(svm.SVC(kernel='poly'))
+		# clf = OneVsRestClassifier(MLPClassifier())
+		clf = OneVsRestClassifier(svm.SVC(kernel='linear', class_weight={0:0.1,1:0.9}))
 	else:
 
 		if np.sum(gold) <= 1:
@@ -71,8 +74,14 @@ def classify(train,gold,test, multi):
 		clf = svm.SVC()
 
 	clf.fit(train, gold)
+	# print(clf)
 	preds = clf.predict(test)
-
+	# print(np.sum(gold))
+	# print(train.shape, gold.shape, test.shape, test_y.shape, preds.shape)
+	# print(gold, test_y)
+	# for i in range(len(preds)):
+	# 	print(preds[i], test_y[i])
+	print(metrics.classification_report(test_y,preds))
 	return preds
 
 def get_measurements(a,b):
@@ -108,9 +117,8 @@ def evaluate(pred,test):
 	macro_scores = dict(zip(tags_list,[defaultdict(float)] * len(tags_list)))
 
 	labels = ['ACC','TP','TN','FN','FP','P','R','F1','ACC']
-	micro_scores = dict((element,0.0) for element in labels)
-	macro_average = dict((element,0.0) for element in labels)
-
+	micro_scores = dict((element,0) for element in labels)
+	macro_average = dict((element,0) for element in labels)
 
 	for tag_idx,tag in enumerate(tags_list):
 		curr_results = get_measurements(pred[:,tag_idx],test[:,tag_idx])
@@ -124,13 +132,12 @@ def evaluate(pred,test):
 	for tag in macro_scores:
 
 		macro_average = dict(Counter(macro_average) + Counter(macro_scores[tag]))
-
+		# print(Counter(macro_scores[tag]))
 		# print(	str(tag[:5])							+"..\t"+\
 		# 		str("%.2f" % macro_scores[tag]['P'])	+"\t"+	\
 		# 		str("%.2f" % macro_scores[tag]['R'])	+"\t"+	\
 		# 		str("%.2f" % macro_scores[tag]['F1'])	+"\t"+	\
 		# 		str("%.2f" % macro_scores[tag]['ACC']))
-
 
 	print(	"Averaged Macro Scores:\nP\tR\tF1\tAcc"				+"\n"+\
 			str("%.2f" % (macro_average['P']/len(tags_list)))	+"\t"+\
@@ -194,12 +201,12 @@ def cross_validate(X,Y,cv_val, multi):
 		print("Starting Classification...")
 
 		if multi:
-			pred = classify(X_train,Y_train,X_test,True)
+			pred = classify(X_train,Y_train,X_test,Y_test,True)
 		else:
 
 			pred = np.zeros(Y_test.shape)
 			for i in range(Y_train.shape[1]):
-				pred[:,i] = classify(X_train,Y_train[:,i],X_test,False)
+				pred[:,i] = classify(X_train,Y_train[:,i],X_test,Y_test,False)
 
 
 		print("Evaluating ...")
@@ -239,7 +246,7 @@ Y = data[1]
 print("X Shape: ", X.shape)
 print("Y Shape: ", Y.shape)
 print("No. of tags: ", len(tags_list))
-cross_validate(X,Y,cross_valid, False)
+cross_validate(X,Y,cross_valid, True)
 
 # if not os.path.exists('preds.pickle'):
 # 	pred = classify(X_train,Y_train,X_test,True)

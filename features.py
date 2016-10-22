@@ -189,12 +189,13 @@ for contest in next(os.walk(data_dir))[1]:
 		for count,submission in enumerate(os.listdir(data_dir+"/"+contest+"/"+problem)):
 			path = data_dir+"/"+contest+"/"+problem+ "/" + submission
 			if submission.endswith(".xml"):
-				print(path)
+				# print(path)
 				problem_features.append(extract_feats(path))
 		arr = np.asarray(problem_features)
 		arr.astype(float)
 		avg = np.average(arr, axis=0)
 		feature_set[contest + "/" + problem] = avg
+	print(contest)
 
 
 

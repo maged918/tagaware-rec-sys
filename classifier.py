@@ -13,6 +13,7 @@ from sklearn.multiclass import OneVsRestClassifier
 from sklearn import svm
 from sklearn import metrics
 from sklearn.neural_network import MLPClassifier
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 
 from collections import defaultdict
 from collections import Counter
@@ -66,12 +67,15 @@ def classify(train,gold,test, test_y,multi):
 
 	if multi:
 		# clf = OneVsRestClassifier(MLPClassifier())
-		clf = OneVsRestClassifier(svm.SVC(kernel='linear', class_weight={0:0.1,1:0.9}))
+		clf = OneVsRestClassifier(svm.SVC(kernel='linear', class_weight={0:0.2,1:0.8}, C=10))
+		# clf = OneVsRestClassifier(RandomForestClassifier(n_estimators=100, class_weight={0:0.9, 1:0.1}))
+		# clf = OneVsRestClassifier(AdaBoostClassifier(n_estimators=100))
 	else:
 
 		if np.sum(gold) <= 1:
 			return np.zeros(test.shape[0])
-		clf = svm.SVC()
+		# clf = svm.SVC()
+		clf = AdaBoostClassifier()
 
 	clf.fit(train, gold)
 	# print(clf)
@@ -81,7 +85,8 @@ def classify(train,gold,test, test_y,multi):
 	# print(gold, test_y)
 	# for i in range(len(preds)):
 	# 	print(preds[i], test_y[i])
-	print(metrics.classification_report(test_y,preds))
+	# print(metrics.classification_report(test_y,preds))
+	print(metrics.precision_recall_fscore_support(test_y, preds, average='macro'))
 	return preds
 
 def get_measurements(a,b):
@@ -104,7 +109,8 @@ def get_eval_metrics(results_dict):
 	results_dict['P'] = results_dict['TP'] / (results_dict['TP'] + results_dict['FP']) if p_den > 0 else 0
 
 	r_den = results_dict['TP'] + results_dict['FN']
-	results_dict['R'] = 2*(results_dict['TP'] / (results_dict['TP'] + results_dict['FN'])) if r_den > 0 else 0
+	# results_dict['R'] = 2*(results_dict['TP'] / (results_dict['TP'] + results_dict['FN'])) if r_den > 0 else 0
+	results_dict['R'] = results_dict['TP'] / (results_dict['TP'] + results_dict['FN']) if r_den > 0 else 0
 
 	f_den = results_dict['P'] + results_dict['R']
 	results_dict['F1'] = 2  * ((results_dict['P'] * results_dict['R'])  / (results_dict['P'] + results_dict['R'])) if f_den > 0 else 0

@@ -1,446 +1,446 @@
 574/A:implementation
-574/B:brute force,dfs and similar,graphs
-574/C:number theory
-574/D:dp,greedy,shortest paths
+574/B:graphs,graphs
+574/C:math
+574/D:dp,graphs
 574/E:
-572/A:sortings
-572/B:data structures,greedy,implementation,sortings
-572/C:brute force,combinatorics,dp,math
-572/D:dp,sortings
+572/A:
+572/B:data structures,implementation
+572/C:math,dp,math
+572/D:dp
 572/E:
 570/A:implementation
-570/B:constructive algorithms,greedy,implementation,math
-570/C:constructive algorithms,data structures,implementation
-570/D:binary search,constructive algorithms,dfs and similar,trees
-570/E:combinatorics,dp
+570/B:implementation,math
+570/C:data structures,implementation
+570/D:graphs,graphs
+570/E:math,dp
 569/A:implementation,math
-569/B:greedy
-569/C:binary search,brute force,number theory
-569/D:brute force,dp,math
+569/B:
+569/C:math
+569/D:dp,math
 567/A:implementation
 567/B:implementation
-567/C:binary search,data structures,dp
-567/D:binary search,data structures,sortings
-567/E:dfs and similar,graphs,hashing,shortest paths
+567/C:data structures,dp
+567/D:data structures
+567/E:graphs,graphs,graphs
 567/F:dp
-560/A:geometry,implementation,sortings
-560/B:constructive algorithms,implementation
+560/A:geometry,implementation
+560/B:implementation
 560/C:geometry
-560/D:hashing,implementation,strings
-560/E:combinatorics,dp
-558/A:brute force,implementation,sortings
+560/D:implementation,strings
+560/E:math,dp
+558/A:implementation
 558/B:implementation
-558/C:brute force,greedy
-558/D:data structures,implementation,sortings
-558/E:data structures,sortings,strings
-557/A:greedy,implementation
-557/B:implementation,sortings
-557/C:brute force,data structures,dp,greedy
-557/D:combinatorics,dfs and similar,graphs,math
-557/E:data structures,dp,string suffix structures,strings,trees
-556/A:greedy
-556/B:brute force,implementation
+558/C:
+558/D:data structures,implementation
+558/E:data structures,strings
+557/A:implementation
+557/B:implementation
+557/C:data structures,dp
+557/D:math,graphs,graphs,math
+557/E:data structures,dp,strings,strings,graphs
+556/A:
+556/B:implementation
 556/C:implementation
-556/D:binary search,data structures,greedy
-556/E:binary search,data structures
-554/A:brute force,math
-554/B:brute force,strings
-554/C:combinatorics,dp,math
+556/D:data structures
+556/E:data structures
+554/A:math
+554/B:strings
+554/C:math,dp,math
 554/D:math
-554/E:dfs and similar,dsu
+554/E:graphs
 552/A:implementation,math
 552/B:implementation,math
-552/C:brute force,dp,greedy,math,meet-in-the-middle
-552/D:brute force,combinatorics,data structures,geometry,math,sortings
-552/E:brute force,dp,expression parsing,greedy,implementation
-551/A:implementation,sortings
-551/B:brute force,constructive algorithms,implementation,strings
-551/C:binary search,greedy
-551/D:combinatorics,math,matrices,number theory
-551/E:binary search,data structures
-550/A:brute force,dp,implementation,strings
-550/B:bitmasks,brute force
-550/C:brute force,dp,math
-550/D:constructive algorithms,graphs,implementation
-550/E:constructive algorithms,greedy,implementation
-548/A:brute force,implementation
-548/B:brute force,greedy,implementation
-548/C:number theory
-548/D:binary search,data structures
-548/E:number theory
+552/C:dp,math
+552/D:math,data structures,geometry,math
+552/E:dp,strings,implementation
+551/A:implementation
+551/B:implementation,strings
+551/C:
+551/D:math,math,math,math
+551/E:data structures
+550/A:dp,implementation,strings
+550/B:
+550/C:dp,math
+550/D:graphs,implementation
+550/E:implementation
+548/A:implementation
+548/B:implementation
+548/C:math
+548/D:data structures
+548/E:math
 546/A:implementation,math
-546/B:brute force,greedy,implementation,sortings
-546/C:brute force,dfs and similar
-546/D:constructive algorithms,dp,math,number theory
-546/E:flows,math
+546/B:implementation
+546/C:graphs
+546/D:dp,math,math
+546/E:graphs,math
 545/A:implementation
-545/B:greedy
-545/C:dp,greedy
-545/D:greedy,implementation,sortings
-545/E:graphs,greedy,shortest paths
+545/B:
+545/C:dp
+545/D:implementation
+545/E:graphs,graphs
 544/A:implementation
-544/B:constructive algorithms,implementation
+544/B:implementation
 544/C:dp
-544/D:brute force,graphs,shortest paths
-544/E:bitmasks,dp
+544/D:graphs,graphs
+544/E:dp
 540/A:implementation
-540/B:greedy,implementation
-540/C:dfs and similar
-540/D:dp,probabilities
-540/E:binary search,data structures,implementation,sortings,trees
+540/B:implementation
+540/C:graphs
+540/D:dp,math
+540/E:data structures,implementation,graphs
 535/A:implementation
-535/B:bitmasks,brute force,implementation
-535/C:binary search,math
-535/D:greedy,hashing,string suffix structures,strings
+535/B:implementation
+535/C:math
+535/D:strings,strings
 535/E:geometry
-534/A:constructive algorithms,implementation
-534/B:dp,greedy,math
+534/A:implementation
+534/B:dp,math
 534/C:math
-534/D:binary search,constructive algorithms,data structures,greedy
-534/E:constructive algorithms,greedy,hashing,implementation
-534/F:bitmasks,dp,hashing,meet-in-the-middle
-525/A:greedy,hashing
-525/B:greedy
-525/C:greedy,sortings
-525/D:data structures,greedy
-525/E:binary search,bitmasks,brute force,dp,meet-in-the-middle
+534/D:data structures
+534/E:implementation
+534/F:dp
+525/A:
+525/B:
+525/C:
+525/D:data structures
+525/E:dp
 527/A:implementation,math
-527/B:greedy
-527/C:binary search,data structures,implementation
-527/D:data structures,dp,greedy,implementation,sortings
-527/E:dfs and similar,graphs
+527/B:
+527/C:data structures,implementation
+527/D:data structures,dp,implementation
+527/E:graphs,graphs
 520/A:implementation,strings
-520/B:dfs and similar,graphs,greedy,implementation,math,shortest paths
+520/B:graphs,graphs,implementation,math,graphs
 520/C:math,strings
-520/D:games,greedy,implementation
-520/E:combinatorics,dp,math,number theory
+520/D:math,implementation
+520/E:math,dp,math,math
 519/A:implementation
 519/B:data structures,implementation
-519/C:greedy,implementation,math,number theory
-519/D:data structures,dp,two pointers
-519/E:binary search,data structures,dfs and similar,dp,trees
+519/C:implementation,math,math
+519/D:data structures,dp
+519/E:data structures,graphs,dp,graphs
 518/A:strings
 518/B:implementation,strings
 518/C:data structures,implementation
-518/D:combinatorics,dp,probabilities
-518/E:greedy,implementation,ternary search
-518/F:binary search,brute force,combinatorics,dp,implementation
+518/D:math,dp,math
+518/E:implementation
+518/F:math,dp,implementation
 515/A:math
-515/B:brute force,dsu,meet-in-the-middle,number theory
-515/C:greedy,math,sortings
-515/D:constructive algorithms,greedy
+515/B:math
+515/C:math
+515/D:
 515/E:data structures
-514/A:greedy,implementation
-514/B:brute force,data structures,geometry,math
-514/C:binary search,hashing,string suffix structures,strings
-514/D:binary search,data structures,two pointers
-514/E:dp,matrices
+514/A:implementation
+514/B:data structures,geometry,math
+514/C:strings,strings
+514/D:data structures
+514/E:dp,math
 510/A:implementation
-510/B:dfs and similar
-510/C:dfs and similar,graphs,sortings
-510/D:bitmasks,brute force,dp,math
-510/E:flows
-508/A:brute force
-508/B:greedy
-508/C:greedy
-508/D:dfs and similar,graphs
-508/E:dp,greedy
-507/A:greedy,implementation,sortings
+510/B:graphs
+510/C:graphs,graphs
+510/D:dp,math
+510/E:graphs
+508/A:
+508/B:
+508/C:
+508/D:graphs,graphs
+508/E:dp
+507/A:implementation
 507/B:geometry,math
 507/C:implementation,math
 507/D:dp,implementation
-507/E:dfs and similar,dp,graphs,shortest paths
-505/A:brute force,implementation,strings
-505/B:dfs and similar,dp,dsu,graphs
-505/C:dfs and similar,dp,two pointers
-505/D:dfs and similar
-505/E:binary search,greedy
+507/E:graphs,dp,graphs,graphs
+505/A:implementation,strings
+505/B:graphs,dp,graphs
+505/C:graphs,dp
+505/D:graphs
+505/E:
 501/A:implementation
-501/B:data structures,dsu,strings
-501/C:constructive algorithms,data structures,greedy,sortings,trees
+501/B:data structures,strings
+501/C:data structures,graphs
 501/D:data structures
-501/E:binary search,combinatorics,implementation
+501/E:math,implementation
 499/A:implementation
 499/B:strings
 499/C:math
 499/D:
 499/E:
-496/A:brute force,implementation,math
-496/B:brute force,constructive algorithms,implementation
-496/C:brute force,constructive algorithms,implementation
-496/D:binary search
-496/E:greedy,sortings
+496/A:implementation,math
+496/B:implementation
+496/C:implementation
+496/D:
+496/E:
 495/A:implementation
 495/B:math
 495/C:implementation
-495/D:binary search,dp,strings
+495/D:dp,strings
 495/E:
 493/A:implementation
 493/B:implementation
-493/C:binary search,brute force,implementation,sortings,two pointers
-493/D:constructive algorithms,games
+493/C:implementation
+493/D:math
 493/E:math
 492/A:implementation
-492/B:binary search,math,sortings
-492/C:greedy,sortings
-492/D:binary search,implementation,math,sortings
+492/B:math
+492/C:
+492/D:implementation,math
 492/E:math
-490/A:greedy,implementation,sortings
-490/B:dsu,implementation
-490/C:brute force,math,strings
-490/D:brute force,dfs and similar,math,meet-in-the-middle,number theory
-490/E:binary search,brute force,greedy,implementation
-490/F:data structures,dfs and similar,dp,trees
-488/A:brute force
-488/B:brute force,constructive algorithms
-488/C:brute force
-488/D:data structures,dp,two pointers
-488/E:constructive algorithms,math
-489/A:implementation,sortings
-489/B:dfs and similar,dp,graph matchings,greedy,sortings,two pointers
-489/C:dp,greedy,implementation
-489/D:brute force,combinatorics,dfs and similar,graphs
-489/E:binary search,dp
-489/F:combinatorics,dp
+490/A:implementation
+490/B:implementation
+490/C:math,strings
+490/D:graphs,math,math
+490/E:implementation
+490/F:data structures,graphs,dp,graphs
+488/A:
+488/B:
+488/C:
+488/D:data structures,dp
+488/E:math
+489/A:implementation
+489/B:graphs,dp,graphs
+489/C:dp,implementation
+489/D:math,graphs,graphs
+489/E:dp
+489/F:math,dp
 486/A:implementation,math
-486/B:greedy,hashing,implementation
-486/C:greedy,implementation
-486/D:dfs and similar,dp,math,trees
-486/E:data structures,dp,greedy,hashing,math
-485/A:implementation,math,matrices
-485/B:brute force,greedy
+486/B:implementation
+486/C:implementation
+486/D:graphs,dp,math,graphs
+486/E:data structures,dp,math
+485/A:implementation,math,math
+485/B:
 485/C:implementation,math
-485/D:binary search,sortings
+485/D:
 485/E:
-483/A:brute force,implementation
-483/B:binary search,math
-483/C:constructive algorithms,implementation
+483/A:implementation
+483/B:math
+483/C:implementation
 483/D:data structures
 483/E:
-479/A:brute force,math
-479/B:brute force,greedy,implementation,sortings
-479/C:greedy,sortings
-479/D:binary search,greedy,implementation
+479/A:math
+479/B:implementation
+479/C:
+479/D:implementation
 479/E:dp
 478/A:implementation
-478/B:combinatorics,constructive algorithms,greedy,math
-478/C:greedy
+478/B:math,math
+478/C:
 478/D:dp
-478/E:brute force,dfs and similar,meet-in-the-middle,sortings
+478/E:graphs
 476/A:implementation,math
-476/B:bitmasks,brute force,combinatorics,dp,math,probabilities
+476/B:math,dp,math,math
 476/C:math
-476/D:constructive algorithms,greedy,math
+476/D:math
 476/E:dp,strings
 474/A:implementation
-474/B:binary search,implementation
-474/C:brute force,geometry
+474/B:implementation
+474/C:geometry
 474/D:dp
-474/E:binary search,data structures,dp,sortings,trees
-474/F:data structures,number theory
+474/E:data structures,dp,graphs
+474/F:data structures,math
 471/A:implementation
-471/B:sortings
-471/C:binary search,brute force,greedy,math
-471/D:string suffix structures,strings
-471/E:data structures,dsu
-469/A:greedy,implementation
+471/B:
+471/C:math
+471/D:strings,strings
+471/E:data structures
+469/A:implementation
 469/B:implementation
-469/C:constructive algorithms,implementation
-469/D:2-sat,data structures,graph matchings,greedy
-469/E:constructive algorithms
+469/C:implementation
+469/D:data structures,graphs
+469/E:
 467/A:implementation
-467/B:bitmasks,brute force,constructive algorithms,implementation
+467/B:implementation
 467/C:dp,implementation
-467/D:dfs and similar,dp,graphs,hashing,strings
-467/E:data structures,dp,greedy
+467/D:graphs,dp,graphs,strings
+467/E:data structures,dp
 466/A:implementation
-466/B:brute force,math
-466/C:binary search,brute force,data structures,dp,two pointers
-466/D:combinatorics,dp
-466/E:dfs and similar,dsu,graphs,trees
+466/B:math
+466/C:data structures,dp
+466/D:math,dp
+466/E:graphs,graphs,graphs
 465/A:implementation
 465/B:implementation
-465/C:brute force
-465/D:brute force
-465/E:constructive algorithms,dp
+465/C:
+465/D:
+465/E:dp
 463/A:implementation
 463/B:math
-463/C:greedy,hashing,implementation
-463/D:dfs and similar,dp,graphs
-463/E:brute force,dfs and similar,trees
-462/A:brute force,implementation
-462/B:greedy
-462/C:implementation,sortings
+463/C:implementation
+463/D:graphs,dp,graphs
+463/E:graphs,graphs
+462/A:implementation
+462/B:
+462/C:implementation
 462/D:dp,graphs
 462/E:
-460/A:brute force,implementation
-460/B:brute force,implementation,math
-460/C:binary search,data structures,greedy
-460/D:brute force,constructive algorithms
-460/E:brute force,geometry,math,sortings
+460/A:implementation
+460/B:implementation,math
+460/C:data structures
+460/D:
+460/E:geometry,math
 459/A:implementation
-459/B:implementation,sortings
-459/C:combinatorics,constructive algorithms,math
-459/D:data structures,divide and conquer,sortings
-459/E:dp,sortings
-456/A:sortings
-456/B:math,number theory
+459/B:implementation
+459/C:math,math
+459/D:data structures
+459/E:dp
+456/A:
+456/B:math,math
 456/C:dp
-456/D:dp,games,strings
-456/E:dfs and similar,dsu,graphs,trees
+456/D:dp,math,strings
+456/E:graphs,graphs,graphs
 454/A:implementation
 454/B:implementation
-454/C:combinatorics,math,probabilities
-454/D:bitmasks,dp
-454/E:dfs and similar
+454/C:math,math,math
+454/D:dp
+454/E:graphs
 451/A:implementation
-451/B:implementation,sortings
-451/C:brute force,implementation,math
+451/B:implementation
+451/C:implementation,math
 451/D:math
-451/E:bitmasks,combinatorics,number theory
+451/E:math,math
 450/A:implementation
 450/B:implementation,math
-450/C:greedy,implementation
-450/D:graphs,shortest paths
-450/E:constructive algorithms,number theory
+450/C:implementation
+450/D:graphs,graphs
+450/E:math
 448/A:implementation
 448/B:implementation,strings
-448/C:divide and conquer,dp,greedy
-448/D:binary search,brute force
-448/E:brute force,dfs and similar,implementation,number theory
+448/C:dp
+448/D:
+448/E:graphs,implementation,math
 447/A:implementation
-447/B:greedy,implementation
+447/B:implementation
 447/C:dp
-447/D:data structures,greedy
+447/D:data structures
 447/E:data structures
-445/A:dfs and similar,implementation
-445/B:dfs and similar,dsu,greedy
-445/C:graphs,greedy
-445/D:probabilities
+445/A:graphs,implementation
+445/B:graphs
+445/C:graphs
+445/D:math
 445/E:data structures
-443/A:constructive algorithms,implementation
-443/B:brute force
-443/C:bitmasks,brute force,constructive algorithms,implementation
-443/D:dp,greedy,math,probabilities,sortings
+443/A:implementation
+443/B:
+443/C:implementation
+443/D:dp,math,math
 443/E:
 441/A:implementation
-441/B:greedy,implementation
-441/C:constructive algorithms,dfs and similar,implementation
-441/D:constructive algorithms,dsu,graphs,implementation,string suffix structures
-441/E:bitmasks,dp
-439/A:greedy,implementation
-439/B:implementation,sortings
-439/C:brute force,constructive algorithms,implementation,number theory
-439/D:binary search,sortings,ternary search,two pointers
-439/E:combinatorics,dp,math
+441/B:implementation
+441/C:graphs,implementation
+441/D:graphs,implementation,strings
+441/E:dp
+439/A:implementation
+439/B:implementation
+439/C:implementation,math
+439/D:
+439/E:math,dp,math
 437/A:implementation
-437/B:bitmasks,greedy,implementation,sortings
-437/C:graphs,greedy,sortings
-437/D:dsu,sortings
+437/B:implementation
+437/C:graphs
+437/D:
 437/E:
 435/A:implementation
-435/B:greedy
+435/B:
 435/C:implementation
-435/D:brute force,dp,greedy
+435/D:dp
 435/E:
-433/A:brute force,implementation
-433/B:dp,implementation,sortings
-433/C:implementation,math,sortings
-433/D:dsu,implementation
+433/A:implementation
+433/B:dp,implementation
+433/C:implementation,math
+433/D:implementation
 433/E:dp
 431/A:implementation
-431/B:brute force,implementation
-431/C:dp,implementation,trees
-431/D:binary search,bitmasks,combinatorics,dp,math
-431/E:binary search,data structures,ternary search
-432/A:greedy,implementation,sortings
-432/B:brute force,greedy,implementation
-432/C:greedy,sortings
-432/D:dp,string suffix structures,strings,two pointers
-432/E:constructive algorithms,greedy
-430/A:constructive algorithms,sortings
-430/B:brute force,two pointers
-430/C:brute force,data structures,dfs and similar,trees
-430/D:brute force,dp
-430/E:constructive algorithms,data structures,dfs and similar
+431/B:implementation
+431/C:dp,implementation,graphs
+431/D:math,dp,math
+431/E:data structures
+432/A:implementation
+432/B:implementation
+432/C:
+432/D:dp,strings,strings
+432/E:
+430/A:
+430/B:
+430/C:data structures,graphs,graphs
+430/D:dp
+430/E:data structures,graphs
 427/A:implementation
 427/B:data structures,implementation
-427/C:dfs and similar,graphs,two pointers
-427/D:dp,string suffix structures,strings
-427/E:greedy,implementation,math,ternary search
+427/C:graphs,graphs
+427/D:dp,strings,strings
+427/E:implementation,math
 426/A:implementation
 426/B:implementation
-426/C:brute force,sortings,two pointers
+426/C:
 426/D:
 426/E:
 424/A:implementation
-424/B:binary search,greedy,implementation,sortings
+424/B:implementation
 424/C:math
-424/D:binary search,brute force,constructive algorithms,data structures,dp
-424/E:dfs and similar,dp,probabilities
-421/A:constructive algorithms,implementation
+424/D:data structures,dp
+424/E:graphs,dp,math
+421/A:implementation
 421/B:implementation
 421/C:implementation
-421/D:binary search,data structures,sortings
+421/D:data structures
 421/E:data structures
 417/A:dp,implementation,math
 417/B:implementation
-417/C:constructive algorithms,graphs,implementation
-417/D:bitmasks,dp,greedy,sortings
-417/E:constructive algorithms,math,probabilities
-416/A:greedy,implementation,two pointers
-416/B:brute force,dp,implementation
-416/C:binary search,dp,greedy,implementation
-416/D:greedy,implementation
-416/E:dp,graphs,shortest paths
+417/C:graphs,implementation
+417/D:dp
+417/E:math,math
+416/A:implementation
+416/B:dp,implementation
+416/C:dp,implementation
+416/D:implementation
+416/E:dp,graphs,graphs
 415/A:implementation
-415/B:binary search,greedy,math
-415/C:constructive algorithms,greedy,number theory
-415/D:combinatorics,dp,number theory
-415/E:divide and conquer,sortings
+415/B:math
+415/C:math
+415/D:math,dp,math
+415/E:
 408/A:implementation
 408/B:implementation
 408/C:geometry,math
 408/D:dp
 408/E:
-405/A:greedy,implementation,sortings
+405/A:implementation
 405/B:
 405/C:implementation,math
-405/D:greedy,implementation,math
-405/E:dfs and similar
+405/D:implementation,math
+405/E:graphs
 404/A:implementation
 404/B:implementation,math
-404/C:dfs and similar,graphs,sortings
+404/C:graphs,graphs
 404/D:dp,implementation
-404/E:binary search,greedy,implementation
-402/A:greedy,math
-402/B:brute force
-402/C:brute force,constructive algorithms
-402/D:dp,greedy,math
+404/E:implementation
+402/A:math
+402/B:
+402/C:
+402/D:dp,math
 402/E:graphs
 401/A:implementation,math
-401/B:greedy,implementation,math
-401/C:constructive algorithms,greedy,implementation
-401/D:bitmasks,brute force,combinatorics,dp,number theory
+401/B:implementation,math
+401/C:implementation
+401/D:math,dp,math
 401/E:math
 400/A:dp,implementation
-400/B:brute force,implementation,schedules
+400/B:implementation
 400/C:implementation,math
-400/D:dsu,graphs,shortest paths
-400/E:binary search,bitmasks,data structures
+400/D:graphs,graphs
+400/E:data structures
 399/A:implementation
 399/B:
-399/C:number theory
+399/C:math
 399/D:
 397/A:
 397/B:implementation,math
-397/C:combinatorics,number theory
+397/C:math,math
 397/D:math
-397/E:data structures,trees
+397/E:data structures,graphs
 394/A:implementation
 394/B:
-394/C:constructive algorithms,greedy
-394/D:brute force,implementation,math
+394/C:
+394/D:implementation,math
 394/E:geometry
 393/A:
 393/B:
@@ -450,666 +450,666 @@
 390/A:implementation
 390/B:implementation
 390/C:data structures
-390/D:constructive algorithms
+390/D:
 390/E:
-389/A:greedy,math
-389/B:greedy,implementation
-389/C:binary search,dp,greedy
-389/D:constructive algorithms,graphs,implementation,shortest paths
-389/E:greedy,implementation
+389/A:math
+389/B:implementation
+389/C:dp
+389/D:graphs,implementation,graphs
+389/E:implementation
 387/A:implementation
-387/B:brute force,greedy,two pointers
-387/C:greedy,implementation
-387/D:graph matchings
-387/E:binary search,data structures
-385/A:brute force,greedy,implementation
-385/B:brute force,greedy,implementation,math,strings
-385/C:binary search,brute force,data structures,dp,implementation,math,number theory
-385/D:bitmasks,dp,geometry
-385/E:math,matrices
+387/B:
+387/C:implementation
+387/D:graphs
+387/E:data structures
+385/A:implementation
+385/B:implementation,math,strings
+385/C:data structures,dp,implementation,math,math
+385/D:dp,geometry
+385/E:math,math
 384/A:implementation
-384/B:greedy,implementation,sortings,two pointers
-384/C:greedy
+384/B:implementation
+384/C:
 384/D:implementation
-384/E:data structures,dfs and similar,graphs,trees
-382/A:greedy,implementation
-382/B:binary search,math
-382/C:implementation,sortings
-382/D:dfs and similar,graphs,implementation,trees
-382/E:combinatorics,dp
-381/A:greedy,implementation,two pointers
-381/B:greedy,implementation,sortings
-381/C:binary search,implementation,two pointers
-381/D:brute force
+384/E:data structures,graphs,graphs,graphs
+382/A:implementation
+382/B:math
+382/C:implementation
+382/D:graphs,graphs,implementation,graphs
+382/E:math,dp
+381/A:implementation
+381/B:implementation
+381/C:implementation
+381/D:
 381/E:data structures
-378/A:brute force
-378/B:implementation,sortings
-378/C:dfs and similar
-378/D:binary search,data structures,greedy,sortings
-378/E:bitmasks,brute force,dp,greedy
+378/A:
+378/B:implementation
+378/C:graphs
+378/D:data structures
+378/E:dp
 376/A:implementation,math
 376/B:implementation
-376/C:math,number theory
-376/D:dp,implementation,sortings
-376/E:bitmasks,shortest paths
-374/A:greedy,implementation
-374/B:combinatorics,greedy
-374/C:dfs and similar,dp,graphs,implementation
-374/D:binary search,data structures,dp,trees
-374/E:binary search,data structures,dsu,geometry,implementation
+376/C:math,math
+376/D:dp,implementation
+376/E:graphs
+374/A:implementation
+374/B:math
+374/C:graphs,dp,graphs,implementation
+374/D:data structures,dp,graphs
+374/E:data structures,geometry,implementation
 373/A:implementation
-373/B:binary search,implementation,math
-373/C:greedy,sortings,two pointers
+373/B:implementation,math
+373/C:
 373/D:
 373/E:dp
 371/A:implementation,math
-371/B:math,number theory
-371/C:binary search,brute force
-371/D:data structures,dsu,implementation,trees
-371/E:math,two pointers
+371/B:math,math
+371/C:
+371/D:data structures,implementation,graphs
+371/E:math
 370/A:math
 370/B:implementation
-370/C:constructive algorithms,greedy,sortings
-370/D:brute force,constructive algorithms,implementation
-370/E:dp,greedy
+370/C:
+370/D:implementation
+370/E:dp
 369/A:implementation
-369/B:constructive algorithms,implementation,math
-369/C:dfs and similar,graphs,trees
-369/D:dfs and similar,dp,shortest paths
-369/E:binary search,data structures
+369/B:implementation,math
+369/C:graphs,graphs,graphs
+369/D:graphs,dp,graphs
+369/E:data structures
 368/A:implementation
 368/B:data structures,dp
-368/C:brute force,implementation
-368/D:data structures,two pointers
-368/E:combinatorics,graphs,implementation
+368/C:implementation
+368/D:data structures
+368/E:math,graphs,implementation
 366/A:implementation
-366/B:brute force,implementation
+366/B:implementation
 366/C:dp
-366/D:binary search,data structures,dfs and similar,dsu,shortest paths,two pointers
-366/E:brute force,implementation,math
+366/D:data structures,graphs,graphs
+366/E:implementation,math
 365/A:implementation
 365/B:implementation
-365/C:brute force,combinatorics,math,matrices
-365/D:dp,greedy
-365/E:brute force,number theory
-362/A:greedy,math
-362/B:implementation,sortings
+365/C:math,math,math
+365/D:dp
+365/E:math
+362/A:math
+362/B:implementation
 362/C:data structures,dp,implementation,math
-362/D:data structures,dfs and similar,dsu,graphs,greedy
-362/E:flows,graphs,shortest paths
+362/D:data structures,graphs,graphs
+362/E:graphs,graphs,graphs
 363/A:implementation
-363/B:brute force,dp
-363/C:greedy,implementation
-363/D:binary search,greedy
-363/E:brute force,data structures,implementation
-361/A:constructive algorithms,implementation
-361/B:constructive algorithms,math,number theory
-361/C:brute force,constructive algorithms,greedy
-361/D:binary search,dp
+363/B:dp
+363/C:implementation
+363/D:
+363/E:data structures,implementation
+361/A:implementation
+361/B:math,math
+361/C:
+361/D:dp
 361/E:
-359/A:greedy,implementation
-359/B:constructive algorithms,dp,math
+359/A:implementation
+359/B:dp,math
 359/C:math
-359/D:binary search,brute force,data structures,math,two pointers
-359/E:dfs and similar
-358/A:brute force,implementation
-358/B:brute force,strings
-358/C:constructive algorithms,greedy,implementation
-358/D:dp,greedy
-358/E:brute force,dsu,graphs,implementation
-357/A:brute force,greedy,implementation
-357/B:constructive algorithms,implementation
+359/D:data structures,math
+359/E:graphs
+358/A:implementation
+358/B:strings
+358/C:implementation
+358/D:dp
+358/E:graphs,implementation
+357/A:implementation
+357/B:implementation
 357/C:data structures
-357/D:number theory
+357/D:math
 357/E:
-355/A:constructive algorithms,implementation
-355/B:greedy,implementation
-355/C:brute force,dp
+355/A:implementation
+355/B:implementation
+355/C:dp
 355/D:
-355/E:binary search,brute force,data structures
+355/E:data structures
 353/A:implementation,math
-353/B:combinatorics,constructive algorithms,greedy,implementation,math,sortings
-353/C:implementation,math,number theory
-353/D:constructive algorithms
-353/E:dp,graph matchings,greedy
-352/A:brute force,implementation,math
-352/B:implementation,sortings
-352/C:dp,greedy,implementation
+353/B:math,implementation,math
+353/C:implementation,math,math
+353/D:
+353/E:dp,graphs
+352/A:implementation,math
+352/B:implementation
+352/C:dp,implementation
 352/D:math
 352/E:
-350/A:brute force,greedy,implementation
-350/B:brute force
-350/C:greedy,implementation,sortings
-350/D:binary search,geometry,hashing,sortings
-350/E:brute force,constructive algorithms,dfs and similar,graphs
-349/A:greedy,implementation
-349/B:data structures,dp,greedy
+350/A:implementation
+350/B:
+350/C:implementation
+350/D:geometry
+350/E:graphs,graphs
+349/A:implementation
+349/B:data structures,dp
 349/C:implementation
-349/D:dfs and similar,number theory,trees
+349/D:graphs,math,graphs
 349/E:
-347/A:implementation,sortings
+347/A:implementation
 347/B:implementation,math
-347/C:games,math,number theory
+347/C:math,math,math
 347/D:dp,strings
-347/E:dp,greedy,number theory
+347/E:dp,math
 344/A:implementation
-344/B:brute force,math
+344/B:math
 344/C:math
-344/D:data structures,greedy,implementation
-344/E:binary search,two pointers
-342/A:greedy,implementation
-342/B:brute force,greedy,implementation
+344/D:data structures,implementation
+344/E:
+342/A:implementation
+342/B:implementation
 342/C:geometry
-342/D:bitmasks,dfs and similar,dp
-342/E:data structures,divide and conquer,trees
+342/D:graphs,dp
+342/E:data structures,graphs
 340/A:math
-340/B:brute force,geometry
-340/C:combinatorics,implementation,math
-340/D:binary search,data structures,dp
-340/E:combinatorics,math
-339/A:greedy,implementation,sortings,strings
+340/B:geometry
+340/C:math,implementation,math
+340/D:data structures,dp
+340/E:math,math
+339/A:implementation,strings
 339/B:implementation
-339/C:constructive algorithms,dfs and similar,dp,greedy
-339/D:data structures,trees
-339/E:constructive algorithms,dfs and similar,greedy
-337/A:dp,graph matchings,greedy
-337/B:greedy,math,number theory
-337/C:binary search,greedy,math,matrices,number theory
-337/D:dfs and similar,divide and conquer,dp,trees
-337/E:brute force,number theory,trees
+339/C:graphs,dp
+339/D:data structures,graphs
+339/E:graphs
+337/A:dp,graphs
+337/B:math,math
+337/C:math,math,math
+337/D:graphs,dp,graphs
+337/E:math,graphs
 336/A:implementation,math
 336/B:math
-336/C:brute force,greedy,implementation,number theory
-336/D:combinatorics,math
-336/E:bitmasks,combinatorics,dp,implementation
+336/C:implementation,math
+336/D:math,math
+336/E:math,dp,implementation
 334/A:implementation
-334/B:sortings
+334/B:
 334/C:math
-334/D:greedy,implementation,two pointers
+334/D:implementation
 334/E:
 332/A:implementation
 332/B:data structures,dp,implementation
-332/C:data structures,greedy,sortings
+332/C:data structures
 332/D:graphs,math
-332/E:dp,greedy,implementation
-330/A:brute force,implementation
-330/B:constructive algorithms,graphs
-330/C:matrices
-330/D:dfs and similar,implementation,shortest paths
+332/E:dp,implementation
+330/A:implementation
+330/B:graphs
+330/C:math
+330/D:graphs,implementation,graphs
 330/E:
-327/A:brute force,dp,implementation
+327/A:dp,implementation
 327/B:math
-327/C:combinatorics,math
-327/D:constructive algorithms,dfs and similar,graphs
-327/E:bitmasks,combinatorics,constructive algorithms,dp,meet-in-the-middle
-322/A:greedy
-322/B:combinatorics,math
-322/C:implementation,math,number theory
-322/D:dp,flows,greedy,two pointers
-322/E:divide and conquer
-320/A:brute force,greedy
-320/B:dfs and similar,graphs
+327/C:math,math
+327/D:graphs,graphs
+327/E:math,dp
+322/A:
+322/B:math,math
+322/C:implementation,math,math
+322/D:dp,graphs
+322/E:
+320/A:
+320/B:graphs,graphs
 320/C:math
 320/D:data structures
 320/E:dp
 318/A:math
-318/B:implementation,strings,two pointers
-318/C:greedy,math
-318/D:dfs and similar
-318/E:constructive algorithms,dfs and similar
-315/A:brute force
+318/B:implementation,strings
+318/C:math
+318/D:graphs
+318/E:graphs
+315/A:
 315/B:implementation
-315/C:dp,greedy,implementation
-315/D:dfs and similar,strings
-315/E:combinatorics,data structures
-313/A:implementation,number theory
+315/C:dp,implementation
+315/D:graphs,strings
+315/E:math,data structures
+313/A:implementation,math
 313/B:dp,implementation
-313/C:constructive algorithms,greedy,implementation,sortings
+313/C:implementation
 313/D:dp
-313/E:constructive algorithms,data structures,dsu,greedy
+313/E:data structures
 312/A:implementation
-312/B:math,probabilities
-312/C:constructive algorithms
+312/B:math,math
+312/C:
 312/D:
-305/A:brute force,constructive algorithms
-305/B:brute force,math
+305/A:
+305/B:math
 305/C:
-305/D:combinatorics,math
-305/E:games
-304/A:brute force,math
-304/B:brute force,implementation
-304/C:constructive algorithms
-304/D:math,ternary search
+305/D:math,math
+305/E:math
+304/A:math
+304/B:implementation
+304/C:
+304/D:math
 304/E:math
 302/A:implementation
-302/B:binary search,implementation,two pointers
-302/C:constructive algorithms
-302/D:binary search,dfs and similar,dp,shortest paths
+302/B:implementation
+302/C:
+302/D:graphs,dp,graphs
 302/E:
-300/A:brute force,constructive algorithms,implementation
-300/B:brute force,dfs and similar
-300/C:brute force,combinatorics
-300/D:dp,fft
-300/E:binary search,math
-299/A:brute force,number theory,sortings
-299/B:brute force,implementation
-299/C:games,greedy
+300/A:implementation
+300/B:graphs
+300/C:math
+300/D:dp
+300/E:math
+299/A:math
+299/B:implementation
+299/C:math
 299/D:
 299/E:
-298/A:greedy,implementation
-298/B:brute force,greedy,implementation
-298/C:combinatorics,constructive algorithms,math,number theory
-298/D:greedy,math,sortings
-298/E:constructive algorithms,sortings
-296/A:greedy,math
-296/B:combinatorics,dp
+298/A:implementation
+298/B:implementation
+298/C:math,math,math
+298/D:math
+298/E:
+296/A:math
+296/B:math,dp
 296/C:data structures,dp,implementation
 296/D:dp,graphs
-296/E:combinatorics,dfs and similar,dp
+296/E:math,graphs,dp
 294/A:implementation,math
-294/B:dp,greedy
-294/C:combinatorics,number theory
-294/D:brute force,implementation,number theory
-294/E:dp,trees
-289/A:brute force,implementation
-289/B:brute force,dp,implementation,sortings,ternary search
-289/C:constructive algorithms,implementation
-289/D:brute force,combinatorics,dfs and similar,math
-289/E:data structures,greedy,implementation,math
-287/A:brute force,implementation
-287/B:binary search,math
-287/C:constructive algorithms,greedy,implementation,math
+294/B:dp
+294/C:math,math
+294/D:implementation,math
+294/E:dp,graphs
+289/A:implementation
+289/B:dp,implementation
+289/C:implementation
+289/D:math,graphs,math
+289/E:data structures,implementation,math
+287/A:implementation
+287/B:math
+287/C:implementation,math
 287/D:
-287/E:data structures,greedy
-285/A:greedy,implementation
+287/E:data structures
+285/A:implementation
 285/B:implementation
-285/C:greedy,implementation,sortings
-285/D:bitmasks,combinatorics,dp,implementation,meet-in-the-middle
-285/E:combinatorics,dp,math
-284/A:implementation,math,number theory
-284/B:brute force,implementation
-284/C:constructive algorithms,data structures,dp
-284/D:dfs and similar,dp
-284/E:dfs and similar,dp
+285/C:implementation
+285/D:math,dp,implementation
+285/E:math,dp,math
+284/A:implementation,math,math
+284/B:implementation
+284/C:data structures,dp
+284/D:graphs,dp
+284/E:graphs,dp
 282/A:implementation
-282/B:greedy,math
-282/C:constructive algorithms,implementation,math
-282/D:dp,games
-282/E:bitmasks,data structures,trees
+282/B:math
+282/C:implementation,math
+282/D:dp,math
+282/E:data structures,graphs
 281/A:strings
-281/B:brute force,implementation,two pointers
+281/B:implementation
 281/C:geometry,implementation
-281/D:two pointers
+281/D:
 281/E:math
-279/A:brute force,geometry,implementation
-279/B:binary search,brute force,implementation,two pointers
-279/C:dp,implementation,two pointers
-279/D:bitmasks,dp
-279/E:games,greedy
+279/A:geometry,implementation
+279/B:implementation
+279/C:dp,implementation
+279/D:dp
+279/E:math
 278/A:implementation
-278/B:brute force,strings
-278/C:dsu
-278/D:constructive algorithms,geometry
-278/E:games
+278/B:strings
+278/C:
+278/D:geometry
+278/E:math
 276/A:implementation
-276/B:games,greedy
-276/C:data structures,implementation,sortings
-276/D:bitmasks,dp,greedy,implementation,math
-276/E:data structures,trees
+276/B:math
+276/C:data structures,implementation
+276/D:dp,implementation,math
+276/E:data structures,graphs
 275/A:implementation
-275/B:constructive algorithms,implementation
-275/C:binary search,greedy,sortings
-275/D:dfs and similar,dp,trees
+275/B:implementation
+275/C:
+275/D:graphs,dp,graphs
 272/A:implementation,math
 272/B:implementation,math
 272/C:data structures,implementation
-272/D:combinatorics,math,sortings
-272/E:combinatorics,constructive algorithms,graphs
-271/A:brute force
-271/B:binary search,brute force,math,number theory
-271/C:constructive algorithms,implementation
+272/D:math,math
+272/E:math,graphs
+271/A:
+271/B:math,math
+271/C:implementation
 271/D:data structures,strings
-271/E:constructive algorithms,math,number theory
+271/E:math,math
 270/A:geometry,implementation,math
-270/B:data structures,greedy,implementation
-270/C:binary search,greedy,implementation,math,sortings
+270/B:data structures,implementation
+270/C:implementation,math
 270/D:dp
-270/E:dfs and similar,sortings
-268/A:brute force
+270/E:graphs
+268/A:
 268/B:implementation,math
-268/C:constructive algorithms,implementation
+268/C:implementation
 268/D:dp
-268/E:math,probabilities,sortings
+268/E:math,math
 266/A:implementation
-266/B:constructive algorithms,graph matchings,implementation,shortest paths
-266/C:constructive algorithms,greedy,math
-266/D:graphs,math,shortest paths
+266/B:graphs,implementation,graphs
+266/C:math
+266/D:graphs,math,graphs
 266/E:data structures,math
 265/A:implementation
-265/B:greedy,implementation
-265/C:greedy,implementation
-265/D:dp,number theory
-265/E:schedules,sortings
+265/B:implementation
+265/C:implementation
+265/D:dp,math
+265/E:
 263/A:implementation
-263/B:greedy,implementation,sortings
-263/C:dfs and similar,implementation
-263/D:dfs and similar,graphs
-263/E:brute force,data structures,dp
+263/B:implementation
+263/C:graphs,implementation
+263/D:graphs,graphs
+263/E:data structures,dp
 262/A:implementation
-262/B:greedy
-262/C:greedy,sortings
-262/D:combinatorics,dp
+262/B:
+262/C:
+262/D:math,dp
 262/E:dp
-257/A:greedy,implementation,sortings
-257/B:games,greedy,implementation
-257/C:brute force,geometry,math
-257/D:greedy,math
+257/A:implementation
+257/B:math,implementation
+257/C:geometry,math
+257/D:math
 257/E:data structures,implementation
 260/A:implementation,math
-260/B:brute force,implementation,strings
-260/C:greedy,implementation
-260/D:constructive algorithms,dsu,graphs,greedy,trees
-260/E:binary search,brute force,data structures
-259/A:brute force,strings
-259/B:brute force,implementation
-259/C:greedy,strings
-259/D:brute force,combinatorics,dp,math
-259/E:binary search,combinatorics,math
+260/B:implementation,strings
+260/C:implementation
+260/D:graphs,graphs
+260/E:data structures
+259/A:strings
+259/B:implementation
+259/C:strings
+259/D:math,dp,math
+259/E:math,math
 255/A:implementation
 255/B:implementation
-255/C:brute force,dp
-255/D:binary search,implementation,math
-255/E:games,implementation,math
-254/A:constructive algorithms,sortings
-254/B:brute force,implementation
-254/C:greedy
-254/D:brute force,dfs and similar,implementation
+255/C:dp
+255/D:implementation,math
+255/E:math,implementation,math
+254/A:
+254/B:implementation
+254/C:
+254/D:graphs,implementation
 254/E:dp,implementation
-253/A:greedy
-253/B:binary search,dp,two pointers
-253/C:data structures,dfs and similar,greedy,shortest paths
-253/D:brute force,two pointers
-253/E:binary search,data structures,implementation,sortings
-252/A:brute force,implementation
-252/B:brute force,sortings
-252/C:binary search,combinatorics,two pointers
-252/D:brute force,combinatorics,implementation
-252/E:dp,number theory
-250/A:greedy
+253/A:
+253/B:dp
+253/C:data structures,graphs,graphs
+253/D:
+253/E:data structures,implementation
+252/A:implementation
+252/B:
+252/C:math
+252/D:math,implementation
+252/E:dp,math
+250/A:
 250/B:implementation,strings
-250/C:greedy
-250/D:geometry,ternary search,two pointers
-250/E:brute force
+250/C:
+250/D:geometry
+250/E:
 248/A:implementation
-248/B:math,number theory
-248/C:binary search,geometry
-248/D:binary search,greedy,implementation
-248/E:dp,probabilities
-246/A:constructive algorithms,greedy,sortings
-246/B:greedy,math
-246/C:brute force,constructive algorithms,greedy
-246/D:brute force,dfs and similar,graphs
-246/E:binary search,data structures,dfs and similar,dp,sortings
+248/B:math,math
+248/C:geometry
+248/D:implementation
+248/E:dp,math
+246/A:
+246/B:math
+246/C:
+246/D:graphs,graphs
+246/E:data structures,graphs,dp
 244/A:implementation
-244/B:bitmasks,brute force,dfs and similar
-244/C:bitmasks,divide and conquer,math
+244/B:graphs
+244/C:math
 244/D:
 244/E:
-242/A:brute force,implementation
-242/B:implementation,sortings
-242/C:dfs and similar,hashing,shortest paths
-242/D:dfs and similar,greedy
-242/E:bitmasks,data structures
-239/A:greedy,implementation,math
-239/B:brute force,implementation
-239/C:combinatorics,constructive algorithms,math
-239/D:constructive algorithms,greedy,sortings
+242/A:implementation
+242/B:implementation
+242/C:graphs,graphs
+242/D:graphs
+242/E:data structures
+239/A:implementation,math
+239/B:implementation
+239/C:math,math
+239/D:
 239/E:
 237/A:implementation
-237/B:implementation,sortings
-237/C:binary search,number theory,two pointers
-237/D:dfs and similar,graphs,greedy
-237/E:flows,graphs
+237/B:implementation
+237/C:math
+237/D:graphs,graphs
+237/E:graphs,graphs
 236/A:implementation
-236/B:implementation,number theory
-236/C:greedy,number theory
-236/D:dp,probabilities
+236/B:implementation,math
+236/C:math
+236/D:dp,math
 233/A:implementation,math
-233/B:binary search,brute force,math
-233/C:combinatorics,graphs,matrices
-233/D:bitmasks,combinatorics,dp,math
-231/A:brute force,greedy
-231/B:constructive algorithms,greedy
-231/C:binary search,sortings,two pointers
-231/D:brute force,geometry
-231/E:data structures,dfs and similar,dp,graphs,trees
-230/A:greedy,sortings
-230/B:implementation,math,number theory
-230/C:binary search,data structures,dp,implementation
-230/D:binary search,graphs,shortest paths
-230/E:combinatorics,graphs,math
+233/B:math
+233/C:math,graphs,math
+233/D:math,dp,math
+231/A:
+231/B:
+231/C:
+231/D:geometry
+231/E:data structures,graphs,dp,graphs,graphs
+230/A:
+230/B:implementation,math,math
+230/C:data structures,dp,implementation
+230/D:graphs,graphs
+230/E:math,graphs,math
 228/A:implementation
-228/B:brute force,implementation
-228/C:dp,hashing
+228/B:implementation
+228/C:dp
 228/D:data structures
-228/E:2-sat,dfs and similar,dsu,graphs
+228/E:graphs,graphs
 227/A:geometry
 227/B:implementation
 227/C:math
-227/D:math,sortings
-227/E:matrices,number theory
-225/A:constructive algorithms,greedy
-225/B:binary search,greedy,number theory
-225/C:dp,matrices
-225/D:bitmasks,dfs and similar,graphs,implementation
-225/E:math,number theory
-224/A:brute force,math
-224/B:bitmasks,implementation,two pointers
+227/D:math
+227/E:math,math
+225/A:
+225/B:math
+225/C:dp,math
+225/D:graphs,graphs,implementation
+225/E:math,math
+224/A:math
+224/B:implementation
 224/C:data structures
 224/D:data structures,strings
-224/E:combinatorics,math
-222/A:brute force,implementation
+224/E:math,math
+222/A:implementation
 222/B:implementation
-222/C:implementation,number theory,sortings
-222/D:binary search,greedy,sortings,two pointers
-222/E:matrices
+222/C:implementation,math
+222/D:
+222/E:math
 221/A:implementation,math
 221/B:implementation
-221/C:sortings
+221/C:
 221/D:data structures
 221/E:
 219/A:implementation,strings
 219/B:implementation
-219/C:brute force,dp,greedy
-219/D:dfs and similar,dp,trees
+219/C:dp
+219/D:graphs,dp,graphs
 219/E:data structures
-218/A:brute force,constructive algorithms,implementation
+218/A:implementation
 218/B:implementation
-218/C:dfs and similar,dsu,graphs
+218/C:graphs,graphs
 218/D:implementation
 216/A:implementation,math
-216/B:dfs and similar,implementation
-216/C:greedy
-216/D:binary search,sortings,two pointers
-216/E:math,number theory
-215/A:brute force,implementation
-215/B:greedy,math
-215/C:brute force,implementation
-215/D:greedy
-215/E:combinatorics,dp,number theory
-214/A:brute force
-214/B:brute force,constructive algorithms,greedy,math
-214/C:brute force,greedy
-214/D:combinatorics,dp,math
+216/B:graphs,implementation
+216/C:
+216/D:
+216/E:math,math
+215/A:implementation
+215/B:math
+215/C:implementation
+215/D:
+215/E:math,dp,math
+214/A:
+214/B:math
+214/C:
+214/D:math,dp,math
 214/E:dp
 208/A:strings
-208/B:dfs and similar,dp
-208/C:dp,graphs,shortest paths
+208/B:graphs,dp
+208/C:dp,graphs,graphs
 208/D:implementation
-208/E:binary search,data structures,dfs and similar,trees
-205/A:brute force,implementation
-205/B:brute force,greedy
-205/C:binary search,brute force,combinatorics,dp,math
-205/D:binary search,brute force,sortings
-205/E:brute force,combinatorics,probabilities
-203/A:brute force,implementation
-203/B:brute force,implementation
-203/C:greedy,sortings
+208/E:data structures,graphs,graphs
+205/A:implementation
+205/B:
+205/C:math,dp,math
+205/D:
+205/E:math,math
+203/A:implementation
+203/B:implementation
+203/C:
 203/D:geometry,implementation,math
-203/E:greedy,sortings,two pointers
-202/A:binary search,bitmasks,brute force,greedy,implementation,strings
-202/B:brute force
-202/C:binary search,math
+203/E:
+202/A:implementation,strings
+202/B:
+202/C:math
 202/D:dp,math
 202/E:data structures,dp
-200/A:brute force,data structures
+200/A:data structures
 200/B:implementation,math
-200/C:brute force,implementation
-200/D:binary search,brute force,expression parsing,implementation
-200/E:implementation,math,number theory,ternary search
-199/A:brute force,constructive algorithms,implementation,number theory
+200/C:implementation
+200/D:strings,implementation
+200/E:implementation,math,math
+199/A:implementation,math
 199/B:geometry
 199/C:math
-199/D:dfs and similar,shortest paths
-199/E:binary search,geometry
-197/A:constructive algorithms,games,math
+199/D:graphs,graphs
+199/E:geometry
+197/A:math,math
 197/B:math
-197/C:greedy,implementation,sortings
-197/D:hashing
-197/E:constructive algorithms,dfs and similar,geometry
-195/A:binary search,brute force,math
+197/C:implementation
+197/D:
+197/E:graphs,geometry
+195/A:math
 195/B:data structures,implementation,math
-195/C:expression parsing,implementation
-195/D:math,sortings
-195/E:data structures,dsu
+195/C:strings,implementation
+195/D:math
+195/E:data structures
 194/A:implementation,math
 194/B:math
-194/C:dfs and similar,graphs,implementation,matrices,strings
+194/C:graphs,graphs,implementation,math,strings
 194/D:
 194/E:math
-192/A:binary search,brute force,implementation
-192/B:brute force,implementation
+192/A:implementation
+192/B:implementation
 192/C:dp
-192/D:brute force,constructive algorithms
-192/E:data structures,trees
-190/A:greedy,math
+192/D:
+192/E:data structures,graphs
+190/A:math
 190/B:geometry
-190/C:dfs and similar
-190/D:two pointers
-190/E:data structures,dsu,graphs,hashing,sortings
-189/A:brute force,dp
-189/B:brute force,math
-189/C:greedy,implementation
-189/D:dp,shortest paths
-189/E:binary search,shortest paths
+190/C:graphs
+190/D:
+190/E:data structures,graphs
+189/A:dp
+189/B:math
+189/C:implementation
+189/D:dp,graphs
+189/E:graphs
 186/A:implementation,strings
-186/B:greedy,sortings
-186/C:dp,math,matrices,number theory
-186/D:math,number theory,probabilities
-182/A:geometry,graphs,implementation,shortest paths
+186/B:
+186/C:dp,math,math,math
+186/D:math,math,math
+182/A:geometry,graphs,implementation,graphs
 182/B:implementation
-182/C:data structures,greedy
-182/D:brute force,hashing,implementation,math,strings
+182/C:data structures
+182/D:implementation,math,strings
 182/E:dp
-181/A:brute force,geometry,implementation
-181/B:binary search,brute force
-181/C:games,graph matchings,greedy
+181/A:geometry,implementation
+181/B:
+181/C:math,graphs
 181/D:dp
-181/E:games
+181/E:math
 174/A:math
-174/B:dp,greedy,implementation
-174/C:data structures,greedy
+174/B:dp,implementation
+174/C:data structures
 174/D:graphs
 174/E:
 168/A:implementation
 168/B:implementation,strings
 168/C:implementation,math
-168/D:dp,probabilities
+168/D:dp,math
 168/E:
-169/A:sortings
-169/B:greedy
+169/A:
+169/B:
 169/C:dp
 169/D:
-166/A:binary search,implementation,sortings
-166/B:geometry,sortings
-166/C:greedy,math,sortings
-166/D:dp,graph matchings,greedy,sortings,two pointers
-166/E:dp,math,matrices
+166/A:implementation
+166/B:geometry
+166/C:math
+166/D:dp,graphs
+166/E:dp,math,math
 165/A:implementation
-165/B:binary search,implementation
-165/C:binary search,brute force,dp,math,strings,two pointers
-165/D:data structures,dsu,trees
-165/E:bitmasks,brute force,dfs and similar,dp
-160/A:greedy,sortings
-160/B:greedy,sortings
-160/C:implementation,math,sortings
-160/D:dfs and similar,dsu,graphs,sortings
-160/E:binary search,data structures,sortings
-157/A:brute force
-157/B:geometry,sortings
-157/C:brute force,dp,strings
+165/B:implementation
+165/C:dp,math,strings
+165/D:data structures,graphs
+165/E:graphs,dp
+160/A:
+160/B:
+160/C:implementation,math
+160/D:graphs,graphs
+160/E:data structures
+157/A:
+157/B:geometry
+157/C:dp,strings
 157/D:implementation
 157/E:dp,math
-155/A:brute force
-155/B:greedy,sortings
-155/C:dp,greedy
-155/D:math,number theory
-155/E:hashing,sortings
+155/A:
+155/B:
+155/C:dp
+155/D:math,math
+155/E:
 152/A:implementation
-152/B:binary search,implementation
-152/C:combinatorics
-152/D:brute force
-152/E:bitmasks,dp,graphs,trees
+152/B:implementation
+152/C:math
+152/D:
+152/E:dp,graphs,graphs
 151/A:implementation
 151/B:implementation,strings
-151/C:games,greedy,number theory
-151/D:combinatorics,dsu
+151/C:math,math
+151/D:math
 151/E:
-149/A:greedy,implementation,sortings
+149/A:implementation
 149/B:implementation
-149/C:greedy,math,sortings
+149/C:math
 149/D:dp
-149/E:string suffix structures,strings
-148/A:constructive algorithms,implementation,math
+149/E:strings,strings
+148/A:implementation,math
 148/B:implementation,math
-148/C:constructive algorithms,greedy
-148/D:dp,games,math,probabilities
+148/C:
+148/D:dp,math,math,math
 148/E:dp
 146/A:implementation
-146/B:brute force,implementation
-146/C:greedy
-146/D:brute force,constructive algorithms,implementation
-146/E:combinatorics,dp
+146/B:implementation
+146/C:
+146/D:implementation
+146/E:math,dp
 144/A:implementation
 144/B:implementation
 144/C:implementation,strings
-144/D:data structures,dfs and similar,graphs,shortest paths
-144/E:data structures,greedy
-143/A:brute force,math
+144/D:data structures,graphs,graphs,graphs
+144/E:data structures
+143/A:math
 143/B:implementation,strings
 143/C:implementation,math
-143/D:graph matchings,greedy,math
+143/D:graphs,math
 143/E:
-141/A:implementation,sortings,strings
+141/A:implementation,strings
 141/B:geometry,math
-141/C:constructive algorithms,greedy,sortings
-141/D:graphs,shortest paths
-141/E:constructive algorithms,dp,dsu,graphs
+141/C:
+141/D:graphs,graphs
+141/E:dp,graphs
 139/A:implementation
 139/B:implementation,math
 139/C:implementation,strings
 139/D:implementation
-139/E:binary search,data structures,probabilities,sortings
+139/E:data structures,math
 137/A:implementation
-137/B:greedy
-137/C:sortings
+137/B:
+137/C:
 137/D:dp
 137/E:data structures,implementation
 136/A:implementation
 136/B:implementation,math
-136/C:implementation,sortings
+136/C:implementation
 136/D:geometry,implementation
-136/E:constructive algorithms,games,greedy
+136/E:math
 133/A:implementation
 133/B:implementation
 133/C:implementation,math
@@ -1117,214 +1117,214 @@
 133/E:dp,implementation
 131/A:implementation,strings
 131/B:implementation,math
-131/C:combinatorics,math
-131/D:dfs and similar,graphs
-131/E:sortings
-131/F:binary search,two pointers
+131/C:math,math
+131/D:graphs,graphs
+131/E:
+131/F:
 129/A:implementation
-129/B:brute force,dfs and similar,graphs
-129/C:dfs and similar,graphs,implementation
-129/D:implementation,string suffix structures,strings
-129/E:combinatorics,dp
+129/B:graphs,graphs
+129/C:graphs,graphs,implementation
+129/D:implementation,strings,strings
+129/E:math,dp
 127/A:geometry
 127/B:implementation
-127/C:binary search,math
-127/D:hashing,strings
+127/C:math
+127/D:strings
 127/E:implementation
 124/A:math
-124/B:brute force,combinatorics,implementation
-124/C:constructive algorithms,dfs and similar,dsu,greedy,number theory,sortings,strings
-124/D:brute force,constructive algorithms,number theory
+124/B:math,implementation
+124/C:graphs,math,strings
+124/D:math
 124/E:
-122/A:brute force,number theory
-122/B:brute force,implementation
-122/C:brute force,math
-122/D:brute force
+122/A:math
+122/B:implementation
+122/C:math
+122/D:
 122/E:
 118/A:implementation,strings
-118/B:constructive algorithms,implementation
-118/C:brute force,greedy,sortings,strings
+118/B:implementation
+118/C:strings
 118/D:dp
-118/E:dfs and similar,graphs
+118/E:graphs,graphs
 116/A:implementation
-116/B:greedy,implementation
-116/C:dfs and similar,graphs,trees
-116/D:dp,greedy
+116/B:implementation
+116/C:graphs,graphs,graphs
+116/D:dp
 116/E:
 114/A:math
-114/B:bitmasks,brute force
+114/B:
 114/C:implementation
-114/D:data structures,hashing,string suffix structures,strings
-114/E:number theory
+114/D:data structures,strings,strings
+114/E:math
 112/A:implementation,strings
 112/B:implementation,math
-112/C:greedy,math
-112/D:implementation,number theory
-112/E:bitmasks,dp
+112/C:math
+112/D:implementation,math
+112/E:dp
 110/A:implementation
-110/B:constructive algorithms,strings
+110/B:strings
 110/C:implementation,math
-110/D:brute force,combinatorics,dfs and similar,probabilities
-110/E:combinatorics,dfs and similar,trees
+110/D:math,graphs,math
+110/E:math,graphs,graphs
 108/A:implementation,strings
-108/B:math,sortings
-108/C:dfs and similar,implementation
-108/D:combinatorics,math,probabilities
+108/B:math
+108/C:graphs,implementation
+108/D:math,math,math
 108/E:
 106/A:implementation
-106/B:brute force,implementation
-106/C:chinese remainder theorem,geometry
-106/D:brute force,implementation
-106/E:geometry,ternary search
+106/B:implementation
+106/C:math,geometry
+106/D:implementation
+106/E:geometry
 104/A:implementation
 104/B:math
-104/C:dsu,trees
+104/C:graphs
 104/D:math
 104/E:
-102/A:brute force
+102/A:
 102/B:implementation
-102/C:greedy
-102/D:binary search,data structures,dp
+102/C:
+102/D:data structures,dp
 102/E:
 99/A:strings
-99/B:implementation,sortings
-99/C:brute force
-99/E:binary search,geometry,ternary search
+99/B:implementation
+99/C:
+99/E:geometry
 96/A:implementation,strings
-96/B:binary search,bitmasks,brute force
+96/B:
 96/C:implementation,strings
-96/D:graphs,shortest paths
+96/D:graphs,graphs
 94/A:implementation,strings
 94/B:implementation,math
 94/C:math
-94/D:greedy,math
+94/D:math
 92/A:implementation,math
-92/B:greedy
-92/C:binary search,data structures,dp,greedy
-92/D:binary search,data structures,dp
-92/E:data structures,dsu,graphs
-90/A:greedy,math
+92/B:
+92/C:data structures,dp
+92/D:data structures,dp
+92/E:data structures,graphs
+90/A:math
 90/B:implementation,strings
-90/C:greedy,math
+90/C:math
 90/D:
 90/E:
-88/A:brute force,implementation
+88/A:implementation
 88/B:implementation
-88/C:number theory
+88/C:math
 88/D:implementation
 88/E:
-84/A:math,number theory
-84/B:combinatorics,implementation
-84/C:binary search,implementation
-84/D:binary search,implementation
-84/E:brute force,shortest paths
+84/A:math,math
+84/B:math,implementation
+84/C:implementation
+84/D:implementation
+84/E:graphs
 78/A:implementation,strings
-78/B:constructive algorithms,implementation
-78/C:dp,games,number theory
-78/D:binary search,geometry,math,two pointers
-78/E:flows,graphs,shortest paths
-80/A:brute force
+78/B:implementation
+78/C:dp,math,math
+78/D:geometry,math
+78/E:graphs,graphs,graphs
+80/A:
 80/B:geometry,math
-80/C:brute force,implementation
-80/D:geometry,probabilities
+80/C:implementation
+80/D:geometry,math
 80/E:
 75/A:implementation
-75/B:expression parsing,implementation,strings
-75/C:binary search,number theory
-75/D:data structures,dp,greedy,implementation,math,trees
-75/E:geometry,shortest paths
+75/B:strings,implementation,strings
+75/C:math
+75/D:data structures,dp,implementation,math,graphs
+75/E:geometry,graphs
 71/A:strings
 71/B:implementation,math
-71/C:dp,math,number theory
-71/D:brute force,implementation
-71/E:bitmasks,dp
+71/C:dp,math,math
+71/D:implementation
+71/E:dp
 69/A:implementation,math
-69/B:greedy,implementation
+69/B:implementation
 69/C:implementation
-69/D:dp,games
+69/D:dp,math
 69/E:data structures,implementation
 66/A:implementation,strings
-66/B:brute force,implementation
+66/B:implementation
 66/C:data structures,implementation
-66/D:constructive algorithms,math,number theory
+66/D:math,math
 66/E:data structures,dp
-63/A:implementation,sortings,strings
+63/A:implementation,strings
 63/B:implementation
-63/C:brute force,implementation
-63/D:constructive algorithms
-63/E:bitmasks,dfs and similar,dp,games,implementation
+63/C:implementation
+63/D:
+63/E:graphs,dp,math,implementation
 61/A:implementation
 61/B:strings
 61/C:math
-61/D:dfs and similar,graphs,greedy,shortest paths,trees
-61/E:data structures,trees
+61/D:graphs,graphs,graphs,graphs
+61/E:data structures,graphs
 59/A:implementation,strings
-59/B:implementation,number theory
-59/C:expression parsing
-59/D:constructive algorithms,greedy,implementation
-59/E:graphs,shortest paths
-58/A:greedy,strings
-58/B:greedy
-58/C:brute force
-58/D:greedy,strings
+59/B:implementation,math
+59/C:strings
+59/D:implementation
+59/E:graphs,graphs
+58/A:strings
+58/B:
+58/C:
+58/D:strings
 58/E:dp
 56/A:implementation
 56/B:implementation
-56/C:data structures,expression parsing,implementation
+56/C:data structures,strings,implementation
 56/D:dp
-56/E:binary search,data structures,sortings
+56/E:data structures
 53/A:implementation
-53/B:binary search,implementation
-53/C:constructive algorithms
-53/D:sortings
-53/E:bitmasks,dp
+53/B:implementation
+53/C:
+53/D:
+53/E:dp
 49/A:implementation
 49/B:math
-49/C:constructive algorithms,math
-49/D:brute force,dp,implementation
+49/C:math
+49/D:dp,implementation
 49/E:dp
-47/A:brute force,math
+47/A:math
 47/B:implementation
 47/C:implementation
-47/D:brute force
-47/E:data structures,geometry,sortings
+47/D:
+47/E:data structures,geometry
 43/A:strings
 43/B:implementation,strings
-43/C:greedy
-43/D:brute force,constructive algorithms,implementation
-43/E:brute force,implementation,two pointers
+43/C:
+43/D:implementation
+43/E:implementation
 41/A:implementation,strings
-41/B:brute force
-41/C:expression parsing,implementation
+41/B:
+41/C:strings,implementation
 41/D:dp
-41/E:constructive algorithms,graphs,greedy
+41/E:graphs
 35/A:implementation
 35/B:implementation
-35/C:brute force,dfs and similar,shortest paths
-35/D:dp,greedy
-35/E:data structures,sortings
+35/C:graphs,graphs
+35/D:dp
+35/E:data structures
 34/A:implementation
-34/B:greedy,sortings
-34/C:expression parsing,implementation,sortings,strings
-34/D:dfs and similar,graphs
-34/E:brute force,implementation,math
-32/A:brute force
-32/B:expression parsing,implementation
+34/B:
+34/C:strings,implementation,strings
+34/D:graphs,graphs
+34/E:implementation,math
+32/A:
+32/B:strings,implementation
 32/C:math
 32/D:implementation
 32/E:geometry,implementation
 31/A:implementation
 31/B:strings
 31/C:implementation
-31/D:dfs and similar,implementation
+31/D:graphs,implementation
 31/E:dp
-29/A:brute force
+29/A:
 29/B:implementation
-29/C:data structures,dfs and similar,graphs,implementation
-29/D:constructive algorithms,dfs and similar,trees
-29/E:graphs,shortest paths
-27/A:implementation,sortings
-27/B:bitmasks,brute force,dfs and similar,greedy
-27/C:constructive algorithms,greedy
-27/D:2-sat,dfs and similar,dsu,graphs
-27/E:brute force,dp,number theory
+29/C:data structures,graphs,graphs,implementation
+29/D:graphs,graphs
+29/E:graphs,graphs
+27/A:implementation
+27/B:graphs
+27/C:
+27/D:graphs,graphs
+27/E:dp,math

@@ -7,7 +7,7 @@
 create_xmls=0
 create_features=0
 classify=0
-while getopts ":d:f:c" opt; do
+while getopts ":cfd" opt; do
   case $opt in
     d)
       echo "-d was triggered!" >&2
@@ -15,9 +15,11 @@ while getopts ":d:f:c" opt; do
       ;;
     f)
       create_features=1
+      echo "-f triggered" >&2
       ;;
     c)
       classify=1
+      echo "-c triggered" >&2
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2

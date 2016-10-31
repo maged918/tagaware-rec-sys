@@ -167,7 +167,7 @@ def extract_feats(file):
 		if op.text in operations:
 			ops += 1
 	curr_feats.append(ops)
-
+	print(len(cuur))
 	return curr_feats
 
 operations = ['+','-','*','/','%','+=','-=','*=','/=','++','--']

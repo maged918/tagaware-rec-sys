@@ -1,7 +1,7 @@
 '''
 Created on Aug 23, 2015
 
-@author: tarek
+@author: tarek, maged
 '''
 
 
@@ -14,18 +14,21 @@ from sklearn import svm
 from sklearn import metrics
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+from sklearn.model_selection import StratifiedKFold
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.decomposition import PCA
 
 from collections import defaultdict
 from collections import Counter
 
-def prepare_data(feats_file,tags_file):
+def prepare_data(feats_file,tags_file, multi):
 
 	f = open(feats_file, 'rb')
 	inst_feats = pickle.load(f)
 
 
 	inst_tags = {}
-	global tags_list
+	global tags_list, classes, mlb
 	tags_list = []
 
 	with open(tags_file) as f:
@@ -54,39 +57,62 @@ def prepare_data(feats_file,tags_file):
 
 	X = np.array(X)
 	Y = np.array(Y)
-
 	# feature scaling
 	for col in range(X.shape[1]):
-		X[:,col] /= X.shape[1]
+		# X[:,col] /= X.shape[1]
+		# print(np.max(X[:,col]))
+		mx = np.max(X[:,col])
+		mean = np.mean(X[:,col])
+		sd = np.std(X[:,col])
+		# print(mx, mean, sd)
+		# X[:,col]/=np.max(X[:,col])
+		# X[:,col]-=mean
+		# if sd > 0:
+		# 	X[:,col]/=sd
 
+	# pca = PCA(n_components = 7)
+	# pca.fit(X)
+	# X = pca.fit_transform(X)
+	# print(pca.components_, '\n', pca.explained_variance_)
 
-	Y = MultiLabelBinarizer().fit_transform(Y)
+	# print(Y)
+	if multi:
+		mlb = MultiLabelBinarizer()
+		Y = mlb.fit_transform(Y)
+		classes = mlb.classes_
+		# labels = mlb.labels_
+		# print(classes, labels)
+	else:
+		Y = Y.flatten()
+		classes = np.unique(Y)
 	return (X,Y)
 
 def classify(train,gold,test, test_y,multi):
 
 	if multi:
-		# clf = OneVsRestClassifier(MLPClassifier())
-		clf = OneVsRestClassifier(svm.SVC(kernel='linear', class_weight={0:0.2,1:0.8}, C=10))
-		# clf = OneVsRestClassifier(RandomForestClassifier(n_estimators=100, class_weight={0:0.9, 1:0.1}))
+		# clf = OneVsRestClassifier(MLPClassifier(hidden_layer_sizes=(50,50), activation='relu'))
+		clf = OneVsRestClassifier(svm.SVC(kernel='linear', class_weight={0:2,1:8}, C=1))
+		# clf = OneVsRestClassifier(RandomForestClassifier(n_estimators=50))
 		# clf = OneVsRestClassifier(AdaBoostClassifier(n_estimators=100))
 	else:
-
-		if np.sum(gold) <= 1:
-			return np.zeros(test.shape[0])
-		# clf = svm.SVC()
-		clf = AdaBoostClassifier()
+		# clf = OneVsRestClassifier(svm.SVC(kernel='linear', C=1))
+		# clf = MultinomialNB()
+		# clf = OneVsRestClassifier(AdaBoostClassifier(n_estimators=100)) #Bad results_dict
+		clf = OneVsRestClassifier(RandomForestClassifier(n_estimators=100))
 
 	clf.fit(train, gold)
 	# print(clf)
 	preds = clf.predict(test)
-	# print(np.sum(gold))
 	# print(train.shape, gold.shape, test.shape, test_y.shape, preds.shape)
-	# print(gold, test_y)
 	# for i in range(len(preds)):
 	# 	print(preds[i], test_y[i])
-	# print(metrics.classification_report(test_y,preds))
-	print(metrics.precision_recall_fscore_support(test_y, preds, average='macro'))
+	print(metrics.classification_report(test_y,preds, target_names = classes))
+	prfs = metrics.precision_recall_fscore_support(test_y, preds, average='weighted')
+	acc = metrics.accuracy_score(test_y, preds)
+	print(prfs, acc)
+	for i in range(3):
+		scores[i]+=prfs[i]
+	scores[3]+=acc
 	return preds
 
 def get_measurements(a,b):
@@ -180,49 +206,53 @@ def cross_validate(X,Y,cv_val, multi):
 	total_micro = dict((element,0.0) for element in labels)
 	total_macro = dict((element,0.0) for element in labels)
 
-	for i in range(cv_val):
+	skf = StratifiedKFold(n_splits=cv_val)
+	print(skf)
 
-		print("########################### Starting run no. " + str(i+1) + " ##############################")
-		print("Splitting datasets")
+	if multi:
+		for i in range(cv_val):
 
-		X_splits = np.array_split(X,cv_val)
-		Y_splits = np.array_split(Y,cv_val)
+			print("########################### Starting run no. " + str(i+1) + " ##############################")
+			print("Splitting datasets")
 
-		X_test = X_splits[i]
-		Y_test = Y_splits[i]
+			X_splits = np.array_split(X,cv_val)
+			Y_splits = np.array_split(Y,cv_val)
 
-		del(X_splits[i])
-		del(Y_splits[i])
+			X_test = X_splits[i]
+			Y_test = Y_splits[i]
 
-		X_train = np.concatenate(X_splits)
-		Y_train = np.concatenate(Y_splits)
+			del(X_splits[i])
+			del(Y_splits[i])
 
-
-		# print(	"Dataset shapes:\n"+\
-		# 		"Training X:\t" + str(X_train.shape) 	+ "\n" + \
-		# 		"Training Y:\t" + str(Y_train.shape)	+ "\n" + \
-		# 		"Testing X:\t" + str(X_test.shape)		+ "\n" + \
-		# 		"Testing Y:\t" + str(Y_test.shape))
-
-		print("Starting Classification...")
-
-		if multi:
+			X_train = np.concatenate(X_splits)
+			Y_train = np.concatenate(Y_splits)
 			pred = classify(X_train,Y_train,X_test,Y_test,True)
-		else:
+			print("Evaluating ...")
+			eval_res = evaluate(pred, Y_test)
+			#
+			total_micro = dict(Counter(total_micro) + Counter(eval_res[0]))
+			total_macro = dict(Counter(total_macro) + Counter(eval_res[1]))
 
-			pred = np.zeros(Y_test.shape)
-			for i in range(Y_train.shape[1]):
-				pred[:,i] = classify(X_train,Y_train[:,i],X_test,Y_test,False)
+	else:
+		for train_idx, test_idx in skf.split(X, Y):
 
+			X_train, X_test = X[train_idx], X[test_idx]
+			Y_train, Y_test = Y[train_idx], Y[test_idx]
 
-		print("Evaluating ...")
-		eval_res = evaluate(pred, Y_test)
+			# print(	"Dataset shapes:\n"+\
+			# 		"Training X:\t" + str(X_train.shape) 	+ "\n" + \
+			# 		"Training Y:\t" + str(Y_train.shape)	+ "\n" + \
+			# 		"Testing X:\t" + str(X_test.shape)		+ "\n" + \
+			# 		"Testing Y:\t" + str(Y_test.shape))
 
-		total_micro = dict(Counter(total_micro) + Counter(eval_res[0]))
-		total_macro = dict(Counter(total_macro) + Counter(eval_res[1]))
+			print("Starting Classification...")
 
-		print("#############################################################################")
+			pred = classify(X_train, Y_train, X_test, Y_test, False)
+			# pred = np.zeros(Y_test.shape)
+			# for i in range(Y_train.shape[1]):
+			# 	pred[:,i] = classify(X_train,Y_train[:,i],X_test,Y_test[:,i],False)
 
+	print("#############################################################################")
 
 
 	print(	"Final Averaged Results"					+"\n"+	\
@@ -237,22 +267,34 @@ def cross_validate(X,Y,cv_val, multi):
 			str("%.2f" % (total_macro['R']/cv_val))		+"\t"+	\
 			str("%.2f" % (total_macro['F1']/cv_val))	+"\t"+ 	\
 			str("%.2f" % (total_macro['ACC']/cv_val)))
+
+	print(["%2f"%(score/cv_val) for score in scores])
 # str("%.2f" % avg_p) + "\n")
 
+np.set_printoptions(precision=3, suppress = True)
 split = 0.8
 kernel = 'poly'
 feats_file = 'features.pickle'
-tags_file = 'data-set.txt'
-cross_valid = 5
+cross_valid = 3
+multi=True
+classes = []
+mlb = None
 
-data = prepare_data(feats_file, tags_file)
+if multi:
+	tags_file = 'data-set.txt'
+else:
+	tags_file = 'data-set-single.txt'
+
+data = prepare_data(feats_file, tags_file, multi)
 X = data[0]
 Y = data[1]
+
+scores = [0] * 4
 
 print("X Shape: ", X.shape)
 print("Y Shape: ", Y.shape)
 print("No. of tags: ", len(tags_list))
-cross_validate(X,Y,cross_valid, True)
+cross_validate(X,Y,cross_valid, multi)
 
 # if not os.path.exists('preds.pickle'):
 # 	pred = classify(X_train,Y_train,X_test,True)

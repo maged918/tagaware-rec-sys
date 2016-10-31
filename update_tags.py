@@ -2,17 +2,20 @@ import os.path
 from collections import defaultdict
 # from itertools import combinations_with_replacement, product
 '''
-author: tarek
+author: tarek, maged
 date: Aug 26th 2015
 desc: parses Problems-tags.txt to produce a file with the problem path alongside its associated tags, to be fed later into the classification module
 '''
 
 to_math = ['matrices', 'probabilities', 'combinatorics', 'number theory', 'chinese remainder theorem', 'games']
 to_graphs = ['dfs and similar', 'trees', 'shortest paths', 'graph matchings', 'flows']
-to_remove = ['bitmasks', 'dsu', 'hashing', 'ternary search','meet-in-the-middle', 'divide and conquer', '2-sat','schedules','fft', 'two pointers', 'constructive algorithms', 'binary search']
+to_remove = ['bitmasks', 'dsu', 'hashing', 'ternary search','meet-in-the-middle', 'divide and conquer', '2-sat','schedules'\
+,'fft', 'two pointers', 'sortings', 'greedy', 'constructive algorithms', 'binary search', 'brute force']
+# to_remove = []
 to_strings = ['expression parsing', 'string suffix structures']
+to_implementation = []
 
-single_sorting = ['implementation', 'sortings', 'brute force', 'greedy', 'math', 'data structures', 'dp', 'graphs', 'geometry', 'strings']
+single_sorting = ['implementation', 'sortings', 'brute force', 'greedy', 'math', 'dp', 'data structures', 'graphs', 'geometry', 'strings', 'binary search']
 single_dict = {}
 for i in range(len(single_sorting)):
 	single_dict[single_sorting[i]] = i
@@ -25,6 +28,8 @@ def update_tag(tag):
 		tag = 'graphs'
 	elif tag in to_strings:
 		tag = 'strings'
+	elif tag in to_implementation:
+		tag = 'implementation'
 	elif tag in to_remove:
 		tag = ''
 	return tag

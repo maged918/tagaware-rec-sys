@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from random import sample
 from requests.auth import HTTPProxyAuth
 from urllib3 import request
-from urllib3 import util 
+from urllib3 import util
 
 flags = {
 			'proxy': 0
@@ -20,16 +20,16 @@ password = 'PASSWORD'
 #subprocess.call(["touch", "Submissions.txt"])
 #subprocess.call(["touch", "All-Submissions.txt"])
 #subprocess.call(["touch", "Problems-tags.txt"])
-fi = open("Submissions.txt" , "w")
-fi1 = open("All-Submissions.txt" , "w")
-fi2 = open("Problems-tags.txt" , "w")
+fi = open("Div1-Submissions.txt" , "a")
+fi1 = open("All-Submissions.txt" , "a")
+fi2 = open("Div1-Problems-tags.txt" , "a")
 
 if not os.path.exists('./source-code'):
 	os.makedirs('./source-code')
 
 if flags['proxy'] == 1:
-	proxyDict = { 
-	          'http'  : 'http://50.0.0.5:8080', 
+	proxyDict = {
+	          'http'  : 'http://50.0.0.5:8080',
 	          'https' : 'http://50.0.0.5:8080'
 	        }
 	auth = HTTPProxyAuth('maged.shalaby', password)
@@ -37,15 +37,17 @@ else:
 	proxyDict = {}
 	auth = {}
 
-problem_limit = 20
+problem_limit = 10
+total_limit = 100
 bs4_error_text = '<ERROR>'
+contest_range = range(1, 250)
 
 def filter_Contests(contests):
 	filtered = []
 	Type = 'CF'
-	div = 'Div. 2'
+	div = 'Div. 1'
 	for contest in contests:
-		if(div in contest['name'] and contest['type'] == Type and contest['phase'] == 'FINISHED'):
+		if(div in contest['name'] and contest['type'] == Type and contest['phase'] == 'FINISHED' and contest['id'] in contest_range):
 			filtered.append(contest)
 	return filtered
 
@@ -57,7 +59,7 @@ def filter_Submissions(submissions, contestID, flag):
 	dictionary = {}
 	filtered = []
 	language = 'C++'
-	dictionary_problems = 'ABCDEF'
+	dictionary_problems = 'ABCDEFGHIJKL'
 
 	for i in range (0, len(dictionary_problems)):
 		dictionary[dictionary_problems[i]] = []
@@ -65,7 +67,7 @@ def filter_Submissions(submissions, contestID, flag):
 	for submission in submissions:
 		if(submission['problem']['index'] in dictionary and submission['verdict'] == 'OK' and language in submission['programmingLanguage']):
 			dictionary[submission['problem']['index']].append(submission)
-	
+
 	if(flag=='filter'):
 		for problem in problems:
 			if(problem['index'] in dictionary and len(dictionary[problem['index']]) >= problem_limit):
@@ -79,7 +81,7 @@ def filter_Submissions(submissions, contestID, flag):
 				fi2.write("\n\n\n")
 				fi2.flush()
 				print(contestID, problem['index'])
-		#fi2.write("\n\n")	
+		#fi2.write("\n\n")
 		return filtered
 	else:
 		for problem in problems:
@@ -93,6 +95,7 @@ def create_Contest(status, name):
 		fi.write("Handle: " + str(submission['author']['members'][0]['handle']) + "\n")
 		fi.write("Submission ID: " + str(submission['id']) + "\n")
 		fi.write("Submission Time: " + str(submission['creationTimeSeconds']))
+		print(submission['id'])
 		create_code(submission)
 		fi.write("\n\n")
 		fi.flush()
@@ -106,7 +109,7 @@ def create_all_submissions(status, name):
 		fi1.write("Submission Time: " + str(submission['creationTimeSeconds']))
 		fi1.write("\n\n")
 		fi1.flush()
-	
+
 
 def toString(lists):
 	tags = ""
@@ -116,7 +119,7 @@ def toString(lists):
 	for i in range(1, len(lists)):
 		l = lists[i]
 		tags = tags + ", " + str(l)
-		
+
 	return tags
 
 def create_code(submission):
@@ -153,20 +156,21 @@ requestParams = {'gym':'false'}
 r = requests.get("http://www.codeforces.com/api/contest.list", params=requestParams, proxies = proxyDict, auth = auth)
 contests = r.json()
 filtered = filter_Contests(contests['result'])
-
+print('Number of filtered contests', len(filtered))
 
 for contest in filtered:
 	# contest = filtered[0]
 	requestParams = {'contestId':contest['id']}
+	print('Requesting submissions of contest id', contest['id'])
 	r2 = requests.get("http://codeforces.com/api/contest.status", params = requestParams,
 					proxies = proxyDict, auth = auth)
 	status = r2.json()
-	all_submissions = filter_Submissions(status['result'], contest['id'], 'all')
-	create_all_submissions(all_submissions, contest['name'])
+	# all_submissions = filter_Submissions(status['result'], contest['id'], 'all')
+	# create_all_submissions(all_submissions, contest['name'])
 	filtered_submissions = filter_Submissions(status['result'], contest['id'], 'filter')
 	create_Contest(filtered_submissions, contest['name'])
-	
 
 
-fi.close()	
+
+fi.close()
 fi2.close()

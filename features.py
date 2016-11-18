@@ -42,6 +42,28 @@ Feature 8: Number of variables (geometry, graphs, binary search)
 16. names of variables classes and methods -> word clusters (LATERZZ)
 
 '''
+'''
+1. single loop
+2. 2 nested loops
+3. 3 nested loops
+4. if in loop
+5. recursion
+6. shift operator
+7. or operator
+8. and operator
+10. no. of int vars
+11. no. of double/float vars
+12. no. of Strings vars
+13. no. of vectors vars
+14. no. of lls
+15. no. of points
+no. of arrays
+16. no. of declarations
+17. no. of variables (repeated?)
+18. no. of params per method (avg)
+19. no. of functions
+20-24. no. of arithmetic operations
+'''
 
 from collections import defaultdict
 from lxml import etree
@@ -50,6 +72,7 @@ import sys
 import os
 import numpy as np
 import pickle
+import config
 
 def evalute(tree,*args):
 	query = './'
@@ -84,8 +107,6 @@ def extract_feats(file):
 	curr_feats.append(evalute(tree,FOR,IF) + evalute(tree,WHILE,IF))
 
 	# feature 5
-
-	# feature 6
 	rec = 0
 	functions = tree.xpath(".//function")
 	for f in functions:
@@ -98,19 +119,20 @@ def extract_feats(file):
 	# print "recursion", rec
 	curr_feats.append(rec)
 
-	# feature 7: could be in a declared statement, or an expression (cin and cout should be excluded)
+	# feature 6: could be in a declared statement, or an expression (cin and cout should be excluded)
 	for expr in tree.xpath(".//expr"):
-		right_shifts = 0
-		if expr.getchildren()[0].text =="cin":
-			for child in expr.getchildren():
-				if child.text == ">>":
-					right_shifts += 1
+		if len(expr.getchildren()) != 0:
+			right_shifts = 0
+			if expr.getchildren()[0].text =="cin":
+				for child in expr.getchildren():
+					if child.text == ">>":
+						right_shifts += 1
 
-		left_shifts = 0
-		if expr.getchildren()[0].text =="cout":
-			for child in expr.getchildren():
-				if child.text == "<<":
-					left_shifts += 1
+			left_shifts = 0
+			if expr.getchildren()[0].text =="cout":
+				for child in expr.getchildren():
+					if child.text == "<<":
+						left_shifts += 1
 
 	shifts = len(tree.xpath(".//operator[text()='>>']"))  + len(tree.xpath(".//operator[text()='<<']")) - left_shifts - right_shifts
 	if shifts > 0:
@@ -118,59 +140,90 @@ def extract_feats(file):
 	else:
 		curr_feats.append(0)
 
-	# feature 8
+	# feature 7
 	curr_feats.append(len(tree.xpath(".//operator[text()='&']")))
 
-	# feature 9
+	# feature 8
 	curr_feats.append(len(tree.xpath(".//operator[text()='|']")))
 
 	decl = tree.xpath('.//decl_stmt')
 	var_names = tree.xpath('.//decl_stmt/decl/name')
 
-
-
-	#features  10-13
-	types = {'int':0, 'double':1, 'string':2, 'char':3, 'vector':4}
+	#features  9-15
+	types = {'int':0, 'double':1, 'string':2, 'char':3, 'vector':4, 'll':5, 'point':6}
 	cnt_types = [0 for i in range(len(types))]
 	cnt_vars = 0
 	cnt_vectors = 0
+	cnt_arrs = len(tree.xpath('.//decl_stmt/decl/name/index[1]'))
+	names = 0
 	for elem in decl:
 		tmp = elem.xpath('./decl')
 		cnt_vars += len(tmp)
 		if(len(tmp) > 0):
 			for key in types:
-				if tmp[0].xpath('./type/name') and tmp[0].xpath('./type/name')[0].text == key:
-					cnt_types[types[key]] += len(tmp)
+				try:
+					if tmp[0].xpath('./type/name')[0].text.lower() == key:
+						cnt_types[types[key]] += len(tmp)
+				except AttributeError:
+					pass
+				except IndexError:
+					pass
 
 			query_vectors = tmp[0].xpath('./type/name/name')
 			if(len(query_vectors)>0):
 				if query_vectors[0].text == 'vector':
 					cnt_vectors+=len(tmp)
 
-
 	cnt_types[types['vector']] = cnt_vectors
-	curr_feats.append(len(decl))
-	curr_feats.append(cnt_vars)
 	curr_feats += cnt_types
-	curr_feats.append(cnt_vectors)
+	curr_feats.append(cnt_arrs)
 
-	# feature 14
+	#feature 17
+	curr_feats.append(len(decl))
+	#feature 18
+	curr_feats.append(cnt_vars)
+
+	# feature 19
 	if len(tree.xpath(".//function")) != 0:
 		curr_feats.append(len(tree.xpath(".//parameter_list/parameter"))/len(tree.xpath(".//function")))
 	else:
 		curr_feats.append(0.0)
-	# feature 15, number of methods excluding main
+
+	# feature 20, number of methods excluding main
 	curr_feats.append(len(tree.xpath(".//function/name[text()!='main']")))
 
+	# feature 21 - 25
 	ops = 0
+	plus = 0
+	minus = 0
+	time = 0
+	divide = 0
 	for op in tree.xpath(".//operator"):
-		if op.text in operations:
+		opt = op.text
+		if opt in operations:
 			ops += 1
+			if opt in pluses:
+				plus+=1
+			elif opt in minuses:
+				minus+=1
+			elif opt in times:
+				time+=1
+			elif opt in divides:
+				divide+=1
 	curr_feats.append(ops)
-	print(len(cuur))
+	curr_feats.append(plus)
+	curr_feats.append(minus)
+	curr_feats.append(time)
+	curr_feats.append(divide)
+
+	# print(len(curr_feats))
 	return curr_feats
 
 operations = ['+','-','*','/','%','+=','-=','*=','/=','++','--']
+pluses = ['+', '+=', '++']
+minuses = ['-', '-=', '--']
+times = ['*', '*=']
+divides = ['/', '/=']
 FOR='/for/block/'
 WHILE='/while/block/'
 IF='/if/block'
@@ -178,28 +231,52 @@ FUNCTION='/function'
 NAME='/name'
 RETURN='/block/return'
 
-data_dir = sys.argv[1]
+divs = config.get_div()
+if 'DivAll' in divs:
+	data_dir = 'data-all/'
+elif 'Div1' in divs:
+	data_dir = 'data-div-1/'
+elif 'Div2' in divs:
+	data_dir = 'data-div-2/'
+
+
+# data_dir = 'data-all/'
+
+def all_submissions():
+	feature_set = {}
+	submission_set = {}
+	idx = 1
+	for contest in next(os.walk(data_dir))[1]:
+		for problem in next(os.walk(data_dir+"/"+contest))[1]:
+			problem_features =  []
+			for count,submission in enumerate(os.listdir(data_dir+"/"+contest+"/"+problem)):
+				path = data_dir+"/"+contest+"/"+problem+ "/" + submission
+				if submission.endswith(".xml"):
+					# print(path)
+					problem_features.append(extract_feats(path))
+			arr = np.asarray(problem_features)
+			arr.astype(float)
+			avg = np.average(arr, axis=0)
+			feature_set[contest + "/" + problem] = avg
+			submission_set[contest+"/"+problem] = arr
+
+		print("#", idx, "Contest:", contest)
+		idx+=1
 
 
 
-feature_set = {}
-for contest in next(os.walk(data_dir))[1]:
-	for problem in next(os.walk(data_dir+"/"+contest))[1]:
-		problem_features =  []
-		for count,submission in enumerate(os.listdir(data_dir+"/"+contest+"/"+problem)):
-			path = data_dir+"/"+contest+"/"+problem+ "/" + submission
-			if submission.endswith(".xml"):
-				# print(path)
-				problem_features.append(extract_feats(path))
-		arr = np.asarray(problem_features)
-		arr.astype(float)
-		avg = np.average(arr, axis=0)
-		feature_set[contest + "/" + problem] = avg
-	print(contest)
+	print("Done feature extraction for: " + str(len(feature_set)) + " problems")
+	f = open('features.pickle', 'wb')
+	pickle.dump(feature_set, f)
+	f.close()
 
+	f = open('features-submissions.pickle', 'wb')
+	pickle.dump(submission_set, f)
+	f.close()
 
+all_submissions()
 
-print("Done feature extraction for: " + str(len(feature_set)) + " problems")
-f = open('features.pickle', 'wb')
-pickle.dump(feature_set, f)
-f.close()
+def test_submission(path):
+	extract_feats(path)
+
+# test_submission('data-all/533/F/10759594.cpp.xml')

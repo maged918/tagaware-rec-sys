@@ -9,7 +9,7 @@ import pickle
 import numpy as np
 
 from sklearn.preprocessing import MultiLabelBinarizer
-from sklearn.multiclass import OneVsRestClassifier
+from sklearn.multiclass import OneVsRestClassifier, OneVsOneClassifier
 from sklearn import svm
 from sklearn import metrics
 from sklearn.neural_network import MLPClassifier
@@ -17,15 +17,20 @@ from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 from sklearn.model_selection import StratifiedKFold
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.decomposition import PCA
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
 
 from collections import defaultdict
 from collections import Counter
 
-def prepare_data(feats_file,tags_file, multi):
+import config
+
+def prepare_data(feats_file,tags_file, multi, row_mode):
 
 	f = open(feats_file, 'rb')
 	inst_feats = pickle.load(f)
 
+	# print(type(inst_feats))
 
 	inst_tags = {}
 	global tags_list, classes, mlb
@@ -42,7 +47,8 @@ def prepare_data(feats_file,tags_file, multi):
 					inst_tags[key] = tags
 					tags_list += tags
 				else:
-					del inst_feats[key]
+					if key in inst_feats:
+						del inst_feats[key]
 
 	tags_list = list(set(tags_list))
 
@@ -50,27 +56,28 @@ def prepare_data(feats_file,tags_file, multi):
 	Y = []
 
 	for instance in inst_feats:
-
-		X.append(inst_feats[instance])
-		Y.append(inst_tags[instance])
-
+		if instance in inst_feats and instance in inst_tags:
+			if row_mode == 'problems':
+				X.append(inst_feats[instance])
+				Y.append(inst_tags[instance])
+			elif row_mode == 'submissions':
+				for submission in inst_feats[instance]:
+					X.append(submission)
+					Y.append(inst_tags[instance])
 
 	X = np.array(X)
 	Y = np.array(Y)
-	# feature scaling
-	for col in range(X.shape[1]):
-		# X[:,col] /= X.shape[1]
-		# print(np.max(X[:,col]))
-		mx = np.max(X[:,col])
-		mean = np.mean(X[:,col])
-		sd = np.std(X[:,col])
-		# print(mx, mean, sd)
-		# X[:,col]/=np.max(X[:,col])
-		# X[:,col]-=mean
-		# if sd > 0:
-		# 	X[:,col]/=sd
 
-	# pca = PCA(n_components = 7)
+	X = choose_columns(X)
+
+	print(X.shape)
+	# feature scaling
+
+	# X-=np.mean(X)
+	# if np.std(X) > 0:
+	# 	X/=np.std(X)
+	#
+	# pca = PCA(n_components = 10)
 	# pca.fit(X)
 	# X = pca.fit_transform(X)
 	# print(pca.components_, '\n', pca.explained_variance_)
@@ -87,18 +94,22 @@ def prepare_data(feats_file,tags_file, multi):
 		classes = np.unique(Y)
 	return (X,Y)
 
-def classify(train,gold,test, test_y,multi):
+def choose_columns(X):
+	# for i in range(15,X.shape[1]-1):
+	# 	X = np.delete(X, i, 1)
+	# X = np.delete(X, [19,20,21,22,23], 1)
+	return X
 
-	if multi:
-		# clf = OneVsRestClassifier(MLPClassifier(hidden_layer_sizes=(50,50), activation='relu'))
-		clf = OneVsRestClassifier(svm.SVC(kernel='linear', class_weight={0:2,1:8}, C=1))
-		# clf = OneVsRestClassifier(RandomForestClassifier(n_estimators=50))
-		# clf = OneVsRestClassifier(AdaBoostClassifier(n_estimators=100))
-	else:
-		# clf = OneVsRestClassifier(svm.SVC(kernel='linear', C=1))
-		# clf = MultinomialNB()
-		# clf = OneVsRestClassifier(AdaBoostClassifier(n_estimators=100)) #Bad results_dict
-		clf = OneVsRestClassifier(RandomForestClassifier(n_estimators=100))
+def classify(train,gold,test, test_y,multi, classifier):
+
+	svm_dict = {'random_state':0, 'class_weight':{0:2,1:8}, 'C':1, 'dual':False}
+	# svm_dict = {}
+	clf_dict = {'SVM': svm.LinearSVC(**svm_dict), 'RF': RandomForestClassifier(n_estimators=50), 'ADA': AdaBoostClassifier(n_estimators = 50),\
+						'KNN': KNeighborsClassifier(n_neighbors = 5, weights='distance', algorithm = 'brute'), 'LR': LogisticRegression()}
+	clf = classifier
+
+	clf = OneVsRestClassifier(clf_dict[clf])
+	# clf = OneVsRestClassifier(MLPClassifier(random_state=0, hidden_layer_sizes=(100,100)))
 
 	clf.fit(train, gold)
 	# print(clf)
@@ -196,17 +207,17 @@ def evaluate(pred,test):
 	return(micro_scores,macro_average)
 
 
-def cross_validate(X,Y,cv_val, multi):
+def cross_validate(X,Y,cv_val, multi, classifier):
 
 
-	print("Running " + str(cv_val) + " fold cross validation")
+	print("Running " + str(cv_val) + " fold cross validation with classifier = " + classifier)
 
 	labels = ['ACC','TP','TN','FN','FP','P','R','F1','ACC']
 
 	total_micro = dict((element,0.0) for element in labels)
 	total_macro = dict((element,0.0) for element in labels)
 
-	skf = StratifiedKFold(n_splits=cv_val)
+	skf = StratifiedKFold(n_splits=cv_val, random_state=0)
 	print(skf)
 
 	if multi:
@@ -226,7 +237,8 @@ def cross_validate(X,Y,cv_val, multi):
 
 			X_train = np.concatenate(X_splits)
 			Y_train = np.concatenate(Y_splits)
-			pred = classify(X_train,Y_train,X_test,Y_test,True)
+			print("Building model")
+			pred = classify(X_train,Y_train,X_test,Y_test,True, classifier)
 			print("Evaluating ...")
 			eval_res = evaluate(pred, Y_test)
 			#
@@ -247,7 +259,7 @@ def cross_validate(X,Y,cv_val, multi):
 
 			print("Starting Classification...")
 
-			pred = classify(X_train, Y_train, X_test, Y_test, False)
+			pred = classify(X_train, Y_train, X_test, Y_test, False, classifier)
 			# pred = np.zeros(Y_test.shape)
 			# for i in range(Y_train.shape[1]):
 			# 	pred[:,i] = classify(X_train,Y_train[:,i],X_test,Y_test[:,i],False)
@@ -268,33 +280,56 @@ def cross_validate(X,Y,cv_val, multi):
 			str("%.2f" % (total_macro['F1']/cv_val))	+"\t"+ 	\
 			str("%.2f" % (total_macro['ACC']/cv_val)))
 
-	print(["%2f"%(score/cv_val) for score in scores])
+	print(["%.2f"%(score/cv_val) for score in scores])
 # str("%.2f" % avg_p) + "\n")
 
 np.set_printoptions(precision=3, suppress = True)
 split = 0.8
 kernel = 'poly'
-feats_file = 'features.pickle'
 cross_valid = 3
+algorithm_mode = 'maths'
 multi=True
+
+if algorithm_mode != 'category':
+	multi = False
+
+row_mode = 'problems'
+if row_mode == 'submissions':
+	feats_file = 'features-submissions.pickle'
+elif row_mode == 'problems':
+	feats_file = 'features.pickle'
 classes = []
 mlb = None
+divs = config.get_div()
+ds_dir = config.get_ds_dir()
+print(algorithm_mode, multi, row_mode)
 
-if multi:
-	tags_file = 'data-set.txt'
-else:
-	tags_file = 'data-set-single.txt'
+for div in divs:
+	print("\n\n\n\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n", div)
+	in_dir = ds_dir + div
+	if multi:
+		tags_file = in_dir + '-data-set.txt'
+	else:
+		if algorithm_mode == 'category':
+			tags_file = in_dir + '-data-set-single.txt'
+		elif algorithm_mode == 'graphs':
+			tags_file = in_dir + '-data-set-graphs.txt'
+		elif algorithm_mode == 'maths':
+			tags_file = in_dir + '-data-set-maths.txt'
+		elif algorithm_mode == 'algo':
+			tags_file = in_dir + '-data-set-algo.txt'
+	data = prepare_data(feats_file, tags_file, multi, row_mode)
+	X = data[0]
+	Y = data[1]
 
-data = prepare_data(feats_file, tags_file, multi)
-X = data[0]
-Y = data[1]
 
-scores = [0] * 4
-
-print("X Shape: ", X.shape)
-print("Y Shape: ", Y.shape)
-print("No. of tags: ", len(tags_list))
-cross_validate(X,Y,cross_valid, multi)
+	print("X Shape: ", X.shape)
+	print("Y Shape: ", Y.shape)
+	print("No. of tags: ", len(tags_list))
+	classifiers = ['SVM']
+	for classifier in classifiers:
+		scores = [0] * 4
+		cross_validate(X,Y,cross_valid, multi, classifier)
 
 # if not os.path.exists('preds.pickle'):
 # 	pred = classify(X_train,Y_train,X_test,True)

@@ -1,0 +1,51 @@
+sub_mode, algo_mode, multi, div, classifier, p, r, f1, acc, baseline, tags
+submiss, categ, 1, DivAll, SVM, 0.37, 0.72, 0.47, 0.03, 0.24, 2016/11/20 21:56:07, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
+submiss, categ, 1, DivAll, RFT, 0.57, 0.31, 0.38, 0.17, 0.24, 2016/11/20 21:56:47, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
+submiss, categ, 1, DivAll, ADA, 0.56, 0.32, 0.39, 0.16, 0.24, 2016/11/20 21:57:23, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
+submiss, categ, 1, DivAll, LRC, 0.57, 0.23, 0.30, 0.12, 0.24, 2016/11/20 21:57:31, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
+submiss, categ, 1, DivAll, KNN, 0.44, 0.32, 0.37, 0.13, 0.24, 2016/11/20 21:58:29, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
+submiss, graph, 0, DivAll, SVM, 0.49, 0.51, 0.48, 0.51, 0.46, 2016/11/20 21:58:30, dfs and similar:flows:shortest paths:trees
+submiss, graph, 0, DivAll, RFT, 0.54, 0.56, 0.54, 0.56, 0.46, 2016/11/20 21:58:34, dfs and similar:flows:shortest paths:trees
+submiss, graph, 0, DivAll, ADA, 0.53, 0.54, 0.53, 0.54, 0.46, 2016/11/20 21:58:38, dfs and similar:flows:shortest paths:trees
+submiss, graph, 0, DivAll, LRC, 0.49, 0.51, 0.48, 0.51, 0.46, 2016/11/20 21:58:39, dfs and similar:flows:shortest paths:trees
+submiss, graph, 0, DivAll, KNN, 0.45, 0.46, 0.46, 0.46, 0.46, 2016/11/20 21:58:40, dfs and similar:flows:shortest paths:trees
+submiss, maths, 0, DivAll, SVM, 0.47, 0.47, 0.46, 0.47, 0.24, 2016/11/20 21:58:42, combinatorics:games:geometry:matrices:number theory:probabilities
+submiss, maths, 0, DivAll, RFT, 0.51, 0.50, 0.49, 0.50, 0.24, 2016/11/20 21:58:50, combinatorics:games:geometry:matrices:number theory:probabilities
+submiss, maths, 0, DivAll, ADA, 0.49, 0.48, 0.48, 0.48, 0.24, 2016/11/20 21:58:58, combinatorics:games:geometry:matrices:number theory:probabilities
+submiss, maths, 0, DivAll, LRC, 0.47, 0.47, 0.46, 0.47, 0.24, 2016/11/20 21:58:59, combinatorics:games:geometry:matrices:number theory:probabilities
+submiss, maths, 0, DivAll, KNN, 0.37, 0.36, 0.36, 0.36, 0.24, 2016/11/20 21:59:03, combinatorics:games:geometry:matrices:number theory:probabilities
+submiss, algos, 0, DivAll, SVM, 0.39, 0.41, 0.38, 0.41, 0.20, 2016/11/20 21:59:05, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
+submiss, algos, 0, DivAll, RFT, 0.44, 0.45, 0.43, 0.45, 0.20, 2016/11/20 21:59:25, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
+submiss, algos, 0, DivAll, ADA, 0.43, 0.43, 0.42, 0.43, 0.20, 2016/11/20 21:59:42, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
+submiss, algos, 0, DivAll, LRC, 0.39, 0.41, 0.39, 0.41, 0.20, 2016/11/20 21:59:46, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
+submiss, algos, 0, DivAll, KNN, 0.31, 0.31, 0.31, 0.31, 0.20, 2016/11/20 22:00:01, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
+submiss, pairs, 0, DivAll, SVM, 0.73, 0.52, 0.49, 0.52, 0.65, 2016/11/20 22:00:01, dp:greedy
+submiss, pairs, 0, DivAll, RFT, 0.71, 0.72, 0.71, 0.72, 0.65, 2016/11/20 22:00:03, dp:greedy
+submiss, pairs, 0, DivAll, ADA, 0.71, 0.72, 0.71, 0.72, 0.65, 2016/11/20 22:00:05, dp:greedy
+submiss, pairs, 0, DivAll, LRC, 0.70, 0.71, 0.70, 0.71, 0.65, 2016/11/20 22:00:05, dp:greedy
+submiss, pairs, 0, DivAll, KNN, 0.65, 0.67, 0.66, 0.67, 0.65, 2016/11/20 22:00:07, dp:greedy
+submiss, categ, 1, DivAll, KNN, 0.54, 0.28, 0.35, 0.15, 0.24, 2016/11/20 22:01:46, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
+submiss, graph, 0, DivAll, KNN, 0.47, 0.50, 0.47, 0.50, 0.46, 2016/11/20 22:01:47, dfs and similar:flows:shortest paths:trees
+submiss, maths, 0, DivAll, KNN, 0.37, 0.37, 0.36, 0.37, 0.24, 2016/11/20 22:01:52, combinatorics:games:geometry:matrices:number theory:probabilities
+submiss, algos, 0, DivAll, KNN, 0.32, 0.34, 0.32, 0.34, 0.20, 2016/11/20 22:02:08, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
+submiss, pairs, 0, DivAll, KNN, 0.68, 0.69, 0.67, 0.69, 0.65, 2016/11/20 22:02:10, dp:greedy
+submiss, categ, 1, DivAll, ADA, 0.57, 0.33, 0.40, 0.17, 0.24, 2016/11/20 22:06:35, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
+submiss, graph, 0, DivAll, ADA, 0.52, 0.53, 0.52, 0.53, 0.46, 2016/11/20 22:06:44, dfs and similar:flows:shortest paths:trees
+submiss, maths, 0, DivAll, ADA, 0.50, 0.48, 0.48, 0.48, 0.24, 2016/11/20 22:07:02, combinatorics:games:geometry:matrices:number theory:probabilities
+submiss, algos, 0, DivAll, ADA, 0.42, 0.43, 0.42, 0.43, 0.20, 2016/11/20 22:07:45, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
+submiss, pairs, 0, DivAll, ADA, 0.71, 0.72, 0.72, 0.72, 0.65, 2016/11/20 22:07:47, dp:greedy
+problem, categ, 1, DivAll, SVM, 0.40, 0.76, 0.52, 0.03, 0.20, 2016/11/20 22:09:11, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
+problem, categ, 1, DivAll, RFT, 0.57, 0.32, 0.40, 0.19, 0.20, 2016/11/20 22:09:14, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
+problem, categ, 1, DivAll, ADA, 0.51, 0.39, 0.43, 0.16, 0.20, 2016/11/20 22:09:18, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
+problem, graph, 0, DivAll, SVM, 0.61, 0.61, 0.60, 0.61, 0.49, 2016/11/20 22:09:18, dfs and similar:flows:shortest paths:trees
+problem, graph, 0, DivAll, RFT, 0.63, 0.64, 0.62, 0.64, 0.49, 2016/11/20 22:09:19, dfs and similar:flows:shortest paths:trees
+problem, graph, 0, DivAll, ADA, 0.62, 0.62, 0.61, 0.62, 0.49, 2016/11/20 22:09:20, dfs and similar:flows:shortest paths:trees
+problem, maths, 0, DivAll, SVM, 0.42, 0.44, 0.42, 0.44, 0.34, 2016/11/20 22:09:20, combinatorics:games:geometry:matrices:number theory:probabilities
+problem, maths, 0, DivAll, RFT, 0.44, 0.46, 0.43, 0.46, 0.34, 2016/11/20 22:09:21, combinatorics:games:geometry:matrices:number theory:probabilities
+problem, maths, 0, DivAll, ADA, 0.49, 0.51, 0.49, 0.51, 0.34, 2016/11/20 22:09:23, combinatorics:games:geometry:matrices:number theory:probabilities
+problem, algos, 0, DivAll, SVM, 0.42, 0.42, 0.41, 0.42, 0.20, 2016/11/20 22:09:23, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
+problem, algos, 0, DivAll, RFT, 0.46, 0.46, 0.45, 0.46, 0.20, 2016/11/20 22:09:25, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
+problem, algos, 0, DivAll, ADA, 0.42, 0.42, 0.42, 0.42, 0.20, 2016/11/20 22:09:28, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
+problem, pairs, 0, DivAll, SVM, 0.78, 0.73, 0.71, 0.73, 0.55, 2016/11/20 22:09:28, dp:greedy
+problem, pairs, 0, DivAll, RFT, 0.78, 0.78, 0.78, 0.78, 0.55, 2016/11/20 22:09:28, dp:greedy
+problem, pairs, 0, DivAll, ADA, 0.76, 0.76, 0.76, 0.76, 0.55, 2016/11/20 22:09:29, dp:greedy

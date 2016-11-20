@@ -22,6 +22,8 @@ from sklearn.linear_model import LogisticRegression
 
 from collections import defaultdict
 from collections import Counter
+from itertools import product
+import time
 
 import config
 
@@ -57,10 +59,10 @@ def prepare_data(feats_file,tags_file, multi, row_mode):
 
 	for instance in inst_feats:
 		if instance in inst_feats and instance in inst_tags:
-			if row_mode == 'problems':
+			if row_mode == 'problem':
 				X.append(inst_feats[instance])
 				Y.append(inst_tags[instance])
-			elif row_mode == 'submissions':
+			elif row_mode == 'submiss':
 				for submission in inst_feats[instance]:
 					X.append(submission)
 					Y.append(inst_tags[instance])
@@ -77,22 +79,30 @@ def prepare_data(feats_file,tags_file, multi, row_mode):
 	# if np.std(X) > 0:
 	# 	X/=np.std(X)
 	#
-	# pca = PCA(n_components = 10)
-	# pca.fit(X)
-	# X = pca.fit_transform(X)
+	pca = PCA(n_components = 2)
+	pca.fit(X)
+	X = pca.fit_transform(X)
 	# print(pca.components_, '\n', pca.explained_variance_)
 
 	# print(Y)
 	if multi:
 		mlb = MultiLabelBinarizer()
+		lsts = []
+		for lst in Y:
+			lsts += lst
+		values, counts = np.unique(lsts, return_counts=True)
 		Y = mlb.fit_transform(Y)
 		classes = mlb.classes_
+		print(classes)
 		# labels = mlb.labels_
 		# print(classes, labels)
 	else:
 		Y = Y.flatten()
+		values, counts = np.unique(Y, return_counts=True)
 		classes = np.unique(Y)
-	return (X,Y)
+	baseline = np.max(counts)/np.sum(counts)
+	print('Baseline = ', baseline)
+	return (X,Y, baseline)
 
 def choose_columns(X):
 	# for i in range(15,X.shape[1]-1):
@@ -104,23 +114,19 @@ def classify(train,gold,test, test_y,multi, classifier):
 
 	svm_dict = {'random_state':0, 'class_weight':{0:2,1:8}, 'C':1, 'dual':False}
 	# svm_dict = {}
-	clf_dict = {'SVM': svm.LinearSVC(**svm_dict), 'RF': RandomForestClassifier(n_estimators=50), 'ADA': AdaBoostClassifier(n_estimators = 50),\
-						'KNN': KNeighborsClassifier(n_neighbors = 5, weights='distance', algorithm = 'brute'), 'LR': LogisticRegression()}
+	clf_dict = {'SVM': svm.LinearSVC(**svm_dict), 'RFT': RandomForestClassifier(n_estimators=50), 'ADA': AdaBoostClassifier(n_estimators = 50),\
+						'KNN': KNeighborsClassifier(n_neighbors = 20, weights='distance'), 'LRC': LogisticRegression()}
 	clf = classifier
 
 	clf = OneVsRestClassifier(clf_dict[clf])
 	# clf = OneVsRestClassifier(MLPClassifier(random_state=0, hidden_layer_sizes=(100,100)))
-
-	clf.fit(train, gold)
 	# print(clf)
+	clf.fit(train, gold)
 	preds = clf.predict(test)
-	# print(train.shape, gold.shape, test.shape, test_y.shape, preds.shape)
-	# for i in range(len(preds)):
-	# 	print(preds[i], test_y[i])
-	print(metrics.classification_report(test_y,preds, target_names = classes))
+	# print(metrics.classification_report(test_y,preds, target_names = classes))
 	prfs = metrics.precision_recall_fscore_support(test_y, preds, average='weighted')
 	acc = metrics.accuracy_score(test_y, preds)
-	print(prfs, acc)
+	# print(prfs, acc)
 	for i in range(3):
 		scores[i]+=prfs[i]
 	scores[3]+=acc
@@ -287,50 +293,60 @@ np.set_printoptions(precision=3, suppress = True)
 split = 0.8
 kernel = 'poly'
 cross_valid = 3
-algorithm_mode = 'maths'
+algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'pairs']
+# algorithm_modes = ['pair']
+# algorithm_modes = ['categ']
+classifiers = ['SVM', 'RFT', 'ADA']
+# classifiers = ['ADA']
 multi=True
 
-if algorithm_mode != 'category':
-	multi = False
-
-row_mode = 'problems'
-if row_mode == 'submissions':
+row_mode = 'problem'
+if row_mode == 'submiss':
 	feats_file = 'features-submissions.pickle'
-elif row_mode == 'problems':
+elif row_mode == 'problem':
 	feats_file = 'features.pickle'
+
+
 classes = []
 mlb = None
 divs = config.get_div()
 ds_dir = config.get_ds_dir()
-print(algorithm_mode, multi, row_mode)
+tags_file_dict = {'categ': 'data-set-single.txt', 'graph':'data-set-graphs.txt', 'maths': 'data-set-maths.txt', 'algos': 'data-set-algo.txt', 'pairs': 'data-set-pair.txt'}
+# print(algorithm_mode, multi, row_mode)
 
-for div in divs:
+out_file = open('out-classifier.csv', 'a')
+for div, algo_mode, classifier in product(divs, algorithm_modes, classifiers):
+	if algo_mode != 'categ':
+		multi = False
 	print("\n\n\n\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n", div)
 	in_dir = ds_dir + div
 	if multi:
 		tags_file = in_dir + '-data-set.txt'
 	else:
-		if algorithm_mode == 'category':
-			tags_file = in_dir + '-data-set-single.txt'
-		elif algorithm_mode == 'graphs':
-			tags_file = in_dir + '-data-set-graphs.txt'
-		elif algorithm_mode == 'maths':
-			tags_file = in_dir + '-data-set-maths.txt'
-		elif algorithm_mode == 'algo':
-			tags_file = in_dir + '-data-set-algo.txt'
+		tags_file = in_dir + '-' + tags_file_dict[algo_mode]
+
 	data = prepare_data(feats_file, tags_file, multi, row_mode)
 	X = data[0]
 	Y = data[1]
-
+	baseline = data[2]
 
 	print("X Shape: ", X.shape)
 	print("Y Shape: ", Y.shape)
-	print("No. of tags: ", len(tags_list))
-	classifiers = ['SVM']
-	for classifier in classifiers:
-		scores = [0] * 4
-		cross_validate(X,Y,cross_valid, multi, classifier)
+	print("No. of tags: ", len(tags_list), tags_list)
+	print("Algo:", algo_mode)
+	scores = [0] * 4
+	cross_validate(X,Y,cross_valid, multi, classifier)
 
+	scores = ["%.2f"%(score/cross_valid) for score in scores]
+
+	print(classes)
+
+	timestamp = time.strftime("%Y/%m/%d %H:%M:%S")
+	out_file.write( '%s, %s, %d, %s, %s, %s, %s, %s, %s, %.2f, %s, %s\n' \
+			% (row_mode, algo_mode, multi, div, classifier, scores[0], scores[1], scores[2], scores[3], baseline, timestamp, ':'.join(classes)))
+
+	out_file.flush()
+out_file.close()
 # if not os.path.exists('preds.pickle'):
 # 	pred = classify(X_train,Y_train,X_test,True)
 # else:

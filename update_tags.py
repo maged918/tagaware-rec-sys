@@ -1,6 +1,7 @@
 import os.path
 from collections import defaultdict
 import config
+import numpy as np
 # from itertools import combinations_with_replacement, product
 '''
 author: tarek, maged
@@ -12,9 +13,9 @@ categories = {
 'math': ['matrices', 'probabilities', 'combinatorics', 'number theory', 'chinese remainder theorem', 'games', 'geometry'],
 'graphs': ['dfs and similar', 'trees', 'shortest paths', 'graph matchings', 'flows'],
 '': ['bitmasks', 'hashing', 'ternary search','meet-in-the-middle', 'divide and conquer', '2-sat','schedules'\
-,'fft', 'two pointers', 'binary search', 'strings', 'expression parsing', 'string suffix structures', 'brute force'],
+,'fft', 'two pointers', 'strings', 'expression parsing', 'string suffix structures'],
 # 'strings':['expression parsing', 'string suffix structures'],
-'implementation': [],
+# 'implementation': [],
 'greedy': ['constructive algorithms', 'sortings'],
 'data structures': ['dsu']
 }
@@ -52,10 +53,11 @@ def single_tag(tag_list):
 
 divs = config.get_div()
 ds_dir = config.get_ds_dir()
+tags_file = open('dataset/Tags-Counts.txt', 'w')
 print(divs)
 
 for div in divs:
-	print("#################################################\n", div)
+	tags_file.write("#################################################\n" + div + '\n')
 	pt_file = div + '-Problems-tags.txt'
 	out_dir = ds_dir + div
 	out_file = open(out_dir + "-data-set.txt",'w')
@@ -63,7 +65,8 @@ for div in divs:
 	graphs_file = open(out_dir + '-data-set-graphs.txt', 'w')
 	maths_file = open(out_dir + '-data-set-maths.txt', 'w')
 	algo_file = open(out_dir + '-data-set-algo.txt', 'w')
-	files = [out_file, single_file, graphs_file, maths_file, algo_file]
+	pair_file = open(out_dir + '-data-set-pair.txt', 'w')
+	files = [out_file, single_file, graphs_file, maths_file, algo_file, pair_file]
 
 	count_tags = defaultdict()
 	count_tags = defaultdict(lambda: 0, count_tags)
@@ -98,6 +101,7 @@ for div in divs:
 					graphs_tag = ''
 					maths_tag = ''
 					algo_tag = ''
+					pair_tag = ''
 					for i in tags_list:
 						if i in categories['graphs'] and i not in remove_algorithms: #HANDLE IF MORE THAN ONE TAG
 							graphs_tag = i
@@ -106,6 +110,10 @@ for div in divs:
 						if i in algos and i not in remove_algorithms:
 							algo_tag = i
 							# print(algo_tag)
+						if (i == 'dp' and 'greedy' not in tags_list) or (i == 'greedy' and 'dp' not in tags_list):
+							pair_tag = i
+						# if i in categories['greedy']:
+						# 	pair_tag = 'greedy'
 						all_tags[i]+=1
 					if len(tags_list) == 1:
 						single_tags[tags_list[0]]+=1
@@ -123,20 +131,28 @@ for div in divs:
 					graphs_file.write(graphs_tag + "\n")
 					maths_file.write(maths_tag + "\n")
 					algo_file.write(algo_tag + "\n")
+					pair_file.write(pair_tag + "\n")
 			else:
 				path = ''
 
+	tags_file.write('################ All Tags ################\n')
+	all_tag_count = np.sum(list(all_tags.values()))
+	tags_file.write("%d\n" % (all_tag_count))
 	for tag in sorted(all_tags.items(), key=lambda x: x[1], reverse=True):
-		print(tag[0], tag[1])
+		tags_file.write("%s, %s, %.2f%s" % (tag[0], tag[1], tag[1]/all_tag_count, '\n'))
 
+	tags_file.write('################ Single Tags Occuring Alone ################\n')
+	for tag in sorted(single_tags.items(), key = lambda x:x[1], reverse=True):
+		tags_file.write("%s, %s%s" % (tag[0], tag[1], '\n'))
+
+	tags_file.write('################ Output Tags ################\n')
 	for tag in sorted(count_tags.items(), key=lambda x: x[1], reverse=True):
-		print(tag[0], tag[1])
+		tags_file.write("%s, %s%s" % (tag[0], tag[1], '\n'))
 
+	tags_file.write('################ Output max pairs ################\n')
 	for pair in sorted(count_pairs.items(), key=lambda x:x[1], reverse=True):
 		if pair[1] > 20:
-			print(pair[0], pair[1])
+			tags_file.write("%s, %s%s" % (pair[0], pair[1], '\n'))
 
-	for tag in sorted(single_tags.items(), key = lambda x:x[1], reverse=True):
-		print(tag[0], tag[1])
-
+tags_file.close()
 	# print(len(single_tags))

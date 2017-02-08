@@ -28,6 +28,9 @@ remove_algorithms = ['graph matchings', 'chinese remainder theorem']
 
 single_sorting = ['implementation', 'brute force', 'sortings', 'greedy', 'math', 'dp', 'data structures', 'graphs', 'geometry', 'strings', 'binary search']
 single_dict = {}
+
+pairs=['math', 'graphs']
+
 for i in range(len(single_sorting)):
 	single_dict[single_sorting[i]] = i
 single_dict = defaultdict(lambda: 0, single_dict)
@@ -110,7 +113,7 @@ for div in divs:
 						if i in algos and i not in remove_algorithms:
 							algo_tag = i
 							# print(algo_tag)
-						if (i == 'dp' and 'greedy' not in tags_list) or (i == 'greedy' and 'dp' not in tags_list):
+						if (i == pairs[0] and pairs[1] not in tags_list) or (i == pairs[1] and pairs[0] not in tags_list):
 							pair_tag = i
 						# if i in categories['greedy']:
 						# 	pair_tag = 'greedy'

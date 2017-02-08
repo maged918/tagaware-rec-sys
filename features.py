@@ -84,7 +84,6 @@ def evalute(tree,*args):
 def extract_feats(file):
 
 	curr_feats = []
-
 	tree = etree.parse(file)
 
 	# features 1,2 and 3
@@ -104,7 +103,9 @@ def extract_feats(file):
 		curr_feats += [0,0,0]
 
 	# feature 4
-	curr_feats.append(evalute(tree,FOR,IF) + evalute(tree,WHILE,IF))
+	f4 = evalute(tree,FOR,IF) + evalute(tree,WHILE,IF)
+	curr_feats.append(f4)
+	# print(f4)
 
 	# feature 5
 	rec = 0
@@ -216,6 +217,16 @@ def extract_feats(file):
 	curr_feats.append(time)
 	curr_feats.append(divide)
 
+	with open(file.strip('.xml')) as foo:
+		lines = len(foo.readlines())
+
+	#feature 26, length of original code
+	curr_feats.append(lines)
+
+	#feature 27, number of if conditions
+	ifs = evalute(tree, IF)
+	curr_feats.append(ifs)
+	# print('Number of ifs', ifs)
 	# print(len(curr_feats))
 	return curr_feats
 
@@ -226,7 +237,7 @@ times = ['*', '*=']
 divides = ['/', '/=']
 FOR='/for/block/'
 WHILE='/while/block/'
-IF='/if/block'
+IF='/if/'
 FUNCTION='/function'
 NAME='/name'
 RETURN='/block/return'
@@ -274,9 +285,9 @@ def all_submissions():
 	pickle.dump(submission_set, f)
 	f.close()
 
-all_submissions()
 
 def test_submission(path):
 	extract_feats(path)
 
-# test_submission('data-all/533/F/10759594.cpp.xml')
+all_submissions()
+# test_submission('data-div-1/533/F/10759594.cpp.xml')

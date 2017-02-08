@@ -19,6 +19,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.decomposition import PCA
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.feature_selection import SelectKBest, chi2, f_classif
 
 from collections import defaultdict
 from collections import Counter
@@ -70,7 +71,7 @@ def prepare_data(feats_file,tags_file, multi, row_mode):
 	X = np.array(X)
 	Y = np.array(Y)
 
-	X = choose_columns(X)
+	X = choose_columns(X, Y)
 
 	print(X.shape)
 	# feature scaling
@@ -79,9 +80,9 @@ def prepare_data(feats_file,tags_file, multi, row_mode):
 	# if np.std(X) > 0:
 	# 	X/=np.std(X)
 	#
-	pca = PCA(n_components = 2)
-	pca.fit(X)
-	X = pca.fit_transform(X)
+	# pca = PCA(n_components = 2)
+	# pca.fit(X)
+	# X = pca.fit_transform(X)
 	# print(pca.components_, '\n', pca.explained_variance_)
 
 	# print(Y)
@@ -104,10 +105,11 @@ def prepare_data(feats_file,tags_file, multi, row_mode):
 	print('Baseline = ', baseline)
 	return (X,Y, baseline)
 
-def choose_columns(X):
+def choose_columns(X, y):
 	# for i in range(15,X.shape[1]-1):
 	# 	X = np.delete(X, i, 1)
 	# X = np.delete(X, [19,20,21,22,23], 1)
+	# X = SelectKBest(f_classif, k = 20).fit_transform(X, y)
 	return X
 
 def classify(train,gold,test, test_y,multi, classifier):
@@ -293,19 +295,21 @@ np.set_printoptions(precision=3, suppress = True)
 split = 0.8
 kernel = 'poly'
 cross_valid = 3
-algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'pairs']
-# algorithm_modes = ['pair']
+# algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'pairs']
+algorithm_modes = ['pairs']
 # algorithm_modes = ['categ']
-classifiers = ['SVM', 'RFT', 'ADA']
+# classifiers = ['RFT']
+classifiers = ['SVM', 'RFT']
 # classifiers = ['ADA']
 multi=True
 
-row_mode = 'problem'
+row_mode = 'submiss'
 if row_mode == 'submiss':
 	feats_file = 'features-submissions.pickle'
 elif row_mode == 'problem':
 	feats_file = 'features.pickle'
 
+print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n", row_mode)
 
 classes = []
 mlb = None
@@ -332,6 +336,7 @@ for div, algo_mode, classifier in product(divs, algorithm_modes, classifiers):
 
 	print("X Shape: ", X.shape)
 	print("Y Shape: ", Y.shape)
+	print(Y)
 	print("No. of tags: ", len(tags_list), tags_list)
 	print("Algo:", algo_mode)
 	scores = [0] * 4

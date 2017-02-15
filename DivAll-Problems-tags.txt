@@ -1,6 +1,6 @@
 Contest ID: 733
 Index: A
-Name: Grasshopper And the String
+  Name: Grasshopper And the String
 Tags: implementation
 
 

@@ -13,7 +13,7 @@ categories = {
 'math': ['matrices', 'probabilities', 'combinatorics', 'number theory', 'chinese remainder theorem', 'games', 'geometry'],
 'graphs': ['dfs and similar', 'trees', 'shortest paths', 'graph matchings', 'flows'],
 '': ['bitmasks', 'hashing', 'ternary search','meet-in-the-middle', 'divide and conquer', '2-sat','schedules'\
-,'fft', 'two pointers', 'strings', 'expression parsing', 'string suffix structures'],
+,'fft', 'two pointers', 'binary search', 'strings', 'expression parsing', 'string suffix structures'],
 # 'strings':['expression parsing', 'string suffix structures'],
 # 'implementation': [],
 'greedy': ['constructive algorithms', 'sortings'],
@@ -29,7 +29,7 @@ remove_algorithms = ['graph matchings', 'chinese remainder theorem']
 single_sorting = ['implementation', 'brute force', 'sortings', 'greedy', 'math', 'dp', 'data structures', 'graphs', 'geometry', 'strings', 'binary search']
 single_dict = {}
 
-pairs=['math', 'graphs']
+pairs=['dp', 'brute force']
 
 for i in range(len(single_sorting)):
 	single_dict[single_sorting[i]] = i

@@ -1,3 +1,5 @@
+import pandas as pd
+
 '''
 Created on Aug 1, 2015
 
@@ -59,10 +61,10 @@ Feature 8: Number of variables (geometry, graphs, binary search)
 15. no. of points
 no. of arrays
 16. no. of declarations
-17. no. of variables (repeated?)
+17. no. of variables
 18. no. of params per method (avg)
 19. no. of functions
-20-24. no. of arithmetic operations
+20-25. no. of arithmetic operations
 '''
 
 from collections import defaultdict
@@ -74,38 +76,42 @@ import numpy as np
 import pickle
 import config
 
+cols = ['id', 'problem_id', 'single_loop', 'double_loop', 'triple_loop', 'if_loop',\
+			  'recursion', 'shift', 'or', 'and', 'int', 'double', 'float', 'string', 'char', 'vector',\
+			  'll', 'point', 'arrays', 'declarations', 'variables', 'avg_params', 'functions',\
+			  'operations', 'plus', 'minus', 'times', 'divide', 'modulus', 'lines', 'ifs']
+
 def evalute(tree,*args):
 	query = './'
 	for arg in args:
 		query += arg
-	return len(tree.xpath(query[:-1]))
+	return len(tree.xpath(query[:-1	]))
 
 
 def extract_feats(file):
 
 	curr_feats = []
+	curr_df ={k:0 for k in cols}
 	tree = etree.parse(file)
 
 	# features 1,2 and 3
+	double_loop = 0
+	triple_loop = 0
 	single_loop = evalute(tree,WHILE) + evalute(tree,FOR)
 	if single_loop > 0:
 		double_loop = evalute(tree,WHILE,FOR) + evalute(tree,FOR,WHILE) + evalute(tree,FOR,FOR) + evalute(tree,WHILE,WHILE)
-		if double_loop == 0:
-			curr_feats += [single_loop,0,0]
-
-		else:
+		if double_loop != 0:
 			triple_loop = evalute(tree,WHILE,WHILE,WHILE) + evalute(tree,WHILE,WHILE,FOR) + evalute(tree,WHILE,FOR,WHILE) + evalute(tree,WHILE,FOR,FOR) + evalute(tree,FOR,WHILE,WHILE) + evalute(tree,FOR,WHILE,FOR) + evalute(tree,FOR,FOR,WHILE) + evalute(tree,FOR,FOR,FOR)
-			if triple_loop == 0:
-				curr_feats += [0,double_loop,0]
-			else:
-				curr_feats += [0,0,triple_loop]
-	else:
-		curr_feats += [0,0,0]
 
+	curr_feats += [single_loop,double_loop,triple_loop]
+
+	curr_df['single_loop'] = single_loop
+	curr_df['double_loop'] = double_loop
+	curr_df['triple_loop'] = triple_loop
 	# feature 4
 	f4 = evalute(tree,FOR,IF) + evalute(tree,WHILE,IF)
 	curr_feats.append(f4)
-	# print(f4)
+	curr_df['if_loop'] = f4
 
 	# feature 5
 	rec = 0
@@ -119,6 +125,7 @@ def extract_feats(file):
 				rec += 1
 	# print "recursion", rec
 	curr_feats.append(rec)
+	curr_df['recursion'] = rec
 
 	# feature 6: could be in a declared statement, or an expression (cin and cout should be excluded)
 	for expr in tree.xpath(".//expr"):
@@ -136,22 +143,25 @@ def extract_feats(file):
 						left_shifts += 1
 
 	shifts = len(tree.xpath(".//operator[text()='>>']"))  + len(tree.xpath(".//operator[text()='<<']")) - left_shifts - right_shifts
-	if shifts > 0:
-		curr_feats.append(shifts)
-	else:
-		curr_feats.append(0)
+	if shifts < 0:
+		shifts = 0
+	curr_feats.append(shifts)
+	curr_df['shift'] = shifts
 
 	# feature 7
-	curr_feats.append(len(tree.xpath(".//operator[text()='&']")))
+	ands = len(tree.xpath(".//operator[text()='&']"))
+	curr_feats.append(ands)
+	curr_df['and'] = ands
 
 	# feature 8
-	curr_feats.append(len(tree.xpath(".//operator[text()='|']")))
+	ors = len(tree.xpath(".//operator[text()='|']"))
+	curr_df['or'] = ors
 
 	decl = tree.xpath('.//decl_stmt')
 	var_names = tree.xpath('.//decl_stmt/decl/name')
 
 	#features  9-15
-	types = {'int':0, 'double':1, 'string':2, 'char':3, 'vector':4, 'll':5, 'point':6}
+	types = {'int':0, 'double':1, 'string':2, 'char':3, 'vector':4, 'll':5, 'point':6, 'float':7}
 	cnt_types = [0 for i in range(len(types))]
 	cnt_vars = 0
 	cnt_vectors = 0
@@ -174,63 +184,74 @@ def extract_feats(file):
 			if(len(query_vectors)>0):
 				if query_vectors[0].text == 'vector':
 					cnt_vectors+=len(tmp)
+			cnt_types[types['vector']] = cnt_vectors
 
-	cnt_types[types['vector']] = cnt_vectors
 	curr_feats += cnt_types
 	curr_feats.append(cnt_arrs)
+	for t in types:
+		curr_df[t] = cnt_types[types[t]]
+	curr_df['arrays'] = cnt_arrs
+
+	# print(cnt_types[types['float']], cnt_types[types['double']])
 
 	#feature 17
-	curr_feats.append(len(decl))
+	decls = len(decl)
+	curr_feats.append(decls)
+	curr_df['declarations'] = decls
+
 	#feature 18
 	curr_feats.append(cnt_vars)
+	curr_df['variables'] = cnt_vars
 
 	# feature 19
+	avg_params = 0
 	if len(tree.xpath(".//function")) != 0:
-		curr_feats.append(len(tree.xpath(".//parameter_list/parameter"))/len(tree.xpath(".//function")))
-	else:
-		curr_feats.append(0.0)
+		avg_params = len(tree.xpath(".//parameter_list/parameter"))/len(tree.xpath(".//function"))
+	curr_feats.append(avg_params)
+	curr_df['avg_params'] = avg_params
 
 	# feature 20, number of methods excluding main
-	curr_feats.append(len(tree.xpath(".//function/name[text()!='main']")))
+	functions = len(tree.xpath(".//function/name[text()!='main']"))
+	curr_feats.append(functions)
+	curr_df['functions'] = functions
 
 	# feature 21 - 25
+	cnt_opts = {k:0 for k in ['plus', 'minus', 'times', 'divide', 'modulus']}
 	ops = 0
-	plus = 0
-	minus = 0
-	time = 0
-	divide = 0
 	for op in tree.xpath(".//operator"):
 		opt = op.text
 		if opt in operations:
 			ops += 1
-			if opt in pluses:
-				plus+=1
-			elif opt in minuses:
-				minus+=1
-			elif opt in times:
-				time+=1
-			elif opt in divides:
-				divide+=1
+			for s_opt in op_dict:
+				if opt in op_dict[s_opt]:
+					cnt_opts[s_opt]+=1
 	curr_feats.append(ops)
-	curr_feats.append(plus)
-	curr_feats.append(minus)
-	curr_feats.append(time)
-	curr_feats.append(divide)
+	curr_df['operations'] = ops
+	for t in cnt_opts:
+		curr_df[t] = cnt_opts[t]
+		curr_feats.append(cnt_opts[t])
 
 	with open(file.strip('.xml')) as foo:
 		lines = len(foo.readlines())
 
 	#feature 26, length of original code
 	curr_feats.append(lines)
+	curr_df['lines'] = lines
 
 	#feature 27, number of if conditions
 	ifs = evalute(tree, IF)
 	curr_feats.append(ifs)
+	curr_df['ifs'] = ifs
+
 	# print('Number of ifs', ifs)
 	# print(len(curr_feats))
-	return curr_feats
+	# print(curr_df['ll'])
+	return curr_feats, curr_df
 
-operations = ['+','-','*','/','%','+=','-=','*=','/=','++','--']
+operations = ['+','-','*','/','%','+=','-=','*=','/=','++','--', '%']
+op_dict ={'plus':['+', '+=', '++'], 'minus': ['-', '-=', '--'], 'times': ['*', '*='], 'divide':['/', '/='], 'modulus':['%']}
+
+
 pluses = ['+', '+=', '++']
 minuses = ['-', '-=', '--']
 times = ['*', '*=']
@@ -254,6 +275,8 @@ elif 'Div2' in divs:
 # data_dir = 'data-all/'
 
 def all_submissions():
+	df = pd.DataFrame(columns = cols)
+	print(len(df.columns))
 	feature_set = {}
 	submission_set = {}
 	idx = 1
@@ -262,15 +285,22 @@ def all_submissions():
 			problem_features =  []
 			for count,submission in enumerate(os.listdir(data_dir+"/"+contest+"/"+problem)):
 				path = data_dir+"/"+contest+"/"+problem+ "/" + submission
+				problem_id = contest+"/"+problem
 				if submission.endswith(".xml"):
 					# print(path)
-					problem_features.append(extract_feats(path))
+					feats = extract_feats(path)
+					curr_df = feats[1]
+					curr_df['id'] = submission
+					curr_df['problem_id'] = problem_id
+
+					df = df.append(curr_df, ignore_index=True)
+					# print(df.tail())
+					problem_features.append(feats[0])
 			arr = np.asarray(problem_features)
 			arr.astype(float)
 			avg = np.average(arr, axis=0)
-			feature_set[contest + "/" + problem] = avg
-			submission_set[contest+"/"+problem] = arr
-
+			feature_set[problem_id] = avg
+			submission_set[problem_id] = arr
 		print("#", idx, "Contest:", contest)
 		idx+=1
 
@@ -285,9 +315,13 @@ def all_submissions():
 	pickle.dump(submission_set, f)
 	f.close()
 
+	f= open('features-pandas.pickle', 'wb')
+	pickle.dump(df, f)
+	f.close()
+
 
 def test_submission(path):
-	extract_feats(path)
+	return extract_feats(path)
 
 all_submissions()
-# test_submission('data-div-1/533/F/10759594.cpp.xml')
+# print(test_submission('data-all/148/B/1773915.cpp.xml')[1])

@@ -1,51 +1,258 @@
-sub_mode, algo_mode, multi, div, classifier, p, r, f1, acc, baseline, tags
-submiss, categ, 1, DivAll, SVM, 0.37, 0.72, 0.47, 0.03, 0.24, 2016/11/20 21:56:07, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
-submiss, categ, 1, DivAll, RFT, 0.57, 0.31, 0.38, 0.17, 0.24, 2016/11/20 21:56:47, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
-submiss, categ, 1, DivAll, ADA, 0.56, 0.32, 0.39, 0.16, 0.24, 2016/11/20 21:57:23, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
-submiss, categ, 1, DivAll, LRC, 0.57, 0.23, 0.30, 0.12, 0.24, 2016/11/20 21:57:31, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
-submiss, categ, 1, DivAll, KNN, 0.44, 0.32, 0.37, 0.13, 0.24, 2016/11/20 21:58:29, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
-submiss, graph, 0, DivAll, SVM, 0.49, 0.51, 0.48, 0.51, 0.46, 2016/11/20 21:58:30, dfs and similar:flows:shortest paths:trees
-submiss, graph, 0, DivAll, RFT, 0.54, 0.56, 0.54, 0.56, 0.46, 2016/11/20 21:58:34, dfs and similar:flows:shortest paths:trees
-submiss, graph, 0, DivAll, ADA, 0.53, 0.54, 0.53, 0.54, 0.46, 2016/11/20 21:58:38, dfs and similar:flows:shortest paths:trees
-submiss, graph, 0, DivAll, LRC, 0.49, 0.51, 0.48, 0.51, 0.46, 2016/11/20 21:58:39, dfs and similar:flows:shortest paths:trees
-submiss, graph, 0, DivAll, KNN, 0.45, 0.46, 0.46, 0.46, 0.46, 2016/11/20 21:58:40, dfs and similar:flows:shortest paths:trees
-submiss, maths, 0, DivAll, SVM, 0.47, 0.47, 0.46, 0.47, 0.24, 2016/11/20 21:58:42, combinatorics:games:geometry:matrices:number theory:probabilities
-submiss, maths, 0, DivAll, RFT, 0.51, 0.50, 0.49, 0.50, 0.24, 2016/11/20 21:58:50, combinatorics:games:geometry:matrices:number theory:probabilities
-submiss, maths, 0, DivAll, ADA, 0.49, 0.48, 0.48, 0.48, 0.24, 2016/11/20 21:58:58, combinatorics:games:geometry:matrices:number theory:probabilities
-submiss, maths, 0, DivAll, LRC, 0.47, 0.47, 0.46, 0.47, 0.24, 2016/11/20 21:58:59, combinatorics:games:geometry:matrices:number theory:probabilities
-submiss, maths, 0, DivAll, KNN, 0.37, 0.36, 0.36, 0.36, 0.24, 2016/11/20 21:59:03, combinatorics:games:geometry:matrices:number theory:probabilities
-submiss, algos, 0, DivAll, SVM, 0.39, 0.41, 0.38, 0.41, 0.20, 2016/11/20 21:59:05, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
-submiss, algos, 0, DivAll, RFT, 0.44, 0.45, 0.43, 0.45, 0.20, 2016/11/20 21:59:25, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
-submiss, algos, 0, DivAll, ADA, 0.43, 0.43, 0.42, 0.43, 0.20, 2016/11/20 21:59:42, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
-submiss, algos, 0, DivAll, LRC, 0.39, 0.41, 0.39, 0.41, 0.20, 2016/11/20 21:59:46, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
-submiss, algos, 0, DivAll, KNN, 0.31, 0.31, 0.31, 0.31, 0.20, 2016/11/20 22:00:01, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
-submiss, pairs, 0, DivAll, SVM, 0.73, 0.52, 0.49, 0.52, 0.65, 2016/11/20 22:00:01, dp:greedy
-submiss, pairs, 0, DivAll, RFT, 0.71, 0.72, 0.71, 0.72, 0.65, 2016/11/20 22:00:03, dp:greedy
-submiss, pairs, 0, DivAll, ADA, 0.71, 0.72, 0.71, 0.72, 0.65, 2016/11/20 22:00:05, dp:greedy
-submiss, pairs, 0, DivAll, LRC, 0.70, 0.71, 0.70, 0.71, 0.65, 2016/11/20 22:00:05, dp:greedy
-submiss, pairs, 0, DivAll, KNN, 0.65, 0.67, 0.66, 0.67, 0.65, 2016/11/20 22:00:07, dp:greedy
-submiss, categ, 1, DivAll, KNN, 0.54, 0.28, 0.35, 0.15, 0.24, 2016/11/20 22:01:46, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
-submiss, graph, 0, DivAll, KNN, 0.47, 0.50, 0.47, 0.50, 0.46, 2016/11/20 22:01:47, dfs and similar:flows:shortest paths:trees
-submiss, maths, 0, DivAll, KNN, 0.37, 0.37, 0.36, 0.37, 0.24, 2016/11/20 22:01:52, combinatorics:games:geometry:matrices:number theory:probabilities
-submiss, algos, 0, DivAll, KNN, 0.32, 0.34, 0.32, 0.34, 0.20, 2016/11/20 22:02:08, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
-submiss, pairs, 0, DivAll, KNN, 0.68, 0.69, 0.67, 0.69, 0.65, 2016/11/20 22:02:10, dp:greedy
-submiss, categ, 1, DivAll, ADA, 0.57, 0.33, 0.40, 0.17, 0.24, 2016/11/20 22:06:35, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
-submiss, graph, 0, DivAll, ADA, 0.52, 0.53, 0.52, 0.53, 0.46, 2016/11/20 22:06:44, dfs and similar:flows:shortest paths:trees
-submiss, maths, 0, DivAll, ADA, 0.50, 0.48, 0.48, 0.48, 0.24, 2016/11/20 22:07:02, combinatorics:games:geometry:matrices:number theory:probabilities
-submiss, algos, 0, DivAll, ADA, 0.42, 0.43, 0.42, 0.43, 0.20, 2016/11/20 22:07:45, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
-submiss, pairs, 0, DivAll, ADA, 0.71, 0.72, 0.72, 0.72, 0.65, 2016/11/20 22:07:47, dp:greedy
-problem, categ, 1, DivAll, SVM, 0.40, 0.76, 0.52, 0.03, 0.20, 2016/11/20 22:09:11, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
-problem, categ, 1, DivAll, RFT, 0.57, 0.32, 0.40, 0.19, 0.20, 2016/11/20 22:09:14, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
-problem, categ, 1, DivAll, ADA, 0.51, 0.39, 0.43, 0.16, 0.20, 2016/11/20 22:09:18, binary search:brute force:data structures:dp:graphs:greedy:implementation:math
-problem, graph, 0, DivAll, SVM, 0.61, 0.61, 0.60, 0.61, 0.49, 2016/11/20 22:09:18, dfs and similar:flows:shortest paths:trees
-problem, graph, 0, DivAll, RFT, 0.63, 0.64, 0.62, 0.64, 0.49, 2016/11/20 22:09:19, dfs and similar:flows:shortest paths:trees
-problem, graph, 0, DivAll, ADA, 0.62, 0.62, 0.61, 0.62, 0.49, 2016/11/20 22:09:20, dfs and similar:flows:shortest paths:trees
-problem, maths, 0, DivAll, SVM, 0.42, 0.44, 0.42, 0.44, 0.34, 2016/11/20 22:09:20, combinatorics:games:geometry:matrices:number theory:probabilities
-problem, maths, 0, DivAll, RFT, 0.44, 0.46, 0.43, 0.46, 0.34, 2016/11/20 22:09:21, combinatorics:games:geometry:matrices:number theory:probabilities
-problem, maths, 0, DivAll, ADA, 0.49, 0.51, 0.49, 0.51, 0.34, 2016/11/20 22:09:23, combinatorics:games:geometry:matrices:number theory:probabilities
-problem, algos, 0, DivAll, SVM, 0.42, 0.42, 0.41, 0.42, 0.20, 2016/11/20 22:09:23, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
-problem, algos, 0, DivAll, RFT, 0.46, 0.46, 0.45, 0.46, 0.20, 2016/11/20 22:09:25, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
-problem, algos, 0, DivAll, ADA, 0.42, 0.42, 0.42, 0.42, 0.20, 2016/11/20 22:09:28, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees
-problem, pairs, 0, DivAll, SVM, 0.78, 0.73, 0.71, 0.73, 0.55, 2016/11/20 22:09:28, dp:greedy
-problem, pairs, 0, DivAll, RFT, 0.78, 0.78, 0.78, 0.78, 0.55, 2016/11/20 22:09:28, dp:greedy
-problem, pairs, 0, DivAll, ADA, 0.76, 0.76, 0.76, 0.76, 0.55, 2016/11/20 22:09:29, dp:greedy
+sub_mode, algo_mode, multi, div, classifier, p, r, f1, acc, baseline, date, tags, feats, feat_types
+submiss, categ,1, Div1, SVM,0.37,0.72,0.47,0.03,0.24, 2016/11/20 21:56:07, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div1, RFT,0.57,0.31,0.38,0.17,0.24, 2016/11/20 21:56:47, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div1, ADA,0.56,0.32,0.39,0.16,0.24, 2016/11/20 21:57:23, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div1, LRC,0.57,0.23,0.3,0.12,0.24, 2016/11/20 21:57:31, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div1, KNN,0.44,0.32,0.37,0.13,0.24, 2016/11/20 21:58:29, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, graph,0, Div1, SVM,0.49,0.51,0.48,0.51,0.46, 2016/11/20 21:58:30, dfs and similar:flows:shortest paths:trees,,
+submiss, graph,0, Div1, RFT,0.54,0.56,0.54,0.56,0.46, 2016/11/20 21:58:34, dfs and similar:flows:shortest paths:trees,,
+submiss, graph,0, Div1, ADA,0.53,0.54,0.53,0.54,0.46, 2016/11/20 21:58:38, dfs and similar:flows:shortest paths:trees,,
+submiss, graph,0, Div1, LRC,0.49,0.51,0.48,0.51,0.46, 2016/11/20 21:58:39, dfs and similar:flows:shortest paths:trees,,
+submiss, graph,0, Div1, KNN,0.45,0.46,0.46,0.46,0.46, 2016/11/20 21:58:40, dfs and similar:flows:shortest paths:trees,,
+submiss, maths,0, Div1, SVM,0.47,0.47,0.46,0.47,0.24, 2016/11/20 21:58:42, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, maths,0, Div1, RFT,0.51,0.5,0.49,0.5,0.24, 2016/11/20 21:58:50, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, maths,0, Div1, ADA,0.49,0.48,0.48,0.48,0.24, 2016/11/20 21:58:58, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, maths,0, Div1, LRC,0.47,0.47,0.46,0.47,0.24, 2016/11/20 21:58:59, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, maths,0, Div1, KNN,0.37,0.36,0.36,0.36,0.24, 2016/11/20 21:59:03, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, algos,0, Div1, SVM,0.39,0.41,0.38,0.41,0.2, 2016/11/20 21:59:05, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, algos,0, Div1, RFT,0.44,0.45,0.43,0.45,0.2, 2016/11/20 21:59:25, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, algos,0, Div1, ADA,0.43,0.43,0.42,0.43,0.2, 2016/11/20 21:59:42, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, algos,0, Div1, LRC,0.39,0.41,0.39,0.41,0.2, 2016/11/20 21:59:46, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, algos,0, Div1, KNN,0.31,0.31,0.31,0.31,0.2, 2016/11/20 22:00:01, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, pairs,0, Div1, SVM,0.73,0.52,0.49,0.52,0.65, 2016/11/20 22:00:01, dp:greedy,,
+submiss, pairs,0, Div1, RFT,0.71,0.72,0.71,0.72,0.65, 2016/11/20 22:00:03, dp:greedy,,
+submiss, pairs,0, Div1, ADA,0.71,0.72,0.71,0.72,0.65, 2016/11/20 22:00:05, dp:greedy,,
+submiss, pairs,0, Div1, LRC,0.7,0.71,0.7,0.71,0.65, 2016/11/20 22:00:05, dp:greedy,,
+submiss, pairs,0, Div1, KNN,0.65,0.67,0.66,0.67,0.65, 2016/11/20 22:00:07, dp:greedy,,
+submiss, categ,1, Div1, KNN,0.54,0.28,0.35,0.15,0.24, 2016/11/20 22:01:46, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, graph,0, Div1, KNN,0.47,0.5,0.47,0.5,0.46, 2016/11/20 22:01:47, dfs and similar:flows:shortest paths:trees,,
+submiss, maths,0, Div1, KNN,0.37,0.37,0.36,0.37,0.24, 2016/11/20 22:01:52, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, algos,0, Div1, KNN,0.32,0.34,0.32,0.34,0.2, 2016/11/20 22:02:08, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, pairs,0, Div1, KNN,0.68,0.69,0.67,0.69,0.65, 2016/11/20 22:02:10, dp:greedy,,
+submiss, categ,1, Div1, ADA,0.57,0.33,0.4,0.17,0.24, 2016/11/20 22:06:35, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, graph,0, Div1, ADA,0.52,0.53,0.52,0.53,0.46, 2016/11/20 22:06:44, dfs and similar:flows:shortest paths:trees,,
+submiss, maths,0, Div1, ADA,0.5,0.48,0.48,0.48,0.24, 2016/11/20 22:07:02, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, algos,0, Div1, ADA,0.42,0.43,0.42,0.43,0.2, 2016/11/20 22:07:45, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, pairs,0, Div1, ADA,0.71,0.72,0.72,0.72,0.65, 2016/11/20 22:07:47, dp:greedy,,
+problem, categ,1, Div1, SVM,0.4,0.76,0.52,0.03,0.2, 2016/11/20 22:09:11, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+problem, categ,1, Div1, RFT,0.57,0.32,0.4,0.19,0.2, 2016/11/20 22:09:14, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+problem, categ,1, Div1, ADA,0.51,0.39,0.43,0.16,0.2, 2016/11/20 22:09:18, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+problem, graph,0, Div1, SVM,0.61,0.61,0.6,0.61,0.49, 2016/11/20 22:09:18, dfs and similar:flows:shortest paths:trees,,
+problem, graph,0, Div1, RFT,0.63,0.64,0.62,0.64,0.49, 2016/11/20 22:09:19, dfs and similar:flows:shortest paths:trees,,
+problem, graph,0, Div1, ADA,0.62,0.62,0.61,0.62,0.49, 2016/11/20 22:09:20, dfs and similar:flows:shortest paths:trees,,
+problem, maths,0, Div1, SVM,0.42,0.44,0.42,0.44,0.34, 2016/11/20 22:09:20, combinatorics:games:geometry:matrices:number theory:probabilities,,
+problem, maths,0, Div1, RFT,0.44,0.46,0.43,0.46,0.34, 2016/11/20 22:09:21, combinatorics:games:geometry:matrices:number theory:probabilities,,
+problem, maths,0, Div1, ADA,0.49,0.51,0.49,0.51,0.34, 2016/11/20 22:09:23, combinatorics:games:geometry:matrices:number theory:probabilities,,
+problem, algos,0, Div1, SVM,0.42,0.42,0.41,0.42,0.2, 2016/11/20 22:09:23, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+problem, algos,0, Div1, RFT,0.46,0.46,0.45,0.46,0.2, 2016/11/20 22:09:25, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+problem, algos,0, Div1, ADA,0.42,0.42,0.42,0.42,0.2, 2016/11/20 22:09:28, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+problem, pairs,0, Div1, SVM,0.78,0.73,0.71,0.73,0.55, 2016/11/20 22:09:28, dp:greedy,,
+problem, pairs,0, Div1, RFT,0.78,0.78,0.78,0.78,0.55, 2016/11/20 22:09:28, dp:greedy,,
+problem, pairs,0, Div1, ADA,0.76,0.76,0.76,0.76,0.55, 2016/11/20 22:09:29, dp:greedy,,
+submiss, categ,1, Div1, SVM,0.37,0.72,0.47,0.03,0.24, 2016/11/20 23:19:23, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div1, RFT,0.57,0.31,0.38,0.17,0.24, 2016/11/20 23:19:54, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, graph,0, Div1, SVM,0.49,0.52,0.49,0.52,0.46, 2016/11/20 23:19:54, dfs and similar:flows:shortest paths:trees,,
+submiss, graph,0, Div1, RFT,0.55,0.56,0.54,0.56,0.46, 2016/11/20 23:19:57, dfs and similar:flows:shortest paths:trees,,
+submiss, maths,0, Div1, SVM,0.47,0.47,0.46,0.47,0.24, 2016/11/20 23:19:59, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, maths,0, Div1, RFT,0.49,0.48,0.48,0.48,0.24, 2016/11/20 23:20:07, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, algos,0, Div1, SVM,0.38,0.4,0.38,0.4,0.2, 2016/11/20 23:20:10, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, algos,0, Div1, RFT,0.43,0.44,0.43,0.44,0.2, 2016/11/20 23:20:26, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, pairs,0, Div1, SVM,0.73,0.52,0.5,0.52,0.65, 2016/11/20 23:20:26, dp:greedy,,
+submiss, pairs,0, Div1, RFT,0.72,0.73,0.71,0.73,0.65, 2016/11/20 23:20:28, dp:greedy,,
+submiss, categ,0, Div2, SVM,0.36,0.37,0.33,0.37,0.21, 2016/11/20 23:20:33, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div2, RFT,0.36,0.38,0.36,0.38,0.21, 2016/11/20 23:21:26, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, graph,0, Div2, SVM,0.54,0.56,0.53,0.56,0.48, 2016/11/20 23:21:27, dfs and similar:flows:shortest paths:trees,,
+submiss, graph,0, Div2, RFT,0.55,0.57,0.55,0.57,0.48, 2016/11/20 23:21:33, dfs and similar:flows:shortest paths:trees,,
+submiss, maths,0, Div2, SVM,0.47,0.47,0.44,0.47,0.33, 2016/11/20 23:21:34, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, maths,0, Div2, RFT,0.45,0.46,0.44,0.46,0.33, 2016/11/20 23:21:41, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, algos,0, Div2, SVM,0.4,0.42,0.39,0.42,0.19, 2016/11/20 23:21:43, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, algos,0, Div2, RFT,0.42,0.42,0.41,0.42,0.19, 2016/11/20 23:22:00, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, pairs,0, Div2, SVM,0.73,0.63,0.56,0.63,0.54, 2016/11/20 23:22:00, dp:greedy,,
+submiss, pairs,0, Div2, RFT,0.74,0.74,0.74,0.74,0.54, 2016/11/20 23:22:02, dp:greedy,,
+submiss, categ,0, DivAll, SVM,0.37,0.38,0.34,0.38,0.21, 2016/11/20 23:22:13, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, DivAll, RFT,0.39,0.41,0.39,0.41,0.21, 2016/11/20 23:23:35, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, graph,0, DivAll, SVM,0.52,0.53,0.51,0.53,0.38, 2016/11/20 23:23:35, dfs and similar:flows:shortest paths:trees,,
+submiss, graph,0, DivAll, RFT,0.56,0.57,0.56,0.57,0.38, 2016/11/20 23:23:42, dfs and similar:flows:shortest paths:trees,,
+submiss, maths,0, DivAll, SVM,0.48,0.47,0.44,0.47,0.29, 2016/11/20 23:23:44, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, maths,0, DivAll, RFT,0.52,0.51,0.5,0.51,0.29, 2016/11/20 23:23:57, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, algos,0, DivAll, SVM,0.41,0.41,0.38,0.41,0.17, 2016/11/20 23:24:01, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, algos,0, DivAll, RFT,0.46,0.46,0.45,0.46,0.17, 2016/11/20 23:24:34, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, pairs,0, DivAll, SVM,0.72,0.57,0.52,0.57,0.54, 2016/11/20 23:24:34, dp:greedy,,
+submiss, pairs,0, DivAll, RFT,0.75,0.75,0.75,0.75,0.54, 2016/11/20 23:24:40, dp:greedy,,
+submiss, categ,1, Div1, SVM,0.37,0.72,0.47,0.04,0.24, 2016/11/21 15:22:24, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div1, RFT,0.58,0.3,0.38,0.16,0.24, 2016/11/21 15:22:50, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div2, SVM,0.38,0.74,0.49,0.02,0.2, 2016/11/21 15:22:57, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div2, RFT,0.58,0.3,0.37,0.16,0.2, 2016/11/21 15:24:06, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, SVM,0.37,0.73,0.48,0.02,0.21, 2016/11/21 15:24:26, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, RFT,0.6,0.31,0.39,0.17,0.21, 2016/11/21 15:25:51, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div1, SVM,0.38,0.41,0.37,0.41,0.22, 2016/11/22 13:23:26, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div1, SVM,0.38,0.4,0.36,0.4,0.22, 2016/11/29 17:39:07, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div1, RFT,0.41,0.43,0.41,0.43,0.22, 2016/11/29 17:39:27, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div2, SVM,0.35,0.38,0.33,0.38,0.21, 2016/11/29 17:39:32, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div2, RFT,0.36,0.38,0.36,0.38,0.21, 2016/11/29 17:40:11, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, DivAll, SVM,0.37,0.38,0.34,0.38,0.21, 2016/11/29 17:40:21, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, DivAll, RFT,0.39,0.41,0.39,0.41,0.21, 2016/11/29 17:41:30, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div1, RFT,0.29,0.32,0.3,0.32,0.22, 2016/11/29 17:45:45, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div2, RFT,0.25,0.27,0.26,0.27,0.21, 2016/11/29 17:46:31, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, DivAll, RFT,0.26,0.28,0.27,0.28,0.21, 2016/11/29 17:47:45, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div1, RFT,0.37,0.4,0.38,0.4,0.22, 2016/11/29 17:48:20, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div2, RFT,0.31,0.33,0.31,0.33,0.21, 2016/11/29 17:49:12, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, DivAll, RFT,0.33,0.36,0.34,0.36,0.21, 2016/11/29 17:50:04, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div1, RFT,0.34,0.37,0.35,0.37,0.22, 2016/11/29 17:51:32, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div2, RFT,0.29,0.32,0.3,0.32,0.21, 2016/11/29 17:52:04, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div1, RFT,0.41,0.43,0.41,0.43,0.22, 2016/11/29 21:00:14, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div2, RFT,0.35,0.37,0.35,0.37,0.21, 2016/11/29 21:00:43, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div1, RFT,0.4,0.43,0.41,0.43,0.22, 2017/02/01 15:12:46, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div2, RFT,0.36,0.38,0.36,0.38,0.21, 2017/02/01 15:13:23, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, DivAll, RFT,0.39,0.41,0.39,0.41,0.21, 2017/02/01 15:14:21, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div1, RFT,0.4,0.43,0.41,0.43,0.22, 2017/02/04 14:33:32, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div2, RFT,0.36,0.39,0.36,0.39,0.21, 2017/02/04 14:34:34, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, DivAll, RFT,0.39,0.41,0.39,0.41,0.21, 2017/02/04 14:36:19, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div1, RFT,0.41,0.44,0.41,0.44,0.22, 2017/02/04 16:55:50, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div2, RFT,0.37,0.39,0.36,0.39,0.21, 2017/02/04 16:56:55, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, DivAll, RFT,0.4,0.42,0.4,0.42,0.21, 2017/02/04 16:58:21, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, pairs,0, Div1, RFT,0.72,0.73,0.72,0.73,0.65, 2017/02/04 17:10:15, dp:greedy,,
+submiss, pairs,0, Div2, RFT,0.75,0.75,0.75,0.75,0.54, 2017/02/04 17:10:17, dp:greedy,,
+submiss, pairs,0, DivAll, RFT,0.76,0.76,0.76,0.76,0.54, 2017/02/04 17:10:19, dp:greedy,,
+submiss, categ,0, Div1, RFT,0.47,0.48,0.47,0.48,0.23, 2017/02/04 20:44:30, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, Div2, RFT,0.41,0.43,0.41,0.43,0.24, 2017/02/04 20:45:05, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, DivAll, RFT,0.44,0.46,0.45,0.46,0.23, 2017/02/04 20:46:00, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div1, SVM,0.38,0.75,0.49,0.04,0.25, 2017/02/04 20:48:45, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div1, RFT,0.62,0.33,0.41,0.19,0.25, 2017/02/04 20:49:17, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div2, SVM,0.39,0.78,0.51,0.02,0.21, 2017/02/04 20:49:28, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div2, RFT,0.59,0.32,0.39,0.18,0.21, 2017/02/04 20:50:35, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, SVM,0.39,0.76,0.5,0.03,0.22, 2017/02/04 20:50:54, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, RFT,0.62,0.32,0.41,0.19,0.22, 2017/02/04 20:52:45, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, pairs,0, Div1, SVM,0.75,0.76,0.66,0.76,0.76, 2017/02/06 15:51:36, brute force:dp,,
+submiss, pairs,0, Div1, RFT,0.68,0.74,0.69,0.74,0.76, 2017/02/06 15:51:38, brute force:dp,,
+submiss, pairs,0, Div2, SVM,0.68,0.52,0.38,0.52,0.51, 2017/02/06 15:51:38, brute force:dp,,
+submiss, pairs,0, Div2, RFT,0.71,0.71,0.71,0.71,0.51, 2017/02/06 15:51:40, brute force:dp,,
+submiss, pairs,0, DivAll, SVM,0.65,0.6,0.46,0.6,0.6, 2017/02/06 15:51:40, brute force:dp,,
+submiss, pairs,0, DivAll, RFT,0.72,0.73,0.72,0.73,0.6, 2017/02/06 15:51:44, brute force:dp,,
+submiss, pairs,0, Div1, SVM,0.81,0.77,0.72,0.77,0.69, 2017/02/06 15:53:26, graphs:math,,
+submiss, pairs,0, Div1, RFT,0.84,0.84,0.84,0.84,0.69, 2017/02/06 15:53:27, graphs:math,,
+submiss, pairs,0, Div2, SVM,0.84,0.83,0.8,0.83,0.76, 2017/02/06 15:53:27, graphs:math,,
+submiss, pairs,0, Div2, RFT,0.89,0.89,0.89,0.89,0.76, 2017/02/06 15:53:28, graphs:math,,
+submiss, pairs,0, DivAll, SVM,0.82,0.8,0.76,0.8,0.74, 2017/02/06 15:53:28, graphs:math,,
+submiss, pairs,0, DivAll, RFT,0.88,0.88,0.88,0.88,0.74, 2017/02/06 15:53:30, graphs:math,,
+submiss, categ,1, Div1, SVM,0.37,0.72,0.48,0.04,0.24, 2017/02/09 10:08:27, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div1, RFT,0.58,0.3,0.38,0.17,0.24, 2017/02/09 10:08:59, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div2, SVM,0.38,0.74,0.49,0.02,0.2, 2017/02/09 10:09:05, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div2, RFT,0.58,0.3,0.37,0.17,0.2, 2017/02/09 10:09:44, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, SVM,0.38,0.73,0.48,0.02,0.21, 2017/02/09 10:09:55, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, RFT,0.61,0.31,0.39,0.17,0.21, 2017/02/09 10:11:06, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div1, SVM,0.38,0.76,0.49,0.05,0.25, 2017/02/09 10:12:43, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div1, RFT,0.6,0.33,0.41,0.19,0.25, 2017/02/09 10:13:14, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div2, SVM,0.39,0.77,0.51,0.02,0.21, 2017/02/09 10:13:26, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div2, RFT,0.6,0.32,0.4,0.18,0.21, 2017/02/09 10:14:33, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, SVM,0.39,0.76,0.5,0.03,0.22, 2017/02/09 10:14:52, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, RFT,0.62,0.33,0.41,0.19,0.22, 2017/02/09 10:15:52, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, Div1, SVM,0.38,0.74,0.49,0.04,0.24, 2017/02/09 10:17:17, brute force:data structures:dp:graphs:greedy:implementation:math:strings,,
+submiss, categ,1, Div1, RFT,0.6,0.32,0.4,0.19,0.24, 2017/02/09 10:17:55, brute force:data structures:dp:graphs:greedy:implementation:math:strings,,
+submiss, categ,1, Div2, SVM,0.39,0.76,0.5,0.02,0.2, 2017/02/09 10:18:08, brute force:data structures:dp:graphs:greedy:implementation:math:strings,,
+submiss, categ,1, Div2, RFT,0.59,0.31,0.39,0.17,0.2, 2017/02/09 10:19:23, brute force:data structures:dp:graphs:greedy:implementation:math:strings,,
+submiss, categ,1, DivAll, SVM,0.38,0.75,0.49,0.03,0.21, 2017/02/09 10:19:45, brute force:data structures:dp:graphs:greedy:implementation:math:strings,,
+submiss, categ,1, DivAll, RFT,0.61,0.31,0.4,0.17,0.21, 2017/02/09 14:09:53, brute force:data structures:dp:graphs:greedy:implementation:math:strings,,
+submiss, graph,0, DivAll, SVM,0.53,0.54,0.52,0.54,0.38, 2017/02/10 16:17:02, dfs and similar:flows:shortest paths:trees,,
+submiss, graph,0, DivAll, RFT,0.59,0.59,0.58,0.59,0.38, 2017/02/10 16:17:07, dfs and similar:flows:shortest paths:trees,,
+submiss, maths,0, DivAll, SVM,0.5,0.49,0.47,0.49,0.29, 2017/02/10 16:17:08, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, maths,0, DivAll, RFT,0.53,0.53,0.52,0.53,0.29, 2017/02/10 16:17:18, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, algos,0, DivAll, SVM,0.42,0.42,0.39,0.42,0.17, 2017/02/10 16:17:22, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, algos,0, DivAll, RFT,0.47,0.47,0.46,0.47,0.17, 2017/02/10 16:17:43, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, graph,0, DivAll, ADA,0.56,0.57,0.56,0.57,0.38, 2017/02/10 16:27:44, dfs and similar:flows:shortest paths:trees,,
+submiss, graph,0, DivAll, LRC,0.53,0.54,0.52,0.54,0.38, 2017/02/10 16:27:45, dfs and similar:flows:shortest paths:trees,,
+submiss, graph,0, DivAll, KNN,0.49,0.5,0.48,0.5,0.38, 2017/02/10 16:27:48, dfs and similar:flows:shortest paths:trees,,
+submiss, maths,0, DivAll, ADA,0.51,0.51,0.5,0.51,0.29, 2017/02/10 16:27:57, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, maths,0, DivAll, LRC,0.5,0.5,0.47,0.5,0.29, 2017/02/10 16:28:00, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, maths,0, DivAll, KNN,0.41,0.41,0.38,0.41,0.29, 2017/02/10 16:28:09, combinatorics:games:geometry:matrices:number theory:probabilities,,
+submiss, algos,0, DivAll, ADA,0.45,0.46,0.45,0.46,0.17, 2017/02/10 16:28:43, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, algos,0, DivAll, LRC,0.42,0.43,0.4,0.43,0.17, 2017/02/10 16:28:53, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, algos,0, DivAll, KNN,0.36,0.36,0.34,0.36,0.17, 2017/02/10 16:29:34, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees,,
+submiss, pairs,0, DivAll, SVM,0.83,0.81,0.77,0.81,0.74, 2017/02/10 16:43:40, graphs:math,,
+submiss, pairs,0, DivAll, RFT,0.88,0.88,0.88,0.88,0.74, 2017/02/10 16:43:44, graphs:math,,
+submiss, categ,1, DivAll, SVM,0.39,0.75,0.49,0.03,0.21, 2017/02/10 16:44:49, brute force:data structures:dp:graphs:greedy:implementation:math:strings,,
+submiss, categ,1, DivAll, RFT,0.62,0.32,0.4,0.17,0.21, 2017/02/10 16:46:58, brute force:data structures:dp:graphs:greedy:implementation:math:strings,,
+problem, categ,1, DivAll, SVM,0.45,0.78,0.56,0.06,0.21, 2017/02/10 16:48:08, brute force:data structures:dp:graphs:greedy:implementation:math:strings,,
+problem, categ,1, DivAll, RFT,0.67,0.36,0.45,0.21,0.21, 2017/02/10 16:48:15, brute force:data structures:dp:graphs:greedy:implementation:math:strings,,
+submiss, categ,1, DivAll, SVM,0.39,0.75,0.51,0.03,0.21, 2017/02/10 16:56:40, brute force:data structures:dp:graphs:greedy:implementation:math:strings,,
+submiss, categ,1, DivAll, RFT,0.65,0.31,0.42,0.18,0.21, 2017/02/10 16:58:02, brute force:data structures:dp:graphs:greedy:implementation:math:strings,,
+submiss, categ,1, DivAll, SVM,0.39,0.77,0.51,0.03,0.22, 2017/02/10 17:05:34, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, RFT,0.65,0.32,0.43,0.19,0.22, 2017/02/10 17:06:37, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, ANN,0.61,0.35,0.45,0.19,0.22, 2017/02/10 17:17:48, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, SVM,0.46,0.6,0.52,0.1,0.22, 2017/02/10 21:19:17, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, SVM,0.47,0.6,0.52,0.1,0.22, 2017/02/10 21:21:00, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,1, DivAll, SVM,0.47,0.67,0.55,0.11,0.24, 2017/02/10 21:22:18, data structures:dp:graphs:greedy:implementation:math,,
+submiss, pairs,0, DivAll, ANN,0.87,0.87,0.87,0.87,0.74, 2017/02/10 21:24:40, graphs:math,,
+pandas, categ,1, DivAll, SVM,0.47,0.66,0.55,0.11,0.24, 2017/02/10 22:49:08, data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.46,0.59,0.52,0.09,0.22, 2017/02/10 22:51:28, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.39,0.76,0.51,0.03,0.22, 2017/02/10 22:52:51, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.36,0.75,0.48,0.02,0.22, 2017/02/10 23:05:32, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.34,0.72,0.46,0.01,0.22, 2017/02/10 23:07:06, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.33,0.74,0.46,0.01,0.22, 2017/02/10 23:08:45, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.32,0.73,0.45,0.01,0.22, 2017/02/10 23:10:06, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, RFT,0.26,0,0,0,0.22, 2017/02/10 23:11:45, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, RFT,0.47,0.23,0.31,0.11,0.22, 2017/02/10 23:13:44, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, RFT,0.46,0.26,0.33,0.12,0.22, 2017/02/10 23:15:20, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.34,0.72,0.46,0.01,0.22, 2017/02/11 10:42:18, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.66,0.06,0.11,0.04,0.22, 2017/02/11 10:43:45, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.67,0.17,0.27,0.11,0.22, 2017/02/11 10:46:41, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.66,0.06,0.11,0.04,0.22, 2017/02/11 10:49:13, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.41,0.68,0.51,0.06,0.22, 2017/02/11 10:55:42, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.34,0.64,0.45,0.04,0.22, 2017/02/11 10:56:51, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.31,0.58,0.4,0.01,0.22, 2017/02/11 10:58:33, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.31,0.6,0.41,0.01,0.22, 2017/02/11 10:59:39, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, SVM,0.3,0.67,0.41,0,0.22, 2017/02/11 11:00:55, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, RFT,0.36,0,0,0,0.22, 2017/02/11 11:02:47, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, DBT,0.41,0.43,0.42,0.09,0.22, 2017/02/11 11:08:42, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, MNB,0.42,0.55,0.47,0.09,0.22, 2017/02/11 11:12:42, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, MNB,0.42,0.55,0.47,0.09,0.22, 2017/02/11 11:17:26, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, GNB,0.35,0.56,0.43,0.04,0.22, 2017/02/11 11:22:39, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, MNB,0.37,0.05,0.09,0.01,0.22, 2017/02/11 11:28:29, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, MNB,0.42,0.55,0.47,0.09,0.22, 2017/02/11 11:30:37, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, MNB,0.42,0.55,0.47,0.09,0.22, 2017/02/11 11:31:54, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, MNB,0.43,0.52,0.47,0.1,0.22, 2017/02/11 11:32:43, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,1, DivAll, MNB,0.43,0.52,0.47,0.1,0.22, 2017/02/11 11:39:21, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, DivAll, MNB,0.3,0.47,0.37,0.14,0.23, 2017/02/11 12:10:38, brute force:data structures:dp:graphs:greedy:implementation:math,,
+submiss, categ,0, DivAll, RFT,0.66,0.22,0.33,0.22,0.23, 2017/02/11 12:12:21, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,0, DivAll, MNB,0.37,0.37,0.37,0.37,0.23, 2017/02/11 12:15:33, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,0, DivAll, RFT,0.46,0.46,0.46,0.46,0.23, 2017/02/11 12:17:45, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, categ,0, DivAll, SVM,0.41,0.41,0.41,0.41,0.23, 2017/02/11 12:19:04, brute force:data structures:dp:graphs:greedy:implementation:math,,
+pandas, pairs,0, DivAll, SVM,0.72,0.72,0.72,0.72,0.54, 2017/02/11 14:13:18, dp:greedy,,
+pandas, pairs,0, DivAll, RFT,0.76,0.76,0.76,0.76,0.54, 2017/02/11 14:13:34, dp:greedy,,
+pandas, pairs,0, DivAll, MNB,0.67,0.67,0.67,0.67,0.54, 2017/02/11 14:13:48, dp:greedy,,
+pandas, pairs,0, DivAll, ADA,0.75,0.75,0.75,0.75,0.54, 2017/02/11 14:14:41, dp:greedy,,
+pandas, pairs,0, DivAll, ADA,0.69,0.69,0.69,0.69,0.54, 2017/02/11 14:17:44, dp:greedy, int:double:char:vector:ll:point:arrays:problem_id:id,
+pandas, pairs,0, DivAll, SVM,0.66,0.66,0.66,0.66,0.54, 2017/02/11 14:19:20, dp:greedy, int:double:char:vector:ll:point:arrays:problem_id:id,
+pandas, pairs,0, DivAll, SVM,0.72,0.72,0.72,0.72,0.54, 2017/02/11 15:58:30, dp:greedy, id:problem_id:single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs:ors,
+pandas, pairs,0, DivAll, RFT,0.76,0.76,0.76,0.76,0.54, 2017/02/11 15:58:54, dp:greedy, id:problem_id:single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs:ors,
+pandas, pairs,0, DivAll, ADA,0.75,0.75,0.75,0.75,0.54, 2017/02/11 15:59:11, dp:greedy, id:problem_id:single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs:ors,
+pandas, pairs,0, DivAll, SVM,0.66,0.66,0.66,0.66,0.54, 2017/02/11 16:57:33, dp:greedy, int:double:char:vector:ll:point:arrays:problem_id:id,
+pandas, pairs,0, DivAll, RFT,0.66,0.66,0.66,0.66,0.54, 2017/02/11 16:57:48, dp:greedy, int:double:char:vector:ll:point:arrays:problem_id:id,
+pandas, pairs,0, DivAll, ADA,0.69,0.69,0.69,0.69,0.54, 2017/02/11 16:58:09, dp:greedy, int:double:char:vector:ll:point:arrays:problem_id:id,
+pandas, pairs,0, DivAll, SVM,0.67,0.67,0.67,0.67,0.54, 2017/02/11 17:11:40, dp:greedy, int:double:char:vector:ll:point:arrays:operations:plus:minus:times:divide:modulus:problem_id:id,
+pandas, pairs,0, DivAll, RFT,0.7,0.7,0.7,0.7,0.54, 2017/02/11 17:11:54, dp:greedy, int:double:char:vector:ll:point:arrays:operations:plus:minus:times:divide:modulus:problem_id:id,
+pandas, pairs,0, DivAll, ADA,0.71,0.71,0.71,0.71,0.54, 2017/02/11 17:12:08, dp:greedy, int:double:char:vector:ll:point:arrays:operations:plus:minus:times:divide:modulus:problem_id:id,
+pandas, pairs,0, DivAll, SVM,0.7,0.7,0.7,0.7,0.54, 2017/02/11 17:14:41, dp:greedy, int:double:char:vector:ll:point:arrays:single_loop:double_loop:triple_loop:if_loop:ifs:operations:plus:minus:times:divide:modulus:problem_id:id,
+pandas, pairs,0, DivAll, RFT,0.73,0.73,0.73,0.73,0.54, 2017/02/11 17:14:55, dp:greedy, int:double:char:vector:ll:point:arrays:single_loop:double_loop:triple_loop:if_loop:ifs:operations:plus:minus:times:divide:modulus:problem_id:id,
+pandas, pairs,0, DivAll, ADA,0.73,0.73,0.73,0.73,0.54, 2017/02/11 17:15:09, dp:greedy, int:double:char:vector:ll:point:arrays:single_loop:double_loop:triple_loop:if_loop:ifs:operations:plus:minus:times:divide:modulus:problem_id:id,
+pandas, pairs,0, DivAll, SVM,0.57,0.57,0.57,0.57,0.54, 2017/02/11 17:16:23, dp:greedy, lines:problem_id:id,
+pandas, pairs,0, DivAll, RFT,0.59,0.59,0.59,0.59,0.54, 2017/02/11 17:16:37, dp:greedy, lines:problem_id:id,
+pandas, pairs,0, DivAll, ADA,0.6,0.6,0.6,0.6,0.54, 2017/02/11 17:16:51, dp:greedy, lines:problem_id:id,
+pandas, pairs,0, DivAll, SVM,0.72,0.72,0.72,0.72,0.54, 2017/02/11 20:36:39, dp:greedy, id:problem_id:single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs,
+pandas, pairs,0, DivAll, RFT,0.76,0.76,0.76,0.76,0.54, 2017/02/11 20:36:54, dp:greedy, id:problem_id:single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs,
+pandas, pairs,0, DivAll, ADA,0.75,0.75,0.75,0.75,0.54, 2017/02/11 20:37:08, dp:greedy, id:problem_id:single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs,
+pandas, pairs,0, DivAll, SVM,0.68,0.68,0.68,0.68,0.6, 2017/02/15 10:09:25, brute force:dp, id:problem_id:single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs, all_feats
+pandas, pairs,0, DivAll, SVM,0.52,0.52,0.52,0.52,0.6, 2017/02/15 10:09:38, brute force:dp, lines:problem_id:id, lines
+pandas, pairs,0, DivAll, SVM,0.62,0.62,0.62,0.62,0.6, 2017/02/15 10:09:52, brute force:dp, int:double:float:char:vector:ll:point:arrays:problem_id:id, count_vars
+pandas, pairs,0, DivAll, SVM,0.63,0.63,0.63,0.63,0.6, 2017/02/15 10:10:05, brute force:dp, int:double:float:char:vector:ll:point:arrays:operations:plus:minus:times:divide:modulus:problem_id:id, count_vars:operations
+pandas, pairs,0, DivAll, SVM,0.66,0.66,0.66,0.66,0.6, 2017/02/15 10:10:19, brute force:dp, int:double:float:char:vector:ll:point:arrays:operations:plus:minus:times:divide:modulus:single_loop:double_loop:triple_loop:if_loop:ifs:problem_id:id, count_vars:operations:constructs
+pandas, pairs,0, DivAll, RFT,0.72,0.72,0.72,0.72,0.6, 2017/02/15 10:10:44, brute force:dp, id:problem_id:single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs, all_feats
+pandas, pairs,0, DivAll, RFT,0.61,0.61,0.61,0.61,0.6, 2017/02/15 10:11:08, brute force:dp, lines:problem_id:id, lines
+pandas, pairs,0, DivAll, RFT,0.66,0.66,0.66,0.66,0.6, 2017/02/15 10:11:22, brute force:dp, int:double:float:char:vector:ll:point:arrays:problem_id:id, count_vars
+pandas, pairs,0, DivAll, RFT,0.68,0.68,0.68,0.68,0.6, 2017/02/15 10:11:36, brute force:dp, int:double:float:char:vector:ll:point:arrays:operations:plus:minus:times:divide:modulus:problem_id:id, count_vars:operations
+pandas, pairs,0, DivAll, RFT,0.7,0.7,0.7,0.7,0.6, 2017/02/15 10:11:51, brute force:dp, int:double:float:char:vector:ll:point:arrays:operations:plus:minus:times:divide:modulus:single_loop:double_loop:triple_loop:if_loop:ifs:problem_id:id, count_vars:operations:constructs
+pandas, pairs,0, DivAll, ADA,0.71,0.71,0.71,0.71,0.6, 2017/02/15 10:12:06, brute force:dp, id:problem_id:single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs, all_feats
+pandas, pairs,0, DivAll, ADA,0.62,0.62,0.62,0.62,0.6, 2017/02/15 10:12:22, brute force:dp, lines:problem_id:id, lines
+pandas, pairs,0, DivAll, ADA,0.69,0.69,0.69,0.69,0.6, 2017/02/15 10:12:46, brute force:dp, int:double:float:char:vector:ll:point:arrays:problem_id:id, count_vars
+pandas, pairs,0, DivAll, ADA,0.7,0.7,0.7,0.7,0.6, 2017/02/15 10:13:12, brute force:dp, int:double:float:char:vector:ll:point:arrays:operations:plus:minus:times:divide:modulus:problem_id:id, count_vars:operations
+pandas, pairs,0, DivAll, ADA,0.7,0.7,0.7,0.7,0.6, 2017/02/15 10:13:38, brute force:dp, int:double:float:char:vector:ll:point:arrays:operations:plus:minus:times:divide:modulus:single_loop:double_loop:triple_loop:if_loop:ifs:problem_id:id, count_vars:operations:constructs

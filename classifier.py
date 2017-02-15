@@ -15,11 +15,12 @@ from sklearn import metrics
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 from sklearn.model_selection import StratifiedKFold
-from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import MultinomialNB, GaussianNB
 from sklearn.decomposition import PCA
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_selection import SelectKBest, chi2, f_classif
+from sklearn.tree import DecisionTreeClassifier
 
 from collections import defaultdict
 from collections import Counter
@@ -28,16 +29,24 @@ import time
 
 import config
 
-def prepare_data(feats_file,tags_file, multi, row_mode):
+import pandas as pd
+
+from scipy.stats import chi2_contingency
+
+col_names = []
+
+def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode):
 
 	f = open(feats_file, 'rb')
 	inst_feats = pickle.load(f)
-
+	# for col in inst_feats.columns:
+	# 	print(inst_feats[col].value_counts())
 	# print(type(inst_feats))
 
 	inst_tags = {}
-	global tags_list, classes, mlb
+	global tags_list, classes, mlb, col_names
 	tags_list = []
+	delete_keys = set()
 
 	with open(tags_file) as f:
 		for line in f:
@@ -51,27 +60,42 @@ def prepare_data(feats_file,tags_file, multi, row_mode):
 					tags_list += tags
 				else:
 					if key in inst_feats:
-						del inst_feats[key]
+						delete_keys.add(key)
+						# del inst_feats[key]
 
 	tags_list = list(set(tags_list))
 
 	X = []
 	Y = []
 
-	for instance in inst_feats:
-		if instance in inst_feats and instance in inst_tags:
-			if row_mode == 'problem':
-				X.append(inst_feats[instance])
-				Y.append(inst_tags[instance])
-			elif row_mode == 'submiss':
-				for submission in inst_feats[instance]:
-					X.append(submission)
+	if 'pandas' in feats_file:
+		for key in delete_keys:
+			inst_feats = inst_feats[inst_feats.problem_id != key]
+		inst_feats = choose_columns(inst_feats, feat_mode)
+		col_names = inst_feats.columns
+		for idx, row in inst_feats.iterrows():
+			problem_id = row['problem_id']
+			if problem_id in inst_tags:
+				X.append(row.drop(['id', 'problem_id']))
+				Y.append(inst_tags[row['problem_id']])
+		# conting = pd.crosstab(pd.DataFrame(X)['int'], np.array(Y).flatten())
+		# print(chi2_contingency(conting))
+	else:
+		for key in delete_keys:
+			del inst_feats[key]
+		for instance in inst_feats:
+			if instance in inst_feats and instance in inst_tags:
+				if row_mode == 'problem':
+					X.append(inst_feats[instance])
 					Y.append(inst_tags[instance])
+				elif row_mode == 'submiss':
+					for submission in inst_feats[instance]:
+						X.append(submission)
+						Y.append(inst_tags[instance])
 
 	X = np.array(X)
 	Y = np.array(Y)
 
-	X = choose_columns(X, Y)
 
 	print(X.shape)
 	# feature scaling
@@ -105,19 +129,42 @@ def prepare_data(feats_file,tags_file, multi, row_mode):
 	print('Baseline = ', baseline)
 	return (X,Y, baseline)
 
-def choose_columns(X, y):
+def choose_columns(X, feat_mode):
 	# for i in range(15,X.shape[1]-1):
 	# 	X = np.delete(X, i, 1)
 	# X = np.delete(X, [19,20,21,22,23], 1)
 	# X = SelectKBest(f_classif, k = 20).fit_transform(X, y)
+
+
+	if 'all_feats' in feat_mode:
+		return X
+
+	feats = {'count_vars':['int', 'double', 'float', 'char', 'vector', 'll', 'point', 'arrays'],\
+			'constructs': ['single_loop', 'double_loop', 'triple_loop', 'if_loop', 'ifs'],\
+			'operations':['operations', 'plus', 'minus', 'times', 'divide', 'modulus'],\
+			'lines': ['lines']}
+	lst = []
+	# lst+= ['triple_loop']
+	# lst += ['int', 'double', 'float', 'char', 'vector', 'll', 'point', 'arrays']
+	# lst += ['single_loop', 'double_loop', 'triple_loop', 'if_loop', 'ifs']
+	# lst += ['operations', 'plus', 'minus', 'times', 'divide', 'modulus']
+	#lst+=['lines']
+
+	for feat in feat_mode:
+		lst+=feats[feat]
+
+	lst+=['problem_id', 'id']
+	X = X.loc[:,lst]
 	return X
 
 def classify(train,gold,test, test_y,multi, classifier):
 
-	svm_dict = {'random_state':0, 'class_weight':{0:2,1:8}, 'C':1, 'dual':False}
+	svm_dict = {'random_state':0, 'class_weight':'balanced', 'C':1, 'dual':False}
 	# svm_dict = {}
 	clf_dict = {'SVM': svm.LinearSVC(**svm_dict), 'RFT': RandomForestClassifier(n_estimators=50), 'ADA': AdaBoostClassifier(n_estimators = 50),\
-						'KNN': KNeighborsClassifier(n_neighbors = 20, weights='distance'), 'LRC': LogisticRegression()}
+						'KNN': KNeighborsClassifier(n_neighbors = 20, weights='distance'), 'LRC': LogisticRegression(), \
+						'ANN': MLPClassifier(hidden_layer_sizes=(50, 50)), 'DBT':DecisionTreeClassifier(), 'MNB': MultinomialNB(alpha = 1000),\
+						'GNB': GaussianNB()}
 	clf = classifier
 
 	clf = OneVsRestClassifier(clf_dict[clf])
@@ -125,9 +172,11 @@ def classify(train,gold,test, test_y,multi, classifier):
 	# print(clf)
 	clf.fit(train, gold)
 	preds = clf.predict(test)
-	# print(metrics.classification_report(test_y,preds, target_names = classes))
-	prfs = metrics.precision_recall_fscore_support(test_y, preds, average='weighted')
+	print(metrics.classification_report(test_y,preds, target_names = classes))
+	prfs = metrics.precision_recall_fscore_support(test_y, preds, average='micro')
 	acc = metrics.accuracy_score(test_y, preds)
+	# auc = metrics.roc_auc_score(test_y, preds)
+	# print('Area Under Curve', auc)
 	# print(prfs, acc)
 	for i in range(3):
 		scores[i]+=prfs[i]
@@ -296,18 +345,27 @@ split = 0.8
 kernel = 'poly'
 cross_valid = 3
 # algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'pairs']
+# algorithm_modes = ['pairs']
 algorithm_modes = ['pairs']
-# algorithm_modes = ['categ']
+# algorithm_modes = ['graph', 'maths', 'algos']
 # classifiers = ['RFT']
-classifiers = ['SVM', 'RFT']
+# classifiers = ['SVM', 'RFT', 'ADA']
+# classifiers = ['ADA', 'LRC', 'KNN']
+# classifiers = ['ANN']
+classifiers=['SVM']
+# classifiers = ['DBT']
+# classifiers = ['MNB']
 # classifiers = ['ADA']
-multi=True
-
-row_mode = 'submiss'
+multi=False
+# feat_modes = [['all_feats'], ['lines'], ['count_vars'], ['count_vars','operations'], ['count_vars', 'operations', 'constructs']]
+feat_modes = [['lines']]
+row_mode = 'pandas'
 if row_mode == 'submiss':
 	feats_file = 'features-submissions.pickle'
 elif row_mode == 'problem':
 	feats_file = 'features.pickle'
+else:
+	feats_file = 'features-pandas.pickle'
 
 print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n", row_mode)
 
@@ -319,7 +377,7 @@ tags_file_dict = {'categ': 'data-set-single.txt', 'graph':'data-set-graphs.txt',
 # print(algorithm_mode, multi, row_mode)
 
 out_file = open('out-classifier.csv', 'a')
-for div, algo_mode, classifier in product(divs, algorithm_modes, classifiers):
+for div, algo_mode, classifier, feat_mode in product(divs, algorithm_modes, classifiers, feat_modes):
 	if algo_mode != 'categ':
 		multi = False
 	print("\n\n\n\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n", div)
@@ -329,7 +387,7 @@ for div, algo_mode, classifier in product(divs, algorithm_modes, classifiers):
 	else:
 		tags_file = in_dir + '-' + tags_file_dict[algo_mode]
 
-	data = prepare_data(feats_file, tags_file, multi, row_mode)
+	data = prepare_data(feats_file, tags_file, multi, row_mode, feat_mode)
 	X = data[0]
 	Y = data[1]
 	baseline = data[2]
@@ -347,8 +405,9 @@ for div, algo_mode, classifier in product(divs, algorithm_modes, classifiers):
 	print(classes)
 
 	timestamp = time.strftime("%Y/%m/%d %H:%M:%S")
-	out_file.write( '%s, %s, %d, %s, %s, %s, %s, %s, %s, %.2f, %s, %s\n' \
-			% (row_mode, algo_mode, multi, div, classifier, scores[0], scores[1], scores[2], scores[3], baseline, timestamp, ':'.join(classes)))
+	out_file.write( '%s, %s, %d, %s, %s, %s, %s, %s, %s, %.2f, %s, %s, %s, %s\n' \
+			% (row_mode, algo_mode, multi, div, classifier, scores[0], scores[1], scores[2], scores[3], baseline, timestamp, \
+			':'.join(classes), ':'.join(col_names), ':'.join(feat_mode)))
 
 	out_file.flush()
 out_file.close()

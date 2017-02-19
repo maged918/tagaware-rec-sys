@@ -59,18 +59,21 @@ def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode):
 					inst_tags[key] = tags
 					tags_list += tags
 				else:
-					if key in inst_feats:
-						delete_keys.add(key)
+					# if key in inst_feats:
+					delete_keys.add(key)
 						# del inst_feats[key]
 
 	tags_list = list(set(tags_list))
 
 	X = []
 	Y = []
-
+	print(len(delete_keys))
 	if 'pandas' in feats_file:
+		print(inst_feats.shape)
 		for key in delete_keys:
 			inst_feats = inst_feats[inst_feats.problem_id != key]
+		# inst_feats = inst_feats[inst_feats.problem_id.isin(list(delete_keys)) == False]
+		print(inst_feats.shape)
 		inst_feats = choose_columns(inst_feats, feat_mode)
 		col_names = inst_feats.columns
 		for idx, row in inst_feats.iterrows():
@@ -345,8 +348,8 @@ split = 0.8
 kernel = 'poly'
 cross_valid = 3
 # algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'pairs']
+algorithm_modes = ['categ']
 # algorithm_modes = ['pairs']
-algorithm_modes = ['pairs']
 # algorithm_modes = ['graph', 'maths', 'algos']
 # classifiers = ['RFT']
 # classifiers = ['SVM', 'RFT', 'ADA']
@@ -357,8 +360,8 @@ classifiers=['SVM']
 # classifiers = ['MNB']
 # classifiers = ['ADA']
 multi=False
-# feat_modes = [['all_feats'], ['lines'], ['count_vars'], ['count_vars','operations'], ['count_vars', 'operations', 'constructs']]
-feat_modes = [['lines']]
+feat_modes = [['all_feats'], ['lines'], ['count_vars'], ['count_vars','operations'], ['count_vars', 'operations', 'constructs']]
+# feat_modes = [['lines']]
 row_mode = 'pandas'
 if row_mode == 'submiss':
 	feats_file = 'features-submissions.pickle'

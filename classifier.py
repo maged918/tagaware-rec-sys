@@ -33,54 +33,38 @@ import pandas as pd
 
 from scipy.stats import chi2_contingency
 
+# import seaborn as sns
+import matplotlib.pyplot as plt
+from joiner import build_tags, create_df
+# from stats import visualize
 col_names = []
 
 def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode):
 
 	f = open(feats_file, 'rb')
 	inst_feats = pickle.load(f)
+
+	# fig, (ax1, ax2) = plt.subplots(2)
+	# sns.boxplot([inst_feats.variables, inst_feats.operations], orient='v', showfliers=False)
 	# for col in inst_feats.columns:
 	# 	print(inst_feats[col].value_counts())
 	# print(type(inst_feats))
 
-	inst_tags = {}
 	global tags_list, classes, mlb, col_names
-	tags_list = []
-	delete_keys = set()
 
-	with open(tags_file) as f:
-		for line in f:
-			if line != "\n":
-
-				arr = line.split("\n")[0].split(":")
-				key = arr[0]
-				tags = arr[1].split(',')
-				if arr[1]:
-					inst_tags[key] = tags
-					tags_list += tags
-				else:
-					# if key in inst_feats:
-					delete_keys.add(key)
-						# del inst_feats[key]
-
-	tags_list = list(set(tags_list))
+	tags_list, delete_keys, inst_tags = build_tags(tags_file)
 
 	X = []
 	Y = []
 	print(len(delete_keys))
 	if 'pandas' in feats_file:
-		print(inst_feats.shape)
-		for key in delete_keys:
-			inst_feats = inst_feats[inst_feats.problem_id != key]
-		# inst_feats = inst_feats[inst_feats.problem_id.isin(list(delete_keys)) == False]
-		print(inst_feats.shape)
+
+		inst_feats, X, Y = create_df(inst_feats, inst_tags, delete_keys)
 		inst_feats = choose_columns(inst_feats, feat_mode)
 		col_names = inst_feats.columns
-		for idx, row in inst_feats.iterrows():
-			problem_id = row['problem_id']
-			if problem_id in inst_tags:
-				X.append(row.drop(['id', 'problem_id']))
-				Y.append(inst_tags[row['problem_id']])
+
+		# visualize(inst_feats)
+
 		# conting = pd.crosstab(pd.DataFrame(X)['int'], np.array(Y).flatten())
 		# print(chi2_contingency(conting))
 	else:
@@ -96,11 +80,10 @@ def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode):
 						X.append(submission)
 						Y.append(inst_tags[instance])
 
-	X = np.array(X)
-	Y = np.array(Y)
+		X = np.array(X)
 
-
-	print(X.shape)
+	Y = np.array(Y).ravel()
+	print(Y)
 	# feature scaling
 
 	# X-=np.mean(X)
@@ -170,14 +153,18 @@ def classify(train,gold,test, test_y,multi, classifier):
 						'GNB': GaussianNB()}
 	clf = classifier
 
-	clf = OneVsRestClassifier(clf_dict[clf])
-	# clf = OneVsRestClassifier(MLPClassifier(random_state=0, hidden_layer_sizes=(100,100)))
-	# print(clf)
+	clf = clf_dict[clf]
 	clf.fit(train, gold)
 	preds = clf.predict(test)
 	print(metrics.classification_report(test_y,preds, target_names = classes))
 	prfs = metrics.precision_recall_fscore_support(test_y, preds, average='micro')
 	acc = metrics.accuracy_score(test_y, preds)
+
+	if classifier == 'RFT':
+		# print(clf.feature_importances_)
+		importances = pd.DataFrame({'feature':train.columns, 'importance': clf.feature_importances_})
+		importances = importances.sort_values('importance', ascending=False).set_index('feature')
+		print(importances)
 	# auc = metrics.roc_auc_score(test_y, preds)
 	# print('Area Under Curve', auc)
 	# print(prfs, acc)
@@ -213,7 +200,6 @@ def get_eval_metrics(results_dict):
 	results_dict['F1'] = 2  * ((results_dict['P'] * results_dict['R'])  / (results_dict['P'] + results_dict['R'])) if f_den > 0 else 0
 
 	return results_dict
-
 
 def evaluate(pred,test):
 
@@ -266,7 +252,6 @@ def evaluate(pred,test):
 		macro_average[key] /= len(tags_list)
 	return(micro_scores,macro_average)
 
-
 def cross_validate(X,Y,cv_val, multi, classifier):
 
 
@@ -297,6 +282,7 @@ def cross_validate(X,Y,cv_val, multi, classifier):
 
 			X_train = np.concatenate(X_splits)
 			Y_train = np.concatenate(Y_splits)
+
 			print("Building model")
 			pred = classify(X_train,Y_train,X_test,Y_test,True, classifier)
 			print("Evaluating ...")
@@ -308,7 +294,7 @@ def cross_validate(X,Y,cv_val, multi, classifier):
 	else:
 		for train_idx, test_idx in skf.split(X, Y):
 
-			X_train, X_test = X[train_idx], X[test_idx]
+			X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
 			Y_train, Y_test = Y[train_idx], Y[test_idx]
 
 			# print(	"Dataset shapes:\n"+\
@@ -318,7 +304,7 @@ def cross_validate(X,Y,cv_val, multi, classifier):
 			# 		"Testing Y:\t" + str(Y_test.shape))
 
 			print("Starting Classification...")
-
+			print(Y.shape)
 			pred = classify(X_train, Y_train, X_test, Y_test, False, classifier)
 			# pred = np.zeros(Y_test.shape)
 			# for i in range(Y_train.shape[1]):
@@ -341,7 +327,7 @@ def cross_validate(X,Y,cv_val, multi, classifier):
 			str("%.2f" % (total_macro['ACC']/cv_val)))
 
 	print(["%.2f"%(score/cv_val) for score in scores])
-# str("%.2f" % avg_p) + "\n")
+
 
 np.set_printoptions(precision=3, suppress = True)
 split = 0.8
@@ -350,8 +336,9 @@ cross_valid = 3
 # algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'pairs']
 algorithm_modes = ['categ']
 # algorithm_modes = ['pairs']
-# classifiers = ['RFT']
-classifiers = ['SVM', 'RFT', 'ADA']
+# algorithm_modes=['algos']
+classifiers = ['RFT']
+# classifiers = ['SVM', 'RFT', 'ADA']
 # classifiers = ['ADA', 'LRC', 'KNN']
 # classifiers = ['ANN']
 # classifiers=['SVM']
@@ -399,6 +386,7 @@ for div, algo_mode, classifier, feat_mode in product(divs, algorithm_modes, clas
 	print(Y)
 	print("No. of tags: ", len(tags_list), tags_list)
 	print("Algo:", algo_mode)
+
 	scores = [0] * 4
 	cross_validate(X,Y,cross_valid, multi, classifier)
 

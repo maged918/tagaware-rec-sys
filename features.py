@@ -323,5 +323,5 @@ def all_submissions():
 def test_submission(path):
 	return extract_feats(path)
 
-all_submissions()
-# print(test_submission('data-all/148/B/1773915.cpp.xml')[1])
+# all_submissions()
+# print(test_submission('data-all/101/A/12700023.cpp.xml')[1]['string'])

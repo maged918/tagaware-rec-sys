@@ -29,7 +29,7 @@ remove_algorithms = ['graph matchings', 'chinese remainder theorem']
 single_sorting = ['implementation', 'brute force', 'sortings', 'greedy', 'math', 'dp', 'data structures', 'graphs', 'geometry', 'strings', 'binary search']
 single_dict = {}
 
-pairs=['dp', 'brute force']
+pairs=['dp', 'greedy']
 
 for i in range(len(single_sorting)):
 	single_dict[single_sorting[i]] = i

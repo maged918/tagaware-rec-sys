@@ -24,14 +24,13 @@ def build_tags(tags_file):
 	return tags_list, delete_keys, inst_tags
 
 def create_df(inst_feats, inst_tags, delete_keys):
-	print(inst_feats.shape)
-	inst_feats = inst_feats[inst_feats.problem_id.isin(list(delete_keys)) == False]
-	print(inst_feats.shape)
+    inst_feats = inst_feats[inst_feats.problem_id.isin(list(delete_keys)) == False]
 
-	X = inst_feats[inst_feats.columns.difference(['id', 'problem_id'])]
-	Y = inst_feats['problem_id'].map(lambda x: inst_tags[x]).values
-	Y = np.hstack(Y)
+    # X = inst_feats[inst_feats.columns.difference(['id', 'problem_id'])]
+    X = inst_feats.copy().drop(['id', 'problem_id'], axis=1)
+    Y = inst_feats['problem_id'].map(lambda x: inst_tags[x]).values
+    Y = np.hstack(Y)
 
-	tags_df = pd.DataFrame.from_dict({x: y for x, y in enumerate(list(Y))}, orient='index')
-	inst_feats = inst_feats.assign(tags=tags_df.loc[:,[0]])
-	return inst_feats, X, Y
+    tags_df = pd.DataFrame.from_dict({x: y for x, y in enumerate(list(Y))}, orient='index')
+    inst_feats = inst_feats.assign(tags=tags_df.loc[:,[0]])
+    return inst_feats, X, Y

@@ -75,11 +75,13 @@ import os
 import numpy as np
 import pickle
 import config
+import lizard
+
 
 cols = ['id', 'problem_id', 'single_loop', 'double_loop', 'triple_loop', 'if_loop',\
 			  'recursion', 'shift', 'or', 'and', 'int', 'double', 'float', 'string', 'char', 'vector',\
 			  'll', 'point', 'arrays', 'declarations', 'variables', 'avg_params', 'functions',\
-			  'operations', 'plus', 'minus', 'times', 'divide', 'modulus', 'lines', 'ifs']
+			  'operations', 'plus', 'minus', 'times', 'divide', 'modulus', 'lines', 'ifs', 'cyclo']
 
 def evalute(tree,*args):
 	query = './'
@@ -243,6 +245,15 @@ def extract_feats(file):
 	curr_feats.append(ifs)
 	curr_df['ifs'] = ifs
 
+	#feature 28, cyclomatic_complexity
+	liz = lizard.analyze_file(file.strip('.xml'))
+	try:
+		cyclo = liz.function_list[0].__dict__['cyclomatic_complexity']
+	except IndexError:
+		cyclo = 0
+	curr_df['cyclo'] = cyclo
+	curr_feats.append(cyclo)
+
 	# print('Number of ifs', ifs)
 	# print(len(curr_feats))
 	# print(curr_df['ll'])
@@ -292,7 +303,6 @@ def all_submissions():
 					curr_df = feats[1]
 					curr_df['id'] = submission
 					curr_df['problem_id'] = problem_id
-
 					df = df.append(curr_df, ignore_index=True)
 					# print(df.tail())
 					problem_features.append(feats[0])
@@ -323,5 +333,5 @@ def all_submissions():
 def test_submission(path):
 	return extract_feats(path)
 
-# all_submissions()
+all_submissions()
 # print(test_submission('data-all/101/A/12700023.cpp.xml')[1]['string'])

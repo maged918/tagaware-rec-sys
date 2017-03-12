@@ -60,8 +60,11 @@ def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode):
 	if 'pandas' in feats_file:
 
 		inst_feats, X, Y = create_df(inst_feats, inst_tags, delete_keys)
-		inst_feats = choose_columns(inst_feats, feat_mode)
-		col_names = inst_feats.columns
+		print('prepare data', inst_feats.shape, X.shape, 'id' in X.columns)
+		X = choose_columns(X, feat_mode)
+		# for col in X.columns:
+		# 	print(col, X[col].isnull().any())
+		col_names = X.columns
 
 		# visualize(inst_feats)
 
@@ -122,13 +125,19 @@ def choose_columns(X, feat_mode):
 	# X = SelectKBest(f_classif, k = 20).fit_transform(X, y)
 
 
-	if 'all_feats' in feat_mode:
-		return X
 
 	feats = {'count_vars':['int', 'double', 'float', 'char', 'vector', 'll', 'point', 'arrays'],\
 			'constructs': ['single_loop', 'double_loop', 'triple_loop', 'if_loop', 'ifs'],\
 			'operations':['operations', 'plus', 'minus', 'times', 'divide', 'modulus'],\
-			'lines': ['lines']}
+			'lines': ['lines'],\
+			'cyclo': ['cyclo']}
+
+	if 'all_feats' in feat_mode and 'cyclo' not in feat_mode:
+		# return X
+		return X.drop(['cyclo'], axis=1)
+	elif 'all_feats' in feat_mode:
+		return X
+
 	lst = []
 	# lst+= ['triple_loop']
 	# lst += ['int', 'double', 'float', 'char', 'vector', 'll', 'point', 'arrays']
@@ -139,8 +148,9 @@ def choose_columns(X, feat_mode):
 	for feat in feat_mode:
 		lst+=feats[feat]
 
-	lst+=['problem_id', 'id']
+	# lst+=['problem_id', 'id']
 	X = X.loc[:,lst]
+	print('Selecting feats', X.shape)
 	return X
 
 def classify(train,gold,test, test_y,multi, classifier):
@@ -153,18 +163,18 @@ def classify(train,gold,test, test_y,multi, classifier):
 						'GNB': GaussianNB()}
 	clf = classifier
 
-	clf = clf_dict[clf]
+	clf = OneVsRestClassifier(clf_dict[clf])
 	clf.fit(train, gold)
 	preds = clf.predict(test)
 	print(metrics.classification_report(test_y,preds, target_names = classes))
 	prfs = metrics.precision_recall_fscore_support(test_y, preds, average='micro')
 	acc = metrics.accuracy_score(test_y, preds)
 
-	if classifier == 'RFT':
+	# if classifier == 'RFT':
 		# print(clf.feature_importances_)
-		importances = pd.DataFrame({'feature':train.columns, 'importance': clf.feature_importances_})
-		importances = importances.sort_values('importance', ascending=False).set_index('feature')
-		print(importances)
+		# importances = pd.DataFrame({'feature':train.columns, 'importance': clf.feature_importances_})
+		# importances = importances.sort_values('importance', ascending=False).set_index('feature')
+		# print(importances)
 	# auc = metrics.roc_auc_score(test_y, preds)
 	# print('Area Under Curve', auc)
 	# print(prfs, acc)
@@ -293,8 +303,10 @@ def cross_validate(X,Y,cv_val, multi, classifier):
 
 	else:
 		for train_idx, test_idx in skf.split(X, Y):
-
-			X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
+			if row_mode == "pandas":
+				X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
+			else:
+				X_train, X_test = X[train_idx], X[test_idx]
 			Y_train, Y_test = Y[train_idx], Y[test_idx]
 
 			# print(	"Dataset shapes:\n"+\
@@ -333,22 +345,8 @@ np.set_printoptions(precision=3, suppress = True)
 split = 0.8
 kernel = 'poly'
 cross_valid = 3
-# algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'pairs']
-algorithm_modes = ['categ']
-# algorithm_modes = ['pairs']
-# algorithm_modes=['algos']
-classifiers = ['RFT']
-# classifiers = ['SVM', 'RFT', 'ADA']
-# classifiers = ['ADA', 'LRC', 'KNN']
-# classifiers = ['ANN']
-# classifiers=['SVM']
-# classifiers = ['DBT']
-# classifiers = ['MNB']
-# classifiers = ['ADA']
-multi=False
-feat_modes = [['all_feats'], ['lines'], ['count_vars'], ['count_vars','operations'], ['count_vars', 'operations', 'constructs']]
-# feat_modes = [['lines']]
-row_mode = 'pandas'
+
+row_mode = config.get_row_mode()
 if row_mode == 'submiss':
 	feats_file = 'features-submissions.pickle'
 elif row_mode == 'problem':
@@ -362,7 +360,10 @@ classes = []
 mlb = None
 divs = config.get_div()
 ds_dir = config.get_ds_dir()
-tags_file_dict = {'categ': 'data-set-single.txt', 'graph':'data-set-graphs.txt', 'maths': 'data-set-maths.txt', 'algos': 'data-set-algo.txt', 'pairs': 'data-set-pair.txt'}
+feat_modes = config.get_feat_modes()
+classifiers = config.get_classifiers()
+multi = config.get_multi()
+algorithm_modes = config.get_algorithm_modes()
 # print(algorithm_mode, multi, row_mode)
 
 out_file = open('out-classifier.csv', 'a')
@@ -374,7 +375,7 @@ for div, algo_mode, classifier, feat_mode in product(divs, algorithm_modes, clas
 	if multi:
 		tags_file = in_dir + '-data-set.txt'
 	else:
-		tags_file = in_dir + '-' + tags_file_dict[algo_mode]
+		tags_file = config.get_tags_file(in_dir, algo_mode)
 
 	data = prepare_data(feats_file, tags_file, multi, row_mode, feat_mode)
 	X = data[0]

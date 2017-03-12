@@ -3,7 +3,8 @@ import pickle
 import config
 from joiner import build_tags, create_df
 import matplotlib as mpl
-mpl.use('pgf')
+# mpl.use('pgf')
+mpl.use('pdf')
 import numpy as np
 can_visualize = True
 try:
@@ -41,7 +42,7 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
         r"\usepackage[T1]{fontenc}",        # plots will be generated using this preamble
         ]
     }
-mpl.rcParams.update(pgf_with_latex)
+# mpl.rcParams.update(pgf_with_latex)
 
 import matplotlib.pyplot as plt
 def newfig(width):
@@ -52,7 +53,7 @@ def newfig(width):
 
 def savefig(filename):
     plt.savefig('{}.png'.format(filename))
-    plt.savefig('{}.pdf'.format(filename))
+    # plt.savefig('{}.pdf'.format(filename))
 
 def ema(y, a):
     s = []
@@ -65,23 +66,26 @@ def visualize(inst_feats):
     if can_visualize:
 
         # for col in ['string']:
+        order = inst_feats.loc[:, 'tags'].unique()
         # for col in inst_feats.columns.difference(['id', 'problem_id', 'tags']):
         # for col in ['operations', 'variables']:
-        for col in ['variables']:
+        # for col in ['variables']:
+        for col in ['modulus']:
             # plt.ylim(-10, 40)
             # sns.set(font_scale=1.75)
             if algo_mode == 'algos':
                 inst_feats = inst_feats.loc[inst_feats['tags'].isin(['matrices', 'combinatorics', 'shortest paths', 'flows'])]
+                order = ['matrices', 'combinatorics', 'shortest paths', 'flows']
             fig, ax = newfig(1.2)
-            sns.boxplot(y = col, x='tags', data = inst_feats, orient='v', showfliers=0, order=['matrices', 'combinatorics', 'shortest paths', 'flows'], ax=ax)
-            plt.ylabel('num variables')
+            sns.boxplot(y = col, x='tags', data = inst_feats, orient='v', showfliers=0, order=order, ax=ax)
+            plt.ylabel(col)
             # # y = [0]*200
             # # y.extend([20]*(1000-len(y)))
             # # s = ema(y, 0.01)
             # ax.plot(s)
             # plt.xticks(rotation=30)
             # plt.show()
-            savefig('dataset/mcsf-variables')
+            savefig('dataset/pair-%s' % col)
 
 ds_dir = config.get_ds_dir()
 in_dir = ds_dir + 'DivAll'

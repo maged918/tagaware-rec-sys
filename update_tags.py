@@ -61,7 +61,7 @@ print(divs)
 
 for div in divs:
 	tags_file.write("#################################################\n" + div + '\n')
-	pt_file = div + '-Problems-tags.txt'
+	pt_file = 'dataset/pt_sub/' + div + '-Problems-tags.txt'
 	out_dir = ds_dir + div
 	out_file = open(out_dir + "-data-set.txt",'w')
 	single_file = open(out_dir + '-data-set-single.txt', 'w')

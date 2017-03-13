@@ -347,12 +347,15 @@ kernel = 'poly'
 cross_valid = 3
 
 row_mode = config.get_row_mode()
+feat_prefix = config.get_feat_prefix()
 if row_mode == 'submiss':
 	feats_file = 'features-submissions.pickle'
 elif row_mode == 'problem':
 	feats_file = 'features.pickle'
 else:
 	feats_file = 'features-pandas.pickle'
+
+feats_file = feat_prefix + feats_file
 
 print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n", row_mode)
 

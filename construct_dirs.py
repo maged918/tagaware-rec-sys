@@ -19,6 +19,8 @@ else:
 	s_file = "Div2-Submissions.txt"
 	data_folder = 'data-div-2/'
 
+s_file = 'dataset/pt_sub/' + s_file
+
 if not os.path.exists(data_folder):
 	os.makedirs(data_folder)
 

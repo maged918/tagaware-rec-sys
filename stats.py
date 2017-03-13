@@ -11,7 +11,7 @@ try:
     import seaborn as sns
 except ImportError:
     can_visualize = False
-
+from itertools import product
     # print(df.groupby['string'].value_counts())
 
 
@@ -87,13 +87,38 @@ def visualize(inst_feats):
             # plt.show()
             savefig('dataset/pair-%s' % col)
 
+def load_output():
+    out = pd.read_csv('out-classifier.csv', header=0, sep=', ')
+    algos_df = out.loc[list(range(287,302)),:]
+    # print(algos_df.head())
+
+
+    print("& SVM  & RFT  & ADA  \\\\ \hline")
+    svm = algos_df.loc[algos_df['classifier']=='SVM',['acc', 'feat_types']]
+    rft = algos_df.loc[algos_df['classifier']=='RFT',['acc', 'feat_types']]
+    ada = algos_df.loc[algos_df['classifier']=='ADA',['acc', 'feat_types']]
+
+    for word, feat_type in zip(['all\\_feats', 'count\\_vars', 'count\\_vars + operations', 'count\\_vars + operations + constructs', 'lines'],\
+        ['all_feats', 'count_vars', 'count_vars:operations' , 'count_vars:operations:constructs', 'lines']):
+
+        print('%s & %.2f & %.2f & %.2f \\\\ \hline' % (word, svm.loc[svm['feat_types']==feat_type, 'acc'],\
+            rft.loc[rft['feat_types']==feat_type, 'acc'], ada.loc[ada['feat_types']==feat_type, 'acc']))
+
+# all\_feats& 0.85 & 0.89 & 0.88 \\ \hline
+# count\_vars& 0.70 & 0.81 & 0.82 \\ \hline
+# count\_vars + operations& 0.80 & 0.87 & 0.86 \\ \hline
+# count\_vars + operations + constructs & 0.84  & 0.88 & 0.87 \\ \hline
+# lines& 0.70 & 0.73 & 0.73
+
 ds_dir = config.get_ds_dir()
 in_dir = ds_dir + 'DivAll'
 algo_mode = config.get_algorithm_modes()[0]
 tags_file = config.get_tags_file(in_dir, algo_mode)
-inst_feats = pickle.load(open('features-pandas.pickle', 'rb'))
+inst_feats = pickle.load(open( config.get_feat_prefix() + 'features-pandas.pickle', 'rb'))
 tags_list, delete_keys, inst_tags = build_tags(tags_file)
 inst_feats, X, Y = create_df(inst_feats, inst_tags, delete_keys)
 grouped = inst_feats.groupby('tags')
 # print(grouped['operations'].describe())
-visualize(inst_feats)
+# visualize(inst_feats)
+
+load_output()

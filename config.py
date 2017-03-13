@@ -17,8 +17,8 @@ def get_algorithm_modes():
     # algorithm_modes=['graph']
     return algorithm_modes
 def get_classifiers():
-    # classifiers = ['RFT']
-    classifiers = ['SVM', 'RFT', 'ADA']
+    classifiers = ['RFT']
+    # classifiers = ['SVM', 'RFT', 'ADA']
     # classifiers = ['ADA', 'LRC', 'KNN']
     # classifiers = ['ANN']
     # classifiers=['SVM']
@@ -26,6 +26,9 @@ def get_classifiers():
     # classifiers = ['MNB']
     # classifiers = ['ADA']
     return classifiers
+
+def get_feat_prefix():
+    return "dataset/feats/"
 
 def get_row_mode():
     # return "submiss"
@@ -41,8 +44,8 @@ def get_multi():
     return multi
 
 def get_feat_modes():
-    feat_modes = [['cyclo'], ['all_feats'], ['all_feats', 'cyclo'],     ['lines'], ['count_vars'], ['count_vars','operations'], ['count_vars', 'operations', 'constructs']]
-    # feat_modes = [['lines']]
+    # feat_modes = [['cyclo'], ['all_feats'], ['all_feats', 'cyclo'],     ['lines'], ['count_vars'], ['count_vars','operations'], ['count_vars', 'operations', 'constructs']]
+    feat_modes = [['lines']]
     # feat_modes = [['all_feats', 'cyclo']]
     # feat_modes = [['all_feats']]
     return feat_modes

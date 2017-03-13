@@ -317,15 +317,17 @@ def all_submissions():
 
 
 	print("Done feature extraction for: " + str(len(feature_set)) + " problems")
-	f = open('features.pickle', 'wb')
+	
+	feats_prefix = config.get_feat_prefix()
+	f = open(feats_prefix+'features.pickle', 'wb')
 	pickle.dump(feature_set, f)
 	f.close()
 
-	f = open('features-submissions.pickle', 'wb')
+	f = open(feats_prefix + 'features-submissions.pickle', 'wb')
 	pickle.dump(submission_set, f)
 	f.close()
 
-	f= open('features-pandas.pickle', 'wb')
+	f= open(feats_prefix + 'features-pandas.pickle', 'wb')
 	pickle.dump(df, f)
 	f.close()
 

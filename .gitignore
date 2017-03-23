@@ -6,4 +6,4 @@ java-submissions/*
 .fuse_hidden*
 .project
 .pydevproject
-*.tar.gz
+All*.tar.gz

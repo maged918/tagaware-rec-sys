@@ -1,0 +1,102 @@
+#################################################
+DivAll
+################ All Tags ################
+5584
+implementation, 764, 0.14
+dp, 522, 0.09
+math, 482, 0.09
+greedy, 461, 0.08
+data structures, 366, 0.07
+brute force, 359, 0.06
+constructive algorithms, 263, 0.05
+binary search, 227, 0.04
+sortings, 225, 0.04
+dfs and similar, 222, 0.04
+graphs, 182, 0.03
+combinatorics, 150, 0.03
+number theory, 149, 0.03
+strings, 135, 0.02
+trees, 132, 0.02
+, 114, 0.02
+geometry, 113, 0.02
+two pointers, 98, 0.02
+bitmasks, 84, 0.02
+dsu, 80, 0.01
+shortest paths, 68, 0.01
+probabilities, 67, 0.01
+hashing, 48, 0.01
+games, 46, 0.01
+matrices, 41, 0.01
+divide and conquer, 39, 0.01
+string suffix structures, 30, 0.01
+flows, 28, 0.01
+graph matchings, 20, 0.00
+expression parsing, 17, 0.00
+ternary search, 17, 0.00
+meet-in-the-middle, 11, 0.00
+2-sat, 8, 0.00
+fft, 7, 0.00
+chinese remainder theorem, 6, 0.00
+schedules, 3, 0.00
+################ Single Tags Occuring Alone ################
+implementation, 207
+, 114
+math, 74
+dp, 70
+data structures, 63
+greedy, 55
+brute force, 38
+constructive algorithms, 31
+geometry, 23
+dfs and similar, 17
+combinatorics, 15
+number theory, 14
+sortings, 13
+strings, 10
+graphs, 10
+games, 10
+flows, 7
+probabilities, 5
+two pointers, 5
+binary search, 4
+shortest paths, 4
+bitmasks, 3
+dsu, 2
+divide and conquer, 2
+ternary search, 2
+graph matchings, 2
+matrices, 2
+meet-in-the-middle, 2
+hashing, 1
+expression parsing, 1
+string suffix structures, 1
+################ Output Tags ################
+math, 1054
+greedy, 949
+implementation, 764
+graphs, 652
+dp, 522
+data structures, 446
+brute force, 359
+################ Output max pairs ################
+('implementation', 'greedy'), 266
+('math', 'greedy'), 243
+('math', 'dp'), 243
+('graphs', 'data structures'), 206
+('math', 'implementation'), 202
+('greedy', 'graphs'), 201
+('graphs', 'dp'), 150
+('greedy', 'data structures'), 139
+('math', 'brute force'), 138
+('implementation', 'brute force'), 135
+('greedy', 'dp'), 125
+('math', 'graphs'), 105
+('greedy', 'brute force'), 101
+('implementation', 'data structures'), 78
+('dp', 'data structures'), 78
+('math', 'data structures'), 68
+('implementation', 'graphs'), 65
+('implementation', 'dp'), 61
+('dp', 'brute force'), 51
+('graphs', 'brute force'), 48
+('data structures', 'brute force'), 28

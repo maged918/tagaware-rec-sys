@@ -89,8 +89,9 @@ def visualize(inst_feats):
 
 def load_output():
     out = pd.read_csv('out-classifier.csv', header=0, sep=', ')
-    algos_df = out.loc[list(range(287,302)),:]
-    # print(algos_df.head())
+    # algos_df = out.loc[list(range(287,302)),:] #algorithms
+    algos_df = out.iloc[list(range(302,319)),:]
+    print(algos_df.head())
 
 
     print("& SVM  & RFT  & ADA  \\\\ \hline")

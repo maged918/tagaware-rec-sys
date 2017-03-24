@@ -6,5 +6,5 @@ java-submissions/*
 .fuse_hidden*
 .project
 .pydevproject
-*.tar.gz
 dataset/Div*
+All*.tar.gz

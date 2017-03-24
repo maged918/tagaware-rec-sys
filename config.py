@@ -10,7 +10,9 @@ def get_ds_dir():
 
 def get_algorithm_modes():
     # algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'pairs']
-    algorithm_modes = ['categ']
+    # algorithm_modes = ['categ', 'graph', 'maths', 'algos']
+    algorithm_modes = ['dp_gr', 'dp_bf', 'gr_ma']
+    # algorithm_modes = ['categ']
     # algorithm_modes = ['pairs']
     # algorithm_modes=['algos']
     # algorithm_modes=['maths']
@@ -33,11 +35,13 @@ def get_feat_prefix():
 def get_row_mode():
     # return "submiss"
     # return "problem"
-    # return "pandas"
-    return "pandas-no-outliers"
+    return "pandas"
+    # return "pd_out"
 
 def get_tags_file(in_dir, algo_mode):
-    tags_file_dict = {'categ': 'data-set-single.txt', 'graph':'data-set-graphs.txt', 'maths': 'data-set-maths.txt', 'algos': 'data-set-algo.txt', 'pairs': 'data-set-pair.txt'}
+    tags_file_dict = {'categ': 'data-set-single.txt', 'graph':'data-set-graphs.txt', 'maths': 'data-set-maths.txt', \
+                      'algos': 'data-set-algo.txt', 'pairs': 'data-set-pair.txt', \
+                      'dp_gr':'data-set-dp_greedy.txt', 'dp_bf':'data-set-dp_brute force.txt', 'gr_ma':'data-set-math_graphs.txt'}
     return in_dir + '-' + tags_file_dict[algo_mode]
 
 def get_multi():
@@ -57,3 +61,4 @@ def get_difficulties():
     return [['C', 'D', 'E']]
     # return [['A', 'B', 'C']]
     # return [['A', 'B']]
+    # return [['C']]

@@ -36,7 +36,9 @@ single_dict = {}
 
 # pairs=['math', 'graphs']
 # pairs = ['dp', 'brute force']
-pairs = ['dp', 'greedy']
+# pairs = ['dp', 'greedy']
+
+pairs = [['math', 'graphs'], ['dp', 'brute force'], ['dp', 'greedy']]
 
 for i in range(len(single_sorting)):
 	single_dict[single_sorting[i]] = i
@@ -75,8 +77,11 @@ for div in divs:
 	graphs_file = open(out_dir + '-data-set-graphs.txt', 'w')
 	maths_file = open(out_dir + '-data-set-maths.txt', 'w')
 	algo_file = open(out_dir + '-data-set-algo.txt', 'w')
-	pair_file = open(out_dir + '-data-set-pair.txt', 'w')
-	files = [out_file, single_file, graphs_file, maths_file, algo_file, pair_file]
+	# pair_file = open(out_dir + '-data-set-pair.txt', 'w')
+	pair_files = []
+	for pair in pairs:
+		pair_files.append(open(out_dir+'-data-set-%s_%s.txt' % (pair[0], pair[1]), 'w'))
+	files = [out_file, single_file, graphs_file, maths_file, algo_file]+pair_files
 
 	count_tags = defaultdict()
 	count_tags = defaultdict(lambda: 0, count_tags)
@@ -111,7 +116,7 @@ for div in divs:
 					graphs_tag = ''
 					maths_tag = ''
 					algo_tag = ''
-					pair_tag = ''
+					pair_tags = [''] * len(pairs)
 					for i in tags_list:
 						if i in categories['graphs'] and i not in remove_algorithms: #HANDLE IF MORE THAN ONE TAG
 							graphs_tag = i
@@ -120,8 +125,11 @@ for div in divs:
 						if i in algos and i not in remove_algorithms:
 							algo_tag = i
 							# print(algo_tag)
-						if (i == pairs[0] and pairs[1] not in tags_list) or (i == pairs[1] and pairs[0] not in tags_list):
-							pair_tag = i
+						for pair_idx in range(len(pairs)):
+							first = pairs[pair_idx][0]
+							second = pairs[pair_idx][1]
+							if (i == first and second not in tags_list) or (i == second and first not in tags_list):
+								pair_tags[pair_idx] = i
 						# if i in categories['greedy']:
 						# 	pair_tag = 'greedy'
 						all_tags[i]+=1
@@ -141,7 +149,8 @@ for div in divs:
 					graphs_file.write(graphs_tag + "\n")
 					maths_file.write(maths_tag + "\n")
 					algo_file.write(algo_tag + "\n")
-					pair_file.write(pair_tag + "\n")
+					for idx in range(len(pairs)):
+						pair_files[idx].write(pair_tags[idx] + "\n")
 			else:
 				path = ''
 

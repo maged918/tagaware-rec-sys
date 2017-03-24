@@ -36,6 +36,9 @@ from scipy.stats import chi2_contingency
 # import seaborn as sns
 import matplotlib.pyplot as plt
 from joiner import build_tags, create_df
+
+import csv
+
 # from stats import visualize
 col_names = []
 
@@ -302,7 +305,7 @@ def cross_validate(X,Y,cv_val, multi, classifier):
 		#	 Y_train = np.concatenate(Y_splits)
 		gkf = KFold(n_splits = cv_val, shuffle=True, random_state=0)
 		for train_idx, test_idx in gkf.split(X, Y):
-			if row_mode == "pandas" or row_mode == 'pandas-no-outliers':
+			if row_mode == "pandas" or row_mode == 'pd_out':
 				X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
 			else:
 				X_train, X_test = X[train_idx], X[test_idx]
@@ -320,7 +323,7 @@ def cross_validate(X,Y,cv_val, multi, classifier):
 		skf = StratifiedKFold(n_splits=cv_val, shuffle=True, random_state=0)
 		print(skf)
 		for train_idx, test_idx in skf.split(X, Y):
-			if row_mode == "pandas" or row_mode == 'pandas-no-outliers':
+			if row_mode == "pandas" or row_mode == 'pd_out':
 				X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
 			else:
 				X_train, X_test = X[train_idx], X[test_idx]
@@ -365,16 +368,9 @@ cross_valid = 3
 
 row_mode = config.get_row_mode()
 feat_prefix = config.get_feat_prefix()
-# if row_mode == 'submiss':
-#	 feats_file = 'features-submissions.pickle'
-# elif row_mode == 'problem':
-#	 feats_file = 'features.pickle'
-# elif row_mode == 'pandas':
-#	 feats_file = 'features-pandas.pickle'
-# elif row_mode == 'pandas-no-outliers':
-#	 feats_file = 'features-pandas-no-outliers.pickle'
+
 feats_files = {'submiss':'features-submissions.pickle', 'problem':'features.pickle', 'pandas':'features-pandas.pickle', \
-				'pandas-no-outliers':'features-pandas-no-outliers.pickle'}
+				'pd_out':'features-pandas-no-outliers.pickle'}
 
 feats_file = feats_files[row_mode]
 
@@ -427,10 +423,21 @@ for div, algo_mode, classifier, feat_mode, difficulty in product(divs, algorithm
 	print(classes)
 
 	timestamp = time.strftime("%Y/%m/%d %H:%M:%S")
-	out_file.write( '%s, %s, %d, %s, %s, %s, %s, %s, %s, %.2f, %s, %s, %s, %s, %s\n' \
-			% (row_mode, algo_mode, multi, div, classifier, scores[0], scores[1], scores[2], scores[3], baseline, timestamp, \
-			':'.join(classes), ':'.join(col_names), ':'.join(feat_mode), ':'.join(difficulty)))
+	# out_file.write( '%s, %s, %d, %s, %s, %s, %s, %s, %s, %.2f, %s, %s, %s, %s, %s\n' \
+	# 		% (row_mode, algo_mode, multi, div, classifier, scores[0], scores[1], scores[2], scores[3], baseline, timestamp, \
+	# 		#':'.join(classes), ':'.join(col_names),
+	#
+	# 		':'.join(feat_mode), ':'.join(difficulty)))
 
+	csv_file = open('test_csv.csv', 'a',  newline='')
+	writer = csv.writer(csv_file, delimiter=',', quoting = csv.QUOTE_NONE)
+	multi = 1 if multi else 0
+	writer.writerow([row_mode, algo_mode, multi, div, classifier] + scores[0:3] +
+	[format(baseline, '.2f'), timestamp,\
+	 #':'.join(classes), ':'.join(col_names), \
+	 ' ', ' ',
+	 ':'.join(feat_mode), ':'.join(difficulty), X.shape[0]])
+	csv_file.flush()
 	out_file.flush()
 out_file.close()
 # if not os.path.exists('preds.pickle'):

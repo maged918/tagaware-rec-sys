@@ -13,7 +13,7 @@ except ImportError:
     can_visualize = False
 from itertools import product
     # print(df.groupby['string'].value_counts())
-
+from scipy import stats
 
 def figsize(scale):
     fig_width_pt = 469.755                          # Get this from LaTeX using \the\textwidth
@@ -67,10 +67,10 @@ def visualize(inst_feats):
 
         # for col in ['string']:
         order = inst_feats.loc[:, 'tags'].unique()
-        # for col in inst_feats.columns.difference(['id', 'problem_id', 'tags']):
+        for col in inst_feats.columns.difference(['id', 'problem_id', 'tags']):
         # for col in ['operations', 'variables']:
         # for col in ['variables']:
-        for col in ['modulus']:
+        # for col in ['modulus']:
             # plt.ylim(-10, 40)
             # sns.set(font_scale=1.75)
             if algo_mode == 'algos':
@@ -85,7 +85,7 @@ def visualize(inst_feats):
             # ax.plot(s)
             # plt.xticks(rotation=30)
             # plt.show()
-            savefig('dataset/pair-%s' % col)
+            savefig('dataset/%s/%s' % (algo_mode, col))
 
 def load_output():
     out = pd.read_csv('out-classifier.csv', header=0, sep=', ')
@@ -110,6 +110,26 @@ def load_output():
 # count\_vars + operations + constructs & 0.84  & 0.88 & 0.87 \\ \hline
 # lines& 0.70 & 0.73 & 0.73
 
+def problems_stats(inst_feats):
+    grouped = inst_feats.groupby('problem_id')
+    result = pd.DataFrame(columns=inst_feats.columns)
+    i = 0
+    for df in grouped:
+        # df = grouped.get_group('560/C').drop(['id', 'tags', 'problem_id'], axis=1)
+        # print(df[(np.abs(stats.zscore(df))<1).all(axis=1)])
+        # df = df[1].drop(['id', 'tags', 'problem_id'], axis=1)
+        df = df[1]
+        result = result.append(df[df[df.columns.difference(['id', 'tags', 'problem_id'])]\
+                     .apply(lambda x: np.abs(x - x.mean()) / (x.std() if x.std()!= 0 else 1) < 3).all(axis=1)])
+        if i % 100 == 0:
+            print(i)
+        i+=1
+    print(result.shape)
+    pickle.dump(result, open(config.get_feat_prefix() + 'features-pandas-no-outliers.pickle', 'wb'))
+    # print(df[np.abs(df-df.mean())<=(10*df.std())])
+    # print(grouped.describe())
+    # print(df.mean())
+
 ds_dir = config.get_ds_dir()
 in_dir = ds_dir + 'DivAll'
 algo_mode = config.get_algorithm_modes()[0]
@@ -121,4 +141,6 @@ grouped = inst_feats.groupby('tags')
 # print(grouped['operations'].describe())
 # visualize(inst_feats)
 
-load_output()
+problems_stats(inst_feats)
+
+# load_output()

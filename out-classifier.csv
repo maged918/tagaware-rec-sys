@@ -1,4 +1,4 @@
-sub_mode, algo_mode, multi, div, classifier, p, r, f1, acc, baseline, date, tags, feats, feat_types
+sub_mode, algo_mode, multi, div, classifier, p, r, f1, acc, baseline, date, tags, feats, feat_types, difficulties, size
 submiss, categ,1, Div1, SVM,0.37,0.72,0.47,0.03,0.24, 2016/11/20 21:56:07, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
 submiss, categ,1, Div1, RFT,0.57,0.31,0.38,0.17,0.24, 2016/11/20 21:56:47, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
 submiss, categ,1, Div1, ADA,0.56,0.32,0.39,0.16,0.24, 2016/11/20 21:57:23, binary search:brute force:data structures:dp:graphs:greedy:implementation:math,,
@@ -478,3 +478,55 @@ pandas-no-outliers, pairs, 0, DivAll, RFT, 0.92, 0.92, 0.92, 0.92, 0.74, 2017/03
 pandas-no-outliers, pairs, 0, DivAll, RFT, 0.78, 0.78, 0.78, 0.78, 0.60, 2017/03/24 13:01:08, brute force:dp, single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs, all_feats, A:B:C:D:E
 pandas-no-outliers, pairs, 0, DivAll, RFT, 0.81, 0.81, 0.81, 0.81, 0.53, 2017/03/24 13:01:36, dp:greedy, single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs, all_feats, A:B:C:D:E
 pandas-no-outliers, categ, 0, DivAll, RFT, 0.61, 0.61, 0.61, 0.61, 0.24, 2017/03/24 13:05:00, brute force:data structures:dp:graphs:greedy:implementation:math, single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs, all_feats, C:D:E
+pandas, categ, 0, DivAll, RFT, 0.57, 0.57, 0.57, 0.57, 0.30, 2017/03/24 17:44:38, brute force:data structures:dp:graphs:greedy:implementation:math, single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs, all_feats, C
+pandas, graph, 0, DivAll, RFT, 0.75, 0.75, 0.75, 0.75, 0.44, 2017/03/24 17:44:41, dfs and similar:flows:shortest paths:trees, single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs, all_feats, C
+pandas, maths, 0, DivAll, RFT, 0.68, 0.68, 0.68, 0.68, 0.38, 2017/03/24 17:44:46, combinatorics:games:geometry:matrices:number theory:probabilities, single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs, all_feats, C
+pandas, algos, 0, DivAll, RFT, 0.64, 0.64, 0.64, 0.64, 0.26, 2017/03/24 17:44:53, combinatorics:dfs and similar:flows:games:geometry:matrices:number theory:probabilities:shortest paths:trees, single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs, all_feats, C
+pandas, pairs, 0, DivAll, RFT, 0.78, 0.78, 0.78, 0.78, 0.53, 2017/03/24 17:44:55, dp:greedy, single_loop:double_loop:triple_loop:if_loop:recursion:shift:or:and:int:double:float:string:char:vector:ll:point:arrays:declarations:variables:avg_params:functions:operations:plus:minus:times:divide:modulus:lines:ifs, all_feats, C
+pandas,dp_gr,0,DivAll,RFT,0.79,0.79,0.79,0.79,0.53,2017/03/24 18:51:01, , ,all_feats,A:B:C:D:E,15198
+pd_out,dp_gr,0,DivAll,RFT,0.81,0.81,0.81,0.81,0.53,2017/03/24 18:51:04, , ,all_feats,A:B:C:D:E,11886
+pandas,dp_bf,0,DivAll,RFT,0.78,0.78,0.78,0.78,0.60,2017/03/24 18:51:08, , ,all_feats,A:B:C:D:E,14491
+pd_out,dp_bf,0,DivAll,RFT,0.79,0.79,0.79,0.79,0.60,2017/03/24 18:51:12, , ,all_feats,A:B:C:D:E,11238
+pandas,gr_ma,0,DivAll,RFT,0.91,0.91,0.91,0.91,0.74,2017/03/24 18:51:16, , ,all_feats,A:B:C:D:E,11944
+pandas,categ,0,DivAll,RFT,0.54,0.54,0.54,0.54,0.23,2017/03/24 18:57:11, , ,all_feats,A:B:C:D:E,43979
+pd_out,categ,0,DivAll,RFT,0.57,0.57,0.57,0.57,0.23,2017/03/24 18:57:50, , ,all_feats,A:B:C:D:E,34479
+pandas,categ,0,DivAll,RFT,0.52,0.52,0.52,0.52,0.25,2017/03/24 18:58:13, , ,all_feats,A:B,18306
+pd_out,categ,0,DivAll,RFT,0.55,0.55,0.55,0.55,0.25,2017/03/24 18:58:30, , ,all_feats,A:B,14348
+pandas,categ,0,DivAll,RFT,0.59,0.59,0.59,0.59,0.25,2017/03/24 18:58:59, , ,all_feats,C:D:E,25673
+pd_out,categ,0,DivAll,RFT,0.61,0.61,0.61,0.61,0.24,2017/03/24 18:59:22, , ,all_feats,C:D:E,20131
+pandas,graph,0,DivAll,RFT,0.69,0.69,0.69,0.69,0.38,2017/03/24 18:59:29, , ,all_feats,A:B:C:D:E,6590
+pd_out,graph,0,DivAll,RFT,0.70,0.70,0.70,0.70,0.38,2017/03/24 18:59:35, , ,all_feats,A:B:C:D:E,5104
+pandas,graph,0,DivAll,RFT,0.72,0.72,0.72,0.72,0.49,2017/03/24 18:59:40, , ,all_feats,A:B,1312
+pd_out,graph,0,DivAll,RFT,0.73,0.73,0.73,0.73,0.50,2017/03/24 18:59:44, , ,all_feats,A:B,985
+pandas,graph,0,DivAll,RFT,0.68,0.68,0.68,0.68,0.38,2017/03/24 18:59:51, , ,all_feats,C:D:E,5278
+pd_out,graph,0,DivAll,RFT,0.70,0.70,0.70,0.70,0.39,2017/03/24 18:59:57, , ,all_feats,C:D:E,4119
+pandas,maths,0,DivAll,RFT,0.68,0.68,0.68,0.68,0.29,2017/03/24 19:00:10, , ,all_feats,A:B:C:D:E,9283
+pd_out,maths,0,DivAll,RFT,0.70,0.70,0.70,0.70,0.30,2017/03/24 19:00:20, , ,all_feats,A:B:C:D:E,7304
+pandas,maths,0,DivAll,RFT,0.71,0.71,0.71,0.71,0.34,2017/03/24 19:00:26, , ,all_feats,A:B,2345
+pd_out,maths,0,DivAll,RFT,0.73,0.73,0.73,0.73,0.34,2017/03/24 19:00:32, , ,all_feats,A:B,1828
+pandas,maths,0,DivAll,RFT,0.69,0.69,0.69,0.69,0.27,2017/03/24 19:00:42, , ,all_feats,C:D:E,6938
+pd_out,maths,0,DivAll,RFT,0.71,0.71,0.71,0.71,0.28,2017/03/24 19:00:52, , ,all_feats,C:D:E,5476
+pandas,algos,0,DivAll,RFT,0.61,0.61,0.61,0.61,0.17,2017/03/24 19:01:16, , ,all_feats,A:B:C:D:E,15100
+pd_out,algos,0,DivAll,RFT,0.64,0.64,0.64,0.64,0.18,2017/03/24 19:01:35, , ,all_feats,A:B:C:D:E,11813
+pandas,algos,0,DivAll,RFT,0.66,0.66,0.66,0.66,0.22,2017/03/24 19:01:45, , ,all_feats,A:B,3518
+pd_out,algos,0,DivAll,RFT,0.69,0.69,0.69,0.69,0.22,2017/03/24 19:01:54, , ,all_feats,A:B,2706
+pandas,algos,0,DivAll,RFT,0.61,0.61,0.61,0.61,0.17,2017/03/24 19:02:13, , ,all_feats,C:D:E,11582
+pd_out,algos,0,DivAll,RFT,0.64,0.64,0.64,0.64,0.17,2017/03/24 19:02:29, , ,all_feats,C:D:E,9107
+pandas,dp_gr,0,DivAll,RFT,0.80,0.80,0.80,0.80,0.53,2017/03/24 19:02:35, , ,all_feats,A:B:C:D:E,15198
+pd_out,dp_gr,0,DivAll,RFT,0.81,0.81,0.81,0.81,0.53,2017/03/24 19:02:40, , ,all_feats,A:B:C:D:E,11886
+pandas,dp_gr,0,DivAll,RFT,0.79,0.79,0.79,0.79,0.68,2017/03/24 19:02:43, , ,all_feats,A:B,5183
+pd_out,dp_gr,0,DivAll,RFT,0.82,0.82,0.82,0.82,0.68,2017/03/24 19:02:47, , ,all_feats,A:B,4005
+pandas,dp_gr,0,DivAll,RFT,0.80,0.80,0.80,0.80,0.64,2017/03/24 19:02:51, , ,all_feats,C:D:E,10015
+pd_out,dp_gr,0,DivAll,RFT,0.82,0.82,0.82,0.82,0.64,2017/03/24 19:02:55, , ,all_feats,C:D:E,7881
+pandas,dp_bf,0,DivAll,RFT,0.77,0.77,0.77,0.77,0.60,2017/03/24 19:03:01, , ,all_feats,A:B:C:D:E,14491
+pd_out,dp_bf,0,DivAll,RFT,0.78,0.78,0.78,0.78,0.60,2017/03/24 19:03:06, , ,all_feats,A:B:C:D:E,11238
+pandas,dp_bf,0,DivAll,RFT,0.78,0.78,0.78,0.78,0.65,2017/03/24 19:03:09, , ,all_feats,A:B,5232
+pd_out,dp_bf,0,DivAll,RFT,0.79,0.79,0.79,0.79,0.65,2017/03/24 19:03:13, , ,all_feats,A:B,4039
+pandas,dp_bf,0,DivAll,RFT,0.80,0.80,0.80,0.80,0.74,2017/03/24 19:03:17, , ,all_feats,C:D:E,9259
+pd_out,dp_bf,0,DivAll,RFT,0.80,0.80,0.80,0.80,0.74,2017/03/24 19:03:21, , ,all_feats,C:D:E,7199
+pandas,gr_ma,0,DivAll,RFT,0.91,0.91,0.91,0.91,0.74,2017/03/24 19:03:25, , ,all_feats,A:B:C:D:E,11944
+pd_out,gr_ma,0,DivAll,RFT,0.92,0.92,0.92,0.92,0.74,2017/03/24 19:03:29, , ,all_feats,A:B:C:D:E,9378
+pandas,gr_ma,0,DivAll,RFT,0.94,0.94,0.94,0.94,0.85,2017/03/24 19:03:32, , ,all_feats,A:B,4728
+pd_out,gr_ma,0,DivAll,RFT,0.95,0.95,0.95,0.95,0.85,2017/03/24 19:03:35, , ,all_feats,A:B,3724
+pandas,gr_ma,0,DivAll,RFT,0.89,0.89,0.89,0.89,0.66,2017/03/24 19:03:39, , ,all_feats,C:D:E,7216
+pd_out,gr_ma,0,DivAll,RFT,0.90,0.90,0.90,0.90,0.67,2017/03/24 19:03:42, , ,all_feats,C:D:E,5654

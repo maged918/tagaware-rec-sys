@@ -366,17 +366,13 @@ split = 0.8
 kernel = 'poly'
 cross_valid = 3
 
-row_mode = config.get_row_mode()
+row_modes = config.get_row_modes()
 feat_prefix = config.get_feat_prefix()
 
 feats_files = {'submiss':'features-submissions.pickle', 'problem':'features.pickle', 'pandas':'features-pandas.pickle', \
 				'pd_out':'features-pandas-no-outliers.pickle'}
 
-feats_file = feats_files[row_mode]
-
-feats_file = feat_prefix + feats_file
-
-print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n", row_mode)
+# print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n", row_mode)
 
 classes = []
 mlb = None
@@ -390,7 +386,9 @@ difficulties = config.get_difficulties()
 # print(algorithm_mode, multi, row_mode)
 
 out_file = open('out-classifier.csv', 'a')
-for div, algo_mode, classifier, feat_mode, difficulty in product(divs, algorithm_modes, classifiers, feat_modes, difficulties):
+for div, algo_mode, classifier, feat_mode, difficulty, row_mode \
+		in product(divs, algorithm_modes, classifiers, feat_modes, difficulties, row_modes):
+
 	if algo_mode != 'categ':
 		multi = False
 	print("\n\n\n\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n", div)
@@ -399,6 +397,10 @@ for div, algo_mode, classifier, feat_mode, difficulty in product(divs, algorithm
 		tags_file = in_dir + '-data-set.txt'
 	else:
 		tags_file = config.get_tags_file(in_dir, algo_mode)
+
+	feats_file = feats_files[row_mode]
+	feats_file = feat_prefix + feats_file
+
 
 	data = prepare_data(feats_file, tags_file, multi, row_mode, feat_mode, difficulty)
 	X = data[0]
@@ -429,10 +431,10 @@ for div, algo_mode, classifier, feat_mode, difficulty in product(divs, algorithm
 	#
 	# 		':'.join(feat_mode), ':'.join(difficulty)))
 
-	csv_file = open('test_csv.csv', 'a',  newline='')
+	csv_file = open('out-classifier.csv', 'a',  newline='')
 	writer = csv.writer(csv_file, delimiter=',', quoting = csv.QUOTE_NONE)
 	multi = 1 if multi else 0
-	writer.writerow([row_mode, algo_mode, multi, div, classifier] + scores[0:3] +
+	writer.writerow([row_mode, algo_mode, multi, div, classifier] + scores +
 	[format(baseline, '.2f'), timestamp,\
 	 #':'.join(classes), ':'.join(col_names), \
 	 ' ', ' ',
@@ -440,6 +442,7 @@ for div, algo_mode, classifier, feat_mode, difficulty in product(divs, algorithm
 	csv_file.flush()
 	out_file.flush()
 out_file.close()
+
 # if not os.path.exists('preds.pickle'):
 #	 pred = classify(X_train,Y_train,X_test,True)
 # else:

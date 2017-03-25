@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def build_tags(tags_file, difficulties):
+def build_tags(tags_file, difficulties=['A', 'B', 'C', 'D', 'E']):
 	tags_list = []
 	delete_keys = set()
 	inst_tags = {}

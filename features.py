@@ -317,7 +317,7 @@ def all_submissions():
 
 
 	print("Done feature extraction for: " + str(len(feature_set)) + " problems")
-	
+
 	feats_prefix = config.get_feat_prefix()
 	f = open(feats_prefix+'features.pickle', 'wb')
 	pickle.dump(feature_set, f)
@@ -335,5 +335,6 @@ def all_submissions():
 def test_submission(path):
 	return extract_feats(path)
 
-all_submissions()
+# all_submissions()
 # print(test_submission('data-all/101/A/12700023.cpp.xml')[1]['string'])
+print(test_submission('data-all/102/B/12309613.cpp.xml')[1]['divide'])

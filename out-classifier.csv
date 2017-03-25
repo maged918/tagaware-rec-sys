@@ -530,3 +530,9 @@ pandas,gr_ma,0,DivAll,RFT,0.94,0.94,0.94,0.94,0.85,2017/03/24 19:03:32, , ,all_f
 pd_out,gr_ma,0,DivAll,RFT,0.95,0.95,0.95,0.95,0.85,2017/03/24 19:03:35, , ,all_feats,A:B,3724
 pandas,gr_ma,0,DivAll,RFT,0.89,0.89,0.89,0.89,0.66,2017/03/24 19:03:39, , ,all_feats,C:D:E,7216
 pd_out,gr_ma,0,DivAll,RFT,0.90,0.90,0.90,0.90,0.67,2017/03/24 19:03:42, , ,all_feats,C:D:E,5654
+pandas,gr_ma,0,DivAll,RFT,0.81,0.81,0.81,0.81,0.74,2017/03/24 23:02:20, , ,count_vars,A:B:C:D:E,11944
+pd_out,gr_ma,0,DivAll,RFT,0.83,0.83,0.83,0.83,0.74,2017/03/24 23:02:22, , ,count_vars,A:B:C:D:E,9378
+pandas,gr_ma,0,DivAll,RFT,0.88,0.88,0.88,0.88,0.85,2017/03/24 23:02:23, , ,count_vars,A:B,4728
+pd_out,gr_ma,0,DivAll,RFT,0.88,0.88,0.88,0.88,0.85,2017/03/24 23:02:25, , ,count_vars,A:B,3724
+pandas,gr_ma,0,DivAll,RFT,0.78,0.78,0.78,0.78,0.66,2017/03/24 23:02:27, , ,count_vars,C:D:E,7216
+pd_out,gr_ma,0,DivAll,RFT,0.79,0.79,0.79,0.79,0.67,2017/03/24 23:02:29, , ,count_vars,C:D:E,5654

@@ -12,7 +12,8 @@ def get_algorithm_modes():
     # algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'pairs']
     # algorithm_modes = ['categ', 'graph', 'maths', 'algos']
     # algorithm_modes = ['dp_gr', 'dp_bf', 'gr_ma']
-    algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'dp_gr', 'dp_bf', 'gr_ma']
+    # algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'dp_gr', 'dp_bf', 'gr_ma']
+    algorithm_modes = ['gr_ma']
     # algorithm_modes = ['categ']
     # algorithm_modes = ['pairs']
     # algorithm_modes=['algos']
@@ -55,7 +56,8 @@ def get_feat_modes():
     # feat_modes = [['cyclo'], ['all_feats'], ['all_feats', 'cyclo'],     ['lines'], ['count_vars'], ['count_vars','operations'], ['count_vars', 'operations', 'constructs']]
     # feat_modes = [['lines']]
     # feat_modes = [['all_feats', 'cyclo']]
-    feat_modes = [['all_feats']]
+    # feat_modes = [['all_feats']]
+    feat_modes = [['count_vars']]
     return feat_modes
 
 def get_difficulties():

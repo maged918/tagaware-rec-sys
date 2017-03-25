@@ -4,7 +4,7 @@ import config
 from joiner import build_tags, create_df
 import matplotlib as mpl
 # mpl.use('pgf')
-mpl.use('pdf')
+# mpl.use('pdf')
 import numpy as np
 can_visualize = True
 try:
@@ -61,6 +61,24 @@ def ema(y, a):
     for t in range(1, len(y)):
         s.append(a * y[t] + (1-a) * s[t-1])
     return np.array(s)
+
+def visualize_totals(inst_feats):
+    # for col in inst_feats.columns.difference(['id', 'problem_id', 'tags']):
+    #     # sns.boxplot(y=col, data =inst_feats, showfliers=0)
+    #     # plt.show()
+    #     print(inst_feats[col].value_counts())
+    # print(inst_feats.get_group('math')['vector'])
+    # sns.distplot(inst_feats.get_group('math')['operations'], norm_hist=True, kde=False)
+    ops = inst_feats.get_group('math')['operations']
+    # print(list(ops))
+    sns.countplot(list(ops[ops<50]))
+    plt.show()
+    # sns.distplot(inst_feats.get_group('graphs')['operations'], norm_hist=True, kde=False)
+    ops = inst_feats.get_group('graphs')['operations']
+    # print(list(ops))
+    sns.countplot(list(ops[ops<50]))
+    plt.show()
+    plt.show()
 
 def visualize(inst_feats):
     if can_visualize:
@@ -140,8 +158,9 @@ tags_list, delete_keys, inst_tags = build_tags(tags_file)
 inst_feats, X, Y = create_df(inst_feats, inst_tags, delete_keys)
 grouped = inst_feats.groupby('tags')
 # print(grouped['operations'].describe())
-# visualize(inst_feats)
+visualize(inst_feats)
 
-problems_stats(inst_feats)
+# problems_stats(inst_feats)
 
+# visualize_totals(grouped)
 # load_output()

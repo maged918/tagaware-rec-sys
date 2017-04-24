@@ -6,6 +6,7 @@ import matplotlib as mpl
 # mpl.use('pgf')
 # mpl.use('pdf')
 import numpy as np
+import config
 can_visualize = True
 try:
     import seaborn as sns
@@ -64,20 +65,21 @@ def ema(y, a):
 
 def visualize_totals(inst_feats):
     # for col in inst_feats.columns.difference(['id', 'problem_id', 'tags']):
-    #     # sns.boxplot(y=col, data =inst_feats, showfliers=0)
-    #     # plt.show()
-    #     print(inst_feats[col].value_counts())
+    #     sns.boxplot(y=col, data =inst_feats, showfliers=1)
+    #     plt.show()
+        # print(inst_feats[col].value_counts())
     # print(inst_feats.get_group('math')['vector'])
     # sns.distplot(inst_feats.get_group('math')['operations'], norm_hist=True, kde=False)
-    ops = inst_feats.get_group('math')['operations']
+
+    fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=False)
+    ops = inst_feats.get_group('dp')['minus']
+    sns.countplot(list(ops[ops<30]), ax = ax1)
     # print(list(ops))
-    sns.countplot(list(ops[ops<50]))
-    plt.show()
+    # plt.show()
     # sns.distplot(inst_feats.get_group('graphs')['operations'], norm_hist=True, kde=False)
-    ops = inst_feats.get_group('graphs')['operations']
+    ops = inst_feats.get_group('brute force')['minus']
     # print(list(ops))
-    sns.countplot(list(ops[ops<50]))
-    plt.show()
+    sns.countplot(list(ops[ops<30]), ax = ax2)
     plt.show()
 
 def visualize(inst_feats):
@@ -105,18 +107,32 @@ def visualize(inst_feats):
             # plt.show()
             savefig('dataset/%s/%s' % (algo_mode, col))
 
+def visualize_pairs(inst_feats):
+    lm = sns.lmplot(y='minus', x='arrays', hue='tags', data=inst_feats, fit_reg=True)
+    axes = lm.axes
+    axes[0][0].set_xlim(0,20)
+    axes[0][0].set_ylim(0,100)
+    plt.show()
+
+def get_properties():
+    out = pd.read_csv('out-classifier.csv', header=0, sep=',')
+    diffs = config.get_difficulties()
+    diffs = [':'.join(diff) for diff in diffs]
+    for diff in diffs:
+        print('--------------------------------------------')
+        print(out.loc[(out['difficulties']==diff) & (out['algo_mode']=='dp_bf')])
+
 def load_output():
-    out = pd.read_csv('out-classifier.csv', header=0, sep=', ')
+    out = pd.read_csv('out-classifier.csv', header=0, sep=',')
     # algos_df = out.loc[list(range(287,302)),:] #algorithms
     algos_df = out.iloc[list(range(302,319)),:]
-    print(algos_df.head())
-
+    # print(algos_df.head())
 
     print("& SVM  & RFT  & ADA  \\\\ \hline")
     svm = algos_df.loc[algos_df['classifier']=='SVM',['acc', 'feat_types']]
     rft = algos_df.loc[algos_df['classifier']=='RFT',['acc', 'feat_types']]
     ada = algos_df.loc[algos_df['classifier']=='ADA',['acc', 'feat_types']]
-
+    print(svm)
     for word, feat_type in zip(['all\\_feats', 'count\\_vars', 'count\\_vars + operations', 'count\\_vars + operations + constructs', 'lines'],\
         ['all_feats', 'count_vars', 'count_vars:operations' , 'count_vars:operations:constructs', 'lines']):
 
@@ -158,9 +174,10 @@ tags_list, delete_keys, inst_tags = build_tags(tags_file)
 inst_feats, X, Y = create_df(inst_feats, inst_tags, delete_keys)
 grouped = inst_feats.groupby('tags')
 # print(grouped['operations'].describe())
-visualize(inst_feats)
-
+# visualize(inst_feats)
+visualize_pairs(inst_feats)
 # problems_stats(inst_feats)
 
-# visualize_totals(grouped)
-# load_output()
+visualize_totals(grouped)
+load_output()
+# get_properties()

@@ -337,4 +337,5 @@ def test_submission(path):
 
 # all_submissions()
 # print(test_submission('data-all/101/A/12700023.cpp.xml')[1]['string'])
-print(test_submission('data-all/102/B/12309613.cpp.xml')[1]['divide'])
+# print(test_submission('data-all/102/B/12309613.cpp.xml')[1]['divide'])
+print(test_submission('data-all/666/B/17824181.cpp.xml')[1]['recursion'])

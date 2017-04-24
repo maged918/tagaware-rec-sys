@@ -21,7 +21,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_selection import SelectKBest, chi2, f_classif
 from sklearn.tree import DecisionTreeClassifier
-
+from sklearn.preprocessing import StandardScaler
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from collections import defaultdict
 from collections import Counter
 from itertools import product
@@ -96,7 +97,12 @@ def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode, difficulties)
 
 	# X-=np.mean(X)
 	# if np.std(X) > 0:
-	#	 X/=np.std(X)
+	# 	 X/=np.std(X)
+
+	# X = StandardScaler().fit_transform(X)
+	# if 'pandas' in feats_file:
+	# 	for col in X:
+	# 		X[col] = (X[col] - X[col].mean())/(X[col].std() if X[col].std() != 0 else 1)
 	#
 	# pca = PCA(n_components = 2)
 	# pca.fit(X)
@@ -165,24 +171,34 @@ def classify(train,gold,test, test_y,multi, classifier):
 	clf_dict = {'SVM': svm.LinearSVC(**svm_dict), 'RFT': RandomForestClassifier(n_estimators=100, n_jobs = 6),\
 						 'ADA': AdaBoostClassifier(n_estimators = 100),\
 						'KNN': KNeighborsClassifier(n_neighbors = 20, weights='distance'), 'LRC': LogisticRegression(), \
-						'ANN': MLPClassifier(hidden_layer_sizes=(50, 50)), 'DBT':DecisionTreeClassifier(), 'MNB': MultinomialNB(alpha = 1000),\
-						'GNB': GaussianNB()}
+						'ANN': MLPClassifier(hidden_layer_sizes=tuple([100]*10)), \
+						'DBT':DecisionTreeClassifier(), 'MNB': MultinomialNB(alpha = 1000),\
+						'GNB': GaussianNB(), 'LDA': LinearDiscriminantAnalysis(n_components=10)}
 	clf = classifier
 	if multi and clf == 'RFT':
-		clf_dict['RFT'] = RandomForestClassifier(n_estimators=100, n_jobs=6, class_weight={0:1, 1:100})
+		clf_dict['RFT'] = RandomForestClassifier(n_estimators=100, n_jobs=6) #, class_weight={0:1, 1:100})
 		print(clf)
-	clf = OneVsRestClassifier(clf_dict[clf], n_jobs=6)
+	# clf = OneVsRestClassifier(clf_dict[clf], n_jobs=7)
+	clf = clf_dict[clf]
 	clf.fit(train, gold)
+
 	preds = clf.predict(test)
+
+	from scikitplot import classifier_factory
+	import scikitplot.plotters as skplt
+	# classifier_factory(clf)
+	skplt.plot_feature_importances(clf, feature_names = train.columns, max_num_features = 7)
+	plt.show()
+
 	print(metrics.classification_report(test_y,preds, target_names = classes))
 	prfs = metrics.precision_recall_fscore_support(test_y, preds, average='micro')
 	acc = metrics.accuracy_score(test_y, preds)
 
 	# if classifier == 'RFT':
-		# print(clf.feature_importances_)
-		# importances = pd.DataFrame({'feature':train.columns, 'importance': clf.feature_importances_})
-		# importances = importances.sort_values('importance', ascending=False).set_index('feature')
-		# print(importances)
+	# 	print(clf.feature_importances_)
+	# 	importances = pd.DataFrame({'feature':train.columns, 'importance': clf.feature_importances_})
+	# 	importances = importances.sort_values('importance', ascending=False).set_index('feature')
+	# 	print(importances)
 	# auc = metrics.roc_auc_score(test_y, preds)
 	# print('Area Under Curve', auc)
 	# print(prfs, acc)
@@ -432,7 +448,7 @@ for div, algo_mode, classifier, feat_mode, difficulty, row_mode \
 	# 		':'.join(feat_mode), ':'.join(difficulty)))
 
 	csv_file = open('out-classifier.csv', 'a',  newline='')
-	writer = csv.writer(csv_file, delimiter=',', quoting = csv.QUOTE_NONE)
+	writer = csv.writer(csv_file, delimiter=",", quoting = csv.QUOTE_NONE)
 	multi = 1 if multi else 0
 	writer.writerow([row_mode, algo_mode, multi, div, classifier] + scores +
 	[format(baseline, '.2f'), timestamp,\

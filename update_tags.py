@@ -29,7 +29,7 @@ algos = []
 algos+=categories['math']
 algos+=categories['graphs']
 
-remove_algorithms = ['graph matchings', 'chinese remainder theorem']
+remove_algorithms = ['graph matchings', 'chinese remainder theorem', 'flows', 'dfs and similar']
 
 single_sorting = ['implementation', 'brute force', 'sortings', 'greedy', 'math', 'dp', 'data structures', 'graphs', 'geometry', 'strings', 'binary search']
 single_dict = {}
@@ -38,7 +38,7 @@ single_dict = {}
 # pairs = ['dp', 'brute force']
 # pairs = ['dp', 'greedy']
 
-pairs = [['math', 'graphs'], ['dp', 'brute force'], ['dp', 'greedy']]
+pairs = [['math', 'graphs'], ['dp', 'brute force'], ['dp', 'greedy'], ['dp', 'dfs and similar']]
 
 for i in range(len(single_sorting)):
 	single_dict[single_sorting[i]] = i

@@ -29,7 +29,7 @@ algos = []
 algos+=categories['math']
 algos+=categories['graphs']
 
-remove_algorithms = ['graph matchings', 'chinese remainder theorem', 'flows', 'dfs and similar']
+remove_algorithms = ['graph matchings', 'chinese remainder theorem']
 
 single_sorting = ['implementation', 'brute force', 'sortings', 'greedy', 'math', 'dp', 'data structures', 'graphs', 'geometry', 'strings', 'binary search']
 single_dict = {}

@@ -71,15 +71,21 @@ def visualize_totals(inst_feats):
     # print(inst_feats.get_group('math')['vector'])
     # sns.distplot(inst_feats.get_group('math')['operations'], norm_hist=True, kde=False)
 
-    fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=False)
-    ops = inst_feats.get_group('dp')['minus']
-    sns.countplot(list(ops[ops<30]), ax = ax1)
+    fig, axes = plt.subplots(ncols=7, sharey=False)
+
+    # ops = inst_feats.get_group('dp')['minus']
+    # sns.countplot(list(ops[ops<30]), ax = ax1)
     # print(list(ops))
     # plt.show()
     # sns.distplot(inst_feats.get_group('graphs')['operations'], norm_hist=True, kde=False)
-    ops = inst_feats.get_group('brute force')['minus']
+    # ops = inst_feats.get_group('brute force')['minus']
     # print(list(ops))
-    sns.countplot(list(ops[ops<30]), ax = ax2)
+    # sns.countplot(list(ops[ops<30]), ax = ax2)
+
+    for idx, tag in enumerate(list(inst_feats.groups.keys())):
+        ops = inst_feats.get_group(tag)['operations']
+        sns.countplot(list(ops[ops<40]), ax = axes[idx])
+
     plt.show()
 
 def visualize(inst_feats):
@@ -108,10 +114,14 @@ def visualize(inst_feats):
             savefig('dataset/%s/%s' % (algo_mode, col))
 
 def visualize_pairs(inst_feats):
-    lm = sns.lmplot(y='minus', x='arrays', hue='tags', data=inst_feats, fit_reg=True)
+    ''' Takes as an input a features dataframe (including tags)
+    Plots scatterplot of two variables on the same plot for the present tags (from config)
+    If using col: draw separate plots for each tag but on the same scale
+    '''
+    lm = sns.lmplot(y='lines', x='operations', hue='tags', col ='tags', data=inst_feats, fit_reg=True, x_jitter=0)
     axes = lm.axes
-    axes[0][0].set_xlim(0,20)
-    axes[0][0].set_ylim(0,100)
+    axes[0][0].set_xlim(0,100)
+    axes[0][0].set_ylim(0,150)
     plt.show()
 
 def get_properties():
@@ -175,7 +185,7 @@ inst_feats, X, Y = create_df(inst_feats, inst_tags, delete_keys)
 grouped = inst_feats.groupby('tags')
 # print(grouped['operations'].describe())
 # visualize(inst_feats)
-visualize_pairs(inst_feats)
+# visualize_pairs(inst_feats)
 # problems_stats(inst_feats)
 
 visualize_totals(grouped)

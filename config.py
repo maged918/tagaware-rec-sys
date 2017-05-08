@@ -19,8 +19,8 @@ def get_algorithm_modes():
     # algorithm_modes=['algos']
     # algorithm_modes=['maths']
     # algorithm_modes=['graph']
-    # algorithm_modes=['dp_dfs']
-    algorithm_modes = ['dp_bf']
+    algorithm_modes=['dp_dfs']
+    # algorithm_modes = ['dp_bf']
     return algorithm_modes
 def get_classifiers():
     classifiers = ['RFT']
@@ -42,8 +42,9 @@ def get_row_modes():
     # return "submiss"
     # return "problem"
     # return ['pandas', 'pd_out']
-    return ['pandas']
-    # return ['pd_out']
+    # return ['pandas']
+    return ['pd_out']
+
 def get_tags_file(in_dir, algo_mode):
     tags_file_dict = {'categ': 'data-set-single.txt', 'graph':'data-set-graphs.txt', 'maths': 'data-set-maths.txt', \
                       'algos': 'data-set-algo.txt', 'pairs': 'data-set-pair.txt', \
@@ -52,21 +53,30 @@ def get_tags_file(in_dir, algo_mode):
     return in_dir + '-' + tags_file_dict[algo_mode]
 
 def get_multi():
-    multi=False
+    multi=True
     # multi = False
     return multi
 
 def get_feat_modes():
     # feat_modes = [['cyclo'], ['all_feats'], ['all_feats', 'cyclo'],     ['lines'], ['count_vars'], ['count_vars','operations'], ['count_vars', 'operations', 'constructs']]
     # feat_modes = [['lines']]
-    # feat_modes = [['all_feats', 'cyclo']]
+    # feat_modes = [['all_feats'],['all_feats', 'cyclo']]
     feat_modes = [['all_feats']]
     # feat_modes = [['count_vars']]
     return feat_modes
 
 def get_difficulties():
-    return [['A', 'B', 'C', 'D', 'E'], ['A', 'B'], ['C', 'D', 'E']]
+    return [['A', 'B', 'C', 'D', 'E'],['A', 'B'], ['C', 'D', 'E']]
+    # return [['A', 'B', 'C', 'D', 'E']]
     # return [['C', 'D', 'E']]
     # return [['A', 'B', 'C']]
     # return [['A', 'B']]
     # return [['C']]
+
+def print_importances():
+    return False
+    # return True
+
+def get_limits():
+    # return [100, 200, 500, 1000, 2500, 5000, 45000]
+    return [45000]

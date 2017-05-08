@@ -125,17 +125,31 @@ def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode, difficulties)
 		Y = Y.flatten()
 		values, counts = np.unique(Y, return_counts=True)
 		classes = np.unique(Y)
+
+	for col in X.columns:
+		X[col] = X[col].map(lambda x : logzero(x))
+	return (X,Y)
+
+def logzero(x):
+	if x == 0:
+		return 0
+	else:
+		return np.log(x)
+
+def get_baseline_single(Y):
+	''' Returns the baseline for classifier by selecting the most common label in Y
+	'''
+	values, counts = np.unique(Y, return_counts=True)
+	classes = np.unique(Y)
 	baseline = np.max(counts)/np.sum(counts)
 	print('Baseline = ', baseline)
-	return (X,Y, baseline)
+	return baseline
 
 def choose_columns(X, feat_mode):
 	# for i in range(15,X.shape[1]-1):
 	#	 X = np.delete(X, i, 1)
 	# X = np.delete(X, [19,20,21,22,23], 1)
 	# X = SelectKBest(f_classif, k = 20).fit_transform(X, y)
-
-
 
 	feats = {'count_vars':['int', 'double', 'float', 'char', 'vector', 'll', 'point', 'arrays'],\
 			'constructs': ['single_loop', 'double_loop', 'triple_loop', 'if_loop', 'ifs'],\
@@ -178,17 +192,18 @@ def classify(train,gold,test, test_y,multi, classifier):
 	if multi and clf == 'RFT':
 		clf_dict['RFT'] = RandomForestClassifier(n_estimators=100, n_jobs=6) #, class_weight={0:1, 1:100})
 		print(clf)
-	# clf = OneVsRestClassifier(clf_dict[clf], n_jobs=7)
-	clf = clf_dict[clf]
+	clf = OneVsRestClassifier(clf_dict[clf], n_jobs=7)
+	# clf = clf_dict[clf]
 	clf.fit(train, gold)
 
 	preds = clf.predict(test)
 
-	from scikitplot import classifier_factory
-	import scikitplot.plotters as skplt
-	# classifier_factory(clf)
-	skplt.plot_feature_importances(clf, feature_names = train.columns, max_num_features = 7)
-	plt.show()
+	if config.print_importances():
+		from scikitplot import classifier_factory
+		import scikitplot.plotters as skplt
+		# classifier_factory(clf)
+		skplt.plot_feature_importances(clf, feature_names = train.columns, max_num_features = 7)
+		plt.show()
 
 	print(metrics.classification_report(test_y,preds, target_names = classes))
 	prfs = metrics.precision_recall_fscore_support(test_y, preds, average='micro')
@@ -211,7 +226,8 @@ def get_baseline(lst, Y):
 	preds = [lst] * len(Y)
 	# print(mlb.classes_)
 	preds = mlb.transform(preds)
-	print(metrics.precision_recall_fscore_support(Y, preds, average='micro'))
+	return metrics.precision_recall_fscore_support(Y, preds, average='micro')
+
 
 def get_measurements(a,b):
 	a = np.array(a)
@@ -399,11 +415,12 @@ classifiers = config.get_classifiers()
 multi = config.get_multi()
 algorithm_modes = config.get_algorithm_modes()
 difficulties = config.get_difficulties()
+limits = config.get_limits()
 # print(algorithm_mode, multi, row_mode)
 
 out_file = open('out-classifier.csv', 'a')
-for div, algo_mode, classifier, feat_mode, difficulty, row_mode \
-		in product(divs, algorithm_modes, classifiers, feat_modes, difficulties, row_modes):
+for div, algo_mode, classifier, feat_mode, difficulty, row_mode, limit \
+		in product(divs, algorithm_modes, classifiers, feat_modes, difficulties, row_modes, limits):
 
 	if algo_mode != 'categ':
 		multi = False
@@ -421,17 +438,22 @@ for div, algo_mode, classifier, feat_mode, difficulty, row_mode \
 	data = prepare_data(feats_file, tags_file, multi, row_mode, feat_mode, difficulty)
 	X = data[0]
 	Y = data[1]
-	baseline = data[2]
+
+	# from sklearn.utils import shuffle
+	# X, Y = shuffle(X, Y, random_state=0)
+	# X, Y = X[:limit], Y[:limit]
+
+	baseline = get_baseline_single(Y)
 
 	print("X Shape: ", X.shape)
 	print("Y Shape: ", Y.shape)
-	print(Y)
 	print("No. of tags: ", len(tags_list), tags_list)
 	print("Algo:", algo_mode)
 
 	if multi:
 		# get_baseline(['math', 'implementation', 'greedy', 'dp'], Y)
-		get_baseline(['math', 'greedy', 'dp'], Y)
+		baseline = get_baseline(['math', 'greedy', 'implementation'], Y)[2]
+		print('Multi Baseline = ', baseline)
 	scores = [0] * 4
 	cross_validate(X,Y,cross_valid, multi, classifier)
 

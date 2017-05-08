@@ -1,0 +1,8 @@
+602 - 649: Div1 and Div2 AB CDE for all algos
+669 - 674: Varying number of submissions to classify for dp vs bf, wrong baseline
+675: Adding cyclo to dp vs bf, no difference
+676-682: Varying number of submissions to classify for dp vs bf, correct baseline
+683 - 754:  Select systematically div1 and div2 divall AB CDE
+764 - 769: Log of columns values
+TODO: Select only certain years
+TODO:

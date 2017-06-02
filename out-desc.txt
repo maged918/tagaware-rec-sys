@@ -1,0 +1,18 @@
+602 - 649: Div1 and Div2 AB CDE for all algos
+669 - 674: Varying number of submissions to classify for dp vs bf, wrong baseline
+675: Adding cyclo to dp vs bf, no difference
+676 - 682: Varying number of submissions to classify for dp vs bf, correct baseline
+683 - 754:  Select systematically div1 and div2 divall AB CDE
+764 - 769: Logarithm of columns values
+770 - 772: New class: graphs vs data structures
+773 - 777: best performing pairs with base settings: pd_out, divall, ABCDE
+778 - 782: best performing pairs with settings: pandas, divall, ABCDE
+783 - 824: dp greedy, graphs math, rft vs svm vs ada, feature combinations
+825 - 866: categ, algos, rft vs svm vs ada, feature combinations
+871 - 872: Algos, RFT, 500 estimators
+867 - 870: 10 fold cross valid
+871 - 885: new features, including counts for separate operators
+886 - 890: selecting contests with id > 400
+891 - 896: classifying problems rather than submissions: lower performance 
+TODO: Select only certain years
+TODO:

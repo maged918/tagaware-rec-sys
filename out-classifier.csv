@@ -587,15 +587,15 @@ pandas,graph,0,DivAll,RFT,0.79,0.79,0.79,0.79,0.51,2017/04/23 15:27:18,trees:dfs
 pandas,graph,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.64,2017/04/23 15:44:14,,,all_feats,A:B:C:D:E,3647
 pandas,graph,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.52,2017/04/23 15:44:15,,,all_feats,A:B,645
 pandas,graph,0,DivAll,RFT,0.88,0.88,0.88,0.88,0.67,2017/04/23 15:44:17,,,all_feats,C:D:E,3002
-pandas,dp_dfs,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.73,2017/04/23 16:19:59,,,all_feats,A:B:C:D:E,11736
-pandas,dp_dfs,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.72,2017/04/23 16:20:00,,,all_feats,A:B,2615
-pandas,dp_dfs,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.74,2017/04/23 16:20:04,,,all_feats,C:D:E,9121
-pandas,dp_dfs,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.73,2017/04/23 21:45:30,,,all_feats,A:B:C:D:E,11736
-pandas,dp_dfs,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.73,2017/04/23 21:46:16,,,all_feats,A:B:C:D:E,11736
-pandas,dp_dfs,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.72,2017/04/23 21:46:17,,,all_feats,A:B,2615
-pandas,dp_dfs,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.74,2017/04/23 21:46:20,,,all_feats,C:D:E,9121
-pandas,dp_dfs,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.73,2017/04/23 21:51:41,,,all_feats,A:B:C:D:E,11736
-pandas,dp_dfs,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.72,2017/04/23 21:51:46,,,all_feats,A:B,2615
+pandas,dp_df,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.73,2017/04/23 16:19:59,,,all_feats,A:B:C:D:E,11736
+pandas,dp_df,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.72,2017/04/23 16:20:00,,,all_feats,A:B,2615
+pandas,dp_df,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.74,2017/04/23 16:20:04,,,all_feats,C:D:E,9121
+pandas,dp_df,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.73,2017/04/23 21:45:30,,,all_feats,A:B:C:D:E,11736
+pandas,dp_df,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.73,2017/04/23 21:46:16,,,all_feats,A:B:C:D:E,11736
+pandas,dp_df,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.72,2017/04/23 21:46:17,,,all_feats,A:B,2615
+pandas,dp_df,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.74,2017/04/23 21:46:20,,,all_feats,C:D:E,9121
+pandas,dp_df,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.73,2017/04/23 21:51:41,,,all_feats,A:B:C:D:E,11736
+pandas,dp_df,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.72,2017/04/23 21:51:46,,,all_feats,A:B,2615
 pandas,algos,0,DivAll,RFT,0.67,0.67,0.67,0.67,0.21,2017/04/23 21:53:09,,,all_feats,A:B:C:D:E,12527
 pandas,algos,0,DivAll,RFT,0.70,0.70,0.70,0.70,0.26,2017/04/23 21:53:16,,,all_feats,A:B,2891
 pandas,algos,0,DivAll,RFT,0.67,0.67,0.67,0.67,0.21,2017/04/23 21:53:21,,,all_feats,C:D:E,9636
@@ -620,9 +620,9 @@ pandas,dp_bf,0,Div1,RFT,0.85,0.85,0.85,0.85,0.81,2017/04/23 21:58:24,,,all_feats
 pandas,gr_ma,0,Div1,RFT,0.89,0.89,0.89,0.89,0.69,2017/04/23 21:58:26,,,all_feats,A:B:C:D:E,4524
 pandas,gr_ma,0,Div1,RFT,0.91,0.91,0.91,0.91,0.73,2017/04/23 21:58:29,,,all_feats,A:B,2098
 pandas,gr_ma,0,Div1,RFT,0.89,0.89,0.89,0.89,0.65,2017/04/23 21:58:31,,,all_feats,C:D:E,2426
-pandas,dp_dfs,0,Div1,RFT,0.88,0.88,0.88,0.88,0.77,2017/04/23 21:58:33,,,all_feats,A:B:C:D:E,5566
-pandas,dp_dfs,0,Div1,RFT,0.88,0.88,0.88,0.88,0.74,2017/04/23 21:58:36,,,all_feats,A:B,1905
-pandas,dp_dfs,0,Div1,RFT,0.90,0.90,0.90,0.90,0.79,2017/04/23 21:58:38,,,all_feats,C:D:E,3661
+pandas,dp_df,0,Div1,RFT,0.88,0.88,0.88,0.88,0.77,2017/04/23 21:58:33,,,all_feats,A:B:C:D:E,5566
+pandas,dp_df,0,Div1,RFT,0.88,0.88,0.88,0.88,0.74,2017/04/23 21:58:36,,,all_feats,A:B,1905
+pandas,dp_df,0,Div1,RFT,0.90,0.90,0.90,0.90,0.79,2017/04/23 21:58:38,,,all_feats,C:D:E,3661
 pandas,categ,0,Div2,RFT,0.52,0.52,0.52,0.52,0.24,2017/04/23 22:00:26,,,all_feats,A:B:C:D:E,28108
 pandas,categ,0,Div2,RFT,0.54,0.54,0.54,0.54,0.31,2017/04/23 22:00:29,,,all_feats,A:B,11789
 pandas,categ,0,Div2,RFT,0.56,0.56,0.56,0.56,0.23,2017/04/23 22:00:33,,,all_feats,C:D:E,16319
@@ -644,11 +644,11 @@ pandas,dp_bf,0,Div2,RFT,0.78,0.78,0.78,0.78,0.68,2017/04/23 22:01:09,,,all_feats
 pandas,gr_ma,0,Div2,RFT,0.92,0.92,0.92,0.92,0.77,2017/04/23 22:01:12,,,all_feats,A:B:C:D:E,7474
 pandas,gr_ma,0,Div2,RFT,0.97,0.97,0.97,0.97,0.95,2017/04/23 22:01:14,,,all_feats,A:B,2630
 pandas,gr_ma,0,Div2,RFT,0.89,0.89,0.89,0.89,0.67,2017/04/23 22:01:16,,,all_feats,C:D:E,4844
-pandas,dp_dfs,0,Div2,RFT,0.85,0.85,0.85,0.85,0.69,2017/04/23 22:01:19,,,all_feats,A:B:C:D:E,6220
-pandas,dp_dfs,0,Div2,RFT,0.86,0.86,0.86,0.86,0.66,2017/04/23 22:01:21,,,all_feats,A:B,710
-pandas,dp_dfs,0,Div2,RFT,0.86,0.86,0.86,0.86,0.70,2017/04/23 22:01:24,,,all_feats,C:D:E,5510
-pandas,dp_dfs,0,Div1,RFT,0.88,0.88,0.88,0.88,0.77,2017/04/23 23:19:13, , ,all_feats,A:B:C:D:E,5566
-pandas,dp_dfs,0,Div1,RFT,0.88,0.88,0.88,0.88,0.74,2017/04/23 23:19:23, , ,all_feats,A:B,1905
+pandas,dp_df,0,Div2,RFT,0.85,0.85,0.85,0.85,0.69,2017/04/23 22:01:19,,,all_feats,A:B:C:D:E,6220
+pandas,dp_df,0,Div2,RFT,0.86,0.86,0.86,0.86,0.66,2017/04/23 22:01:21,,,all_feats,A:B,710
+pandas,dp_df,0,Div2,RFT,0.86,0.86,0.86,0.86,0.70,2017/04/23 22:01:24,,,all_feats,C:D:E,5510
+pandas,dp_df,0,Div1,RFT,0.88,0.88,0.88,0.88,0.77,2017/04/23 23:19:13, , ,all_feats,A:B:C:D:E,5566
+pandas,dp_df,0,Div1,RFT,0.88,0.88,0.88,0.88,0.74,2017/04/23 23:19:23, , ,all_feats,A:B,1905
 pandas,dp_bf,0,DivAll,RFT,0.90,0.90,0.90,0.90,0.60,2017/04/25 09:50:54, , ,all_feats,A:B:C:D:E,200
 pandas,dp_bf,0,DivAll,RFT,0.88,0.88,0.88,0.88,0.65,2017/04/25 09:50:58, , ,all_feats,A:B,200
 pandas,dp_bf,0,DivAll,RFT,0.77,0.77,0.77,0.77,0.60,2017/04/25 09:54:08, , ,all_feats,A:B:C:D:E,14491
@@ -701,9 +701,9 @@ pd_out,dp_bf,0,Div1,RFT,0.86,0.86,0.86,0.86,0.81,2017/04/25 11:44:12, , ,all_fea
 pd_out,gr_ma,0,Div1,RFT,0.91,0.91,0.91,0.91,0.69,2017/04/25 11:44:14, , ,all_feats,A:B:C:D:E,3530
 pd_out,gr_ma,0,Div1,RFT,0.93,0.93,0.93,0.93,0.73,2017/04/25 11:44:15, , ,all_feats,A:B,1635
 pd_out,gr_ma,0,Div1,RFT,0.90,0.90,0.90,0.90,0.65,2017/04/25 11:44:16, , ,all_feats,C:D:E,1895
-pd_out,dp_dfs,0,Div1,RFT,0.90,0.90,0.90,0.90,0.78,2017/04/25 11:44:18, , ,all_feats,A:B:C:D:E,4301
-pd_out,dp_dfs,0,Div1,RFT,0.89,0.89,0.89,0.89,0.74,2017/04/25 11:44:19, , ,all_feats,A:B,1444
-pd_out,dp_dfs,0,Div1,RFT,0.91,0.91,0.91,0.91,0.80,2017/04/25 11:44:21, , ,all_feats,C:D:E,2857
+pd_out,dp_df,0,Div1,RFT,0.90,0.90,0.90,0.90,0.78,2017/04/25 11:44:18, , ,all_feats,A:B:C:D:E,4301
+pd_out,dp_df,0,Div1,RFT,0.89,0.89,0.89,0.89,0.74,2017/04/25 11:44:19, , ,all_feats,A:B,1444
+pd_out,dp_df,0,Div1,RFT,0.91,0.91,0.91,0.91,0.80,2017/04/25 11:44:21, , ,all_feats,C:D:E,2857
 pd_out,categ,0,Div2,RFT,0.55,0.55,0.55,0.55,0.24,2017/04/25 11:44:24, , ,all_feats,A:B:C:D:E,22217
 pd_out,categ,0,Div2,RFT,0.56,0.56,0.56,0.56,0.31,2017/04/25 11:44:26, , ,all_feats,A:B,9375
 pd_out,categ,0,Div2,RFT,0.60,0.60,0.60,0.60,0.24,2017/04/25 11:44:29, , ,all_feats,C:D:E,12842
@@ -725,9 +725,9 @@ pd_out,dp_bf,0,Div2,RFT,0.79,0.79,0.79,0.79,0.68,2017/04/25 11:44:51, , ,all_fea
 pd_out,gr_ma,0,Div2,RFT,0.92,0.92,0.92,0.92,0.77,2017/04/25 11:44:52, , ,all_feats,A:B:C:D:E,5884
 pd_out,gr_ma,0,Div2,RFT,0.97,0.97,0.97,0.97,0.95,2017/04/25 11:44:54, , ,all_feats,A:B,2089
 pd_out,gr_ma,0,Div2,RFT,0.90,0.90,0.90,0.90,0.67,2017/04/25 11:44:55, , ,all_feats,C:D:E,3795
-pd_out,dp_dfs,0,Div2,RFT,0.87,0.87,0.87,0.87,0.69,2017/04/25 11:44:57, , ,all_feats,A:B:C:D:E,4856
-pd_out,dp_dfs,0,Div2,RFT,0.87,0.87,0.87,0.87,0.67,2017/04/25 11:44:58, , ,all_feats,A:B,561
-pd_out,dp_dfs,0,Div2,RFT,0.87,0.87,0.87,0.87,0.70,2017/04/25 11:44:59, , ,all_feats,C:D:E,4295
+pd_out,dp_df,0,Div2,RFT,0.87,0.87,0.87,0.87,0.69,2017/04/25 11:44:57, , ,all_feats,A:B:C:D:E,4856
+pd_out,dp_df,0,Div2,RFT,0.87,0.87,0.87,0.87,0.67,2017/04/25 11:44:58, , ,all_feats,A:B,561
+pd_out,dp_df,0,Div2,RFT,0.87,0.87,0.87,0.87,0.70,2017/04/25 11:44:59, , ,all_feats,C:D:E,4295
 pd_out,categ,0,DivAll,RFT,0.57,0.57,0.57,0.57,0.23,2017/04/25 11:45:05, , ,all_feats,A:B:C:D:E,34479
 pd_out,categ,0,DivAll,RFT,0.55,0.55,0.55,0.55,0.25,2017/04/25 11:45:08, , ,all_feats,A:B,14348
 pd_out,categ,0,DivAll,RFT,0.61,0.61,0.61,0.61,0.24,2017/04/25 11:45:12, , ,all_feats,C:D:E,20131
@@ -749,9 +749,9 @@ pd_out,dp_bf,0,DivAll,RFT,0.81,0.81,0.81,0.81,0.74,2017/04/25 11:45:45, , ,all_f
 pd_out,gr_ma,0,DivAll,RFT,0.92,0.92,0.92,0.92,0.74,2017/04/25 11:45:48, , ,all_feats,A:B:C:D:E,9378
 pd_out,gr_ma,0,DivAll,RFT,0.95,0.95,0.95,0.95,0.85,2017/04/25 11:45:50, , ,all_feats,A:B,3724
 pd_out,gr_ma,0,DivAll,RFT,0.90,0.90,0.90,0.90,0.67,2017/04/25 11:45:52, , ,all_feats,C:D:E,5654
-pd_out,dp_dfs,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.73,2017/04/25 11:45:55, , ,all_feats,A:B:C:D:E,9122
-pd_out,dp_dfs,0,DivAll,RFT,0.89,0.89,0.89,0.89,0.72,2017/04/25 11:45:57, , ,all_feats,A:B,2005
-pd_out,dp_dfs,0,DivAll,RFT,0.88,0.88,0.88,0.88,0.74,2017/04/25 11:45:59, , ,all_feats,C:D:E,7117
+pd_out,dp_df,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.73,2017/04/25 11:45:55, , ,all_feats,A:B:C:D:E,9122
+pd_out,dp_df,0,DivAll,RFT,0.89,0.89,0.89,0.89,0.72,2017/04/25 11:45:57, , ,all_feats,A:B,2005
+pd_out,dp_df,0,DivAll,RFT,0.88,0.88,0.88,0.88,0.74,2017/04/25 11:45:59, , ,all_feats,C:D:E,7117
 pd_out,categ,1,DivAll,RFT,0.77,0.40,0.53,0.28,0.42,2017/04/28 08:40:43, , ,all_feats,A:B:C:D:E,34479
 pd_out,categ,1,DivAll,RFT,0.75,0.45,0.56,0.32,0.50,2017/04/28 08:40:53, , ,all_feats,A:B,14348
 pd_out,categ,1,DivAll,RFT,0.81,0.41,0.55,0.29,0.37,2017/04/28 08:41:07, , ,all_feats,C:D:E,20131
@@ -761,9 +761,136 @@ pd_out,categ,1,Div1,RFT,0.84,0.50,0.63,0.37,0.38,2017/04/28 08:47:57, , ,all_fea
 pd_out,categ,1,Div2,RFT,0.75,0.40,0.52,0.28,0.46,2017/04/28 08:49:21, , ,all_feats,A:B:C:D:E,22217
 pd_out,categ,1,Div2,RFT,0.76,0.57,0.65,0.41,0.55,2017/04/28 08:49:25, , ,all_feats,A:B,9375
 pd_out,categ,1,Div2,RFT,0.80,0.38,0.51,0.27,0.40,2017/04/28 08:49:31, , ,all_feats,C:D:E,12842
-pd_out,dp_dfs,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.73,2017/05/08 15:07:19, , ,all_feats,A:B:C:D:E,9122
-pd_out,dp_dfs,0,DivAll,RFT,0.88,0.88,0.88,0.88,0.72,2017/05/08 15:07:21, , ,all_feats,A:B,2005
-pd_out,dp_dfs,0,DivAll,RFT,0.88,0.88,0.88,0.88,0.74,2017/05/08 15:07:23, , ,all_feats,C:D:E,7117
-pd_out,dp_dfs,0,DivAll,RFT,0.85,0.85,0.85,0.85,0.73,2017/05/08 15:07:58, , ,all_feats,A:B:C:D:E,9122
-pd_out,dp_dfs,0,DivAll,RFT,0.85,0.85,0.85,0.85,0.72,2017/05/08 15:08:00, , ,all_feats,A:B,2005
-pd_out,dp_dfs,0,DivAll,RFT,0.85,0.85,0.85,0.85,0.74,2017/05/08 15:08:02, , ,all_feats,C:D:E,7117
+pd_out,dp_df,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.73,2017/05/08 15:07:19, , ,all_feats,A:B:C:D:E,9122
+pd_out,dp_df,0,DivAll,RFT,0.88,0.88,0.88,0.88,0.72,2017/05/08 15:07:21, , ,all_feats,A:B,2005
+pd_out,dp_df,0,DivAll,RFT,0.88,0.88,0.88,0.88,0.74,2017/05/08 15:07:23, , ,all_feats,C:D:E,7117
+pd_out,dp_df,0,DivAll,RFT,0.85,0.85,0.85,0.85,0.73,2017/05/08 15:07:58, , ,all_feats,A:B:C:D:E,9122
+pd_out,dp_df,0,DivAll,RFT,0.85,0.85,0.85,0.85,0.72,2017/05/08 15:08:00, , ,all_feats,A:B,2005
+pd_out,dp_df,0,DivAll,RFT,0.85,0.85,0.85,0.85,0.74,2017/05/08 15:08:02, , ,all_feats,C:D:E,7117
+pd_out,ds_gr,0,DivAll,RFT,0.82,0.82,0.82,0.82,0.68,2017/05/23 21:18:06, , ,all_feats,A:B:C:D:E,7269
+pd_out,ds_gr,0,DivAll,RFT,0.83,0.83,0.83,0.83,0.61,2017/05/23 21:18:08, , ,all_feats,A:B,1397
+pd_out,ds_gr,0,DivAll,RFT,0.83,0.83,0.83,0.83,0.69,2017/05/23 21:18:10, , ,all_feats,C:D:E,5872
+pd_out,dp_gr,0,DivAll,RFT,0.81,0.81,0.81,0.81,0.53,2017/05/23 21:22:08, , ,all_feats,A:B:C:D:E,11886
+pd_out,dp_bf,0,DivAll,RFT,0.79,0.79,0.79,0.79,0.60,2017/05/23 21:22:11, , ,all_feats,A:B:C:D:E,11238
+pd_out,gr_ma,0,DivAll,RFT,0.92,0.92,0.92,0.92,0.74,2017/05/23 21:22:14, , ,all_feats,A:B:C:D:E,9378
+pd_out,dp_df,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.73,2017/05/23 21:22:18, , ,all_feats,A:B:C:D:E,9122
+pd_out,ds_gr,0,DivAll,RFT,0.83,0.83,0.83,0.83,0.68,2017/05/23 21:22:21, , ,all_feats,A:B:C:D:E,7269
+pandas,dp_gr,0,DivAll,RFT,0.79,0.79,0.79,0.79,0.53,2017/05/23 21:45:54, , ,all_feats,A:B:C:D:E,15198
+pandas,dp_bf,0,DivAll,RFT,0.77,0.77,0.77,0.77,0.60,2017/05/23 21:46:00, , ,all_feats,A:B:C:D:E,14491
+pandas,gr_ma,0,DivAll,RFT,0.91,0.91,0.91,0.91,0.74,2017/05/23 21:46:04, , ,all_feats,A:B:C:D:E,11944
+pandas,dp_df,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.73,2017/05/23 21:46:08, , ,all_feats,A:B:C:D:E,11736
+pandas,ds_gr,0,DivAll,RFT,0.82,0.82,0.82,0.82,0.68,2017/05/23 21:46:13, , ,all_feats,A:B:C:D:E,9386
+pandas,dp_gr,0,DivAll,SVM,0.54,0.54,0.54,0.54,0.53,2017/05/26 18:17:09, , ,cyclo,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,SVM,0.72,0.72,0.72,0.72,0.53,2017/05/26 18:17:10, , ,all_feats,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,SVM,0.72,0.72,0.72,0.72,0.53,2017/05/26 18:17:11, , ,all_feats:cyclo,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,SVM,0.57,0.57,0.57,0.57,0.53,2017/05/26 18:17:12, , ,lines,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,SVM,0.66,0.66,0.66,0.66,0.53,2017/05/26 18:17:13, , ,count_vars,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,SVM,0.68,0.68,0.68,0.68,0.53,2017/05/26 18:17:14, , ,count_vars:operations,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,SVM,0.71,0.71,0.71,0.71,0.53,2017/05/26 18:17:15, , ,count_vars:operations:constructs,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,RFT,0.54,0.54,0.54,0.54,0.53,2017/05/26 18:17:17, , ,cyclo,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,RFT,0.80,0.80,0.80,0.80,0.53,2017/05/26 18:17:21, , ,all_feats,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,RFT,0.80,0.80,0.80,0.80,0.53,2017/05/26 18:17:26, , ,all_feats:cyclo,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,RFT,0.58,0.58,0.58,0.58,0.53,2017/05/26 18:17:29, , ,lines,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,RFT,0.67,0.67,0.67,0.67,0.53,2017/05/26 18:17:33, , ,count_vars,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,RFT,0.73,0.73,0.73,0.73,0.53,2017/05/26 18:17:38, , ,count_vars:operations,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,RFT,0.77,0.77,0.77,0.77,0.53,2017/05/26 18:17:44, , ,count_vars:operations:constructs,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,ADA,0.54,0.54,0.54,0.54,0.53,2017/05/26 18:17:49, , ,cyclo,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,ADA,0.76,0.76,0.76,0.76,0.53,2017/05/26 18:17:58, , ,all_feats,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,ADA,0.76,0.76,0.76,0.76,0.53,2017/05/26 18:18:07, , ,all_feats:cyclo,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,ADA,0.59,0.59,0.59,0.59,0.53,2017/05/26 18:18:13, , ,lines,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,ADA,0.69,0.69,0.69,0.69,0.53,2017/05/26 18:18:19, , ,count_vars,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,ADA,0.72,0.72,0.72,0.72,0.53,2017/05/26 18:18:26, , ,count_vars:operations,A:B:C:D:E,15198
+pandas,dp_gr,0,DivAll,ADA,0.74,0.74,0.74,0.74,0.53,2017/05/26 18:18:33, , ,count_vars:operations:constructs,A:B:C:D:E,15198
+pandas,gr_ma,0,DivAll,SVM,0.52,0.52,0.52,0.52,0.74,2017/05/26 18:18:35, , ,cyclo,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,SVM,0.86,0.86,0.86,0.86,0.74,2017/05/26 18:18:36, , ,all_feats,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,SVM,0.86,0.86,0.86,0.86,0.74,2017/05/26 18:18:38, , ,all_feats:cyclo,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,SVM,0.70,0.70,0.70,0.70,0.74,2017/05/26 18:18:39, , ,lines,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,SVM,0.80,0.80,0.80,0.80,0.74,2017/05/26 18:18:41, , ,count_vars,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,SVM,0.84,0.84,0.84,0.84,0.74,2017/05/26 18:18:42, , ,count_vars:operations,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,SVM,0.85,0.85,0.85,0.85,0.74,2017/05/26 18:18:44, , ,count_vars:operations:constructs,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,RFT,0.74,0.74,0.74,0.74,0.74,2017/05/26 18:18:47, , ,cyclo,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,RFT,0.91,0.91,0.91,0.91,0.74,2017/05/26 18:18:51, , ,all_feats,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,RFT,0.91,0.91,0.91,0.91,0.74,2017/05/26 18:18:55, , ,all_feats:cyclo,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,RFT,0.73,0.73,0.73,0.73,0.74,2017/05/26 18:18:58, , ,lines,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,RFT,0.82,0.82,0.82,0.82,0.74,2017/05/26 18:19:02, , ,count_vars,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,RFT,0.89,0.89,0.89,0.89,0.74,2017/05/26 18:19:05, , ,count_vars:operations,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,RFT,0.90,0.90,0.90,0.90,0.74,2017/05/26 18:19:09, , ,count_vars:operations:constructs,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,ADA,0.74,0.74,0.74,0.74,0.74,2017/05/26 18:19:14, , ,cyclo,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,ADA,0.88,0.88,0.88,0.88,0.74,2017/05/26 18:19:21, , ,all_feats,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,ADA,0.88,0.88,0.88,0.88,0.74,2017/05/26 18:19:29, , ,all_feats:cyclo,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,ADA,0.74,0.74,0.74,0.74,0.74,2017/05/26 18:19:33, , ,lines,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,ADA,0.83,0.83,0.83,0.83,0.74,2017/05/26 18:19:38, , ,count_vars,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,ADA,0.87,0.87,0.87,0.87,0.74,2017/05/26 18:19:44, , ,count_vars:operations,A:B:C:D:E,11944
+pandas,gr_ma,0,DivAll,ADA,0.87,0.87,0.87,0.87,0.74,2017/05/26 18:19:50, , ,count_vars:operations:constructs,A:B:C:D:E,11944
+pandas,categ,0,DivAll,SVM,0.16,0.16,0.16,0.16,0.23,2017/05/27 00:05:22, , ,cyclo,A:B:C:D:E,43979
+pandas,categ,0,DivAll,SVM,0.43,0.43,0.43,0.43,0.23,2017/05/27 00:05:28, , ,all_feats,A:B:C:D:E,43979
+pandas,categ,0,DivAll,SVM,0.43,0.43,0.43,0.43,0.23,2017/05/27 00:05:35, , ,all_feats:cyclo,A:B:C:D:E,43979
+pandas,categ,0,DivAll,SVM,0.21,0.21,0.21,0.21,0.23,2017/05/27 00:05:37, , ,lines,A:B:C:D:E,43979
+pandas,categ,0,DivAll,SVM,0.32,0.32,0.32,0.32,0.23,2017/05/27 00:05:39, , ,count_vars,A:B:C:D:E,43979
+pandas,categ,0,DivAll,SVM,0.38,0.38,0.38,0.38,0.23,2017/05/27 00:05:42, , ,count_vars:operations,A:B:C:D:E,43979
+pandas,categ,0,DivAll,SVM,0.40,0.40,0.40,0.40,0.23,2017/05/27 00:05:46, , ,count_vars:operations:constructs,A:B:C:D:E,43979
+pandas,categ,0,DivAll,RFT,0.24,0.24,0.24,0.24,0.23,2017/05/27 00:05:56, , ,cyclo,A:B:C:D:E,43979
+pandas,categ,0,DivAll,RFT,0.54,0.54,0.54,0.54,0.23,2017/05/27 00:06:51, , ,all_feats,A:B:C:D:E,43979
+pandas,categ,0,DivAll,RFT,0.54,0.54,0.54,0.54,0.23,2017/05/27 00:07:46, , ,all_feats:cyclo,A:B:C:D:E,43979
+pandas,categ,0,DivAll,RFT,0.27,0.27,0.27,0.27,0.23,2017/05/27 00:08:05, , ,lines,A:B:C:D:E,43979
+pandas,categ,0,DivAll,RFT,0.34,0.34,0.34,0.34,0.23,2017/05/27 00:08:31, , ,count_vars,A:B:C:D:E,43979
+pandas,categ,0,DivAll,RFT,0.45,0.45,0.45,0.45,0.23,2017/05/27 00:09:11, , ,count_vars:operations,A:B:C:D:E,43979
+pandas,categ,0,DivAll,RFT,0.51,0.51,0.51,0.51,0.23,2017/05/27 00:09:57, , ,count_vars:operations:constructs,A:B:C:D:E,43979
+pandas,categ,0,DivAll,ADA,0.24,0.24,0.24,0.24,0.23,2017/05/27 00:10:15, , ,cyclo,A:B:C:D:E,43979
+pandas,categ,0,DivAll,ADA,0.47,0.47,0.47,0.47,0.23,2017/05/27 00:10:57, , ,all_feats,A:B:C:D:E,43979
+pandas,categ,0,DivAll,ADA,0.47,0.47,0.47,0.47,0.23,2017/05/27 00:11:39, , ,all_feats:cyclo,A:B:C:D:E,43979
+pandas,categ,0,DivAll,ADA,0.28,0.28,0.28,0.28,0.23,2017/05/27 00:12:04, , ,lines,A:B:C:D:E,43979
+pandas,categ,0,DivAll,ADA,0.37,0.37,0.37,0.37,0.23,2017/05/27 00:12:24, , ,count_vars,A:B:C:D:E,43979
+pandas,categ,0,DivAll,ADA,0.42,0.42,0.42,0.42,0.23,2017/05/27 00:12:49, , ,count_vars:operations,A:B:C:D:E,43979
+pandas,categ,0,DivAll,ADA,0.44,0.44,0.44,0.44,0.23,2017/05/27 00:13:28, , ,count_vars:operations:constructs,A:B:C:D:E,43979
+pandas,algos,0,DivAll,SVM,0.14,0.14,0.14,0.14,0.17,2017/05/27 00:13:29, , ,cyclo,A:B:C:D:E,15100
+pandas,algos,0,DivAll,SVM,0.43,0.43,0.43,0.43,0.17,2017/05/27 00:13:37, , ,all_feats,A:B:C:D:E,15100
+pandas,algos,0,DivAll,SVM,0.43,0.43,0.43,0.43,0.17,2017/05/27 00:13:43, , ,all_feats:cyclo,A:B:C:D:E,15100
+pandas,algos,0,DivAll,SVM,0.13,0.13,0.13,0.13,0.17,2017/05/27 00:13:45, , ,lines,A:B:C:D:E,15100
+pandas,algos,0,DivAll,SVM,0.30,0.30,0.30,0.30,0.17,2017/05/27 00:13:47, , ,count_vars,A:B:C:D:E,15100
+pandas,algos,0,DivAll,SVM,0.37,0.37,0.37,0.37,0.17,2017/05/27 00:13:50, , ,count_vars:operations,A:B:C:D:E,15100
+pandas,algos,0,DivAll,SVM,0.41,0.41,0.41,0.41,0.17,2017/05/27 00:13:53, , ,count_vars:operations:constructs,A:B:C:D:E,15100
+pandas,algos,0,DivAll,RFT,0.22,0.22,0.22,0.22,0.17,2017/05/27 00:14:03, , ,cyclo,A:B:C:D:E,15100
+pandas,algos,0,DivAll,RFT,0.61,0.61,0.61,0.61,0.17,2017/05/27 00:14:28, , ,all_feats,A:B:C:D:E,15100
+pandas,algos,0,DivAll,RFT,0.61,0.61,0.61,0.61,0.17,2017/05/27 00:14:57, , ,all_feats:cyclo,A:B:C:D:E,15100
+pandas,algos,0,DivAll,RFT,0.19,0.19,0.19,0.19,0.17,2017/05/27 00:15:14, , ,lines,A:B:C:D:E,15100
+pandas,algos,0,DivAll,RFT,0.33,0.33,0.33,0.33,0.17,2017/05/27 00:15:35, , ,count_vars,A:B:C:D:E,15100
+pandas,algos,0,DivAll,RFT,0.51,0.51,0.51,0.51,0.17,2017/05/27 00:16:02, , ,count_vars:operations,A:B:C:D:E,15100
+pandas,algos,0,DivAll,RFT,0.58,0.58,0.58,0.58,0.17,2017/05/27 00:16:28, , ,count_vars:operations:constructs,A:B:C:D:E,15100
+pandas,algos,0,DivAll,ADA,0.22,0.22,0.22,0.22,0.17,2017/05/27 00:16:44, , ,cyclo,A:B:C:D:E,15100
+pandas,algos,0,DivAll,ADA,0.51,0.51,0.51,0.51,0.17,2017/05/27 00:17:09, , ,all_feats,A:B:C:D:E,15100
+pandas,algos,0,DivAll,ADA,0.52,0.52,0.52,0.52,0.17,2017/05/27 00:17:39, , ,all_feats:cyclo,A:B:C:D:E,15100
+pandas,algos,0,DivAll,ADA,0.22,0.22,0.22,0.22,0.17,2017/05/27 00:17:51, , ,lines,A:B:C:D:E,15100
+pandas,algos,0,DivAll,ADA,0.37,0.37,0.37,0.37,0.17,2017/05/27 00:18:15, , ,count_vars,A:B:C:D:E,15100
+pandas,algos,0,DivAll,ADA,0.45,0.45,0.45,0.45,0.17,2017/05/27 00:18:40, , ,count_vars:operations,A:B:C:D:E,15100
+pandas,algos,0,DivAll,ADA,0.47,0.47,0.47,0.47,0.17,2017/05/27 00:19:09, , ,count_vars:operations:constructs,A:B:C:D:E,15100
+pandas,categ,0,DivAll,RFT,0.54,0.54,0.54,0.54,0.23,2017/05/27 00:30:15, , ,all_feats,A:B:C:D:E,43979
+pandas,algos,0,DivAll,RFT,0.63,0.63,0.63,0.63,0.17,2017/05/27 00:38:36, , ,all_feats,A:B:C:D:E,15100
+pandas,dp_gr,0,DivAll,RFT,0.80,0.80,0.80,0.80,0.53,2017/05/27 00:39:21, , ,all_feats,A:B:C:D:E,15198
+pandas,gr_ma,0,DivAll,RFT,0.91,0.91,0.91,0.91,0.74,2017/05/27 00:39:31, , ,all_feats,A:B:C:D:E,11944
+pandas,algos,0,DivAll,RFT,0.65,0.65,0.65,0.65,0.17,2017/06/02 12:55:42, , ,all_feats,A:B:C:D:E,15100
+pandas,dp_gr,0,DivAll,RFT,0.81,0.81,0.81,0.81,0.53,2017/06/02 12:56:14, , ,all_feats,A:B:C:D:E,15198
+pandas,dp_bf,0,DivAll,RFT,0.78,0.78,0.78,0.78,0.60,2017/06/02 12:56:19, , ,all_feats,A:B:C:D:E,14491
+pandas,gr_ma,0,DivAll,RFT,0.91,0.91,0.91,0.91,0.74,2017/06/02 12:56:23, , ,all_feats,A:B:C:D:E,11944
+pandas,dp_df,0,DivAll,RFT,0.87,0.87,0.87,0.87,0.73,2017/06/02 12:56:27, , ,all_feats,A:B:C:D:E,11736
+pandas,ds_gr,0,DivAll,RFT,0.83,0.83,0.83,0.83,0.68,2017/06/02 12:56:31, , ,all_feats,A:B:C:D:E,9386
+pandas,categ,0,DivAll,RFT,0.56,0.56,0.56,0.56,0.23,2017/06/02 13:05:26, , ,all_feats,A:B:C:D:E,43979
+pandas,categ,1,DivAll,RFT,0.76,0.41,0.53,0.27,0.37,2017/06/02 13:08:48, , ,all_feats,A:B:C:D:E,43979
+pd_out,dp_gr,0,DivAll,RFT,0.82,0.82,0.82,0.82,0.53,2017/06/02 13:20:11, , ,all_feats,A:B:C:D:E,11316
+pd_out,dp_bf,0,DivAll,RFT,0.80,0.80,0.80,0.80,0.60,2017/06/02 13:20:16, , ,all_feats,A:B:C:D:E,10709
+pd_out,gr_ma,0,DivAll,RFT,0.92,0.92,0.92,0.92,0.74,2017/06/02 13:20:19, , ,all_feats,A:B:C:D:E,8899
+pd_out,dp_df,0,DivAll,RFT,0.88,0.88,0.88,0.88,0.73,2017/06/02 13:20:23, , ,all_feats,A:B:C:D:E,8676
+pd_out,ds_gr,0,DivAll,RFT,0.84,0.84,0.84,0.84,0.68,2017/06/02 13:20:26, , ,all_feats,A:B:C:D:E,6944
+pd_out,categ,0,DivAll,RFT,0.59,0.59,0.59,0.59,0.23,2017/06/02 13:21:29, , ,all_feats,A:B:C:D:E,32845
+pd_out,algos,0,DivAll,RFT,0.68,0.68,0.68,0.68,0.18,2017/06/02 13:23:03, , ,all_feats,A:B:C:D:E,11219
+pd_out,dp_gr,0,DivAll,RFT,0.83,0.83,0.83,0.83,0.54,2017/06/02 14:07:58, , ,all_feats,A:B:C:D:E,4932
+pd_out,dp_bf,0,DivAll,RFT,0.81,0.81,0.81,0.81,0.64,2017/06/02 14:08:00, , ,all_feats,A:B:C:D:E,4549
+pd_out,gr_ma,0,DivAll,RFT,0.92,0.92,0.92,0.92,0.70,2017/06/02 14:08:03, , ,all_feats,A:B:C:D:E,3668
+pd_out,dp_df,0,DivAll,RFT,0.89,0.89,0.89,0.89,0.73,2017/06/02 14:08:05, , ,all_feats,A:B:C:D:E,3935
+pd_out,ds_gr,0,DivAll,RFT,0.85,0.85,0.85,0.85,0.68,2017/06/02 14:08:07, , ,all_feats,A:B:C:D:E,3369
+problem,dp_gr,0,DivAll,RFT,0.80,0.80,0.80,0.80,0.53,2017/06/02 17:35:57, , ,all_feats,A:B:C:D:E,801
+problem,dp_bf,0,DivAll,RFT,0.77,0.77,0.77,0.77,0.60,2017/06/02 17:35:58, , ,all_feats,A:B:C:D:E,759
+problem,gr_ma,0,DivAll,RFT,0.91,0.91,0.91,0.91,0.74,2017/06/02 17:36:00, , ,all_feats,A:B:C:D:E,633
+problem,dp_df,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.73,2017/06/02 17:36:01, , ,all_feats,A:B:C:D:E,619
+problem,ds_gr,0,DivAll,RFT,0.80,0.80,0.80,0.80,0.68,2017/06/02 17:36:03, , ,all_feats,A:B:C:D:E,499
+problem,categ,0,DivAll,RFT,0.53,0.53,0.53,0.53,0.23,2017/06/02 17:37:32, , ,all_feats,A:B:C:D:E,2344

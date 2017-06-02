@@ -3,10 +3,13 @@ import pickle
 import config
 from joiner import build_tags, create_df
 import matplotlib as mpl
+from matplotlib import rc
 # mpl.use('pgf')
 # mpl.use('pdf')
 import numpy as np
 import config
+import textwrap
+
 can_visualize = True
 try:
     import seaborn as sns
@@ -25,27 +28,55 @@ def figsize(scale):
     fig_size = [fig_width,fig_height]
     return fig_size
 
-pgf_with_latex = {                      # setup matplotlib to use latex for output
-    "pgf.texsystem": "pdflatex",        # change this if using xetex or lautex
-    "text.usetex": True,                # use LaTeX to write all text
-    "font.family": "serif",
-    "font.serif": [],                   # blank entries should cause plots to inherit fonts from the document
-    "font.sans-serif": [],
-    "font.monospace": [],
-    "axes.labelsize": 14,               # LaTeX default is 10pt font.
-    "font.size": 12,
-    "legend.fontsize": 12,               # Make the legend/label fonts a little smaller
-    "xtick.labelsize": 12,
-    "ytick.labelsize": 12,
-    "figure.figsize": figsize(0.9),     # default fig size of 0.9 textwidth
-    "pgf.preamble": [
-        r"\usepackage[utf8x]{inputenc}",    # use utf8 fonts becasue your computer can handle it :)
-        r"\usepackage[T1]{fontenc}",        # plots will be generated using this preamble
-        ]
-    }
-# mpl.rcParams.update(pgf_with_latex)
+# pgf_with_latex = {                      # setup matplotlib to use latex for output
+#     "pgf.texsystem": "pdflatex",        # change this if using xetex or lautex
+#     "text.usetex": True,                # use LaTeX to write all text
+#     "font.family": "serif",
+#     "font.serif": [],                   # blank entries should cause plots to inherit fonts from the document
+#     "font.sans-serif": [],
+#     "font.monospace": [],
+#     "axes.labelsize": 14,               # LaTeX default is 10pt font.
+#     "font.size": 12,
+#     "legend.fontsize": 12,               # Make the legend/label fonts a little smaller
+#     "xtick.labelsize": 12,
+#     "ytick.labelsize": 12,
+#     "figure.figsize": figsize(0.9),     # default fig size of 0.9 textwidth
+#     "pgf.preamble": [
+#         r"\usepackage[utf8x]{inputenc}",    # use utf8 fonts becasue your computer can handle it :)
+#         r"\usepackage[T1]{fontenc}",        # plots will be generated using this preamble
+#         ]
+#     }
+# # mpl.rcParams.update(pgf_with_latex)
 
 import matplotlib.pyplot as plt
+
+def settings():
+
+    rc('font', family='serif')
+    sns.set(style="whitegrid")
+
+    # Config
+    linewidth = 6
+    legend_size = 18
+    labelsize_major = 20
+    labelsize_minor = 16
+
+    flatui = ['#1075a1','#24b476','#e94d5b','#7D48DA','#faa44f','#1fb0e7','#64E717']
+
+    # x = np.arange(0,10,1)
+
+    # m1, = plt.plot(x, x ** 2, '-', color=flatui[0],
+    #                label='some-label-1', lw = linewidth)
+    # m2, = plt.plot(x, x ** 3, '-', color=flatui[1],
+    #                label='some-label-2', lw = linewidth)
+
+    plt.xlabel('x-label', fontsize=labelsize_major)
+    plt.ylabel('y-label', fontsize=labelsize_major)
+
+    plt.tick_params(axis='both', which='major', labelsize=labelsize_minor)
+    plt.tick_params(axis='both', which='minor', labelsize=labelsize_minor)
+    plt.tight_layout()
+
 def newfig(width):
     plt.clf()
     fig = plt.figure(figsize=figsize(width))
@@ -132,10 +163,12 @@ def get_properties():
         print('--------------------------------------------')
         print(out.loc[(out['difficulties']==diff) & (out['algo_mode']=='dp_bf')])
 
-def load_output():
-    out = pd.read_csv('out-classifier.csv', header=0, sep=',')
+def load_output(out):
     # algos_df = out.loc[list(range(287,302)),:] #algorithms
-    algos_df = out.iloc[list(range(302,319)),:]
+    # algos_df = out.iloc[list(range(302,319)),:] #categories
+    # algos_df = out.iloc[list(range(804-2, 824-1)),:] #dp greedy
+    # algos_df = out.iloc[list(range(825-2,845-1))] #new cats
+    algos_df = out.iloc[list(range(846-2,866-1))] # new algos
     # print(algos_df.head())
 
     print("& SVM  & RFT  & ADA  \\\\ \hline")
@@ -143,10 +176,11 @@ def load_output():
     rft = algos_df.loc[algos_df['classifier']=='RFT',['acc', 'feat_types']]
     ada = algos_df.loc[algos_df['classifier']=='ADA',['acc', 'feat_types']]
     print(svm)
-    for word, feat_type in zip(['all\\_feats', 'count\\_vars', 'count\\_vars + operations', 'count\\_vars + operations + constructs', 'lines'],\
+    for word, feat_type in zip(\
+        ['all\\_feats', 'count\\_vars', 'count\\_vars + operations', 'count\\_vars + operations + constructs', 'lines'],\
         ['all_feats', 'count_vars', 'count_vars:operations' , 'count_vars:operations:constructs', 'lines']):
-
-        print('%s & %.2f & %.2f & %.2f \\\\ \hline' % (word, svm.loc[svm['feat_types']==feat_type, 'acc'],\
+        #Simply renaming the features for printing
+        print('%s & %.2f & %.2f & %.2f \\\\ \midrule' % (word, svm.loc[svm['feat_types']==feat_type, 'acc'],\
             rft.loc[rft['feat_types']==feat_type, 'acc'], ada.loc[ada['feat_types']==feat_type, 'acc']))
 
 # all\_feats& 0.85 & 0.89 & 0.88 \\ \hline
@@ -158,6 +192,7 @@ def load_output():
 def problems_stats(inst_feats):
     grouped = inst_feats.groupby('problem_id')
     result = pd.DataFrame(columns=inst_feats.columns)
+    # result = []
     i = 0
     for df in grouped:
         # df = grouped.get_group('560/C').drop(['id', 'tags', 'problem_id'], axis=1)
@@ -175,6 +210,43 @@ def problems_stats(inst_feats):
     # print(grouped.describe())
     # print(df.mean())
 
+def plot_pairs_baseline(out):
+    print(out.shape)
+    pairs = out.iloc[773-2:777-1]
+    pairs = pairs.assign(hue = ['no-outliers']*5)
+    baseline = pairs
+    # baseline.loc['acc'] = baseline['baseline']
+    baseline = baseline.assign(acc=baseline['baseline'])
+    baseline = baseline.assign(hue=['baseline']*5)
+    pairs = pairs.append(baseline)
+
+    pairs_pandas = out.iloc[778-2:782-1]
+    pairs_pandas = pairs_pandas.assign(hue=['with-outliers']*5)
+    pairs = pairs.append(pairs_pandas)
+
+    ax = sns.barplot(y='acc', x='algo_mode', hue='hue', \
+        hue_order = ['baseline', 'with-outliers', 'no-outliers'], data=pairs)
+    # plt.xticks(rotation=30)
+    ax.set(xticklabels=['dp vs. greedy','dp vs. brute-force','graphs vs. maths','dp vs. dfs','data-structures vs. graphs'])
+    ax.set_xticklabels([textwrap.fill(t.get_text(), 10)  for t in ax.get_xticklabels()])
+    ax.set_xlabel('Classification Mode')
+    ax.set_ylabel('Accuracy')
+    # plt.legend(
+    #         handles = [ax],
+    #         borderaxespad=0.2,
+    #         bbox_to_anchor=(0., 1.02, 1., .102),
+    #         fontsize=18, ncol=2,
+    #         mode="expand"
+    #       )
+
+    # rc('legend', fontsize=18, handlelength=2)
+    plt.legend(loc=2,prop={'size':12})
+
+    plt.savefig('dataset/pairs-acc.png', bbox_inches='tight', dpi=200)
+    plt.show()
+
+
+settings()
 ds_dir = config.get_ds_dir()
 in_dir = ds_dir + 'DivAll'
 algo_mode = config.get_algorithm_modes()[0]
@@ -182,12 +254,16 @@ tags_file = config.get_tags_file(in_dir, algo_mode)
 inst_feats = pickle.load(open( config.get_feat_prefix() + 'features-pandas.pickle', 'rb'))
 tags_list, delete_keys, inst_tags = build_tags(tags_file)
 inst_feats, X, Y = create_df(inst_feats, inst_tags, delete_keys)
+# print(inst_feats.iloc[30:50], '\n', Y[30:50])
 grouped = inst_feats.groupby('tags')
 # print(grouped['operations'].describe())
 # visualize(inst_feats)
 # visualize_pairs(inst_feats)
-# problems_stats(inst_feats)
+problems_stats(inst_feats)
 
-visualize_totals(grouped)
-load_output()
+# visualize_totals(grouped)
+# out = pd.read_csv('out-classifier.csv', header=0, sep=',')
+# load_output(out)
 # get_properties()
+
+# plot_pairs_baseline(out)

@@ -81,7 +81,8 @@ import lizard
 cols = ['id', 'problem_id', 'single_loop', 'double_loop', 'triple_loop', 'if_loop',\
 			  'recursion', 'shift', 'or', 'and', 'int', 'double', 'float', 'string', 'char', 'vector',\
 			  'll', 'point', 'arrays', 'declarations', 'variables', 'avg_params', 'functions',\
-			  'operations', 'plus', 'minus', 'times', 'divide', 'modulus', 'lines', 'ifs', 'cyclo']
+			  'operations', 'plus', 'minus', 'times', 'divide', 'modulus', 'lines', 'ifs', 'cyclo',\
+			  '+','-','*','/','%','+=','-=','*=','/=','++','--']
 
 def evalute(tree,*args):
 	query = './'
@@ -219,6 +220,7 @@ def extract_feats(file):
 
 	# feature 21 - 25
 	cnt_opts = {k:0 for k in ['plus', 'minus', 'times', 'divide', 'modulus']}
+	all_opts = {k:0 for k in operations} # raw counts of all operands, ++ is separated from +, etc..
 	ops = 0
 	for op in tree.xpath(".//operator"):
 		opt = op.text
@@ -227,11 +229,18 @@ def extract_feats(file):
 			for s_opt in op_dict:
 				if opt in op_dict[s_opt]:
 					cnt_opts[s_opt]+=1
+			all_opts[opt]+=1
+
 	curr_feats.append(ops)
 	curr_df['operations'] = ops
 	for t in cnt_opts:
 		curr_df[t] = cnt_opts[t]
 		curr_feats.append(cnt_opts[t])
+
+	for t in all_opts:
+		# curr_df[t] = all_opts[t]
+		curr_feats.append(all_opts[t])
+	curr_df.update(all_opts)
 
 	with open(file.strip('.xml')) as foo:
 		lines = len(foo.readlines())
@@ -260,7 +269,7 @@ def extract_feats(file):
 
 	return curr_feats, curr_df
 
-operations = ['+','-','*','/','%','+=','-=','*=','/=','++','--', '%']
+operations = ['+','-','*','/','%','+=','-=','*=','/=','++','--']
 op_dict ={'plus':['+', '+=', '++'], 'minus': ['-', '-=', '--'], 'times': ['*', '*='], 'divide':['/', '/='], 'modulus':['%']}
 
 
@@ -336,7 +345,7 @@ def all_submissions():
 def test_submission(path):
 	return extract_feats(path)
 
-# all_submissions()
+all_submissions()
 # print(test_submission('data-all/101/A/12700023.cpp.xml')[1]['string'])
 # print(test_submission('data-all/102/B/12309613.cpp.xml')[1]['divide'])
-print(test_submission('data-all/666/B/17824181.cpp.xml')[1]['recursion'])
+# print(test_submission('data-all/456/A/8177562.cpp.xml')[1])

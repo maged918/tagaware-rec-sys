@@ -15,7 +15,7 @@ categories = {
 '': ['bitmasks', 'hashing', 'ternary search','meet-in-the-middle', 'divide and conquer', '2-sat','schedules'\
 ,'fft', 'two pointers', 'binary search', 'strings', 'expression parsing', 'string suffix structures'],
 # 'strings':['expression parsing', 'string suffix structures'],
-# 'implementation': [],
+'implementation': [],
 'greedy': ['constructive algorithms', 'sortings'],
 'data structures': ['dsu']
 }
@@ -38,7 +38,7 @@ single_dict = {}
 # pairs = ['dp', 'brute force']
 # pairs = ['dp', 'greedy']
 
-pairs = [['math', 'graphs'], ['dp', 'brute force'], ['dp', 'greedy'], ['dp', 'dfs and similar']]
+pairs = [['math', 'graphs'], ['dp', 'brute force'], ['dp', 'greedy'], ['dp', 'dfs and similar'], ['data structures', 'graphs']]
 
 for i in range(len(single_sorting)):
 	single_dict[single_sorting[i]] = i
@@ -175,3 +175,11 @@ for div in divs:
 
 tags_file.close()
 	# print(len(single_tags))
+lst = [str.title(item[0]) for item in sorted(all_tags.items(), key=lambda x : x[1], reverse=True) if item[0]!='']
+for i in range(0,len(lst),3):
+	# print(lst[i:i+3])
+	try:
+		print(lst[i], '&', lst[i+1], '&', lst[i+2], '\\\\ \\midrule')
+	except IndexError:
+		print(lst[i], '&', lst[i+1], '\\\\ \\midrule')
+# print(str(lst).replace('\'', ''))

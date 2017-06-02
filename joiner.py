@@ -31,6 +31,9 @@ def create_df(inst_feats, inst_tags, delete_keys, multi=False):
 	inst_feats = inst_feats[inst_feats.problem_id.isin(list(delete_keys)) == False]
 	inst_feats = inst_feats[inst_feats.problem_id.isin(list(inst_tags.keys()))]
 
+	# inst_feats = inst_feats[inst_feats['problem_id'].map(lambda x : int(x.split('/')[0]) > 400)]
+	# print(inst_feats['problem_id'])
+
 	# print('456/B' in delete_keys)
 	# X = inst_feats[inst_feats.columns.difference(['id', 'problem_id'])]
 	X = inst_feats.copy().drop(['id', 'problem_id'], axis=1)

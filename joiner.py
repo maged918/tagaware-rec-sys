@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def build_tags(tags_file, difficulties=['A', 'B', 'C', 'D', 'E']):
+def build_tags(tags_file, difficulties=['A', 'B', 'C', 'D', 'E', 'F']):
 	tags_list = []
 	delete_keys = set()
 	inst_tags = {}
@@ -17,6 +17,8 @@ def build_tags(tags_file, difficulties=['A', 'B', 'C', 'D', 'E']):
 					continue
 				tags = arr[1].split(',')
 				if arr[1]:
+					# if difficulty == 'F':
+					# 	print('F')
 					inst_tags[key] = tags
 					tags_list += tags
 				else:
@@ -25,12 +27,12 @@ def build_tags(tags_file, difficulties=['A', 'B', 'C', 'D', 'E']):
 						# del inst_feats[key]
 
 	tags_list = list(set(tags_list))
+	print('Delete keys containing 733/F', '733/F' in delete_keys)
 	return tags_list, delete_keys, inst_tags
 
 def create_df(inst_feats, inst_tags, delete_keys, multi=False):
 	inst_feats = inst_feats[inst_feats.problem_id.isin(list(delete_keys)) == False]
 	inst_feats = inst_feats[inst_feats.problem_id.isin(list(inst_tags.keys()))]
-
 	# inst_feats = inst_feats[inst_feats['problem_id'].map(lambda x : int(x.split('/')[0]) > 400)]
 	# print(inst_feats['problem_id'])
 
@@ -40,7 +42,6 @@ def create_df(inst_feats, inst_tags, delete_keys, multi=False):
 	Y = inst_feats['problem_id'].map(lambda x: inst_tags[x]).values
 	if not multi:
 		Y = np.hstack(Y)
-
 	tags_df = pd.DataFrame.from_dict({x: y for x, y in enumerate(list(Y))}, orient='index')
 	inst_feats = inst_feats.assign(tags=tags_df.loc[:,[0]])
 	return inst_feats, X, Y

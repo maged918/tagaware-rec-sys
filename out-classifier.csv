@@ -894,3 +894,11 @@ problem,gr_ma,0,DivAll,RFT,0.91,0.91,0.91,0.91,0.74,2017/06/02 17:36:00, , ,all_
 problem,dp_df,0,DivAll,RFT,0.86,0.86,0.86,0.86,0.73,2017/06/02 17:36:01, , ,all_feats,A:B:C:D:E,619
 problem,ds_gr,0,DivAll,RFT,0.80,0.80,0.80,0.80,0.68,2017/06/02 17:36:03, , ,all_feats,A:B:C:D:E,499
 problem,categ,0,DivAll,RFT,0.53,0.53,0.53,0.53,0.23,2017/06/02 17:37:32, , ,all_feats,A:B:C:D:E,2344
+pd_out,categ,0,DivAll,RFT,0.59,0.59,0.59,0.59,0.23,2017/06/03 02:09:42, , ,all_feats,A:B:C:D:E:F:G,32845
+pd_out,categ,0,DivAll,RFT,0.59,0.59,0.59,0.59,0.23,2017/06/03 02:53:33, , ,all_feats,A:B:C:D:E:F:G,33188pd_out,categ,0,DivAll,RFT,0.59,0.59,0.59,0.59,0.23,2017/06/03 03:17:32, , ,all_feats,A:B:C:D:E:F:G,36003
+pd_out,algos,0,DivAll,RFT,0.67,0.67,0.67,0.67,0.18,2017/06/03 03:18:21, , ,all_feats,A:B:C:D:E:F:G,12296
+pd_out,dp_gr,0,DivAll,RFT,0.82,0.82,0.82,0.82,0.52,2017/06/03 03:19:21, , ,all_feats,A:B:C:D:E:F:G,12500
+pd_out,dp_bf,0,DivAll,RFT,0.80,0.80,0.80,0.80,0.59,2017/06/03 03:19:25, , ,all_feats,A:B:C:D:E:F:G,11575
+pd_out,gr_ma,0,DivAll,RFT,0.92,0.92,0.92,0.92,0.73,2017/06/03 03:19:27, , ,all_feats,A:B:C:D:E:F:G,9743
+pd_out,dp_df,0,DivAll,RFT,0.88,0.88,0.88,0.88,0.73,2017/06/03 03:19:30, , ,all_feats,A:B:C:D:E:F:G,9497
+pd_out,ds_gr,0,DivAll,RFT,0.84,0.84,0.84,0.84,0.68,2017/06/03 03:19:33, , ,all_feats,A:B:C:D:E:F:G,7586

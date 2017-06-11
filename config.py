@@ -69,14 +69,14 @@ def get_feat_modes():
     # feat_modes = [['cyclo'], ['all_feats'], ['all_feats', 'cyclo'], \
     #     ['lines'], ['count_vars'], ['count_vars','operations'], ['count_vars', 'operations', 'constructs']]
     # feat_modes = [['lines']]
-    feat_modes = [['all_feats', 'cyclo']]
-    # feat_modes = [['all_feats']]
+    # feat_modes = [['all_feats', 'cyclo']]
+    feat_modes = [['all_feats']]
     # feat_modes = [['count_vars']]
     return feat_modes
 
 def get_difficulties():
     # return [['A', 'B', 'C', 'D', 'E'],['A', 'B'], ['C', 'D', 'E']]
-    return [['A', 'B', 'C', 'D', 'E']]
+    return [['A', 'B', 'C', 'D', 'E', 'F', 'G']]
     # return [['C', 'D', 'E']]
     # return [['A', 'B', 'C']]
     # return [['A', 'B']]

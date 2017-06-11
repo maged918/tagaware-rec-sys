@@ -11,6 +11,8 @@ from requests.auth import HTTPProxyAuth
 from urllib3 import request
 from urllib3 import util
 
+import time
+
 flags = {
 			'proxy': 0
 		}
@@ -21,7 +23,7 @@ password = 'PASSWORD'
 #subprocess.call(["touch", "All-Submissions.txt"])
 #subprocess.call(["touch", "Problems-tags.txt"])
 fi = open("Div1-Submissions.txt" , "a")
-fi1 = open("All-Submissions.txt" , "a")
+# fi1 = open("All-Submissions.txt" , "a")
 fi2 = open("Div1-Problems-tags.txt" , "a")
 
 if not os.path.exists('./source-code'):
@@ -37,10 +39,10 @@ else:
 	proxyDict = {}
 	auth = {}
 
-problem_limit = 10
+problem_limit = 20
 total_limit = 100
 bs4_error_text = '<ERROR>'
-contest_range = range(1, 250)
+contest_range = range(734, 759+1)
 
 def filter_Contests(contests):
 	filtered = []
@@ -123,14 +125,19 @@ def toString(lists):
 	return tags
 
 def create_code(submission):
+	t1 = time.time()
 	url = "http://codeforces.com/contest/" + str(submission['contestId']) + "/submission/" + str(submission['id'])
-	if(flags['proxy']==1):
-		http = urllib3.proxy_from_url(proxyDict['http'])
-	else:
-		http = urllib3.connection_from_url(url)
-	handle = http.request('GET',url)
-	html_gunk = handle.data
+	# if(flags['proxy']==1):
+	# 	http = urllib3.proxy_from_url(proxyDict['http'])
+	# else:
+	# 	http = urllib3.connection_from_url(url)
+	# handle = http.request('GET',url)
+
+	handle = requests.get(url)
+
+	html_gunk = handle.content
 	#print(html_gunk)
+	print('Time to get submission = ', time.time() -t1)
 	soup = BeautifulSoup(html_gunk, 'html.parser')
 	#subprocess.call(["touch", './source-code/' + str(submission['id']) + ".cpp"])
 	fi3 = open('./source-code/' + str(submission['id']) + ".cpp" , "w")

@@ -12,7 +12,14 @@ for contest in $(ls); do
 	for index in $(ls); do
 		cd $index
 		echo "in $index"
-		for file in $(ls); do srcml $file -o $file.xml --in-order; done
+		for file in $(find . -type f -name "*.cpp"); do 
+			# echo "$file.xml"
+			if [ -f "$file.xml" ]; then
+				continue
+			fi
+			srcml $file -o $file.xml --in-order;
+			echo "$file done" 
+		done
 		sed -i -e 's/xmlns=\"http:\/\/www.srcML.org\/srcML\/src\"//g' *.xml
 		sed -i -e 's/xmlns:cpp=\"http:\/\/www.srcML.org\/srcML\/cpp\"//g' *.xml
 		sed -i -e 's/cpp://g' *.xml

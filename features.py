@@ -77,6 +77,7 @@ import pickle
 import config
 import lizard
 
+import time
 
 cols = ['id', 'problem_id', 'single_loop', 'double_loop', 'triple_loop', 'if_loop',\
 			  'recursion', 'shift', 'or', 'and', 'int', 'double', 'float', 'string', 'char', 'vector',\
@@ -295,8 +296,15 @@ elif 'Div2' in divs:
 
 # data_dir = 'data-all/'
 
-def all_submissions():
-	df = pd.DataFrame(columns = cols)
+def all_submissions(load_old = False):
+	feats_prefix = config.get_feat_prefix()
+
+	f = open(feats_prefix+'features-pandas.pickle', 'rb')
+	old_df = pickle.load(f)
+	if load_old:
+		df = old_df
+	else:
+		df = pd.DataFrame(columns = cols)
 	print(len(df.columns))
 	feature_set = {}
 	submission_set = {}
@@ -304,15 +312,19 @@ def all_submissions():
 	for contest in next(os.walk(data_dir))[1]:
 		for problem in next(os.walk(data_dir+"/"+contest))[1]:
 			problem_features =  []
+			problem_id = contest+"/"+problem
+			if load_old and len(old_df[old_df.problem_id == problem_id] > 0):
+				# print('Contest + Problem already loaded')
+				continue
 			for count,submission in enumerate(os.listdir(data_dir+"/"+contest+"/"+problem)):
 				path = data_dir+"/"+contest+"/"+problem+ "/" + submission
-				problem_id = contest+"/"+problem
 				if submission.endswith(".xml"):
 					# print(path)
 					feats = extract_feats(path)
 					curr_df = feats[1]
 					curr_df['id'] = submission
 					curr_df['problem_id'] = problem_id
+					t1 = time.time()
 					df = df.append(curr_df, ignore_index=True)
 					# print(df.tail())
 					problem_features.append(feats[0])
@@ -324,11 +336,11 @@ def all_submissions():
 		print("#", idx, "Contest:", contest)
 		idx+=1
 
+	f.close()
 
 
 	print("Done feature extraction for: " + str(len(feature_set)) + " problems")
 
-	feats_prefix = config.get_feat_prefix()
 	f = open(feats_prefix+'features.pickle', 'wb')
 	pickle.dump(feature_set, f)
 	f.close()
@@ -345,7 +357,7 @@ def all_submissions():
 def test_submission(path):
 	return extract_feats(path)
 
-all_submissions()
+all_submissions(load_old=True)
 # print(test_submission('data-all/101/A/12700023.cpp.xml')[1]['string'])
 # print(test_submission('data-all/102/B/12309613.cpp.xml')[1]['divide'])
 # print(test_submission('data-all/456/A/8177562.cpp.xml')[1])

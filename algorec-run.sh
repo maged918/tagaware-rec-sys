@@ -40,7 +40,7 @@ done
 # constructs data dir
 if [ $create_xmls -eq 1 ]
 then
-  rm -rf $div
+  # rm -rf $div
   python3 construct_dirs.py
   # create xml files and clean them
   bash srcml_and_clean.sh $div
@@ -48,7 +48,7 @@ fi
 # extract features to be saved in features.pickle
 if [ $create_features -eq 1 ]
 then
-  rm features.pickle
+  # rm features.pickle
   python3 features.py
 fi
 # start classification

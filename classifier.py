@@ -47,6 +47,7 @@ def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode, difficulties)
 
 	f = open(feats_file, 'rb')
 	inst_feats = pickle.load(f)
+	# print('prepare data inst feats contains 733 F', inst_feats[inst_feats.problem_id.isin(['733/F'])])
 
 	# fig, (ax1, ax2) = plt.subplots(2)
 	# sns.boxplot([inst_feats.variables, inst_feats.operations], orient='v', showfliers=False)
@@ -126,8 +127,8 @@ def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode, difficulties)
 		values, counts = np.unique(Y, return_counts=True)
 		classes = np.unique(Y)
 
-	for col in X.columns:
-		X[col] = X[col].map(lambda x : logzero(x))
+	# for col in X.columns:
+	# 	X[col] = X[col].map(lambda x : logzero(x))
 	return (X,Y)
 
 def logzero(x):
@@ -434,7 +435,7 @@ for div, algo_mode, classifier, feat_mode, difficulty, row_mode, limit \
 	feats_file = feats_files[row_mode]
 	feats_file = feat_prefix + feats_file
 
-
+	print('Diff', difficulty)
 	data = prepare_data(feats_file, tags_file, multi, row_mode, feat_mode, difficulty)
 	X = data[0]
 	Y = data[1]
@@ -452,7 +453,7 @@ for div, algo_mode, classifier, feat_mode, difficulty, row_mode, limit \
 
 	if multi:
 		# get_baseline(['math', 'implementation', 'greedy', 'dp'], Y)
-		baseline = get_baseline(['math', 'greedy', 'implementation'], Y)[2]
+		baseline = get_baseline(['math', 'dp', 'implementation'], Y)[2]
 		print('Multi Baseline = ', baseline)
 	scores = [0] * 4
 	cross_validate(X,Y,cross_valid, multi, classifier)

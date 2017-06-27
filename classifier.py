@@ -61,6 +61,7 @@ def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode, difficulties)
 
 	X = []
 	Y = []
+	values = []
 	print(len(delete_keys))
 	if 'pandas' in feats_file:
 
@@ -117,6 +118,8 @@ def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode, difficulties)
 		for lst in Y:
 			lsts += lst
 		values, counts = np.unique(lsts, return_counts=True)
+		counts, values = (list(t) for t in zip(*sorted(zip(counts, values))))
+		# print('COUNTS: ', values, counts)
 		Y = mlb.fit_transform(Y)
 		classes = mlb.classes_
 		print(classes)
@@ -129,7 +132,7 @@ def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode, difficulties)
 
 	# for col in X.columns:
 	# 	X[col] = X[col].map(lambda x : logzero(x))
-	return (X,Y)
+	return (X,Y, values)
 
 def logzero(x):
 	if x == 0:
@@ -154,7 +157,8 @@ def choose_columns(X, feat_mode):
 
 	feats = {'count_vars':['int', 'double', 'float', 'char', 'vector', 'll', 'point', 'arrays'],\
 			'constructs': ['single_loop', 'double_loop', 'triple_loop', 'if_loop', 'ifs'],\
-			'operations':['operations', 'plus', 'minus', 'times', 'divide', 'modulus'],\
+			'operations':['operations', 'plus', 'minus', 'times', 'divide', 'modulus',\
+							'+','-','*','/','%','+=','-=','*=','/=','++','--'],\
 			'lines': ['lines'],\
 			'cyclo': ['cyclo']}
 
@@ -199,12 +203,12 @@ def classify(train,gold,test, test_y,multi, classifier):
 
 	preds = clf.predict(test)
 
-	if config.print_importances():
-		from scikitplot import classifier_factory
-		import scikitplot.plotters as skplt
-		# classifier_factory(clf)
-		skplt.plot_feature_importances(clf, feature_names = train.columns, max_num_features = 7)
-		plt.show()
+	# if config.print_importances():
+	# 	from scikitplot import classifier_factory
+	# 	import scikitplot.plotters as skplt
+	# 	# classifier_factory(clf)
+	# 	skplt.plot_feature_importances(clf, feature_names = train.columns, max_num_features = 7)
+	# 	plt.show()
 
 	print(metrics.classification_report(test_y,preds, target_names = classes))
 	prfs = metrics.precision_recall_fscore_support(test_y, preds, average='micro')
@@ -214,7 +218,7 @@ def classify(train,gold,test, test_y,multi, classifier):
 	# 	print(clf.feature_importances_)
 	# 	importances = pd.DataFrame({'feature':train.columns, 'importance': clf.feature_importances_})
 	# 	importances = importances.sort_values('importance', ascending=False).set_index('feature')
-	# 	print(importances)
+		# print(importances)
 	# auc = metrics.roc_auc_score(test_y, preds)
 	# print('Area Under Curve', auc)
 	# print(prfs, acc)
@@ -439,7 +443,7 @@ for div, algo_mode, classifier, feat_mode, difficulty, row_mode, limit \
 	data = prepare_data(feats_file, tags_file, multi, row_mode, feat_mode, difficulty)
 	X = data[0]
 	Y = data[1]
-
+	base = data[2]
 	# from sklearn.utils import shuffle
 	# X, Y = shuffle(X, Y, random_state=0)
 	# X, Y = X[:limit], Y[:limit]
@@ -450,10 +454,10 @@ for div, algo_mode, classifier, feat_mode, difficulty, row_mode, limit \
 	print("Y Shape: ", Y.shape)
 	print("No. of tags: ", len(tags_list), tags_list)
 	print("Algo:", algo_mode)
-
 	if multi:
 		# get_baseline(['math', 'implementation', 'greedy', 'dp'], Y)
-		baseline = get_baseline(['math', 'dp', 'implementation'], Y)[2]
+		print('Baseline tags:', data[2][-3:])
+		baseline = get_baseline(data[2][-3:], Y)[2]
 		print('Multi Baseline = ', baseline)
 	scores = [0] * 4
 	cross_validate(X,Y,cross_valid, multi, classifier)

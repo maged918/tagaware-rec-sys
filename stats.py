@@ -102,7 +102,7 @@ def visualize_totals(inst_feats):
     # print(inst_feats.get_group('math')['vector'])
     # sns.distplot(inst_feats.get_group('math')['operations'], norm_hist=True, kde=False)
 
-    fig, axes = plt.subplots(ncols=7, sharey=False)
+    fig, axes = plt.subplots(ncols=2, sharey=False)
 
     # ops = inst_feats.get_group('dp')['minus']
     # sns.countplot(list(ops[ops<30]), ax = ax1)
@@ -114,7 +114,8 @@ def visualize_totals(inst_feats):
     # sns.countplot(list(ops[ops<30]), ax = ax2)
 
     for idx, tag in enumerate(list(inst_feats.groups.keys())):
-        ops = inst_feats.get_group(tag)['operations']
+        ops = inst_feats.get_group(tag)['ifs']
+        axes[idx].set_title(tag)
         sns.countplot(list(ops[ops<40]), ax = axes[idx])
 
     plt.show()
@@ -128,6 +129,7 @@ def visualize(inst_feats):
         # for col in ['operations', 'variables']:
         # for col in ['variables']:
         # for col in ['modulus']:
+        # for col in ['arrays']:
             # plt.ylim(-10, 40)
             # sns.set(font_scale=1.75)
             if algo_mode == 'algos':
@@ -168,9 +170,8 @@ def load_output(out):
     # algos_df = out.iloc[list(range(302,319)),:] #categories
     # algos_df = out.iloc[list(range(804-2, 824-1)),:] #dp greedy
     # algos_df = out.iloc[list(range(825-2,845-1))] #new cats
-    algos_df = out.iloc[list(range(846-2,866-1))] # new algos
-    # print(algos_df.head())
-
+    algos_df = out.iloc[list(range(918-2,932-1))] # new algos
+    print(algos_df['algo_mode'].value_counts())
     print("& SVM  & RFT  & ADA  \\\\ \hline")
     svm = algos_df.loc[algos_df['classifier']=='SVM',['acc', 'feat_types']]
     rft = algos_df.loc[algos_df['classifier']=='RFT',['acc', 'feat_types']]
@@ -189,7 +190,7 @@ def load_output(out):
 # count\_vars + operations + constructs & 0.84  & 0.88 & 0.87 \\ \hline
 # lines& 0.70 & 0.73 & 0.73
 
-def problems_stats(inst_feats):
+def remove_outliers(inst_feats):
     grouped = inst_feats.groupby('problem_id')
     result = pd.DataFrame(columns=inst_feats.columns)
     # result = []
@@ -250,8 +251,9 @@ settings()
 ds_dir = config.get_ds_dir()
 in_dir = ds_dir + 'DivAll'
 algo_mode = config.get_algorithm_modes()[0]
+algo_mode = 'dp_gr'
 tags_file = config.get_tags_file(in_dir, algo_mode)
-inst_feats = pickle.load(open( config.get_feat_prefix() + 'features-pandas.pickle', 'rb'))
+inst_feats = pickle.load(open( config.get_feat_prefix() + 'features-pandas-old-27jun.pickle', 'rb'))
 tags_list, delete_keys, inst_tags = build_tags(tags_file)
 inst_feats, X, Y = create_df(inst_feats, inst_tags, delete_keys)
 # print(inst_feats.iloc[30:50], '\n', Y[30:50])
@@ -259,11 +261,11 @@ grouped = inst_feats.groupby('tags')
 # print(grouped['operations'].describe())
 # visualize(inst_feats)
 # visualize_pairs(inst_feats)
-problems_stats(inst_feats)
+# remove_outliers(inst_feats)
 
-# visualize_totals(grouped)
-# out = pd.read_csv('out-classifier.csv', header=0, sep=',')
-# load_output(out)
+visualize_totals(grouped)
+out = pd.read_csv('out-classifier.csv', header=0, sep=',')
+load_output(out)
 # get_properties()
 
 # plot_pairs_baseline(out)

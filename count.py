@@ -1,6 +1,6 @@
 from collections import defaultdict
-
-f = open('DivAll-Problems-tags.txt', 'r')
+from config import get_feat_prefix
+f = open('dataset/pt_sub/' + 'DivAll-Problems-tags.txt', 'r')
 
 tag_set = set()
 contest_set = set()

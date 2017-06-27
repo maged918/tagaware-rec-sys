@@ -14,5 +14,8 @@
 871 - 885: new features, including counts for separate operators
 886 - 890: selecting contests with id > 400
 891 - 896: classifying problems rather than submissions: lower performance 
+897 - 903: New Div2 Problems
+904 - 917: New Div1 Problems
+918 - 1067: Final runs, all feature combinations, classifiers, all problems
 TODO: Select only certain years
 TODO:

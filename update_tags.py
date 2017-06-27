@@ -38,7 +38,7 @@ single_dict = {}
 # pairs = ['dp', 'brute force']
 # pairs = ['dp', 'greedy']
 
-pairs = [['math', 'graphs'], ['dp', 'brute force'], ['dp', 'greedy'], ['dp', 'dfs and similar'], ['data structures', 'graphs']]
+pairs = [['math', 'graphs'], ['dp', 'brute force'], ['dp', 'greedy'], ['dp', 'dfs and similar'], ['data structures', 'graphs'], ['graphs', 'trees'], ['number theory', 'combinatorics']]
 
 for i in range(len(single_sorting)):
 	single_dict[single_sorting[i]] = i

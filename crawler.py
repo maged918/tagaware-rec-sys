@@ -42,7 +42,7 @@ else:
 problem_limit = 20
 total_limit = 100
 bs4_error_text = '<ERROR>'
-contest_range = range(734, 759+1)
+contest_range = range(725, 756+1)
 
 def filter_Contests(contests):
 	filtered = []

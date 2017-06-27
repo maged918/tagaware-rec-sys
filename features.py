@@ -96,7 +96,13 @@ def extract_feats(file):
 
 	curr_feats = []
 	curr_df ={k:0 for k in cols}
-	tree = etree.parse(file)
+	# tree = etree.parse(file)
+
+	try:
+	    tree = etree.parse(file)
+	except (etree.XMLSyntaxError, OSError):
+	    print ('Skipping invalid XML from URL %s' % file)
+	    return None
 
 	# features 1,2 and 3
 	double_loop = 0
@@ -170,6 +176,7 @@ def extract_feats(file):
 	cnt_vars = 0
 	cnt_vectors = 0
 	cnt_arrs = len(tree.xpath('.//decl_stmt/decl/name/index[1]'))
+	cnt_double_arrs = len(tree.xpath('.//decl_stmt/decl/name/index[2]'))
 	names = 0
 	for elem in decl:
 		tmp = elem.xpath('./decl')
@@ -192,10 +199,11 @@ def extract_feats(file):
 
 	curr_feats += cnt_types
 	curr_feats.append(cnt_arrs)
+	curr_feats.append(cnt_double_arrs)
 	for t in types:
 		curr_df[t] = cnt_types[types[t]]
 	curr_df['arrays'] = cnt_arrs
-
+	curr_df['arrays_double'] = cnt_double_arrs
 	# print(cnt_types[types['float']], cnt_types[types['double']])
 
 	#feature 17
@@ -299,9 +307,9 @@ elif 'Div2' in divs:
 def all_submissions(load_old = False):
 	feats_prefix = config.get_feat_prefix()
 
-	f = open(feats_prefix+'features-pandas.pickle', 'rb')
-	old_df = pickle.load(f)
 	if load_old:
+		f = open(feats_prefix+'features-pandas.pickle', 'rb')
+		old_df = pickle.load(f)
 		df = old_df
 	else:
 		df = pd.DataFrame(columns = cols)
@@ -321,6 +329,8 @@ def all_submissions(load_old = False):
 				if submission.endswith(".xml"):
 					# print(path)
 					feats = extract_feats(path)
+					if feats is None:
+						continue
 					curr_df = feats[1]
 					curr_df['id'] = submission
 					curr_df['problem_id'] = problem_id
@@ -336,7 +346,7 @@ def all_submissions(load_old = False):
 		print("#", idx, "Contest:", contest)
 		idx+=1
 
-	f.close()
+	# f.close()
 
 
 	print("Done feature extraction for: " + str(len(feature_set)) + " problems")
@@ -357,7 +367,8 @@ def all_submissions(load_old = False):
 def test_submission(path):
 	return extract_feats(path)
 
-all_submissions(load_old=True)
-# print(test_submission('data-all/101/A/12700023.cpp.xml')[1]['string'])
-# print(test_submission('data-all/102/B/12309613.cpp.xml')[1]['divide'])
-# print(test_submission('data-all/456/A/8177562.cpp.xml')[1])
+all_submissions(load_old=False)
+# print(test_submission('data-all/101/A/12700023.cpp.xml')[1])
+# print(test_submission('data-all/102/B/12309613.cpp.xml')[1])
+# print(test_submission('data-all/435/E/953966800000000.cpp.xml')[1])
+# print(test_submission('data-all/518/F/10003827.cpp.xml')[1])

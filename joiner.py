@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def build_tags(tags_file, difficulties=['A', 'B', 'C', 'D', 'E', 'F']):
+def build_tags(tags_file, difficulties=['A', 'B', 'C', 'D', 'E'], max_contest=1000):
 	tags_list = []
 	delete_keys = set()
 	inst_tags = {}
@@ -11,8 +11,12 @@ def build_tags(tags_file, difficulties=['A', 'B', 'C', 'D', 'E', 'F']):
 
 				arr = line.split("\n")[0].split(":")
 				key = arr[0]
+				contest = int(key.split('/')[0])
 				difficulty = key.split('/')[1]
 				if difficulty not in difficulties:
+					delete_keys.add(key)
+					continue
+				elif contest>max_contest:
 					delete_keys.add(key)
 					continue
 				tags = arr[1].split(',')
@@ -27,7 +31,8 @@ def build_tags(tags_file, difficulties=['A', 'B', 'C', 'D', 'E', 'F']):
 						# del inst_feats[key]
 
 	tags_list = list(set(tags_list))
-	print('Delete keys containing 733/F', '733/F' in delete_keys)
+	# print('Delete keys containing 733/F', '733/F' in delete_keys)
+	# print(delete_keys)
 	return tags_list, delete_keys, inst_tags
 
 def create_df(inst_feats, inst_tags, delete_keys, multi=False):

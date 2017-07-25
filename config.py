@@ -15,20 +15,20 @@ def get_algorithm_modes():
     algorithm_modes = []
     # algorithm_modes = ['categ','graph', 'maths', 'algos', 'dp_gr', 'dp_bf', 'gr_ma', 'dp_df']
     # algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'pairs']
-    algorithm_modes = ['categ', 'graph', 'maths', 'algos']
-    # algorithm_modes = ['categ']
+    # algorithm_modes = ['categ', 'graph', 'maths', 'algos']
+    algorithm_modes += ['categ']
     # algorithm_modes += ['algos']
     # algorithm_modes=['maths']
     # algorithm_modes=['graph']
     # algorithm_modes = ['dp_gr', 'dp_bf', 'gr_ma']
     # algorithm_modes += ['dp_gr']
-    # algorithm_modes = ['dp_bf']
+    # algorithm_modes += ['dp_bf']
     # algorithm_modes += ['gr_ma']
     # algorithm_modes = ['dp_df']
     # algorithm_modes += ['ds_gr']
     # algorithm_modes += ['nt_cm']
     # algorithm_modes += ['gr_tr']
-    algorithm_modes += get_all_pairs()
+    # algorithm_modes += get_all_pairs()
     return algorithm_modes
 def get_classifiers():
     classifiers = ['RFT']
@@ -71,10 +71,10 @@ def get_multi():
 
 def get_feat_modes():
     # feat_modes = [['all_feats'], ['lines'], ['count_vars'], ['count_vars','operations'], \
-                        # ['count_vars', 'operations', 'constructs']]
+    #                     ['count_vars', 'operations', 'constructs']]
     # feat_modes = [['lines']]
-    # feat_modes = [['all_feats', 'cyclo']]
-    feat_modes = [['all_feats']]
+    feat_modes = [['all_feats', 'cyclo']]
+    # feat_modes = [['all_feats']]
     # feat_modes = [['count_vars']]
     return feat_modes
 

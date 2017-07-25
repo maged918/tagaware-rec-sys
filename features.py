@@ -177,6 +177,7 @@ def extract_feats(file):
 	cnt_vectors = 0
 	cnt_arrs = len(tree.xpath('.//decl_stmt/decl/name/index[1]'))
 	cnt_double_arrs = len(tree.xpath('.//decl_stmt/decl/name/index[2]'))
+	cnt_pointers = len(tree.xpath(".//decl_stmt/decl/type/modifier[text()='*']"))
 	names = 0
 	for elem in decl:
 		tmp = elem.xpath('./decl')
@@ -200,10 +201,12 @@ def extract_feats(file):
 	curr_feats += cnt_types
 	curr_feats.append(cnt_arrs)
 	curr_feats.append(cnt_double_arrs)
+	curr_feats.append(cnt_pointers)
 	for t in types:
 		curr_df[t] = cnt_types[types[t]]
 	curr_df['arrays'] = cnt_arrs
 	curr_df['arrays_double'] = cnt_double_arrs
+	curr_df['cnt_pointers'] = cnt_pointers
 	# print(cnt_types[types['float']], cnt_types[types['double']])
 
 	#feature 17
@@ -304,8 +307,13 @@ elif 'Div2' in divs:
 
 # data_dir = 'data-all/'
 
+'''
+LOAD OLD NO LONGER WORKING!
+'''
 def all_submissions(load_old = False):
 	feats_prefix = config.get_feat_prefix()
+
+	df_list = []
 
 	if load_old:
 		f = open(feats_prefix+'features-pandas.pickle', 'rb')
@@ -335,7 +343,8 @@ def all_submissions(load_old = False):
 					curr_df['id'] = submission
 					curr_df['problem_id'] = problem_id
 					t1 = time.time()
-					df = df.append(curr_df, ignore_index=True)
+					# df = df.append(curr_df, ignore_index=True)
+					df_list.append(curr_df)
 					# print(df.tail())
 					problem_features.append(feats[0])
 			arr = np.asarray(problem_features)
@@ -345,10 +354,13 @@ def all_submissions(load_old = False):
 			submission_set[problem_id] = arr
 		print("#", idx, "Contest:", contest)
 		idx+=1
+		# if idx>10:
+		# 	break
 
 	# f.close()
 
-
+	df = pd.DataFrame(df_list)
+	# print(df['cnt_pointers'])
 	print("Done feature extraction for: " + str(len(feature_set)) + " problems")
 
 	f = open(feats_prefix+'features.pickle', 'wb')
@@ -372,3 +384,5 @@ all_submissions(load_old=False)
 # print(test_submission('data-all/102/B/12309613.cpp.xml')[1])
 # print(test_submission('data-all/435/E/953966800000000.cpp.xml')[1])
 # print(test_submission('data-all/518/F/10003827.cpp.xml')[1])
+# print(test_submission('data-all/309/B/3756115.cpp.xml')[1]['cnt_pointers'])
+# print(test_submission('data-all/142/B/1036957.cpp.xml')[1]['cnt_pointers'])

@@ -98,7 +98,7 @@ def visualize_totals(inst_feats):
     # for col in inst_feats.columns.difference(['id', 'problem_id', 'tags']):
     #     sns.boxplot(y=col, data =inst_feats, showfliers=1)
     #     plt.show()
-        # print(inst_feats[col].value_counts())
+    print(inst_feats['point'].value_counts())
     # print(inst_feats.get_group('math')['vector'])
     # sns.distplot(inst_feats.get_group('math')['operations'], norm_hist=True, kde=False)
 
@@ -114,7 +114,7 @@ def visualize_totals(inst_feats):
     # sns.countplot(list(ops[ops<30]), ax = ax2)
 
     for idx, tag in enumerate(list(inst_feats.groups.keys())):
-        ops = inst_feats.get_group(tag)['ifs']
+        ops = inst_feats.get_group(tag)['ll']
         axes[idx].set_title(tag)
         sns.countplot(list(ops[ops<40]), ax = axes[idx])
 
@@ -151,7 +151,7 @@ def visualize_pairs(inst_feats):
     Plots scatterplot of two variables on the same plot for the present tags (from config)
     If using col: draw separate plots for each tag but on the same scale
     '''
-    lm = sns.lmplot(y='lines', x='operations', hue='tags', col ='tags', data=inst_feats, fit_reg=True, x_jitter=0)
+    lm = sns.lmplot(y='single_loop', x='ifs', hue='tags', col ='tags', data=inst_feats, fit_reg=True, x_jitter=0)
     axes = lm.axes
     axes[0][0].set_xlim(0,100)
     axes[0][0].set_ylim(0,150)
@@ -200,7 +200,7 @@ def remove_outliers(inst_feats):
         # print(df[(np.abs(stats.zscore(df))<1).all(axis=1)])
         # df = df[1].drop(['id', 'tags', 'problem_id'], axis=1)
         df = df[1]
-        result = result.append(df[df[df.columns.difference(['id', 'tags', 'problem_id'])]\
+        result = result.append(df[df[df.columns.difference(['id', 'tags', 'problem_id', 'arrays_double'])]\
                      .apply(lambda x: np.abs(x - x.mean()) / (x.std() if x.std()!= 0 else 1) < 3).all(axis=1)])
         if i % 100 == 0:
             print(i)
@@ -251,21 +251,22 @@ settings()
 ds_dir = config.get_ds_dir()
 in_dir = ds_dir + 'DivAll'
 algo_mode = config.get_algorithm_modes()[0]
-algo_mode = 'dp_gr'
+# algo_mode = 'dp_gr'
 tags_file = config.get_tags_file(in_dir, algo_mode)
-inst_feats = pickle.load(open( config.get_feat_prefix() + 'features-pandas-old-27jun.pickle', 'rb'))
+inst_feats = pickle.load(open( config.get_feat_prefix() + 'features-pandas.pickle', 'rb'))
 tags_list, delete_keys, inst_tags = build_tags(tags_file)
 inst_feats, X, Y = create_df(inst_feats, inst_tags, delete_keys)
 # print(inst_feats.iloc[30:50], '\n', Y[30:50])
 grouped = inst_feats.groupby('tags')
+print(len(grouped))
 # print(grouped['operations'].describe())
 # visualize(inst_feats)
 # visualize_pairs(inst_feats)
 # remove_outliers(inst_feats)
 
-visualize_totals(grouped)
+# visualize_totals(grouped)
 out = pd.read_csv('out-classifier.csv', header=0, sep=',')
-load_output(out)
+# load_output(out)
 # get_properties()
 
 # plot_pairs_baseline(out)

@@ -17,5 +17,10 @@
 897 - 903: New Div2 Problems
 904 - 917: New Div1 Problems
 918 - 1067: Final runs, all feature combinations, classifiers, all problems
+1067 - 1076: Categ multilabel
+1077 - 1082: New pairs
+1083 - 1097: Graphs vs Trees
+1098 - 1117: New faeture: double arrays
+1118 - 1137: New feature: *
 TODO: Select only certain years
 TODO:

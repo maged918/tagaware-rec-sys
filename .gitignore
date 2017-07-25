@@ -8,3 +8,8 @@ java-submissions/*
 .pydevproject
 dataset/Div*
 All*.tar.gz
+dataset/d*
+dataset/categ/*
+dataset/g*
+dataset/pairs
+dataset/feats/unused-old

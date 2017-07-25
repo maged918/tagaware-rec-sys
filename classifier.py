@@ -14,7 +14,7 @@ from sklearn import svm
 from sklearn import metrics
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
-from sklearn.model_selection import StratifiedKFold, GroupKFold, KFold
+from sklearn.model_selection import StratifiedKFold, GroupKFold, KFold, cross_val_score
 from sklearn.naive_bayes import MultinomialNB, GaussianNB
 from sklearn.decomposition import PCA
 from sklearn.neighbors import KNeighborsClassifier
@@ -233,7 +233,6 @@ def get_baseline(lst, Y):
 	preds = mlb.transform(preds)
 	return metrics.precision_recall_fscore_support(Y, preds, average='micro')
 
-
 def get_measurements(a,b):
 	a = np.array(a)
 	b = np.array(b)
@@ -358,7 +357,7 @@ def cross_validate(X,Y,cv_val, multi, classifier):
 	else:
 
 		skf = StratifiedKFold(n_splits=cv_val, shuffle=True, random_state=0)
-		print(skf)
+		# print('Cross Val Accuracy', cross_val_score(RandomForestClassifier(n_estimators=100), X, Y, cv=skf))
 		for train_idx, test_idx in skf.split(X, Y):
 			if row_mode == "pandas" or row_mode == 'pd_out':
 				X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]

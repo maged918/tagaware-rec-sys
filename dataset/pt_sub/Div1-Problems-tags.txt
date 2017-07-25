@@ -1,3 +1,771 @@
+Contest ID: 809
+Index: A
+Name: Do you want a date?
+Tags: math, sortings
+
+
+Contest ID: 809
+Index: B
+Name: Glad to see you!
+Tags: binary search
+
+
+Contest ID: 809
+Index: C
+Name: Find a car
+Tags: divide and conquer, dp
+
+
+Contest ID: 809
+Index: D
+Name: Hitchhiking in the Baltic States
+Tags: data structures, dp
+
+
+Contest ID: 809
+Index: E
+Name: Surprise me!
+Tags: divide and conquer, math, trees
+
+
+Contest ID: 794
+Index: A
+Name: Bank Robbery
+Tags: implementation
+
+
+Contest ID: 794
+Index: B
+Name: Cutting Carrot
+Tags: geometry, math
+
+
+Contest ID: 794
+Index: C
+Name: Naming Company
+Tags: games, greedy, sortings
+
+
+Contest ID: 794
+Index: D
+Name: Labelling Cities
+Tags: dfs and similar, graphs, hashing
+
+
+Contest ID: 794
+Index: E
+Name: Choosing Carrot
+Tags: games
+
+
+Contest ID: 794
+Index: F
+Name: Leha and security system
+Tags: data structures
+
+
+Contest ID: 794
+Index: G
+Name: Replace All
+Tags: combinatorics, dp, math
+
+
+Contest ID: 799
+Index: A
+Name: Carrot Cakes
+Tags: brute force, implementation
+
+
+Contest ID: 799
+Index: B
+Name: T-shirt buying
+Tags: data structures, implementation
+
+
+Contest ID: 799
+Index: C
+Name: Fountains
+Tags: binary search, data structures
+
+
+Contest ID: 799
+Index: D
+Name: Field expansion
+Tags: brute force, dp, meet-in-the-middle
+
+
+Contest ID: 799
+Index: E
+Name: Aquarium decoration
+Tags: data structures, greedy, two pointers
+
+
+Contest ID: 799
+Index: F
+Name: Beautiful fountains rows
+Tags: data structures
+
+
+Contest ID: 799
+Index: G
+Name: Cut the pie
+Tags: binary search, data structures, geometry
+
+
+Contest ID: 806
+Index: A
+Name: Success Rate
+Tags: binary search, math
+
+
+Contest ID: 806
+Index: B
+Name: Dynamic Problem Scoring
+Tags: brute force, greedy
+
+
+Contest ID: 806
+Index: C
+Name: Prairie Partition
+Tags: binary search, greedy
+
+
+Contest ID: 806
+Index: D
+Name: Perishable Roads
+Tags: graphs
+
+
+Contest ID: 806
+Index: E
+Name: Blog Post Rating
+Tags: data structures
+
+
+Contest ID: 804
+Index: A
+Name: Find Amir
+Tags: greedy, math
+
+
+Contest ID: 804
+Index: B
+Name: Minimum number of steps
+Tags: greedy, implementation, math
+
+
+Contest ID: 804
+Index: C
+Name: Ice cream coloring
+Tags: constructive algorithms, dfs and similar
+
+
+Contest ID: 804
+Index: D
+Name: Expected diameter of a tree
+Tags: binary search, brute force, dfs and similar, dp, sortings, trees
+
+
+Contest ID: 804
+Index: E
+Name: The same permutation 
+Tags: constructive algorithms
+
+
+Contest ID: 800
+Index: A
+Name: Voltage Keepsake
+Tags: binary search, greedy
+
+
+Contest ID: 800
+Index: B
+Name: Volatile Kite
+Tags: geometry
+
+
+Contest ID: 800
+Index: C
+Name: Vulnerable Kerbals
+Tags: number theory
+
+
+Contest ID: 800
+Index: D
+Name: Varying Kibibits
+Tags: combinatorics, dp
+
+
+Contest ID: 788
+Index: A
+Name: Functions again
+Tags: dp
+
+
+Contest ID: 788
+Index: B
+Name: Weird journey
+Tags: combinatorics, dfs and similar, dsu, graphs
+
+
+Contest ID: 788
+Index: C
+Name: The Great Mixing
+Tags: dfs and similar, graphs, shortest paths
+
+
+Contest ID: 788
+Index: D
+Name: Finding lines
+Tags: constructive algorithms, divide and conquer
+
+
+Contest ID: 788
+Index: E
+Name: New task
+Tags: data structures
+
+
+Contest ID: 786
+Index: A
+Name: Berzerk
+Tags: dfs and similar, dp, games
+
+
+Contest ID: 786
+Index: B
+Name: Legacy
+Tags: data structures, graphs, shortest paths
+
+
+Contest ID: 786
+Index: C
+Name: Till I Collapse
+Tags: data structures, divide and conquer
+
+
+Contest ID: 786
+Index: D
+Name: Rap God
+Tags: data structures, dfs and similar, hashing, strings, trees
+
+
+Contest ID: 786
+Index: E
+Name: ALT
+Tags: data structures, flows, graphs, trees
+
+
+Contest ID: 790
+Index: A
+Name: Bear and Different Names
+Tags: constructive algorithms, greedy
+
+
+Contest ID: 790
+Index: B
+Name: Bear and Tree Jumps
+Tags: dfs and similar, divide and conquer, dp, trees
+
+
+Contest ID: 790
+Index: C
+Name: Bear and Company
+Tags: dp
+
+
+Contest ID: 790
+Index: D
+Name: Bear and Rectangle Strips
+Tags: dp
+
+
+Contest ID: 790
+Index: E
+Name: Bear and Isomorphic Points
+Tags: 
+
+
+Contest ID: 781
+Index: A
+Name: Andryusha and Colored Balloons
+Tags: brute force, constructive algorithms, dfs and similar, greedy, trees
+
+
+Contest ID: 781
+Index: B
+Name: Innokenty and a Football League
+Tags: 2-sat, brute force, graph matchings, greedy, implementation
+
+
+Contest ID: 781
+Index: C
+Name: Underground Lab
+Tags: brute force, constructive algorithms, dfs and similar, graphs, trees
+
+
+Contest ID: 781
+Index: D
+Name: Axel and Marston in Bitland
+Tags: bitmasks, brute force, dp, matrices
+
+
+Contest ID: 781
+Index: E
+Name: Andryusha and Nervous Barriers
+Tags: data structures
+
+
+Contest ID: 781
+Index: F
+Name: Intranet of Buses
+Tags: binary search, geometry, two pointers
+
+
+Contest ID: 781
+Index: A
+Name: Andryusha and Colored Balloons
+Tags: brute force, constructive algorithms, dfs and similar, greedy, trees
+
+
+Contest ID: 781
+Index: B
+Name: Innokenty and a Football League
+Tags: 2-sat, brute force, graph matchings, greedy, implementation
+
+
+Contest ID: 781
+Index: C
+Name: Underground Lab
+Tags: brute force, constructive algorithms, dfs and similar, graphs, trees
+
+
+Contest ID: 781
+Index: D
+Name: Axel and Marston in Bitland
+Tags: bitmasks, brute force, dp, matrices
+
+
+Contest ID: 781
+Index: E
+Name: Andryusha and Nervous Barriers
+Tags: data structures
+
+
+Contest ID: 781
+Index: F
+Name: Intranet of Buses
+Tags: binary search, geometry, two pointers
+
+
+Contest ID: 778
+Index: A
+Name: String Game
+Tags: binary search, greedy, strings
+
+
+Contest ID: 778
+Index: B
+Name: Bitwise Formula
+Tags: bitmasks, brute force, dfs and similar, expression parsing, implementation
+
+
+Contest ID: 778
+Index: C
+Name: Peterson Polyglot
+Tags: brute force, dfs and similar, dsu, hashing, trees
+
+
+Contest ID: 778
+Index: D
+Name: Parquet Re-laying
+Tags: constructive algorithms
+
+
+Contest ID: 778
+Index: E
+Name: Selling Numbers
+Tags: dp, sortings
+
+
+Contest ID: 776
+Index: A
+Name: A Serial Killer
+Tags: implementation
+
+
+Contest ID: 776
+Index: B
+Name: Sherlock and his girlfriend
+Tags: number theory
+
+
+Contest ID: 776
+Index: C
+Name: Molly's Chemicals
+Tags: binary search, data structures, math
+
+
+Contest ID: 776
+Index: D
+Name: The Door Problem
+Tags: 2-sat, dfs and similar, dsu, graphs
+
+
+Contest ID: 776
+Index: E
+Name: The Holmes Children
+Tags: math, number theory
+
+
+Contest ID: 776
+Index: F
+Name: Sherlock's bet to Moriarty
+Tags: constructive algorithms, geometry, graphs, trees
+
+
+Contest ID: 776
+Index: G
+Name: Sherlock and the Encrypted Data
+Tags: bitmasks, combinatorics, dp
+
+
+Contest ID: 768
+Index: A
+Name: Oath of the Night's Watch
+Tags: constructive algorithms, sortings
+
+
+Contest ID: 768
+Index: B
+Name: Code For 1
+Tags: constructive algorithms, dfs and similar, divide and conquer
+
+
+Contest ID: 768
+Index: C
+Name: Jon Snow and his Favourite Number
+Tags: brute force, dp, implementation, sortings
+
+
+Contest ID: 768
+Index: D
+Name: Jon and Orbs
+Tags: dp, math, probabilities
+
+
+Contest ID: 768
+Index: E
+Name: Game of Stones
+Tags: dp, games
+
+
+Contest ID: 768
+Index: F
+Name: Barrels and boxes
+Tags: brute force, combinatorics, number theory, probabilities
+
+
+Contest ID: 768
+Index: G
+Name: The Winds of Winter
+Tags: data structures
+
+
+Contest ID: 765
+Index: A
+Name: Neverending competitions
+Tags: implementation
+
+
+Contest ID: 765
+Index: B
+Name: Code obfuscation
+Tags: implementation, strings
+
+
+Contest ID: 765
+Index: C
+Name: Table Tennis Game 2
+Tags: math
+
+
+Contest ID: 765
+Index: D
+Name: Artsem and Saunders
+Tags: constructive algorithms, dsu, math
+
+
+Contest ID: 765
+Index: E
+Name: Tree Folding
+Tags: dfs and similar, dp, implementation, trees
+
+
+Contest ID: 765
+Index: F
+Name: Souvenirs
+Tags: data structures
+
+
+Contest ID: 765
+Index: G
+Name: Math, math everywhere
+Tags: 
+
+
+Contest ID: 763
+Index: A
+Name: Timofey and a tree
+Tags: dfs and similar, dp, dsu, trees
+
+
+Contest ID: 763
+Index: B
+Name: Timofey and rectangles
+Tags: constructive algorithms
+
+
+Contest ID: 763
+Index: C
+Name: Timofey and remoduling
+Tags: brute force, number theory
+
+
+Contest ID: 763
+Index: D
+Name: Timofey and a flat tree
+Tags: data structures, hashing, trees
+
+
+Contest ID: 763
+Index: E
+Name: Timofey and our friends animals
+Tags: dsu
+
+
+Contest ID: 759
+Index: A
+Name: Pavel and barbecue
+Tags: dfs and similar, dsu
+
+
+Contest ID: 759
+Index: B
+Name: Travel Card
+Tags: binary search, dp, greedy, two pointers
+
+
+Contest ID: 759
+Index: C
+Name: Nikita and stack
+Tags: binary search, data structures
+
+
+Contest ID: 759
+Index: D
+Name: Bacterial Melee
+Tags: dp
+
+
+Contest ID: 757
+Index: A
+Name: Gotta Catch Em' All!
+Tags: implementation
+
+
+Contest ID: 757
+Index: B
+Name: Bash's Big Day
+Tags: greedy, math, number theory
+
+
+Contest ID: 757
+Index: C
+Name: Felicity is Coming!
+Tags: data structures, hashing, sortings, strings
+
+
+Contest ID: 757
+Index: D
+Name: Felicity's Big Secret Revealed
+Tags: bitmasks, dp
+
+
+Contest ID: 757
+Index: E
+Name: Bash Plays with Functions
+Tags: brute force, combinatorics, dp, number theory
+
+
+Contest ID: 757
+Index: F
+Name: Team Rocket Rises Again
+Tags: data structures, graphs, shortest paths
+
+
+Contest ID: 757
+Index: G
+Name: Can Bash Save the Day?
+Tags: data structures, divide and conquer, graphs, trees
+
+
+Contest ID: 744
+Index: A
+Name: Hongcow Builds A Nation
+Tags: dfs and similar, graphs
+
+
+Contest ID: 744
+Index: B
+Name: Hongcow's Game
+Tags: bitmasks, divide and conquer
+
+
+Contest ID: 744
+Index: C
+Name: Hongcow Buys a Deck of Cards
+Tags: bitmasks, brute force, dp
+
+
+Contest ID: 744
+Index: D
+Name: Hongcow Draws a Circle
+Tags: geometry
+
+
+Contest ID: 744
+Index: E
+Name: Hongcow Masters the Cyclic Shift
+Tags: strings
+
+
+Contest ID: 741
+Index: A
+Name: Arpa's loud Owf and Mehrdad's evil plan
+Tags: dfs and similar, math
+
+
+Contest ID: 741
+Index: B
+Name: Arpa's weak amphitheater and Mehrdad's valuable Hoses
+Tags: dfs and similar, dp, dsu
+
+
+Contest ID: 741
+Index: C
+Name: Arpa’s overnight party and Mehrdad’s silent entering
+Tags: constructive algorithms, dfs and similar
+
+
+Contest ID: 741
+Index: D
+Name: Arpa’s letter-marked tree and Mehrdad’s Dokhtar-kosh paths
+Tags: data structures, trees
+
+
+Contest ID: 741
+Index: E
+Name: Arpa’s abnormal DNA and Mehrdad’s deep interest
+Tags: data structures, string suffix structures
+
+
+Contest ID: 736
+Index: A
+Name: Tennis Championship
+Tags: dfs and similar, dp, math
+
+
+Contest ID: 736
+Index: B
+Name: Taxes
+Tags: math, number theory
+
+
+Contest ID: 736
+Index: C
+Name: Ostap and Tree
+Tags: dp
+
+
+Contest ID: 736
+Index: D
+Name: Permutations
+Tags: matrices
+
+
+Contest ID: 736
+Index: E
+Name: Chess Championship
+Tags: constructive algorithms, flows, greedy
+
+
+Contest ID: 739
+Index: A
+Name: Alyona and mex
+Tags: constructive algorithms, greedy
+
+
+Contest ID: 739
+Index: B
+Name: Alyona and a tree
+Tags: binary search, data structures, dfs and similar, graphs, trees
+
+
+Contest ID: 739
+Index: C
+Name: Alyona and towers
+Tags: data structures
+
+
+Contest ID: 739
+Index: D
+Name: Recover a functional graph
+Tags: graph matchings
+
+
+Contest ID: 739
+Index: E
+Name: Gosha is hunting
+Tags: brute force, dp, flows, sortings
+
+
+Contest ID: 737
+Index: A
+Name: Road to Cinema
+Tags: binary search
+
+
+Contest ID: 737
+Index: B
+Name: Sea Battle
+Tags: greedy, implementation
+
+
+Contest ID: 737
+Index: C
+Name: Subordinates
+Tags: greedy
+
+
+Contest ID: 737
+Index: D
+Name: Financiers Game
+Tags: dp, games
+
+
+Contest ID: 737
+Index: E
+Name: Tanya is 5!
+Tags: graph matchings, graphs, greedy, schedules
+
+
+Contest ID: 737
+Index: F
+Name: Dirty plates
+Tags: constructive algorithms, math
+
+
 Contest ID: 724
 Index: A
 Name: Checking the Calendar

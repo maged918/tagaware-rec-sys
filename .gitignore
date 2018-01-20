@@ -13,4 +13,3 @@ dataset/categ/*
 dataset/g*
 dataset/pairs
 dataset/feats/unused-old
-*.png

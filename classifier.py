@@ -34,7 +34,7 @@ import pandas as pd
 
 from scipy.stats import chi2_contingency
 
-# import seaborn as sns
+import seaborn as sns
 import matplotlib.pyplot as plt
 from joiner import build_tags, create_df
 
@@ -46,7 +46,8 @@ col_names = []
 def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode, difficulties):
 
 	f = open(feats_file, 'rb')
-	inst_feats = pickle.load(f)
+	# inst_feats = pickle.load(f)
+	inst_feats = pd.read_pickle(f)
 	# print('prepare data inst feats contains 733 F', inst_feats[inst_feats.problem_id.isin(['733/F'])])
 
 	# fig, (ax1, ax2) = plt.subplots(2)
@@ -397,6 +398,18 @@ def cross_validate(X,Y,cv_val, multi, classifier):
 	print(["%.2f"%(score/cv_val) for score in scores])
 
 
+def feat_stats(X, Y):
+	Z = X.assign(label = Y)
+	print(Z.shape)
+	# print(X.label???)
+	print(Z.loc[Z['label']=='graphs', 'variables'].describe())
+	print(Z.loc[Z['label']=='math', 'variables'].describe())
+	ax=sns.boxplot(data=Z, x = 'label', y ='variables', showfliers=False)
+	ax.set_xlabel('Algorithm Class')
+	ax.set_ylabel('Number of Variables')
+	plt.show()
+
+
 np.set_printoptions(precision=3, suppress = True)
 split = 0.8
 kernel = 'poly'
@@ -453,6 +466,13 @@ for div, algo_mode, classifier, feat_mode, difficulty, row_mode, limit \
 	print("Y Shape: ", Y.shape)
 	print("No. of tags: ", len(tags_list), tags_list)
 	print("Algo:", algo_mode)
+
+	print(feats_file)
+
+	feat_stats(X, Y)
+
+	continue
+
 	if multi:
 		# get_baseline(['math', 'implementation', 'greedy', 'dp'], Y)
 		print('Baseline tags:', data[2][-3:])

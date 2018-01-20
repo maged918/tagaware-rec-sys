@@ -1,3 +1,351 @@
+809/A:
+809/B:
+809/C:
+809/D:
+809/E:trees
+794/A:
+794/B:
+794/C:
+794/D:dfs and similar
+794/E:
+794/F:
+794/G:
+799/A:
+799/B:
+799/C:
+799/D:
+799/E:
+799/F:
+799/G:
+806/A:
+806/B:
+806/C:
+806/D:
+806/E:
+804/A:
+804/B:
+804/C:dfs and similar
+804/D:trees
+804/E:
+800/A:
+800/B:
+800/C:
+800/D:
+788/A:
+788/B:dfs and similar
+788/C:shortest paths
+788/D:
+788/E:
+786/A:dfs and similar
+786/B:shortest paths
+786/C:
+786/D:trees
+786/E:trees
+790/A:
+790/B:trees
+790/C:
+790/D:
+790/E:
+781/A:trees
+781/B:
+781/C:trees
+781/D:
+781/E:
+781/F:
+781/A:trees
+781/B:
+781/C:trees
+781/D:
+781/E:
+781/F:
+778/A:
+778/B:dfs and similar
+778/C:trees
+778/D:
+778/E:
+776/A:
+776/B:
+776/C:
+776/D:dfs and similar
+776/E:
+776/F:trees
+776/G:
+768/A:
+768/B:dfs and similar
+768/C:
+768/D:
+768/E:
+768/F:
+768/G:
+765/A:
+765/B:
+765/C:
+765/D:
+765/E:trees
+765/F:
+765/G:
+763/A:trees
+763/B:
+763/C:
+763/D:trees
+763/E:
+759/A:dfs and similar
+759/B:
+759/C:
+759/D:
+757/A:
+757/B:
+757/C:
+757/D:
+757/E:
+757/F:shortest paths
+757/G:trees
+744/A:dfs and similar
+744/B:
+744/C:
+744/D:
+744/E:
+741/A:dfs and similar
+741/B:dfs and similar
+741/C:dfs and similar
+741/D:trees
+741/E:
+736/A:dfs and similar
+736/B:
+736/C:
+736/D:
+736/E:flows
+739/A:
+739/B:trees
+739/C:
+739/D:
+739/E:flows
+737/A:
+737/B:
+737/C:
+737/D:
+737/E:
+737/F:
+812/A:
+812/B:
+812/C:
+812/D:dfs and similar
+812/E:
+811/A:
+811/B:
+811/C:
+811/D:dfs and similar
+811/E:
+810/A:
+810/B:
+810/C:
+810/D:
+810/E:
+794/A:
+794/B:
+794/C:
+794/D:dfs and similar
+794/E:
+794/F:
+794/G:
+799/A:
+799/B:
+799/C:
+799/D:
+799/E:
+799/F:
+799/G:
+807/A:
+807/B:
+807/C:
+807/D:
+807/E:
+805/A:
+805/B:
+805/C:
+805/D:
+805/E:dfs and similar
+805/F:
+798/A:
+798/B:
+798/C:
+798/D:
+798/E:
+801/A:
+801/B:
+801/C:
+801/D:
+801/E:
+796/A:
+796/B:
+796/C:trees
+796/D:trees
+796/E:
+796/F:
+789/A:
+789/B:
+789/C:
+789/D:
+789/E:dfs and similar
+787/A:
+787/B:
+787/C:
+787/D:shortest paths
+787/E:trees
+791/A:
+791/B:dfs and similar
+791/C:
+791/D:trees
+791/E:
+785/A:
+785/B:
+785/C:
+785/D:
+785/E:
+782/A:
+782/B:
+782/C:dfs and similar
+782/D:
+782/E:dfs and similar
+782/F:
+779/A:
+779/B:
+779/C:
+779/D:
+779/E:
+779/F:
+777/A:
+777/B:
+777/C:
+777/D:
+777/E:
+776/A:
+776/B:
+776/C:
+776/D:dfs and similar
+776/E:
+776/F:trees
+776/G:
+768/A:
+768/B:dfs and similar
+768/C:
+768/D:
+768/E:
+768/F:
+768/G:
+767/A:
+767/B:
+767/C:trees
+767/D:
+767/E:
+765/A:
+765/B:
+765/C:
+765/D:
+765/E:trees
+765/F:
+765/G:
+766/A:
+766/B:
+766/C:
+766/D:dfs and similar
+766/E:trees
+764/A:
+764/B:
+764/C:dfs and similar
+764/D:
+764/E:
+761/A:
+761/B:
+761/C:
+761/D:
+761/E:trees
+761/F:
+760/A:
+760/B:
+760/C:dfs and similar
+760/D:
+760/E:
+760/F:
+758/A:
+758/B:
+758/C:
+758/D:
+758/E:trees
+758/F:
+757/A:
+757/B:
+757/C:
+757/D:
+757/E:
+757/F:shortest paths
+757/G:trees
+754/A:
+754/B:
+754/C:
+754/D:
+754/E:
+752/A:
+752/B:
+752/C:shortest paths
+752/D:
+752/E:
+752/F:trees
+749/A:
+749/B:
+749/C:
+749/D:
+749/E:
+747/A:
+747/B:
+747/C:
+747/D:
+747/E:dfs and similar
+747/F:
+746/A:
+746/B:
+746/C:
+746/D:
+746/E:
+746/F:
+746/G:trees
+745/A:
+745/B:
+745/C:dfs and similar
+745/D:
+745/E:
+743/A:
+743/B:
+743/C:
+743/D:trees
+743/E:
+742/A:
+742/B:
+742/C:dfs and similar
+742/D:dfs and similar
+742/E:
+735/A:
+735/B:
+735/C:
+735/D:
+735/E:trees
+740/A:
+740/B:
+740/C:
+740/D:dfs and similar
+740/E:
+738/A:
+738/B:
+738/C:
+738/D:
+738/E:
+738/F:
+734/A:
+734/B:
+734/C:
+734/D:
+734/E:trees
+734/F:
 733/A:
 733/B:
 733/C:

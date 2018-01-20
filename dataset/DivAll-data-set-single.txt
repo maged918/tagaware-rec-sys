@@ -1,3 +1,351 @@
+809/A:math
+809/B:
+809/C:dp
+809/D:data structures
+809/E:graphs
+794/A:implementation
+794/B:math
+794/C:math
+794/D:graphs
+794/E:math
+794/F:data structures
+794/G:dp
+799/A:brute force
+799/B:data structures
+799/C:data structures
+799/D:dp
+799/E:data structures
+799/F:data structures
+799/G:data structures
+806/A:math
+806/B:greedy
+806/C:greedy
+806/D:graphs
+806/E:data structures
+804/A:math
+804/B:math
+804/C:graphs
+804/D:graphs
+804/E:greedy
+800/A:greedy
+800/B:math
+800/C:math
+800/D:dp
+788/A:dp
+788/B:graphs
+788/C:graphs
+788/D:greedy
+788/E:data structures
+786/A:graphs
+786/B:graphs
+786/C:data structures
+786/D:graphs
+786/E:graphs
+790/A:greedy
+790/B:graphs
+790/C:dp
+790/D:dp
+790/E:
+781/A:graphs
+781/B:graphs
+781/C:graphs
+781/D:dp
+781/E:data structures
+781/F:math
+781/A:graphs
+781/B:graphs
+781/C:graphs
+781/D:dp
+781/E:data structures
+781/F:math
+778/A:greedy
+778/B:graphs
+778/C:graphs
+778/D:greedy
+778/E:dp
+776/A:implementation
+776/B:math
+776/C:data structures
+776/D:graphs
+776/E:math
+776/F:graphs
+776/G:dp
+768/A:greedy
+768/B:graphs
+768/C:dp
+768/D:dp
+768/E:dp
+768/F:math
+768/G:data structures
+765/A:implementation
+765/B:implementation
+765/C:math
+765/D:data structures
+765/E:graphs
+765/F:data structures
+765/G:
+763/A:graphs
+763/B:greedy
+763/C:math
+763/D:graphs
+763/E:data structures
+759/A:graphs
+759/B:dp
+759/C:data structures
+759/D:dp
+757/A:implementation
+757/B:math
+757/C:data structures
+757/D:dp
+757/E:dp
+757/F:graphs
+757/G:graphs
+744/A:graphs
+744/B:
+744/C:dp
+744/D:math
+744/E:
+741/A:graphs
+741/B:graphs
+741/C:graphs
+741/D:graphs
+741/E:data structures
+736/A:graphs
+736/B:math
+736/C:dp
+736/D:math
+736/E:graphs
+739/A:greedy
+739/B:graphs
+739/C:data structures
+739/D:graphs
+739/E:graphs
+737/A:
+737/B:greedy
+737/C:greedy
+737/D:dp
+737/E:graphs
+737/F:math
+812/A:implementation
+812/B:dp
+812/C:
+812/D:graphs
+812/E:math
+811/A:brute force
+811/B:greedy
+811/C:dp
+811/D:graphs
+811/E:graphs
+810/A:math
+810/B:greedy
+810/C:math
+810/D:
+810/E:dp
+794/A:implementation
+794/B:math
+794/C:math
+794/D:graphs
+794/E:math
+794/F:data structures
+794/G:dp
+799/A:brute force
+799/B:data structures
+799/C:data structures
+799/D:dp
+799/E:data structures
+799/F:data structures
+799/G:data structures
+807/A:greedy
+807/B:brute force
+807/C:math
+807/D:greedy
+807/E:greedy
+805/A:math
+805/B:greedy
+805/C:greedy
+805/D:
+805/E:graphs
+805/F:graphs
+798/A:greedy
+798/B:brute force
+798/C:dp
+798/D:greedy
+798/E:graphs
+801/A:brute force
+801/B:greedy
+801/C:math
+801/D:math
+801/E:
+796/A:brute force
+796/B:implementation
+796/C:graphs
+796/D:graphs
+796/E:dp
+796/F:data structures
+789/A:math
+789/B:math
+789/C:data structures
+789/D:graphs
+789/E:graphs
+787/A:math
+787/B:greedy
+787/C:dp
+787/D:graphs
+787/E:graphs
+791/A:implementation
+791/B:graphs
+791/C:greedy
+791/D:graphs
+791/E:
+785/A:implementation
+785/B:greedy
+785/C:math
+785/D:math
+785/E:data structures
+782/A:implementation
+782/B:
+782/C:graphs
+782/D:greedy
+782/E:graphs
+782/F:math
+779/A:math
+779/B:greedy
+779/C:greedy
+779/D:
+779/E:data structures
+779/F:
+777/A:greedy
+777/B:data structures
+777/C:dp
+777/D:greedy
+777/E:data structures
+776/A:implementation
+776/B:math
+776/C:data structures
+776/D:graphs
+776/E:math
+776/F:graphs
+776/G:dp
+768/A:greedy
+768/B:graphs
+768/C:dp
+768/D:dp
+768/E:dp
+768/F:math
+768/G:data structures
+767/A:data structures
+767/B:greedy
+767/C:graphs
+767/D:data structures
+767/E:greedy
+765/A:implementation
+765/B:implementation
+765/C:math
+765/D:data structures
+765/E:graphs
+765/F:data structures
+765/G:
+766/A:greedy
+766/B:math
+766/C:dp
+766/D:graphs
+766/E:graphs
+764/A:math
+764/B:greedy
+764/C:graphs
+764/D:
+764/E:
+761/A:math
+761/B:math
+761/C:dp
+761/D:greedy
+761/E:graphs
+761/F:data structures
+760/A:math
+760/B:greedy
+760/C:graphs
+760/D:dp
+760/E:
+760/F:
+758/A:math
+758/B:implementation
+758/C:math
+758/D:dp
+758/E:graphs
+758/F:math
+757/A:implementation
+757/B:math
+757/C:data structures
+757/D:dp
+757/E:dp
+757/F:graphs
+757/G:graphs
+754/A:greedy
+754/B:brute force
+754/C:dp
+754/D:data structures
+754/E:brute force
+752/A:math
+752/B:greedy
+752/C:graphs
+752/D:data structures
+752/E:dp
+752/F:graphs
+749/A:math
+749/B:math
+749/C:greedy
+749/D:data structures
+749/E:data structures
+747/A:math
+747/B:implementation
+747/C:implementation
+747/D:greedy
+747/E:graphs
+747/F:dp
+746/A:math
+746/B:implementation
+746/C:math
+746/D:greedy
+746/E:greedy
+746/F:data structures
+746/G:graphs
+745/A:implementation
+745/B:implementation
+745/C:graphs
+745/D:
+745/E:
+743/A:greedy
+743/B:greedy
+743/C:math
+743/D:graphs
+743/E:dp
+742/A:math
+742/B:math
+742/C:graphs
+742/D:graphs
+742/E:
+735/A:implementation
+735/B:greedy
+735/C:math
+735/D:math
+735/E:graphs
+740/A:brute force
+740/B:greedy
+740/C:greedy
+740/D:graphs
+740/E:
+738/A:implementation
+738/B:dp
+738/C:
+738/D:greedy
+738/E:greedy
+738/F:dp
+734/A:implementation
+734/B:math
+734/C:dp
+734/D:implementation
+734/E:graphs
+734/F:math
 733/A:implementation
 733/B:math
 733/C:dp

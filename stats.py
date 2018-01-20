@@ -124,10 +124,18 @@ def visualize(inst_feats):
     if can_visualize:
 
         # for col in ['string']:
+        # # inst_feats.dropna(inplace=True)
+        # print(inst_feats.loc[inst_feats['tags']=='graphs'].shape)
+        # print(inst_feats.loc[inst_feats['tags']=='math'].shape)
+        # print(inst_feats.loc[pd.isnull(inst_feats['tags'])].shape)
+
+        print(inst_feats.loc[inst_feats['tags']=='graphs', 'variables'].describe())
+        print(inst_feats.loc[inst_feats['tags']=='math', 'variables'].describe())
+
         order = inst_feats.loc[:, 'tags'].unique()
-        for col in inst_feats.columns.difference(['id', 'problem_id', 'tags']):
+        # for col in inst_feats.columns.difference(['id', 'problem_id', 'tags']):
         # for col in ['operations', 'variables']:
-        # for col in ['variables']:
+        for col in ['variables']:
         # for col in ['modulus']:
         # for col in ['arrays']:
             # plt.ylim(-10, 40)
@@ -143,7 +151,7 @@ def visualize(inst_feats):
             # # s = ema(y, 0.01)
             # ax.plot(s)
             # plt.xticks(rotation=30)
-            # plt.show()
+            plt.show()
             savefig('dataset/%s/%s' % (algo_mode, col))
 
 def visualize_pairs(inst_feats):
@@ -247,18 +255,78 @@ def plot_pairs_baseline(out):
     plt.show()
 
 
+def plot_best_model(out):
+    best_pairs = out.iloc[1148-2:1207-1]
+    # print(best_pairs)
+    for g_name, g in best_pairs.groupby('algo_mode'):
+        acc = best_pairs.loc[best_pairs['algo_mode']==g_name, 'baseline'].iloc[0]
+        best_pairs = best_pairs.append(\
+            {'classifier':'baseline', 'algo_mode':g_name, 'acc':acc, 'feat_types':'all_feats'}, \
+            ignore_index=True)
+    best_pairs = best_pairs.loc[best_pairs['feat_types']=='all_feats']
+    
+    # fig, ax = newfig(1.2)
+
+    ax = sns.barplot(data=best_pairs, x='algo_mode', y='acc', hue='classifier')
+    ax.set(xticklabels=['dp vs. greedy \n(17509 submissions)','dp vs. brute-force \n(16051 submissions)',\
+        'graphs vs. maths \n(13493 submissions)', 'graphs vs. trees \n(5787 submissions)'])
+    plt.setp(ax.get_xticklabels(), fontsize=18)
+    ax.set_ylabel('Accuracy', fontsize=18)
+    ax.set_xlabel('Classification Mode', fontsize=18)
+    legend = plt.legend(title='Classifier', ncol=2)
+    legend.get_title().set_fontsize('20')
+    plt.setp(plt.gca().get_legend().get_texts(), fontsize='20')
+    
+    fig = plt.gcf()
+    fig.subplots_adjust(bottom=0.15)
+    
+    plt.show()
+
+def plot_feat_modes(out):
+    best_pairs = out.iloc[1148-2:1207-1]
+
+    best_pairs = best_pairs.loc[best_pairs['classifier']=='RFT']
+    best_pairs = best_pairs.loc[best_pairs['algo_mode'].isin(['dp_gr', 'gr_ma','gr_tr'])]
+
+    for g_name in np.unique(best_pairs['algo_mode']):
+        acc = best_pairs.loc[best_pairs['algo_mode']==g_name, 'baseline'].iloc[0]
+        best_pairs = best_pairs.append(\
+            {'feat_types':'baseline', 'algo_mode': g_name, 'acc':acc}, ignore_index=True)
+
+    h = np.unique(best_pairs['feat_types'])
+    order = [5, 1, 2,3,4,0]
+    h = [h[i] for i in order]
+    
+    fig, ax = newfig(1.2)
+    ax  = sns.barplot(data=best_pairs, x='algo_mode', y='acc', hue='feat_types', hue_order=h, ax = ax)
+
+    labels = ['all features', 'lines',  '#vars', '#vars + #ops', \
+    '#vars + #ops + #consts', 'baseline']
+    labels = [labels[i] for i in order]
+    
+    plt.legend((ax.get_legend_handles_labels()[0]), (labels), ncol=2)
+    
+    plt.setp(ax.get_legend().get_texts(), fontsize='20')
+    ax.set_xticklabels(['dp vs. greedy', 'graphs vs. maths', 'graphs vs. trees'])
+    ax.set_xlabel('Classification Mode')
+    ax.set_ylabel('Accuracy')
+    plt.show()
+    
 settings()
 ds_dir = config.get_ds_dir()
 in_dir = ds_dir + 'DivAll'
 algo_mode = config.get_algorithm_modes()[0]
 # algo_mode = 'dp_gr'
 tags_file = config.get_tags_file(in_dir, algo_mode)
-inst_feats = pickle.load(open( config.get_feat_prefix() + 'features-pandas.pickle', 'rb'))
+
+inst_feats = pd.read_pickle(open( config.get_feat_prefix() + 'features-pandas.pickle', 'rb'))
+print(len(inst_feats.columns)-2)
 tags_list, delete_keys, inst_tags = build_tags(tags_file)
 inst_feats, X, Y = create_df(inst_feats, inst_tags, delete_keys)
 # print(inst_feats.iloc[30:50], '\n', Y[30:50])
-grouped = inst_feats.groupby('tags')
-print(len(grouped))
+# grouped = inst_feats.groupby('tags')
+# print(len(grouped))
+
 # print(grouped['operations'].describe())
 # visualize(inst_feats)
 # visualize_pairs(inst_feats)
@@ -270,3 +338,6 @@ out = pd.read_csv('out-classifier.csv', header=0, sep=',')
 # get_properties()
 
 # plot_pairs_baseline(out)
+
+plot_best_model(out)
+# plot_feat_modes(out)

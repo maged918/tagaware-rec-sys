@@ -1,0 +1,12416 @@
+Contest ID: 455
+Index: A
+Handle: archetype93
+Submission ID: 14267986
+Submission Time: 1447587137
+
+
+Contest ID: 455
+Index: A
+Handle: musiceni
+Submission ID: 21070054
+Submission Time: 1475328384
+
+
+Contest ID: 455
+Index: A
+Handle: killerbb
+Submission ID: 13284395
+Submission Time: 1443460425
+
+
+Contest ID: 455
+Index: A
+Handle: Frez
+Submission ID: 12345693
+Submission Time: 1438749174
+
+
+Contest ID: 455
+Index: A
+Handle: pedrohlf
+Submission ID: 15196335
+Submission Time: 1452025884
+
+
+Contest ID: 455
+Index: A
+Handle: -t22t-
+Submission ID: 20146745
+Submission Time: 1472109256
+
+
+Contest ID: 455
+Index: A
+Handle: dhannanjay19
+Submission ID: 20398843
+Submission Time: 1473076290
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 28740424
+Submission Time: 1500615560
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 14965533
+Submission Time: 1450941868
+
+
+Contest ID: 455
+Index: A
+Handle: praby
+Submission ID: 17461941
+Submission Time: 1461351897
+
+
+Contest ID: 455
+Index: A
+Handle: GyojunYoun
+Submission ID: 33803041
+Submission Time: 1514617870
+
+
+Contest ID: 455
+Index: A
+Handle: YazanRi
+Submission ID: 24254131
+Submission Time: 1485715589
+
+
+Contest ID: 455
+Index: A
+Handle: Bubris
+Submission ID: 11345985
+Submission Time: 1432905122
+
+
+Contest ID: 455
+Index: A
+Handle: Toyo
+Submission ID: 15162376
+Submission Time: 1451765210
+
+
+Contest ID: 455
+Index: A
+Handle: cryptomanic
+Submission ID: 21840001
+Submission Time: 1477634791
+
+
+Contest ID: 455
+Index: A
+Handle: szszsz
+Submission ID: 18034638
+Submission Time: 1463939346
+
+
+Contest ID: 455
+Index: A
+Handle: shubh241
+Submission ID: 30938192
+Submission Time: 1506935306
+
+
+Contest ID: 455
+Index: A
+Handle: iamsardorbek
+Submission ID: 23691874
+Submission Time: 1484113180
+
+
+Contest ID: 455
+Index: A
+Handle: sidhhant
+Submission ID: 29365280
+Submission Time: 1502495980
+
+
+Contest ID: 455
+Index: A
+Handle: maratonando
+Submission ID: 26564459
+Submission Time: 1492796209
+
+
+Contest ID: 455
+Index: A
+Handle: Kuann
+Submission ID: 17932709
+Submission Time: 1463408694
+
+
+Contest ID: 455
+Index: A
+Handle: Kudo.
+Submission ID: 26246938
+Submission Time: 1491798870
+
+
+Contest ID: 455
+Index: A
+Handle: Alden
+Submission ID: 32053113
+Submission Time: 1509799099
+
+
+Contest ID: 455
+Index: A
+Handle: dbshah
+Submission ID: 26199802
+Submission Time: 1491585094
+
+
+Contest ID: 455
+Index: A
+Handle: Spongebob_kz
+Submission ID: 13771909
+Submission Time: 1445433137
+
+
+Contest ID: 455
+Index: A
+Handle: sailormonkey1
+Submission ID: 24015501
+Submission Time: 1485016662
+
+
+Contest ID: 455
+Index: A
+Handle: hassanyoussef
+Submission ID: 12914191
+Submission Time: 1441826102
+
+
+Contest ID: 455
+Index: A
+Handle: Kareem_Mohamed
+Submission ID: 14104112
+Submission Time: 1446806632
+
+
+Contest ID: 455
+Index: A
+Handle: forever97
+Submission ID: 20018384
+Submission Time: 1471753310
+
+
+Contest ID: 455
+Index: A
+Handle: SHEPELEVALEXEY
+Submission ID: 9060429
+Submission Time: 1418138262
+
+
+Contest ID: 455
+Index: A
+Handle: cjtoribio
+Submission ID: 31494014
+Submission Time: 1508364118
+
+
+Contest ID: 455
+Index: A
+Handle: Aiky
+Submission ID: 23906741
+Submission Time: 1484671596
+
+
+Contest ID: 455
+Index: A
+Handle: sonner
+Submission ID: 11528686
+Submission Time: 1434007082
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 14966353
+Submission Time: 1450945770
+
+
+Contest ID: 455
+Index: A
+Handle: cherryMJY
+Submission ID: 16668467
+Submission Time: 1457770612
+
+
+Contest ID: 455
+Index: A
+Handle: I_Love_Shreyya_Rajagopal
+Submission ID: 19845784
+Submission Time: 1471077625
+
+
+Contest ID: 455
+Index: A
+Handle: TripleM5da
+Submission ID: 17513951
+Submission Time: 1461611620
+
+
+Contest ID: 455
+Index: A
+Handle: CODEFORCESERAZER
+Submission ID: 12814758
+Submission Time: 1441195271
+
+
+Contest ID: 455
+Index: A
+Handle: CheatEnabled
+Submission ID: 8494499
+Submission Time: 1414739955
+
+
+Contest ID: 455
+Index: A
+Handle: Player23
+Submission ID: 32216043
+Submission Time: 1510394224
+
+
+Contest ID: 455
+Index: A
+Handle: coder_h
+Submission ID: 33055537
+Submission Time: 1512835996
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 12740878
+Submission Time: 1440838974
+
+
+Contest ID: 455
+Index: A
+Handle: alpha-q
+Submission ID: 21229619
+Submission Time: 1475742871
+
+
+Contest ID: 455
+Index: A
+Handle: sanketrai
+Submission ID: 29954117
+Submission Time: 1504194250
+
+
+Contest ID: 455
+Index: A
+Handle: Jeremy1149
+Submission ID: 23803670
+Submission Time: 1484389873
+
+
+Contest ID: 455
+Index: A
+Handle: patientkiller
+Submission ID: 18244521
+Submission Time: 1465048695
+
+
+Contest ID: 455
+Index: A
+Handle: phu1612508
+Submission ID: 25015896
+Submission Time: 1488034876
+
+
+Contest ID: 455
+Index: A
+Handle: Ra16bit
+Submission ID: 7397388
+Submission Time: 1407529645
+
+
+Contest ID: 455
+Index: A
+Handle: love_lt
+Submission ID: 10615030
+Submission Time: 1428341000
+
+
+Contest ID: 455
+Index: A
+Handle: wi_lius
+Submission ID: 15811937
+Submission Time: 1454615279
+
+
+Contest ID: 455
+Index: A
+Handle: palak_narula
+Submission ID: 15299846
+Submission Time: 1452530601
+
+
+Contest ID: 455
+Index: A
+Handle: therockersandip5
+Submission ID: 16256483
+Submission Time: 1456050214
+
+
+Contest ID: 455
+Index: A
+Handle: kzoacn
+Submission ID: 11909198
+Submission Time: 1435918361
+
+
+Contest ID: 455
+Index: A
+Handle: kai_
+Submission ID: 20990389
+Submission Time: 1475148861
+
+
+Contest ID: 455
+Index: A
+Handle: QuwsarOhi
+Submission ID: 30787076
+Submission Time: 1506538531
+
+
+Contest ID: 455
+Index: A
+Handle: spikendq
+Submission ID: 21386478
+Submission Time: 1476288897
+
+
+Contest ID: 455
+Index: A
+Handle: kabramanan
+Submission ID: 24736944
+Submission Time: 1487330227
+
+
+Contest ID: 455
+Index: A
+Handle: Twice
+Submission ID: 7643872
+Submission Time: 1409401258
+
+
+Contest ID: 455
+Index: A
+Handle: fchirica
+Submission ID: 16425757
+Submission Time: 1456749051
+
+
+Contest ID: 455
+Index: A
+Handle: Kanish_The_Vista
+Submission ID: 10620622
+Submission Time: 1428406532
+
+
+Contest ID: 455
+Index: A
+Handle: adnankattan9
+Submission ID: 29378289
+Submission Time: 1502544530
+
+
+Contest ID: 455
+Index: A
+Handle: Lieshereldor
+Submission ID: 15771311
+Submission Time: 1454511474
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 30277106
+Submission Time: 1505184321
+
+
+Contest ID: 455
+Index: A
+Handle: Printemps.o
+Submission ID: 25131657
+Submission Time: 1488391174
+
+
+Contest ID: 455
+Index: A
+Handle: sai16vicky
+Submission ID: 8287152
+Submission Time: 1413580581
+
+
+Contest ID: 455
+Index: A
+Handle: _AymanSalah
+Submission ID: 17216329
+Submission Time: 1460047837
+
+
+Contest ID: 455
+Index: A
+Handle: FelixChen
+Submission ID: 30965927
+Submission Time: 1507030373
+
+
+Contest ID: 455
+Index: A
+Handle: Arpitscoding
+Submission ID: 21690617
+Submission Time: 1477161182
+
+
+Contest ID: 455
+Index: A
+Handle: titanium1997
+Submission ID: 28014647
+Submission Time: 1498358377
+
+
+Contest ID: 455
+Index: A
+Handle: LiquidFun
+Submission ID: 22492749
+Submission Time: 1480088948
+
+
+Contest ID: 455
+Index: A
+Handle: xuanyangge
+Submission ID: 12216796
+Submission Time: 1437755389
+
+
+Contest ID: 455
+Index: A
+Handle: softmob
+Submission ID: 7484358
+Submission Time: 1408196154
+
+
+Contest ID: 455
+Index: A
+Handle: nguyendoantanphuc
+Submission ID: 34044745
+Submission Time: 1515489414
+
+
+Contest ID: 455
+Index: A
+Handle: salihfc
+Submission ID: 8291820
+Submission Time: 1413624476
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 12739328
+Submission Time: 1440830604
+
+
+Contest ID: 455
+Index: A
+Handle: qareken
+Submission ID: 32815011
+Submission Time: 1512069635
+
+
+Contest ID: 455
+Index: A
+Handle: ZDKOHA
+Submission ID: 7779395
+Submission Time: 1410588887
+
+
+Contest ID: 455
+Index: A
+Handle: I_love_Kim_Jaekyung
+Submission ID: 25127768
+Submission Time: 1488383230
+
+
+Contest ID: 455
+Index: A
+Handle: vanshika
+Submission ID: 14711570
+Submission Time: 1449656539
+
+
+Contest ID: 455
+Index: A
+Handle: Mirell
+Submission ID: 25956262
+Submission Time: 1490885666
+
+
+Contest ID: 455
+Index: A
+Handle: programathemacian
+Submission ID: 28323603
+Submission Time: 1499336659
+
+
+Contest ID: 455
+Index: A
+Handle: schezo
+Submission ID: 7379005
+Submission Time: 1407512460
+
+
+Contest ID: 455
+Index: A
+Handle: THE_KING_AWS
+Submission ID: 25457964
+Submission Time: 1489421885
+
+
+Contest ID: 455
+Index: A
+Handle: gohan95
+Submission ID: 10298444
+Submission Time: 1426500639
+
+
+Contest ID: 455
+Index: A
+Handle: AntiBiV
+Submission ID: 10363401
+Submission Time: 1426834662
+
+
+Contest ID: 455
+Index: A
+Handle: skygupta
+Submission ID: 18714596
+Submission Time: 1466836778
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 28737951
+Submission Time: 1500607435
+
+
+Contest ID: 455
+Index: A
+Handle: SHIVUCODER
+Submission ID: 18235719
+Submission Time: 1464978144
+
+
+Contest ID: 455
+Index: A
+Handle: Metryk
+Submission ID: 29931919
+Submission Time: 1504125497
+
+
+Contest ID: 455
+Index: A
+Handle: SuggestAHandle
+Submission ID: 33845906
+Submission Time: 1514806164
+
+
+Contest ID: 455
+Index: A
+Handle: de_moss3
+Submission ID: 21869022
+Submission Time: 1477736534
+
+
+Contest ID: 455
+Index: A
+Handle: uck_asap
+Submission ID: 8159936
+Submission Time: 1412876571
+
+
+Contest ID: 455
+Index: A
+Handle: ysengun
+Submission ID: 7384349
+Submission Time: 1407513963
+
+
+Contest ID: 455
+Index: A
+Handle: vernwalrahul
+Submission ID: 30300453
+Submission Time: 1505284888
+
+
+Contest ID: 455
+Index: A
+Handle: pedramr77
+Submission ID: 13004268
+Submission Time: 1442304119
+
+
+Contest ID: 455
+Index: A
+Handle: Karnah
+Submission ID: 7423485
+Submission Time: 1407733130
+
+
+Contest ID: 455
+Index: A
+Handle: ikovrigin
+Submission ID: 30966082
+Submission Time: 1507030833
+
+
+Contest ID: 455
+Index: A
+Handle: beegerous
+Submission ID: 7513442
+Submission Time: 1408514485
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 8588971
+Submission Time: 1415274625
+
+
+Contest ID: 455
+Index: A
+Handle: mikaa
+Submission ID: 25103932
+Submission Time: 1488294588
+
+
+Contest ID: 455
+Index: A
+Handle: Sh1co
+Submission ID: 18825051
+Submission Time: 1467294697
+
+
+Contest ID: 455
+Index: A
+Handle: ErvinK
+Submission ID: 7731660
+Submission Time: 1410308203
+
+
+Contest ID: 455
+Index: A
+Handle: jiangshibiao
+Submission ID: 7401187
+Submission Time: 1407561324
+
+
+Contest ID: 455
+Index: A
+Handle: vikiwai
+Submission ID: 31990548
+Submission Time: 1509650012
+
+
+Contest ID: 455
+Index: A
+Handle: The_Assassin43
+Submission ID: 13119423
+Submission Time: 1442782640
+
+
+Contest ID: 455
+Index: A
+Handle: reijnnn
+Submission ID: 7404588
+Submission Time: 1407580956
+
+
+Contest ID: 455
+Index: A
+Handle: stewjon
+Submission ID: 15478849
+Submission Time: 1453392511
+
+
+Contest ID: 455
+Index: A
+Handle: ayushdewan02
+Submission ID: 27573764
+Submission Time: 1496625883
+
+
+Contest ID: 455
+Index: A
+Handle: Ali-Eisa
+Submission ID: 18048509
+Submission Time: 1464039235
+
+
+Contest ID: 455
+Index: A
+Handle: victoragnez
+Submission ID: 17428842
+Submission Time: 1461288897
+
+
+Contest ID: 455
+Index: A
+Handle: DArcops
+Submission ID: 18437804
+Submission Time: 1465853098
+
+
+Contest ID: 455
+Index: A
+Handle: esmael2
+Submission ID: 10148265
+Submission Time: 1425474950
+
+
+Contest ID: 455
+Index: A
+Handle: Sarthak18
+Submission ID: 13626544
+Submission Time: 1444926242
+
+
+Contest ID: 455
+Index: A
+Handle: luannd
+Submission ID: 10636910
+Submission Time: 1428560480
+
+
+Contest ID: 455
+Index: A
+Handle: dr.ikros
+Submission ID: 7396021
+Submission Time: 1407525565
+
+
+Contest ID: 455
+Index: A
+Handle: canorbal
+Submission ID: 12546696
+Submission Time: 1439638212
+
+
+Contest ID: 455
+Index: A
+Handle: tjandbj
+Submission ID: 19849874
+Submission Time: 1471091238
+
+
+Contest ID: 455
+Index: A
+Handle: gautam94
+Submission ID: 10970967
+Submission Time: 1430547855
+
+
+Contest ID: 455
+Index: A
+Handle: z.toroschin
+Submission ID: 28308127
+Submission Time: 1499271453
+
+
+Contest ID: 455
+Index: A
+Handle: data_base
+Submission ID: 31273834
+Submission Time: 1507897226
+
+
+Contest ID: 455
+Index: A
+Handle: wiseboy
+Submission ID: 14848439
+Submission Time: 1450369381
+
+
+Contest ID: 455
+Index: A
+Handle: poursoul
+Submission ID: 7399251
+Submission Time: 1407549036
+
+
+Contest ID: 455
+Index: A
+Handle: merzgling
+Submission ID: 15551445
+Submission Time: 1453626730
+
+
+Contest ID: 455
+Index: A
+Handle: blowUpTheStonySilence
+Submission ID: 18857972
+Submission Time: 1467482241
+
+
+Contest ID: 455
+Index: A
+Handle: Perimetro20
+Submission ID: 27311337
+Submission Time: 1495577873
+
+
+Contest ID: 455
+Index: A
+Handle: AboveWood
+Submission ID: 8864527
+Submission Time: 1417037900
+
+
+Contest ID: 455
+Index: A
+Handle: dharmana.prudhvi
+Submission ID: 18866033
+Submission Time: 1467541183
+
+
+Contest ID: 455
+Index: A
+Handle: SADJUK
+Submission ID: 10377162
+Submission Time: 1426935162
+
+
+Contest ID: 455
+Index: A
+Handle: s0mth1ng
+Submission ID: 25677186
+Submission Time: 1490046159
+
+
+Contest ID: 455
+Index: A
+Handle: f1ne
+Submission ID: 20326478
+Submission Time: 1472747826
+
+
+Contest ID: 455
+Index: A
+Handle: SHANA_NITB
+Submission ID: 7495736
+Submission Time: 1408308609
+
+
+Contest ID: 455
+Index: A
+Handle: dantevergil
+Submission ID: 30417696
+Submission Time: 1505644859
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 7440131
+Submission Time: 1407916457
+
+
+Contest ID: 455
+Index: A
+Handle: mjpm
+Submission ID: 12328737
+Submission Time: 1438620166
+
+
+Contest ID: 455
+Index: A
+Handle: abbi_18
+Submission ID: 27735165
+Submission Time: 1497260318
+
+
+Contest ID: 455
+Index: A
+Handle: rashi.khandelwal2011
+Submission ID: 7666936
+Submission Time: 1409655690
+
+
+Contest ID: 455
+Index: A
+Handle: andrei1109
+Submission ID: 27733380
+Submission Time: 1497253680
+
+
+Contest ID: 455
+Index: A
+Handle: vernwalrahul
+Submission ID: 30302227
+Submission Time: 1505292296
+
+
+Contest ID: 455
+Index: A
+Handle: shrestha_k98
+Submission ID: 25776601
+Submission Time: 1490367797
+
+
+Contest ID: 455
+Index: A
+Handle: Abdallah_Mohamed55
+Submission ID: 26181747
+Submission Time: 1491523375
+
+
+Contest ID: 455
+Index: A
+Handle: sumanthbharan
+Submission ID: 11057388
+Submission Time: 1431197790
+
+
+Contest ID: 455
+Index: A
+Handle: lolxxx
+Submission ID: 33241082
+Submission Time: 1513258599
+
+
+Contest ID: 455
+Index: A
+Handle: rishabh16
+Submission ID: 19947793
+Submission Time: 1471530107
+
+
+Contest ID: 455
+Index: A
+Handle: MKopchev
+Submission ID: 21571846
+Submission Time: 1476805655
+
+
+Contest ID: 455
+Index: A
+Handle: soumith
+Submission ID: 33452845
+Submission Time: 1513767080
+
+
+Contest ID: 455
+Index: A
+Handle: akaru
+Submission ID: 18511990
+Submission Time: 1466051664
+
+
+Contest ID: 455
+Index: A
+Handle: cq_phqg
+Submission ID: 7395952
+Submission Time: 1407525469
+
+
+Contest ID: 455
+Index: A
+Handle: Kot_Angens
+Submission ID: 15614207
+Submission Time: 1453907921
+
+
+Contest ID: 455
+Index: A
+Handle: Toyo
+Submission ID: 15162430
+Submission Time: 1451765774
+
+
+Contest ID: 455
+Index: A
+Handle: daniil.maltsev.md
+Submission ID: 22196268
+Submission Time: 1479054037
+
+
+Contest ID: 455
+Index: A
+Handle: folcotandiono
+Submission ID: 20279194
+Submission Time: 1472560464
+
+
+Contest ID: 455
+Index: A
+Handle: guilhermedelyra
+Submission ID: 22287516
+Submission Time: 1479384884
+
+
+Contest ID: 455
+Index: A
+Handle: chauhan18
+Submission ID: 9593523
+Submission Time: 1422389665
+
+
+Contest ID: 455
+Index: A
+Handle: UncleGrandpa925
+Submission ID: 20043336
+Submission Time: 1471860299
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 12740890
+Submission Time: 1440839028
+
+
+Contest ID: 455
+Index: A
+Handle: dagum95
+Submission ID: 14074972
+Submission Time: 1446662854
+
+
+Contest ID: 455
+Index: A
+Handle: neil145912
+Submission ID: 22148255
+Submission Time: 1478782168
+
+
+Contest ID: 455
+Index: A
+Handle: RHT_20
+Submission ID: 29715195
+Submission Time: 1503513883
+
+
+Contest ID: 455
+Index: A
+Handle: Commence
+Submission ID: 7452175
+Submission Time: 1408097174
+
+
+Contest ID: 455
+Index: A
+Handle: snehil10
+Submission ID: 26800898
+Submission Time: 1493724338
+
+
+Contest ID: 455
+Index: A
+Handle: Stratonov
+Submission ID: 20758963
+Submission Time: 1474298220
+
+
+Contest ID: 455
+Index: A
+Handle: lamark
+Submission ID: 18502732
+Submission Time: 1466009928
+
+
+Contest ID: 455
+Index: A
+Handle: CodeItLikeAidos
+Submission ID: 11445143
+Submission Time: 1433503215
+
+
+Contest ID: 455
+Index: A
+Handle: testrex
+Submission ID: 7413760
+Submission Time: 1407676527
+
+
+Contest ID: 455
+Index: A
+Handle: ACLhj
+Submission ID: 7382206
+Submission Time: 1407513286
+
+
+Contest ID: 455
+Index: A
+Handle: warlock23
+Submission ID: 8705219
+Submission Time: 1416070437
+
+
+Contest ID: 455
+Index: A
+Handle: harryp
+Submission ID: 28196567
+Submission Time: 1498932371
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 17327089
+Submission Time: 1460725751
+
+
+Contest ID: 455
+Index: A
+Handle: _namespace
+Submission ID: 27740549
+Submission Time: 1497281177
+
+
+Contest ID: 455
+Index: A
+Handle: tomsajuk
+Submission ID: 17902840
+Submission Time: 1463214028
+
+
+Contest ID: 455
+Index: A
+Handle: Eisenheim_kakarot
+Submission ID: 25163353
+Submission Time: 1488520934
+
+
+Contest ID: 455
+Index: A
+Handle: ELDAN
+Submission ID: 13531297
+Submission Time: 1444488776
+
+
+Contest ID: 455
+Index: A
+Handle: phoenix71
+Submission ID: 13528852
+Submission Time: 1444480648
+
+
+Contest ID: 455
+Index: A
+Handle: MohabOsamah
+Submission ID: 26872093
+Submission Time: 1493956818
+
+
+Contest ID: 455
+Index: A
+Handle: Beginner_DON
+Submission ID: 34175319
+Submission Time: 1515934687
+
+
+Contest ID: 455
+Index: A
+Handle: RachitSharma
+Submission ID: 23976865
+Submission Time: 1484875020
+
+
+Contest ID: 455
+Index: A
+Handle: v_kamani19
+Submission ID: 32235367
+Submission Time: 1510465598
+
+
+Contest ID: 455
+Index: A
+Handle: m.r.saurov
+Submission ID: 31490834
+Submission Time: 1508351909
+
+
+Contest ID: 455
+Index: A
+Handle: Rishab_arora
+Submission ID: 19845463
+Submission Time: 1471076632
+
+
+Contest ID: 455
+Index: A
+Handle: DeadlyTreap
+Submission ID: 27055399
+Submission Time: 1494596171
+
+
+Contest ID: 455
+Index: A
+Handle: ImNotGay
+Submission ID: 8369875
+Submission Time: 1414083103
+
+
+Contest ID: 455
+Index: A
+Handle: Mario.Bahaa
+Submission ID: 30602801
+Submission Time: 1506037542
+
+
+Contest ID: 455
+Index: A
+Handle: kittylover
+Submission ID: 7413350
+Submission Time: 1407671095
+
+
+Contest ID: 455
+Index: A
+Handle: r_chesnokov
+Submission ID: 7396401
+Submission Time: 1407526381
+
+
+Contest ID: 455
+Index: A
+Handle: root8950
+Submission ID: 16725504
+Submission Time: 1458036210
+
+
+Contest ID: 455
+Index: A
+Handle: NikitaMikhaylov
+Submission ID: 26882182
+Submission Time: 1493992859
+
+
+Contest ID: 455
+Index: A
+Handle: shaiful4
+Submission ID: 33896749
+Submission Time: 1515045276
+
+
+Contest ID: 455
+Index: A
+Handle: badmood
+Submission ID: 12825193
+Submission Time: 1441267103
+
+
+Contest ID: 455
+Index: A
+Handle: bash
+Submission ID: 17371231
+Submission Time: 1460953104
+
+
+Contest ID: 455
+Index: A
+Handle: CZ_vino
+Submission ID: 26494395
+Submission Time: 1492602679
+
+
+Contest ID: 455
+Index: A
+Handle: tqjex
+Submission ID: 10427636
+Submission Time: 1427235342
+
+
+Contest ID: 455
+Index: A
+Handle: ahmedAbuamra
+Submission ID: 14188913
+Submission Time: 1447182358
+
+
+Contest ID: 455
+Index: A
+Handle: zczfight
+Submission ID: 9100558
+Submission Time: 1418468249
+
+
+Contest ID: 455
+Index: A
+Handle: Ahmed-Adel-77
+Submission ID: 20408788
+Submission Time: 1473113144
+
+
+Contest ID: 455
+Index: A
+Handle: Mohammad_Alow
+Submission ID: 10422432
+Submission Time: 1427199416
+
+
+Contest ID: 455
+Index: A
+Handle: Thomes
+Submission ID: 29452983
+Submission Time: 1502699451
+
+
+Contest ID: 455
+Index: A
+Handle: tsotne.kharebava
+Submission ID: 14537584
+Submission Time: 1448700657
+
+
+Contest ID: 455
+Index: A
+Handle: Dance_Of_Faith
+Submission ID: 30277382
+Submission Time: 1505186360
+
+
+Contest ID: 455
+Index: A
+Handle: AbdelrahmanEldakrony
+Submission ID: 23476444
+Submission Time: 1483225909
+
+
+Contest ID: 455
+Index: A
+Handle: ioli
+Submission ID: 31174535
+Submission Time: 1507571978
+
+
+Contest ID: 455
+Index: A
+Handle: thinh.onblurvn
+Submission ID: 16305421
+Submission Time: 1456303333
+
+
+Contest ID: 455
+Index: A
+Handle: TheRN
+Submission ID: 33584208
+Submission Time: 1514093489
+
+
+Contest ID: 455
+Index: A
+Handle: syrianphen
+Submission ID: 19305511
+Submission Time: 1469116548
+
+
+Contest ID: 455
+Index: A
+Handle: danish_devil
+Submission ID: 27869502
+Submission Time: 1497727715
+
+
+Contest ID: 455
+Index: A
+Handle: i_love_surabhi_shukla
+Submission ID: 21988807
+Submission Time: 1478084322
+
+
+Contest ID: 455
+Index: A
+Handle: lakshay04
+Submission ID: 28724505
+Submission Time: 1500553155
+
+
+Contest ID: 455
+Index: A
+Handle: shubhamkrm96
+Submission ID: 28702994
+Submission Time: 1500487830
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 28960831
+Submission Time: 1501269587
+
+
+Contest ID: 455
+Index: A
+Handle: caio1516
+Submission ID: 25585822
+Submission Time: 1489791481
+
+
+Contest ID: 455
+Index: A
+Handle: phu1612508
+Submission ID: 25014489
+Submission Time: 1488031320
+
+
+Contest ID: 455
+Index: A
+Handle: faebdc
+Submission ID: 7401724
+Submission Time: 1407564725
+
+
+Contest ID: 455
+Index: A
+Handle: Yzx835
+Submission ID: 15164220
+Submission Time: 1451791292
+
+
+Contest ID: 455
+Index: A
+Handle: mauguignard
+Submission ID: 13792359
+Submission Time: 1445521147
+
+
+Contest ID: 455
+Index: A
+Handle: san_1512
+Submission ID: 11115594
+Submission Time: 1431768954
+
+
+Contest ID: 455
+Index: A
+Handle: toxic_hack
+Submission ID: 30983648
+Submission Time: 1507094798
+
+
+Contest ID: 455
+Index: A
+Handle: vladmart
+Submission ID: 25399485
+Submission Time: 1489222466
+
+
+Contest ID: 455
+Index: A
+Handle: sergio_arnaud
+Submission ID: 18049096
+Submission Time: 1464049786
+
+
+Contest ID: 455
+Index: A
+Handle: dannyel
+Submission ID: 13765588
+Submission Time: 1445405859
+
+
+Contest ID: 455
+Index: A
+Handle: Nada
+Submission ID: 9821530
+Submission Time: 1423868247
+
+
+Contest ID: 455
+Index: A
+Handle: _rasul_
+Submission ID: 21897805
+Submission Time: 1477852236
+
+
+Contest ID: 455
+Index: A
+Handle: nguyendoantanphuc
+Submission ID: 34044958
+Submission Time: 1515490204
+
+
+Contest ID: 455
+Index: A
+Handle: nhho
+Submission ID: 12984339
+Submission Time: 1442150897
+
+
+Contest ID: 455
+Index: A
+Handle: jimng
+Submission ID: 7384635
+Submission Time: 1407514057
+
+
+Contest ID: 455
+Index: A
+Handle: dustbite
+Submission ID: 11393282
+Submission Time: 1433266363
+
+
+Contest ID: 455
+Index: A
+Handle: z1443043531
+Submission ID: 11052219
+Submission Time: 1431153327
+
+
+Contest ID: 455
+Index: A
+Handle: antivenom
+Submission ID: 12478159
+Submission Time: 1439376940
+
+
+Contest ID: 455
+Index: A
+Handle: M_R_F
+Submission ID: 14709689
+Submission Time: 1449650377
+
+
+Contest ID: 455
+Index: A
+Handle: biswajitsc
+Submission ID: 7400545
+Submission Time: 1407557125
+
+
+Contest ID: 455
+Index: A
+Handle: closedacc
+Submission ID: 12698517
+Submission Time: 1440521977
+
+
+Contest ID: 455
+Index: A
+Handle: guptasuraj93
+Submission ID: 7452339
+Submission Time: 1408098574
+
+
+Contest ID: 455
+Index: A
+Handle: Chuancmnr
+Submission ID: 7901237
+Submission Time: 1411338999
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 10867891
+Submission Time: 1430037936
+
+
+Contest ID: 455
+Index: A
+Handle: FundamentalEq
+Submission ID: 18587076
+Submission Time: 1466284255
+
+
+Contest ID: 455
+Index: A
+Handle: ryogo
+Submission ID: 10102604
+Submission Time: 1425257901
+
+
+Contest ID: 455
+Index: A
+Handle: Red_Roses
+Submission ID: 11571172
+Submission Time: 1434214028
+
+
+Contest ID: 455
+Index: A
+Handle: Hokplex
+Submission ID: 17707592
+Submission Time: 1462363218
+
+
+Contest ID: 455
+Index: A
+Handle: sounderyan
+Submission ID: 20554903
+Submission Time: 1473706004
+
+
+Contest ID: 455
+Index: A
+Handle: nmn_11
+Submission ID: 15208340
+Submission Time: 1452092257
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 25394859
+Submission Time: 1489213566
+
+
+Contest ID: 455
+Index: A
+Handle: Hydra7
+Submission ID: 18168962
+Submission Time: 1464699967
+
+
+Contest ID: 455
+Index: A
+Handle: MMMSolar
+Submission ID: 17383969
+Submission Time: 1461048695
+
+
+Contest ID: 455
+Index: A
+Handle: Mr.Adnan
+Submission ID: 27449250
+Submission Time: 1496151507
+
+
+Contest ID: 455
+Index: A
+Handle: Esparses300
+Submission ID: 17356805
+Submission Time: 1460860178
+
+
+Contest ID: 455
+Index: A
+Handle: 0-_0-_-0_-0
+Submission ID: 29361957
+Submission Time: 1502478054
+
+
+Contest ID: 455
+Index: A
+Handle: evgenius
+Submission ID: 25088448
+Submission Time: 1488229170
+
+
+Contest ID: 455
+Index: A
+Handle: Jindra
+Submission ID: 25719254
+Submission Time: 1490206841
+
+
+Contest ID: 455
+Index: A
+Handle: bangcoder
+Submission ID: 9229659
+Submission Time: 1419305052
+
+
+Contest ID: 455
+Index: A
+Handle: azix6
+Submission ID: 9417822
+Submission Time: 1421074790
+
+
+Contest ID: 455
+Index: A
+Handle: SerenityTun
+Submission ID: 7481830
+Submission Time: 1408180292
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 33570291
+Submission Time: 1514044981
+
+
+Contest ID: 455
+Index: A
+Handle: hermoine13
+Submission ID: 20035268
+Submission Time: 1471815858
+
+
+Contest ID: 455
+Index: A
+Handle: CHAR3
+Submission ID: 12994355
+Submission Time: 1442227059
+
+
+Contest ID: 455
+Index: A
+Handle: nikhilrajawatkota
+Submission ID: 8552467
+Submission Time: 1415139875
+
+
+Contest ID: 455
+Index: A
+Handle: Tasneem-almoallem
+Submission ID: 34078076
+Submission Time: 1515622785
+
+
+Contest ID: 455
+Index: A
+Handle: caominhhung1991
+Submission ID: 18584071
+Submission Time: 1466269819
+
+
+Contest ID: 455
+Index: A
+Handle: parthlathiya
+Submission ID: 27664470
+Submission Time: 1496903508
+
+
+Contest ID: 455
+Index: A
+Handle: ByeElaney
+Submission ID: 17182765
+Submission Time: 1459933523
+
+
+Contest ID: 455
+Index: A
+Handle: xiaoyulun
+Submission ID: 10767864
+Submission Time: 1429361716
+
+
+Contest ID: 455
+Index: A
+Handle: SmokeOut
+Submission ID: 14580816
+Submission Time: 1448955677
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 18031720
+Submission Time: 1463922261
+
+
+Contest ID: 455
+Index: A
+Handle: Aleks5d
+Submission ID: 17932896
+Submission Time: 1463409680
+
+
+Contest ID: 455
+Index: A
+Handle: vulcan.hkr
+Submission ID: 10761192
+Submission Time: 1429302382
+
+
+Contest ID: 455
+Index: A
+Handle: Dark.Spartan
+Submission ID: 33628348
+Submission Time: 1514228122
+
+
+Contest ID: 455
+Index: A
+Handle: Esparses300
+Submission ID: 17194598
+Submission Time: 1459968940
+
+
+Contest ID: 455
+Index: A
+Handle: marswork
+Submission ID: 7494409
+Submission Time: 1408294213
+
+
+Contest ID: 455
+Index: A
+Handle: ahmadoy
+Submission ID: 20140474
+Submission Time: 1472086529
+
+
+Contest ID: 455
+Index: A
+Handle: Mustafa.
+Submission ID: 14704815
+Submission Time: 1449613782
+
+
+Contest ID: 455
+Index: A
+Handle: Ghaieth
+Submission ID: 8245105
+Submission Time: 1413454968
+
+
+Contest ID: 455
+Index: A
+Handle: Aleks5d
+Submission ID: 17966163
+Submission Time: 1463486311
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 34048064
+Submission Time: 1515500477
+
+
+Contest ID: 455
+Index: A
+Handle: dobrydin45
+Submission ID: 8101102
+Submission Time: 1412565049
+
+
+Contest ID: 455
+Index: A
+Handle: Aidin
+Submission ID: 8554601
+Submission Time: 1415169656
+
+
+Contest ID: 455
+Index: A
+Handle: Codle
+Submission ID: 18512830
+Submission Time: 1466055332
+
+
+Contest ID: 455
+Index: A
+Handle: k_sudharsan
+Submission ID: 14924547
+Submission Time: 1450784701
+
+
+Contest ID: 455
+Index: A
+Handle: Metryk
+Submission ID: 29931933
+Submission Time: 1504125558
+
+
+Contest ID: 455
+Index: A
+Handle: sahil20
+Submission ID: 18529099
+Submission Time: 1466101553
+
+
+Contest ID: 455
+Index: A
+Handle: jameslewis
+Submission ID: 10631092
+Submission Time: 1428502698
+
+
+Contest ID: 455
+Index: A
+Handle: sra
+Submission ID: 28820776
+Submission Time: 1500889012
+
+
+Contest ID: 455
+Index: A
+Handle: agaurav77
+Submission ID: 11985061
+Submission Time: 1436443259
+
+
+Contest ID: 455
+Index: A
+Handle: Songuku95
+Submission ID: 7378823
+Submission Time: 1407512420
+
+
+Contest ID: 455
+Index: A
+Handle: msci
+Submission ID: 22597954
+Submission Time: 1480421555
+
+
+Contest ID: 455
+Index: A
+Handle: terktana18
+Submission ID: 26198973
+Submission Time: 1491582850
+
+
+Contest ID: 455
+Index: A
+Handle: Kamal1998
+Submission ID: 33975446
+Submission Time: 1515294034
+
+
+Contest ID: 455
+Index: A
+Handle: baranerff
+Submission ID: 29867651
+Submission Time: 1504014961
+
+
+Contest ID: 455
+Index: A
+Handle: Mickey42
+Submission ID: 20325880
+Submission Time: 1472745491
+
+
+Contest ID: 455
+Index: A
+Handle: Trumen
+Submission ID: 7379491
+Submission Time: 1407512580
+
+
+Contest ID: 455
+Index: A
+Handle: SayedEl-Abady
+Submission ID: 16558675
+Submission Time: 1457302234
+
+
+Contest ID: 455
+Index: A
+Handle: VictorWonder
+Submission ID: 7423949
+Submission Time: 1407736678
+
+
+Contest ID: 455
+Index: A
+Handle: muaz-32
+Submission ID: 10084030
+Submission Time: 1425138304
+
+
+Contest ID: 455
+Index: A
+Handle: anhisgod2017
+Submission ID: 31509268
+Submission Time: 1508419127
+
+
+Contest ID: 455
+Index: A
+Handle: limeworm
+Submission ID: 9286756
+Submission Time: 1419707629
+
+
+Contest ID: 455
+Index: A
+Handle: samir7osny
+Submission ID: 24853695
+Submission Time: 1487622273
+
+
+Contest ID: 455
+Index: A
+Handle: tonyjjw
+Submission ID: 7378318
+Submission Time: 1407512320
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 19778129
+Submission Time: 1470896551
+
+
+Contest ID: 455
+Index: A
+Handle: penguinRaider
+Submission ID: 12825611
+Submission Time: 1441269238
+
+
+Contest ID: 455
+Index: A
+Handle: testJust
+Submission ID: 8371379
+Submission Time: 1414096088
+
+
+Contest ID: 455
+Index: A
+Handle: olive
+Submission ID: 7408035
+Submission Time: 1407609293
+
+
+Contest ID: 455
+Index: A
+Handle: atrophy98
+Submission ID: 32069855
+Submission Time: 1509865811
+
+
+Contest ID: 455
+Index: A
+Handle: VukVukovic
+Submission ID: 10222427
+Submission Time: 1425942635
+
+
+Contest ID: 455
+Index: A
+Handle: john97
+Submission ID: 28364413
+Submission Time: 1499502755
+
+
+Contest ID: 455
+Index: A
+Handle: Kleaschev_Maksim
+Submission ID: 10249457
+Submission Time: 1426177685
+
+
+Contest ID: 455
+Index: A
+Handle: R.kh2002
+Submission ID: 30815770
+Submission Time: 1506631501
+
+
+Contest ID: 455
+Index: A
+Handle: is_that_all
+Submission ID: 16429833
+Submission Time: 1456765855
+
+
+Contest ID: 455
+Index: A
+Handle: sniper123
+Submission ID: 14322130
+Submission Time: 1447831774
+
+
+Contest ID: 455
+Index: A
+Handle: RachitSharma
+Submission ID: 23978753
+Submission Time: 1484883478
+
+
+Contest ID: 455
+Index: A
+Handle: 16588
+Submission ID: 15183036
+Submission Time: 1451923968
+
+
+Contest ID: 455
+Index: A
+Handle: abhivenkiabhi
+Submission ID: 30189112
+Submission Time: 1504811333
+
+
+Contest ID: 455
+Index: A
+Handle: fanstancy
+Submission ID: 16515899
+Submission Time: 1457098358
+
+
+Contest ID: 455
+Index: A
+Handle: IARisTraning
+Submission ID: 29202506
+Submission Time: 1501873612
+
+
+Contest ID: 455
+Index: A
+Handle: 4yush933
+Submission ID: 30623296
+Submission Time: 1506105602
+
+
+Contest ID: 455
+Index: A
+Handle: zhangtianyu123
+Submission ID: 12532606
+Submission Time: 1439566423
+
+
+Contest ID: 455
+Index: A
+Handle: Rudro
+Submission ID: 29035813
+Submission Time: 1501477229
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 30277524
+Submission Time: 1505187511
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 29115806
+Submission Time: 1501644037
+
+
+Contest ID: 455
+Index: A
+Handle: hooda
+Submission ID: 20029274
+Submission Time: 1471791580
+
+
+Contest ID: 455
+Index: A
+Handle: AboAbdoMC
+Submission ID: 23927571
+Submission Time: 1484759361
+
+
+Contest ID: 455
+Index: A
+Handle: rares96cheseli
+Submission ID: 7396224
+Submission Time: 1407525931
+
+
+Contest ID: 455
+Index: A
+Handle: FelixMP
+Submission ID: 20441402
+Submission Time: 1473265334
+
+
+Contest ID: 455
+Index: A
+Handle: logicmachine
+Submission ID: 7377606
+Submission Time: 1407512161
+
+
+Contest ID: 455
+Index: A
+Handle: Mohammad_Mohsin_COU
+Submission ID: 10959104
+Submission Time: 1430454227
+
+
+Contest ID: 455
+Index: A
+Handle: ash0904
+Submission ID: 26817219
+Submission Time: 1493809262
+
+
+Contest ID: 455
+Index: A
+Handle: ray_ban
+Submission ID: 19666413
+Submission Time: 1470473915
+
+
+Contest ID: 455
+Index: A
+Handle: hjl
+Submission ID: 7667708
+Submission Time: 1409663486
+
+
+Contest ID: 455
+Index: A
+Handle: miss_smile
+Submission ID: 7406973
+Submission Time: 1407597199
+
+
+Contest ID: 455
+Index: A
+Handle: Oktavia
+Submission ID: 15426462
+Submission Time: 1453118674
+
+
+Contest ID: 455
+Index: A
+Handle: MohabOsamah
+Submission ID: 23370978
+Submission Time: 1482902033
+
+
+Contest ID: 455
+Index: A
+Handle: ursabhishek15
+Submission ID: 13520184
+Submission Time: 1444441230
+
+
+Contest ID: 455
+Index: A
+Handle: rodrigofarias
+Submission ID: 9975301
+Submission Time: 1424738129
+
+
+Contest ID: 455
+Index: A
+Handle: MedoN11
+Submission ID: 11438388
+Submission Time: 1433464591
+
+
+Contest ID: 455
+Index: A
+Handle: artikot
+Submission ID: 30456568
+Submission Time: 1505716202
+
+
+Contest ID: 455
+Index: A
+Handle: commando123123
+Submission ID: 24534780
+Submission Time: 1486580688
+
+
+Contest ID: 455
+Index: A
+Handle: yizhixiaokong
+Submission ID: 28361405
+Submission Time: 1499491956
+
+
+Contest ID: 455
+Index: A
+Handle: luckyweijie
+Submission ID: 7434244
+Submission Time: 1407843741
+
+
+Contest ID: 455
+Index: A
+Handle: terktana18
+Submission ID: 26199680
+Submission Time: 1491584829
+
+
+Contest ID: 455
+Index: A
+Handle: Mr.M1998
+Submission ID: 7670423
+Submission Time: 1409690073
+
+
+Contest ID: 455
+Index: A
+Handle: harshpatel
+Submission ID: 34061965
+Submission Time: 1515559942
+
+
+Contest ID: 455
+Index: A
+Handle: sherlockconan
+Submission ID: 19749970
+Submission Time: 1470756525
+
+
+Contest ID: 455
+Index: A
+Handle: SamsonP
+Submission ID: 25629610
+Submission Time: 1489870545
+
+
+Contest ID: 455
+Index: A
+Handle: Anirudhsoni
+Submission ID: 20498999
+Submission Time: 1473517204
+
+
+Contest ID: 455
+Index: A
+Handle: there-there
+Submission ID: 30860718
+Submission Time: 1506763609
+
+
+Contest ID: 455
+Index: A
+Handle: ishugoyal
+Submission ID: 29532215
+Submission Time: 1502992801
+
+
+Contest ID: 455
+Index: A
+Handle: KHUSRAV
+Submission ID: 14019791
+Submission Time: 1446454366
+
+
+Contest ID: 455
+Index: A
+Handle: ashishk1994
+Submission ID: 12612213
+Submission Time: 1440052408
+
+
+Contest ID: 455
+Index: A
+Handle: run_time_error
+Submission ID: 8358273
+Submission Time: 1414045891
+
+
+Contest ID: 455
+Index: A
+Handle: Alex1878
+Submission ID: 7624304
+Submission Time: 1409343481
+
+
+Contest ID: 455
+Index: A
+Handle: SAeed
+Submission ID: 12205280
+Submission Time: 1437680208
+
+
+Contest ID: 455
+Index: A
+Handle: funky_code
+Submission ID: 21005610
+Submission Time: 1475202698
+
+
+Contest ID: 455
+Index: A
+Handle: igneus
+Submission ID: 19566466
+Submission Time: 1470075967
+
+
+Contest ID: 455
+Index: A
+Handle: Safrout
+Submission ID: 12742015
+Submission Time: 1440844543
+
+
+Contest ID: 455
+Index: A
+Handle: rajiv
+Submission ID: 17029631
+Submission Time: 1459323849
+
+
+Contest ID: 455
+Index: A
+Handle: damiannmm
+Submission ID: 20190633
+Submission Time: 1472285034
+
+
+Contest ID: 455
+Index: A
+Handle: computer_
+Submission ID: 9601003
+Submission Time: 1422442751
+
+
+Contest ID: 455
+Index: A
+Handle: Yerasyl
+Submission ID: 8593535
+Submission Time: 1415291933
+
+
+Contest ID: 455
+Index: A
+Handle: vstoian
+Submission ID: 17312627
+Submission Time: 1460628877
+
+
+Contest ID: 455
+Index: A
+Handle: Borna
+Submission ID: 22455146
+Submission Time: 1479936969
+
+
+Contest ID: 455
+Index: A
+Handle: youssif-aly95
+Submission ID: 22393350
+Submission Time: 1479767673
+
+
+Contest ID: 455
+Index: A
+Handle: crazy
+Submission ID: 7389643
+Submission Time: 1407516042
+
+
+Contest ID: 455
+Index: A
+Handle: kevalya
+Submission ID: 10854208
+Submission Time: 1429920048
+
+
+Contest ID: 455
+Index: A
+Handle: jainshanu
+Submission ID: 13340427
+Submission Time: 1443773264
+
+
+Contest ID: 455
+Index: A
+Handle: longwei728
+Submission ID: 29481471
+Submission Time: 1502800761
+
+
+Contest ID: 455
+Index: A
+Handle: ahmedsamir055
+Submission ID: 23243237
+Submission Time: 1482481583
+
+
+Contest ID: 455
+Index: A
+Handle: Goofy57
+Submission ID: 7477879
+Submission Time: 1408147349
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 10063545
+Submission Time: 1425125395
+
+
+Contest ID: 455
+Index: A
+Handle: wuxifinger
+Submission ID: 12892685
+Submission Time: 1441691665
+
+
+Contest ID: 455
+Index: A
+Handle: AEHS4
+Submission ID: 30580548
+Submission Time: 1506003769
+
+
+Contest ID: 455
+Index: A
+Handle: titanium1997
+Submission ID: 28014625
+Submission Time: 1498358223
+
+
+Contest ID: 455
+Index: A
+Handle: nidhalby
+Submission ID: 12075147
+Submission Time: 1436988426
+
+
+Contest ID: 455
+Index: A
+Handle: hanrna
+Submission ID: 7823169
+Submission Time: 1411020349
+
+
+Contest ID: 455
+Index: A
+Handle: dargonaxxe
+Submission ID: 12403958
+Submission Time: 1438959065
+
+
+Contest ID: 455
+Index: A
+Handle: vmthanh
+Submission ID: 10569112
+Submission Time: 1428119273
+
+
+Contest ID: 455
+Index: A
+Handle: .joKer.
+Submission ID: 28388019
+Submission Time: 1499606221
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 12741351
+Submission Time: 1440840994
+
+
+Contest ID: 455
+Index: A
+Handle: Fahmi123456
+Submission ID: 10807007
+Submission Time: 1429601705
+
+
+Contest ID: 455
+Index: A
+Handle: marswork
+Submission ID: 7493801
+Submission Time: 1408289023
+
+
+Contest ID: 455
+Index: A
+Handle: adelmzian
+Submission ID: 28987729
+Submission Time: 1501408926
+
+
+Contest ID: 455
+Index: A
+Handle: copycat
+Submission ID: 28784937
+Submission Time: 1500747726
+
+
+Contest ID: 455
+Index: A
+Handle: MohammedAshraf
+Submission ID: 9914866
+Submission Time: 1424266558
+
+
+Contest ID: 455
+Index: A
+Handle: z.farrukh2000
+Submission ID: 22201972
+Submission Time: 1479094466
+
+
+Contest ID: 455
+Index: A
+Handle: KainWhite
+Submission ID: 12899174
+Submission Time: 1441723721
+
+
+Contest ID: 455
+Index: A
+Handle: garg.megha
+Submission ID: 29692657
+Submission Time: 1503431926
+
+
+Contest ID: 455
+Index: A
+Handle: coder1748431
+Submission ID: 8478019
+Submission Time: 1414663616
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 24554638
+Submission Time: 1486660948
+
+
+Contest ID: 455
+Index: A
+Handle: leaen
+Submission ID: 32321809
+Submission Time: 1510704142
+
+
+Contest ID: 455
+Index: A
+Handle: sauravray2587
+Submission ID: 27701883
+Submission Time: 1497080601
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 9698970
+Submission Time: 1422957202
+
+
+Contest ID: 455
+Index: A
+Handle: sepehr81
+Submission ID: 30964962
+Submission Time: 1507027762
+
+
+Contest ID: 455
+Index: A
+Handle: atul-
+Submission ID: 28728269
+Submission Time: 1500563694
+
+
+Contest ID: 455
+Index: A
+Handle: Chengrui1996
+Submission ID: 15157641
+Submission Time: 1451733149
+
+
+Contest ID: 455
+Index: A
+Handle: sd197555
+Submission ID: 7952659
+Submission Time: 1411703609
+
+
+Contest ID: 455
+Index: A
+Handle: tasmi_toma
+Submission ID: 24283334
+Submission Time: 1485845243
+
+
+Contest ID: 455
+Index: A
+Handle: zayle
+Submission ID: 13424811
+Submission Time: 1444096820
+
+
+Contest ID: 455
+Index: A
+Handle: A_new_Bui
+Submission ID: 18749167
+Submission Time: 1467018227
+
+
+Contest ID: 455
+Index: A
+Handle: abomohammad9616
+Submission ID: 22061269
+Submission Time: 1478365467
+
+
+Contest ID: 455
+Index: A
+Handle: AbhiTaker
+Submission ID: 27465382
+Submission Time: 1496230313
+
+
+Contest ID: 455
+Index: A
+Handle: vaibhav711
+Submission ID: 28589428
+Submission Time: 1500188302
+
+
+Contest ID: 455
+Index: A
+Handle: sharma7
+Submission ID: 12627028
+Submission Time: 1440156183
+
+
+Contest ID: 455
+Index: A
+Handle: joseacaz
+Submission ID: 34234086
+Submission Time: 1516140475
+
+
+Contest ID: 455
+Index: A
+Handle: karlangadas
+Submission ID: 26976049
+Submission Time: 1494341617
+
+
+Contest ID: 455
+Index: A
+Handle: lavaks
+Submission ID: 15155264
+Submission Time: 1451713578
+
+
+Contest ID: 455
+Index: A
+Handle: arshia39
+Submission ID: 13122429
+Submission Time: 1442817562
+
+
+Contest ID: 455
+Index: A
+Handle: onk_r
+Submission ID: 33889126
+Submission Time: 1514997799
+
+
+Contest ID: 455
+Index: A
+Handle: satu0king
+Submission ID: 30659361
+Submission Time: 1506238995
+
+
+Contest ID: 455
+Index: A
+Handle: Jindra
+Submission ID: 25719297
+Submission Time: 1490206995
+
+
+Contest ID: 455
+Index: A
+Handle: YousryOG
+Submission ID: 17270471
+Submission Time: 1460315207
+
+
+Contest ID: 455
+Index: A
+Handle: vr3dina
+Submission ID: 24268496
+Submission Time: 1485784037
+
+
+Contest ID: 455
+Index: A
+Handle: thanos_03
+Submission ID: 29328455
+Submission Time: 1502374313
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 20203910
+Submission Time: 1472347546
+
+
+Contest ID: 455
+Index: A
+Handle: karan_thakkar
+Submission ID: 12981307
+Submission Time: 1442131495
+
+
+Contest ID: 455
+Index: A
+Handle: go__on
+Submission ID: 12628334
+Submission Time: 1440161572
+
+
+Contest ID: 455
+Index: A
+Handle: satheesh2k14
+Submission ID: 14047978
+Submission Time: 1446580534
+
+
+Contest ID: 455
+Index: A
+Handle: SandyKarunia
+Submission ID: 9890497
+Submission Time: 1424192323
+
+
+Contest ID: 455
+Index: A
+Handle: Little_mouse
+Submission ID: 33642090
+Submission Time: 1514279338
+
+
+Contest ID: 455
+Index: A
+Handle: iamabjain
+Submission ID: 23115482
+Submission Time: 1482096050
+
+
+Contest ID: 455
+Index: A
+Handle: Sabyasachi
+Submission ID: 25016528
+Submission Time: 1488036597
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 21869098
+Submission Time: 1477736850
+
+
+Contest ID: 455
+Index: A
+Handle: ikspeto
+Submission ID: 9926338
+Submission Time: 1424353263
+
+
+Contest ID: 455
+Index: A
+Handle: snowdesert1
+Submission ID: 30572014
+Submission Time: 1505985169
+
+
+Contest ID: 455
+Index: A
+Handle: smashthosepies
+Submission ID: 14352546
+Submission Time: 1447976494
+
+
+Contest ID: 455
+Index: A
+Handle: chezbgone
+Submission ID: 18580896
+Submission Time: 1466258931
+
+
+Contest ID: 455
+Index: A
+Handle: iron_nsit
+Submission ID: 10411398
+Submission Time: 1427121335
+
+
+Contest ID: 455
+Index: A
+Handle: dobrydin45
+Submission ID: 8079477
+Submission Time: 1412440112
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 33478231
+Submission Time: 1513856423
+
+
+Contest ID: 455
+Index: A
+Handle: problem_destroyer420
+Submission ID: 34277411
+Submission Time: 1516283293
+
+
+Contest ID: 455
+Index: A
+Handle: ckopo
+Submission ID: 15931625
+Submission Time: 1455116858
+
+
+Contest ID: 455
+Index: A
+Handle: x89
+Submission ID: 11190063
+Submission Time: 1432212925
+
+
+Contest ID: 455
+Index: A
+Handle: mjain_it
+Submission ID: 12813702
+Submission Time: 1441190060
+
+
+Contest ID: 455
+Index: A
+Handle: gabrielrc
+Submission ID: 11992025
+Submission Time: 1436493629
+
+
+Contest ID: 455
+Index: A
+Handle: jkks1234
+Submission ID: 29644213
+Submission Time: 1503320860
+
+
+Contest ID: 455
+Index: A
+Handle: BBenz
+Submission ID: 10855216
+Submission Time: 1429935351
+
+
+Contest ID: 455
+Index: A
+Handle: salleTKD
+Submission ID: 7398442
+Submission Time: 1407539445
+
+
+Contest ID: 455
+Index: A
+Handle: RMP
+Submission ID: 22932578
+Submission Time: 1481652441
+
+
+Contest ID: 455
+Index: A
+Handle: zhouyuyang
+Submission ID: 23777609
+Submission Time: 1484287054
+
+
+Contest ID: 455
+Index: A
+Handle: tusharsircar95
+Submission ID: 11004241
+Submission Time: 1430822155
+
+
+Contest ID: 455
+Index: A
+Handle: ahoraSoyPeor
+Submission ID: 15336246
+Submission Time: 1452713137
+
+
+Contest ID: 455
+Index: A
+Handle: artxdmaster
+Submission ID: 13698106
+Submission Time: 1445102892
+
+
+Contest ID: 455
+Index: B
+Handle: nikola12345
+Submission ID: 7397112
+Submission Time: 1407528657
+
+
+Contest ID: 455
+Index: B
+Handle: DP99
+Submission ID: 17593011
+Submission Time: 1462010997
+
+
+Contest ID: 455
+Index: B
+Handle: OptimizerTR
+Submission ID: 7699473
+Submission Time: 1410089791
+
+
+Contest ID: 455
+Index: B
+Handle: SAKT
+Submission ID: 9095325
+Submission Time: 1418410782
+
+
+Contest ID: 455
+Index: B
+Handle: islands
+Submission ID: 7400016
+Submission Time: 1407553494
+
+
+Contest ID: 455
+Index: B
+Handle: DP99
+Submission ID: 17593689
+Submission Time: 1462014063
+
+
+Contest ID: 455
+Index: B
+Handle: tyamgin
+Submission ID: 7384279
+Submission Time: 1407513933
+
+
+Contest ID: 455
+Index: B
+Handle: yutaka1999
+Submission ID: 7390604
+Submission Time: 1407516470
+
+
+Contest ID: 455
+Index: B
+Handle: Valentin_E
+Submission ID: 8150503
+Submission Time: 1412838045
+
+
+Contest ID: 455
+Index: B
+Handle: tenshi_kanade
+Submission ID: 7397837
+Submission Time: 1407532075
+
+
+Contest ID: 455
+Index: B
+Handle: yyf
+Submission ID: 7387010
+Submission Time: 1407514946
+
+
+Contest ID: 455
+Index: B
+Handle: Deamon
+Submission ID: 22505361
+Submission Time: 1480153240
+
+
+Contest ID: 455
+Index: B
+Handle: vjudge5
+Submission ID: 11076369
+Submission Time: 1431421317
+
+
+Contest ID: 455
+Index: B
+Handle: catupper
+Submission ID: 7382117
+Submission Time: 1407513261
+
+
+Contest ID: 455
+Index: B
+Handle: sahasumit288
+Submission ID: 12010618
+Submission Time: 1436631563
+
+
+Contest ID: 455
+Index: B
+Handle: Farzam
+Submission ID: 7384858
+Submission Time: 1407514129
+
+
+Contest ID: 455
+Index: B
+Handle: deepankarak
+Submission ID: 7740831
+Submission Time: 1410432248
+
+
+Contest ID: 455
+Index: B
+Handle: mylyanyk.ivan
+Submission ID: 8422265
+Submission Time: 1414355712
+
+
+Contest ID: 455
+Index: B
+Handle: fushar
+Submission ID: 7402078
+Submission Time: 1407566753
+
+
+Contest ID: 455
+Index: B
+Handle: vjudge5
+Submission ID: 19378006
+Submission Time: 1469342578
+
+
+Contest ID: 455
+Index: B
+Handle: yada
+Submission ID: 7386239
+Submission Time: 1407514662
+
+
+Contest ID: 455
+Index: B
+Handle: zhengyang
+Submission ID: 7739318
+Submission Time: 1410416734
+
+
+Contest ID: 455
+Index: B
+Handle: gafeol
+Submission ID: 7437827
+Submission Time: 1407887141
+
+
+Contest ID: 455
+Index: B
+Handle: joyfun
+Submission ID: 7395823
+Submission Time: 1407525337
+
+
+Contest ID: 455
+Index: B
+Handle: CODOPEDIAC3
+Submission ID: 11398851
+Submission Time: 1433321232
+
+
+Contest ID: 455
+Index: B
+Handle: kawazaki
+Submission ID: 7393353
+Submission Time: 1407517890
+
+
+Contest ID: 455
+Index: B
+Handle: RAF
+Submission ID: 8558077
+Submission Time: 1415192018
+
+
+Contest ID: 455
+Index: B
+Handle: CODOPEDIAC3
+Submission ID: 11399257
+Submission Time: 1433323478
+
+
+Contest ID: 455
+Index: B
+Handle: Shavkat_Aminov
+Submission ID: 12786960
+Submission Time: 1441016161
+
+
+Contest ID: 455
+Index: B
+Handle: MZuev
+Submission ID: 7820427
+Submission Time: 1410978275
+
+
+Contest ID: 455
+Index: B
+Handle: Marcil
+Submission ID: 7433375
+Submission Time: 1407832857
+
+
+Contest ID: 455
+Index: B
+Handle: 0210804
+Submission ID: 7425333
+Submission Time: 1407747124
+
+
+Contest ID: 455
+Index: B
+Handle: jzc
+Submission ID: 7384338
+Submission Time: 1407513958
+
+
+Contest ID: 455
+Index: B
+Handle: denis2111
+Submission ID: 22602240
+Submission Time: 1480433763
+
+
+Contest ID: 455
+Index: B
+Handle: mbrc
+Submission ID: 7412392
+Submission Time: 1407662154
+
+
+Contest ID: 455
+Index: B
+Handle: dhruvsrivastava
+Submission ID: 12301531
+Submission Time: 1438420838
+
+
+Contest ID: 455
+Index: B
+Handle: tanphatls987
+Submission ID: 7434576
+Submission Time: 1407846478
+
+
+Contest ID: 455
+Index: B
+Handle: josdas
+Submission ID: 7406436
+Submission Time: 1407592854
+
+
+Contest ID: 455
+Index: B
+Handle: problem-solving
+Submission ID: 7398802
+Submission Time: 1407544727
+
+
+Contest ID: 455
+Index: B
+Handle: Emphi
+Submission ID: 23112130
+Submission Time: 1482083633
+
+
+Contest ID: 455
+Index: B
+Handle: tjf
+Submission ID: 7396512
+Submission Time: 1407526747
+
+
+Contest ID: 455
+Index: B
+Handle: Gasser
+Submission ID: 24897649
+Submission Time: 1487780605
+
+
+Contest ID: 455
+Index: B
+Handle: srm11
+Submission ID: 7618848
+Submission Time: 1409294604
+
+
+Contest ID: 455
+Index: A
+Handle: I_so_sad
+Submission ID: 7379668
+Submission Time: 1407512617
+Contest ID: 455
+Index: A
+Handle: practiseCode
+Submission ID: 7406155
+Submission Time: 1407590782
+
+
+Contest ID: 455
+Index: A
+Handle: rghv
+Submission ID: 30269102
+Submission Time: 1505144245
+
+
+Contest ID: 455
+Index: A
+Handle: kyo
+Submission ID: 24227452
+Submission Time: 1485613075
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 17839570
+Submission Time: 1462948559
+
+
+Contest ID: 455
+Index: A
+Handle: pankzkmr
+Submission ID: 34413525
+Submission Time: 1516537676
+
+
+Contest ID: 455
+Index: A
+Handle: tcriscuolo
+Submission ID: 10123019
+Submission Time: 1425317475
+
+
+Contest ID: 455
+Index: A
+Handle: akanksha_4
+Submission ID: 11184850
+Submission Time: 1432187795
+
+
+Contest ID: 455
+Index: A
+Handle: Genawy
+Submission ID: 17218332
+Submission Time: 1460058203
+
+
+Contest ID: 455
+Index: A
+Handle: z21
+Submission ID: 30126180
+Submission Time: 1504686576
+
+
+Contest ID: 455
+Index: A
+Handle: 1046236388
+Submission ID: 14410904
+Submission Time: 1448181292
+
+
+Contest ID: 455
+Index: A
+Handle: Baba
+Submission ID: 9063066
+Submission Time: 1418155789
+
+
+Contest ID: 455
+Index: A
+Handle: freya
+Submission ID: 20781159
+Submission Time: 1474390545
+
+
+Contest ID: 455
+Index: A
+Handle: benedemon
+Submission ID: 20340943
+Submission Time: 1472820984
+
+
+Contest ID: 455
+Index: A
+Handle: Qamar
+Submission ID: 16473838
+Submission Time: 1456954382
+
+
+Contest ID: 455
+Index: A
+Handle: brahmnoor
+Submission ID: 26137873
+Submission Time: 1491378270
+
+
+Contest ID: 455
+Index: A
+Handle: bible
+Submission ID: 7377444
+Submission Time: 1407512111
+
+
+Contest ID: 455
+Index: A
+Handle: nikhil96sher
+Submission ID: 15226445
+Submission Time: 1452178126
+
+
+Contest ID: 455
+Index: A
+Handle: raj.or.pratyush
+Submission ID: 11759208
+Submission Time: 1435230089
+
+
+Contest ID: 455
+Index: A
+Handle: bobaahmed2001
+Submission ID: 20159392
+Submission Time: 1472143043
+
+
+Contest ID: 455
+Index: A
+Handle: Sugardorj
+Submission ID: 19847020
+Submission Time: 1471081412
+
+
+Contest ID: 455
+Index: A
+Handle: Kazakh_Alga
+Submission ID: 7379727
+Submission Time: 1407512628
+
+
+Contest ID: 455
+Index: A
+Handle: Silverpirate
+Submission ID: 28323618
+Submission Time: 1499336704
+
+
+Contest ID: 455
+Index: A
+Handle: altruist
+Submission ID: 23308804
+Submission Time: 1482669100
+
+
+Contest ID: 455
+Index: A
+Handle: kyuridenamida
+Submission ID: 7377974
+Submission Time: 1407512252
+
+
+Contest ID: 455
+Index: A
+Handle: 72VanVector_SevNTU
+Submission ID: 7392018
+Submission Time: 1407517196
+
+
+Contest ID: 455
+Index: A
+Handle: ahmed.yasser13
+Submission ID: 21893139
+Submission Time: 1477834235
+
+
+Contest ID: 455
+Index: A
+Handle: Mr_seyed
+Submission ID: 14858880
+Submission Time: 1450432602
+
+
+Contest ID: 455
+Index: A
+Handle: diagon_alley
+Submission ID: 34057127
+Submission Time: 1515526877
+
+
+Contest ID: 455
+Index: A
+Handle: kritsatorn
+Submission ID: 27666746
+Submission Time: 1496910814
+
+
+Contest ID: 455
+Index: A
+Handle: barca1011
+Submission ID: 23024452
+Submission Time: 1481874939
+
+
+Contest ID: 455
+Index: A
+Handle: tonkosi
+Submission ID: 7379908
+Submission Time: 1407512673
+
+
+Contest ID: 455
+Index: A
+Handle: PedroBortolli
+Submission ID: 21052903
+Submission Time: 1475279322
+
+
+Contest ID: 455
+Index: A
+Handle: Silver_
+Submission ID: 12898213
+Submission Time: 1441719197
+
+
+Contest ID: 455
+Index: A
+Handle: anya171kravets
+Submission ID: 29775553
+Submission Time: 1503654406
+
+
+Contest ID: 455
+Index: A
+Handle: book987
+Submission ID: 30948442
+Submission Time: 1506962254
+
+
+Contest ID: 455
+Index: A
+Handle: RedStone
+Submission ID: 9961054
+Submission Time: 1424621461
+
+
+Contest ID: 455
+Index: A
+Handle: _._____..._____
+Submission ID: 32358023
+Submission Time: 1510843005
+
+
+Contest ID: 455
+Index: A
+Handle: mathhislife
+Submission ID: 7389204
+Submission Time: 1407515848
+
+
+Contest ID: 455
+Index: A
+Handle: builtnotborn
+Submission ID: 31929979
+Submission Time: 1509473181
+
+
+Contest ID: 455
+Index: A
+Handle: mnshjha05
+Submission ID: 22027809
+Submission Time: 1478239582
+
+
+Contest ID: 455
+Index: A
+Handle: pedramr77
+Submission ID: 17774943
+Submission Time: 1462611650
+
+
+Contest ID: 455
+Index: A
+Handle: ngdkhoa
+Submission ID: 26654743
+Submission Time: 1493104966
+
+
+Contest ID: 455
+Index: A
+Handle: dc1997
+Submission ID: 27960226
+Submission Time: 1498119463
+
+
+Contest ID: 455
+Index: A
+Handle: RedStone
+Submission ID: 9877729
+Submission Time: 1424137702
+
+
+Contest ID: 455
+Index: A
+Handle: pathmaker
+Submission ID: 24053482
+Submission Time: 1485118944
+
+
+Contest ID: 455
+Index: A
+Handle: slavyan900
+Submission ID: 7730224
+Submission Time: 1410284516
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 20204047
+Submission Time: 1472348851
+
+
+Contest ID: 455
+Index: A
+Handle: Xiyanghong
+Submission ID: 8075351
+Submission Time: 1412409059
+
+
+Contest ID: 455
+Index: A
+Handle: wiZdOwn
+Submission ID: 16729077
+Submission Time: 1458052935
+
+
+Contest ID: 455
+Index: A
+Handle: v_geta
+Submission ID: 20456297
+Submission Time: 1473331994
+
+
+Contest ID: 455
+Index: A
+Handle: wijayareynaldo
+Submission ID: 32566217
+Submission Time: 1511412083
+
+
+Contest ID: 455
+Index: A
+Handle: smtkhaitan
+Submission ID: 20223946
+Submission Time: 1472453274
+
+
+Contest ID: 455
+Index: A
+Handle: wrinx
+Submission ID: 13332960
+Submission Time: 1443717312
+
+
+Contest ID: 455
+Index: A
+Handle: pH7
+Submission ID: 11398292
+Submission Time: 1433317692
+
+
+Contest ID: 455
+Index: A
+Handle: niobium
+Submission ID: 9369659
+Submission Time: 1420519638
+
+
+Contest ID: 455
+Index: A
+Handle: edisonhello
+Submission ID: 20751580
+Submission Time: 1474278633
+
+
+Contest ID: 455
+Index: A
+Handle: jack_mk
+Submission ID: 8707753
+Submission Time: 1416101107
+
+
+Contest ID: 455
+Index: A
+Handle: Protap_Ghose
+Submission ID: 17282137
+Submission Time: 1460399436
+
+
+Contest ID: 455
+Index: A
+Handle: Staticity
+Submission ID: 8053504
+Submission Time: 1412229062
+
+
+Contest ID: 455
+Index: A
+Handle: wahyudierwin
+Submission ID: 23800502
+Submission Time: 1484379523
+
+
+Contest ID: 455
+Index: A
+Handle: Chengrui1996
+Submission ID: 15157641
+Submission Time: 1451733149
+
+
+Contest ID: 455
+Index: A
+Handle: a.Ibrahim
+Submission ID: 16767727
+Submission Time: 1458232180
+
+
+Contest ID: 455
+Index: A
+Handle: d2112
+Submission ID: 17988176
+Submission Time: 1463647932
+
+
+Contest ID: 455
+Index: A
+Handle: ShivamA
+Submission ID: 17861865
+Submission Time: 1462991394
+
+
+Contest ID: 455
+Index: A
+Handle: Spartina
+Submission ID: 16476407
+Submission Time: 1456979478
+
+
+Contest ID: 455
+Index: A
+Handle: sampriti
+Submission ID: 13130249
+Submission Time: 1442855487
+
+
+Contest ID: 455
+Index: A
+Handle: bigfoot
+Submission ID: 7656040
+Submission Time: 1409506450
+
+
+Contest ID: 455
+Index: A
+Handle: mission264
+Submission ID: 8048414
+Submission Time: 1412174726
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 28740424
+Submission Time: 1500615560
+
+
+Contest ID: 455
+Index: A
+Handle: jimng
+Submission ID: 7384635
+Submission Time: 1407514057
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 7440604
+Submission Time: 1407919640
+
+
+Contest ID: 455
+Index: A
+Handle: Hotrood
+Submission ID: 11947111
+Submission Time: 1436182285
+
+
+Contest ID: 455
+Index: A
+Handle: killcode
+Submission ID: 25870585
+Submission Time: 1490696838
+
+
+Contest ID: 455
+Index: A
+Handle: Quinas
+Submission ID: 24901792
+Submission Time: 1487795086
+
+
+Contest ID: 455
+Index: A
+Handle: sharma7
+Submission ID: 12627128
+Submission Time: 1440156525
+
+
+Contest ID: 455
+Index: A
+Handle: panyuchong
+Submission ID: 8337380
+Submission Time: 1413866684
+
+
+Contest ID: 455
+Index: A
+Handle: PAO_ZHAO
+Submission ID: 25939831
+Submission Time: 1490845608
+
+
+Contest ID: 455
+Index: A
+Handle: yasminealmohandes
+Submission ID: 22982577
+Submission Time: 1481747758
+
+
+Contest ID: 455
+Index: A
+Handle: Hridoy_089
+Submission ID: 27726621
+Submission Time: 1497210134
+
+
+Contest ID: 455
+Index: A
+Handle: pl_24
+Submission ID: 23504030
+Submission Time: 1483379532
+
+
+Contest ID: 455
+Index: A
+Handle: AboHaidara
+Submission ID: 25160490
+Submission Time: 1488498466
+
+
+Contest ID: 455
+Index: A
+Handle: HamedWBN1
+Submission ID: 11873337
+Submission Time: 1435707469
+
+
+Contest ID: 455
+Index: A
+Handle: codolove
+Submission ID: 15728991
+Submission Time: 1454323103
+
+
+Contest ID: 455
+Index: A
+Handle: tiktiki
+Submission ID: 11896532
+Submission Time: 1435837564
+
+
+Contest ID: 455
+Index: A
+Handle: QyteDance
+Submission ID: 11677084
+Submission Time: 1434773310
+
+
+Contest ID: 455
+Index: A
+Handle: Pedro_Sponchiado
+Submission ID: 20513974
+Submission Time: 1473533922
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 29138271
+Submission Time: 1501700366
+
+
+Contest ID: 455
+Index: A
+Handle: osad
+Submission ID: 12294454
+Submission Time: 1438361765
+
+
+Contest ID: 455
+Index: A
+Handle: amitgoel
+Submission ID: 16733915
+Submission Time: 1458072440
+
+
+Contest ID: 455
+Index: A
+Handle: NEZZ
+Submission ID: 32083809
+Submission Time: 1509915674
+
+
+Contest ID: 455
+Index: A
+Handle: Player23
+Submission ID: 32216428
+Submission Time: 1510395501
+
+
+Contest ID: 455
+Index: A
+Handle: ahmednaoum
+Submission ID: 12231984
+Submission Time: 1437945798
+
+
+Contest ID: 455
+Index: A
+Handle: Black.Monster
+Submission ID: 20486831
+Submission Time: 1473457766
+
+
+Contest ID: 455
+Index: A
+Handle: Ragwave
+Submission ID: 25676983
+Submission Time: 1490045228
+
+
+Contest ID: 455
+Index: A
+Handle: rkgboy
+Submission ID: 30490512
+Submission Time: 1505805770
+
+
+Contest ID: 455
+Index: A
+Handle: HenryPigLi
+Submission ID: 20204056
+Submission Time: 1472348961
+
+
+Contest ID: 455
+Index: A
+Handle: quispecondorie
+Submission ID: 7606340
+Submission Time: 1409150945
+
+
+Contest ID: 455
+Index: A
+Handle: fenil
+Submission ID: 20762167
+Submission Time: 1474307620
+
+
+Contest ID: 455
+Index: A
+Handle: run_time_error
+Submission ID: 8358189
+Submission Time: 1414045245
+
+
+Contest ID: 455
+Index: A
+Handle: se7a
+Submission ID: 11130394
+Submission Time: 1431904208
+
+
+Contest ID: 455
+Index: A
+Handle: BatyrAkhmetov
+Submission ID: 26816633
+Submission Time: 1493806394
+
+
+Contest ID: 455
+Index: A
+Handle: yarafarid24
+Submission ID: 28963621
+Submission Time: 1501285289
+
+
+Contest ID: 455
+Index: A
+Handle: deepa_panwar
+Submission ID: 8345981
+Submission Time: 1413921154
+
+
+Contest ID: 455
+Index: A
+Handle: naruto_aman
+Submission ID: 19428303
+Submission Time: 1469559258
+
+
+Contest ID: 455
+Index: A
+Handle: roy
+Submission ID: 28992849
+Submission Time: 1501425183
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 26194395
+Submission Time: 1491571793
+
+
+Contest ID: 455
+Index: A
+Handle: daniyal1998
+Submission ID: 29956947
+Submission Time: 1504204535
+
+
+Contest ID: 455
+Index: A
+Handle: Shalaby
+Submission ID: 22219540
+Submission Time: 1479202675
+
+
+Contest ID: 455
+Index: A
+Handle: asdfghjl
+Submission ID: 22684760
+Submission Time: 1480796351
+
+
+Contest ID: 455
+Index: A
+Handle: michael153
+Submission ID: 7443754
+Submission Time: 1407943851
+
+
+Contest ID: 455
+Index: A
+Handle: hloya_ygrt
+Submission ID: 13611361
+Submission Time: 1444843447
+
+
+Contest ID: 455
+Index: A
+Handle: Alexus
+Submission ID: 7380734
+Submission Time: 1407512879
+
+
+Contest ID: 455
+Index: A
+Handle: DeltaG
+Submission ID: 30219764
+Submission Time: 1504942318
+
+
+Contest ID: 455
+Index: A
+Handle: markysha
+Submission ID: 14851573
+Submission Time: 1450387205
+
+
+Contest ID: 455
+Index: A
+Handle: flash_7
+Submission ID: 12256990
+Submission Time: 1438119249
+
+
+Contest ID: 455
+Index: A
+Handle: cvele
+Submission ID: 23649887
+Submission Time: 1483894897
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 18390732
+Submission Time: 1465735062
+
+
+Contest ID: 455
+Index: A
+Handle: Nurik.Kz
+Submission ID: 32938715
+Submission Time: 1512441697
+
+
+Contest ID: 455
+Index: A
+Handle: GluckGeber
+Submission ID: 27358391
+Submission Time: 1495810930
+
+
+Contest ID: 455
+Index: A
+Handle: vivekkrs
+Submission ID: 28303426
+Submission Time: 1499256785
+
+
+Contest ID: 455
+Index: A
+Handle: BEGBAKHA
+Submission ID: 18050214
+Submission Time: 1464062677
+
+
+Contest ID: 455
+Index: A
+Handle: KurisuMakise
+Submission ID: 7399745
+Submission Time: 1407552045
+
+
+Contest ID: 455
+Index: A
+Handle: agrawal_iti
+Submission ID: 22265995
+Submission Time: 1479297847
+
+
+Contest ID: 455
+Index: A
+Handle: DumplingMew
+Submission ID: 34069704
+Submission Time: 1515590679
+
+
+Contest ID: 455
+Index: A
+Handle: kabramanan
+Submission ID: 24736944
+Submission Time: 1487330227
+
+
+Contest ID: 455
+Index: A
+Handle: vode
+Submission ID: 29106345
+Submission Time: 1501604032
+
+
+Contest ID: 455
+Index: A
+Handle: xyk0058
+Submission ID: 7604564
+Submission Time: 1409138073
+
+
+Contest ID: 455
+Index: A
+Handle: engineer_z
+Submission ID: 26515538
+Submission Time: 1492690755
+
+
+Contest ID: 455
+Index: A
+Handle: mohit3011
+Submission ID: 26968019
+Submission Time: 1494308987
+
+
+Contest ID: 455
+Index: A
+Handle: panyuchong
+Submission ID: 8337345
+Submission Time: 1413866290
+
+
+Contest ID: 455
+Index: A
+Handle: goldenlife
+Submission ID: 16560756
+Submission Time: 1457329858
+
+
+Contest ID: 455
+Index: A
+Handle: mentalcase
+Submission ID: 18235102
+Submission Time: 1464975595
+
+
+Contest ID: 455
+Index: A
+Handle: sacheendra9044
+Submission ID: 11089465
+Submission Time: 1431525497
+
+
+Contest ID: 455
+Index: A
+Handle: Inspired
+Submission ID: 13344803
+Submission Time: 1443795682
+
+
+Contest ID: 455
+Index: A
+Handle: pointguard0
+Submission ID: 13758113
+Submission Time: 1445360417
+
+
+Contest ID: 455
+Index: A
+Handle: audwls031
+Submission ID: 26714687
+Submission Time: 1493364147
+
+
+Contest ID: 455
+Index: A
+Handle: gct
+Submission ID: 20948980
+Submission Time: 1474987178
+
+
+Contest ID: 455
+Index: A
+Handle: ojopiojo
+Submission ID: 21414841
+Submission Time: 1476413117
+
+
+Contest ID: 455
+Index: A
+Handle: MershaqDiesel
+Submission ID: 27989527
+Submission Time: 1498237731
+
+
+Contest ID: 455
+Index: A
+Handle: abhishekx300
+Submission ID: 33282123
+Submission Time: 1513406194
+
+
+Contest ID: 455
+Index: A
+Handle: edisonhello
+Submission ID: 20751477
+Submission Time: 1474278345
+
+
+Contest ID: 455
+Index: A
+Handle: voidfoo
+Submission ID: 19288422
+Submission Time: 1469049106
+
+
+Contest ID: 455
+Index: A
+Handle: m1r
+Submission ID: 28328753
+Submission Time: 1499349463
+
+
+Contest ID: 455
+Index: A
+Handle: jainayushnsit
+Submission ID: 9969202
+Submission Time: 1424695751
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 12041879
+Submission Time: 1436879369
+
+
+Contest ID: 455
+Index: A
+Handle: slowrunner
+Submission ID: 21628574
+Submission Time: 1476997002
+
+
+Contest ID: 455
+Index: A
+Handle: mjbjtu
+Submission ID: 19406238
+Submission Time: 1469459690
+
+
+Contest ID: 455
+Index: A
+Handle: evgenius
+Submission ID: 25050837
+Submission Time: 1488107707
+
+
+Contest ID: 455
+Index: A
+Handle: HanhDK
+Submission ID: 31623154
+Submission Time: 1508748697
+
+
+Contest ID: 455
+Index: A
+Handle: Hydra7
+Submission ID: 18169074
+Submission Time: 1464700568
+
+
+Contest ID: 455
+Index: A
+Handle: cherryMJY
+Submission ID: 16668417
+Submission Time: 1457770454
+
+
+Contest ID: 455
+Index: A
+Handle: Joeization
+Submission ID: 20100541
+Submission Time: 1472024437
+
+
+Contest ID: 455
+Index: A
+Handle: rajat1603
+Submission ID: 7854751
+Submission Time: 1411137826
+
+
+Contest ID: 455
+Index: A
+Handle: trungda
+Submission ID: 7862626
+Submission Time: 1411194027
+
+
+Contest ID: 455
+Index: A
+Handle: Huonguyen
+Submission ID: 18765798
+Submission Time: 1467109689
+
+
+Contest ID: 455
+Index: A
+Handle: AbdoA2
+Submission ID: 9820585
+Submission Time: 1423861371
+
+
+Contest ID: 455
+Index: A
+Handle: The_MeeN
+Submission ID: 30223476
+Submission Time: 1504954383
+
+
+Contest ID: 455
+Index: A
+Handle: DableProger
+Submission ID: 13412217
+Submission Time: 1444032326
+
+
+Contest ID: 455
+Index: A
+Handle: englishkir
+Submission ID: 11412345
+Submission Time: 1433414415
+
+
+Contest ID: 455
+Index: A
+Handle: JustSmile_LoL
+Submission ID: 15391267
+Submission Time: 1452871465
+
+
+Contest ID: 455
+Index: A
+Handle: deltaposter
+Submission ID: 7431363
+Submission Time: 1407806109
+
+
+Contest ID: 455
+Index: A
+Handle: Conda
+Submission ID: 20484637
+Submission Time: 1473446283
+
+
+Contest ID: 455
+Index: A
+Handle: ibahadir.altun
+Submission ID: 11338308
+Submission Time: 1432842039
+
+
+Contest ID: 455
+Index: A
+Handle: ZWY
+Submission ID: 11107341
+Submission Time: 1431695381
+
+
+Contest ID: 455
+Index: A
+Handle: AndrDz
+Submission ID: 7437486
+Submission Time: 1407877820
+
+
+Contest ID: 455
+Index: A
+Handle: Desmont_Alias
+Submission ID: 33617379
+Submission Time: 1514207098
+
+
+Contest ID: 455
+Index: A
+Handle: leoamish300
+Submission ID: 33071769
+Submission Time: 1512875511
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 25337208
+Submission Time: 1488963093
+
+
+Contest ID: 455
+Index: A
+Handle: hhakobyan1996
+Submission ID: 27170405
+Submission Time: 1494983407
+
+
+Contest ID: 455
+Index: A
+Handle: summerhacker
+Submission ID: 25659927
+Submission Time: 1489988944
+
+
+Contest ID: 455
+Index: A
+Handle: Communism
+Submission ID: 24484166
+Submission Time: 1486456882
+
+
+Contest ID: 455
+Index: A
+Handle: phu1612508
+Submission ID: 25013740
+Submission Time: 1488029447
+
+
+Contest ID: 455
+Index: A
+Handle: omarosama96
+Submission ID: 18647317
+Submission Time: 1466601875
+
+
+Contest ID: 455
+Index: A
+Handle: SalmaSamy
+Submission ID: 13930087
+Submission Time: 1446109459
+
+
+Contest ID: 455
+Index: A
+Handle: divash
+Submission ID: 10833147
+Submission Time: 1429781845
+
+
+Contest ID: 455
+Index: A
+Handle: mohit3011
+Submission ID: 26968082
+Submission Time: 1494309381
+
+
+Contest ID: 455
+Index: A
+Handle: paroothisumit95
+Submission ID: 13798232
+Submission Time: 1445539875
+
+
+Contest ID: 455
+Index: A
+Handle: 123virat.sharma
+Submission ID: 8527596
+Submission Time: 1414957765
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 31920841
+Submission Time: 1509452818
+
+
+Contest ID: 455
+Index: A
+Handle: Samo.A.R
+Submission ID: 17304394
+Submission Time: 1460562661
+
+
+Contest ID: 455
+Index: A
+Handle: mohamed_atef
+Submission ID: 18724462
+Submission Time: 1466881235
+
+
+Contest ID: 455
+Index: A
+Handle: nadhemm
+Submission ID: 26988167
+Submission Time: 1494376037
+
+
+Contest ID: 455
+Index: A
+Handle: KauwaBiryani
+Submission ID: 11897324
+Submission Time: 1435841018
+
+
+Contest ID: 455
+Index: A
+Handle: Dream_kid
+Submission ID: 29609941
+Submission Time: 1503185260
+
+
+Contest ID: 455
+Index: A
+Handle: -t22t-
+Submission ID: 20149334
+Submission Time: 1472115758
+
+
+Contest ID: 455
+Index: A
+Handle: ratik_21
+Submission ID: 31933910
+Submission Time: 1509484191
+
+
+Contest ID: 455
+Index: A
+Handle: myslfakash
+Submission ID: 16801901
+Submission Time: 1458365534
+
+
+Contest ID: 455
+Index: A
+Handle: z13
+Submission ID: 21604040
+Submission Time: 1476909366
+
+
+Contest ID: 455
+Index: A
+Handle: ayush1896
+Submission ID: 11318350
+Submission Time: 1432726419
+
+
+Contest ID: 455
+Index: A
+Handle: SUMbit_010
+Submission ID: 16230550
+Submission Time: 1455978070
+
+
+Contest ID: 455
+Index: A
+Handle: adelmzian
+Submission ID: 28986950
+Submission Time: 1501405823
+
+
+Contest ID: 455
+Index: A
+Handle: -t22t-
+Submission ID: 20146675
+Submission Time: 1472109112
+
+
+Contest ID: 455
+Index: A
+Handle: rashi_goel
+Submission ID: 17299932
+Submission Time: 1460539601
+
+
+Contest ID: 455
+Index: A
+Handle: chotta_bheem
+Submission ID: 10096863
+Submission Time: 1425218052
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 12740614
+Submission Time: 1440837640
+
+
+Contest ID: 455
+Index: A
+Handle: ghost_c
+Submission ID: 7434515
+Submission Time: 1407845853
+
+
+Contest ID: 455
+Index: A
+Handle: dragon.warrior
+Submission ID: 24292403
+Submission Time: 1485872613
+
+
+Contest ID: 455
+Index: A
+Handle: Code_Grenade
+Submission ID: 18051112
+Submission Time: 1464069784
+
+
+Contest ID: 455
+Index: A
+Handle: Harsh123_
+Submission ID: 25100919
+Submission Time: 1488286349
+
+
+Contest ID: 455
+Index: A
+Handle: islamtaha
+Submission ID: 22042523
+Submission Time: 1478289163
+
+
+Contest ID: 455
+Index: A
+Handle: CLown1331
+Submission ID: 13258977
+Submission Time: 1443428490
+
+
+Contest ID: 455
+Index: A
+Handle: Eagle-EYe
+Submission ID: 26110740
+Submission Time: 1491268482
+
+
+Contest ID: 455
+Index: A
+Handle: STL_MAN
+Submission ID: 27843350
+Submission Time: 1497693760
+
+
+Contest ID: 455
+Index: A
+Handle: TonySnark
+Submission ID: 7380132
+Submission Time: 1407512723
+
+
+Contest ID: 455
+Index: A
+Handle: sshagarwal
+Submission ID: 29834751
+Submission Time: 1503867073
+
+
+Contest ID: 455
+Index: A
+Handle: Harshad
+Submission ID: 33704399
+Submission Time: 1514449690
+
+
+Contest ID: 455
+Index: A
+Handle: SIRIUScoder1
+Submission ID: 26817736
+Submission Time: 1493811534
+
+
+Contest ID: 455
+Index: A
+Handle: nlcerda
+Submission ID: 19969979
+Submission Time: 1471633787
+
+
+Contest ID: 455
+Index: A
+Handle: singhpk_234
+Submission ID: 14466421
+Submission Time: 1448443929
+
+
+Contest ID: 455
+Index: A
+Handle: tom
+Submission ID: 17979647
+Submission Time: 1463574960
+
+
+Contest ID: 455
+Index: A
+Handle: nmsunny
+Submission ID: 7396379
+Submission Time: 1407526328
+
+
+Contest ID: 455
+Index: A
+Handle: tendohacker
+Submission ID: 17033831
+Submission Time: 1459341368
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 25339676
+Submission Time: 1488971917
+
+
+Contest ID: 455
+Index: A
+Handle: lihaitao
+Submission ID: 29699749
+Submission Time: 1503471337
+
+
+Contest ID: 455
+Index: A
+Handle: Dowletgeldi_57_41
+Submission ID: 20652276
+Submission Time: 1473999637
+
+
+Contest ID: 455
+Index: A
+Handle: Leyla
+Submission ID: 7379519
+Submission Time: 1407512588
+
+
+Contest ID: 455
+Index: A
+Handle: jameslewis
+Submission ID: 10631028
+Submission Time: 1428502288
+
+
+Contest ID: 455
+Index: A
+Handle: onkrot
+Submission ID: 21496453
+Submission Time: 1476623229
+
+
+Contest ID: 455
+Index: A
+Handle: flowlight
+Submission ID: 7377653
+Submission Time: 1407512174
+
+
+Contest ID: 455
+Index: A
+Handle: syuct_robot
+Submission ID: 29370615
+Submission Time: 1502520682
+
+
+Contest ID: 455
+Index: A
+Handle: index.cpp
+Submission ID: 9562621
+Submission Time: 1422288635
+
+
+Contest ID: 455
+Index: A
+Handle: Diazzz
+Submission ID: 13344847
+Submission Time: 1443795873
+
+
+Contest ID: 455
+Index: A
+Handle: step5
+Submission ID: 7378526
+Submission Time: 1407512364
+
+
+Contest ID: 455
+Index: A
+Handle: Rezwan.Arefin01
+Submission ID: 22418298
+Submission Time: 1479887245
+
+
+Contest ID: 455
+Index: A
+Handle: Argorthas
+Submission ID: 15024424
+Submission Time: 1451096205
+
+
+Contest ID: 455
+Index: A
+Handle: lazy_crazy
+Submission ID: 26828399
+Submission Time: 1493874189
+
+
+Contest ID: 455
+Index: A
+Handle: InheritO
+Submission ID: 7401764
+Submission Time: 1407564948
+
+
+Contest ID: 455
+Index: A
+Handle: ArK10
+Submission ID: 27435454
+Submission Time: 1496087901
+
+
+Contest ID: 455
+Index: A
+Handle: ArthurDayne
+Submission ID: 34170545
+Submission Time: 1515919654
+
+
+Contest ID: 455
+Index: A
+Handle: KamiShogun
+Submission ID: 27206368
+Submission Time: 1495158946
+
+
+Contest ID: 455
+Index: A
+Handle: yazanhy2
+Submission ID: 11037026
+Submission Time: 1431046678
+
+
+Contest ID: 455
+Index: A
+Handle: aditya731
+Submission ID: 28056009
+Submission Time: 1498475412
+
+
+Contest ID: 455
+Index: A
+Handle: gg12138
+Submission ID: 20086482
+Submission Time: 1471958812
+
+
+Contest ID: 455
+Index: A
+Handle: sandy999
+Submission ID: 11571433
+Submission Time: 1434215131
+
+
+Contest ID: 455
+Index: A
+Handle: Telepuzik
+Submission ID: 30596332
+Submission Time: 1506017358
+
+
+Contest ID: 455
+Index: A
+Handle: spk
+Submission ID: 17692735
+Submission Time: 1462209465
+
+
+Contest ID: 455
+Index: A
+Handle: tni_md
+Submission ID: 23543418
+Submission Time: 1483561262
+
+
+Contest ID: 455
+Index: A
+Handle: iamshashank
+Submission ID: 19868229
+Submission Time: 1471177008
+
+
+Contest ID: 455
+Index: A
+Handle: devACE
+Submission ID: 24536187
+Submission Time: 1486585360
+
+
+Contest ID: 455
+Index: A
+Handle: Saya_Ann
+Submission ID: 27186734
+Submission Time: 1495053934
+
+
+Contest ID: 455
+Index: A
+Handle: Mahmoud..Adel
+Submission ID: 18692236
+Submission Time: 1466734405
+
+
+Contest ID: 455
+Index: A
+Handle: Karan2k
+Submission ID: 9423709
+Submission Time: 1421156194
+
+
+Contest ID: 455
+Index: A
+Handle: loanedstar
+Submission ID: 20432917
+Submission Time: 1473242780
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 12740281
+Submission Time: 1440835806
+
+
+Contest ID: 455
+Index: A
+Handle: -Sali-
+Submission ID: 12859871
+Submission Time: 1441508321
+
+
+Contest ID: 455
+Index: A
+Handle: codeofthrone
+Submission ID: 33708407
+Submission Time: 1514461852
+
+
+Contest ID: 455
+Index: A
+Handle: akhil2818
+Submission ID: 12317864
+Submission Time: 1438541030
+
+
+Contest ID: 455
+Index: A
+Handle: Agham
+Submission ID: 15450378
+Submission Time: 1453278592
+
+
+Contest ID: 455
+Index: A
+Handle: LeMoor
+Submission ID: 26498210
+Submission Time: 1492612733
+
+
+Contest ID: 455
+Index: A
+Handle: anik_1507103
+Submission ID: 21843981
+Submission Time: 1477650813
+
+
+Contest ID: 455
+Index: A
+Handle: coicoichip
+Submission ID: 9812968
+Submission Time: 1423796298
+
+
+Contest ID: 455
+Index: A
+Handle: VictorForbes
+Submission ID: 12000155
+Submission Time: 1436546994
+
+
+Contest ID: 455
+Index: A
+Handle: himanshu_garg
+Submission ID: 16870779
+Submission Time: 1458651655
+
+
+Contest ID: 455
+Index: A
+Handle: ioannis.ilkos
+Submission ID: 13174932
+Submission Time: 1442960990
+
+
+Contest ID: 455
+Index: A
+Handle: PandaConda
+Submission ID: 16517282
+Submission Time: 1457103106
+
+
+Contest ID: 455
+Index: A
+Handle: NevstruevDmitriy
+Submission ID: 16057008
+Submission Time: 1455631168
+
+
+Contest ID: 455
+Index: A
+Handle: NitheeshPrabu
+Submission ID: 33801645
+Submission Time: 1514612821
+
+
+Contest ID: 455
+Index: A
+Handle: Be_Patient
+Submission ID: 12674085
+Submission Time: 1440338801
+
+
+Contest ID: 455
+Index: A
+Handle: aquibjamal
+Submission ID: 19065198
+Submission Time: 1468391927
+
+
+Contest ID: 455
+Index: A
+Handle: AmrMorsy2
+Submission ID: 20752688
+Submission Time: 1474282286
+
+
+Contest ID: 455
+Index: A
+Handle: Amr_Aly
+Submission ID: 18848571
+Submission Time: 1467430154
+
+
+Contest ID: 455
+Index: A
+Handle: maelyn123
+Submission ID: 31472125
+Submission Time: 1508311830
+
+
+Contest ID: 455
+Index: A
+Handle: bradyzhou
+Submission ID: 8767183
+Submission Time: 1416503616
+
+
+Contest ID: 455
+Index: A
+Handle: Ifugao
+Submission ID: 15739793
+Submission Time: 1454360282
+
+
+Contest ID: 455
+Index: A
+Handle: RoKi
+Submission ID: 11359702
+Submission Time: 1433009554
+
+
+Contest ID: 455
+Index: A
+Handle: TISparta
+Submission ID: 16265209
+Submission Time: 1456076055
+
+
+Contest ID: 455
+Index: A
+Handle: gusteyker
+Submission ID: 21863763
+Submission Time: 1477717521
+
+
+Contest ID: 455
+Index: A
+Handle: jamnik
+Submission ID: 28280143
+Submission Time: 1499171082
+
+
+Contest ID: 455
+Index: A
+Handle: crazypursuer
+Submission ID: 7568493
+Submission Time: 1408905613
+
+
+Contest ID: 455
+Index: A
+Handle: karanbatra
+Submission ID: 29298220
+Submission Time: 1502255727
+
+
+Contest ID: 455
+Index: A
+Handle: wjfwzzc
+Submission ID: 7385044
+Submission Time: 1407514195
+
+
+Contest ID: 455
+Index: A
+Handle: nisaruj
+Submission ID: 28074361
+Submission Time: 1498559053
+
+
+Contest ID: 455
+Index: A
+Handle: BdE
+Submission ID: 33961063
+Submission Time: 1515235781
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 30616855
+Submission Time: 1506089390
+
+
+Contest ID: 455
+Index: A
+Handle: sophio
+Submission ID: 12628613
+Submission Time: 1440162777
+
+
+Contest ID: 455
+Index: A
+Handle: Aleks5d
+Submission ID: 17966678
+Submission Time: 1463488090
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 30826601
+Submission Time: 1506684538
+
+
+Contest ID: 455
+Index: A
+Handle: JHSeng
+Submission ID: 32976962
+Submission Time: 1512566667
+
+
+Contest ID: 455
+Index: A
+Handle: se7a
+Submission ID: 11036180
+Submission Time: 1431034179
+
+
+Contest ID: 455
+Index: A
+Handle: builtnotborn
+Submission ID: 31585475
+Submission Time: 1508615071
+
+
+Contest ID: 455
+Index: A
+Handle: 425325336
+Submission ID: 26716465
+Submission Time: 1493372472
+
+
+Contest ID: 455
+Index: A
+Handle: opel_howard
+Submission ID: 11362780
+Submission Time: 1433046506
+
+
+Contest ID: 455
+Index: A
+Handle: ducnthb
+Submission ID: 8131658
+Submission Time: 1412691987
+
+
+Contest ID: 455
+Index: A
+Handle: ansustdi
+Submission ID: 22620082
+Submission Time: 1480504373
+
+
+Contest ID: 455
+Index: A
+Handle: qaz123
+Submission ID: 23997706
+Submission Time: 1484942565
+
+
+Contest ID: 455
+Index: A
+Handle: JokeR..A
+Submission ID: 16479448
+Submission Time: 1456994724
+
+
+Contest ID: 455
+Index: A
+Handle: thir
+Submission ID: 28596084
+Submission Time: 1500208442
+
+
+Contest ID: 455
+Index: A
+Handle: BdE
+Submission ID: 33961094
+Submission Time: 1515235913
+
+
+Contest ID: 455
+Index: A
+Handle: glow
+Submission ID: 20031070
+Submission Time: 1471797966
+
+
+Contest ID: 455
+Index: A
+Handle: hpq_9888
+Submission ID: 19939707
+Submission Time: 1471496292
+
+
+Contest ID: 455
+Index: A
+Handle: sam29
+Submission ID: 15177131
+Submission Time: 1451881702
+
+
+Contest ID: 455
+Index: A
+Handle: tusharsircar95
+Submission ID: 11004252
+Submission Time: 1430822229
+
+
+Contest ID: 455
+Index: A
+Handle: Meyirzhan_Amangeldi
+Submission ID: 22724094
+Submission Time: 1481005713
+
+
+Contest ID: 455
+Index: A
+Handle: AbedAbuhijleh
+Submission ID: 25339655
+Submission Time: 1488971858
+
+
+Contest ID: 455
+Index: A
+Handle: sebastiantg
+Submission ID: 14681540
+Submission Time: 1449449517
+
+
+Contest ID: 455
+Index: A
+Handle: sanilj
+Submission ID: 13481637
+Submission Time: 1444239200
+
+
+Contest ID: 455
+Index: A
+Handle: genuinelucifer
+Submission ID: 9006830
+Submission Time: 1417935429
+
+
+Contest ID: 455
+Index: A
+Handle: chenbowen
+Submission ID: 20957942
+Submission Time: 1475020318
+
+
+Contest ID: 455
+Index: A
+Handle: Mohammad-Hejry
+Submission ID: 25153348
+Submission Time: 1488471951
+
+
+Contest ID: 455
+Index: A
+Handle: gbis36
+Submission ID: 7390941
+Submission Time: 1407516644
+
+
+Contest ID: 455
+Index: A
+Handle: R.kh2002
+Submission ID: 30808486
+Submission Time: 1506610697
+
+
+Contest ID: 455
+Index: A
+Handle: Rezwan.Arefin01
+Submission ID: 22418207
+Submission Time: 1479886872
+
+
+Contest ID: 455
+Index: A
+Handle: Nanimodekinai
+Submission ID: 27005423
+Submission Time: 1494471765
+
+
+Contest ID: 455
+Index: A
+Handle: kreeshx
+Submission ID: 15039486
+Submission Time: 1451190621
+
+
+Contest ID: 455
+Index: A
+Handle: Heartr
+Submission ID: 30910252
+Submission Time: 1506865022
+
+
+Contest ID: 455
+Index: A
+Handle: kesh5210
+Submission ID: 30569660
+Submission Time: 1505980461
+
+
+Contest ID: 455
+Index: A
+Handle: gabet
+Submission ID: 12790997
+Submission Time: 1441036250
+
+
+Contest ID: 455
+Index: A
+Handle: anya171kravets
+Submission ID: 29775486
+Submission Time: 1503654248
+
+
+Contest ID: 455
+Index: A
+Handle: Mks_Jaguar
+Submission ID: 20083218
+Submission Time: 1471948716
+
+
+Contest ID: 455
+Index: A
+Handle: winner.winner
+Submission ID: 29954739
+Submission Time: 1504196440
+
+
+Contest ID: 455
+Index: A
+Handle: el-hussein
+Submission ID: 20264937
+Submission Time: 1472505349
+
+
+Contest ID: 455
+Index: A
+Handle: Aman21
+Submission ID: 23272414
+Submission Time: 1482585959
+
+
+Contest ID: 455
+Index: A
+Handle: sharique
+Submission ID: 11396751
+Submission Time: 1433305456
+
+
+Contest ID: 455
+Index: A
+Handle: dash95
+Submission ID: 11189728
+Submission Time: 1432211496
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 18886638
+Submission Time: 1467651220
+
+
+Contest ID: 455
+Index: A
+Handle: Youknow_L
+Submission ID: 11200598
+Submission Time: 1432293979
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 19377470
+Submission Time: 1469340771
+
+
+Contest ID: 455
+Index: A
+Handle: cenation008
+Submission ID: 12794500
+Submission Time: 1441054218
+
+
+Contest ID: 455
+Index: A
+Handle: rizvi23061996
+Submission ID: 20543055
+Submission Time: 1473656786
+
+
+Contest ID: 455
+Index: A
+Handle: FUCK_YOU_BITCH
+Submission ID: 13238333
+Submission Time: 1443280892
+
+
+Contest ID: 455
+Index: A
+Handle: yamadou
+Submission ID: 10774387
+Submission Time: 1429399581
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 12322241
+Submission Time: 1438585356
+
+
+Contest ID: 455
+Index: A
+Handle: karlangadas
+Submission ID: 26987762
+Submission Time: 1494370975
+
+
+Contest ID: 455
+Index: A
+Handle: redhat
+Submission ID: 29313947
+Submission Time: 1502314390
+
+
+Contest ID: 455
+Index: A
+Handle: ZeroChaosFlow
+Submission ID: 21258277
+Submission Time: 1475845440
+
+
+Contest ID: 455
+Index: A
+Handle: mnshjha05
+Submission ID: 20386207
+Submission Time: 1473007323
+
+
+Contest ID: 455
+Index: A
+Handle: PolyAtomicIon
+Submission ID: 25000990
+Submission Time: 1487996132
+
+
+Contest ID: 455
+Index: A
+Handle: want_2b_expert
+Submission ID: 29248562
+Submission Time: 1502051269
+
+
+Contest ID: 455
+Index: A
+Handle: Daniel_Yeh
+Submission ID: 20881206
+Submission Time: 1474693317
+
+
+Contest ID: 455
+Index: A
+Handle: oybek
+Submission ID: 14054534
+Submission Time: 1446630326
+
+
+Contest ID: 455
+Index: A
+Handle: cafelier
+Submission ID: 7378590
+Submission Time: 1407512375
+
+
+Contest ID: 455
+Index: A
+Handle: aditya18
+Submission ID: 16850197
+Submission Time: 1458537877
+
+
+Contest ID: 455
+Index: A
+Handle: AFGhazy
+Submission ID: 8241639
+Submission Time: 1413411933
+
+
+Contest ID: 455
+Index: A
+Handle: lmysoar
+Submission ID: 7379660
+Submission Time: 1407512615
+
+
+Contest ID: 455
+Index: A
+Handle: aggarwalakshita1
+Submission ID: 28069025
+Submission Time: 1498542309
+
+
+Contest ID: 455
+Index: A
+Handle: JohStraat
+Submission ID: 12628750
+Submission Time: 1440163415
+
+
+Contest ID: 455
+Index: A
+Handle: Xiyanghong
+Submission ID: 8075340
+Submission Time: 1412408955
+
+
+Contest ID: 455
+Index: A
+Handle: kuldeep_277co
+Submission ID: 30668674
+Submission Time: 1506263833
+
+
+Contest ID: 455
+Index: A
+Handle: mjy0503
+Submission ID: 7378254
+Submission Time: 1407512309
+
+
+Contest ID: 455
+Index: A
+Handle: gsvnanoop
+Submission ID: 23883495
+Submission Time: 1484575784
+
+
+Contest ID: 455
+Index: A
+Handle: itrie
+Submission ID: 30984904
+Submission Time: 1507099270
+
+
+Contest ID: 455
+Index: A
+Handle: l4l
+Submission ID: 12644220
+Submission Time: 1440255843
+
+
+Contest ID: 455
+Index: A
+Handle: dobrydin45
+Submission ID: 8101432
+Submission Time: 1412569517
+
+
+Contest ID: 455
+Index: A
+Handle: agha-hamid
+Submission ID: 20381723
+Submission Time: 1472990774
+
+
+Contest ID: 455
+Index: A
+Handle: additya1998
+Submission ID: 13505251
+Submission Time: 1444377481
+
+
+Contest ID: 455
+Index: A
+Handle: liudx1010
+Submission ID: 9019293
+Submission Time: 1418048042
+
+
+Contest ID: 455
+Index: A
+Handle: lucifer_rj
+Submission ID: 25142018
+Submission Time: 1488441104
+
+
+Contest ID: 455
+Index: A
+Handle: amro_walid
+Submission ID: 29995594
+Submission Time: 1504292367
+
+
+Contest ID: 455
+Index: A
+Handle: CodigoL
+Submission ID: 29274037
+Submission Time: 1502146416
+
+
+Contest ID: 455
+Index: A
+Handle: uvsankar
+Submission ID: 10166777
+Submission Time: 1425573050
+
+
+Contest ID: 455
+Index: A
+Handle: pjainbits
+Submission ID: 21623291
+Submission Time: 1476981799
+
+
+Contest ID: 455
+Index: A
+Handle: LiquidFun
+Submission ID: 22492624
+Submission Time: 1480088629
+
+
+Contest ID: 455
+Index: A
+Handle: G_Hani
+Submission ID: 9974731
+Submission Time: 1424731462
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 31732504
+Submission Time: 1509006981
+
+
+Contest ID: 455
+Index: A
+Handle: kishu96
+Submission ID: 16887055
+Submission Time: 1458739306
+
+
+Contest ID: 455
+Index: A
+Handle: Gimape07
+Submission ID: 30960552
+Submission Time: 1507014810
+
+
+Contest ID: 455
+Index: A
+Handle: farrejoria
+Submission ID: 7748493
+Submission Time: 1410496638
+
+
+Contest ID: 455
+Index: A
+Handle: ThatMathGuy
+Submission ID: 7396078
+Submission Time: 1407525651
+
+
+Contest ID: 455
+Index: A
+Handle: MoatazEhab
+Submission ID: 18965454
+Submission Time: 1467967011
+
+
+Contest ID: 455
+Index: A
+Handle: coachella
+Submission ID: 29373283
+Submission Time: 1502528391
+
+
+Contest ID: 455
+Index: A
+Handle: heavy_rain
+Submission ID: 12547906
+Submission Time: 1439643978
+
+
+Contest ID: 455
+Index: A
+Handle: akshay15894
+Submission ID: 14638226
+Submission Time: 1449166781
+
+
+Contest ID: 455
+Index: A
+Handle: zxqfl
+Submission ID: 7377350
+Submission Time: 1407512081
+
+
+Contest ID: 455
+Index: A
+Handle: joudkh
+Submission ID: 19248311
+Submission Time: 1468938332
+
+
+Contest ID: 455
+Index: A
+Handle: Trumen
+Submission ID: 7377657
+Submission Time: 1407512176
+
+
+Contest ID: 455
+Index: A
+Handle: Enjiro
+Submission ID: 11986359
+Submission Time: 1436449207
+
+
+Contest ID: 455
+Index: A
+Handle: Kaolin24
+Submission ID: 21299229
+Submission Time: 1475942054
+
+
+Contest ID: 455
+Index: A
+Handle: scope
+Submission ID: 24214404
+Submission Time: 1485576682
+
+
+Contest ID: 455
+Index: A
+Handle: ReturnOfTheKing
+Submission ID: 32783858
+Submission Time: 1511967385
+
+
+Contest ID: 455
+Index: A
+Handle: fgasperijabalera
+Submission ID: 9147324
+Submission Time: 1418691637
+
+
+Contest ID: 455
+Index: A
+Handle: Quang
+Submission ID: 7380845
+Submission Time: 1407512907
+
+
+Contest ID: 455
+Index: A
+Handle: ababah
+Submission ID: 8607039
+Submission Time: 1415378572
+
+
+Contest ID: 455
+Index: A
+Handle: satu0king
+Submission ID: 30659181
+Submission Time: 1506238479
+
+
+Contest ID: 455
+Index: A
+Handle: shashack
+Submission ID: 7396053
+Submission Time: 1407525611
+
+
+Contest ID: 455
+Index: A
+Handle: YasinMahdizadeh
+Submission ID: 14967871
+Submission Time: 1450952928
+
+
+Contest ID: 455
+Index: A
+Handle: Code_Lion
+Submission ID: 20908085
+Submission Time: 1474807502
+
+
+Contest ID: 455
+Index: A
+Handle: YaDon4ick
+Submission ID: 20888387
+Submission Time: 1474722006
+
+
+Contest ID: 455
+Index: A
+Handle: khujamurod97
+Submission ID: 24909071
+Submission Time: 1487829054
+
+
+Contest ID: 455
+Index: A
+Handle: Hunkishi
+Submission ID: 23397832
+Submission Time: 1483011497
+
+
+Contest ID: 455
+Index: A
+Handle: xiaoyulun
+Submission ID: 10763683
+Submission Time: 1429333760
+
+
+Contest ID: 455
+Index: A
+Handle: WTFast
+Submission ID: 32103683
+Submission Time: 1509994469
+
+
+Contest ID: 455
+Index: A
+Handle: aman3847
+Submission ID: 28408977
+Submission Time: 1499694753
+
+
+Contest ID: 455
+Index: A
+Handle: anoop.rbl2012
+Submission ID: 23279755
+Submission Time: 1482614486
+
+
+Contest ID: 455
+Index: A
+Handle: contactone
+Submission ID: 16064992
+Submission Time: 1455678739
+
+
+Contest ID: 455
+Index: A
+Handle: dantevergil
+Submission ID: 19434292
+Submission Time: 1469599253
+
+
+Contest ID: 455
+Index: A
+Handle: Shubham_Kumar96
+Submission ID: 21364189
+Submission Time: 1476204067
+
+
+Contest ID: 455
+Index: A
+Handle: Sheemon7
+Submission ID: 26633406
+Submission Time: 1493010381
+
+
+Contest ID: 455
+Index: A
+Handle: Mesrop
+Submission ID: 10350918
+Submission Time: 1426781851
+
+
+Contest ID: 455
+Index: A
+Handle: speedphantom
+Submission ID: 20195319
+Submission Time: 1472302141
+
+
+Contest ID: 455
+Index: A
+Handle: while_true
+Submission ID: 23206681
+Submission Time: 1482344945
+
+
+Contest ID: 455
+Index: A
+Handle: lyracol
+Submission ID: 19594366
+Submission Time: 1470214619
+
+
+Contest ID: 455
+Index: A
+Handle: aayush97
+Submission ID: 31184296
+Submission Time: 1507623932
+
+
+Contest ID: 455
+Index: A
+Handle: Slovinsky
+Submission ID: 7397844
+Submission Time: 1407532117
+
+
+Contest ID: 455
+Index: A
+Handle: -t22t-
+Submission ID: 20146745
+Submission Time: 1472109256
+
+
+Contest ID: 455
+Index: A
+Handle: misha2259
+Submission ID: 22320772
+Submission Time: 1479541565
+
+
+Contest ID: 455
+Index: A
+Handle: ankrypt
+Submission ID: 31871916
+Submission Time: 1509294064
+
+
+Contest ID: 455
+Index: A
+Handle: want_2b_expert
+Submission ID: 29248519
+Submission Time: 1502051023
+
+
+Contest ID: 455
+Index: A
+Handle: gusc
+Submission ID: 24451440
+Submission Time: 1486298663
+
+
+Contest ID: 455
+Index: A
+Handle: _MgM_
+Submission ID: 9067528
+Submission Time: 1418174061
+
+
+Contest ID: 455
+Index: A
+Handle: kolenval
+Submission ID: 27618728
+Submission Time: 1496768632
+
+
+Contest ID: 455
+Index: A
+Handle: ankit2k48
+Submission ID: 28185150
+Submission Time: 1498890230
+
+
+Contest ID: 455
+Index: A
+Handle: egharaei1379
+Submission ID: 14439706
+Submission Time: 1448370816
+
+
+Contest ID: 455
+Index: A
+Handle: FourYe
+Submission ID: 7381654
+Submission Time: 1407513130
+
+
+Contest ID: 455
+Index: A
+Handle: Mike_Rose
+Submission ID: 24702317
+Submission Time: 1487181168
+
+
+Contest ID: 455
+Index: A
+Handle: Duxar
+Submission ID: 8211361
+Submission Time: 1413142166
+
+
+Contest ID: 455
+Index: A
+Handle: IceQuarze
+Submission ID: 34099296
+Submission Time: 1515734802
+
+
+Contest ID: 455
+Index: A
+Handle: Marian25
+Submission ID: 28881137
+Submission Time: 1500997339
+
+
+Contest ID: 455
+Index: A
+Handle: zetamoo
+Submission ID: 7385987
+Submission Time: 1407514549
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 26141294
+Submission Time: 1491391340
+
+
+Contest ID: 455
+Index: A
+Handle: rkg1995
+Submission ID: 18666592
+Submission Time: 1466696769
+
+
+Contest ID: 455
+Index: A
+Handle: HoseinFaghih
+Submission ID: 28791273
+Submission Time: 1500782770
+
+
+Contest ID: 455
+Index: A
+Handle: kgaurav847226
+Submission ID: 22216510
+Submission Time: 1479183375
+
+
+Contest ID: 455
+Index: A
+Handle: guilhermedelyra
+Submission ID: 22287456
+Submission Time: 1479384729
+
+
+Contest ID: 455
+Index: A
+Handle: Manic
+Submission ID: 10344766
+Submission Time: 1426737147
+
+
+Contest ID: 455
+Index: A
+Handle: ansustdi
+Submission ID: 22620077
+Submission Time: 1480504348
+
+
+Contest ID: 455
+Index: A
+Handle: m.boniecki
+Submission ID: 10922941
+Submission Time: 1430248579
+
+
+Contest ID: 455
+Index: A
+Handle: toxzi
+Submission ID: 27882107
+Submission Time: 1497780246
+
+
+Contest ID: 455
+Index: A
+Handle: sir.zaid
+Submission ID: 25971305
+Submission Time: 1490948697
+
+
+Contest ID: 455
+Index: A
+Handle: umangahuja11
+Submission ID: 29598359
+Submission Time: 1503146429
+
+
+Contest ID: 455
+Index: A
+Handle: srav27
+Submission ID: 15156862
+Submission Time: 1451727908
+
+
+Contest ID: 455
+Index: A
+Handle: jimmyl02
+Submission ID: 33799358
+Submission Time: 1514602243
+
+
+Contest ID: 455
+Index: A
+Handle: MrNull
+Submission ID: 10533328
+Submission Time: 1427806950
+
+
+Contest ID: 455
+Index: A
+Handle: faustaadp
+Submission ID: 24715007
+Submission Time: 1487238343
+
+
+Contest ID: 455
+Index: A
+Handle: thefirstsilentcoder
+Submission ID: 24267734
+Submission Time: 1485782040
+
+
+Contest ID: 455
+Index: A
+Handle: marswork
+Submission ID: 7494306
+Submission Time: 1408293272
+
+
+Contest ID: 455
+Index: A
+Handle: rohan_284
+Submission ID: 26224044
+Submission Time: 1491672665
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 13918421
+Submission Time: 1446048138
+
+
+Contest ID: 455
+Index: A
+Handle: blowUpTheStonySilence
+Submission ID: 18858058
+Submission Time: 1467482746
+
+
+Contest ID: 455
+Index: A
+Handle: roopal_jazz
+Submission ID: 18624602
+Submission Time: 1466487042
+
+
+Contest ID: 455
+Index: A
+Handle: ahmednaoum
+Submission ID: 12231932
+Submission Time: 1437945110
+
+
+Contest ID: 455
+Index: A
+Handle: sajid13
+Submission ID: 29440636
+Submission Time: 1502646811
+
+
+Contest ID: 455
+Index: A
+Handle: fjanisze
+Submission ID: 16739879
+Submission Time: 1458118844
+
+
+Contest ID: 455
+Index: A
+Handle: CodeTamer
+Submission ID: 11349549
+Submission Time: 1432924274
+
+
+Contest ID: 455
+Index: A
+Handle: flakka
+Submission ID: 21361761
+Submission Time: 1476197972
+
+
+Contest ID: 455
+Index: A
+Handle: dezhonger
+Submission ID: 7396310
+Submission Time: 1407526149
+
+
+Contest ID: 455
+Index: A
+Handle: sandy999
+Submission ID: 11571420
+Submission Time: 1434215048
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 25397818
+Submission Time: 1489219717
+
+
+Contest ID: 455
+Index: A
+Handle: nakamura
+Submission ID: 23691557
+Submission Time: 1484111601
+
+
+Contest ID: 455
+Index: A
+Handle: HentaiPrince
+Submission ID: 7377776
+Submission Time: 1407512207
+
+
+Contest ID: 455
+Index: A
+Handle: redrocknobb
+Submission ID: 17400523
+Submission Time: 1461160784
+
+
+Contest ID: 455
+Index: A
+Handle: A.O.M.
+Submission ID: 18364128
+Submission Time: 1465585734
+
+
+Contest ID: 455
+Index: A
+Handle: tharaaali
+Submission ID: 16317520
+Submission Time: 1456352295
+
+
+Contest ID: 455
+Index: A
+Handle: HamidK
+Submission ID: 17707834
+Submission Time: 1462364241
+
+
+Contest ID: 455
+Index: A
+Handle: cxz989
+Submission ID: 8906149
+Submission Time: 1417449092
+
+
+Contest ID: 455
+Index: A
+Handle: Little_mouse
+Submission ID: 34403594
+Submission Time: 1516518266
+
+
+Contest ID: 455
+Index: A
+Handle: jaguar1996
+Submission ID: 15903455
+Submission Time: 1454972556
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 25336778
+Submission Time: 1488961854
+
+
+Contest ID: 455
+Index: A
+Handle: lochuynhvinh
+Submission ID: 17982664
+Submission Time: 1463588604
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 14542762
+Submission Time: 1448722227
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 25338966
+Submission Time: 1488969385
+
+
+Contest ID: 455
+Index: A
+Handle: AayushAC1998
+Submission ID: 28325693
+Submission Time: 1499341690
+
+
+Contest ID: 455
+Index: A
+Handle: amrsamy
+Submission ID: 30496764
+Submission Time: 1505823505
+
+
+Contest ID: 455
+Index: A
+Handle: TruthHartz
+Submission ID: 19172248
+Submission Time: 1468668344
+
+
+Contest ID: 455
+Index: A
+Handle: cgigliob
+Submission ID: 7574464
+Submission Time: 1408986416
+
+
+Contest ID: 455
+Index: A
+Handle: ps06756
+Submission ID: 16680337
+Submission Time: 1457810813
+
+
+Contest ID: 455
+Index: A
+Handle: mraron
+Submission ID: 10019913
+Submission Time: 1424870405
+
+
+Contest ID: 455
+Index: A
+Handle: luv94
+Submission ID: 21648385
+Submission Time: 1477070362
+
+
+Contest ID: 455
+Index: A
+Handle: needles
+Submission ID: 8356869
+Submission Time: 1414031359
+
+
+Contest ID: 455
+Index: A
+Handle: jordhy.fernando
+Submission ID: 19948379
+Submission Time: 1471532449
+
+
+Contest ID: 455
+Index: A
+Handle: No0oB
+Submission ID: 7396876
+Submission Time: 1407528059
+
+
+Contest ID: 455
+Index: A
+Handle: Bekhan_017
+Submission ID: 34061756
+Submission Time: 1515558677
+
+
+Contest ID: 455
+Index: A
+Handle: trijeet
+Submission ID: 28620436
+Submission Time: 1500241426
+
+
+Contest ID: 455
+Index: A
+Handle: fsociety00
+Submission ID: 30301723
+Submission Time: 1505290256
+
+
+Contest ID: 455
+Index: A
+Handle: aboura
+Submission ID: 15074940
+Submission Time: 1451322926
+
+
+Contest ID: 455
+Index: A
+Handle: Hali_jurh
+Submission ID: 31017454
+Submission Time: 1507189775
+
+
+Contest ID: 455
+Index: A
+Handle: ivan_mazepa
+Submission ID: 19603723
+Submission Time: 1470249121
+
+
+Contest ID: 455
+Index: A
+Handle: mr11261
+Submission ID: 17914080
+Submission Time: 1463270285
+
+
+Contest ID: 455
+Index: A
+Handle: abhishek12
+Submission ID: 9159423
+Submission Time: 1418804850
+
+
+Contest ID: 455
+Index: A
+Handle: zerismo
+Submission ID: 24268163
+Submission Time: 1485783207
+
+
+Contest ID: 455
+Index: A
+Handle: sunacm
+Submission ID: 12320636
+Submission Time: 1438574385
+
+
+Contest ID: 455
+Index: A
+Handle: goyalbanna
+Submission ID: 24703426
+Submission Time: 1487185025
+
+
+Contest ID: 455
+Index: A
+Handle: ayush1896
+Submission ID: 11347321
+Submission Time: 1432911854
+
+
+Contest ID: 455
+Index: A
+Handle: wildansupernova
+Submission ID: 33437960
+Submission Time: 1513711684
+
+
+Contest ID: 455
+Index: A
+Handle: koPerNik
+Submission ID: 7396231
+Submission Time: 1407525945
+
+
+Contest ID: 455
+Index: A
+Handle: winner
+Submission ID: 21472523
+Submission Time: 1476597975
+
+
+Contest ID: 455
+Index: A
+Handle: maratonando2
+Submission ID: 26583472
+Submission Time: 1492864267
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 20203948
+Submission Time: 1472347858
+
+
+Contest ID: 455
+Index: A
+Handle: JiangXd
+Submission ID: 7422822
+Submission Time: 1407725553
+
+
+Contest ID: 455
+Index: A
+Handle: Criminal_Leopard
+Submission ID: 7406444
+Submission Time: 1407592942
+
+
+Contest ID: 455
+Index: A
+Handle: punit9462
+Submission ID: 7447300
+Submission Time: 1408037298
+
+
+Contest ID: 455
+Index: A
+Handle: pratyush2013
+Submission ID: 16937809
+Submission Time: 1458932126
+
+
+Contest ID: 455
+Index: A
+Handle: dnkaito
+Submission ID: 7382808
+Submission Time: 1407513453
+
+
+Contest ID: 455
+Index: A
+Handle: Chupakabra
+Submission ID: 27675666
+Submission Time: 1496940222
+
+
+Contest ID: 455
+Index: A
+Handle: michael153
+Submission ID: 7443682
+Submission Time: 1407943217
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 10857052
+Submission Time: 1429954123
+
+
+Contest ID: 455
+Index: A
+Handle: kunalprince1130548
+Submission ID: 13483394
+Submission Time: 1444245661
+
+
+Contest ID: 455
+Index: A
+Handle: 96harshag
+Submission ID: 31554284
+Submission Time: 1508569013
+
+
+Contest ID: 455
+Index: A
+Handle: KBL
+Submission ID: 9969806
+Submission Time: 1424699858
+
+
+Contest ID: 455
+Index: A
+Handle: tiago.napoli
+Submission ID: 25351998
+Submission Time: 1489023462
+
+
+Contest ID: 455
+Index: A
+Handle: GooZy
+Submission ID: 11668469
+Submission Time: 1434718001
+
+
+Contest ID: 455
+Index: A
+Handle: washinson
+Submission ID: 23931296
+Submission Time: 1484772528
+
+
+Contest ID: 455
+Index: A
+Handle: Wolverine
+Submission ID: 17779868
+Submission Time: 1462632697
+
+
+Contest ID: 455
+Index: A
+Handle: COUNTERATTACK1
+Submission ID: 22643440
+Submission Time: 1480607124
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 28954418
+Submission Time: 1501246849
+
+
+Contest ID: 455
+Index: A
+Handle: Candyman
+Submission ID: 7445699
+Submission Time: 1408021428
+
+
+Contest ID: 455
+Index: A
+Handle: Pavana
+Submission ID: 13102781
+Submission Time: 1442671595
+
+
+Contest ID: 455
+Index: A
+Handle: FThiesen
+Submission ID: 16043667
+Submission Time: 1455586119
+
+
+Contest ID: 455
+Index: A
+Handle: stoundmire
+Submission ID: 7379473
+Submission Time: 1407512573
+
+
+Contest ID: 455
+Index: A
+Handle: fanstancy
+Submission ID: 16515743
+Submission Time: 1457097838
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 28298768
+Submission Time: 1499242808
+
+
+Contest ID: 455
+Index: A
+Handle: amit210
+Submission ID: 12833923
+Submission Time: 1441310907
+
+
+Contest ID: 455
+Index: A
+Handle: vikikkdi
+Submission ID: 27083919
+Submission Time: 1494673495
+
+
+Contest ID: 455
+Index: A
+Handle: _Eren_
+Submission ID: 7808971
+Submission Time: 1410869564
+
+
+Contest ID: 455
+Index: A
+Handle: rowanhao
+Submission ID: 7383565
+Submission Time: 1407513689
+
+
+Contest ID: 455
+Index: A
+Handle: Uchiha_Madara
+Submission ID: 7379686
+Submission Time: 1407512621
+
+
+Contest ID: 455
+Index: A
+Handle: jcbbigcrane
+Submission ID: 13765480
+Submission Time: 1445405134
+
+
+Contest ID: 455
+Index: A
+Handle: Running_Time
+Submission ID: 11399369
+Submission Time: 1433324078
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 25336332
+Submission Time: 1488960615
+
+
+Contest ID: 455
+Index: A
+Handle: singhballi842
+Submission ID: 15267741
+Submission Time: 1452335215
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 34297116
+Submission Time: 1516351816
+
+
+Contest ID: 455
+Index: A
+Handle: Druffbaum
+Submission ID: 26700434
+Submission Time: 1493291109
+
+
+Contest ID: 455
+Index: A
+Handle: sherlockconan
+Submission ID: 19749687
+Submission Time: 1470755307
+
+
+Contest ID: 455
+Index: A
+Handle: achint_mittal
+Submission ID: 10101791
+Submission Time: 1425247325
+
+
+Contest ID: 455
+Index: A
+Handle: Mohammadreza_mz
+Submission ID: 21403542
+Submission Time: 1476363669
+
+
+Contest ID: 455
+Index: A
+Handle: AndAndOr
+Submission ID: 28155215
+Submission Time: 1498758134
+
+
+Contest ID: 455
+Index: A
+Handle: harshit_bhat
+Submission ID: 16912529
+Submission Time: 1458849748
+
+
+Contest ID: 455
+Index: A
+Handle: heliatk
+Submission ID: 13480594
+Submission Time: 1444236367
+
+
+Contest ID: 455
+Index: A
+Handle: Laggy
+Submission ID: 27917160
+Submission Time: 1497933474
+
+
+Contest ID: 455
+Index: A
+Handle: I_WILL_BE_TOP_2
+Submission ID: 13617388
+Submission Time: 1444898963
+
+
+Contest ID: 455
+Index: A
+Handle: Harry.Guo2012
+Submission ID: 7400518
+Submission Time: 1407556909
+
+
+Contest ID: 455
+Index: A
+Handle: bjtutyq
+Submission ID: 9149029
+Submission Time: 1418718071
+
+
+Contest ID: 455
+Index: A
+Handle: ahmedaomda96
+Submission ID: 12992918
+Submission Time: 1442215602
+
+
+Contest ID: 455
+Index: A
+Handle: edi9876
+Submission ID: 27303621
+Submission Time: 1495551102
+
+
+Contest ID: 455
+Index: A
+Handle: mustafapro
+Submission ID: 29863725
+Submission Time: 1504003858
+
+
+Contest ID: 455
+Index: A
+Handle: Badshah_Chauhan
+Submission ID: 23810516
+Submission Time: 1484411592
+
+
+Contest ID: 455
+Index: A
+Handle: beowulf
+Submission ID: 31052185
+Submission Time: 1507261460
+
+
+Contest ID: 455
+Index: A
+Handle: isuckatthis
+Submission ID: 14051094
+Submission Time: 1446610337
+
+
+Contest ID: 455
+Index: A
+Handle: CMaster
+Submission ID: 10143156
+Submission Time: 1425463562
+
+
+Contest ID: 455
+Index: A
+Handle: marianneL
+Submission ID: 20391223
+Submission Time: 1473034262
+
+
+Contest ID: 455
+Index: A
+Handle: ANTIMIRAGE
+Submission ID: 16331832
+Submission Time: 1456409250
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 30034248
+Submission Time: 1504442348
+
+
+Contest ID: 455
+Index: A
+Handle: agony_algorist
+Submission ID: 9709849
+Submission Time: 1423036594
+
+
+Contest ID: 455
+Index: A
+Handle: ivan_3987
+Submission ID: 15041120
+Submission Time: 1451207107
+
+
+Contest ID: 455
+Index: A
+Handle: EarlOfDitches
+Submission ID: 8066458
+Submission Time: 1412325429
+
+
+Contest ID: 455
+Index: A
+Handle: sebastiantg
+Submission ID: 14681498
+Submission Time: 1449448744
+
+
+Contest ID: 455
+Index: A
+Handle: xRaynex
+Submission ID: 29177763
+Submission Time: 1501793438
+
+
+Contest ID: 455
+Index: A
+Handle: asahi
+Submission ID: 20930916
+Submission Time: 1474910856
+
+
+Contest ID: 455
+Index: A
+Handle: Vevadeus
+Submission ID: 29050818
+Submission Time: 1501510089
+
+
+Contest ID: 455
+Index: A
+Handle: caominhhung1991
+Submission ID: 18584071
+Submission Time: 1466269819
+
+
+Contest ID: 455
+Index: A
+Handle: Anchal29
+Submission ID: 13075901
+Submission Time: 1442521245
+
+
+Contest ID: 455
+Index: A
+Handle: Vulfke
+Submission ID: 24942214
+Submission Time: 1487871582
+
+
+Contest ID: 455
+Index: A
+Handle: arh_iitkgp
+Submission ID: 30915238
+Submission Time: 1506879339
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 28816905
+Submission Time: 1500879512
+
+
+Contest ID: 455
+Index: A
+Handle: luisphelipe
+Submission ID: 33228882
+Submission Time: 1513222381
+
+
+Contest ID: 455
+Index: A
+Handle: doomsfear
+Submission ID: 27557988
+Submission Time: 1496561988
+
+
+Contest ID: 455
+Index: A
+Handle: ayu786
+Submission ID: 31502061
+Submission Time: 1508403515
+
+
+Contest ID: 455
+Index: A
+Handle: A_new_Bui
+Submission ID: 18749167
+Submission Time: 1467018227
+
+
+Contest ID: 455
+Index: A
+Handle: imran83
+Submission ID: 27341134
+Submission Time: 1495730292
+
+
+Contest ID: 455
+Index: A
+Handle: ptnega
+Submission ID: 7446471
+Submission Time: 1408028027
+
+
+Contest ID: 455
+Index: A
+Handle: OMG_By
+Submission ID: 19966535
+Submission Time: 1471619722
+
+
+Contest ID: 455
+Index: A
+Handle: sahand_mahmoudian
+Submission ID: 20227673
+Submission Time: 1472467314
+
+
+Contest ID: 455
+Index: A
+Handle: below_6
+Submission ID: 33969624
+Submission Time: 1515261866
+
+
+Contest ID: 455
+Index: A
+Handle: voidyeclub
+Submission ID: 17260657
+Submission Time: 1460270794
+
+
+Contest ID: 455
+Index: A
+Handle: Jenni
+Submission ID: 31984792
+Submission Time: 1509636728
+
+
+Contest ID: 455
+Index: A
+Handle: ShyngyS
+Submission ID: 8594127
+Submission Time: 1415294619
+
+
+Contest ID: 455
+Index: A
+Handle: hrt1010
+Submission ID: 29706917
+Submission Time: 1503491069
+
+
+Contest ID: 455
+Index: A
+Handle: Hilva9a
+Submission ID: 20263672
+Submission Time: 1472500545
+
+
+Contest ID: 455
+Index: A
+Handle: MahmoudKhaled
+Submission ID: 16432007
+Submission Time: 1456775307
+
+
+Contest ID: 455
+Index: A
+Handle: rahul1995
+Submission ID: 11401058
+Submission Time: 1433332747
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 8555833
+Submission Time: 1415177688
+
+
+Contest ID: 455
+Index: A
+Handle: mk2495
+Submission ID: 10993227
+Submission Time: 1430723197
+
+
+Contest ID: 455
+Index: A
+Handle: curs0r
+Submission ID: 7381623
+Submission Time: 1407513121
+
+
+Contest ID: 455
+Index: A
+Handle: linbin
+Submission ID: 12553049
+Submission Time: 1439677207
+
+
+Contest ID: 455
+Index: A
+Handle: Murom
+Submission ID: 8682739
+Submission Time: 1415879744
+
+
+Contest ID: 455
+Index: A
+Handle: HamedWBN1
+Submission ID: 11134666
+Submission Time: 1431951898
+
+
+Contest ID: 455
+Index: A
+Handle: amanjain5221
+Submission ID: 31724256
+Submission Time: 1508968440
+
+
+Contest ID: 455
+Index: A
+Handle: akashdeep.goel
+Submission ID: 18162258
+Submission Time: 1464653339
+
+
+Contest ID: 455
+Index: A
+Handle: Dance_Of_Faith
+Submission ID: 30277363
+Submission Time: 1505186205
+
+
+Contest ID: 455
+Index: A
+Handle: sajadur_duet
+Submission ID: 8520106
+Submission Time: 1414908367
+
+
+Contest ID: 455
+Index: A
+Handle: mufasa
+Submission ID: 13080561
+Submission Time: 1442553272
+
+
+Contest ID: 455
+Index: A
+Handle: ujjawalkp
+Submission ID: 27789566
+Submission Time: 1497515672
+
+
+Contest ID: 455
+Index: A
+Handle: Buttman
+Submission ID: 11392792
+Submission Time: 1433263051
+
+
+Contest ID: 455
+Index: A
+Handle: KiwiTurtle
+Submission ID: 31094046
+Submission Time: 1507326537
+
+
+Contest ID: 455
+Index: A
+Handle: yashi
+Submission ID: 15416236
+Submission Time: 1453044077
+
+
+Contest ID: 455
+Index: A
+Handle: NourAlhadi
+Submission ID: 16343701
+Submission Time: 1456480636
+
+
+Contest ID: 455
+Index: A
+Handle: code-jester
+Submission ID: 18110760
+Submission Time: 1464302638
+
+
+Contest ID: 455
+Index: A
+Handle: AndreBtt
+Submission ID: 21499818
+Submission Time: 1476630255
+
+
+Contest ID: 455
+Index: A
+Handle: amirb
+Submission ID: 7397920
+Submission Time: 1407532842
+
+
+Contest ID: 455
+Index: A
+Handle: Aghiad
+Submission ID: 33986564
+Submission Time: 1515340236
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 12740797
+Submission Time: 1440838603
+
+
+Contest ID: 455
+Index: A
+Handle: sam_1605
+Submission ID: 21008692
+Submission Time: 1475218549
+
+
+Contest ID: 455
+Index: A
+Handle: Rajdeep
+Submission ID: 31858654
+Submission Time: 1509261323
+
+
+Contest ID: 455
+Index: A
+Handle: Urmi
+Submission ID: 9538456
+Submission Time: 1422105297
+
+
+Contest ID: 455
+Index: A
+Handle: nikhil96sher
+Submission ID: 15226718
+Submission Time: 1452179690
+
+
+Contest ID: 455
+Index: A
+Handle: -t22t-
+Submission ID: 20148847
+Submission Time: 1472114637
+
+
+Contest ID: 455
+Index: A
+Handle: arjundabra
+Submission ID: 10129244
+Submission Time: 1425367100
+
+
+Contest ID: 455
+Index: A
+Handle: deadbrain
+Submission ID: 12226409
+Submission Time: 1437848141
+
+
+Contest ID: 455
+Index: A
+Handle: KarimTheGrim
+Submission ID: 26489523
+Submission Time: 1492582773
+
+
+Contest ID: 455
+Index: A
+Handle: EqualtRev.
+Submission ID: 34244710
+Submission Time: 1516180267
+
+
+Contest ID: 455
+Index: A
+Handle: Bkrockx
+Submission ID: 22699653
+Submission Time: 1480869911
+
+
+Contest ID: 455
+Index: A
+Handle: 1-i
+Submission ID: 12039489
+Submission Time: 1436866066
+
+
+Contest ID: 455
+Index: A
+Handle: Lost.track
+Submission ID: 34074454
+Submission Time: 1515605645
+
+
+Contest ID: 455
+Index: A
+Handle: jesusvillegon
+Submission ID: 15979735
+Submission Time: 1455319795
+
+
+Contest ID: 455
+Index: A
+Handle: voidCoder
+Submission ID: 19461906
+Submission Time: 1469711291
+
+
+Contest ID: 455
+Index: A
+Handle: ximo
+Submission ID: 10451912
+Submission Time: 1427312908
+
+
+Contest ID: 455
+Index: A
+Handle: HANDLE_INVALID
+Submission ID: 18897085
+Submission Time: 1467711152
+
+
+Contest ID: 455
+Index: A
+Handle: tangsl
+Submission ID: 7399739
+Submission Time: 1407552010
+
+
+Contest ID: 455
+Index: A
+Handle: Mohammad_Alow
+Submission ID: 10748676
+Submission Time: 1429255928
+
+
+Contest ID: 455
+Index: A
+Handle: dj43
+Submission ID: 32007435
+Submission Time: 1509712896
+
+
+Contest ID: 455
+Index: A
+Handle: arjita_03
+Submission ID: 25187204
+Submission Time: 1488572431
+
+
+Contest ID: 455
+Index: A
+Handle: Renamed
+Submission ID: 8031921
+Submission Time: 1412050717
+
+
+Contest ID: 455
+Index: A
+Handle: ShivamA
+Submission ID: 17859479
+Submission Time: 1462990053
+
+
+Contest ID: 455
+Index: A
+Handle: s.ahmadi
+Submission ID: 20028348
+Submission Time: 1471788708
+
+
+Contest ID: 455
+Index: A
+Handle: LE7YA
+Submission ID: 24279589
+Submission Time: 1485820701
+
+
+Contest ID: 455
+Index: A
+Handle: Chen_ChaoRui
+Submission ID: 7381823
+Submission Time: 1407513177
+
+
+Contest ID: 455
+Index: A
+Handle: misterstrang
+Submission ID: 7649681
+Submission Time: 1409445025
+
+
+Contest ID: 455
+Index: A
+Handle: Avior007
+Submission ID: 30778723
+Submission Time: 1506520236
+
+
+Contest ID: 455
+Index: A
+Handle: anhldt
+Submission ID: 14143960
+Submission Time: 1446998818
+
+
+Contest ID: 455
+Index: A
+Handle: chenbowen
+Submission ID: 20958325
+Submission Time: 1475024258
+
+
+Contest ID: 455
+Index: A
+Handle: sajal-jayanto2419
+Submission ID: 11076460
+Submission Time: 1431421959
+
+
+Contest ID: 455
+Index: A
+Handle: BRAD_BIT
+Submission ID: 11544681
+Submission Time: 1434118565
+
+
+Contest ID: 455
+Index: A
+Handle: xavier
+Submission ID: 18905749
+Submission Time: 1467742895
+
+
+Contest ID: 455
+Index: A
+Handle: Bhaba_Ranjan12
+Submission ID: 32655873
+Submission Time: 1511639113
+
+
+Contest ID: 455
+Index: A
+Handle: Fonduee
+Submission ID: 12978613
+Submission Time: 1442096810
+
+
+Contest ID: 455
+Index: A
+Handle: kevalya
+Submission ID: 10854208
+Submission Time: 1429920048
+
+
+Contest ID: 455
+Index: A
+Handle: mswami
+Submission ID: 18917612
+Submission Time: 1467804693
+
+
+Contest ID: 455
+Index: A
+Handle: ketanhwr
+Submission ID: 14572268
+Submission Time: 1448895230
+
+
+Contest ID: 455
+Index: A
+Handle: StormNight
+Submission ID: 20380933
+Submission Time: 1472988042
+
+
+Contest ID: 455
+Index: A
+Handle: nitishk24
+Submission ID: 30910496
+Submission Time: 1506865675
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 29142798
+Submission Time: 1501724781
+
+
+Contest ID: 455
+Index: A
+Handle: dustbite
+Submission ID: 11387992
+Submission Time: 1433237915
+
+
+Contest ID: 455
+Index: A
+Handle: ahmed_elmotaz
+Submission ID: 27728593
+Submission Time: 1497224937
+
+
+Contest ID: 455
+Index: A
+Handle: navidbeta
+Submission ID: 7667041
+Submission Time: 1409656607
+
+
+Contest ID: 455
+Index: A
+Handle: Beast_Within
+Submission ID: 17978595
+Submission Time: 1463570782
+
+
+Contest ID: 455
+Index: A
+Handle: crd721
+Submission ID: 7401694
+Submission Time: 1407564565
+
+
+Contest ID: 455
+Index: A
+Handle: alexsepulveda
+Submission ID: 14042466
+Submission Time: 1446558446
+
+
+Contest ID: 455
+Index: A
+Handle: NelsonMondialu
+Submission ID: 7390983
+Submission Time: 1407516662
+
+
+Contest ID: 455
+Index: A
+Handle: Hell__boy
+Submission ID: 18294531
+Submission Time: 1465370571
+
+
+Contest ID: 455
+Index: A
+Handle: kkkrt
+Submission ID: 17917541
+Submission Time: 1463304215
+
+
+Contest ID: 455
+Index: A
+Handle: boad
+Submission ID: 19767303
+Submission Time: 1470838814
+
+
+Contest ID: 455
+Index: A
+Handle: sadlifesuchstrife
+Submission ID: 15907426
+Submission Time: 1455007278
+
+
+Contest ID: 455
+Index: A
+Handle: slypiggies
+Submission ID: 15138087
+Submission Time: 1451572958
+
+
+Contest ID: 455
+Index: A
+Handle: johnjq
+Submission ID: 7948008
+Submission Time: 1411656575
+
+
+Contest ID: 455
+Index: A
+Handle: Pupil.
+Submission ID: 19156233
+Submission Time: 1468595119
+
+
+Contest ID: 455
+Index: A
+Handle: mahdi_r
+Submission ID: 9073885
+Submission Time: 1418227858
+
+
+Contest ID: 455
+Index: A
+Handle: bayram98
+Submission ID: 16665349
+Submission Time: 1457759545
+
+
+Contest ID: 455
+Index: A
+Handle: monera
+Submission ID: 9098702
+Submission Time: 1418451871
+
+
+Contest ID: 455
+Index: A
+Handle: roginak
+Submission ID: 28019335
+Submission Time: 1498383266
+
+
+Contest ID: 455
+Index: A
+Handle: benedemon
+Submission ID: 20339707
+Submission Time: 1472816591
+
+
+Contest ID: 455
+Index: A
+Handle: mrkam
+Submission ID: 9101595
+Submission Time: 1418473904
+
+
+Contest ID: 455
+Index: A
+Handle: Sh1co
+Submission ID: 18839982
+Submission Time: 1467374112
+
+
+Contest ID: 455
+Index: A
+Handle: BBenz
+Submission ID: 10855164
+Submission Time: 1429934722
+
+
+Contest ID: 455
+Index: A
+Handle: SProf
+Submission ID: 13933230
+Submission Time: 1446122848
+
+
+Contest ID: 455
+Index: A
+Handle: nrlp
+Submission ID: 21901471
+Submission Time: 1477872370
+
+
+Contest ID: 455
+Index: A
+Handle: nokenn
+Submission ID: 33582274
+Submission Time: 1514082625
+
+
+Contest ID: 455
+Index: A
+Handle: rassenghan
+Submission ID: 7559017
+Submission Time: 1408790377
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 29525421
+Submission Time: 1502971110
+
+
+Contest ID: 455
+Index: A
+Handle: dnjfurnck
+Submission ID: 17714185
+Submission Time: 1462420205
+
+
+Contest ID: 455
+Index: A
+Handle: looper
+Submission ID: 11102070
+Submission Time: 1431634033
+
+
+Contest ID: 455
+Index: A
+Handle: mandal.chaman100
+Submission ID: 7826923
+Submission Time: 1411052206
+
+
+Contest ID: 455
+Index: A
+Handle: J4T
+Submission ID: 13113293
+Submission Time: 1442747353
+
+
+Contest ID: 455
+Index: A
+Handle: TooNewbie
+Submission ID: 33966278
+Submission Time: 1515254356
+
+
+Contest ID: 455
+Index: A
+Handle: jcbbigcrane
+Submission ID: 13765404
+Submission Time: 1445404649
+
+
+Contest ID: 455
+Index: A
+Handle: uc__
+Submission ID: 20454720
+Submission Time: 1473325617
+
+
+Contest ID: 455
+Index: A
+Handle: Alista
+Submission ID: 26954067
+Submission Time: 1494237642
+
+
+Contest ID: 455
+Index: A
+Handle: haouech
+Submission ID: 18284712
+Submission Time: 1465305116
+
+
+Contest ID: 455
+Index: A
+Handle: mirceadino
+Submission ID: 7380938
+Submission Time: 1407512935
+
+
+Contest ID: 455
+Index: A
+Handle: dothanhlam97
+Submission ID: 18997598
+Submission Time: 1468136743
+
+
+Contest ID: 455
+Index: A
+Handle: mohammad330A
+Submission ID: 32631423
+Submission Time: 1511553611
+
+
+Contest ID: 455
+Index: A
+Handle: hazefully
+Submission ID: 18348295
+Submission Time: 1465505368
+
+
+Contest ID: 455
+Index: A
+Handle: Aagii123
+Submission ID: 26513958
+Submission Time: 1492686958
+
+
+Contest ID: 455
+Index: A
+Handle: abo.rashed94
+Submission ID: 25215466
+Submission Time: 1488635627
+
+
+Contest ID: 455
+Index: A
+Handle: sahil_
+Submission ID: 16467898
+Submission Time: 1456932771
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 33456424
+Submission Time: 1513776414
+
+
+Contest ID: 455
+Index: A
+Handle: z13
+Submission ID: 21614982
+Submission Time: 1476961149
+
+
+Contest ID: 455
+Index: A
+Handle: hooli123
+Submission ID: 16731039
+Submission Time: 1458059865
+
+
+Contest ID: 455
+Index: A
+Handle: alpha-q
+Submission ID: 21229753
+Submission Time: 1475743338
+
+
+Contest ID: 455
+Index: A
+Handle: S93
+Submission ID: 13718874
+Submission Time: 1445197985
+
+
+Contest ID: 455
+Index: A
+Handle: swpnljn
+Submission ID: 11279057
+Submission Time: 1432646312
+
+
+Contest ID: 455
+Index: A
+Handle: JustSubmit
+Submission ID: 11043943
+Submission Time: 1431092506
+
+
+Contest ID: 455
+Index: A
+Handle: metamemelord
+Submission ID: 34191752
+Submission Time: 1516004525
+
+
+Contest ID: 455
+Index: A
+Handle: alihaghighatjavan
+Submission ID: 9391102
+Submission Time: 1420799726
+
+
+Contest ID: 455
+Index: A
+Handle: Meyirzhan_Amangeldi
+Submission ID: 22704795
+Submission Time: 1480914147
+
+
+Contest ID: 455
+Index: A
+Handle: akashdeep.goel
+Submission ID: 11138026
+Submission Time: 1431973255
+
+
+Contest ID: 455
+Index: A
+Handle: dan1011
+Submission ID: 25681756
+Submission Time: 1490080265
+
+
+Contest ID: 455
+Index: A
+Handle: subh1685
+Submission ID: 26136599
+Submission Time: 1491373423
+
+
+Contest ID: 455
+Index: A
+Handle: endra130898
+Submission ID: 13587563
+Submission Time: 1444715188
+
+
+Contest ID: 455
+Index: A
+Handle: crispy1995
+Submission ID: 15063992
+Submission Time: 1451270375
+
+
+Contest ID: 455
+Index: A
+Handle: KieranHorgan
+Submission ID: 19283463
+Submission Time: 1469027510
+
+
+Contest ID: 455
+Index: A
+Handle: noor148
+Submission ID: 9132445
+Submission Time: 1418573562
+
+
+Contest ID: 455
+Index: A
+Handle: xwchow
+Submission ID: 12301059
+Submission Time: 1438418030
+
+
+Contest ID: 455
+Index: A
+Handle: huynhduy.idol
+Submission ID: 16909407
+Submission Time: 1458835144
+
+
+Contest ID: 455
+Index: A
+Handle: sidhu_prabhjot
+Submission ID: 30821074
+Submission Time: 1506664667
+
+
+Contest ID: 455
+Index: A
+Handle: rickychandra
+Submission ID: 10453938
+Submission Time: 1427343627
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 14627759
+Submission Time: 1449108378
+
+
+Contest ID: 455
+Index: A
+Handle: englishkir
+Submission ID: 12231725
+Submission Time: 1437942651
+
+
+Contest ID: 455
+Index: A
+Handle: Logsha
+Submission ID: 7385391
+Submission Time: 1407514325
+
+
+Contest ID: 455
+Index: A
+Handle: crojas
+Submission ID: 19969967
+Submission Time: 1471633756
+
+
+Contest ID: 455
+Index: A
+Handle: s0mth1ng
+Submission ID: 25698053
+Submission Time: 1490122121
+
+
+Contest ID: 455
+Index: A
+Handle: Horea
+Submission ID: 12806329
+Submission Time: 1441130459
+
+
+Contest ID: 455
+Index: A
+Handle: Ahmed_Ben_Abdallah
+Submission ID: 22277367
+Submission Time: 1479330031
+
+
+Contest ID: 455
+Index: A
+Handle: anhisgod2017
+Submission ID: 31508891
+Submission Time: 1508418432
+
+
+Contest ID: 455
+Index: A
+Handle: denmel14
+Submission ID: 24184103
+Submission Time: 1485509364
+
+
+Contest ID: 455
+Index: A
+Handle: utkarsh7999
+Submission ID: 12417672
+Submission Time: 1439057624
+
+
+Contest ID: 455
+Index: A
+Handle: proydakov
+Submission ID: 26316164
+Submission Time: 1491997476
+
+
+Contest ID: 455
+Index: A
+Handle: MSolomon
+Submission ID: 29581069
+Submission Time: 1503080276
+
+
+Contest ID: 455
+Index: A
+Handle: HaMeD-moll
+Submission ID: 21052036
+Submission Time: 1475273489
+
+
+Contest ID: 455
+Index: A
+Handle: Kot_Angens
+Submission ID: 15614220
+Submission Time: 1453907966
+
+
+Contest ID: 455
+Index: A
+Handle: AndreiM
+Submission ID: 15059614
+Submission Time: 1451238188
+
+
+Contest ID: 455
+Index: A
+Handle: voxel
+Submission ID: 15540672
+Submission Time: 1453576158
+
+
+Contest ID: 455
+Index: A
+Handle: bshrram
+Submission ID: 26757897
+Submission Time: 1493512187
+
+
+Contest ID: 455
+Index: A
+Handle: pedramr77
+Submission ID: 13200324
+Submission Time: 1443080444
+
+
+Contest ID: 455
+Index: A
+Handle: min-00
+Submission ID: 14767409
+Submission Time: 1449875949
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 33880125
+Submission Time: 1514965779
+
+
+Contest ID: 455
+Index: A
+Handle: azneyes
+Submission ID: 7379651
+Submission Time: 1407512614
+
+
+Contest ID: 455
+Index: A
+Handle: hiwang123
+Submission ID: 7401992
+Submission Time: 1407566252
+
+
+Contest ID: 455
+Index: A
+Handle: Esraa_RaGab
+Submission ID: 16824882
+Submission Time: 1458410377
+
+
+Contest ID: 455
+Index: A
+Handle: SWAMPYY
+Submission ID: 9404670
+Submission Time: 1420999857
+
+
+Contest ID: 455
+Index: A
+Handle: jaya.0029
+Submission ID: 26512672
+Submission Time: 1492683053
+
+
+Contest ID: 455
+Index: A
+Handle: RealProgrammer
+Submission ID: 9552306
+Submission Time: 1422208285
+
+
+Contest ID: 455
+Index: A
+Handle: Baker_vai
+Submission ID: 26696338
+Submission Time: 1493270707
+
+
+Contest ID: 455
+Index: A
+Handle: nakamura
+Submission ID: 23683738
+Submission Time: 1484062419
+
+
+Contest ID: 455
+Index: A
+Handle: sinesight
+Submission ID: 7404844
+Submission Time: 1407582380
+
+
+Contest ID: 455
+Index: A
+Handle: AmerAL-Khateeb
+Submission ID: 16523329
+Submission Time: 1457125738
+
+
+Contest ID: 455
+Index: A
+Handle: _xenon
+Submission ID: 29715481
+Submission Time: 1503514762
+
+
+Contest ID: 455
+Index: A
+Handle: Mockingjay
+Submission ID: 23995939
+Submission Time: 1484936933
+
+
+Contest ID: 455
+Index: A
+Handle: SaraGuru
+Submission ID: 11567969
+Submission Time: 1434198397
+
+
+Contest ID: 455
+Index: A
+Handle: balsa_knez
+Submission ID: 10399417
+Submission Time: 1427026933
+
+
+Contest ID: 455
+Index: A
+Handle: geek_geek
+Submission ID: 11068984
+Submission Time: 1431340288
+
+
+Contest ID: 455
+Index: A
+Handle: yizhixiaokong
+Submission ID: 28361373
+Submission Time: 1499491824
+
+
+Contest ID: 455
+Index: A
+Handle: prashanttyagi
+Submission ID: 32909627
+Submission Time: 1512341367
+
+
+Contest ID: 455
+Index: A
+Handle: sad
+Submission ID: 22700455
+Submission Time: 1480873074
+
+
+Contest ID: 455
+Index: A
+Handle: qaz123
+Submission ID: 23998504
+Submission Time: 1484945417
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 11185324
+Submission Time: 1432190934
+
+
+Contest ID: 455
+Index: A
+Handle: Foster__
+Submission ID: 23659952
+Submission Time: 1483938290
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 28740255
+Submission Time: 1500615066
+
+
+Contest ID: 455
+Index: A
+Handle: ayushexel
+Submission ID: 13338475
+Submission Time: 1443761284
+
+
+Contest ID: 455
+Index: A
+Handle: Fares-Mehanna
+Submission ID: 20715800
+Submission Time: 1474134088
+
+
+Contest ID: 455
+Index: A
+Handle: Double_O
+Submission ID: 16769816
+Submission Time: 1458239222
+
+
+Contest ID: 455
+Index: A
+Handle: UoA_ZQC
+Submission ID: 13602515
+Submission Time: 1444804058
+
+
+Contest ID: 455
+Index: A
+Handle: sojiro_seta
+Submission ID: 13361285
+Submission Time: 1443884286
+
+
+Contest ID: 455
+Index: A
+Handle: desya99
+Submission ID: 15741928
+Submission Time: 1454375414
+
+
+Contest ID: 455
+Index: A
+Handle: Dance_Of_Faith
+Submission ID: 30277330
+Submission Time: 1505185941
+
+
+Contest ID: 455
+Index: A
+Handle: attiw
+Submission ID: 34047008
+Submission Time: 1515497214
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 33510865
+Submission Time: 1513953367
+
+
+Contest ID: 455
+Index: A
+Handle: GabrielTaets
+Submission ID: 16132426
+Submission Time: 1455755261
+
+
+Contest ID: 455
+Index: A
+Handle: adam.szefer
+Submission ID: 13194573
+Submission Time: 1443037680
+
+
+Contest ID: 455
+Index: A
+Handle: MohabM.
+Submission ID: 11869930
+Submission Time: 1435689892
+
+
+Contest ID: 455
+Index: A
+Handle: abhadage
+Submission ID: 33626138
+Submission Time: 1514224815
+
+
+Contest ID: 455
+Index: A
+Handle: yzmyyff
+Submission ID: 8691760
+Submission Time: 1415959157
+
+
+Contest ID: 455
+Index: A
+Handle: CODENT47
+Submission ID: 33616639
+Submission Time: 1514205218
+
+
+Contest ID: 455
+Index: A
+Handle: Monkey_D_Luffy_1999
+Submission ID: 14300293
+Submission Time: 1447688436
+
+
+Contest ID: 455
+Index: A
+Handle: hagu
+Submission ID: 11705137
+Submission Time: 1434952069
+
+
+Contest ID: 455
+Index: A
+Handle: I_Love_MohseN
+Submission ID: 14817970
+Submission Time: 1450196351
+
+
+Contest ID: 455
+Index: A
+Handle: john97
+Submission ID: 28364146
+Submission Time: 1499501963
+
+
+Contest ID: 455
+Index: A
+Handle: Phoenix
+Submission ID: 19421320
+Submission Time: 1469531981
+
+
+Contest ID: 455
+Index: A
+Handle: vsingh0075
+Submission ID: 12426105
+Submission Time: 1439125105
+
+
+Contest ID: 455
+Index: A
+Handle: baranerff
+Submission ID: 29890270
+Submission Time: 1504023749
+
+
+Contest ID: 455
+Index: A
+Handle: khaledm.salem
+Submission ID: 34261035
+Submission Time: 1516220148
+
+
+Contest ID: 455
+Index: A
+Handle: amrinder70
+Submission ID: 17809164
+Submission Time: 1462718406
+
+
+Contest ID: 455
+Index: A
+Handle: JohStraat
+Submission ID: 8804613
+Submission Time: 1416674512
+
+
+Contest ID: 455
+Index: A
+Handle: vk24306
+Submission ID: 16849783
+Submission Time: 1458534207
+
+
+Contest ID: 455
+Index: A
+Handle: Jovid_Mahmudov
+Submission ID: 15086870
+Submission Time: 1451403253
+
+
+Contest ID: 455
+Index: A
+Handle: erfanesm
+Submission ID: 22478416
+Submission Time: 1480018581
+
+
+Contest ID: 455
+Index: A
+Handle: amirsmart
+Submission ID: 22115178
+Submission Time: 1478617911
+
+
+Contest ID: 455
+Index: A
+Handle: Chiranjiv
+Submission ID: 21804065
+Submission Time: 1477506107
+
+
+Contest ID: 455
+Index: A
+Handle: JumpyC
+Submission ID: 25268136
+Submission Time: 1488731810
+
+
+Contest ID: 455
+Index: A
+Handle: AbdAlhakem
+Submission ID: 23836488
+Submission Time: 1484481252
+
+
+Contest ID: 455
+Index: A
+Handle: ojha_vivek
+Submission ID: 20651684
+Submission Time: 1473995434
+
+
+Contest ID: 455
+Index: A
+Handle: davit2003
+Submission ID: 14571483
+Submission Time: 1448891899
+
+
+Contest ID: 455
+Index: A
+Handle: shenfc
+Submission ID: 31823233
+Submission Time: 1509160109
+
+
+Contest ID: 455
+Index: A
+Handle: pkprasanna
+Submission ID: 22942741
+Submission Time: 1481697009
+
+
+Contest ID: 455
+Index: A
+Handle: DArcops
+Submission ID: 18437863
+Submission Time: 1465853386
+
+
+Contest ID: 455
+Index: A
+Handle: leninkumar31
+Submission ID: 21732136
+Submission Time: 1477277057
+
+
+Contest ID: 455
+Index: A
+Handle: ahmed_aly
+Submission ID: 9821028
+Submission Time: 1423864400
+
+
+Contest ID: 455
+Index: A
+Handle: Anton_Chernev
+Submission ID: 7397144
+Submission Time: 1407528733
+
+
+Contest ID: 455
+Index: A
+Handle: IvanAli
+Submission ID: 13765281
+Submission Time: 1445403872
+
+
+Contest ID: 455
+Index: A
+Handle: omarosama96
+Submission ID: 18647302
+Submission Time: 1466601820
+
+
+Contest ID: 455
+Index: A
+Handle: fsociety00
+Submission ID: 30301811
+Submission Time: 1505290653
+
+
+Contest ID: 455
+Index: A
+Handle: faustaadp
+Submission ID: 24691214
+Submission Time: 1487151335
+
+
+Contest ID: 455
+Index: A
+Handle: Jon.Snow
+Submission ID: 24606675
+Submission Time: 1486896791
+
+
+Contest ID: 455
+Index: A
+Handle: xashru
+Submission ID: 11201523
+Submission Time: 1432299612
+
+
+Contest ID: 455
+Index: A
+Handle: Kitorp
+Submission ID: 13021242
+Submission Time: 1442401180
+
+
+Contest ID: 455
+Index: A
+Handle: builtnotborn
+Submission ID: 31930562
+Submission Time: 1509474584
+
+
+Contest ID: 455
+Index: A
+Handle: aditya250895
+Submission ID: 18233839
+Submission Time: 1464969530
+
+
+Contest ID: 455
+Index: A
+Handle: manas.daruka
+Submission ID: 30085715
+Submission Time: 1504562902
+
+
+Contest ID: 455
+Index: A
+Handle: Yusup01
+Submission ID: 32714354
+Submission Time: 1511785372
+
+
+Contest ID: 455
+Index: A
+Handle: hhh07
+Submission ID: 27721389
+Submission Time: 1497186545
+
+
+Contest ID: 455
+Index: A
+Handle: S93
+Submission ID: 13718585
+Submission Time: 1445196488
+
+
+Contest ID: 455
+Index: A
+Handle: nkrajesh
+Submission ID: 9881112
+Submission Time: 1424172695
+
+
+Contest ID: 455
+Index: A
+Handle: TonyJiang
+Submission ID: 7490091
+Submission Time: 1408258904
+
+
+Contest ID: 455
+Index: A
+Handle: magiccao
+Submission ID: 16294658
+Submission Time: 1456239891
+
+
+Contest ID: 455
+Index: A
+Handle: Tamer.Tamer
+Submission ID: 16614994
+Submission Time: 1457521982
+
+
+Contest ID: 455
+Index: A
+Handle: 1004133206
+Submission ID: 9602731
+Submission Time: 1422450764
+
+
+Contest ID: 455
+Index: A
+Handle: skrillex7
+Submission ID: 20372044
+Submission Time: 1472944540
+
+
+Contest ID: 455
+Index: A
+Handle: gara
+Submission ID: 20638734
+Submission Time: 1473940163
+
+
+Contest ID: 455
+Index: A
+Handle: MMM24
+Submission ID: 11762737
+Submission Time: 1435246621
+
+
+Contest ID: 455
+Index: A
+Handle: uvsankar
+Submission ID: 10166661
+Submission Time: 1425572543
+
+
+Contest ID: 455
+Index: A
+Handle: Jumaboyev_Davlatmurod
+Submission ID: 12033239
+Submission Time: 1436818602
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 30284530
+Submission Time: 1505215209
+
+
+Contest ID: 455
+Index: A
+Handle: sledencode
+Submission ID: 22838073
+Submission Time: 1481299391
+
+
+Contest ID: 455
+Index: A
+Handle: AishS
+Submission ID: 27685673
+Submission Time: 1496998532
+
+
+Contest ID: 455
+Index: A
+Handle: emptyman987
+Submission ID: 33485613
+Submission Time: 1513873260
+
+
+Contest ID: 455
+Index: A
+Handle: Eagle-EYe
+Submission ID: 26110709
+Submission Time: 1491268273
+
+
+Contest ID: 455
+Index: A
+Handle: sauravray2587
+Submission ID: 27701781
+Submission Time: 1497080134
+
+
+Contest ID: 455
+Index: A
+Handle: VictorForbes
+Submission ID: 12000057
+Submission Time: 1436546284
+
+
+Contest ID: 455
+Index: A
+Handle: DarkestLight
+Submission ID: 13579496
+Submission Time: 1444668707
+
+
+Contest ID: 455
+Index: A
+Handle: lookforayush
+Submission ID: 17300923
+Submission Time: 1460545111
+
+
+Contest ID: 455
+Index: A
+Handle: vmthanh
+Submission ID: 10569084
+Submission Time: 1428118928
+
+
+Contest ID: 455
+Index: A
+Handle: arefin
+Submission ID: 9235199
+Submission Time: 1419358177
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 33750515
+Submission Time: 1514522807
+
+
+Contest ID: 455
+Index: A
+Handle: Mr.Temirbay
+Submission ID: 9915316
+Submission Time: 1424268632
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 7440521
+Submission Time: 1407919050
+
+
+Contest ID: 455
+Index: A
+Handle: MesutOzill11
+Submission ID: 21418881
+Submission Time: 1476435098
+
+
+Contest ID: 455
+Index: A
+Handle: anjalinauhwar
+Submission ID: 19269743
+Submission Time: 1468991293
+
+
+Contest ID: 455
+Index: A
+Handle: shaynelq
+Submission ID: 7382767
+Submission Time: 1407513441
+
+
+Contest ID: 455
+Index: A
+Handle: mohamed-yasser
+Submission ID: 20699342
+Submission Time: 1474123316
+
+
+Contest ID: 455
+Index: A
+Handle: Strontium
+Submission ID: 12947557
+Submission Time: 1441916680
+
+
+Contest ID: 455
+Index: A
+Handle: void_sora
+Submission ID: 32222221
+Submission Time: 1510411072
+
+
+Contest ID: 455
+Index: A
+Handle: BotonAmarillo
+Submission ID: 25303961
+Submission Time: 1488837629
+
+
+Contest ID: 455
+Index: A
+Handle: omidcode
+Submission ID: 9859670
+Submission Time: 1424007255
+
+
+Contest ID: 455
+Index: A
+Handle: evil_morty
+Submission ID: 32925999
+Submission Time: 1512405386
+
+
+Contest ID: 455
+Index: A
+Handle: knight_owl
+Submission ID: 23561119
+Submission Time: 1483641884
+
+
+Contest ID: 455
+Index: A
+Handle: _roCkY_
+Submission ID: 13012508
+Submission Time: 1442342130
+
+
+Contest ID: 455
+Index: A
+Handle: chauhan18
+Submission ID: 9593723
+Submission Time: 1422390646
+
+
+Contest ID: 455
+Index: A
+Handle: Abhi_Sarkar1996
+Submission ID: 29157716
+Submission Time: 1501770531
+
+
+Contest ID: 455
+Index: A
+Handle: FUCK_YOU_BITCH
+Submission ID: 13243743
+Submission Time: 1443318520
+
+
+Contest ID: 455
+Index: A
+Handle: GenTel
+Submission ID: 12286584
+Submission Time: 1438319865
+
+
+Contest ID: 455
+Index: A
+Handle: 025-22643-Dias-8
+Submission ID: 33026719
+Submission Time: 1512747064
+
+
+Contest ID: 455
+Index: A
+Handle: stilllHungry
+Submission ID: 24035502
+Submission Time: 1485107767
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 25423117
+Submission Time: 1489290534
+
+
+Contest ID: 455
+Index: A
+Handle: aditya250895
+Submission ID: 18295681
+Submission Time: 1465377480
+
+
+Contest ID: 455
+Index: A
+Handle: SajidZakaria
+Submission ID: 28988822
+Submission Time: 1501412405
+
+
+Contest ID: 455
+Index: A
+Handle: r_rahul
+Submission ID: 28297322
+Submission Time: 1499239259
+
+
+Contest ID: 455
+Index: A
+Handle: coder_lesnar
+Submission ID: 21498742
+Submission Time: 1476627842
+
+
+Contest ID: 455
+Index: A
+Handle: gbis36
+Submission ID: 7388733
+Submission Time: 1407515640
+
+
+Contest ID: 455
+Index: A
+Handle: Ren_shimosawa
+Submission ID: 26454846
+Submission Time: 1492433011
+
+
+Contest ID: 455
+Index: A
+Handle: gshag
+Submission ID: 9622628
+Submission Time: 1422597919
+
+
+Contest ID: 455
+Index: A
+Handle: Dragneel
+Submission ID: 9221718
+Submission Time: 1419238184
+
+
+Contest ID: 455
+Index: A
+Handle: jrrain
+Submission ID: 23731218
+Submission Time: 1484199576
+
+
+Contest ID: 455
+Index: A
+Handle: imminion
+Submission ID: 18604343
+Submission Time: 1466365061
+
+
+Contest ID: 455
+Index: A
+Handle: anonimo1224
+Submission ID: 21248001
+Submission Time: 1475804919
+
+
+Contest ID: 455
+Index: A
+Handle: Majin_Boo
+Submission ID: 24421101
+Submission Time: 1486159119
+
+
+Contest ID: 455
+Index: A
+Handle: A_Sharabassy
+Submission ID: 20779711
+Submission Time: 1474386245
+
+
+Contest ID: 455
+Index: A
+Handle: wuxifinger
+Submission ID: 12892839
+Submission Time: 1441692778
+
+
+Contest ID: 455
+Index: A
+Handle: LorenzoVonMatterhorn
+Submission ID: 20406378
+Submission Time: 1473103729
+
+
+Contest ID: 455
+Index: A
+Handle: Aced-by-B
+Submission ID: 20089843
+Submission Time: 1471968651
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 29252484
+Submission Time: 1502077639
+
+
+Contest ID: 455
+Index: A
+Handle: Mocchi
+Submission ID: 20264888
+Submission Time: 1472505080
+
+
+Contest ID: 455
+Index: A
+Handle: Droku
+Submission ID: 28351972
+Submission Time: 1499440364
+
+
+Contest ID: 455
+Index: A
+Handle: LiTi
+Submission ID: 7382086
+Submission Time: 1407513254
+
+
+Contest ID: 455
+Index: A
+Handle: inmathwetrust
+Submission ID: 19155762
+Submission Time: 1468593405
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 25404967
+Submission Time: 1489236154
+
+
+Contest ID: 455
+Index: A
+Handle: kietchau
+Submission ID: 10140472
+Submission Time: 1425444453
+
+
+Contest ID: 455
+Index: A
+Handle: akautomation
+Submission ID: 14569191
+Submission Time: 1448882653
+
+
+Contest ID: 455
+Index: A
+Handle: teenagerlive
+Submission ID: 19586698
+Submission Time: 1470168675
+
+
+Contest ID: 455
+Index: A
+Handle: 4yush933
+Submission ID: 30623367
+Submission Time: 1506105836
+
+
+Contest ID: 455
+Index: A
+Handle: MMMSolar
+Submission ID: 17383969
+Submission Time: 1461048695
+
+
+Contest ID: 455
+Index: A
+Handle: srinu37
+Submission ID: 21985718
+Submission Time: 1478075741
+
+
+Contest ID: 455
+Index: A
+Handle: 541307010108
+Submission ID: 7400002
+Submission Time: 1407553394
+
+
+Contest ID: 455
+Index: A
+Handle: Thomes
+Submission ID: 27719068
+Submission Time: 1497176214
+
+
+Contest ID: 455
+Index: A
+Handle: X-Ra-X
+Submission ID: 30935606
+Submission Time: 1506928094
+
+
+Contest ID: 455
+Index: A
+Handle: glays
+Submission ID: 25781585
+Submission Time: 1490383413
+
+
+Contest ID: 455
+Index: A
+Handle: ducnthb
+Submission ID: 8131746
+Submission Time: 1412692578
+
+
+Contest ID: 455
+Index: A
+Handle: tonthatvinh
+Submission ID: 7381657
+Submission Time: 1407513131
+
+
+Contest ID: 455
+Index: A
+Handle: kungfuPANDA
+Submission ID: 17987661
+Submission Time: 1463644697
+
+
+Contest ID: 455
+Index: A
+Handle: c4rb0n
+Submission ID: 19441481
+Submission Time: 1469621738
+
+
+Contest ID: 455
+Index: A
+Handle: dusht0814
+Submission ID: 20286366
+Submission Time: 1472578926
+
+
+Contest ID: 455
+Index: A
+Handle: pirat3
+Submission ID: 29205364
+Submission Time: 1501888808
+
+
+Contest ID: 455
+Index: A
+Handle: AmEr_Tinsley
+Submission ID: 32083976
+Submission Time: 1509916566
+
+
+Contest ID: 455
+Index: A
+Handle: sejda
+Submission ID: 11389770
+Submission Time: 1433247925
+
+
+Contest ID: 455
+Index: A
+Handle: harryp
+Submission ID: 28196578
+Submission Time: 1498932415
+
+
+Contest ID: 455
+Index: A
+Handle: Dutzul
+Submission ID: 7515287
+Submission Time: 1408531745
+
+
+Contest ID: 455
+Index: A
+Handle: yp0413150120
+Submission ID: 25337591
+Submission Time: 1488964226
+
+
+Contest ID: 455
+Index: A
+Handle: Addy007
+Submission ID: 15201829
+Submission Time: 1452071530
+
+
+Contest ID: 455
+Index: A
+Handle: QwertyR
+Submission ID: 12900461
+Submission Time: 1441730048
+
+
+Contest ID: 455
+Index: A
+Handle: archit1995
+Submission ID: 13702771
+Submission Time: 1445108589
+
+
+Contest ID: 455
+Index: A
+Handle: KK_ndv
+Submission ID: 19784984
+Submission Time: 1470921892
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 8535401
+Submission Time: 1415018069
+
+
+Contest ID: 455
+Index: A
+Handle: qwertul
+Submission ID: 11184723
+Submission Time: 1432186641
+
+
+Contest ID: 455
+Index: A
+Handle: voquocthang
+Submission ID: 19892285
+Submission Time: 1471279571
+
+
+Contest ID: 455
+Index: A
+Handle: Marci
+Submission ID: 21468792
+Submission Time: 1476570737
+
+
+Contest ID: 455
+Index: A
+Handle: vitux
+Submission ID: 7377481
+Submission Time: 1407512124
+
+
+Contest ID: 455
+Index: A
+Handle: swpnljn
+Submission ID: 11356250
+Submission Time: 1432986387
+
+
+Contest ID: 455
+Index: A
+Handle: 51001
+Submission ID: 13190930
+Submission Time: 1443023438
+
+
+Contest ID: 455
+Index: A
+Handle: moldi
+Submission ID: 27167011
+Submission Time: 1494959824
+
+
+Contest ID: 455
+Index: A
+Handle: ilim
+Submission ID: 16558405
+Submission Time: 1457300074
+
+
+Contest ID: 455
+Index: A
+Handle: whyhow
+Submission ID: 21377040
+Submission Time: 1476262359
+
+
+Contest ID: 455
+Index: A
+Handle: GeoeyMexicanu
+Submission ID: 25024081
+Submission Time: 1488058306
+
+
+Contest ID: 455
+Index: A
+Handle: ngdkhoa
+Submission ID: 26498883
+Submission Time: 1492614871
+
+
+Contest ID: 455
+Index: A
+Handle: wrinx
+Submission ID: 13332836
+Submission Time: 1443716821
+
+
+Contest ID: 455
+Index: A
+Handle: ProoMas
+Submission ID: 7930570
+Submission Time: 1411500234
+
+
+Contest ID: 455
+Index: A
+Handle: Etrapanob
+Submission ID: 15977476
+Submission Time: 1455306333
+
+
+Contest ID: 455
+Index: A
+Handle: varun99
+Submission ID: 13541729
+Submission Time: 1444546394
+
+
+Contest ID: 455
+Index: A
+Handle: Tal3aT
+Submission ID: 16857314
+Submission Time: 1458568589
+
+
+Contest ID: 455
+Index: A
+Handle: travelers
+Submission ID: 20098624
+Submission Time: 1472015300
+
+
+Contest ID: 455
+Index: A
+Handle: awidardi
+Submission ID: 11992654
+Submission Time: 1436499925
+
+
+Contest ID: 455
+Index: A
+Handle: nareshkumar3132
+Submission ID: 7408071
+Submission Time: 1407609678
+
+
+Contest ID: 455
+Index: A
+Handle: aku10
+Submission ID: 32306204
+Submission Time: 1510646568
+
+
+Contest ID: 455
+Index: A
+Handle: nikicode
+Submission ID: 32926554
+Submission Time: 1512407024
+
+
+Contest ID: 455
+Index: A
+Handle: avi_gunner
+Submission ID: 18683395
+Submission Time: 1466705476
+
+
+Contest ID: 455
+Index: A
+Handle: sha-1
+Submission ID: 8127656
+Submission Time: 1412667607
+
+
+Contest ID: 455
+Index: A
+Handle: nimishagarg_ng
+Submission ID: 27354499
+Submission Time: 1495797597
+
+
+Contest ID: 455
+Index: A
+Handle: hocattuongltv
+Submission ID: 26122420
+Submission Time: 1491310628
+
+
+Contest ID: 455
+Index: A
+Handle: blank123
+Submission ID: 7645606
+Submission Time: 1409408677
+
+
+Contest ID: 455
+Index: A
+Handle: md.ashif313
+Submission ID: 23834634
+Submission Time: 1484473609
+
+
+Contest ID: 455
+Index: A
+Handle: KARM
+Submission ID: 15188401
+Submission Time: 1451978436
+
+
+Contest ID: 455
+Index: A
+Handle: OscarGauss
+Submission ID: 10360951
+Submission Time: 1426799745
+
+
+Contest ID: 455
+Index: A
+Handle: xcepti0n
+Submission ID: 16730994
+Submission Time: 1458059643
+
+
+Contest ID: 455
+Index: A
+Handle: srinivas_8025
+Submission ID: 20498801
+Submission Time: 1473516577
+
+
+Contest ID: 455
+Index: A
+Handle: VietaFan
+Submission ID: 7396137
+Submission Time: 1407525750
+
+
+Contest ID: 455
+Index: A
+Handle: pparwal12
+Submission ID: 12725369
+Submission Time: 1440715890
+
+
+Contest ID: 455
+Index: A
+Handle: amanjain110893
+Submission ID: 7382039
+Submission Time: 1407513240
+
+
+Contest ID: 455
+Index: A
+Handle: SyrianPetr
+Submission ID: 10189087
+Submission Time: 1425725801
+
+
+Contest ID: 455
+Index: A
+Handle: ReiujiNana
+Submission ID: 31938057
+Submission Time: 1509511203
+
+
+Contest ID: 455
+Index: A
+Handle: Joomartmyrza.com
+Submission ID: 33157316
+Submission Time: 1513087824
+
+
+Contest ID: 455
+Index: A
+Handle: Foster__
+Submission ID: 25303840
+Submission Time: 1488837062
+
+
+Contest ID: 455
+Index: A
+Handle: FelixChen
+Submission ID: 30965753
+Submission Time: 1507029898
+
+
+Contest ID: 455
+Index: A
+Handle: khangkhangtg
+Submission ID: 23267084
+Submission Time: 1482567722
+
+
+Contest ID: 455
+Index: A
+Handle: neerajbattan
+Submission ID: 13553030
+Submission Time: 1444617936
+
+
+Contest ID: 455
+Index: A
+Handle: 14619486
+Submission ID: 23005121
+Submission Time: 1481803397
+
+
+Contest ID: 455
+Index: A
+Handle: godliness
+Submission ID: 9192879
+Submission Time: 1418955193
+
+
+Contest ID: 455
+Index: A
+Handle: chatpati
+Submission ID: 11514878
+Submission Time: 1433880124
+
+
+Contest ID: 455
+Index: A
+Handle: nguyengoctu
+Submission ID: 12613452
+Submission Time: 1440060718
+
+
+Contest ID: 455
+Index: A
+Handle: linkinu
+Submission ID: 21621999
+Submission Time: 1476978122
+
+
+Contest ID: 455
+Index: A
+Handle: MAMBA
+Submission ID: 23235247
+Submission Time: 1482435279
+
+
+Contest ID: 455
+Index: A
+Handle: Hell__boy
+Submission ID: 18294479
+Submission Time: 1465370200
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 16898803
+Submission Time: 1458769792
+
+
+Contest ID: 455
+Index: A
+Handle: R4mt1n
+Submission ID: 8599404
+Submission Time: 1415344741
+
+
+Contest ID: 455
+Index: A
+Handle: koosha
+Submission ID: 9477057
+Submission Time: 1421678773
+
+
+Contest ID: 455
+Index: A
+Handle: KhaledKEE
+Submission ID: 10150727
+Submission Time: 1425485777
+
+
+Contest ID: 455
+Index: A
+Handle: Jetpack
+Submission ID: 12158288
+Submission Time: 1437542966
+
+
+Contest ID: 455
+Index: A
+Handle: ekaterine2017
+Submission ID: 33597302
+Submission Time: 1514132396
+
+
+Contest ID: 455
+Index: A
+Handle: artemohanjanyan
+Submission ID: 7395961
+Submission Time: 1407525481
+
+
+Contest ID: 455
+Index: A
+Handle: vrabie.victor.30
+Submission ID: 17520806
+Submission Time: 1461671549
+
+
+Contest ID: 455
+Index: A
+Handle: r_pandaa
+Submission ID: 33006026
+Submission Time: 1512664592
+
+
+Contest ID: 455
+Index: A
+Handle: BekaAbU
+Submission ID: 18271490
+Submission Time: 1465222114
+
+
+Contest ID: 455
+Index: A
+Handle: terktana18
+Submission ID: 26200295
+Submission Time: 1491586377
+
+
+Contest ID: 455
+Index: A
+Handle: attiw
+Submission ID: 30219066
+Submission Time: 1504939704
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 33570291
+Submission Time: 1514044981
+
+
+Contest ID: 455
+Index: A
+Handle: raiymbek
+Submission ID: 30820002
+Submission Time: 1506658913
+
+
+Contest ID: 455
+Index: A
+Handle: anparvez101
+Submission ID: 30127186
+Submission Time: 1504689711
+
+
+Contest ID: 455
+Index: A
+Handle: apathism
+Submission ID: 7382222
+Submission Time: 1407513292
+
+
+Contest ID: 455
+Index: A
+Handle: puniluca
+Submission ID: 32000040
+Submission Time: 1509694370
+
+
+Contest ID: 455
+Index: A
+Handle: ISMAIL_HOSSAIN
+Submission ID: 24859957
+Submission Time: 1487646685
+
+
+Contest ID: 455
+Index: A
+Handle: letsLoseOnceAgain
+Submission ID: 10480276
+Submission Time: 1427413920
+
+
+Contest ID: 455
+Index: A
+Handle: Alhelal_bjit
+Submission ID: 7944933
+Submission Time: 1411642743
+
+
+Contest ID: 455
+Index: A
+Handle: vas.and.tor
+Submission ID: 7385226
+Submission Time: 1407514268
+
+
+Contest ID: 455
+Index: A
+Handle: TheDarkning
+Submission ID: 32139964
+Submission Time: 1510145510
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 7441149
+Submission Time: 1407923131
+
+
+Contest ID: 455
+Index: A
+Handle: rezaGhanbari76
+Submission ID: 26585801
+Submission Time: 1492870839
+
+
+Contest ID: 455
+Index: A
+Handle: Akshay471
+Submission ID: 22205678
+Submission Time: 1479119639
+
+
+Contest ID: 455
+Index: A
+Handle: rishabhjain1996
+Submission ID: 24586597
+Submission Time: 1486807673
+
+
+Contest ID: 455
+Index: A
+Handle: suvrojit_06
+Submission ID: 33756945
+Submission Time: 1514543225
+
+
+Contest ID: 455
+Index: A
+Handle: iCUbe
+Submission ID: 25468559
+Submission Time: 1489480274
+
+
+Contest ID: 455
+Index: A
+Handle: Omar.Zak22220000
+Submission ID: 24467348
+Submission Time: 1486380373
+
+
+Contest ID: 455
+Index: A
+Handle: iamsardorbek
+Submission ID: 23686402
+Submission Time: 1484073725
+
+
+Contest ID: 455
+Index: A
+Handle: 34517192712
+Submission ID: 14348633
+Submission Time: 1447959342
+
+
+Contest ID: 455
+Index: A
+Handle: ehsanhy79
+Submission ID: 31134871
+Submission Time: 1507444762
+
+
+Contest ID: 455
+Index: A
+Handle: programajor
+Submission ID: 24460496
+Submission Time: 1486339758
+
+
+Contest ID: 455
+Index: A
+Handle: alarrab
+Submission ID: 27467600
+Submission Time: 1496236788
+
+
+Contest ID: 455
+Index: A
+Handle: yoones.rezaei
+Submission ID: 7378866
+Submission Time: 1407512429
+
+
+Contest ID: 455
+Index: A
+Handle: enderheanz
+Submission ID: 28071128
+Submission Time: 1498549377
+
+
+Contest ID: 455
+Index: A
+Handle: leaen
+Submission ID: 32321717
+Submission Time: 1510703266
+
+
+Contest ID: 455
+Index: A
+Handle: KArs
+Submission ID: 7855159
+Submission Time: 1411139384
+
+
+Contest ID: 455
+Index: A
+Handle: ThunderStroke
+Submission ID: 10088691
+Submission Time: 1425155311
+
+
+Contest ID: 455
+Index: A
+Handle: ikbal
+Submission ID: 7377466
+Submission Time: 1407512119
+
+
+Contest ID: 455
+Index: A
+Handle: Ladaone
+Submission ID: 24285041
+Submission Time: 1485852162
+
+
+Contest ID: 455
+Index: A
+Handle: polossk
+Submission ID: 7385741
+Submission Time: 1407514459
+
+
+Contest ID: 455
+Index: A
+Handle: Cobalt
+Submission ID: 8701571
+Submission Time: 1416046998
+
+
+Contest ID: 455
+Index: A
+Handle: coder1945
+Submission ID: 28713830
+Submission Time: 1500531581
+
+
+Contest ID: 455
+Index: A
+Handle: vikax
+Submission ID: 11633908
+Submission Time: 1434636927
+
+
+Contest ID: 455
+Index: A
+Handle: seppemarotta
+Submission ID: 10173104
+Submission Time: 1425622067
+
+
+Contest ID: 455
+Index: A
+Handle: dagarishabh
+Submission ID: 25583494
+Submission Time: 1489781269
+
+
+Contest ID: 455
+Index: A
+Handle: code_saavan
+Submission ID: 25308845
+Submission Time: 1488869043
+
+
+Contest ID: 455
+Index: A
+Handle: TripleM5da
+Submission ID: 17519401
+Submission Time: 1461661908
+
+
+Contest ID: 455
+Index: A
+Handle: coder_rachna
+Submission ID: 24486555
+Submission Time: 1486466217
+
+
+Contest ID: 455
+Index: A
+Handle: Ahmed_Ben_Abdallah
+Submission ID: 22277404
+Submission Time: 1479330257
+
+
+Contest ID: 455
+Index: A
+Handle: Moustafa_Abass
+Submission ID: 7514934
+Submission Time: 1408528130
+
+
+Contest ID: 455
+Index: A
+Handle: MohamedMahmoudHassan
+Submission ID: 28822948
+Submission Time: 1500895817
+
+
+Contest ID: 455
+Index: A
+Handle: Vivek1998299
+Submission ID: 33805974
+Submission Time: 1514627578
+
+
+Contest ID: 455
+Index: A
+Handle: surbhianand231994
+Submission ID: 16731819
+Submission Time: 1458063088
+
+
+Contest ID: 455
+Index: A
+Handle: midnight999
+Submission ID: 8689649
+Submission Time: 1415929017
+
+
+Contest ID: 455
+Index: A
+Handle: zaneyu
+Submission ID: 29498431
+Submission Time: 1502866706
+
+
+Contest ID: 455
+Index: A
+Handle: rprtr258
+Submission ID: 12727489
+Submission Time: 1440742931
+
+
+Contest ID: 455
+Index: A
+Handle: Aerth
+Submission ID: 14050803
+Submission Time: 1446607118
+
+
+Contest ID: 455
+Index: A
+Handle: theMonkeyKing
+Submission ID: 21662260
+Submission Time: 1477127880
+
+
+Contest ID: 455
+Index: A
+Handle: saraguru50
+Submission ID: 16748291
+Submission Time: 1458142393
+
+
+Contest ID: 455
+Index: A
+Handle: agent_025
+Submission ID: 29352115
+Submission Time: 1502452736
+
+
+Contest ID: 455
+Index: A
+Handle: oldpig
+Submission ID: 7382049
+Submission Time: 1407513243
+
+
+Contest ID: 455
+Index: A
+Handle: abhishek_dev
+Submission ID: 30950472
+Submission Time: 1506967676
+
+
+Contest ID: 455
+Index: A
+Handle: Salama96
+Submission ID: 20644024
+Submission Time: 1473956785
+
+
+Contest ID: 455
+Index: A
+Handle: pururuto
+Submission ID: 20834997
+Submission Time: 1474627368
+
+
+Contest ID: 455
+Index: A
+Handle: mayank_kishore
+Submission ID: 12239784
+Submission Time: 1437995194
+
+
+Contest ID: 455
+Index: A
+Handle: MottoX
+Submission ID: 7388837
+Submission Time: 1407515686
+
+
+Contest ID: 455
+Index: A
+Handle: Santhosh219
+Submission ID: 33840019
+Submission Time: 1514763336
+
+
+Contest ID: 455
+Index: A
+Handle: anu_baba
+Submission ID: 22776075
+Submission Time: 1481086532
+
+
+Contest ID: 455
+Index: A
+Handle: hiwang123
+Submission ID: 7401961
+Submission Time: 1407566058
+
+
+Contest ID: 455
+Index: A
+Handle: bradyawn
+Submission ID: 31521613
+Submission Time: 1508464960
+
+
+Contest ID: 455
+Index: A
+Handle: sahildua2305
+Submission ID: 9913884
+Submission Time: 1424261487
+
+
+Contest ID: 455
+Index: A
+Handle: smashthosepies
+Submission ID: 14352546
+Submission Time: 1447976494
+
+
+Contest ID: 455
+Index: A
+Handle: newbie2015
+Submission ID: 11582091
+Submission Time: 1434288293
+
+
+Contest ID: 455
+Index: A
+Handle: kpriyanshu256
+Submission ID: 32765434
+Submission Time: 1511931385
+
+
+Contest ID: 455
+Index: A
+Handle: maharshi.vyas
+Submission ID: 18043361
+Submission Time: 1464006051
+
+
+Contest ID: 455
+Index: A
+Handle: Haedarah_Ali
+Submission ID: 21219174
+Submission Time: 1475691910
+
+
+Contest ID: 455
+Index: A
+Handle: IMartin
+Submission ID: 7515850
+Submission Time: 1408536949
+
+
+Contest ID: 455
+Index: A
+Handle: shivek_nsit
+Submission ID: 9962915
+Submission Time: 1424634687
+
+
+Contest ID: 455
+Index: A
+Handle: Somesh_963
+Submission ID: 32130931
+Submission Time: 1510089820
+
+
+Contest ID: 455
+Index: A
+Handle: sajalagrawal
+Submission ID: 32760186
+Submission Time: 1511900367
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 28953276
+Submission Time: 1501246250
+
+
+Contest ID: 455
+Index: A
+Handle: ashwinreal
+Submission ID: 16036775
+Submission Time: 1455554941
+
+
+Contest ID: 455
+Index: A
+Handle: egharaei1379
+Submission ID: 14439554
+Submission Time: 1448370176
+
+
+Contest ID: 455
+Index: A
+Handle: 835124694
+Submission ID: 19073622
+Submission Time: 1468415554
+
+
+Contest ID: 455
+Index: A
+Handle: kunalsulekh
+Submission ID: 26109413
+Submission Time: 1491256636
+
+
+Contest ID: 455
+Index: A
+Handle: RaduH
+Submission ID: 12487294
+Submission Time: 1439443494
+
+
+Contest ID: 455
+Index: A
+Handle: fotia
+Submission ID: 20755824
+Submission Time: 1474290186
+
+
+Contest ID: 455
+Index: A
+Handle: abdullahalmamun1145093
+Submission ID: 23696564
+Submission Time: 1484128635
+
+
+Contest ID: 455
+Index: A
+Handle: limeworm
+Submission ID: 9293461
+Submission Time: 1419790257
+
+
+Contest ID: 455
+Index: A
+Handle: senbihan
+Submission ID: 27209002
+Submission Time: 1495176347
+
+
+Contest ID: 455
+Index: A
+Handle: Quick
+Submission ID: 16282894
+Submission Time: 1456168899
+
+
+Contest ID: 455
+Index: A
+Handle: SmartCoder
+Submission ID: 7612364
+Submission Time: 1409217566
+
+
+Contest ID: 455
+Index: A
+Handle: dpark3542
+Submission ID: 8624825
+Submission Time: 1415552032
+
+
+Contest ID: 455
+Index: A
+Handle: ThatOtherGuy
+Submission ID: 20898944
+Submission Time: 1474763803
+
+
+Contest ID: 455
+Index: A
+Handle: abdulla.ashraf
+Submission ID: 14715569
+Submission Time: 1449675740
+
+
+Contest ID: 455
+Index: A
+Handle: Dream_kid
+Submission ID: 29610466
+Submission Time: 1503189471
+
+
+Contest ID: 455
+Index: A
+Handle: Ghaieth
+Submission ID: 8272224
+Submission Time: 1413486339
+
+
+Contest ID: 455
+Index: A
+Handle: tiliguzov
+Submission ID: 30569121
+Submission Time: 1505978362
+
+
+Contest ID: 455
+Index: A
+Handle: bio_coder
+Submission ID: 16771977
+Submission Time: 1458248648
+
+
+Contest ID: 455
+Index: A
+Handle: Rashid46
+Submission ID: 26083989
+Submission Time: 1491157753
+
+
+Contest ID: 455
+Index: A
+Handle: blaskwolf
+Submission ID: 12722720
+Submission Time: 1440696330
+
+
+Contest ID: 455
+Index: A
+Handle: tssc67
+Submission ID: 21460139
+Submission Time: 1476542520
+
+
+Contest ID: 455
+Index: A
+Handle: killerbb
+Submission ID: 13284504
+Submission Time: 1443460672
+
+
+Contest ID: 455
+Index: A
+Handle: mauguignard
+Submission ID: 13793685
+Submission Time: 1445524091
+
+
+Contest ID: 455
+Index: A
+Handle: eggeek
+Submission ID: 17588465
+Submission Time: 1461983295
+
+
+Contest ID: 455
+Index: A
+Handle: marsas
+Submission ID: 10292904
+Submission Time: 1426443694
+
+
+Contest ID: 455
+Index: A
+Handle: boad
+Submission ID: 27811865
+Submission Time: 1497560751
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 14582182
+Submission Time: 1448964855
+
+
+Contest ID: 455
+Index: A
+Handle: JohStraat
+Submission ID: 8804583
+Submission Time: 1416674357
+
+
+Contest ID: 455
+Index: A
+Handle: prince.ub33
+Submission ID: 10821291
+Submission Time: 1429700612
+
+
+Contest ID: 455
+Index: A
+Handle: ktime
+Submission ID: 18835717
+Submission Time: 1467355823
+
+
+Contest ID: 455
+Index: A
+Handle: 0-_0-_-0_-0
+Submission ID: 29361852
+Submission Time: 1502477723
+
+
+Contest ID: 455
+Index: A
+Handle: gaabs
+Submission ID: 23476185
+Submission Time: 1483223217
+
+
+Contest ID: 455
+Index: A
+Handle: blowUpTheStonySilence
+Submission ID: 18857956
+Submission Time: 1467482158
+
+
+Contest ID: 455
+Index: A
+Handle: FabioV
+Submission ID: 17089472
+Submission Time: 1459512071
+
+
+Contest ID: 455
+Index: A
+Handle: Celestior
+Submission ID: 22497687
+Submission Time: 1480107341
+
+
+Contest ID: 455
+Index: A
+Handle: x89
+Submission ID: 11189857
+Submission Time: 1432212126
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 19377803
+Submission Time: 1469341888
+
+
+Contest ID: 455
+Index: A
+Handle: dumbkid
+Submission ID: 15329365
+Submission Time: 1452681281
+
+
+Contest ID: 455
+Index: A
+Handle: Deadpool
+Submission ID: 28494940
+Submission Time: 1499933110
+
+
+Contest ID: 455
+Index: A
+Handle: aDarkSide
+Submission ID: 24630668
+Submission Time: 1486999083
+
+
+Contest ID: 455
+Index: A
+Handle: ayushjain081
+Submission ID: 24590651
+Submission Time: 1486820127
+
+
+Contest ID: 455
+Index: A
+Handle: Combi
+Submission ID: 32304666
+Submission Time: 1510641749
+
+
+Contest ID: 455
+Index: A
+Handle: skyhawk_14
+Submission ID: 29294967
+Submission Time: 1502236393
+
+
+Contest ID: 455
+Index: A
+Handle: syuct_robot
+Submission ID: 29371144
+Submission Time: 1502522379
+
+
+Contest ID: 455
+Index: A
+Handle: artxdmaster
+Submission ID: 13698135
+Submission Time: 1445102963
+
+
+Contest ID: 455
+Index: A
+Handle: RCro
+Submission ID: 29798121
+Submission Time: 1503727344
+
+
+Contest ID: 455
+Index: A
+Handle: v_4_vendetta
+Submission ID: 30719859
+Submission Time: 1506341756
+
+
+Contest ID: 455
+Index: A
+Handle: Big-feng
+Submission ID: 11104122
+Submission Time: 1431669946
+
+
+Contest ID: 455
+Index: A
+Handle: anhisgod2017
+Submission ID: 31509788
+Submission Time: 1508420098
+
+
+Contest ID: 455
+Index: A
+Handle: AboAlmanal
+Submission ID: 16609037
+Submission Time: 1457474312
+
+
+Contest ID: 455
+Index: A
+Handle: poyodr
+Submission ID: 20618142
+Submission Time: 1473863096
+
+
+Contest ID: 455
+Index: A
+Handle: Malseelawi
+Submission ID: 28261026
+Submission Time: 1499101029
+
+
+Contest ID: 455
+Index: A
+Handle: Abrand
+Submission ID: 24083854
+Submission Time: 1485230111
+
+
+Contest ID: 455
+Index: A
+Handle: tyamgin
+Submission ID: 7377783
+Submission Time: 1407512208
+
+
+Contest ID: 455
+Index: A
+Handle: gritukan
+Submission ID: 11524217
+Submission Time: 1433956905
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 20609061
+Submission Time: 1473840468
+
+
+Contest ID: 455
+Index: A
+Handle: hasan_356
+Submission ID: 31577862
+Submission Time: 1508596798
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 14627994
+Submission Time: 1449111687
+
+
+Contest ID: 455
+Index: A
+Handle: raja1999
+Submission ID: 26060279
+Submission Time: 1491066514
+
+
+Contest ID: 455
+Index: A
+Handle: D_Star
+Submission ID: 14003737
+Submission Time: 1446368133
+
+
+Contest ID: 455
+Index: A
+Handle: kkkrt
+Submission ID: 22852938
+Submission Time: 1481366642
+
+
+Contest ID: 455
+Index: A
+Handle: turing_
+Submission ID: 19020266
+Submission Time: 1468211593
+
+
+Contest ID: 455
+Index: A
+Handle: denmel14
+Submission ID: 24072993
+Submission Time: 1485181710
+
+
+Contest ID: 455
+Index: A
+Handle: problem_destroyer420
+Submission ID: 34277092
+Submission Time: 1516282527
+
+
+Contest ID: 455
+Index: A
+Handle: godliness
+Submission ID: 9192875
+Submission Time: 1418955111
+
+
+Contest ID: 455
+Index: A
+Handle: Alexandr_TS
+Submission ID: 8173610
+Submission Time: 1413023739
+
+
+Contest ID: 455
+Index: A
+Handle: spk
+Submission ID: 17692503
+Submission Time: 1462207831
+
+
+Contest ID: 455
+Index: A
+Handle: JiangXd
+Submission ID: 7422634
+Submission Time: 1407723291
+
+
+Contest ID: 455
+Index: A
+Handle: the_sage
+Submission ID: 24584111
+Submission Time: 1486797198
+
+
+Contest ID: 455
+Index: A
+Handle: tuankaito95
+Submission ID: 10574830
+Submission Time: 1428160342
+
+
+Contest ID: 455
+Index: A
+Handle: OmaeWaMouShenDeiru
+Submission ID: 11404693
+Submission Time: 1433351904
+
+
+Contest ID: 455
+Index: A
+Handle: mahesh24
+Submission ID: 12337056
+Submission Time: 1438684478
+
+
+Contest ID: 455
+Index: A
+Handle: divash
+Submission ID: 10832805
+Submission Time: 1429779648
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 25397965
+Submission Time: 1489220075
+
+
+Contest ID: 455
+Index: A
+Handle: divyam
+Submission ID: 15184805
+Submission Time: 1451935089
+
+
+Contest ID: 455
+Index: A
+Handle: monsomoe
+Submission ID: 9812950
+Submission Time: 1423796078
+
+
+Contest ID: 455
+Index: A
+Handle: __Tasnim__
+Submission ID: 28821700
+Submission Time: 1500891745
+
+
+Contest ID: 455
+Index: A
+Handle: lobezno
+Submission ID: 24462622
+Submission Time: 1486357447
+
+
+Contest ID: 455
+Index: A
+Handle: andremacareno
+Submission ID: 26641424
+Submission Time: 1493039909
+
+
+Contest ID: 455
+Index: A
+Handle: omayma95
+Submission ID: 22561226
+Submission Time: 1480284803
+
+
+Contest ID: 455
+Index: A
+Handle: ENTP
+Submission ID: 12353197
+Submission Time: 1438789311
+
+
+Contest ID: 455
+Index: A
+Handle: filipetrm
+Submission ID: 14641845
+Submission Time: 1449199707
+
+
+Contest ID: 455
+Index: A
+Handle: Wajdy
+Submission ID: 24237170
+Submission Time: 1485640833
+
+
+Contest ID: 455
+Index: A
+Handle: pedrohlf
+Submission ID: 15196335
+Submission Time: 1452025884
+
+
+Contest ID: 455
+Index: A
+Handle: sr123
+Submission ID: 16255223
+Submission Time: 1456035943
+
+
+Contest ID: 455
+Index: A
+Handle: 071-22041-07-Almaz
+Submission ID: 27534830
+Submission Time: 1496460066
+
+
+Contest ID: 455
+Index: A
+Handle: khalednabil
+Submission ID: 24326624
+Submission Time: 1485893084
+
+
+Contest ID: 455
+Index: A
+Handle: zakharvoit
+Submission ID: 10706188
+Submission Time: 1429028838
+
+
+Contest ID: 455
+Index: A
+Handle: lileiva22
+Submission ID: 20183278
+Submission Time: 1472242695
+
+
+Contest ID: 455
+Index: A
+Handle: ErvinK
+Submission ID: 7731681
+Submission Time: 1410308663
+
+
+Contest ID: 455
+Index: A
+Handle: Grossmester
+Submission ID: 7653671
+Submission Time: 1409485226
+
+
+Contest ID: 455
+Index: A
+Handle: kevalya
+Submission ID: 10854164
+Submission Time: 1429919478
+
+
+Contest ID: 455
+Index: A
+Handle: R.kh2002
+Submission ID: 30815836
+Submission Time: 1506631835
+
+
+Contest ID: 455
+Index: A
+Handle: Machrom
+Submission ID: 23988440
+Submission Time: 1484915595
+
+
+Contest ID: 455
+Index: A
+Handle: ShalinShah28
+Submission ID: 10052131
+Submission Time: 1425043008
+
+
+Contest ID: 455
+Index: A
+Handle: kaushalag29
+Submission ID: 29812595
+Submission Time: 1503771508
+
+
+Contest ID: 455
+Index: A
+Handle: Marauderer
+Submission ID: 27889659
+Submission Time: 1497811197
+
+
+Contest ID: 455
+Index: A
+Handle: pratyaksh
+Submission ID: 7396324
+Submission Time: 1407526176
+
+
+Contest ID: 455
+Index: A
+Handle: greedyman
+Submission ID: 14418755
+Submission Time: 1448220892
+
+
+Contest ID: 455
+Index: A
+Handle: Sakudo
+Submission ID: 10288201
+Submission Time: 1426422868
+
+
+Contest ID: 455
+Index: A
+Handle: jekus
+Submission ID: 25835092
+Submission Time: 1490607015
+
+
+Contest ID: 455
+Index: A
+Handle: dp_hunter
+Submission ID: 16259355
+Submission Time: 1456061050
+
+
+Contest ID: 455
+Index: A
+Handle: 3agwa
+Submission ID: 20020337
+Submission Time: 1471761712
+
+
+Contest ID: 455
+Index: A
+Handle: Diazzz
+Submission ID: 15900145
+Submission Time: 1454953674
+
+
+Contest ID: 455
+Index: A
+Handle: EMINAYAR
+Submission ID: 7378529
+Submission Time: 1407512365
+
+
+Contest ID: 455
+Index: A
+Handle: _nova_
+Submission ID: 25803372
+Submission Time: 1490464226
+
+
+Contest ID: 455
+Index: A
+Handle: H.Steiner
+Submission ID: 12094839
+Submission Time: 1437134070
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 10868839
+Submission Time: 1430038692
+
+
+Contest ID: 455
+Index: A
+Handle: X-Ra-X
+Submission ID: 30935642
+Submission Time: 1506928192
+
+
+Contest ID: 455
+Index: A
+Handle: audwls031
+Submission ID: 27124154
+Submission Time: 1494860234
+
+
+Contest ID: 455
+Index: A
+Handle: Infinite_M
+Submission ID: 27952627
+Submission Time: 1498077509
+
+
+Contest ID: 455
+Index: A
+Handle: fafal_abnir
+Submission ID: 10497877
+Submission Time: 1427532103
+
+
+Contest ID: 455
+Index: A
+Handle: offson
+Submission ID: 12299908
+Submission Time: 1438411202
+
+
+Contest ID: 455
+Index: A
+Handle: Mahmouddd
+Submission ID: 11885051
+Submission Time: 1435768116
+
+
+Contest ID: 455
+Index: A
+Handle: NekuSakuraba
+Submission ID: 31873403
+Submission Time: 1509298132
+
+
+Contest ID: 455
+Index: A
+Handle: taxi_driver
+Submission ID: 23836474
+Submission Time: 1484481209
+
+
+Contest ID: 455
+Index: A
+Handle: 000kevin
+Submission ID: 25559717
+Submission Time: 1489696160
+
+
+Contest ID: 455
+Index: A
+Handle: Pupil.
+Submission ID: 19156221
+Submission Time: 1468595074
+
+
+Contest ID: 455
+Index: A
+Handle: karimelghazouly
+Submission ID: 22504239
+Submission Time: 1480149817
+
+
+Contest ID: 455
+Index: A
+Handle: Inactivated
+Submission ID: 12235836
+Submission Time: 1437976770
+
+
+Contest ID: 455
+Index: A
+Handle: rockzh
+Submission ID: 7432050
+Submission Time: 1407815013
+
+
+Contest ID: 455
+Index: A
+Handle: iCanCodeBro
+Submission ID: 30382232
+Submission Time: 1505562875
+
+
+Contest ID: 455
+Index: A
+Handle: mnciitbhu
+Submission ID: 27679188
+Submission Time: 1496957608
+
+
+Contest ID: 455
+Index: A
+Handle: Pambisito
+Submission ID: 25807958
+Submission Time: 1490483267
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 26301659
+Submission Time: 1491921713
+
+
+Contest ID: 455
+Index: A
+Handle: XmtosX
+Submission ID: 25166561
+Submission Time: 1488534256
+
+
+Contest ID: 455
+Index: A
+Handle: alihaghighatjavan
+Submission ID: 9391021
+Submission Time: 1420798666
+
+
+Contest ID: 455
+Index: A
+Handle: charan007
+Submission ID: 33815357
+Submission Time: 1514653468
+
+
+Contest ID: 455
+Index: A
+Handle: Tasneem-almoallem
+Submission ID: 34078060
+Submission Time: 1515622679
+
+
+Contest ID: 455
+Index: A
+Handle: hznu2
+Submission ID: 23575038
+Submission Time: 1483666531
+
+
+Contest ID: 455
+Index: A
+Handle: moyuyu
+Submission ID: 16559564
+Submission Time: 1457314276
+
+
+Contest ID: 455
+Index: A
+Handle: idontcareanymore
+Submission ID: 19454085
+Submission Time: 1469680738
+
+
+Contest ID: 455
+Index: A
+Handle: WaseemKntar
+Submission ID: 17425008
+Submission Time: 1461271948
+
+
+Contest ID: 455
+Index: A
+Handle: wilyin
+Submission ID: 7378554
+Submission Time: 1407512369
+
+
+Contest ID: 455
+Index: A
+Handle: sm_hemel
+Submission ID: 28740149
+Submission Time: 1500614780
+
+
+Contest ID: 455
+Index: A
+Handle: JohStraat
+Submission ID: 8804629
+Submission Time: 1416674618
+
+
+Contest ID: 455
+Index: A
+Handle: rajatthakur
+Submission ID: 19279255
+Submission Time: 1469015271
+
+
+Contest ID: 455
+Index: A
+Handle: Lo_R_D
+Submission ID: 7399049
+Submission Time: 1407547344
+
+
+Contest ID: 455
+Index: A
+Handle: lochuynhvinh
+Submission ID: 18115492
+Submission Time: 1464340630
+
+
+Contest ID: 455
+Index: A
+Handle: Jackae98
+Submission ID: 16461946
+Submission Time: 1456914695
+
+
+Contest ID: 455
+Index: A
+Handle: tasneem.sharaf97
+Submission ID: 19879744
+Submission Time: 1471233769
+
+
+Contest ID: 455
+Index: A
+Handle: 5edro
+Submission ID: 9873937
+Submission Time: 1424107009
+
+
+Contest ID: 455
+Index: A
+Handle: segmentrees
+Submission ID: 16457631
+Submission Time: 1456895568
+
+
+Contest ID: 455
+Index: A
+Handle: TxCowboy
+Submission ID: 9638067
+Submission Time: 1422688185
+
+
+Contest ID: 455
+Index: A
+Handle: Serfcx
+Submission ID: 11951910
+Submission Time: 1436207522
+
+
+Contest ID: 455
+Index: A
+Handle: rishiksingh
+Submission ID: 23336097
+Submission Time: 1482742190
+
+
+Contest ID: 455
+Index: A
+Handle: head_down
+Submission ID: 9631010
+Submission Time: 1422640176
+
+
+Contest ID: 455
+Index: A
+Handle: steveyg
+Submission ID: 8493175
+Submission Time: 1414724042
+
+
+Contest ID: 455
+Index: A
+Handle: apathism
+Submission ID: 7378950
+Submission Time: 1407512448
+
+
+Contest ID: 455
+Index: A
+Handle: hutzsl
+Submission ID: 13748414
+Submission Time: 1445331508
+
+
+Contest ID: 455
+Index: A
+Handle: Omnia.Saleh
+Submission ID: 21341051
+Submission Time: 1476112810
+
+
+Contest ID: 455
+Index: A
+Handle: luxuanchun
+Submission ID: 22896920
+Submission Time: 1481510353
+
+
+Contest ID: 455
+Index: A
+Handle: SWATMaD
+Submission ID: 7380374
+Submission Time: 1407512780
+
+
+Contest ID: 455
+Index: A
+Handle: RealAlgoBoys
+Submission ID: 29591156
+Submission Time: 1503126477
+
+
+Contest ID: 455
+Index: A
+Handle: A.O.M.
+Submission ID: 18364137
+Submission Time: 1465585793
+
+
+Contest ID: 455
+Index: A
+Handle: I_am_a_legend
+Submission ID: 30774757
+Submission Time: 1506510571
+
+
+Contest ID: 455
+Index: A
+Handle: Zangetsu101
+Submission ID: 20313808
+Submission Time: 1472692969
+
+
+Contest ID: 455
+Index: A
+Handle: _saty_
+Submission ID: 25940876
+Submission Time: 1490849522
+
+
+Contest ID: 455
+Index: A
+Handle: anhisgod2017
+Submission ID: 31507855
+Submission Time: 1508416513
+
+
+Contest ID: 455
+Index: A
+Handle: I_Just_I
+Submission ID: 15791532
+Submission Time: 1454604803
+
+
+Contest ID: 455
+Index: A
+Handle: alejo.moreno
+Submission ID: 10494249
+Submission Time: 1427488446
+
+
+Contest ID: 455
+Index: A
+Handle: z.0
+Submission ID: 16678897
+Submission Time: 1457806172
+
+
+Contest ID: 455
+Index: A
+Handle: ahmedakef
+Submission ID: 31832637
+Submission Time: 1509187418
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge5
+Submission ID: 17325826
+Submission Time: 1460720886
+
+
+Contest ID: 455
+Index: A
+Handle: Cute_handle
+Submission ID: 32906552
+Submission Time: 1512328882
+
+
+Contest ID: 455
+Index: A
+Handle: Sabo
+Submission ID: 11784618
+Submission Time: 1435408050
+
+
+Contest ID: 455
+Index: A
+Handle: implusdream
+Submission ID: 7438639
+Submission Time: 1407902122
+
+
+Contest ID: 455
+Index: A
+Handle: Resul
+Submission ID: 19613472
+Submission Time: 1470307377
+
+
+Contest ID: 455
+Index: A
+Handle: de_moss3
+Submission ID: 21868424
+Submission Time: 1477734348
+
+
+Contest ID: 455
+Index: A
+Handle: wh1te_whale
+Submission ID: 27922238
+Submission Time: 1497953146
+
+
+Contest ID: 455
+Index: A
+Handle: Glebodin
+Submission ID: 26072997
+Submission Time: 1491121228
+
+
+Contest ID: 455
+Index: A
+Handle: Neroo
+Submission ID: 15458045
+Submission Time: 1453316109
+
+
+Contest ID: 455
+Index: A
+Handle: SmokeOut
+Submission ID: 15429505
+Submission Time: 1453132188
+
+
+Contest ID: 455
+Index: A
+Handle: shubhiks1032
+Submission ID: 21173792
+Submission Time: 1475529392
+
+
+Contest ID: 455
+Index: A
+Handle: flucchini
+Submission ID: 20183733
+Submission Time: 1472245044
+
+
+Contest ID: 455
+Index: A
+Handle: smtkhaitan
+Submission ID: 17584678
+Submission Time: 1461957551
+
+
+Contest ID: 455
+Index: A
+Handle: lamnguyen
+Submission ID: 17545212
+Submission Time: 1461781524
+
+
+Contest ID: 455
+Index: A
+Handle: happiness777
+Submission ID: 7404843
+Submission Time: 1407582375
+
+
+Contest ID: 455
+Index: A
+Handle: vasu_didi
+Submission ID: 7608469
+Submission Time: 1409168843
+
+
+Contest ID: 455
+Index: A
+Handle: xuanyangge
+Submission ID: 12216629
+Submission Time: 1437754464
+
+
+Contest ID: 455
+Index: A
+Handle: abs_1998
+Submission ID: 29575204
+Submission Time: 1503073234
+
+
+Contest ID: 455
+Index: A
+Handle: _DN_
+Submission ID: 21694917
+Submission Time: 1477174207
+
+
+Contest ID: 455
+Index: A
+Handle: I_love_to_eat
+Submission ID: 18000191
+Submission Time: 1463724284
+
+
+Contest ID: 455
+Index: A
+Handle: piyal_043
+Submission ID: 24598057
+Submission Time: 1486850573
+
+
+Contest ID: 455
+Index: A
+Handle: Kuann
+Submission ID: 17932602
+Submission Time: 1463408248
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge1
+Submission ID: 29147341
+Submission Time: 1501741388
+
+
+Contest ID: 455
+Index: A
+Handle: yerkimbekov
+Submission ID: 29837746
+Submission Time: 1503889369
+
+
+Contest ID: 455
+Index: A
+Handle: goldflake
+Submission ID: 22195542
+Submission Time: 1479051159
+
+
+Contest ID: 455
+Index: A
+Handle: Baker_vai
+Submission ID: 26696267
+Submission Time: 1493270288
+
+
+Contest ID: 455
+Index: A
+Handle: sathu19
+Submission ID: 23335067
+Submission Time: 1482738512
+
+
+Contest ID: 455
+Index: A
+Handle: CZ_vino
+Submission ID: 26500014
+Submission Time: 1492618269
+
+
+Contest ID: 455
+Index: A
+Handle: I_Love_Shreyya_Rajagopal
+Submission ID: 19823147
+Submission Time: 1470989142
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 12043212
+Submission Time: 1436883563
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 25339196
+Submission Time: 1488970408
+
+
+Contest ID: 455
+Index: A
+Handle: girish347
+Submission ID: 7400923
+Submission Time: 1407559738
+
+
+Contest ID: 455
+Index: A
+Handle: subhendu_sethi
+Submission ID: 10545606
+Submission Time: 1427918952
+
+
+Contest ID: 455
+Index: A
+Handle: manas.daruka
+Submission ID: 30085548
+Submission Time: 1504561961
+
+
+Contest ID: 455
+Index: A
+Handle: Mr_Russia
+Submission ID: 14802011
+Submission Time: 1450096534
+
+
+Contest ID: 455
+Index: A
+Handle: furkanAydar
+Submission ID: 15500042
+Submission Time: 1453474041
+
+
+Contest ID: 455
+Index: A
+Handle: 13bce090
+Submission ID: 10952140
+Submission Time: 1430418220
+
+
+Contest ID: 455
+Index: A
+Handle: yuricardoso
+Submission ID: 27622709
+Submission Time: 1496790801
+
+
+Contest ID: 455
+Index: A
+Handle: krisnadwitama
+Submission ID: 27533436
+Submission Time: 1496452064
+
+
+Contest ID: 455
+Index: A
+Handle: HalfBloodPrince
+Submission ID: 13113887
+Submission Time: 1442750607
+
+
+Contest ID: 455
+Index: A
+Handle: renesmee
+Submission ID: 20985195
+Submission Time: 1475132623
+
+
+Contest ID: 455
+Index: A
+Handle: Egor_Gornak
+Submission ID: 19968836
+Submission Time: 1471629550
+
+
+Contest ID: 455
+Index: A
+Handle: MH_AMIRI
+Submission ID: 25219394
+Submission Time: 1488642256
+
+
+Contest ID: 455
+Index: A
+Handle: cjtoribio
+Submission ID: 31494484
+Submission Time: 1508367407
+
+
+Contest ID: 455
+Index: A
+Handle: ppppppps
+Submission ID: 12686465
+Submission Time: 1440433320
+
+
+Contest ID: 455
+Index: A
+Handle: tuankaito95
+Submission ID: 10574781
+Submission Time: 1428159846
+
+
+Contest ID: 455
+Index: A
+Handle: patak
+Submission ID: 30963779
+Submission Time: 1507024366
+
+
+Contest ID: 455
+Index: A
+Handle: cjtoribio
+Submission ID: 31494023
+Submission Time: 1508364171
+
+
+Contest ID: 455
+Index: A
+Handle: A00000
+Submission ID: 7854409
+Submission Time: 1411136476
+
+
+Contest ID: 455
+Index: A
+Handle: Aalchemist
+Submission ID: 23226632
+Submission Time: 1482415775
+
+
+Contest ID: 455
+Index: A
+Handle: raptor09
+Submission ID: 18405737
+Submission Time: 1465792576
+
+
+Contest ID: 455
+Index: A
+Handle: bradyawn
+Submission ID: 31521477
+Submission Time: 1508464392
+
+
+Contest ID: 455
+Index: A
+Handle: Louiso
+Submission ID: 32305619
+Submission Time: 1510644195
+
+
+Contest ID: 455
+Index: A
+Handle: beegerous
+Submission ID: 7513442
+Submission Time: 1408514485
+
+
+Contest ID: 455
+Index: A
+Handle: Marinkovic
+Submission ID: 13924570
+Submission Time: 1446074646
+
+
+Contest ID: 455
+Index: A
+Handle: OldHorses
+Submission ID: 13357876
+Submission Time: 1443869777
+
+
+Contest ID: 455
+Index: A
+Handle: makorro
+Submission ID: 20809324
+Submission Time: 1474513038
+
+
+Contest ID: 455
+Index: A
+Handle: anggi
+Submission ID: 7567928
+Submission Time: 1408897415
+
+
+Contest ID: 455
+Index: A
+Handle: saurabhrathi12
+Submission ID: 22682306
+Submission Time: 1480787835
+
+
+Contest ID: 455
+Index: A
+Handle: saymyname
+Submission ID: 7396311
+Submission Time: 1407526151
+
+
+Contest ID: 455
+Index: A
+Handle: lightmatch
+Submission ID: 19819045
+Submission Time: 1470976874
+
+
+Contest ID: 455
+Index: A
+Handle: sotota
+Submission ID: 14575427
+Submission Time: 1448908357
+
+
+Contest ID: 455
+Index: A
+Handle: mayuntao
+Submission ID: 7391043
+Submission Time: 1407516695
+
+
+Contest ID: 455
+Index: A
+Handle: Phoenix
+Submission ID: 19421093
+Submission Time: 1469531138
+
+
+Contest ID: 455
+Index: A
+Handle: nimaebrazeh
+Submission ID: 31016781
+Submission Time: 1507189482
+
+
+Contest ID: 455
+Index: A
+Handle: Eisenheim_kakarot
+Submission ID: 25163569
+Submission Time: 1488522140
+
+
+Contest ID: 455
+Index: A
+Handle: MohammadFatafta
+Submission ID: 9820878
+Submission Time: 1423863408
+
+
+Contest ID: 455
+Index: A
+Handle: AMnu
+Submission ID: 22591819
+Submission Time: 1480400108
+
+
+Contest ID: 455
+Index: A
+Handle: DragonKnight6
+Submission ID: 33217899
+Submission Time: 1513179041
+
+
+Contest ID: 455
+Index: A
+Handle: flakka
+Submission ID: 21357151
+Submission Time: 1476185322
+
+
+Contest ID: 455
+Index: A
+Handle: Nikhil97
+Submission ID: 25735666
+Submission Time: 1490279136
+
+
+Contest ID: 455
+Index: A
+Handle: tejas.pandey
+Submission ID: 9472611
+Submission Time: 1421652318
+
+
+Contest ID: 455
+Index: A
+Handle: thabraze
+Submission ID: 11133081
+Submission Time: 1431940466
+
+
+Contest ID: 455
+Index: A
+Handle: etaf
+Submission ID: 8340612
+Submission Time: 1413889926
+
+
+Contest ID: 455
+Index: A
+Handle: ASO
+Submission ID: 12592515
+Submission Time: 1439921455
+
+
+Contest ID: 455
+Index: A
+Handle: giorgigona
+Submission ID: 11262516
+Submission Time: 1432545822
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge3
+Submission ID: 12042008
+Submission Time: 1436879952
+
+
+Contest ID: 455
+Index: A
+Handle: Stormrage
+Submission ID: 14831399
+Submission Time: 1450254197
+
+
+Contest ID: 455
+Index: A
+Handle: sazid_kuet
+Submission ID: 29828475
+Submission Time: 1503843763
+
+
+Contest ID: 455
+Index: A
+Handle: A.H.Ghaznavi
+Submission ID: 29954835
+Submission Time: 1504196835
+
+
+Contest ID: 455
+Index: A
+Handle: 4991521
+Submission ID: 7382326
+Submission Time: 1407513317
+
+
+Contest ID: 455
+Index: A
+Handle: Ahmed_Ben_Abdallah
+Submission ID: 22277393
+Submission Time: 1479330187
+
+
+Contest ID: 455
+Index: A
+Handle: Perticas
+Submission ID: 11492345
+Submission Time: 1433714728
+
+
+Contest ID: 455
+Index: A
+Handle: ashishk1994
+Submission ID: 12612194
+Submission Time: 1440052162
+
+
+Contest ID: 455
+Index: A
+Handle: koltakova
+Submission ID: 7682766
+Submission Time: 1409841773
+
+
+Contest ID: 455
+Index: A
+Handle: alihaghighatjavan
+Submission ID: 9391066
+Submission Time: 1420799353
+
+
+Contest ID: 455
+Index: A
+Handle: amp1590
+Submission ID: 25469950
+Submission Time: 1489485817
+
+
+Contest ID: 455
+Index: A
+Handle: r.i
+Submission ID: 7798292
+Submission Time: 1410749755
+
+
+Contest ID: 455
+Index: A
+Handle: hazem-massoud
+Submission ID: 13720188
+Submission Time: 1445209671
+
+
+Contest ID: 455
+Index: A
+Handle: ProximaCentauri
+Submission ID: 24433377
+Submission Time: 1486216290
+
+
+Contest ID: 455
+Index: A
+Handle: bigfoot
+Submission ID: 7655965
+Submission Time: 1409505672
+
+
+Contest ID: 455
+Index: A
+Handle: armand
+Submission ID: 21334573
+Submission Time: 1476090961
+
+
+Contest ID: 455
+Index: A
+Handle: Meraxes
+Submission ID: 14256339
+Submission Time: 1447511256
+
+
+Contest ID: 455
+Index: A
+Handle: Jecihociyl
+Submission ID: 7441811
+Submission Time: 1407928873
+
+
+Contest ID: 455
+Index: A
+Handle: amlan_086
+Submission ID: 26899113
+Submission Time: 1494067625
+
+
+Contest ID: 455
+Index: A
+Handle: 14619486
+Submission ID: 23027570
+Submission Time: 1481887129
+
+
+Contest ID: 455
+Index: A
+Handle: shubhamgarg18
+Submission ID: 21168569
+Submission Time: 1475515068
+
+
+Contest ID: 455
+Index: A
+Handle: kattyrats
+Submission ID: 20032379
+Submission Time: 1471803054
+
+
+Contest ID: 455
+Index: A
+Handle: Waschbar
+Submission ID: 16312712
+Submission Time: 1456331617
+
+
+Contest ID: 455
+Index: A
+Handle: AliHajqani
+Submission ID: 8180815
+Submission Time: 1413100052
+
+
+Contest ID: 455
+Index: A
+Handle: Lobanov_VAVKO
+Submission ID: 25543058
+Submission Time: 1489655018
+
+
+Contest ID: 455
+Index: A
+Handle: Gowtham96
+Submission ID: 26362930
+Submission Time: 1492189576
+
+
+Contest ID: 455
+Index: A
+Handle: -t22t-
+Submission ID: 20148150
+Submission Time: 1472112848
+
+
+Contest ID: 455
+Index: A
+Handle: binhmuc
+Submission ID: 12313938
+Submission Time: 1438513481
+
+
+Contest ID: 455
+Index: A
+Handle: KamiShogun
+Submission ID: 27206381
+Submission Time: 1495159027
+
+
+Contest ID: 455
+Index: A
+Handle: swyam
+Submission ID: 11237789
+Submission Time: 1432382302
+
+
+Contest ID: 455
+Index: A
+Handle: ReturnOfTheKing
+Submission ID: 32784008
+Submission Time: 1511967788
+
+
+Contest ID: 455
+Index: A
+Handle: xMikeRx
+Submission ID: 27520392
+Submission Time: 1496396547
+
+
+Contest ID: 455
+Index: A
+Handle: bli0042
+Submission ID: 7379071
+Submission Time: 1407512473
+
+
+Contest ID: 455
+Index: A
+Handle: Ilnur_the_best
+Submission ID: 24013902
+Submission Time: 1485010583
+
+
+Contest ID: 455
+Index: A
+Handle: ImNotGay
+Submission ID: 8370002
+Submission Time: 1414083891
+
+
+Contest ID: 455
+Index: A
+Handle: I--o_o--I
+Submission ID: 26098441
+Submission Time: 1491220124
+
+
+Contest ID: 455
+Index: A
+Handle: jsk
+Submission ID: 12125057
+Submission Time: 1437366305
+
+
+Contest ID: 455
+Index: A
+Handle: BogdanFlorea
+Submission ID: 7395838
+Submission Time: 1407525348
+
+
+Contest ID: 455
+Index: A
+Handle: afamodarres
+Submission ID: 11507480
+Submission Time: 1433844508
+
+
+Contest ID: 455
+Index: A
+Handle: infinite6
+Submission ID: 21262918
+Submission Time: 1475859457
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge2
+Submission ID: 25398840
+Submission Time: 1489220970
+
+
+Contest ID: 455
+Index: A
+Handle: ngdkhoa
+Submission ID: 26499106
+Submission Time: 1492615570
+
+
+Contest ID: 455
+Index: A
+Handle: CMaster
+Submission ID: 10143139
+Submission Time: 1425463414
+
+
+Contest ID: 455
+Index: A
+Handle: Unravel_Visvats
+Submission ID: 19845663
+Submission Time: 1471077255
+
+
+Contest ID: 455
+Index: A
+Handle: ApoorvGupta
+Submission ID: 14171284
+Submission Time: 1447076197
+
+
+Contest ID: 455
+Index: A
+Handle: tadhgkearney
+Submission ID: 16677658
+Submission Time: 1457801412
+
+
+Contest ID: 455
+Index: A
+Handle: kylesky
+Submission ID: 11879232
+Submission Time: 1435741523
+
+
+Contest ID: 455
+Index: A
+Handle: hulk_baba
+Submission ID: 23321340
+Submission Time: 1482690365
+
+
+Contest ID: 455
+Index: A
+Handle: FunnySage
+Submission ID: 14429045
+Submission Time: 1448292981
+
+
+Contest ID: 455
+Index: A
+Handle: vjudge4
+Submission ID: 25397236
+Submission Time: 1489219527
+
+
+Contest ID: 455
+Index: A
+Handle: shivangstreak
+Submission ID: 13594465
+Submission Time: 1444747029
+
+
+Contest ID: 455
+Index: A
+Handle: Batman
+Submission ID: 13830836
+Submission Time: 1445719073
+
+
+Contest ID: 455
+Index: A
+Handle: Erkhemkhuu
+Submission ID: 22689321
+Submission Time: 1480832211
+
+
+Contest ID: 455
+Index: A
+Handle: pass_pretest
+Submission ID: 7409321
+Submission Time: 1407633670
+
+
+Contest ID: 455
+Index: A
+Handle: DoubleX
+Submission ID: 29146730
+Submission Time: 1501739699
+
+
+Contest ID: 455
+Index: A
+Handle: Agham
+Submission ID: 15450773
+Submission Time: 1453280940
+
+

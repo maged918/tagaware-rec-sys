@@ -1,0 +1,72 @@
+Contest ID: 455
+Index: A
+Name: Boredom
+Tags: dp
+
+
+Contest ID: 455
+Index: B
+Name: A Lot of Games
+Tags: dfs and similar, dp, games, implementation, strings, trees
+
+
+Contest ID: 455
+Index: C
+Name: Civilization
+Tags: dfs and similar, dp, dsu, ternary search, trees
+
+
+Contest ID: 455
+Index: D
+Name: Serega and Fun
+Tags: data structures
+
+
+Contest ID: 455
+Index: E
+Name: Function
+Tags: data structures
+
+
+Contest ID: 455
+Index: A
+Name: Boredom
+Tags: dp
+
+
+Contest ID: 455
+Index: B
+Name: A Lot of Games
+Tags: dfs and similar, dp, games, implementation, strings, trees
+
+
+Contest ID: 455
+Index: C
+Name: Civilization
+Tags: dfs and similar, dp, dsu, ternary search, trees
+
+
+Contest ID: 455
+Index: D
+Name: Serega and Fun
+Tags: data structures
+
+
+Contest ID: 455
+Index: E
+Name: Function
+Tags: data structures
+
+
+Contest ID: 455
+Index: A
+Name: Boredom
+Tags: dp
+
+
+Contest ID: 455
+Index: A
+Name: Boredom
+Tags: dp
+
+

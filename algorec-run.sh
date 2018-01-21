@@ -8,7 +8,7 @@ create_xmls=0
 create_features=0
 classify=0
 div=0
-while getopts ":cfd12a" opt; do
+while getopts ":cfd12ag" opt; do
   case $opt in
     d)
       echo "-d was triggered!" >&2
@@ -30,6 +30,9 @@ while getopts ":cfd12a" opt; do
       ;;
     a)
       div='data-all/'
+      ;;
+    g)
+      div='data-grading/'
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2

@@ -9,7 +9,10 @@ desc: parses submissions.txt looking for contest number, then problems index to 
 
 div = config.get_div()
 
-if 'DivAll' in div:
+if 'grading' in div:
+	s_file = 'Submissions-grading.txt'
+	data_folder = 'data-grading/'
+elif 'DivAll' in div:
 	s_file = "DivAll-Submissions.txt"
 	data_folder = 'data-all/'
 elif 'Div1' in div:
@@ -19,7 +22,11 @@ else:
 	s_file = "Div2-Submissions.txt"
 	data_folder = 'data-div-2/'
 
-s_file = 'dataset/pt_sub/' + s_file
+if 'grading' not in div:	
+	s_file = 'dataset/pt_sub/' + s_file
+	src_dir = 'source-code'
+else:
+	src_dir = 'source-code-grading'
 
 if not os.path.exists(data_folder):
 	os.makedirs(data_folder)
@@ -44,7 +51,7 @@ with open(s_file) as f:
 
 			if arr_line[0].lower() == "submission" and arr_line[1].lower() == 'id:':
 				file_id = arr_line[2] + ".cpp"
-				shutil.copy("source-code/" + file_id, data_folder+contest+"/"+index+"/"+file_id)
+				shutil.copy(src_dir + '/' + file_id, data_folder+contest+"/"+index+"/"+file_id)
 
 		else:
 			contest = ''

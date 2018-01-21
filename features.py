@@ -1,4 +1,5 @@
 import pandas as pd
+from time import time
 
 '''
 Created on Aug 1, 2015
@@ -297,7 +298,9 @@ NAME='/name'
 RETURN='/block/return'
 
 divs = config.get_div()
-if 'DivAll' in divs:
+if 'grading' in divs:
+	data_dir = 'data-grading/'
+elif 'DivAll' in divs:
 	data_dir = 'data-all/'
 elif 'Div1' in divs:
 	data_dir = 'data-div-1/'
@@ -310,7 +313,10 @@ elif 'Div2' in divs:
 '''
 LOAD OLD NO LONGER WORKING!
 '''
-def all_submissions(load_old = False):
+def all_submissions(load_old = False, grading=False):
+	
+	t1 = time.time()
+
 	feats_prefix = config.get_feat_prefix()
 
 	df_list = []
@@ -363,23 +369,39 @@ def all_submissions(load_old = False):
 	# print(df['cnt_pointers'])
 	print("Done feature extraction for: " + str(len(feature_set)) + " problems")
 
-	f = open(feats_prefix+'features.pickle', 'wb')
+	f_names = ['features', 'features-submissions', 'features-pandas']
+	if grading:
+		f_names = [x+'-grading' for x in f_names]
+	f_names = [x+'.pickle' for x in f_names]
+
+	if grading:
+		df['id'] = df['id'].map(lambda x : int(x.split('.')[0])) # Casts as string first in case of previous run
+		verdicts_df = pd.read_csv(open('Verdicts-grading.csv', 'r'), header=None, names = ['id', 'verdict'])
+		verdicts_df['verdict'] = verdicts_df['verdict'].str.strip()
+		verdicts_df = verdicts_df[verdicts_df['verdict'].isin(['OK', 'WRONG_ANSWER'])]
+		verdicts_df['verdict'] = verdicts_df['verdict'].map(lambda x: 1 if x=='OK' else 0) # All other verdicts are 0
+		df = pd.merge(df, verdicts_df, left_on='id', right_on='id', how='inner') # Create new df with binary verdict
+
+
+	f = open(feats_prefix+f_names[0], 'wb')
 	pickle.dump(feature_set, f)
 	f.close()
 
-	f = open(feats_prefix + 'features-submissions.pickle', 'wb')
+	f = open(feats_prefix + f_names[1], 'wb')
 	pickle.dump(submission_set, f)
 	f.close()
 
-	f= open(feats_prefix + 'features-pandas.pickle', 'wb')
+	f= open(feats_prefix + f_names[2], 'wb')
 	pickle.dump(df, f)
 	f.close()
+
+	print('Time taken ', str(time.time()-t1))
 
 
 def test_submission(path):
 	return extract_feats(path)
 
-all_submissions(load_old=False)
+all_submissions(load_old=False, grading=True)
 # print(test_submission('data-all/101/A/12700023.cpp.xml')[1])
 # print(test_submission('data-all/102/B/12309613.cpp.xml')[1])
 # print(test_submission('data-all/435/E/953966800000000.cpp.xml')[1])

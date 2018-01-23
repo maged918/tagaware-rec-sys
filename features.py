@@ -378,8 +378,6 @@ def all_submissions(load_old = False, grading=False):
 		df['id'] = df['id'].map(lambda x : int(x.split('.')[0])) # Casts as string first in case of previous run
 		verdicts_df = pd.read_csv(open('Verdicts-grading.csv', 'r'), header=None, names = ['id', 'verdict'])
 		verdicts_df['verdict'] = verdicts_df['verdict'].str.strip()
-		verdicts_df = verdicts_df[verdicts_df['verdict'].isin(['OK', 'WRONG_ANSWER'])]
-		verdicts_df['verdict'] = verdicts_df['verdict'].map(lambda x: 1 if x=='OK' else 0) # All other verdicts are 0
 		df = pd.merge(df, verdicts_df, left_on='id', right_on='id', how='inner') # Create new df with binary verdict
 
 

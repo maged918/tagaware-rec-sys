@@ -55,7 +55,7 @@ def filter_Submissions(submissions, contestID, flag, mode):
 	filtered = []
 	language = 'C++'
 	# dictionary_problems = 'ABCDEFGHIJKL'
-	dictionary_problems = 'A'
+	dictionary_problems = 'C'
 	for i in range (0, len(dictionary_problems)):
 		dictionary[dictionary_problems[i]] = []
 
@@ -183,7 +183,8 @@ if __name__ =='__main__':
 	bs4_error_text = '<ERROR>'
 	# contest_range = range(725, 730+1)
 	contest_range = []
-	contest_names = ['Codeforces Round #260 (Div. 1)']
+	# contest_names = ['Codeforces Round #260 (Div. 1)']
+	contest_names = ['Codeforces Round #452 (Div. 2)']
 	requestParams = {'gym':'false'}
 	r = requests.get("http://www.codeforces.com/api/contest.list", params=requestParams, proxies = {}, auth = {})
 	contests = r.json()

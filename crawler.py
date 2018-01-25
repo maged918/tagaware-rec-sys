@@ -55,7 +55,7 @@ def filter_Submissions(submissions, contestID, flag, mode):
 	filtered = []
 	language = 'C++'
 	# dictionary_problems = 'ABCDEFGHIJKL'
-	dictionary_problems = 'C'
+	dictionary_problems = 'ABCDEF'
 	for i in range (0, len(dictionary_problems)):
 		dictionary[dictionary_problems[i]] = []
 
@@ -71,8 +71,9 @@ def filter_Submissions(submissions, contestID, flag, mode):
 
 	if(flag=='filter'):
 		for problem in problems:
-			if(problem['index'] in dictionary and len(dictionary[problem['index']]) >= problem_limit):
-				filtered.extend(sample(dictionary[problem['index']], problem_limit))
+			if(problem['index'] in dictionary): 
+				#and len(dictionary[problem['index']]) >= problem_limit):
+				filtered.extend(sample(dictionary[problem['index']], min(problem_limit, len(dictionary[problem['index']]))))
 				fi2.write("Contest ID: " + str(contestID) + "\n")
 				fi2.write("Index: " + str(problem['index']) + "\n")
 				fi2.write("Name: " + str(problem['name']) + "\n")
@@ -182,9 +183,14 @@ if __name__ =='__main__':
 	total_limit = 100
 	bs4_error_text = '<ERROR>'
 	# contest_range = range(725, 730+1)
-	contest_range = []
+	contest_range = range(915, 915)
 	# contest_names = ['Codeforces Round #260 (Div. 1)']
-	contest_names = ['Codeforces Round #452 (Div. 2)']
+	# contest_names = ['Codeforces Round #452 (Div. 2)']
+	# contest_names = ['Educational Codeforces Round 35 (Rated for Div. 2)'] # 911
+	# contest_names = ['Educational Codeforces Round 36 (Rated for Div. 2)'] 
+	# contest_names = ['Codeforces Round #455 (Div. 2)']
+	# contest_names = ['Codeforces Round #436 (Div. 2)']
+	contest_names = ['Codeforces Round #450 (Div. 2)'] # 900
 	requestParams = {'gym':'false'}
 	r = requests.get("http://www.codeforces.com/api/contest.list", params=requestParams, proxies = {}, auth = {})
 	contests = r.json()

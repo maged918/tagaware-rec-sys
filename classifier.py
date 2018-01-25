@@ -4,41 +4,41 @@ Created on Aug 23, 2015
 @author: tarek, maged
 '''
 
+import csv
+import time
+from itertools import product
+from collections import Counter
+from collections import defaultdict
+
+import config
+from joiner import build_tags, create_df
 
 import pickle
 import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-from sklearn.preprocessing import MultiLabelBinarizer
-from sklearn.multiclass import OneVsRestClassifier, OneVsOneClassifier
 from sklearn import svm
 from sklearn import metrics
-from sklearn.neural_network import MLPClassifier
-from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
-from sklearn.model_selection import StratifiedKFold, GroupKFold, KFold, cross_val_score
-from sklearn.naive_bayes import MultinomialNB, GaussianNB
 from sklearn.decomposition import PCA
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.feature_selection import SelectKBest, chi2, f_classif
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.preprocessing import StandardScaler
+from sklearn.neural_network import MLPClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import MultiLabelBinarizer
+from sklearn.naive_bayes import MultinomialNB, GaussianNB
+from sklearn.feature_selection import SelectKBest, chi2, f_classif
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from collections import defaultdict
-from collections import Counter
-from itertools import product
-import time
-
-import config
-
-import pandas as pd
+from sklearn.multiclass import OneVsRestClassifier, OneVsOneClassifier
+from sklearn.model_selection import StratifiedKFold, GroupKFold, KFold, cross_val_score
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 
 from scipy.stats import chi2_contingency
 
-import seaborn as sns
-import matplotlib.pyplot as plt
-from joiner import build_tags, create_df
 
-import csv
+
 
 # from stats import visualize
 col_names = []
@@ -161,7 +161,8 @@ def choose_columns(X, feat_mode):
 			'operations':['operations', 'plus', 'minus', 'times', 'divide', 'modulus',\
 							'+','-','*','/','%','+=','-=','*=','/=','++','--'],\
 			'lines': ['lines'],\
-			'cyclo': ['cyclo']}
+			'cyclo': ['cyclo'], \
+			'functions': ['min', 'max']}
 
 	if 'all_feats' in feat_mode and 'cyclo' not in feat_mode:
 		# return X
@@ -191,7 +192,7 @@ def classify(train,gold,test, test_y,multi, classifier):
 	clf_dict = {'SVM': svm.LinearSVC(**svm_dict), 'RFT': RandomForestClassifier(n_estimators=100, n_jobs = 6),\
 						 'ADA': AdaBoostClassifier(n_estimators = 100),\
 						'KNN': KNeighborsClassifier(n_neighbors = 20, weights='distance'), 'LRC': LogisticRegression(), \
-						'ANN': MLPClassifier(hidden_layer_sizes=tuple([100]*10)), \
+						'ANN': MLPClassifier(hidden_layer_sizes=tuple([100]*2)), \
 						'DBT':DecisionTreeClassifier(), 'MNB': MultinomialNB(alpha = 1000),\
 						'GNB': GaussianNB(), 'LDA': LinearDiscriminantAnalysis(n_components=10)}
 	clf = classifier
@@ -210,11 +211,6 @@ def classify(train,gold,test, test_y,multi, classifier):
 	# 	# classifier_factory(clf)
 	# 	skplt.plot_feature_importances(clf, feature_names = train.columns, max_num_features = 7)
 	# 	plt.show()
-
-	print(metrics.classification_report(test_y,preds, target_names = classes))
-	prfs = metrics.precision_recall_fscore_support(test_y, preds, average='micro')
-	acc = metrics.accuracy_score(test_y, preds)
-
 	# if classifier == 'RFT':
 	# 	print(clf.feature_importances_)
 	# 	importances = pd.DataFrame({'feature':train.columns, 'importance': clf.feature_importances_})
@@ -223,10 +219,15 @@ def classify(train,gold,test, test_y,multi, classifier):
 	# auc = metrics.roc_auc_score(test_y, preds)
 	# print('Area Under Curve', auc)
 	# print(prfs, acc)
+
+	print(metrics.classification_report(test_y,preds, target_names = classes))
+	prfs = metrics.precision_recall_fscore_support(test_y, preds, average='micro')
+	acc = metrics.accuracy_score(test_y, preds)
+
 	for i in range(3):
 		scores[i]+=prfs[i]
 	scores[3]+=acc
-	return preds
+	return preds, clf
 
 def get_baseline(lst, Y):
 	preds = [lst] * len(Y)
@@ -254,7 +255,6 @@ def get_eval_metrics(results_dict):
 	results_dict['P'] = results_dict['TP'] / (results_dict['TP'] + results_dict['FP']) if p_den > 0 else 0
 
 	r_den = results_dict['TP'] + results_dict['FN']
-	# results_dict['R'] = 2*(results_dict['TP'] / (results_dict['TP'] + results_dict['FN'])) if r_den > 0 else 0
 	results_dict['R'] = results_dict['TP'] / (results_dict['TP'] + results_dict['FN']) if r_den > 0 else 0
 
 	f_den = results_dict['P'] + results_dict['R']
@@ -282,12 +282,6 @@ def evaluate(pred,test):
 	for tag in macro_scores:
 
 		macro_average = dict(Counter(macro_average) + Counter(macro_scores[tag]))
-		# print(Counter(macro_scores[tag]))
-		# print(	str(tag[:5])							+"..\t"+\
-		#		 str("%.2f" % macro_scores[tag]['P'])	+"\t"+	\
-		#		 str("%.2f" % macro_scores[tag]['R'])	+"\t"+	\
-		#		 str("%.2f" % macro_scores[tag]['F1'])	+"\t"+	\
-		#		 str("%.2f" % macro_scores[tag]['ACC']))
 
 	print(	"Averaged Macro Scores:\nP\tR\tF1\tAcc"				+"\n"+\
 			str("%.2f" % (macro_average['P']/len(tags_list)))	+"\t"+\
@@ -324,22 +318,7 @@ def cross_validate(X,Y,cv_val, multi, classifier):
 	total_macro = dict((element,0.0) for element in labels)
 
 	if multi:
-		# for i in range(cv_val):
-		#
-		#	 print("########################### Starting run no. " + str(i+1) + " ##############################")
-		#	 print("Splitting datasets")
-		#
-		#	 X_splits = np.array_split(X,cv_val)
-		#	 Y_splits = np.array_split(Y,cv_val)
-		#
-		#	 X_test = X_splits[i]
-		#	 Y_test = Y_splits[i]
-		#
-		#	 del(X_splits[i])
-		#	 del(Y_splits[i])
-		#
-		#	 X_train = np.concatenate(X_splits)
-		#	 Y_train = np.concatenate(Y_splits)
+
 		gkf = KFold(n_splits = cv_val, shuffle=True, random_state=0)
 		for train_idx, test_idx in gkf.split(X, Y):
 			if row_mode == "pandas" or row_mode == 'pd_out':
@@ -347,8 +326,9 @@ def cross_validate(X,Y,cv_val, multi, classifier):
 			else:
 				X_train, X_test = X[train_idx], X[test_idx]
 			Y_train, Y_test = Y[train_idx], Y[test_idx]
-			print("Building model for multi cross val, shapes = %s, %s, %s, %s" %(X_train.shape, X_test.shape, Y_train.shape, Y_test.shape))
-			pred = classify(X_train,Y_train,X_test,Y_test,True, classifier)
+			print("Building model for multi cross val, shapes = %s, %s, %s, %s" %\
+				(X_train.shape, X_test.shape, Y_train.shape, Y_test.shape))
+			pred, model = classify(X_train,Y_train,X_test,Y_test,True, classifier)
 			print("Evaluating ...")
 			eval_res = evaluate(pred, Y_test)
 			#
@@ -374,7 +354,7 @@ def cross_validate(X,Y,cv_val, multi, classifier):
 
 			print("Starting Classification...")
 			print(Y.shape)
-			pred = classify(X_train, Y_train, X_test, Y_test, False, classifier)
+			pred, model = classify(X_train, Y_train, X_test, Y_test, False, classifier)
 			# pred = np.zeros(Y_test.shape)
 			# for i in range(Y_train.shape[1]):
 			#	 pred[:,i] = classify(X_train,Y_train[:,i],X_test,Y_test[:,i],False)
@@ -456,6 +436,9 @@ for div, algo_mode, classifier, feat_mode, difficulty, row_mode, limit \
 	X = data[0]
 	Y = data[1]
 	base = data[2]
+
+	print(Counter(Y))
+
 	# from sklearn.utils import shuffle
 	# X, Y = shuffle(X, Y, random_state=0)
 	# X, Y = X[:limit], Y[:limit]
@@ -468,10 +451,8 @@ for div, algo_mode, classifier, feat_mode, difficulty, row_mode, limit \
 	print("Algo:", algo_mode)
 
 	print(feats_file)
-
-	feat_stats(X, Y)
-
-	continue
+	# feat_stats(X, Y)
+	# continue
 
 	if multi:
 		# get_baseline(['math', 'implementation', 'greedy', 'dp'], Y)
@@ -481,28 +462,30 @@ for div, algo_mode, classifier, feat_mode, difficulty, row_mode, limit \
 	scores = [0] * 4
 	cross_validate(X,Y,cross_valid, multi, classifier)
 
-
 	scores = ["%.2f"%(score/cross_valid) for score in scores]
 
 	print(classes)
 
 	timestamp = time.strftime("%Y/%m/%d %H:%M:%S")
-	# out_file.write( '%s, %s, %d, %s, %s, %s, %s, %s, %s, %.2f, %s, %s, %s, %s, %s\n' \
-	# 		% (row_mode, algo_mode, multi, div, classifier, scores[0], scores[1], scores[2], scores[3], baseline, timestamp, \
-	# 		#':'.join(classes), ':'.join(col_names),
-	#
-	# 		':'.join(feat_mode), ':'.join(difficulty)))
 
 	csv_file = open('out-classifier.csv', 'a',  newline='')
 	writer = csv.writer(csv_file, delimiter=",", quoting = csv.QUOTE_NONE)
 	multi = 1 if multi else 0
 	writer.writerow([row_mode, algo_mode, multi, div, classifier] + scores +
 	[format(baseline, '.2f'), timestamp,\
-	 #':'.join(classes), ':'.join(col_names), \
-	 ' ', ' ',
 	 ':'.join(feat_mode), ':'.join(difficulty), X.shape[0]])
 	csv_file.flush()
 	out_file.flush()
+
+	scores = [0]*4
+
+	if 'only' in algo_mode  or '_' in algo_mode:
+		preds, all_data_classifier = classify(X, Y, X.iloc[0:100], Y[0:100], False, 'RFT')
+		print(all_data_classifier)
+		pickle.dump(all_data_classifier, open('models/%s_model.pickle' % algo_mode, 'wb'))
+
+
+
 out_file.close()
 
 # if not os.path.exists('preds.pickle'):

@@ -84,7 +84,7 @@ cols = ['id', 'problem_id', 'single_loop', 'double_loop', 'triple_loop', 'if_loo
 			  'recursion', 'shift', 'or', 'and', 'int', 'double', 'float', 'string', 'char', 'vector',\
 			  'll', 'point', 'arrays', 'declarations', 'variables', 'avg_params', 'functions',\
 			  'operations', 'plus', 'minus', 'times', 'divide', 'modulus', 'lines', 'ifs', 'cyclo',\
-			  '+','-','*','/','%','+=','-=','*=','/=','++','--']
+			  '+','-','*','/','%','+=','-=','*=','/=','++','--', 'min', 'max', 'sort']
 
 def evalute(tree,*args):
 	query = './'
@@ -276,9 +276,28 @@ def extract_feats(file):
 	curr_df['cyclo'] = cyclo
 	curr_feats.append(cyclo)
 
+	count_min = 0
+	count_max = 0
+	count_sort = 0
+	for name in tree.xpath('.//call/name'):
+		if name.text == 'max':
+			count_max+=1
+		elif name.text == 'min':
+			count_min+=1
+		elif name.text == 'sort':
+			count_sort+=1
+
 	# print('Number of ifs', ifs)
 	# print(len(curr_feats))
 	# print(curr_df['ll'])
+
+	curr_df['min'] = count_min
+	curr_df['max'] = count_max
+	curr_df['sort'] = count_sort
+	# print('Count of min and max', count_min, count_max)
+	curr_feats.append(count_min)
+	curr_feats.append(count_max)
+	curr_feats.append(count_sort)
 
 	return curr_feats, curr_df
 
@@ -298,8 +317,10 @@ NAME='/name'
 RETURN='/block/return'
 
 divs = config.get_div()
+grading = False
 if 'grading' in divs:
 	data_dir = 'data-grading/'
+	grading = True
 elif 'DivAll' in divs:
 	data_dir = 'data-all/'
 elif 'Div1' in divs:
@@ -313,9 +334,9 @@ elif 'Div2' in divs:
 '''
 LOAD OLD NO LONGER WORKING!
 '''
-def all_submissions(load_old = False, grading=False):
+def all_submissions(load_old = False):
 	
-	t1 = time.time()
+	t_orig = time.time()
 
 	feats_prefix = config.get_feat_prefix()
 
@@ -327,7 +348,7 @@ def all_submissions(load_old = False, grading=False):
 		df = old_df
 	else:
 		df = pd.DataFrame(columns = cols)
-	print(len(df.columns))
+	print('Number of columns', len(df.columns))
 	feature_set = {}
 	submission_set = {}
 	idx = 1
@@ -358,9 +379,10 @@ def all_submissions(load_old = False, grading=False):
 			avg = np.average(arr, axis=0)
 			feature_set[problem_id] = avg
 			submission_set[problem_id] = arr
-		print("#", idx, "Contest:", contest)
+			print('Done %s/%s '%(contest,problem))
+		print("Done #", idx, "Contest:", contest)
 		idx+=1
-		# if idx>10:
+		# if idx>0:
 		# 	break
 
 	# f.close()
@@ -388,18 +410,18 @@ def all_submissions(load_old = False, grading=False):
 	f = open(feats_prefix + f_names[1], 'wb')
 	pickle.dump(submission_set, f)
 	f.close()
-
+	print(feats_prefix+f_names[2])
 	f= open(feats_prefix + f_names[2], 'wb')
 	pickle.dump(df, f)
 	f.close()
 
-	print('Time taken ', str(time.time()-t1))
+	print('Time taken ', str(time.time()-t_orig))
 
 
 def test_submission(path):
 	return extract_feats(path)
 
-all_submissions(load_old=False, grading=True)
+all_submissions(load_old=False)
 # print(test_submission('data-all/101/A/12700023.cpp.xml')[1])
 # print(test_submission('data-all/102/B/12309613.cpp.xml')[1])
 # print(test_submission('data-all/435/E/953966800000000.cpp.xml')[1])

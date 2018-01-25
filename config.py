@@ -17,7 +17,7 @@ def get_algorithm_modes():
     # algorithm_modes = ['categ','graph', 'maths', 'algos', 'dp_gr', 'dp_bf', 'gr_ma', 'dp_df']
     # algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'pairs']
     # algorithm_modes = ['categ', 'graph', 'maths', 'algos']
-    algorithm_modes += ['categ']
+    # algorithm_modes += ['categ']
     # algorithm_modes += ['algos']
     # algorithm_modes=['maths']
     # algorithm_modes=['graph']
@@ -30,9 +30,17 @@ def get_algorithm_modes():
     # algorithm_modes += ['nt_cm']
     # algorithm_modes += ['gr_tr']
     # algorithm_modes += get_all_pairs()
+    # algorithm_modes += ['greedy_only']
+    # algorithm_modes+=['dp_only']
+    # algorithm_modes+=['implementation_only']
+    # algorithm_modes+=['graphs_only']
+
+    algorithm_modes+=['math_only']
+
     return algorithm_modes
 def get_classifiers():
     classifiers = ['RFT']
+    # classifiers = ['LRC']
     # classifiers=['SVM']
     # classifiers = ['SVM', 'RFT']
     # classifiers = ['SVM', 'RFT', 'ADA']
@@ -42,6 +50,7 @@ def get_classifiers():
     # classifiers = ['MNB']
     # classifiers = ['ADA']
     # classifiers = ['LDA']
+    # classifiers=['ANN']
     return classifiers
 
 def get_feat_prefix():
@@ -62,7 +71,11 @@ def get_tags_file(in_dir, algo_mode):
                       'dp_df': 'data-set-dp_dfs and similar.txt',\
                       'ds_gr':'data-set-data structures_graphs.txt',\
                       'gr_tr': 'data-set-graphs_trees.txt',\
-                      'nt_cm': 'data-set-number theory_combinatorics.txt'}
+                      'nt_cm': 'data-set-number theory_combinatorics.txt'\
+                      }
+    
+    for tag in ['greedy', 'dp', 'implementation', 'graphs', 'math']:
+        tags_file_dict[tag+'_only'] = 'data-set-only-%s.txt'%tag
     return in_dir + '-' + tags_file_dict[algo_mode]
 
 def get_multi():

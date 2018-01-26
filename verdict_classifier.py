@@ -3,7 +3,7 @@ import sys
 import pickle
 from itertools import product
 from collections import Counter
-
+from collections import defaultdict
 
 import numpy as np
 import pandas as pd
@@ -27,26 +27,33 @@ from imblearn.combine import SMOTEENN, SMOTETomek
 from imblearn.under_sampling import NearMiss, RandomUnderSampler
 
 classifier = 'rft'
-classifiers = {'rft':RandomForestClassifier(n_estimators=100, random_state=0),
+classifiers = {'rft':RandomForestClassifier(n_estimators=100, random_state=0, n_jobs=-1),
 	'lrc':LogisticRegression(C=5, class_weight='balanced'),
 	'lsv':LinearSVC(class_weight='balanced', C=1, dual=False),
 	'svc':SVC(kernel='poly', degree=2, random_state=0, C=3, probability=True),
 	'mnb': MultinomialNB(), 'knn': KNeighborsClassifier(n_neighbors = 5)}
+
+samplers = {'nm':NearMiss(ratio='majority', random_state=0, version=2, n_jobs=-1), 'rnd': RandomUnderSampler(random_state=0),\
+		'smote': SMOTE(random_state=0), 'smoteenn':SMOTEENN(random_state=0), 'smotetomek':SMOTETomek(random_state=0),\
+		'adasyn':ADASYN(random_state=0)}
 sampler = 'smote'
 
-sampling = False
+sampling = True
 selecting = False
 stratifying = True
 
 # train_ratios = [0.1,0.2,0.3,0.4,0.5]
 # train_ratios += [0.6,0.7,0.8,0.9]
 
-train_ratios = [0.66]
+train_ratios = [0.2]
 
 # train_ratios = [0.01]
 # train_ratios = [1.0]
 n_splits=10
 
+split = 'kf'
+if split == 'kf':
+	train_ratios = [1-1/n_splits]
 
 tagging = []
 # tagging = ['greedy', 'imp', 'dp']
@@ -55,11 +62,13 @@ tagging = []
 # tagging = ['greedy', 'dp']
 # tagging = ['graphs']
 
-tag_mode = 'none'
+# tag_mode = 'all'
 # tag_mode = 'math'
-
-if tag_mode == 'all':
-	tagging = ['dp_gr', 'dp_bf']
+# tag_mode='-all'
+tag_mode = ['none']
+if tag_mode == '-all':
+	# tagging = ['dp_gr', 'dp_bf']
+	# tagging = []
 	tagging += ['graphs', 'dp', 'implementation', 'greedy', 'math']
 elif tag_mode == 'math':
 	tagging = ['math']
@@ -69,18 +78,18 @@ else:
 # valid = 'single'
 valid = 'cross'
 
-# var_drop = 'variables'
-var_drop = 'none'
+# var_drop = 'vars'
+# var_drop = 'none'
+var_drop = '-fns'
 
 if not sampling:
 	sampler = 'None'
 
-
+# duplicates = ['--keep']
+duplicates=['remove']
 def sample(features_df, labels):
 
-	samplers = {'nm':NearMiss(ratio='majority', random_state=0, version=2, n_jobs=-1), 'rnd': RandomUnderSampler(random_state=0),\
-			'smote': SMOTE(random_state=0), 'smoteenn':SMOTEENN(random_state=0), 'smotetomek':SMOTETomek(random_state=0),\
-			'adasyn':ADASYN(random_state=0)}
+
 
 	nm = samplers[sampler]
 	reduced_df, reduced_labels = nm.fit_sample(features_df, labels)
@@ -138,10 +147,13 @@ def single_run(classifier, reduced_df, reduced_labels):
 	return acc, f1, roc, after_sampling
 
 def cross_validate(classifier, reduced_df, reduced_labels):
-	skf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=0)	
+	
+	if split == 'kf':
+		skf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=0)	
 
-	# skf = StratifiedShuffleSplit(n_splits=n_splits, train_size=train_size, \
-	# 	test_size= test_size, random_state=0)
+	elif split == 'ss':
+		skf = StratifiedShuffleSplit(n_splits=n_splits, train_size=train_size, \
+			test_size= test_size, random_state=0)
 
 	## Sanity check, results almost the same
 	# print('CROSS VAL SCORE', cross_val_score(classifier, reduced_df, reduced_labels, scoring='roc_auc', cv=skf))
@@ -180,49 +192,64 @@ def mix_problem(original_df, problem_1, problem_2):
 	df2['verdict'] = ['OK2'] * df2.shape[0] ## Change label of second problem to OK2 to have 2 classes
 	return df1.append(df2)
 
+''' Visualizes data according to a given grouping features_df
+Cases used: according to cluster, or according to verdict
+'''
+
 def get_stats(df, hue):
+	
+	df['verdict'] = df['verdict'].map(lambda x : "%d"%x) # to change to categorical, there must be a cleaner way
+
 	grouped = df.groupby(hue)
+	print(grouped['verdict'].apply(lambda x: x.value_counts())) # get value counts of verdict in each group
 
-	# for group_name, group in grouped:
-	# 	print(group['*'].describe())
+	cols = ['recursion', 'variables', 'single_loop', 'cyclo']
 
-	cols = ['recursion','vector','single_loop', 'double_loop', 'ifs', 'arrays']
+	for col in cols:
+		# plot each column box plot, with the grouping feature on x axis, separate plots per verdict
+		sns.boxplot(x=hue, y=col, hue='verdict', data=df) 
+		plt.show()
 
 	for col in cols:
 		print(grouped[col].apply(lambda x : x.describe()))
 
-	# for col in cols:
-	# 	sns.countplot(x=col, hue=hue, data=df)
-	# 	plt.show()
 
 def cluster(original_feats_df, accepted_only = False):
-	
 	if accepted_only:
-		accepted_init = original_feats_df.loc[original_feats_df['verdict'].isin([1])]
-		df = accepted_init.drop(['problem_id', 'id'], axis=1)
+		df_init = original_feats_df.loc[original_feats_df['verdict'].isin([1])] # select only accepted subs
 	else:
-		df = original_feats_df.drop(['problem_id, id'], axis=1)
+		df_init = original_feats_df
+
+	df = df_init.drop(['problem_id', 'id'], axis=1) # to have only numeric features fo clustering
+	
 	km = KMeans(n_clusters=3, random_state=0)
 	km.fit(df)
-	from collections import defaultdict
+	
+	# keep list of labels per cluster
 	labels = defaultdict(lambda:list())
 	for idx, val in enumerate(km.labels_):
 		labels[val].append(idx)
-	print([len(lst) for lst in labels.values()])
-	accepted_init = accepted_init.assign(cluster = km.labels_)
 
-	print('Cluster 0 ids')
-	print(list(accepted_init.loc[accepted_init['cluster']==0, ['id']].values)[:20])
-	print('Cluster 1 ids')
-	print(list(accepted_init.loc[accepted_init['cluster']==1, ['id']].values)[:20])
+	print('Number of labels per cluster', [len(lst) for lst in labels.values()])
 
-	get_stats(accepted_init, 'cluster')
-	
+	df_init = df_init.assign(cluster = km.labels_) # assign cluster ids to a new column
+
+	for cluster_id in range(len(np.unique(km.labels_))): # print some of the ids of submissions in this cluster
+		print('Cluster %d ids' % cluster_id)
+		print(list(df_init.loc[df_init['cluster']==cluster_id, ['id']].values)[:20])
+
+	get_stats(df_init, 'cluster')	
+
+''' Add tag information to features DataFrame
+1) Load n tag-only/pair models
+2) Predict all submissions using each model
+3) Create n new columns in features dataframe containing predictions
+'''
 
 def add_tags(features_df):
 	gen_tags = []
 	for tag in tagging:
-		fn = lambda x: 0 if x else 1
+		fn = lambda x: 1 if x else 0
 		if tag in ['implementation', 'graphs', 'greedy', 'dp', 'math']:
 			model = pickle.load(open('models/%s_only_model.pickle'%tag, 'rb'))
 			greedy_preds = [i !='other' for i in model.predict(features_df)]
@@ -242,6 +269,14 @@ def add_tags(features_df):
 		features_df['tag_%d'%tag_idx] = tag_list
 	return features_df
 
+def remove_duplicates(df):
+	print('Size before duplicate removal', df.shape)
+
+	duplicates_df = pd.read_pickle(open('dataset/feats/features-unique-grading.pickle', 'rb'))
+	df = df[df['id'].isin(duplicates_df['id'].values)]
+
+	print('Size after duplicate removal', df.shape)
+	return df
 
 if __name__ == "__main__":
 
@@ -249,22 +284,24 @@ if __name__ == "__main__":
 	f = csv.writer(actual_file)
 	loc = 'dataset/feats/features-pandas-grading.pickle'
 	problems = []
-	# problems = ['455/A']
-	# problems = ['899/A']
-	# problems = ['915/C']
-	# problems = ['909/C']
-	# problems = ['909/D']
-	# problems = ['909/E']
-	# problems=['911/E']`
-	problems += ['909/B'] # MATH
-	# problems += ['455/A', '899/A', '899/C', '911/E', '915/C']
-	# problems += ['909/A', '909/B', '909/C', '909/D']
-	# problems += ['864/A', '864/B']
-	# problems+= ['864/C']
-	# problems += ['864/D']
-	# problems += ['864/E']
+	# problems += ['909/B'] # MATH
 
-	for train_ratio, problem in product(train_ratios, problems):
+	diffs = ['A', 'B', 'C', 'D', 'E']
+	
+	contests = ['909', '864', '900', '282', '848']
+	diffs_dict = {k:diffs.copy() for k in contests}
+	diffs_dict['848'].remove('D')
+	diffs_dict['848'].remove('E')
+	problems += ['455/A', '899/A', '899/C', '911/E', '915/C', '113/B']
+	problems += ['%s/%s'%(contest,diff) for contest in contests for diff in diffs_dict[contest]]
+	
+	# problems += ['909/%s'%s for s in diffs] # 909/E has limited exmaples
+	# problems+= ['864/%s'%s for s in diffs]
+	# problems+= ['900/%s'%s for s in diffs]
+	# problems+= ['282/%s'%s for s in diffs]
+	# problems += ['848/%s'%s for s in diffs] # Div 1, poor performance
+
+	for train_ratio, problem, duplicate in product(train_ratios, problems, duplicates):
 
 		if train_ratio == 1: # Don't use ratio, use absolute value for train size
 			train_size = 300
@@ -274,10 +311,12 @@ if __name__ == "__main__":
 		print('TESTING PROBLEM', problem)
 		original_feats_df = pd.read_pickle(open(loc, 'rb'))
 		original_feats_df = select_problem(original_feats_df, problem)
-
 		original_feats_df = original_feats_df.loc[original_feats_df['lines'] > 4]
-		# original_feats_df = mix_problem(original_feats_df, problem, '911/E')
 
+		if duplicate == 'remove':
+			original_feats_df = remove_duplicates(original_feats_df)
+
+		# original_feats_df = mix_problem(original_feats_df, problem, '911/E')
 		## Transform verdicts to binary
 		cls = "OK" ## Class assigned to OK
 		original_feats_df = original_feats_df[original_feats_df['verdict'].isin(['OK', 'WRONG_ANSWER', 'OK2'])]
@@ -287,13 +326,15 @@ if __name__ == "__main__":
 		features_df = original_feats_df.drop(['verdict', 'problem_id', 'id'], axis=1)
 
 		# Incorporate tag information (most predictions are other, not making much difference)
-		
 		features_df = add_tags(features_df)
 
+		# features_df = features_df.drop(['cnt_pointers', 'arrays_double'], axis=1)
+
 		# Drop variable features
-		if var_drop == 'variables':
+		if var_drop == 'vars':
 			features_df = features_df.drop(['int', 'double', 'float', 'char', 'vector', 'll', 'point', 'arrays'], axis=1)
-		
+		elif var_drop == '-fns':
+			features_df = features_df.drop(['min', 'max', 'sort'], axis=1)
 		# Class distribution (accepted/rejected)
 		value_counts = labels.value_counts()/labels.shape
 		print('Class distribution\n',value_counts)
@@ -305,10 +346,10 @@ if __name__ == "__main__":
 		# If train size is ratio, test size is inverse of ratio
 		if type(train_size) == int:
 			test_size = reduced_df.shape[0]-train_size
-			train_size_write = train_size
+			train_size_write = total_size
 		else:
 			test_size=1-train_size
-			train_size_write = int(reduced_df.shape[0] * train_size)
+			train_size_write = int(total_size * train_size)
 
 		cur_classifier = classifiers[classifier]
 		
@@ -319,12 +360,12 @@ if __name__ == "__main__":
 			acc,f_value,roc, after_sampling = cross_validate(cur_classifier, reduced_df, reduced_labels)
 
 		f.writerow([problem, classifier, sampling, sampler, selecting, stratifying, valid, \
-			total_size, train_ratio, train_size_write, after_sampling, tag_mode, var_drop, cls, \
+			duplicate, "%4d"%total_size, split, train_ratio, "%4d"%train_size_write, "%4d"%after_sampling, \
+			tag_mode, var_drop, cls, \
 			"%.2f"%f_value, "%.2f"%acc, "%.2f"%roc, "%.2f"%value_counts.loc[1], "%.2f"%value_counts.loc[0]])
 		print('ENDING PROBLEM')
 
 		# get_stats(original_feats_df, 'verdict')
-
-		# cluster(original_feats_df, accepted_only=True)
+		# cluster(original_feats_df, accepted_only=False)
 		actual_file.flush()
 	f.writerow([])

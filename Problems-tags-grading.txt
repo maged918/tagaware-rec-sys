@@ -4,69 +4,225 @@ Name: Boredom
 Tags: dp
 
 
-Contest ID: 455
-Index: B
-Name: A Lot of Games
-Tags: dfs and similar, dp, games, implementation, strings, trees
+Contest ID: 899
+Index: A
+Name: Splitting in Teams
+Tags: greedy
 
 
-Contest ID: 455
+Contest ID: 899
 Index: C
-Name: Civilization
-Tags: dfs and similar, dp, dsu, ternary search, trees
+Name: Dividing the numbers
+Tags: constructive algorithms, graphs
 
 
-Contest ID: 455
-Index: D
-Name: Serega and Fun
-Tags: data structures
-
-
-Contest ID: 455
+Contest ID: 911
 Index: E
-Name: Function
-Tags: data structures
+Name: Stack Sorting
+Tags: data structures, implementation
 
 
-Contest ID: 455
-Index: A
-Name: Boredom
-Tags: dp
-
-
-Contest ID: 455
-Index: B
-Name: A Lot of Games
-Tags: dfs and similar, dp, games, implementation, strings, trees
-
-
-Contest ID: 455
+Contest ID: 915
 Index: C
-Name: Civilization
-Tags: dfs and similar, dp, dsu, ternary search, trees
+Name: Permute Digits
+Tags: dp, greedy
 
 
-Contest ID: 455
+Contest ID: 909
+Index: A
+Name: Generate Login
+Tags: brute force, greedy, sortings
+
+
+Contest ID: 909
+Index: B
+Name: Segments
+Tags: constructive algorithms, math
+
+
+Contest ID: 909
+Index: C
+Name: Python Indentation
+Tags: dp
+
+
+Contest ID: 909
 Index: D
-Name: Serega and Fun
-Tags: data structures
+Name: Colorful Points
+Tags: data structures, greedy, implementation
 
 
-Contest ID: 455
+Contest ID: 909
 Index: E
-Name: Function
-Tags: data structures
+Name: Coprocessor
+Tags: dfs and similar, dp, graphs, greedy
 
 
-Contest ID: 455
+Contest ID: 909
+Index: F
+Name: AND-permutations
+Tags: constructive algorithms
+
+
+Contest ID: 864
 Index: A
-Name: Boredom
-Tags: dp
+Name: Fair Game
+Tags: implementation, sortings
 
 
-Contest ID: 455
+Contest ID: 864
+Index: B
+Name: Polycarp and Letters
+Tags: brute force, implementation
+
+
+Contest ID: 864
+Index: C
+Name: Bus
+Tags: greedy, implementation
+
+
+Contest ID: 864
+Index: D
+Name: Make a Permutation!
+Tags: greedy, implementation
+
+
+Contest ID: 864
+Index: E
+Name: Fire
+Tags: dp, sortings
+
+
+Contest ID: 864
+Index: F
+Name: Cities Excursions
+Tags: dfs and similar
+
+
+Contest ID: 900
 Index: A
-Name: Boredom
-Tags: dp
+Name: Find Extra One
+Tags: implementation
+
+
+Contest ID: 900
+Index: B
+Name: Position in Fraction
+Tags: math
+
+
+Contest ID: 900
+Index: C
+Name: Remove Extra One
+Tags: brute force, data structures
+
+
+Contest ID: 900
+Index: D
+Name: Unusual Sequences
+Tags: bitmasks, combinatorics, dp, math, number theory
+
+
+Contest ID: 900
+Index: E
+Name: Maximum Questions
+Tags: data structures, dp, strings
+
+
+Contest ID: 113
+Index: B
+Name: Petr#
+Tags: brute force, data structures, hashing, strings
+
+
+Contest ID: 848
+Index: A
+Name: From Y to Y
+Tags: constructive algorithms
+
+
+Contest ID: 848
+Index: B
+Name: Rooter's Song
+Tags: constructive algorithms, data structures, geometry, implementation, sortings, two pointers
+
+
+Contest ID: 848
+Index: C
+Name: Goodbye Souvenir
+Tags: data structures, divide and conquer
+
+
+Contest ID: 848
+Index: D
+Name: Shake It!
+Tags: combinatorics, dp, flows, graphs
+
+
+Contest ID: 848
+Index: E
+Name: Days of Floral Colours
+Tags: combinatorics, dp, fft, math
+
+
+Contest ID: 282
+Index: A
+Name: Bit++
+Tags: implementation
+
+
+Contest ID: 282
+Index: B
+Name: Painting Eggs
+Tags: greedy, math
+
+
+Contest ID: 282
+Index: C
+Name: XOR and OR
+Tags: constructive algorithms, implementation, math
+
+
+Contest ID: 282
+Index: D
+Name: Yet Another Number Game
+Tags: dp, games
+
+
+Contest ID: 282
+Index: E
+Name: Sausage Maximization
+Tags: bitmasks, data structures, trees
+
+
+Contest ID: 812
+Index: A
+Name: Sagheer and Crossroads
+Tags: implementation
+
+
+Contest ID: 812
+Index: B
+Name: Sagheer, the Hausmeister
+Tags: bitmasks, brute force, dp
+
+
+Contest ID: 812
+Index: C
+Name: Sagheer and Nubian Market
+Tags: binary search
+
+
+Contest ID: 812
+Index: D
+Name: Sagheer and Kindergarten
+Tags: dfs and similar, graphs, implementation
+
+
+Contest ID: 812
+Index: E
+Name: Sagheer and Apple Tree
+Tags: games
 
 

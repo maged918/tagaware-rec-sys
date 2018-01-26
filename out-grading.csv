@@ -1,0 +1,247 @@
+problem_id,classifier,sample_flag,sampler,select_flag,stratify_flag,test_mode,duplicate,total_size,split,train_ratio,train_size,upsmaple_size,tag_info,select_mode,class_mode,f_score,acc,auc,base_acc_0,base_acc_1
+
+899/A,rft,True,smote,False,True,cross,keep,412,kf,0.9,370,576,none,none,OK,0.89,0.83,0.78,0.77,0.23
+899/A,rft,True,smote,False,True,cross,remove,402,kf,0.9,361,574,none,none,OK,0.89,0.82,0.76,0.79,0.21
+899/C,rft,True,smote,False,True,cross,keep,2461,kf,0.9,2214,2278,none,none,OK,0.65,0.65,0.71,0.51,0.49
+899/C,rft,True,smote,False,True,cross,remove,1737,kf,0.9,1563,1900,none,none,OK,0.73,0.66,0.70,0.61,0.39
+911/E,rft,True,smote,False,True,cross,keep,899,kf,0.9,809,1034,none,none,OK,0.62,0.74,0.79,0.36,0.64
+911/E,rft,True,smote,False,True,cross,remove,617,kf,0.9,555,620,none,none,OK,0.66,0.71,0.78,0.44,0.56
+915/C,rft,True,smote,False,True,cross,keep,2024,kf,0.9,1821,2412,none,none,OK,0.49,0.69,0.74,0.34,0.66
+915/C,rft,True,smote,False,True,cross,remove,1352,kf,0.9,1216,1526,none,none,OK,0.51,0.66,0.72,0.37,0.63
+909/A,rft,True,smote,False,True,cross,keep,2513,kf,0.9,2261,2814,none,none,OK,0.77,0.71,0.76,0.62,0.38
+909/A,rft,True,smote,False,True,cross,remove,1980,kf,0.9,1782,2518,none,none,OK,0.83,0.75,0.76,0.71,0.29
+909/B,rft,True,smote,False,True,cross,keep,2477,kf,0.9,2229,2720,none,none,OK,0.83,0.79,0.85,0.61,0.39
+909/B,rft,True,smote,False,True,cross,remove,1907,kf,0.9,1716,2354,none,none,OK,0.86,0.79,0.84,0.69,0.31
+909/C,rft,True,smote,False,True,cross,keep,1761,kf,0.9,1584,2304,none,none,OK,0.57,0.79,0.86,0.27,0.73
+909/C,rft,True,smote,False,True,cross,remove,1072,kf,0.9,964,1298,none,none,OK,0.62,0.76,0.85,0.33,0.67
+909/D,rft,True,smote,False,True,cross,keep,1861,kf,0.9,1674,1962,none,none,OK,0.59,0.67,0.71,0.41,0.59
+909/D,rft,True,smote,False,True,cross,remove,847,kf,0.9,762,834,none,none,OK,0.73,0.70,0.76,0.55,0.45
+864/A,rft,True,smote,False,True,cross,keep,2449,kf,0.9,2204,2394,none,none,OK,0.69,0.65,0.70,0.54,0.46
+864/A,rft,True,smote,False,True,cross,remove,1883,kf,0.9,1694,2058,none,none,OK,0.75,0.67,0.72,0.61,0.39
+864/B,rft,True,smote,False,True,cross,keep,2256,kf,0.9,2030,2178,none,none,OK,0.69,0.67,0.72,0.54,0.46
+864/B,rft,True,smote,False,True,cross,remove,1725,kf,0.9,1552,1910,none,none,OK,0.74,0.66,0.71,0.62,0.38
+864/C,rft,True,smote,False,True,cross,keep,1979,kf,0.9,1781,2224,none,none,OK,0.46,0.63,0.65,0.38,0.62
+864/C,rft,True,smote,False,True,cross,remove,1348,kf,0.9,1213,1346,none,none,OK,0.54,0.60,0.65,0.45,0.55
+864/D,rft,True,smote,False,True,cross,keep,2338,kf,0.9,2104,2142,none,none,OK,0.68,0.67,0.71,0.51,0.49
+864/D,rft,True,smote,False,True,cross,remove,1605,kf,0.9,1444,1716,none,none,OK,0.75,0.69,0.73,0.59,0.41
+864/E,rft,True,smote,False,True,cross,keep,888,kf,0.9,799,1080,none,none,OK,0.47,0.69,0.71,0.33,0.67
+864/E,rft,True,smote,False,True,cross,remove,612,kf,0.9,550,700,none,none,OK,0.49,0.67,0.71,0.37,0.63
+900/A,rft,True,smote,False,True,cross,keep,2871,kf,0.9,2583,3608,none,none,OK,0.84,0.77,0.75,0.70,0.30
+900/A,rft,True,smote,False,True,cross,remove,2342,kf,0.9,2107,3250,none,none,OK,0.88,0.81,0.73,0.77,0.23
+900/B,rft,True,smote,False,True,cross,keep,2831,kf,0.9,2547,3294,none,none,OK,0.60,0.73,0.81,0.35,0.65
+900/B,rft,True,smote,False,True,cross,remove,1899,kf,0.9,1709,1928,none,none,OK,0.67,0.72,0.80,0.44,0.56
+900/C,rft,True,smote,False,True,cross,keep,2858,kf,0.9,2572,4120,none,none,OK,0.37,0.80,0.77,0.20,0.80
+900/C,rft,True,smote,False,True,cross,remove,1768,kf,0.9,1591,2416,none,none,OK,0.40,0.76,0.74,0.24,0.76
+900/D,rft,True,smote,False,True,cross,keep,2507,kf,0.9,2256,2836,none,none,OK,0.59,0.70,0.76,0.37,0.63
+900/D,rft,True,smote,False,True,cross,remove,1082,kf,0.9,973,996,none,none,OK,0.76,0.74,0.80,0.49,0.51
+900/E,rft,True,smote,False,True,cross,keep,908,kf,0.9,817,864,none,none,OK,0.66,0.64,0.65,0.53,0.47
+900/E,rft,True,smote,False,True,cross,remove,481,kf,0.9,432,604,none,none,OK,0.81,0.71,0.67,0.70,0.30
+113/B,rft,True,smote,False,True,cross,keep,2228,kf,0.9,2005,3252,none,none,OK,0.41,0.81,0.78,0.19,0.81
+113/B,rft,True,smote,False,True,cross,remove,687,kf,0.9,618,904,none,none,OK,0.41,0.74,0.72,0.27,0.73
+
+455/A,rft,True,smote,False,True,cross,remove,1469,kf,0.9,1322,1770,none,none,OK,0.55,0.74,0.79,0.33,0.67
+899/A,rft,True,smote,False,True,cross,remove,409,kf,0.9,368,576,none,none,OK,0.89,0.82,0.79,0.78,0.22
+899/C,rft,True,smote,False,True,cross,remove,2055,kf,0.9,1849,2278,none,none,OK,0.79,0.73,0.79,0.62,0.38
+911/E,rft,True,smote,False,True,cross,remove,802,kf,0.9,721,860,none,none,OK,0.70,0.77,0.84,0.41,0.59
+915/C,rft,True,smote,False,True,cross,remove,1800,kf,0.9,1620,2008,none,none,OK,0.62,0.73,0.81,0.38,0.62
+909/A,rft,True,smote,False,True,cross,remove,2223,kf,0.9,2000,2814,none,none,OK,0.85,0.78,0.82,0.70,0.30
+909/B,rft,True,smote,False,True,cross,remove,2160,kf,0.9,1944,2720,none,none,OK,0.89,0.84,0.88,0.70,0.30
+909/C,rft,True,smote,False,True,cross,remove,1510,kf,0.9,1359,1852,none,none,OK,0.73,0.83,0.92,0.32,0.68
+909/D,rft,True,smote,False,True,cross,remove,1276,kf,0.9,1148,1388,none,none,OK,0.93,0.91,0.95,0.60,0.40
+864/A,rft,True,smote,False,True,cross,remove,2120,kf,0.9,1908,2394,none,none,OK,0.80,0.73,0.77,0.63,0.37
+864/B,rft,True,smote,False,True,cross,remove,1943,kf,0.9,1748,2178,none,none,OK,0.79,0.72,0.77,0.62,0.38
+864/C,rft,True,smote,False,True,cross,remove,1661,kf,0.9,1494,1652,none,none,OK,0.60,0.66,0.73,0.45,0.55
+864/D,rft,True,smote,False,True,cross,remove,1907,kf,0.9,1716,2142,none,none,OK,0.82,0.77,0.80,0.62,0.38
+864/E,rft,True,smote,False,True,cross,remove,764,kf,0.9,687,856,none,none,OK,0.57,0.70,0.77,0.38,0.62
+900/A,rft,True,smote,False,True,cross,remove,2566,kf,0.9,2309,3608,none,none,OK,0.91,0.85,0.79,0.78,0.22
+900/B,rft,True,smote,False,True,cross,remove,2456,kf,0.9,2210,2618,none,none,OK,0.70,0.76,0.86,0.41,0.59
+900/C,rft,True,smote,False,True,cross,remove,2477,kf,0.9,2229,3434,none,none,OK,0.49,0.81,0.84,0.23,0.77
+900/D,rft,True,smote,False,True,cross,remove,1533,kf,0.9,1379,1678,none,none,OK,0.96,0.95,0.98,0.61,0.39
+900/E,rft,True,smote,False,True,cross,remove,598,kf,0.9,538,864,none,none,OK,0.98,0.97,0.97,0.80,0.20
+113/B,rft,True,smote,False,True,cross,remove,1494,kf,0.9,1344,1930,none,none,OK,0.64,0.82,0.90,0.28,0.72
+
+455/A,rft,True,smote,False,True,cross,remove,1363,kf,0.9,1226,1618,none,none,OK,0.57,0.73,0.79,0.34,0.66
+899/A,rft,True,smote,False,True,cross,remove,403,kf,0.9,362,576,none,none,OK,0.89,0.82,0.77,0.79,0.21
+899/C,rft,True,smote,False,True,cross,remove,1774,kf,0.9,1596,2224,none,none,OK,0.80,0.70,0.70,0.70,0.30
+911/E,rft,True,smote,False,True,cross,remove,629,kf,0.9,566,570,none,none,OK,0.71,0.70,0.77,0.50,0.50
+915/C,rft,True,smote,False,True,cross,remove,1430,kf,0.9,1287,1454,none,none,OK,0.61,0.66,0.73,0.44,0.56
+909/A,rft,True,smote,False,True,cross,remove,1987,kf,0.9,1788,2740,none,none,OK,0.87,0.79,0.76,0.77,0.23
+909/B,rft,True,smote,False,True,cross,remove,1914,kf,0.9,1722,2586,none,none,OK,0.89,0.82,0.84,0.75,0.25
+909/C,rft,True,smote,False,True,cross,remove,1129,kf,0.9,1016,1232,none,none,OK,0.72,0.78,0.87,0.39,0.61
+909/D,rft,True,smote,False,True,cross,remove,951,kf,0.9,855,1262,none,none,OK,0.91,0.86,0.87,0.74,0.26
+864/A,rft,True,smote,False,True,cross,remove,1888,kf,0.9,1699,2286,none,none,OK,0.80,0.71,0.71,0.67,0.33
+864/B,rft,True,smote,False,True,cross,remove,1747,kf,0.9,1572,2106,none,none,OK,0.79,0.69,0.72,0.67,0.33
+864/C,rft,True,smote,False,True,cross,remove,1358,kf,0.9,1222,1286,none,none,OK,0.64,0.61,0.63,0.53,0.47
+864/D,rft,True,smote,False,True,cross,remove,1659,kf,0.9,1493,2052,none,none,OK,0.83,0.75,0.74,0.69,0.31
+864/E,rft,True,smote,False,True,cross,remove,631,kf,0.9,567,630,none,none,OK,0.58,0.63,0.70,0.45,0.55
+900/A,rft,True,smote,False,True,cross,remove,2364,kf,0.9,2127,3460,none,none,OK,0.91,0.84,0.73,0.81,0.19
+900/B,rft,True,smote,False,True,cross,remove,1924,kf,0.9,1731,1764,none,none,OK,0.71,0.72,0.80,0.49,0.51
+900/C,rft,True,smote,False,True,cross,remove,1798,kf,0.9,1618,2246,none,none,OK,0.50,0.72,0.76,0.31,0.69
+900/D,rft,True,smote,False,True,cross,remove,1137,kf,0.9,1023,1530,none,none,OK,0.95,0.92,0.95,0.75,0.25
+900/E,rft,True,smote,False,True,cross,remove,496,kf,0.9,446,804,none,none,OK,0.96,0.93,0.86,0.90,0.10
+113/B,rft,True,smote,False,True,cross,remove,817,kf,0.9,735,842,none,none,OK,0.57,0.66,0.73,0.43,0.57
+
+455/A,rft,True,smote,False,True,cross,remove,1363,ss,0.2,272,358,none,none,OK,0.50,0.69,0.72,0.34,0.66
+899/A,rft,True,smote,False,True,cross,remove,403,ss,0.2,80,126,none,none,OK,0.88,0.80,0.71,0.79,0.21
+899/C,rft,True,smote,False,True,cross,remove,1774,ss,0.2,354,492,none,none,OK,0.78,0.67,0.65,0.70,0.30
+911/E,rft,True,smote,False,True,cross,remove,629,ss,0.2,125,126,none,none,OK,0.66,0.66,0.71,0.50,0.50
+915/C,rft,True,smote,False,True,cross,remove,1430,ss,0.2,286,322,none,none,OK,0.57,0.62,0.68,0.44,0.56
+909/A,rft,True,smote,False,True,cross,remove,1987,ss,0.2,397,608,none,none,OK,0.85,0.77,0.75,0.77,0.23
+909/B,rft,True,smote,False,True,cross,remove,1914,ss,0.2,382,574,none,none,OK,0.88,0.80,0.79,0.75,0.25
+909/C,rft,True,smote,False,True,cross,remove,1129,ss,0.2,225,272,none,none,OK,0.67,0.75,0.84,0.39,0.61
+909/D,rft,True,smote,False,True,cross,remove,951,ss,0.2,190,280,none,none,OK,0.90,0.84,0.83,0.74,0.26
+864/A,rft,True,smote,False,True,cross,remove,1888,ss,0.2,377,506,none,none,OK,0.78,0.69,0.66,0.67,0.33
+864/B,rft,True,smote,False,True,cross,remove,1747,ss,0.2,349,468,none,none,OK,0.77,0.67,0.66,0.67,0.33
+864/C,rft,True,smote,False,True,cross,remove,1358,ss,0.2,271,284,none,none,OK,0.60,0.57,0.59,0.53,0.47
+864/D,rft,True,smote,False,True,cross,remove,1659,ss,0.2,331,454,none,none,OK,0.80,0.71,0.70,0.69,0.31
+864/E,rft,True,smote,False,True,cross,remove,631,ss,0.2,126,140,none,none,OK,0.54,0.60,0.64,0.45,0.55
+900/A,rft,True,smote,False,True,cross,remove,2364,ss,0.2,472,768,none,none,OK,0.90,0.82,0.71,0.81,0.19
+900/B,rft,True,smote,False,True,cross,remove,1924,ss,0.2,384,392,none,none,OK,0.68,0.69,0.76,0.49,0.51
+900/C,rft,True,smote,False,True,cross,remove,1798,ss,0.2,359,498,none,none,OK,0.48,0.71,0.73,0.31,0.69
+900/D,rft,True,smote,False,True,cross,remove,1137,ss,0.2,227,340,none,none,OK,0.94,0.91,0.92,0.75,0.25
+900/E,rft,True,smote,False,True,cross,remove,496,ss,0.2,99,178,none,none,OK,0.95,0.91,0.78,0.90,0.10
+113/B,rft,True,smote,False,True,cross,remove,817,ss,0.2,163,186,none,none,OK,0.55,0.64,0.68,0.43,0.57
+
+455/A,rft,True,smote,False,True,cross,remove,1363,ss,0.2, 272, 358,none,none,OK,0.50,0.69,0.72,0.34,0.66
+899/A,rft,True,smote,False,True,cross,remove, 403,ss,0.2,  80, 126,none,none,OK,0.88,0.80,0.71,0.79,0.21
+899/C,rft,True,smote,False,True,cross,remove,1774,ss,0.2, 354, 492,none,none,OK,0.78,0.67,0.65,0.70,0.30
+911/E,rft,True,smote,False,True,cross,remove, 629,ss,0.2, 125, 126,none,none,OK,0.66,0.66,0.71,0.50,0.50
+915/C,rft,True,smote,False,True,cross,remove,1430,ss,0.2, 286, 322,none,none,OK,0.57,0.62,0.68,0.44,0.56
+909/A,rft,True,smote,False,True,cross,remove,1987,ss,0.2, 397, 608,none,none,OK,0.85,0.77,0.75,0.77,0.23
+909/B,rft,True,smote,False,True,cross,remove,1914,ss,0.2, 382, 574,none,none,OK,0.88,0.80,0.79,0.75,0.25
+909/C,rft,True,smote,False,True,cross,remove,1129,ss,0.2, 225, 272,none,none,OK,0.67,0.75,0.84,0.39,0.61
+909/D,rft,True,smote,False,True,cross,remove, 951,ss,0.2, 190, 280,none,none,OK,0.90,0.84,0.83,0.74,0.26
+864/A,rft,True,smote,False,True,cross,remove,1888,ss,0.2, 377, 506,none,none,OK,0.78,0.69,0.66,0.67,0.33
+864/B,rft,True,smote,False,True,cross,remove,1747,ss,0.2, 349, 468,none,none,OK,0.77,0.67,0.66,0.67,0.33
+864/C,rft,True,smote,False,True,cross,remove,1358,ss,0.2, 271, 284,none,none,OK,0.60,0.57,0.59,0.53,0.47
+864/D,rft,True,smote,False,True,cross,remove,1659,ss,0.2, 331, 454,none,none,OK,0.80,0.71,0.70,0.69,0.31
+864/E,rft,True,smote,False,True,cross,remove, 631,ss,0.2, 126, 140,none,none,OK,0.54,0.60,0.64,0.45,0.55
+900/A,rft,True,smote,False,True,cross,remove,2364,ss,0.2, 472, 768,none,none,OK,0.90,0.82,0.71,0.81,0.19
+900/B,rft,True,smote,False,True,cross,remove,1924,ss,0.2, 384, 392,none,none,OK,0.68,0.69,0.76,0.49,0.51
+900/C,rft,True,smote,False,True,cross,remove,1798,ss,0.2, 359, 498,none,none,OK,0.48,0.71,0.73,0.31,0.69
+900/D,rft,True,smote,False,True,cross,remove,1137,ss,0.2, 227, 340,none,none,OK,0.94,0.91,0.92,0.75,0.25
+900/E,rft,True,smote,False,True,cross,remove, 496,ss,0.2,  99, 178,none,none,OK,0.95,0.91,0.78,0.90,0.10
+113/B,rft,True,smote,False,True,cross,remove, 817,ss,0.2, 163, 186,none,none,OK,0.55,0.64,0.68,0.43,0.57
+
+455/A,rft,True,smote,False,True,cross,remove,1363,ss,0.2, 272, 358,-all,none,OK,0.49,0.69,0.73,0.34,0.66
+899/A,rft,True,smote,False,True,cross,remove, 403,ss,0.2,  80, 126,-all,none,OK,0.88,0.81,0.71,0.79,0.21
+899/C,rft,True,smote,False,True,cross,remove,1774,ss,0.2, 354, 492,-all,none,OK,0.78,0.67,0.65,0.70,0.30
+911/E,rft,True,smote,False,True,cross,remove, 629,ss,0.2, 125, 126,-all,none,OK,0.66,0.66,0.71,0.50,0.50
+915/C,rft,True,smote,False,True,cross,remove,1430,ss,0.2, 286, 322,-all,none,OK,0.57,0.63,0.69,0.44,0.56
+909/A,rft,True,smote,False,True,cross,remove,1987,ss,0.2, 397, 608,-all,none,OK,0.85,0.77,0.75,0.77,0.23
+909/B,rft,True,smote,False,True,cross,remove,1914,ss,0.2, 382, 574,-all,none,OK,0.88,0.81,0.78,0.75,0.25
+909/C,rft,True,smote,False,True,cross,remove,1129,ss,0.2, 225, 272,-all,none,OK,0.68,0.75,0.84,0.39,0.61
+909/D,rft,True,smote,False,True,cross,remove, 951,ss,0.2, 190, 280,-all,none,OK,0.90,0.84,0.83,0.74,0.26
+864/A,rft,True,smote,False,True,cross,remove,1888,ss,0.2, 377, 506,-all,none,OK,0.78,0.69,0.66,0.67,0.33
+864/B,rft,True,smote,False,True,cross,remove,1747,ss,0.2, 349, 468,-all,none,OK,0.77,0.67,0.66,0.67,0.33
+864/C,rft,True,smote,False,True,cross,remove,1358,ss,0.2, 271, 284,-all,none,OK,0.60,0.57,0.59,0.53,0.47
+864/D,rft,True,smote,False,True,cross,remove,1659,ss,0.2, 331, 454,-all,none,OK,0.80,0.71,0.70,0.69,0.31
+864/E,rft,True,smote,False,True,cross,remove, 631,ss,0.2, 126, 140,-all,none,OK,0.54,0.60,0.64,0.45,0.55
+900/A,rft,True,smote,False,True,cross,remove,2364,ss,0.2, 472, 768,-all,none,OK,0.90,0.83,0.71,0.81,0.19
+900/B,rft,True,smote,False,True,cross,remove,1924,ss,0.2, 384, 392,-all,none,OK,0.68,0.69,0.77,0.49,0.51
+900/C,rft,True,smote,False,True,cross,remove,1798,ss,0.2, 359, 498,-all,none,OK,0.48,0.71,0.73,0.31,0.69
+900/D,rft,True,smote,False,True,cross,remove,1137,ss,0.2, 227, 340,-all,none,OK,0.94,0.91,0.93,0.75,0.25
+900/E,rft,True,smote,False,True,cross,remove, 496,ss,0.2,  99, 178,-all,none,OK,0.95,0.91,0.80,0.90,0.10
+113/B,rft,True,smote,False,True,cross,remove, 817,ss,0.2, 163, 186,-all,none,OK,0.55,0.64,0.69,0.43,0.57
+
+455/A,rft,True,smote,False,True,cross,remove,1419,ss,0.2, 283, 380,-all,none,OK,0.48,0.70,0.72,0.33,0.67
+899/A,rft,True,smote,False,True,cross,remove, 420,ss,0.2,  84, 128,-all,none,OK,0.85,0.76,0.69,0.76,0.24
+899/C,rft,True,smote,False,True,cross,remove,1785,ss,0.2, 357, 494,-all,none,OK,0.78,0.67,0.65,0.69,0.31
+911/E,rft,True,smote,False,True,cross,remove, 657,ss,0.2, 131, 138,-all,none,OK,0.62,0.64,0.70,0.48,0.52
+915/C,rft,True,smote,False,True,cross,remove,1599,ss,0.2, 319, 390,-all,none,OK,0.51,0.64,0.70,0.39,0.61
+909/A,rft,True,smote,False,True,cross,remove,1990,ss,0.2, 398, 608,-all,none,OK,0.86,0.77,0.75,0.76,0.24
+909/B,rft,True,smote,False,True,cross,remove,1918,ss,0.2, 383, 574,-all,none,OK,0.87,0.80,0.78,0.75,0.25
+909/C,rft,True,smote,False,True,cross,remove,1268,ss,0.2, 253, 328,-all,none,OK,0.66,0.77,0.85,0.35,0.65
+909/D,rft,True,smote,False,True,cross,remove,1113,ss,0.2, 222, 280,-all,none,OK,0.85,0.81,0.85,0.63,0.37
+864/A,rft,True,smote,False,True,cross,remove,1894,ss,0.2, 378, 506,-all,none,OK,0.78,0.69,0.67,0.67,0.33
+864/B,rft,True,smote,False,True,cross,remove,1753,ss,0.2, 350, 466,-all,none,OK,0.77,0.67,0.66,0.67,0.33
+864/C,rft,True,smote,False,True,cross,remove,1380,ss,0.2, 276, 286,-all,none,OK,0.59,0.57,0.60,0.52,0.48
+864/D,rft,True,smote,False,True,cross,remove,1712,ss,0.2, 342, 456,-all,none,OK,0.78,0.70,0.69,0.67,0.33
+864/E,rft,True,smote,False,True,cross,remove, 640,ss,0.2, 128, 144,-all,none,OK,0.51,0.59,0.62,0.44,0.56
+900/A,rft,True,smote,False,True,cross,remove,2411,ss,0.2, 482, 768,-all,none,OK,0.89,0.81,0.70,0.80,0.20
+900/B,rft,True,smote,False,True,cross,remove,2000,ss,0.2, 400, 422,-all,none,OK,0.65,0.68,0.75,0.47,0.53
+900/C,rft,True,smote,False,True,cross,remove,1849,ss,0.2, 369, 518,-all,none,OK,0.47,0.72,0.73,0.30,0.70
+900/D,rft,True,smote,False,True,cross,remove,1155,ss,0.2, 231, 340,-all,none,OK,0.94,0.90,0.92,0.74,0.26
+900/E,rft,True,smote,False,True,cross,remove, 506,ss,0.2, 101, 178,-all,none,OK,0.95,0.91,0.82,0.88,0.12
+113/B,rft,True,smote,False,True,cross,remove,1075,ss,0.2, 215, 290,-all,none,OK,0.51,0.73,0.73,0.33,0.67
+
+282/A,rft,True,smote,False,True,cross,remove,2523,ss,0.2, 504, 772,-all,none,OK,0.82,0.71,0.59,0.77,0.23
+282/B,rft,True,smote,False,True,cross,remove,1694,ss,0.2, 338, 416,-all,none,OK,0.73,0.66,0.70,0.61,0.39
+282/C,rft,True,smote,False,True,cross,remove,1828,ss,0.2, 365, 398,-all,none,OK,0.76,0.72,0.78,0.55,0.45
+282/D,rft,True,smote,False,True,cross,remove, 942,ss,0.2, 188, 264,-all,none,OK,0.87,0.80,0.80,0.70,0.30
+282/E,rft,True,smote,False,True,cross,remove,1110,ss,0.2, 222, 280,-all,none,OK,0.80,0.72,0.70,0.63,0.37
+
+282/A,rft,True,smote,False,True,cross,remove,2523,kf,0.9,2270,3480,['none'],none,OK,0.83,0.72,0.60,0.77,0.23
+282/B,rft,True,smote,False,True,cross,remove,1694,kf,0.9,1524,1874,['none'],none,OK,0.76,0.70,0.74,0.61,0.39
+282/C,rft,True,smote,False,True,cross,remove,1828,kf,0.9,1645,1796,['none'],none,OK,0.79,0.76,0.81,0.55,0.45
+282/D,rft,True,smote,False,True,cross,remove, 942,kf,0.9, 847,1188,['none'],none,OK,0.88,0.83,0.85,0.70,0.30
+282/E,rft,True,smote,False,True,cross,remove,1110,kf,0.9, 999,1262,['none'],none,OK,0.83,0.75,0.73,0.63,0.37
+
+282/A,rft,True,smote,False,True,cross,--keep,2915,kf,0.9,2623,3834,['none'],none,OK,0.80,0.69,0.61,0.73,0.27
+282/B,rft,True,smote,False,True,cross,--keep,2300,kf,0.9,2070,2132,['none'],none,OK,0.67,0.69,0.78,0.49,0.51
+282/C,rft,True,smote,False,True,cross,--keep,2923,kf,0.9,2630,3304,['none'],none,OK,0.66,0.74,0.82,0.37,0.63
+282/D,rft,True,smote,False,True,cross,--keep,2465,kf,0.9,2218,2982,['none'],none,OK,0.49,0.68,0.71,0.33,0.67
+282/E,rft,True,smote,False,True,cross,--keep,2584,kf,0.9,2325,3054,['none'],none,OK,0.43,0.64,0.67,0.34,0.66
+
+909/E,rft,True,smote,False,True,cross,--keep, 201,kf,0.9, 180, 206,['none'],none,OK,0.63,0.69,0.70,0.43,0.57
+
+455/A,rft,True,smote,False,True,cross,remove,1363,kf,0.9,1226,1618,['none'],none,OK,0.58,0.73,0.79,0.34,0.66
+899/A,rft,True,smote,False,True,cross,remove, 403,kf,0.9, 362, 576,['none'],none,OK,0.89,0.82,0.76,0.79,0.21
+899/C,rft,True,smote,False,True,cross,remove,1774,kf,0.9,1596,2224,['none'],none,OK,0.81,0.72,0.71,0.70,0.30
+911/E,rft,True,smote,False,True,cross,remove, 629,kf,0.9, 566, 570,['none'],none,OK,0.72,0.71,0.78,0.50,0.50
+915/C,rft,True,smote,False,True,cross,remove,1430,kf,0.9,1287,1454,['none'],none,OK,0.60,0.65,0.73,0.44,0.56
+113/B,rft,True,smote,False,True,cross,remove, 817,kf,0.9, 735, 842,['none'],none,OK,0.59,0.68,0.74,0.43,0.57
+909/A,rft,True,smote,False,True,cross,remove,1987,kf,0.9,1788,2740,['none'],none,OK,0.87,0.79,0.76,0.77,0.23
+909/B,rft,True,smote,False,True,cross,remove,1914,kf,0.9,1722,2586,['none'],none,OK,0.89,0.82,0.84,0.75,0.25
+909/C,rft,True,smote,False,True,cross,remove,1129,kf,0.9,1016,1232,['none'],none,OK,0.73,0.79,0.88,0.39,0.61
+909/D,rft,True,smote,False,True,cross,remove, 951,kf,0.9, 855,1262,['none'],none,OK,0.91,0.86,0.87,0.74,0.26
+909/E,rft,True,smote,False,True,cross,remove, 172,kf,0.9, 154, 158,['none'],none,OK,0.57,0.59,0.65,0.49,0.51
+864/A,rft,True,smote,False,True,cross,remove,1888,kf,0.9,1699,2286,['none'],none,OK,0.81,0.72,0.72,0.67,0.33
+864/B,rft,True,smote,False,True,cross,remove,1747,kf,0.9,1572,2106,['none'],none,OK,0.80,0.71,0.72,0.67,0.33
+864/C,rft,True,smote,False,True,cross,remove,1358,kf,0.9,1222,1286,['none'],none,OK,0.62,0.59,0.63,0.53,0.47
+864/D,rft,True,smote,False,True,cross,remove,1659,kf,0.9,1493,2052,['none'],none,OK,0.82,0.74,0.74,0.69,0.31
+864/E,rft,True,smote,False,True,cross,remove, 631,kf,0.9, 567, 630,['none'],none,OK,0.57,0.63,0.69,0.45,0.55
+900/A,rft,True,smote,False,True,cross,remove,2364,kf,0.9,2127,3460,['none'],none,OK,0.91,0.84,0.74,0.81,0.19
+900/B,rft,True,smote,False,True,cross,remove,1924,kf,0.9,1731,1764,['none'],none,OK,0.71,0.71,0.80,0.49,0.51
+900/C,rft,True,smote,False,True,cross,remove,1798,kf,0.9,1618,2246,['none'],none,OK,0.52,0.73,0.76,0.31,0.69
+900/D,rft,True,smote,False,True,cross,remove,1137,kf,0.9,1023,1530,['none'],none,OK,0.95,0.92,0.95,0.75,0.25
+900/E,rft,True,smote,False,True,cross,remove, 496,kf,0.9, 446, 804,['none'],none,OK,0.96,0.93,0.87,0.90,0.10
+282/A,rft,True,smote,False,True,cross,remove,2523,kf,0.9,2270,3480,['none'],none,OK,0.83,0.72,0.61,0.77,0.23
+282/B,rft,True,smote,False,True,cross,remove,1694,kf,0.9,1524,1874,['none'],none,OK,0.75,0.69,0.75,0.61,0.39
+282/C,rft,True,smote,False,True,cross,remove,1828,kf,0.9,1645,1796,['none'],none,OK,0.79,0.75,0.81,0.55,0.45
+282/D,rft,True,smote,False,True,cross,remove, 942,kf,0.9, 847,1188,['none'],none,OK,0.88,0.83,0.85,0.70,0.30
+282/E,rft,True,smote,False,True,cross,remove,1110,kf,0.9, 999,1262,['none'],none,OK,0.83,0.76,0.72,0.63,0.37
+848/A,rft,True,smote,False,True,cross,remove,1006,kf,0.9, 905,1778,['none'],none,OK,0.99,0.98,0.68,0.98,0.02
+848/B,rft,True,smote,False,True,cross,remove, 737,kf,0.9, 663,1260,['none'],none,OK,0.97,0.94,0.72,0.95,0.05
+848/C,rft,True,smote,False,True,cross,remove, 351,kf,0.9, 315, 526,['none'],none,OK,0.91,0.83,0.74,0.83,0.17
+
+455/A,rft,True,smote,False,True,cross,remove,1363,kf,0.9,1226,1618,['none'],-fns,OK,0.55,0.72,0.78,0.34,0.66
+899/A,rft,True,smote,False,True,cross,remove, 403,kf,0.9, 362, 576,['none'],-fns,OK,0.89,0.82,0.75,0.79,0.21
+899/C,rft,True,smote,False,True,cross,remove,1774,kf,0.9,1596,2224,['none'],-fns,OK,0.80,0.71,0.70,0.70,0.30
+911/E,rft,True,smote,False,True,cross,remove, 629,kf,0.9, 566, 570,['none'],-fns,OK,0.71,0.70,0.77,0.50,0.50
+915/C,rft,True,smote,False,True,cross,remove,1430,kf,0.9,1287,1454,['none'],-fns,OK,0.59,0.65,0.72,0.44,0.56
+113/B,rft,True,smote,False,True,cross,remove, 817,kf,0.9, 735, 842,['none'],-fns,OK,0.52,0.62,0.67,0.43,0.57
+909/A,rft,True,smote,False,True,cross,remove,1987,kf,0.9,1788,2740,['none'],-fns,OK,0.87,0.79,0.76,0.77,0.23
+909/B,rft,True,smote,False,True,cross,remove,1914,kf,0.9,1722,2586,['none'],-fns,OK,0.89,0.83,0.85,0.75,0.25
+909/C,rft,True,smote,False,True,cross,remove,1129,kf,0.9,1016,1232,['none'],-fns,OK,0.74,0.79,0.88,0.39,0.61
+909/D,rft,True,smote,False,True,cross,remove, 951,kf,0.9, 855,1262,['none'],-fns,OK,0.91,0.85,0.86,0.74,0.26
+909/E,rft,True,smote,False,True,cross,remove, 172,kf,0.9, 154, 158,['none'],-fns,OK,0.59,0.62,0.64,0.49,0.51
+864/A,rft,True,smote,False,True,cross,remove,1888,kf,0.9,1699,2286,['none'],-fns,OK,0.81,0.72,0.71,0.67,0.33
+864/B,rft,True,smote,False,True,cross,remove,1747,kf,0.9,1572,2106,['none'],-fns,OK,0.78,0.67,0.66,0.67,0.33
+864/C,rft,True,smote,False,True,cross,remove,1358,kf,0.9,1222,1286,['none'],-fns,OK,0.63,0.60,0.64,0.53,0.47
+864/D,rft,True,smote,False,True,cross,remove,1659,kf,0.9,1493,2052,['none'],-fns,OK,0.82,0.74,0.73,0.69,0.31
+864/E,rft,True,smote,False,True,cross,remove, 631,kf,0.9, 567, 630,['none'],-fns,OK,0.52,0.59,0.63,0.45,0.55
+900/A,rft,True,smote,False,True,cross,remove,2364,kf,0.9,2127,3460,['none'],-fns,OK,0.91,0.84,0.74,0.81,0.19
+900/B,rft,True,smote,False,True,cross,remove,1924,kf,0.9,1731,1764,['none'],-fns,OK,0.72,0.72,0.80,0.49,0.51
+900/C,rft,True,smote,False,True,cross,remove,1798,kf,0.9,1618,2246,['none'],-fns,OK,0.51,0.73,0.76,0.31,0.69
+900/D,rft,True,smote,False,True,cross,remove,1137,kf,0.9,1023,1530,['none'],-fns,OK,0.95,0.92,0.95,0.75,0.25
+900/E,rft,True,smote,False,True,cross,remove, 496,kf,0.9, 446, 804,['none'],-fns,OK,0.97,0.94,0.85,0.90,0.10
+282/A,rft,True,smote,False,True,cross,remove,2523,kf,0.9,2270,3480,['none'],-fns,OK,0.83,0.71,0.60,0.77,0.23
+282/B,rft,True,smote,False,True,cross,remove,1694,kf,0.9,1524,1874,['none'],-fns,OK,0.74,0.68,0.73,0.61,0.39
+282/C,rft,True,smote,False,True,cross,remove,1828,kf,0.9,1645,1796,['none'],-fns,OK,0.79,0.76,0.81,0.55,0.45
+282/D,rft,True,smote,False,True,cross,remove, 942,kf,0.9, 847,1188,['none'],-fns,OK,0.88,0.82,0.84,0.70,0.30
+282/E,rft,True,smote,False,True,cross,remove,1110,kf,0.9, 999,1262,['none'],-fns,OK,0.83,0.75,0.73,0.63,0.37
+848/A,rft,True,smote,False,True,cross,remove,1006,kf,0.9, 905,1778,['none'],-fns,OK,0.99,0.98,0.60,0.98,0.02
+848/B,rft,True,smote,False,True,cross,remove, 737,kf,0.9, 663,1260,['none'],-fns,OK,0.97,0.94,0.65,0.95,0.05
+848/C,rft,True,smote,False,True,cross,remove, 351,kf,0.9, 315, 526,['none'],-fns,OK,0.90,0.83,0.75,0.83,0.17
+

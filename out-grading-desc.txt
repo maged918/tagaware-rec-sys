@@ -1,0 +1,24 @@
+NEW
+42-61
+Duplicate removal using remove any non OK, but keep duplicate wrong answer
+
+63 - 82
+
+Different train ratio, duplicate removal using remove any non ok, and remove duplicate wrong answer
+
+126-145
+
+Using all only tag info doesnt make much difference (very rare 1% improvement)
+
+168-172
+
+New contest, ratio 0.2, problem A poor, remove dups
+
+174-178
+
+New contest, ratio 0.9, problem A doesnt benefit much, remove dups
+
+
+188-216
+
+New features (count pointers and double arrays), only very small difference (fn with_last_features in stats_grading)

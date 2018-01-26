@@ -84,7 +84,8 @@ cols = ['id', 'problem_id', 'single_loop', 'double_loop', 'triple_loop', 'if_loo
 			  'recursion', 'shift', 'or', 'and', 'int', 'double', 'float', 'string', 'char', 'vector',\
 			  'll', 'point', 'arrays', 'declarations', 'variables', 'avg_params', 'functions',\
 			  'operations', 'plus', 'minus', 'times', 'divide', 'modulus', 'lines', 'ifs', 'cyclo',\
-			  '+','-','*','/','%','+=','-=','*=','/=','++','--', 'min', 'max', 'sort']
+			  '+','-','*','/','%','+=','-=','*=','/=','++','--', 'min', 'max', 'sort',\
+			  'arrays_double', 'cnt_pointers']
 
 def evalute(tree,*args):
 	query = './'
@@ -331,6 +332,11 @@ elif 'Div2' in divs:
 
 # data_dir = 'data-all/'
 
+def convert_string(x):
+	if isinstance(x, int):
+		return x
+	else:
+		return int(x.split('.')[0])
 '''
 LOAD OLD NO LONGER WORKING!
 '''
@@ -343,12 +349,12 @@ def all_submissions(load_old = False):
 	df_list = []
 
 	if load_old:
-		f = open(feats_prefix+'features-pandas.pickle', 'rb')
+		f = open(feats_prefix+'features-pandas-grading.pickle', 'rb')
 		old_df = pickle.load(f)
-		df = old_df
-	else:
-		df = pd.DataFrame(columns = cols)
-	print('Number of columns', len(df.columns))
+		# old_df = old_df.drop(['verdict'], axis=1)
+		old_df = old_df.loc[:,cols]
+	df = pd.DataFrame(columns = cols)
+		
 	feature_set = {}
 	submission_set = {}
 	idx = 1
@@ -357,7 +363,7 @@ def all_submissions(load_old = False):
 			problem_features =  []
 			problem_id = contest+"/"+problem
 			if load_old and len(old_df[old_df.problem_id == problem_id] > 0):
-				# print('Contest + Problem already loaded')
+				print('Contest + Problem already loaded')
 				continue
 			for count,submission in enumerate(os.listdir(data_dir+"/"+contest+"/"+problem)):
 				path = data_dir+"/"+contest+"/"+problem+ "/" + submission
@@ -380,14 +386,19 @@ def all_submissions(load_old = False):
 			feature_set[problem_id] = avg
 			submission_set[problem_id] = arr
 			print('Done %s/%s '%(contest,problem))
+			# break
 		print("Done #", idx, "Contest:", contest)
-		idx+=1
+		# idx+=1
 		# if idx>0:
 		# 	break
 
 	# f.close()
 
 	df = pd.DataFrame(df_list)
+	if load_old:
+		print(old_df.shape, df.shape)
+		df = pd.concat([old_df, df])
+		print(df.shape)
 	# print(df['cnt_pointers'])
 	print("Done feature extraction for: " + str(len(feature_set)) + " problems")
 
@@ -397,7 +408,8 @@ def all_submissions(load_old = False):
 	f_names = [x+'.pickle' for x in f_names]
 
 	if grading:
-		df['id'] = df['id'].map(lambda x : int(x.split('.')[0])) # Casts as string first in case of previous run
+		# Convert id to int if it hasnt been converted before
+		df['id'] = df['id'].map(lambda x : convert_string(x)) 
 		verdicts_df = pd.read_csv(open('Verdicts-grading.csv', 'r'), header=None, names = ['id', 'verdict'])
 		verdicts_df['verdict'] = verdicts_df['verdict'].str.strip()
 		df = pd.merge(df, verdicts_df, left_on='id', right_on='id', how='inner') # Create new df with binary verdict
@@ -421,7 +433,7 @@ def all_submissions(load_old = False):
 def test_submission(path):
 	return extract_feats(path)
 
-all_submissions(load_old=False)
+all_submissions(load_old=True)
 # print(test_submission('data-all/101/A/12700023.cpp.xml')[1])
 # print(test_submission('data-all/102/B/12309613.cpp.xml')[1])
 # print(test_submission('data-all/435/E/953966800000000.cpp.xml')[1])

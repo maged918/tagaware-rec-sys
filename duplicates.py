@@ -20,6 +20,8 @@ df_list = []
 def parse(s):
 	return s.split(': ')[1].strip()
 
+def old_dup_remove():
+
 cnt_users = defaultdict(lambda: set())
 cnt_submissions = defaultdict(lambda: set())
 
@@ -31,19 +33,23 @@ for i in range(0,len(lines),7):
 	key = '%s/%s'%(contest,index)
 	handle = parse(lines[i+2])
 	submission_id = parse(lines[i+3])
-	verdict = verdicts[submission_id]['verdict'].strip()
+	try:
+		verdict = verdicts[submission_id]['verdict'].strip()
+	except KeyError:
+		print(key, submission_id, 'error')
+		continue
 	cnt_users[key].add(handle)
 	cnt_submissions[key].add(submission_id)
+	user_problem_verdict[(handle, key)].add(verdict)
 	df_list.append({'user':handle, 'problem_id':key, 'id':submission_id, 'verdict':verdict})
 
-	user_problem_verdict[(handle, key)].add(verdict)
 
 for key in sorted(cnt_users.keys()):
 	print('# submissions and # users', len(cnt_submissions[key]), len(cnt_users[key]))
 
 df = pd.DataFrame(df_list)
 print(df.shape)
-# dup_removed = df.drop_duplicates(['user', 'problem_id', 'verdict'])
+dup_removed = df.drop_duplicates(['user', 'problem_id', 'verdict'])
 remove_indexes = []
 for user_problem, verdict in user_problem_verdict.items():
 	if 'OK' in verdict and len(verdict) > 1:
@@ -53,10 +59,10 @@ for user_problem, verdict in user_problem_verdict.items():
 
 print('Done with filter loop')
 df = df.drop(remove_indexes, axis=0)
-# dup_removed = df
+dup_removed = df
 dup_removed = df.drop_duplicates(['user', 'problem_id', 'verdict'])
 print(dup_removed.shape)
 pd.to_pickle(dup_removed.loc[:,~dup_removed.columns.isin(['user', 'problem_id'])], \
 	open('dataset/feats/features-unique-grading.pickle','wb'))
 
-print('Time taken', time.time()-t1)
+print('Time taken', time.time()-t1) # 480 seconds, 82010 subs

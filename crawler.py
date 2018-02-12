@@ -55,7 +55,8 @@ def filter_Submissions(submissions, contestID, flag, mode):
 	filtered = []
 	language = 'C++'
 	# dictionary_problems = 'ABCDEFGHIJKL'
-	dictionary_problems = 'ABCDEF'
+	# dictionary_problems = 'ABCDE'
+	dictionary_problems = 'D'
 	for i in range (0, len(dictionary_problems)):
 		dictionary[dictionary_problems[i]] = []
 
@@ -190,7 +191,12 @@ if __name__ =='__main__':
 	# contest_names = ['Educational Codeforces Round 36 (Rated for Div. 2)'] 
 	# contest_names = ['Codeforces Round #455 (Div. 2)']
 	# contest_names = ['Codeforces Round #436 (Div. 2)']
-	contest_names = ['Codeforces Round #450 (Div. 2)'] # 900
+	# contest_names = ['Codeforces Round #450 (Div. 2)'] # 900
+	# contest_names = ['Codeforces Beta Round #86 (Div. 1 Only)']
+	# contest_names = ['Codeforces Round #431 (Div. 1)'] # 848
+	# contest_names = ['Codeforces Round #173 (Div. 2)'] #282
+	# contest_names = ['Codeforces Round #417 (Div. 2)']
+	contest_names = ['Educational Codeforces Round 26', 'Codeforces Round #320 (Div. 2) [Bayan Thanks-Round]'] # 837, 579
 	requestParams = {'gym':'false'}
 	r = requests.get("http://www.codeforces.com/api/contest.list", params=requestParams, proxies = {}, auth = {})
 	contests = r.json()

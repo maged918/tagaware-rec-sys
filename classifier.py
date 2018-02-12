@@ -480,7 +480,7 @@ for div, algo_mode, classifier, feat_mode, difficulty, row_mode, limit \
 	scores = [0]*4
 
 	if 'only' in algo_mode  or '_' in algo_mode:
-		preds, all_data_classifier = classify(X, Y, X.iloc[0:100], Y[0:100], False, 'RFT')
+		preds, all_data_classifier = classify(X, Y, X, Y, False, 'RFT')
 		print(all_data_classifier)
 		pickle.dump(all_data_classifier, open('models/%s_model.pickle' % algo_mode, 'wb'))
 

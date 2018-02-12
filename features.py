@@ -85,7 +85,8 @@ cols = ['id', 'problem_id', 'single_loop', 'double_loop', 'triple_loop', 'if_loo
 			  'll', 'point', 'arrays', 'declarations', 'variables', 'avg_params', 'functions',\
 			  'operations', 'plus', 'minus', 'times', 'divide', 'modulus', 'lines', 'ifs', 'cyclo',\
 			  '+','-','*','/','%','+=','-=','*=','/=','++','--', 'min', 'max', 'sort',\
-			  'arrays_double', 'cnt_pointers']
+			  'arrays_double', 'cnt_pointers',\
+			  'size', 'push_back', 'insert', 'erase', 'abs', 'clear', 'find', 'empty', 'lower_bound', 'pop', 'count']
 
 def evalute(tree,*args):
 	query = './'
@@ -277,28 +278,14 @@ def extract_feats(file):
 	curr_df['cyclo'] = cyclo
 	curr_feats.append(cyclo)
 
-	count_min = 0
-	count_max = 0
-	count_sort = 0
-	for name in tree.xpath('.//call/name'):
-		if name.text == 'max':
-			count_max+=1
-		elif name.text == 'min':
-			count_min+=1
-		elif name.text == 'sort':
-			count_sort+=1
+	fns_dict = {k:0 for k in ['min', 'max', 'sort', 'size', 'push_back', 'insert', 'erase', 'abs', 'clear', 'find', 'empty', 'lower_bound', 'pop', 'count']}
+	for name in tree.xpath('.//call//name'):
+		if name.text in fns_dict:
+			fns_dict[name.text]+=1
 
-	# print('Number of ifs', ifs)
-	# print(len(curr_feats))
-	# print(curr_df['ll'])
-
-	curr_df['min'] = count_min
-	curr_df['max'] = count_max
-	curr_df['sort'] = count_sort
-	# print('Count of min and max', count_min, count_max)
-	curr_feats.append(count_min)
-	curr_feats.append(count_max)
-	curr_feats.append(count_sort)
+	for fn in fns_dict:
+		curr_df[fn] = fns_dict[fn]
+		curr_feats.append(fns_dict[fn])
 
 	return curr_feats, curr_df
 
@@ -358,13 +345,19 @@ def all_submissions(load_old = False):
 	feature_set = {}
 	submission_set = {}
 	idx = 1
+	# reload_problem = ['812/B']
+	reload_problem = ['837/D']
 	for contest in next(os.walk(data_dir))[1]:
 		for problem in next(os.walk(data_dir+"/"+contest))[1]:
 			problem_features =  []
 			problem_id = contest+"/"+problem
-			if load_old and len(old_df[old_df.problem_id == problem_id] > 0):
-				print('Contest + Problem already loaded')
+			if load_old and len(old_df[old_df.problem_id == problem_id] > 0) and problem_id not in reload_problem:
+				print('Contest + Problem already loaded', problem_id)
 				continue
+
+			print(data_dir+contest+"/"+problem)
+			# if data_dir+contest+"/"+problem!='data-grading/579/D-sample':
+			# 	continue
 			for count,submission in enumerate(os.listdir(data_dir+"/"+contest+"/"+problem)):
 				path = data_dir+"/"+contest+"/"+problem+ "/" + submission
 				if submission.endswith(".xml"):
@@ -378,7 +371,7 @@ def all_submissions(load_old = False):
 					t1 = time.time()
 					# df = df.append(curr_df, ignore_index=True)
 					df_list.append(curr_df)
-					# print(df.tail())
+					# print(curr_df)
 					problem_features.append(feats[0])
 			arr = np.asarray(problem_features)
 			arr.astype(float)
@@ -386,8 +379,8 @@ def all_submissions(load_old = False):
 			feature_set[problem_id] = avg
 			submission_set[problem_id] = arr
 			print('Done %s/%s '%(contest,problem))
-			# break
 		print("Done #", idx, "Contest:", contest)
+		idx+=1
 		# idx+=1
 		# if idx>0:
 		# 	break
@@ -414,18 +407,17 @@ def all_submissions(load_old = False):
 		verdicts_df['verdict'] = verdicts_df['verdict'].str.strip()
 		df = pd.merge(df, verdicts_df, left_on='id', right_on='id', how='inner') # Create new df with binary verdict
 
+	# f = open(feats_prefix+f_names[0], 'wb')
+	# pickle.dump(feature_set, f)
+	# f.close()
 
-	f = open(feats_prefix+f_names[0], 'wb')
-	pickle.dump(feature_set, f)
-	f.close()
-
-	f = open(feats_prefix + f_names[1], 'wb')
-	pickle.dump(submission_set, f)
-	f.close()
-	print(feats_prefix+f_names[2])
-	f= open(feats_prefix + f_names[2], 'wb')
-	pickle.dump(df, f)
-	f.close()
+	# f = open(feats_prefix + f_names[1], 'wb')
+	# pickle.dump(submission_set, f)
+	# f.close()
+	# print(feats_prefix+f_names[2])
+	# f= open(feats_prefix + f_names[2], 'wb')
+	# pickle.dump(df, f)
+	# f.close()
 
 	print('Time taken ', str(time.time()-t_orig))
 
@@ -433,7 +425,7 @@ def all_submissions(load_old = False):
 def test_submission(path):
 	return extract_feats(path)
 
-all_submissions(load_old=True)
+all_submissions(load_old=False)
 # print(test_submission('data-all/101/A/12700023.cpp.xml')[1])
 # print(test_submission('data-all/102/B/12309613.cpp.xml')[1])
 # print(test_submission('data-all/435/E/953966800000000.cpp.xml')[1])

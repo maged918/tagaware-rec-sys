@@ -22,7 +22,7 @@ def get_algorithm_modes():
     # algorithm_modes=['maths']
     # algorithm_modes=['graph']
     # algorithm_modes = ['dp_gr', 'dp_bf', 'gr_ma']
-    # algorithm_modes += ['dp_gr']
+    algorithm_modes += ['dp_gr']
     # algorithm_modes += ['dp_bf']
     # algorithm_modes += ['gr_ma']
     # algorithm_modes = ['dp_df']
@@ -34,8 +34,8 @@ def get_algorithm_modes():
     # algorithm_modes+=['dp_only']
     # algorithm_modes+=['implementation_only']
     # algorithm_modes+=['graphs_only']
-
-    algorithm_modes+=['math_only']
+    # algorithm_modes+=['math_only']
+    # algorithm_modes+=['brute force_only']
 
     return algorithm_modes
 def get_classifiers():
@@ -74,7 +74,7 @@ def get_tags_file(in_dir, algo_mode):
                       'nt_cm': 'data-set-number theory_combinatorics.txt'\
                       }
     
-    for tag in ['greedy', 'dp', 'implementation', 'graphs', 'math']:
+    for tag in ['greedy', 'dp', 'implementation', 'graphs', 'math', 'brute force']:
         tags_file_dict[tag+'_only'] = 'data-set-only-%s.txt'%tag
     return in_dir + '-' + tags_file_dict[algo_mode]
 

@@ -226,3 +226,15 @@ Name: Sagheer and Apple Tree
 Tags: games
 
 
+Contest ID: 837
+Index: D
+Name: Round Subset
+Tags: dp
+
+
+Contest ID: 579
+Index: D
+Name: "Or" Game
+Tags: brute force, greedy, math
+
+

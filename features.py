@@ -141,6 +141,8 @@ def extract_feats(file):
 	curr_df['recursion'] = rec
 
 	# feature 6: could be in a declared statement, or an expression (cin and cout should be excluded)
+	left_shifts = 0
+	right_shifts = 0
 	for expr in tree.xpath(".//expr"):
 		if len(expr.getchildren()) != 0:
 			right_shifts = 0
@@ -381,8 +383,7 @@ def all_submissions(load_old = False):
 			print('Done %s/%s '%(contest,problem))
 		print("Done #", idx, "Contest:", contest)
 		idx+=1
-		# idx+=1
-		# if idx>0:
+		# if idx>2:
 		# 	break
 
 	# f.close()
@@ -414,10 +415,10 @@ def all_submissions(load_old = False):
 	# f = open(feats_prefix + f_names[1], 'wb')
 	# pickle.dump(submission_set, f)
 	# f.close()
-	# print(feats_prefix+f_names[2])
-	# f= open(feats_prefix + f_names[2], 'wb')
-	# pickle.dump(df, f)
-	# f.close()
+	print(feats_prefix+f_names[2])
+	f= open(feats_prefix + f_names[2], 'wb')
+	pickle.dump(df, f)
+	f.close()
 
 	print('Time taken ', str(time.time()-t_orig))
 

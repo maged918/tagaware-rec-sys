@@ -22,3 +22,27 @@ New contest, ratio 0.9, problem A doesnt benefit much, remove dups
 188-216
 
 New features (count pointers and double arrays), only very small difference (fn with_last_features in stats_grading)
+
+280 - 308
+
+Keep dups, new feats (function calls)
+
+310 - 338
+
+Remove dups, new feats (function calls), f score up by 2%, acc by 1%, fn with_last_features in stats_grading
+
+340 - 368
+
+Same as above, but with tag information
+
+370 - 374
+
+New contest, /B doing great!
+
+376-380
+
+Using only tag only feats, performance is shit
+
+382-386
+
+Using pairs tag info as well

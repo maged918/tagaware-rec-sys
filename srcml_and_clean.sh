@@ -6,6 +6,7 @@
 #!/bin/bash
 
 cd $1
+echo $(ls)
 for contest in $(ls); do
 	echo "processing $contest"
 	cd $contest

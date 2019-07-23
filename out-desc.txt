@@ -24,3 +24,5 @@
 1118 - 1137: New feature: *
 TODO: Select only certain years
 TODO:
+1148 - 1237: Paper results
+1253-: Sort, min, max, improvement by 0-2%

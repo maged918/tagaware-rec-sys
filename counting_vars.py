@@ -57,11 +57,33 @@ for elem in var_names:
   print('Variable name = ', elem.text)
 '''
 
-tree = etree.parse('data-all/101/E/13598393.cpp.xml')
+def count_max():
 
-mn = tree.xpath('.//call/name')
-cnt=0
-for elem in mn:
-  if elem.text =='max':
-    cnt+=1
-print(cnt)
+	tree = etree.parse('data-all/101/E/13598393.cpp.xml')
+
+	mn = tree.xpath('.//call/name')
+	cnt=0
+	for elem in mn:
+	  if elem.text =='max':
+	    cnt+=1
+	print(cnt)
+
+def count_calls():
+	from collections import defaultdict
+	cnt = defaultdict(int)
+	for root, _, files in os.walk('data-grading/'):
+		for f in files:
+			if f.endswith('.xml'):
+				tree = etree.parse('%s/%s'%(root,f))
+
+				pb = tree.xpath('.//call//name')
+
+				for elem in pb:
+					cnt[elem.text]+=1
+	print(cnt['count'])
+	print(sorted(cnt.items(), key=lambda x:x[1], reverse=True)[:100])
+
+count_calls()
+
+# size, push_back, insert, erase, abs, clear, find, empty,  lower_bound, query, pop
+#update, sum

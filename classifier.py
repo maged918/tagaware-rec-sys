@@ -46,8 +46,8 @@ col_names = []
 def prepare_data(feats_file,tags_file, multi, row_mode, feat_mode, difficulties):
 
 	f = open(feats_file, 'rb')
-	# inst_feats = pickle.load(f)
-	inst_feats = pd.read_pickle(f)
+	inst_feats = pickle.load(f)
+	# inst_feats = pd.read_pickle(f, compression='None')
 	# print('prepare data inst feats contains 733 F', inst_feats[inst_feats.problem_id.isin(['733/F'])])
 
 	# fig, (ax1, ax2) = plt.subplots(2)

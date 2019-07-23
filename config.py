@@ -14,7 +14,7 @@ def get_all_pairs():
 
 def get_algorithm_modes():
     algorithm_modes = []
-    # algorithm_modes = ['categ','graph', 'maths', 'algos', 'dp_gr', 'dp_bf', 'gr_ma', 'dp_df']
+    algorithm_modes = ['categ','graph', 'maths', 'algos', 'dp_gr', 'dp_bf', 'gr_ma', 'dp_df']
     # algorithm_modes = ['categ', 'graph', 'maths', 'algos', 'pairs']
     # algorithm_modes = ['categ', 'graph', 'maths', 'algos']
     # algorithm_modes += ['categ']
@@ -22,7 +22,7 @@ def get_algorithm_modes():
     # algorithm_modes=['maths']
     # algorithm_modes=['graph']
     # algorithm_modes = ['dp_gr', 'dp_bf', 'gr_ma']
-    algorithm_modes += ['dp_gr']
+    # algorithm_modes += ['dp_gr']
     # algorithm_modes += ['dp_bf']
     # algorithm_modes += ['gr_ma']
     # algorithm_modes = ['dp_df']
